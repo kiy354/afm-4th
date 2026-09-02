@@ -6,6 +6,10 @@ Thumbs.db
 .vscode/
 .idea/
 
+# Claude Code local tooling
+.claude/
+skills-main/
+
 # Env / secrets
 .env
 .env.*
