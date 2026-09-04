@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>네이버 스타일 클론 - 포털 홈 UI</title>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone@7.25.9/babel.min.js"></script>
+  <style>
+    body { font-family: "Malgun Gothic", "Apple SD Gothic Neo", -apple-system, sans-serif; }
+    ::-webkit-scrollbar { height: 6px; width: 6px; }
+    ::-webkit-scrollbar-thumb { background: #d4d4d4; border-radius: 9999px; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-white">
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState, useMemo } = React;
+
+    // ========================================
+    // 🎨 Design System Components
+    // ========================================
+
+    function Button({ variant = "primary", size = "md", onClick, className = "", children }) {
+      const base = "inline-flex items-center justify-center gap-1 rounded-md font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-1";
+      const variants = {
+        primary: "bg-[#03C75A] text-white hover:bg-[#02b351] focus-visible:ring-[#03C75A]",
+        outline: "bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 focus-visible:ring-gray-300",
+        ghost: "bg-transparent text-gray-600 hover:bg-gray-100 focus-visible:ring-gray-300",
+      };
+      const sizes = { sm: "px-2.5 py-1 text-xs", md: "px-4 py-1.5 text-sm", lg: "px-5 py-2.5 text-base" };
+      return (
+        <button type="button" onClick={onClick} className={`${base} ${variants[variant]} ${sizes[size]} ${className}`}>
+          {children}
+        </button>
+      );
+    }
+
+    function NaverMark({ size = 40 }) {
+      return (
+        <div
+          className="flex items-center justify-center rounded-[6px] bg-[#03C75A] text-white font-black select-none"
+          style={{ width: size, height: size, fontSize: size * 0.55 }}
+          aria-hidden="true"
+        >
+          N
+        </div>
+      );
+    }
+
+    function GnbTab({ active, onClick, children }) {
+      return (
+        <button
+          type="button"
+          onClick={onClick}
+          className={`shrink-0 px-3 py-2 text-sm whitespace-nowrap border-b-2 transition-colors ${
+            active ? "border-[#03C75A] text-[#03C75A] font-bold" : "border-transparent text-gray-600 hover:text-gray-900"
+          }`}
+        >
+          {children}
+        </button>
+      );
+    }
+
+    function ShortcutIcon({ emoji, label, tone }) {
+      const tones = {
+        green: "bg-[#e7f9ee] text-[#03C75A]",
+        blue: "bg-blue-50 text-blue-500",
+        amber: "bg-amber-50 text-amber-500",
+        rose: "bg-rose-50 text-rose-500",
+        violet: "bg-violet-50 text-violet-500",
+        gray: "bg-gray-100 text-gray-500",
+      };
+      return (
+        <button type="button" className="flex flex-col items-center gap-1.5 group">
+          <span className={`w-12 h-12 rounded-2xl flex items-center justify-center text-xl ${tones[tone]} group-hover:brightness-95 transition`}>
+            {emoji}
+          </span>
+          <span className="text-[11px] text-gray-600 group-hover:text-gray-900">{label}</span>
+        </button>
+      );
+    }
+
+    // ========================================
+    // 🧩 Layout Components
+    // ========================================
+
+    function TopUtilityBar() {
+      const links = ["메일", "카페", "블로그", "지식iN", "쇼핑", "쇼핑라이브", "페이", "스토어"];
+      return (
+        <div className="hidden sm:flex items-center justify-end gap-3 max-w-6xl mx-auto px-4 pt-2 text-xs text-gray-500">
+          {links.map((l) => (
+            <a key={l} href="#" onClick={(e) => e.preventDefault()} className="hover:text-gray-900 hover:underline">
+              {l}
+            </a>
+          ))}
+          <span className="w-px h-3 bg-gray-200" />
+          <a href="#" onClick={(e) => e.preventDefault()} className="hover:text-gray-900 hover:underline">로그인</a>
+        </div>
+      );
+    }
+
+    function SearchBar() {
+      const [query, setQuery] = useState("");
+      const [notice, setNotice] = useState("");
+
+      const handleSubmit = (e) => {
+        e.preventDefault();
+        setNotice(query.trim() ? `"${query}" 검색은 데모 페이지라 동작하지 않아요.` : "검색어를 입력해 주세요.");
+        setTimeout(() => setNotice(""), 2500);
+      };
+
+      return (
+        <div className="max-w-6xl mx-auto px-4 pt-4 pb-3 flex items-center justify-center gap-3">
+          <NaverMark size={44} />
+          <form onSubmit={handleSubmit} className="relative w-full max-w-xl">
+            <input
+              type="text"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="검색어를 입력해 주세요."
+              aria-label="검색어 입력"
+              className="w-full h-12 pl-5 pr-24 rounded-full border-2 border-[#03C75A] text-sm text-gray-800 placeholder-gray-400 focus:outline-none"
+            />
+            <div className="absolute right-1.5 top-1.5 flex items-center gap-1">
+              <span className="w-9 h-9 rounded-full flex items-center justify-center text-gray-400" title="음성 검색" aria-hidden="true">🎤</span>
+              <button
+                type="submit"
+                className="w-9 h-9 rounded-full bg-[#03C75A] text-white flex items-center justify-center hover:bg-[#02b351]"
+                aria-label="검색"
+              >
+                🔍
+              </button>
+            </div>
+            {notice && (
+              <p className="absolute left-0 -bottom-6 text-xs text-gray-400">{notice}</p>
+            )}
+          </form>
+          <NaverMark size={44} />
+        </div>
+      );
+    }
+
+    function GnbMenu() {
+      const tabs = ["메일", "카페", "블로그", "지식iN", "쇼핑", "쇼핑라이브", "페이", "스포츠", "뉴스", "증권", "부동산", "지도", "VIBE", "책", "웹툰"];
+      const [active, setActive] = useState("뉴스");
+      return (
+        <nav className="max-w-6xl mx-auto px-4 border-b border-gray-100">
+          <div className="flex items-center gap-0.5 overflow-x-auto no-scrollbar">
+            {tabs.map((t) => (
+              <GnbTab key={t} active={active === t} onClick={() => setActive(t)}>{t}</GnbTab>
+            ))}
+            <span className="ml-auto shrink-0 pl-3 text-gray-400 text-sm" aria-hidden="true">⋯ 더보기</span>
+          </div>
+        </nav>
+      );
+    }
+
+    function NewsPanel() {
+      const items = [
+        { tag: "IT", title: "생성형 AI, 일상 업무 도구로 자리잡다" },
+        { tag: "경제", title: "이번 주 코스피, 완만한 상승세로 마감" },
+        { tag: "사회", title: "전국 대부분 지역 맑고 선선한 날씨" },
+        { tag: "생활", title: "가을철 나들이객 늘며 교통량 증가" },
+        { tag: "스포츠", title: "프로야구 가을 순위 경쟁 후끈" },
+      ];
+      return (
+        <div className="rounded-xl border border-gray-100 p-4">
+          <div className="flex items-center justify-between mb-3">
+            <h2 className="text-sm font-bold text-gray-800">언론사 뉴스</h2>
+            <a href="#" onClick={(e) => e.preventDefault()} className="text-xs text-gray-400 hover:text-gray-600">더보기 &gt;</a>
+          </div>
+          <ul className="space-y-2.5">
+            {items.map((n, i) => (
+              <li key={i} className="flex items-start gap-2 text-sm">
+                <span className="shrink-0 px-1.5 py-0.5 rounded text-[11px] font-semibold bg-gray-100 text-gray-500">{n.tag}</span>
+                <a href="#" onClick={(e) => e.preventDefault()} className="text-gray-700 hover:text-[#03C75A] hover:underline line-clamp-1">
+                  {n.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      );
+    }
+
+    function ShortcutGrid() {
+      const shortcuts = [
+        { emoji: "📇", label: "카페", tone: "green" },
+        { emoji: "📝", label: "블로그", tone: "green" },
+        { emoji: "📖", label: "사전", tone: "blue" },
+        { emoji: "🗺️", label: "지도", tone: "blue" },
+        { emoji: "🛒", label: "쇼핑", tone: "amber" },
+        { emoji: "💳", label: "페이", tone: "amber" },
+        { emoji: "🎬", label: "시리즈", tone: "rose" },
+        { emoji: "🎧", label: "VIBE", tone: "violet" },
+      ];
+      return (
+        <div className="rounded-xl border border-gray-100 p-4">
+          <div className="flex items-center justify-between mb-3">
+            <h2 className="text-sm font-bold text-gray-800">바로가기</h2>
+            <a href="#" onClick={(e) => e.preventDefault()} className="text-xs text-gray-400 hover:text-gray-600">편집</a>
+          </div>
+          <div className="grid grid-cols-4 gap-y-4 gap-x-1">
+            {shortcuts.map((s) => (
+              <ShortcutIcon key={s.label} {...s} />
+            ))}
+          </div>
+        </div>
+      );
+    }
+
+    function MyNaverCard() {
+      return (
+        <div className="rounded-xl border border-gray-100 p-4 flex flex-col gap-3">
+          <h2 className="text-sm font-bold text-gray-800">MY 영역</h2>
+          <p className="text-xs text-gray-500 leading-relaxed">로그인하면 날씨, 관심 뉴스, 알림 등을 한눈에 모아볼 수 있어요.</p>
+          <Button size="sm" className="self-start">로그인</Button>
+          <div className="mt-1 rounded-lg bg-gray-50 p-3 flex items-center justify-between">
+            <div>
+              <p className="text-xs text-gray-400">서울시</p>
+              <p className="text-lg font-bold text-gray-800">21°C</p>
+            </div>
+            <span className="text-3xl" aria-hidden="true">🌤️</span>
+          </div>
+        </div>
+      );
+    }
+
+    function NewsStand() {
+      const outlets = ["연합뉴스", "한겨레", "매일경제", "조선일보", "SBS", "MBC", "KBS", "전자신문", "머니투데이", "동아일보"];
+      return (
+        <div className="max-w-6xl mx-auto px-4 py-4 border-t border-gray-100">
+          <div className="flex items-center gap-4 overflow-x-auto no-scrollbar text-xs text-gray-400">
+            {outlets.map((o) => (
+              <span key={o} className="shrink-0 px-2 py-1 rounded border border-gray-100">{o}</span>
+            ))}
+          </div>
+        </div>
+      );
+    }
+
+    function Footer() {
+      const links = ["회사소개", "인재채용", "제휴제안", "이용약관", "개인정보처리방침", "고객센터"];
+      return (
+        <footer className="bg-gray-50 border-t border-gray-100 mt-6">
+          <div className="max-w-6xl mx-auto px-4 py-6 text-xs text-gray-400">
+            <div className="flex flex-wrap gap-3 mb-3">
+              {links.map((l) => (
+                <a key={l} href="#" onClick={(e) => e.preventDefault()} className="hover:text-gray-600 hover:underline">{l}</a>
+              ))}
+            </div>
+            <p>본 페이지는 UI 스타일 학습을 위해 제작된 정적 클론이며, 네이버(NAVER Corp.)와 무관한 비공식 데모입니다.</p>
+          </div>
+        </footer>
+      );
+    }
+
+    // ========================================
+    // 🚀 App Component
+    // ========================================
+
+    function App() {
+      return (
+        <div className="min-h-screen bg-white">
+          <header className="sticky top-0 z-10 bg-white">
+            <TopUtilityBar />
+            <SearchBar />
+            <GnbMenu />
+          </header>
+
+          <main className="max-w-6xl mx-auto px-4 py-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <NewsPanel />
+              <ShortcutGrid />
+              <MyNaverCard />
+            </div>
+          </main>
+
+          <NewsStand />
+          <Footer />
+        </div>
+      );
+    }
+
+    // ========================================
+    // Rendering
+    // ========================================
+
+    ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+  </script>
+</body>
+</html>

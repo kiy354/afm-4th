@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>더치페이 계산기</title>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <!-- CDN 버전 고정 (Babel 은 반드시 7.x) -->
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone@7.25.9/babel.min.js"></script>
+  <style>
+    /* Tailwind 유틸리티로 표현하기 어려운 것만 */
+    @keyframes fade-up {
+      from { opacity: 0; transform: translateY(6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-up { animation: fade-up .22s ease-out both; }
+
+    @keyframes pop-in {
+      from { opacity: 0; transform: scale(.96); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+    .animate-pop-in { animation: pop-in .16s ease-out both; }
+  </style>
+</head>
+<body class="bg-slate-100">
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState, useEffect, useMemo, useRef, useCallback } = React;
+
+    // ========================================
+    // 🛠 Utils
+    // ========================================
+
+    const uid = () => Math.random().toString(36).slice(2, 9) + Date.now().toString(36).slice(-3);
+
+    /** 숫자를 "12,345원" 형태로 */
+    const won = (n) => `${Math.round(Number(n) || 0).toLocaleString('ko-KR')}원`;
+
+    /** 부호를 포함한 금액 표시 (+1,000원 / -1,000원) */
+    const signedWon = (n) => {
+      const v = Math.round(Number(n) || 0);
+      if (v === 0) return '0원';
+      return `${v > 0 ? '+' : '-'}${Math.abs(v).toLocaleString('ko-KR')}원`;
+    };
+
+    const digitsOnly = (s) => String(s == null ? '' : s).replace(/[^0-9]/g, '');
+
+    /** 입력값(숫자 문자열)을 콤마 포함 표시용으로 */
+    const withComma = (s) => {
+      const d = digitsOnly(s);
+      return d ? Number(d).toLocaleString('ko-KR') : '';
+    };
+
+    const toNumber = (s) => Number(digitsOnly(s) || 0);
+
+    /** unit 단위로 올림 */
+    const ceilTo = (value, unit) => {
+      if (!unit || unit <= 1) return Math.ceil(value);
+      return Math.ceil(value / unit) * unit;
+    };
+
+    /**
+     * 총액을 인원수만큼 원 단위로 나누되, 나머지 1원씩을 앞사람부터 분배한다.
+     * 합계가 항상 총액과 정확히 일치한다.
+     */
+    const splitEvenly = (amount, count) => {
+      if (count <= 0) return [];
+      const base = Math.floor(amount / count);
+      const rest = amount - base * count;
+      return Array.from({ length: count }, (_, i) => base + (i < rest ? 1 : 0));
+    };
+
+    const loadStore = (key, fallback) => {
+      try {
+        const raw = localStorage.getItem(key);
+        return raw ? JSON.parse(raw) : fallback;
+      } catch (e) {
+        return fallback;
+      }
+    };
+
+    const saveStore = (key, value) => {
+      try {
+        localStorage.setItem(key, JSON.stringify(value));
+      } catch (e) {
+        /* 저장 불가(프라이빗 모드 등)여도 앱 동작에는 지장 없음 */
+      }
+    };
+
+    const MEMBER_COLORS = [
+      'bg-rose-500', 'bg-orange-500', 'bg-amber-500', 'bg-lime-500',
+      'bg-emerald-500', 'bg-teal-500', 'bg-sky-500', 'bg-indigo-500',
+      'bg-violet-500', 'bg-fuchsia-500',
+    ];
+    const colorOf = (index) => MEMBER_COLORS[index % MEMBER_COLORS.length];
+
+    // ========================================
+    // 🎨 Design System Components
+    // ========================================
+
+    function Button({ variant = 'primary', size = 'md', className = '', children, ...props }) {
+      const base = 'inline-flex items-center justify-center gap-1.5 font-semibold rounded-xl transition-all active:scale-[0.97] disabled:opacity-40 disabled:cursor-not-allowed disabled:active:scale-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500';
+      const variants = {
+        primary: 'bg-indigo-600 text-white shadow-sm hover:bg-indigo-700',
+        secondary: 'bg-white text-slate-700 border border-slate-300 hover:bg-slate-50',
+        danger: 'bg-rose-600 text-white shadow-sm hover:bg-rose-700',
+        ghost: 'bg-transparent text-slate-500 hover:bg-slate-200 hover:text-slate-700',
+      };
+      const sizes = {
+        sm: 'text-xs px-2.5 py-1.5',
+        md: 'text-sm px-4 py-2.5',
+        lg: 'text-base px-5 py-3',
+      };
+      return (
+        <button className={`${base} ${variants[variant]} ${sizes[size]} ${className}`} {...props}>
+          {children}
+        </button>
+      );
+    }
+
+    function Input({ label, error, suffix, className = '', id, ...props }) {
+      const autoId = useRef(`input-${uid()}`).current;
+      const inputId = id || autoId;
+      return (
+        <div className={className}>
+          {label && (
+            <label htmlFor={inputId} className="block text-xs font-semibold text-slate-500 mb-1.5">
+              {label}
+            </label>
+          )}
+          <div className="relative">
+            <input
+              id={inputId}
+              aria-invalid={error ? 'true' : 'false'}
+              className={`w-full rounded-xl border bg-white px-3 py-2.5 text-sm text-slate-800 placeholder:text-slate-300 transition focus:outline-none focus:ring-2 disabled:bg-slate-50 disabled:text-slate-400 ${suffix ? 'pr-10' : ''} ${error
+                  ? 'border-rose-400 focus:border-rose-500 focus:ring-rose-100'
+                  : 'border-slate-300 focus:border-indigo-500 focus:ring-indigo-100'}`}
+              {...props}
+            />
+            {suffix && (
+              <span className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm pointer-events-none">
+                {suffix}
+              </span>
+            )}
+          </div>
+          {error && <p className="mt-1 text-xs text-rose-500">{error}</p>}
+        </div>
+      );
+    }
+
+    function Card({ className = '', children }) {
+      return (
+        <div className={`bg-white rounded-2xl shadow-sm ring-1 ring-slate-900/5 p-5 ${className}`}>
+          {children}
+        </div>
+      );
+    }
+
+    function Badge({ variant = 'slate', className = '', children }) {
+      const variants = {
+        slate: 'bg-slate-100 text-slate-600',
+        indigo: 'bg-indigo-50 text-indigo-600',
+      };
+      return (
+        <span className={`inline-flex items-center rounded-full px-2 py-0.5 text-xs font-semibold ${variants[variant]} ${className}`}>
+          {children}
+        </span>
+      );
+    }
+
+    function Modal({ isOpen, onClose, title, size = 'md', children }) {
+      useEffect(() => {
+        if (!isOpen) return;
+        const onKeyDown = (e) => { if (e.key === 'Escape') onClose(); };
+        document.addEventListener('keydown', onKeyDown);
+        const prevOverflow = document.body.style.overflow;
+        document.body.style.overflow = 'hidden';
+        return () => {
+          document.removeEventListener('keydown', onKeyDown);
+          document.body.style.overflow = prevOverflow;
+        };
+      }, [isOpen, onClose]);
+
+      if (!isOpen) return null;
+
+      const sizes = { sm: 'max-w-sm', md: 'max-w-md', lg: 'max-w-lg' };
+
+      return (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/50 p-4"
+          onClick={onClose}
+          role="dialog"
+          aria-modal="true"
+          aria-label={title}
+        >
+          <div
+            className={`w-full ${sizes[size]} rounded-2xl bg-white p-5 shadow-xl animate-pop-in`}
+            onClick={(e) => e.stopPropagation()}
+          >
+            {title && <h2 className="text-lg font-bold text-slate-800 mb-2">{title}</h2>}
+            {children}
+          </div>
+        </div>
+      );
+    }
+
+    // ========================================
+    // 🧩 Common Components
+    // ========================================
+
+    function Header() {
+      return (
+        <header className="bg-gradient-to-br from-indigo-600 to-violet-600 text-white">
+          <div className="mx-auto max-w-2xl px-5 py-8">
+            <p className="text-xs font-semibold tracking-widest text-indigo-200">DUTCH PAY</p>
+            <h1 className="mt-1 text-2xl font-bold sm:text-3xl">더치페이 계산기</h1>
+            <p className="mt-2 text-sm text-indigo-100">
+              1원 단위까지 딱 떨어지게. 누가 누구에게 얼마를 보내면 되는지 알려드려요.
+            </p>
+          </div>
+        </header>
+      );
+    }
+
+    function TabNav({ tabs, current, onChange }) {
+      return (
+        <div className="flex gap-1 rounded-2xl bg-slate-200/70 p-1" role="tablist">
+          {tabs.map((tab) => (
+            <button
+              key={tab.id}
+              role="tab"
+              aria-selected={current === tab.id}
+              onClick={() => onChange(tab.id)}
+              className={`flex-1 rounded-xl px-3 py-2.5 text-sm font-semibold transition ${current === tab.id
+                  ? 'bg-white text-indigo-600 shadow-sm'
+                  : 'text-slate-500 hover:text-slate-700'}`}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+      );
+    }
+
+    function EmptyState({ icon, title, description }) {
+      return (
+        <div className="rounded-2xl border-2 border-dashed border-slate-200 px-4 py-10 text-center">
+          <div className="text-3xl">{icon}</div>
+          <p className="mt-2 text-sm font-semibold text-slate-600">{title}</p>
+          {description && <p className="mt-1 text-xs text-slate-400">{description}</p>}
+        </div>
+      );
+    }
+
+    function MemberManager({ members, onAdd, onRemove }) {
+      const [name, setName] = useState('');
+      const [error, setError] = useState('');
+
+      const submit = (e) => {
+        e.preventDefault();
+        const trimmed = name.trim();
+        if (!trimmed) {
+          setError('이름을 입력해 주세요.');
+          return;
+        }
+        if (members.some((m) => m.name === trimmed)) {
+          setError('이미 추가된 이름이에요.');
+          return;
+        }
+        onAdd(trimmed);
+        setName('');
+        setError('');
+      };
+
+      return (
+        <Card>
+          <div className="flex items-center justify-between">
+            <h2 className="text-base font-bold text-slate-800">참가자</h2>
+            <Badge variant="indigo">{members.length}명</Badge>
+          </div>
+
+          <form onSubmit={submit} className="mt-3 flex items-start gap-2">
+            <Input
+              className="flex-1"
+              value={name}
+              onChange={(e) => { setName(e.target.value); setError(''); }}
+              placeholder="이름 입력 후 Enter"
+              aria-label="참가자 이름"
+              maxLength={12}
+              error={error}
+            />
+            <Button type="submit" className="h-[42px] shrink-0">추가</Button>
+          </form>
+
+          {members.length === 0 ? (
+            <p className="mt-3 text-xs text-slate-400">참가자를 추가하면 정산 모드를 쓸 수 있어요.</p>
+          ) : (
+            <ul className="mt-3 flex flex-wrap gap-2">
+              {members.map((m, i) => (
+                <li
+                  key={m.id}
+                  className="animate-fade-up flex items-center gap-2 rounded-full bg-slate-100 py-1 pl-1 pr-2 text-sm"
+                >
+                  <span className={`flex h-6 w-6 items-center justify-center rounded-full text-xs font-bold text-white ${colorOf(i)}`}>
+                    {m.name.slice(0, 1)}
+                  </span>
+                  <span className="font-medium text-slate-700">{m.name}</span>
+                  <button
+                    onClick={() => onRemove(m.id)}
+                    aria-label={`${m.name} 삭제`}
+                    className="rounded-full px-1 text-slate-400 transition hover:text-rose-500"
+                  >
+                    ✕
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
+        </Card>
+      );
+    }
+
+    // ========================================
+    // 📄 Page: 간편 분할 (총액 ÷ 인원)
+    // ========================================
+
+    const ROUND_UNITS = [
+      { value: 1, label: '1원' },
+      { value: 100, label: '100원' },
+      { value: 1000, label: '1,000원' },
+    ];
+
+    function SimpleSplit({ members }) {
+      const [amount, setAmount] = useState('');
+      const [count, setCount] = useState(2);
+      const [tip, setTip] = useState('');
+      const [unit, setUnit] = useState(1);
+
+      const total = toNumber(amount);
+      const tipRate = Math.min(Number(digitsOnly(tip) || 0), 100);
+      const totalWithTip = Math.round(total * (1 + tipRate / 100));
+
+      const result = useMemo(() => {
+        if (totalWithTip <= 0 || count <= 0) return null;
+        const exact = totalWithTip / count;
+        const perPerson = ceilTo(exact, unit);
+        const collected = perPerson * count;
+        return { exact, perPerson, collected, surplus: collected - totalWithTip };
+      }, [totalWithTip, count, unit]);
+
+      return (
+        <div className="space-y-4">
+          <Card>
+            <h2 className="text-base font-bold text-slate-800">금액과 인원</h2>
+
+            <div className="mt-4 space-y-4">
+              <Input
+                label="총 결제 금액"
+                inputMode="numeric"
+                value={withComma(amount)}
+                onChange={(e) => setAmount(digitsOnly(e.target.value))}
+                placeholder="0"
+                suffix="원"
+              />
+
+              <div>
+                <span className="block text-xs font-semibold text-slate-500 mb-1.5">인원수</span>
+                <div className="flex items-center gap-2">
+                  <Button
+                    variant="secondary"
+                    onClick={() => setCount((c) => Math.max(1, c - 1))}
+                    disabled={count <= 1}
+                    aria-label="인원 줄이기"
+                    className="h-[42px] w-11 shrink-0 text-lg"
+                  >
+                    −
+                  </Button>
+                  <Input
+                    className="flex-1"
+                    inputMode="numeric"
+                    value={count}
+                    onChange={(e) => setCount(Math.max(1, Math.min(999, Number(digitsOnly(e.target.value) || 1))))}
+                    aria-label="인원수"
+                    suffix="명"
+                  />
+                  <Button
+                    variant="secondary"
+                    onClick={() => setCount((c) => Math.min(999, c + 1))}
+                    aria-label="인원 늘리기"
+                    className="h-[42px] w-11 shrink-0 text-lg"
+                  >
+                    +
+                  </Button>
+                </div>
+                {members.length > 0 && members.length !== count && (
+                  <button
+                    onClick={() => setCount(members.length)}
+                    className="mt-2 text-xs font-semibold text-indigo-600 hover:underline"
+                  >
+                    참가자 {members.length}명으로 맞추기
+                  </button>
+                )}
+              </div>
+
+              <div className="grid grid-cols-2 gap-3">
+                <Input
+                  label="팁 · 봉사료"
+                  inputMode="numeric"
+                  value={tip}
+                  onChange={(e) => setTip(digitsOnly(e.target.value).slice(0, 3))}
+                  placeholder="0"
+                  suffix="%"
+                />
+                <div>
+                  <span className="block text-xs font-semibold text-slate-500 mb-1.5">올림 단위</span>
+                  <div className="flex gap-1 rounded-xl bg-slate-100 p-1">
+                    {ROUND_UNITS.map((u) => (
+                      <button
+                        key={u.value}
+                        onClick={() => setUnit(u.value)}
+                        aria-pressed={unit === u.value}
+                        className={`flex-1 rounded-lg py-1.5 text-xs font-semibold transition ${unit === u.value ? 'bg-white text-indigo-600 shadow-sm' : 'text-slate-500'}`}
+                      >
+                        {u.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Card>
+
+          {result ? (
+            <Card className="animate-fade-up bg-gradient-to-br from-indigo-600 to-violet-600 text-white ring-0">
+              <p className="text-xs font-semibold tracking-wider text-indigo-200">1인당 낼 금액</p>
+              <p className="mt-1 text-4xl font-bold tabular-nums">{won(result.perPerson)}</p>
+
+              <dl className="mt-5 space-y-2 border-t border-white/20 pt-4 text-sm">
+                {tipRate > 0 && (
+                  <div className="flex justify-between text-indigo-100">
+                    <dt>팁 {tipRate}% 포함 총액</dt>
+                    <dd className="font-semibold tabular-nums">{won(totalWithTip)}</dd>
+                  </div>
+                )}
+                <div className="flex justify-between text-indigo-100">
+                  <dt>정확한 1/{count} 금액</dt>
+                  <dd className="font-semibold tabular-nums">{won(result.exact)}</dd>
+                </div>
+                <div className="flex justify-between text-indigo-100">
+                  <dt>{count}명이 모으는 금액</dt>
+                  <dd className="font-semibold tabular-nums">{won(result.collected)}</dd>
+                </div>
+                {result.surplus > 0 && (
+                  <div className="flex justify-between rounded-xl bg-white/15 px-3 py-2">
+                    <dt>남는 돈</dt>
+                    <dd className="font-bold tabular-nums">{won(result.surplus)}</dd>
+                  </div>
+                )}
+              </dl>
+            </Card>
+          ) : (
+            <EmptyState
+              icon="🧮"
+              title="총 결제 금액을 입력해 주세요"
+              description="인원수로 나눈 1인당 금액을 바로 계산해 드려요."
+            />
+          )}
+        </div>
+      );
+    }
+
+    // ========================================
+    // 📄 Page: 정산 모드 (여러 건 결제 → 최소 송금)
+    // ========================================
+
+    /** 지출 내역으로부터 각자의 낸 금액·부담액·잔액을 계산 */
+    function computeBalances(members, expenses) {
+      const stat = {};
+      members.forEach((m) => { stat[m.id] = { paid: 0, owed: 0 }; });
+
+      expenses.forEach((exp) => {
+        const amount = Number(exp.amount) || 0;
+        const parts = exp.participants.filter((id) => stat[id]);
+        if (amount <= 0 || parts.length === 0) return;
+
+        if (stat[exp.payer]) stat[exp.payer].paid += amount;
+        splitEvenly(amount, parts.length).forEach((share, i) => {
+          stat[parts[i]].owed += share;
+        });
+      });
+
+      return members.map((m) => ({
+        ...m,
+        paid: stat[m.id].paid,
+        owed: stat[m.id].owed,
+        balance: stat[m.id].paid - stat[m.id].owed, // 양수 = 받을 돈
+      }));
+    }
+
+    /** 잔액으로부터 송금 횟수가 최소가 되도록 그리디 매칭 */
+    function computeTransfers(balances) {
+      const creditors = balances
+        .filter((b) => b.balance > 0)
+        .map((b) => ({ name: b.name, left: b.balance }))
+        .sort((a, b) => b.left - a.left);
+      const debtors = balances
+        .filter((b) => b.balance < 0)
+        .map((b) => ({ name: b.name, left: -b.balance }))
+        .sort((a, b) => b.left - a.left);
+
+      const transfers = [];
+      let ci = 0;
+      let di = 0;
+      while (ci < creditors.length && di < debtors.length) {
+        const amount = Math.min(creditors[ci].left, debtors[di].left);
+        if (amount > 0) {
+          transfers.push({ from: debtors[di].name, to: creditors[ci].name, amount });
+        }
+        creditors[ci].left -= amount;
+        debtors[di].left -= amount;
+        if (creditors[ci].left <= 0) ci += 1;
+        if (debtors[di].left <= 0) di += 1;
+      }
+      return transfers;
+    }
+
+    function ExpenseForm({ members, onAdd }) {
+      const [title, setTitle] = useState('');
+      const [amount, setAmount] = useState('');
+      const [payer, setPayer] = useState(members[0] ? members[0].id : '');
+      const [participants, setParticipants] = useState(() => members.map((m) => m.id));
+      const [error, setError] = useState('');
+
+      // 참가자 목록이 바뀌면 선택 상태를 정리한다 (삭제된 사람 제거, 새로 추가된 사람 자동 선택).
+      useEffect(() => {
+        const ids = members.map((m) => m.id);
+        setParticipants((prev) => {
+          const kept = prev.filter((id) => ids.includes(id));
+          const added = ids.filter((id) => !prev.includes(id));
+          return [...kept, ...added];
+        });
+        setPayer((prev) => (ids.includes(prev) ? prev : (ids[0] || '')));
+      }, [members]);
+
+      const toggle = (id) => {
+        setParticipants((prev) => (prev.includes(id) ? prev.filter((p) => p !== id) : [...prev, id]));
+        setError('');
+      };
+
+      const submit = (e) => {
+        e.preventDefault();
+        const value = toNumber(amount);
+        if (value <= 0) { setError('금액을 입력해 주세요.'); return; }
+        if (!payer) { setError('결제한 사람을 선택해 주세요.'); return; }
+        if (participants.length === 0) { setError('함께 나눌 사람을 한 명 이상 선택해 주세요.'); return; }
+
+        onAdd({
+          id: uid(),
+          title: title.trim() || '지출',
+          amount: value,
+          payer,
+          participants: members.map((m) => m.id).filter((id) => participants.includes(id)),
+        });
+        setTitle('');
+        setAmount('');
+        setError('');
+      };
+
+      const allSelected = participants.length === members.length;
+
+      return (
+        <Card>
+          <h2 className="text-base font-bold text-slate-800">지출 추가</h2>
+
+          <form onSubmit={submit} className="mt-4 space-y-4">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <Input
+                label="내용"
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+                placeholder="예) 삼겹살집"
+                maxLength={20}
+              />
+              <Input
+                label="금액"
+                inputMode="numeric"
+                value={withComma(amount)}
+                onChange={(e) => { setAmount(digitsOnly(e.target.value)); setError(''); }}
+                placeholder="0"
+                suffix="원"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="payer-select" className="block text-xs font-semibold text-slate-500 mb-1.5">
+                결제한 사람
+              </label>
+              <select
+                id="payer-select"
+                value={payer}
+                onChange={(e) => setPayer(e.target.value)}
+                className="w-full rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-800 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-100"
+              >
+                {members.map((m) => (
+                  <option key={m.id} value={m.id}>{m.name}</option>
+                ))}
+              </select>
+            </div>
+
+            <div>
+              <div className="mb-1.5 flex items-center justify-between">
+                <span className="text-xs font-semibold text-slate-500">함께 나눌 사람</span>
+                <button
+                  type="button"
+                  onClick={() => setParticipants(allSelected ? [] : members.map((m) => m.id))}
+                  className="text-xs font-semibold text-indigo-600 hover:underline"
+                >
+                  {allSelected ? '전체 해제' : '전체 선택'}
+                </button>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {members.map((m, i) => {
+                  const on = participants.includes(m.id);
+                  return (
+                    <button
+                      key={m.id}
+                      type="button"
+                      aria-pressed={on}
+                      onClick={() => toggle(m.id)}
+                      className={`flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-sm font-medium transition ${on
+                          ? 'border-indigo-600 bg-indigo-50 text-indigo-700'
+                          : 'border-slate-200 bg-white text-slate-400'}`}
+                    >
+                      <span className={`h-2 w-2 rounded-full ${on ? colorOf(i) : 'bg-slate-300'}`} />
+                      {m.name}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            {error && <p className="text-xs font-medium text-rose-500">{error}</p>}
+
+            <Button type="submit" size="lg" className="w-full">지출 추가하기</Button>
+          </form>
+        </Card>
+      );
+    }
+
+    function ExpenseList({ expenses, memberMap, onRemove }) {
+      const total = expenses.reduce((sum, e) => sum + e.amount, 0);
+
+      return (
+        <Card>
+          <div className="flex items-center justify-between">
+            <h2 className="text-base font-bold text-slate-800">지출 내역</h2>
+            <Badge>총 {won(total)}</Badge>
+          </div>
+
+          {expenses.length === 0 ? (
+            <div className="mt-3">
+              <EmptyState icon="🧾" title="아직 등록된 지출이 없어요" description="위에서 지출을 추가해 보세요." />
+            </div>
+          ) : (
+            <ul className="mt-3 divide-y divide-slate-100">
+              {expenses.map((exp) => (
+                <li key={exp.id} className="animate-fade-up flex items-start gap-3 py-3">
+                  <div className="min-w-0 flex-1">
+                    <p className="truncate text-sm font-semibold text-slate-800">{exp.title}</p>
+                    <p className="mt-0.5 text-xs text-slate-500">
+                      <span className="font-medium text-slate-600">
+                        {memberMap[exp.payer] ? memberMap[exp.payer].name : '삭제된 참가자'}
+                      </span>
+                      {' 결제 · '}
+                      {exp.participants.length}명이 나눔
+                    </p>
+                    <p className="mt-1 text-xs text-slate-400">
+                      {exp.participants.map((id) => memberMap[id] && memberMap[id].name).filter(Boolean).join(', ')}
+                    </p>
+                  </div>
+                  <div className="shrink-0 text-right">
+                    <p className="text-sm font-bold tabular-nums text-slate-800">{won(exp.amount)}</p>
+                    <button
+                      onClick={() => onRemove(exp.id)}
+                      aria-label={`${exp.title} 삭제`}
+                      className="mt-1 text-xs text-slate-400 transition hover:text-rose-500"
+                    >
+                      삭제
+                    </button>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          )}
+        </Card>
+      );
+    }
+
+    function SettlementResult({ balances, transfers }) {
+      const [copied, setCopied] = useState(false);
+
+      const summaryText = useMemo(() => {
+        const lines = ['💸 더치페이 정산 결과', ''];
+        balances.forEach((b) => {
+          lines.push(`${b.name} — 낸 돈 ${won(b.paid)} / 부담 ${won(b.owed)} / ${signedWon(b.balance)}`);
+        });
+        lines.push('');
+        if (transfers.length === 0) {
+          lines.push('주고받을 금액이 없습니다.');
+        } else {
+          lines.push('[송금 안내]');
+          transfers.forEach((t) => lines.push(`${t.from} → ${t.to} : ${won(t.amount)}`));
+        }
+        return lines.join('\n');
+      }, [balances, transfers]);
+
+      const copy = async () => {
+        try {
+          await navigator.clipboard.writeText(summaryText);
+        } catch (e) {
+          // clipboard API 를 쓸 수 없는 환경(비 HTTPS 등) 대비
+          const ta = document.createElement('textarea');
+          ta.value = summaryText;
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand('copy');
+          document.body.removeChild(ta);
+        }
+        setCopied(true);
+      };
+
+      useEffect(() => {
+        if (!copied) return;
+        const timer = setTimeout(() => setCopied(false), 1800);
+        return () => clearTimeout(timer);
+      }, [copied]);
+
+      return (
+        <Card>
+          <div className="flex items-center justify-between">
+            <h2 className="text-base font-bold text-slate-800">정산 결과</h2>
+            <Button variant="secondary" size="sm" onClick={copy}>
+              {copied ? '복사됨 ✓' : '결과 복사'}
+            </Button>
+          </div>
+
+          <ul className="mt-4 space-y-2">
+            {balances.map((b, i) => (
+              <li key={b.id} className="flex items-center gap-3 rounded-xl bg-slate-50 px-3 py-2.5">
+                <span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white ${colorOf(i)}`}>
+                  {b.name.slice(0, 1)}
+                </span>
+                <div className="min-w-0 flex-1">
+                  <p className="truncate text-sm font-semibold text-slate-800">{b.name}</p>
+                  <p className="text-xs text-slate-500 tabular-nums">
+                    낸 돈 {won(b.paid)} · 부담 {won(b.owed)}
+                  </p>
+                </div>
+                <span className={`shrink-0 text-sm font-bold tabular-nums ${b.balance > 0 ? 'text-emerald-600' : b.balance < 0 ? 'text-rose-600' : 'text-slate-400'}`}>
+                  {signedWon(b.balance)}
+                </span>
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-5 border-t border-slate-100 pt-4">
+            <h3 className="text-sm font-bold text-slate-800">
+              송금 안내
+              {transfers.length > 0 && (
+                <span className="ml-2 text-xs font-medium text-slate-400">{transfers.length}번만 보내면 끝</span>
+              )}
+            </h3>
+
+            {transfers.length === 0 ? (
+              <p className="mt-3 rounded-xl bg-emerald-50 px-3 py-3 text-sm font-medium text-emerald-700">
+                🎉 모두 정확히 나눠 냈어요. 주고받을 돈이 없습니다.
+              </p>
+            ) : (
+              <ul className="mt-3 space-y-2">
+                {transfers.map((t, idx) => (
+                  <li
+                    key={`${t.from}-${t.to}-${idx}`}
+                    className="animate-fade-up flex items-center gap-2 rounded-xl bg-indigo-50 px-3 py-3 text-sm"
+                  >
+                    <span className="font-bold text-slate-800">{t.from}</span>
+                    <span className="text-indigo-400">→</span>
+                    <span className="font-bold text-slate-800">{t.to}</span>
+                    <span className="ml-auto font-bold tabular-nums text-indigo-600">{won(t.amount)}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        </Card>
+      );
+    }
+
+    function Settlement({ members, expenses, onAddExpense, onRemoveExpense }) {
+      const memberMap = useMemo(() => {
+        const map = {};
+        members.forEach((m) => { map[m.id] = m; });
+        return map;
+      }, [members]);
+      const balances = useMemo(() => computeBalances(members, expenses), [members, expenses]);
+      const transfers = useMemo(() => computeTransfers(balances), [balances]);
+
+      if (members.length < 2) {
+        return (
+          <EmptyState
+            icon="👥"
+            title="참가자를 2명 이상 추가해 주세요"
+            description="누가 얼마를 냈는지 기록하면 최소 송금 횟수로 정산해 드려요."
+          />
+        );
+      }
+
+      return (
+        <div className="space-y-4">
+          <ExpenseForm members={members} onAdd={onAddExpense} />
+          <ExpenseList expenses={expenses} memberMap={memberMap} onRemove={onRemoveExpense} />
+          {expenses.length > 0 && <SettlementResult balances={balances} transfers={transfers} />}
+        </div>
+      );
+    }
+
+    // ========================================
+    // 🚀 App
+    // ========================================
+
+    const STORAGE_KEY = 'dutchpay-state-v1';
+    const TABS = [
+      { id: 'simple', label: '간편 분할' },
+      { id: 'settle', label: '정산 모드' },
+    ];
+
+    function App() {
+      const initial = useRef(loadStore(STORAGE_KEY, { members: [], expenses: [] })).current;
+      const [members, setMembers] = useState(() => initial.members || []);
+      const [expenses, setExpenses] = useState(() => initial.expenses || []);
+      const [tab, setTab] = useState('simple');
+      const [resetOpen, setResetOpen] = useState(false);
+
+      useEffect(() => {
+        saveStore(STORAGE_KEY, { members, expenses });
+      }, [members, expenses]);
+
+      const addMember = useCallback((name) => {
+        setMembers((prev) => [...prev, { id: uid(), name }]);
+      }, []);
+
+      const removeMember = useCallback((id) => {
+        setMembers((prev) => prev.filter((m) => m.id !== id));
+        // 삭제된 참가자가 결제한 지출은 함께 제거하고, 참여자였던 경우 명단에서만 뺀다.
+        setExpenses((prev) => prev
+          .filter((e) => e.payer !== id)
+          .map((e) => ({ ...e, participants: e.participants.filter((p) => p !== id) }))
+          .filter((e) => e.participants.length > 0));
+      }, []);
+
+      const addExpense = useCallback((expense) => {
+        setExpenses((prev) => [expense, ...prev]);
+      }, []);
+
+      const removeExpense = useCallback((id) => {
+        setExpenses((prev) => prev.filter((e) => e.id !== id));
+      }, []);
+
+      const closeReset = useCallback(() => setResetOpen(false), []);
+
+      const resetAll = () => {
+        setMembers([]);
+        setExpenses([]);
+        setResetOpen(false);
+      };
+
+      return (
+        <div className="min-h-screen bg-slate-100 pb-16">
+          <Header />
+
+          <main className="mx-auto max-w-2xl space-y-4 px-4 py-6">
+            <TabNav tabs={TABS} current={tab} onChange={setTab} />
+
+            <MemberManager members={members} onAdd={addMember} onRemove={removeMember} />
+
+            {tab === 'simple' ? (
+              <SimpleSplit members={members} />
+            ) : (
+              <Settlement
+                members={members}
+                expenses={expenses}
+                onAddExpense={addExpense}
+                onRemoveExpense={removeExpense}
+              />
+            )}
+
+            {(members.length > 0 || expenses.length > 0) && (
+              <div className="pt-2 text-center">
+                <Button variant="ghost" size="sm" onClick={() => setResetOpen(true)}>
+                  전체 초기화
+                </Button>
+              </div>
+            )}
+
+            <p className="pt-2 text-center text-xs text-slate-400">
+              입력한 내용은 이 브라우저에만 저장돼요.
+            </p>
+          </main>
+
+          <Modal isOpen={resetOpen} onClose={closeReset} title="전체 초기화" size="sm">
+            <p className="text-sm text-slate-600">
+              참가자와 지출 내역이 모두 삭제됩니다. 계속할까요?
+            </p>
+            <div className="mt-5 flex gap-2">
+              <Button variant="secondary" className="flex-1" onClick={closeReset}>취소</Button>
+              <Button variant="danger" className="flex-1" onClick={resetAll}>초기화</Button>
+            </div>
+          </Modal>
+        </div>
+      );
+    }
+
+    // ========================================
+    // Rendering
+    // ========================================
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>

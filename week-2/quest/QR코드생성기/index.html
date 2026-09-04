@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URL → QR 코드 생성기</title>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <!-- ⚠️ CDN 버전 고정 필수 (Babel 은 7.x 만 인라인 text/babel 지원) -->
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone@7.25.9/babel.min.js"></script>
+  <!-- qrcode 는 1.5.1 로 고정한다. 1.5.2+ 는 npm 패키지에서 build/ 브라우저 번들을
+       제거해 이 경로가 404 가 되고, 전역 QRCode 가 정의되지 않는다. -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in { animation: fadeIn .25s ease-out both; }
+    /* 색상 입력의 기본 테두리/패딩 제거 (Tailwind 로 불가) */
+    input[type="color"] { -webkit-appearance: none; appearance: none; padding: 0; border: none; background: none; }
+    input[type="color"]::-webkit-color-swatch-wrapper { padding: 0; }
+    input[type="color"]::-webkit-color-swatch { border: 1px solid #cbd5e1; border-radius: .5rem; }
+  </style>
+</head>
+<body class="bg-slate-100 min-h-screen text-slate-800">
+  <div id="root"></div>
+
+  <script type="text/babel">
+    // ========================================
+    // React Hooks Destructuring
+    // ========================================
+    const { useState, useEffect, useRef, useCallback, useMemo } = React;
+
+    // ========================================
+    // 🔧 Constants & Utilities
+    // ========================================
+    const STORAGE_KEY = 'qr-generator-history';
+    const MAX_HISTORY = 8;
+
+    const EC_LEVELS = [
+      { value: 'L', label: 'L · 낮음 (7%)' },
+      { value: 'M', label: 'M · 보통 (15%)' },
+      { value: 'Q', label: 'Q · 높음 (25%)' },
+      { value: 'H', label: 'H · 최고 (30%)' },
+    ];
+
+    // 사용자가 "naver.com" 처럼 입력해도 https:// 를 자동으로 붙인다.
+    function normalizeUrl(raw) {
+      const trimmed = raw.trim();
+      if (!trimmed) return '';
+      if (/^[a-zA-Z][a-zA-Z0-9+.-]*:/.test(trimmed)) return trimmed;
+      return 'https://' + trimmed;
+    }
+
+    // 반환값이 null 이면 정상, 문자열이면 에러 메시지
+    function validateUrl(raw) {
+      if (!raw.trim()) return '웹사이트 주소를 입력해 주세요.';
+      const normalized = normalizeUrl(raw);
+      let parsed;
+      try {
+        parsed = new URL(normalized);
+      } catch (e) {
+        return '올바른 주소 형식이 아닙니다. (예: https://example.com)';
+      }
+      if (!/^https?:$/.test(parsed.protocol)) {
+        return 'http 또는 https 주소만 지원합니다.';
+      }
+      if (!parsed.hostname.includes('.') && parsed.hostname !== 'localhost') {
+        return '도메인을 확인해 주세요. (예: example.com)';
+      }
+      return null;
+    }
+
+    function loadHistory() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        const parsed = raw ? JSON.parse(raw) : [];
+        return Array.isArray(parsed) ? parsed.slice(0, MAX_HISTORY) : [];
+      } catch (e) {
+        return [];
+      }
+    }
+
+    function saveHistory(list) {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
+      } catch (e) {
+        /* 저장 실패(프라이빗 모드 등)는 무시하고 계속 동작한다 */
+      }
+    }
+
+    function fileNameFromUrl(url, ext) {
+      let base = 'qrcode';
+      try {
+        base = new URL(url).hostname.replace(/^www\./, '') || 'qrcode';
+      } catch (e) {
+        /* 기본 파일명 유지 */
+      }
+      return base + '-qr.' + ext;
+    }
+
+    function downloadFile(blobOrDataUrl, filename) {
+      const isBlob = blobOrDataUrl instanceof Blob;
+      const href = isBlob ? URL.createObjectURL(blobOrDataUrl) : blobOrDataUrl;
+      const a = document.createElement('a');
+      a.href = href;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      if (isBlob) setTimeout(() => URL.revokeObjectURL(href), 1000);
+    }
+
+    // ========================================
+    // 🎨 Design System Components
+    // ========================================
+    function Button({ variant = 'primary', size = 'md', disabled = false, onClick, type = 'button', className = '', children, ...rest }) {
+      const base = 'inline-flex items-center justify-center gap-2 rounded-xl font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed';
+      const variants = {
+        primary: 'bg-indigo-600 text-white hover:bg-indigo-700 active:bg-indigo-800',
+        secondary: 'bg-white text-slate-700 border border-slate-300 hover:bg-slate-50',
+        danger: 'bg-rose-600 text-white hover:bg-rose-700',
+        ghost: 'bg-transparent text-slate-600 hover:bg-slate-200',
+      };
+      const sizes = {
+        sm: 'text-xs px-3 py-1.5',
+        md: 'text-sm px-4 py-2.5',
+        lg: 'text-base px-6 py-3',
+      };
+      return (
+        <button
+          type={type}
+          onClick={onClick}
+          disabled={disabled}
+          className={`${base} ${variants[variant]} ${sizes[size]} ${className}`}
+          {...rest}
+        >
+          {children}
+        </button>
+      );
+    }
+
+    function Input({ id, type = 'text', label, value, onChange, placeholder, error, disabled = false, className = '', ...rest }) {
+      const inputId = id || 'input-field';
+      return (
+        <div className={`w-full ${className}`}>
+          {label && (
+            <label htmlFor={inputId} className="block mb-1.5 text-sm font-medium text-slate-700">
+              {label}
+            </label>
+          )}
+          <input
+            id={inputId}
+            type={type}
+            value={value}
+            onChange={onChange}
+            placeholder={placeholder}
+            disabled={disabled}
+            aria-invalid={!!error}
+            aria-describedby={error ? inputId + '-error' : undefined}
+            className={`w-full rounded-xl border px-4 py-3 text-base placeholder:text-slate-400 transition-colors focus:outline-none focus:ring-2 disabled:bg-slate-100 ${
+              error
+                ? 'border-rose-400 focus:border-rose-500 focus:ring-rose-200'
+                : 'border-slate-300 focus:border-indigo-500 focus:ring-indigo-200'
+            }`}
+            {...rest}
+          />
+          {error && (
+            <p id={inputId + '-error'} role="alert" className="mt-1.5 text-sm text-rose-600">
+              {error}
+            </p>
+          )}
+        </div>
+      );
+    }
+
+    function Select({ id, label, value, onChange, options, className = '' }) {
+      const selectId = id || 'select-field';
+      return (
+        <div className={`w-full ${className}`}>
+          {label && (
+            <label htmlFor={selectId} className="block mb-1.5 text-sm font-medium text-slate-700">
+              {label}
+            </label>
+          )}
+          <select
+            id={selectId}
+            value={value}
+            onChange={onChange}
+            className="w-full rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-sm focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-200"
+          >
+            {options.map(opt => (
+              <option key={opt.value} value={opt.value}>{opt.label}</option>
+            ))}
+          </select>
+        </div>
+      );
+    }
+
+    function Card({ className = '', children }) {
+      return (
+        <div className={`bg-white rounded-2xl shadow-sm ring-1 ring-slate-200 p-6 ${className}`}>
+          {children}
+        </div>
+      );
+    }
+
+    function Badge({ children, className = '' }) {
+      return (
+        <span className={`inline-flex items-center rounded-full bg-indigo-50 px-2.5 py-0.5 text-xs font-medium text-indigo-700 ${className}`}>
+          {children}
+        </span>
+      );
+    }
+
+    function ColorField({ label, value, onChange }) {
+      return (
+        <div>
+          <label className="block mb-1.5 text-sm font-medium text-slate-700">{label}</label>
+          <div className="flex items-center gap-2">
+            <input
+              type="color"
+              value={value}
+              onChange={onChange}
+              aria-label={label}
+              className="h-10 w-12 cursor-pointer rounded-lg"
+            />
+            <span className="font-mono text-xs uppercase text-slate-500">{value}</span>
+          </div>
+        </div>
+      );
+    }
+
+    function RangeField({ id, label, hint, min, max, step, value, onChange }) {
+      return (
+        <div>
+          <label htmlFor={id} className="block mb-1.5 text-sm font-medium text-slate-700">
+            {label} <span className="font-normal text-slate-400">({hint})</span>
+          </label>
+          <input
+            id={id}
+            type="range"
+            min={min}
+            max={max}
+            step={step}
+            value={value}
+            onChange={onChange}
+            className="h-2 w-full cursor-pointer appearance-none rounded-lg bg-slate-200 accent-indigo-600"
+          />
+        </div>
+      );
+    }
+
+    // ========================================
+    // 🧩 Common / Layout Components
+    // ========================================
+    function Header() {
+      return (
+        <header className="mb-8 text-center">
+          <div className="mb-3 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-indigo-600 text-white shadow-lg shadow-indigo-200">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-8 w-8" aria-hidden="true">
+              <path d="M3 3h8v8H3V3zm2 2v4h4V5H5zM13 3h8v8h-8V3zm2 2v4h4V5h-4zM3 13h8v8H3v-8zm2 2v4h4v-4H5zM13 13h3v3h-3v-3zm5 0h3v3h-3v-3zm-5 5h3v3h-3v-3zm5 0h3v3h-3v-3z" />
+            </svg>
+          </div>
+          <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">URL → QR 코드 생성기</h1>
+          <p className="mt-2 text-slate-500">웹사이트 주소를 입력하면 바로 QR 코드로 만들어 드립니다.</p>
+        </header>
+      );
+    }
+
+    function Footer() {
+      return (
+        <footer className="mt-10 text-center text-xs text-slate-400">
+          <p>모든 변환은 브라우저 안에서만 처리되며 서버로 전송되지 않습니다.</p>
+        </footer>
+      );
+    }
+
+    // ========================================
+    // 📄 Page Components
+    // ========================================
+
+    // 캔버스에 QR 을 그리고 빈 상태 / 로딩 / 에러 상태를 표시한다.
+    function QrPreview({ url, options, onCanvasReady }) {
+      const canvasRef = useRef(null);
+      const [status, setStatus] = useState('idle'); // idle | loading | done | error
+      const [message, setMessage] = useState('');
+
+      useEffect(() => {
+        if (!url) {
+          setStatus('idle');
+          onCanvasReady(null);
+          return;
+        }
+        let cancelled = false;
+        setStatus('loading');
+
+        // CDN 이 막혔거나 오프라인이면 전역 QRCode 자체가 없다.
+        if (typeof QRCode === 'undefined') {
+          setStatus('error');
+          setMessage('QR 라이브러리를 불러오지 못했습니다. 네트워크 연결을 확인한 뒤 새로고침해 주세요.');
+          onCanvasReady(null);
+          return;
+        }
+
+        QRCode.toCanvas(canvasRef.current, url, {
+          width: options.size,
+          margin: options.margin,
+          errorCorrectionLevel: options.level,
+          color: { dark: options.dark, light: options.light },
+        })
+          .then(() => {
+            if (cancelled) return;
+            setStatus('done');
+            onCanvasReady(canvasRef.current);
+          })
+          .catch(err => {
+            if (cancelled) return;
+            setStatus('error');
+            setMessage(err && err.message ? err.message : 'QR 코드를 만들지 못했습니다.');
+            onCanvasReady(null);
+          });
+
+        return () => { cancelled = true; };
+      }, [url, options.size, options.margin, options.level, options.dark, options.light, onCanvasReady]);
+
+      return (
+        <div className="flex min-h-[320px] w-full flex-col items-center justify-center">
+          {status === 'idle' && (
+            <div className="flex flex-col items-center gap-3 text-slate-400">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-16 w-16" aria-hidden="true">
+                <rect x="3" y="3" width="7" height="7" rx="1" />
+                <rect x="14" y="3" width="7" height="7" rx="1" />
+                <rect x="3" y="14" width="7" height="7" rx="1" />
+                <path d="M14 14h3v3h-3zM18 18h3v3h-3z" />
+              </svg>
+              <p className="text-sm">주소를 입력하면 여기에 QR 코드가 표시됩니다.</p>
+            </div>
+          )}
+
+          {status === 'loading' && (
+            <div className="flex flex-col items-center gap-3 text-slate-500" role="status" aria-live="polite">
+              <span className="h-10 w-10 animate-spin rounded-full border-4 border-slate-200 border-t-indigo-600" />
+              <p className="text-sm">QR 코드를 만드는 중…</p>
+            </div>
+          )}
+
+          {status === 'error' && (
+            <div role="alert" className="rounded-xl bg-rose-50 px-4 py-3 text-center text-sm text-rose-700">
+              {message}
+            </div>
+          )}
+
+          <div className={`fade-in rounded-2xl bg-white p-3 ring-1 ring-slate-200 ${status === 'done' ? '' : 'hidden'}`}>
+            <canvas ref={canvasRef} role="img" aria-label={url ? url + ' 의 QR 코드' : 'QR 코드'} />
+          </div>
+        </div>
+      );
+    }
+
+    function HistoryList({ items, onSelect, onClear }) {
+      if (items.length === 0) return null;
+      return (
+        <Card className="mt-6">
+          <div className="mb-2 flex items-center justify-between">
+            <h2 className="text-sm font-semibold text-slate-700">최근 만든 QR</h2>
+            <Button variant="ghost" size="sm" onClick={onClear}>전체 삭제</Button>
+          </div>
+          <ul className="divide-y divide-slate-100">
+            {items.map((item, idx) => (
+              <li key={item + idx}>
+                <button
+                  type="button"
+                  onClick={() => onSelect(item)}
+                  title={item}
+                  className="w-full truncate rounded-lg px-2 py-2.5 text-left text-sm text-slate-600 transition-colors hover:bg-slate-50 hover:text-indigo-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400"
+                >
+                  {item}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </Card>
+      );
+    }
+
+    function QrGeneratorPage() {
+      const [input, setInput] = useState('');
+      const [error, setError] = useState('');
+      const [targetUrl, setTargetUrl] = useState('');
+      const [history, setHistory] = useState(loadHistory);
+      const [copied, setCopied] = useState(false);
+
+      const [size, setSize] = useState(320);
+      const [margin, setMargin] = useState(2);
+      const [level, setLevel] = useState('M');
+      const [dark, setDark] = useState('#0f172a');
+      const [light, setLight] = useState('#ffffff');
+
+      const canvasRef = useRef(null);
+      const handleCanvasReady = useCallback(canvas => { canvasRef.current = canvas; }, []);
+
+      const options = useMemo(
+        () => ({ size, margin, level, dark, light }),
+        [size, margin, level, dark, light]
+      );
+
+      // 복사 완료 표시는 2초 뒤 자동으로 사라진다.
+      useEffect(() => {
+        if (!copied) return;
+        const timer = setTimeout(() => setCopied(false), 2000);
+        return () => clearTimeout(timer);
+      }, [copied]);
+
+      function pushHistory(url) {
+        setHistory(prev => {
+          const next = [url].concat(prev.filter(item => item !== url)).slice(0, MAX_HISTORY);
+          saveHistory(next);
+          return next;
+        });
+      }
+
+      function handleSubmit(e) {
+        e.preventDefault();
+        const validationError = validateUrl(input);
+        if (validationError) {
+          setError(validationError);
+          setTargetUrl('');
+          return;
+        }
+        const normalized = normalizeUrl(input);
+        setError('');
+        setInput(normalized);
+        setTargetUrl(normalized);
+        pushHistory(normalized);
+      }
+
+      function handleReset() {
+        setInput('');
+        setError('');
+        setTargetUrl('');
+      }
+
+      function handleSelectHistory(url) {
+        setInput(url);
+        setError('');
+        setTargetUrl(url);
+      }
+
+      function handleClearHistory() {
+        setHistory([]);
+        saveHistory([]);
+      }
+
+      function handleDownloadPng() {
+        if (!canvasRef.current) return;
+        downloadFile(canvasRef.current.toDataURL('image/png'), fileNameFromUrl(targetUrl, 'png'));
+      }
+
+      function handleDownloadSvg() {
+        if (!targetUrl || typeof QRCode === 'undefined') return;
+        QRCode.toString(targetUrl, {
+          type: 'svg',
+          width: size,
+          margin: margin,
+          errorCorrectionLevel: level,
+          color: { dark: dark, light: light },
+        })
+          .then(svg => {
+            downloadFile(new Blob([svg], { type: 'image/svg+xml' }), fileNameFromUrl(targetUrl, 'svg'));
+          })
+          .catch(() => setError('SVG 저장에 실패했습니다. 다시 시도해 주세요.'));
+      }
+
+      function handleCopyUrl() {
+        if (!targetUrl || !navigator.clipboard) return;
+        navigator.clipboard.writeText(targetUrl)
+          .then(() => setCopied(true))
+          .catch(() => setError('클립보드 복사에 실패했습니다.'));
+      }
+
+      const hasResult = !!targetUrl;
+
+      return (
+        <div className="mx-auto max-w-5xl px-4 py-10 sm:py-14">
+          <Header />
+
+          <div className="grid gap-6 lg:grid-cols-5">
+            {/* 입력 & 옵션 */}
+            <div className="lg:col-span-3">
+              <Card>
+                <form onSubmit={handleSubmit} noValidate>
+                  <Input
+                    id="url-input"
+                    label="웹사이트 주소"
+                    value={input}
+                    onChange={e => { setInput(e.target.value); if (error) setError(''); }}
+                    placeholder="https://example.com"
+                    error={error}
+                    autoComplete="url"
+                    inputMode="url"
+                    autoFocus
+                  />
+                  <p className="mt-1.5 text-xs text-slate-400">
+                    앞의 https:// 를 빼고 example.com 처럼 입력해도 됩니다.
+                  </p>
+
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    <Button type="submit" size="lg">QR 코드 만들기</Button>
+                    <Button type="button" variant="secondary" size="lg" onClick={handleReset} disabled={!input && !hasResult}>
+                      초기화
+                    </Button>
+                  </div>
+                </form>
+
+                <hr className="my-6 border-slate-100" />
+
+                <h2 className="mb-4 text-sm font-semibold text-slate-700">디자인 옵션</h2>
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <RangeField
+                    id="size-range"
+                    label="크기"
+                    hint={size + 'px'}
+                    min={128}
+                    max={640}
+                    step={32}
+                    value={size}
+                    onChange={e => setSize(Number(e.target.value))}
+                  />
+                  <RangeField
+                    id="margin-range"
+                    label="여백"
+                    hint={margin}
+                    min={0}
+                    max={8}
+                    step={1}
+                    value={margin}
+                    onChange={e => setMargin(Number(e.target.value))}
+                  />
+                  <Select
+                    id="level-select"
+                    label="오류 복원 수준"
+                    value={level}
+                    onChange={e => setLevel(e.target.value)}
+                    options={EC_LEVELS}
+                  />
+                  <div className="grid grid-cols-2 gap-4">
+                    <ColorField label="전경색" value={dark} onChange={e => setDark(e.target.value)} />
+                    <ColorField label="배경색" value={light} onChange={e => setLight(e.target.value)} />
+                  </div>
+                </div>
+              </Card>
+
+              <HistoryList items={history} onSelect={handleSelectHistory} onClear={handleClearHistory} />
+            </div>
+
+            {/* 결과 미리보기 */}
+            <div className="lg:col-span-2">
+              <Card className="lg:sticky lg:top-8">
+                <div className="mb-4 flex items-center justify-between">
+                  <h2 className="text-sm font-semibold text-slate-700">미리보기</h2>
+                  {hasResult && <Badge>{level} 레벨</Badge>}
+                </div>
+
+                <QrPreview url={targetUrl} options={options} onCanvasReady={handleCanvasReady} />
+
+                {hasResult && (
+                  <div className="mt-4 space-y-3">
+                    <p className="truncate text-center text-xs text-slate-500" title={targetUrl}>{targetUrl}</p>
+                    <div className="grid grid-cols-2 gap-2">
+                      <Button onClick={handleDownloadPng}>PNG 저장</Button>
+                      <Button variant="secondary" onClick={handleDownloadSvg}>SVG 저장</Button>
+                    </div>
+                    <Button variant="ghost" className="w-full" onClick={handleCopyUrl}>
+                      {copied ? '✓ 주소를 복사했습니다' : '주소 복사'}
+                    </Button>
+                  </div>
+                )}
+              </Card>
+            </div>
+          </div>
+
+          <Footer />
+        </div>
+      );
+    }
+
+    // ========================================
+    // 🚀 App Component
+    // ========================================
+    function App() {
+      return <QrGeneratorPage />;
+    }
+
+    // ========================================
+    // Rendering
+    // ========================================
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>

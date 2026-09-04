@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>짤 생성기 — 밈 메이커</title>
+
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <!-- ⚠️ 모든 CDN 버전 고정. Babel 은 반드시 7.x (8.x 는 인라인 text/babel 미지원) -->
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone@7.25.9/babel.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Jua&family=Noto+Sans+KR:wght@400;700;900&family=Gaegu:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Tailwind 로 표현 불가능한 것만 */
+    body { font-family: 'Noto Sans KR', system-ui, -apple-system, sans-serif; }
+
+    /* 캔버스 뒤 투명 체커보드 */
+    .checkerboard {
+      background-image:
+        linear-gradient(45deg, #e2e8f0 25%, transparent 25%),
+        linear-gradient(-45deg, #e2e8f0 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #e2e8f0 75%),
+        linear-gradient(-45deg, transparent 75%, #e2e8f0 75%);
+      background-size: 16px 16px;
+      background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+    }
+
+    /* 드래그 중 텍스트 선택 방지 */
+    .no-select { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+
+    /* 커스텀 스크롤바 */
+    .thin-scroll::-webkit-scrollbar { width: 8px; }
+    .thin-scroll::-webkit-scrollbar-track { background: transparent; }
+    .thin-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+    .thin-scroll::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+    /* 토스트 등장 애니메이션 */
+    @keyframes toast-in {
+      from { opacity: 0; transform: translate(-50%, 12px); }
+      to   { opacity: 1; transform: translate(-50%, 0); }
+    }
+    .animate-toast { animation: toast-in 0.22s ease-out; }
+
+    /* 드롭존 하이라이트 펄스 */
+    @keyframes drop-pulse {
+      0%, 100% { border-color: #6366f1; }
+      50%      { border-color: #a5b4fc; }
+    }
+    .animate-drop { animation: drop-pulse 1.2s ease-in-out infinite; }
+
+    input[type="range"] { accent-color: #4f46e5; }
+    input[type="color"] { -webkit-appearance: none; appearance: none; border: none; padding: 0; background: none; cursor: pointer; }
+    input[type="color"]::-webkit-color-swatch-wrapper { padding: 0; }
+    input[type="color"]::-webkit-color-swatch { border: 1px solid #cbd5e1; border-radius: 8px; }
+  </style>
+</head>
+<body class="bg-slate-100">
+  <div id="root"></div>
+
+  <script type="text/babel">
+    // ========================================
+    // React Hooks
+    // ========================================
+    const { useState, useEffect, useRef, useCallback, useMemo } = React;
+
+    // ========================================
+    // ⚙️ Constants & Config
+    // ========================================
+
+    /** 캔버스 최대 렌더 해상도 (긴 변 기준) — 원본이 커도 이 크기로 제한 */
+    const MAX_CANVAS_EDGE = 1400;
+
+    const FONTS = [
+      { id: 'blackhan', label: '검은고딕 (짤 기본)', css: '"Black Han Sans", "Noto Sans KR", sans-serif', weight: 400 },
+      { id: 'notosans', label: '고딕 굵게',          css: '"Noto Sans KR", sans-serif',                    weight: 900 },
+      { id: 'jua',      label: '주아 (동글동글)',     css: '"Jua", "Noto Sans KR", sans-serif',             weight: 400 },
+      { id: 'gaegu',    label: '개구 (손글씨)',       css: '"Gaegu", "Noto Sans KR", cursive',              weight: 700 },
+      { id: 'impact',   label: 'Impact (영문)',      css: 'Impact, "Anton", "Arial Black", sans-serif',    weight: 400 },
+    ];
+
+    const RATIOS = [
+      { id: 'original', label: '원본',  value: null },
+      { id: '1:1',      label: '1:1',   value: 1 },
+      { id: '4:5',      label: '4:5',   value: 4 / 5 },
+      { id: '16:9',     label: '16:9',  value: 16 / 9 },
+      { id: '4:3',      label: '4:3',   value: 4 / 3 },
+    ];
+
+    const BACKGROUNDS = [
+      { id: 'white',  label: '화이트', from: '#ffffff', to: '#e2e8f0' },
+      { id: 'dark',   label: '다크',   from: '#1e293b', to: '#0f172a' },
+      { id: 'sunset', label: '노을',   from: '#fb7185', to: '#f59e0b' },
+      { id: 'ocean',  label: '바다',   from: '#38bdf8', to: '#4f46e5' },
+      { id: 'mint',   label: '민트',   from: '#5eead4', to: '#0d9488' },
+      { id: 'grape',  label: '포도',   from: '#c084fc', to: '#7c3aed' },
+    ];
+
+    const TEXT_PRESETS = [
+      { id: 'classic', label: '클래식 흰검', fill: '#ffffff', stroke: '#000000', strokeRatio: 0.16, shadow: 0.18 },
+      { id: 'yellow',  label: '노란 자막',   fill: '#ffe600', stroke: '#000000', strokeRatio: 0.16, shadow: 0.20 },
+      { id: 'black',   label: '검정 민무늬', fill: '#111827', stroke: '#ffffff', strokeRatio: 0.06, shadow: 0 },
+      { id: 'neon',    label: '네온 핑크',   fill: '#ff3ea5', stroke: '#ffffff', strokeRatio: 0.12, shadow: 0.24 },
+    ];
+
+    const STICKERS = ['😂', '😭', '🔥', '💀', '👀', '🤔', '❤️', '✨', '👍', '🙏', '🎉', '💯'];
+
+    const uid = () => Math.random().toString(36).slice(2, 9);
+
+    /** 새 텍스트 레이어 기본값 (x, y, size 는 캔버스 크기 대비 비율) */
+    function makeLayer(overrides = {}) {
+      return {
+        id: uid(),
+        text: '텍스트를 입력하세요',
+        x: 0.5,
+        y: 0.5,
+        size: 0.1,
+        rotation: 0,
+        align: 'center',
+        fontId: 'blackhan',
+        fill: '#ffffff',
+        stroke: '#000000',
+        strokeRatio: 0.16,
+        shadow: 0.18,
+        uppercase: false,
+        ...overrides,
+      };
+    }
+
+    // ========================================
+    // 🖌️ Canvas Drawing Helpers (순수 함수)
+    // ========================================
+
+    /** 이미지를 캔버스에 cover 방식(비율 유지 + 꽉 채움)으로 그린다 */
+    function drawCover(ctx, img, W, H) {
+      const scale = Math.max(W / img.naturalWidth, H / img.naturalHeight);
+      const w = img.naturalWidth * scale;
+      const h = img.naturalHeight * scale;
+      ctx.drawImage(img, (W - w) / 2, (H - h) / 2, w, h);
+    }
+
+    /** 폰트 스펙 문자열 생성 (canvas ctx.font 용) */
+    function fontSpec(fontId, px) {
+      const f = FONTS.find((x) => x.id === fontId) || FONTS[0];
+      return `${f.weight} ${px}px ${f.css}`;
+    }
+
+    /**
+     * 최대 너비에 맞춰 줄바꿈. 단어(공백) 우선, 한 단어가 넘치면 글자 단위로 분해.
+     * 사용자가 넣은 개행(\n)은 그대로 보존한다.
+     */
+    function wrapText(ctx, text, maxWidth) {
+      const lines = [];
+
+      text.split('\n').forEach((para) => {
+        if (para.trim() === '') { lines.push(''); return; }
+
+        let line = '';
+        const flush = () => { if (line !== '') { lines.push(line); line = ''; } };
+
+        para.split(' ').forEach((word) => {
+          const candidate = line === '' ? word : `${line} ${word}`;
+
+          if (ctx.measureText(candidate).width <= maxWidth) {
+            line = candidate;
+            return;
+          }
+
+          // 단어 하나가 통째로 넘치면 글자 단위로 쪼갠다 (한글/URL 대응)
+          flush();
+          if (ctx.measureText(word).width <= maxWidth) {
+            line = word;
+            return;
+          }
+          let chunk = '';
+          for (const ch of word) {
+            if (chunk !== '' && ctx.measureText(chunk + ch).width > maxWidth) {
+              lines.push(chunk);
+              chunk = ch;
+            } else {
+              chunk += ch;
+            }
+          }
+          line = chunk;
+        });
+
+        flush();
+      });
+
+      return lines.length ? lines : [''];
+    }
+
+    /**
+     * 캔버스 전체를 다시 그린다.
+     * @returns {Array} 히트 테스트용 레이어 박스 정보 (캔버스 좌표계)
+     */
+    function renderMeme(canvas, { image, layers, background, selectedId, showGuides }) {
+      const ctx = canvas.getContext('2d');
+      const W = canvas.width;
+      const H = canvas.height;
+
+      ctx.clearRect(0, 0, W, H);
+
+      // --- 배경 ---
+      if (image) {
+        drawCover(ctx, image, W, H);
+      } else {
+        const bg = BACKGROUNDS.find((b) => b.id === background) || BACKGROUNDS[0];
+        const grad = ctx.createLinearGradient(0, 0, W, H);
+        grad.addColorStop(0, bg.from);
+        grad.addColorStop(1, bg.to);
+        ctx.fillStyle = grad;
+        ctx.fillRect(0, 0, W, H);
+      }
+
+      // --- 텍스트 레이어 ---
+      const boxes = [];
+      const maxWidth = W * 0.92;
+
+      layers.forEach((layer) => {
+        const px = Math.max(8, layer.size * H);
+        ctx.font = fontSpec(layer.fontId, px);
+        ctx.textBaseline = 'middle';
+
+        const raw = layer.uppercase ? layer.text.toUpperCase() : layer.text;
+        const lines = wrapText(ctx, raw, maxWidth);
+        const lineHeight = px * 1.16;
+        const blockH = lines.length * lineHeight;
+        const blockW = Math.max(...lines.map((l) => ctx.measureText(l).width), 1);
+
+        const cx = layer.x * W;
+        const cy = layer.y * H;
+        const rad = (layer.rotation * Math.PI) / 180;
+
+        ctx.save();
+        ctx.translate(cx, cy);
+        ctx.rotate(rad);
+
+        if (layer.shadow > 0) {
+          ctx.shadowColor = `rgba(0,0,0,${layer.shadow})`;
+          ctx.shadowBlur = px * 0.25;
+          ctx.shadowOffsetY = px * 0.06;
+        }
+
+        ctx.lineJoin = 'round';
+        ctx.miterLimit = 2;
+        ctx.lineWidth = px * layer.strokeRatio;
+        ctx.strokeStyle = layer.stroke;
+        ctx.fillStyle = layer.fill;
+
+        lines.forEach((line, i) => {
+          const lineW = ctx.measureText(line).width;
+          // 블록 내 정렬 (블록 자체는 중심 기준)
+          let lx = -lineW / 2;
+          if (layer.align === 'left') lx = -blockW / 2;
+          else if (layer.align === 'right') lx = blockW / 2 - lineW;
+
+          const ly = -blockH / 2 + lineHeight * (i + 0.5);
+          if (layer.strokeRatio > 0) ctx.strokeText(line, lx, ly);
+          ctx.fillText(line, lx, ly);
+        });
+
+        // 선택 레이어 가이드 박스
+        if (showGuides && layer.id === selectedId) {
+          ctx.shadowColor = 'transparent';
+          ctx.shadowBlur = 0;
+          ctx.shadowOffsetY = 0;
+          ctx.strokeStyle = '#4f46e5';
+          ctx.lineWidth = Math.max(2, W * 0.003);
+          ctx.setLineDash([W * 0.014, W * 0.01]);
+          const pad = px * 0.18;
+          ctx.strokeRect(-blockW / 2 - pad, -blockH / 2 - pad, blockW + pad * 2, blockH + pad * 2);
+          ctx.setLineDash([]);
+        }
+
+        ctx.restore();
+
+        boxes.push({ id: layer.id, cx, cy, w: blockW, h: blockH, rotation: rad, pad: px * 0.3 });
+      });
+
+      return boxes;
+    }
+
+    /** 회전을 고려한 히트 테스트 — 위에 있는 레이어부터 검사 */
+    function hitTest(boxes, px, py) {
+      for (let i = boxes.length - 1; i >= 0; i--) {
+        const b = boxes[i];
+        const dx = px - b.cx;
+        const dy = py - b.cy;
+        const cos = Math.cos(-b.rotation);
+        const sin = Math.sin(-b.rotation);
+        const lx = dx * cos - dy * sin;
+        const ly = dx * sin + dy * cos;
+        if (Math.abs(lx) <= b.w / 2 + b.pad && Math.abs(ly) <= b.h / 2 + b.pad) return b.id;
+      }
+      return null;
+    }
+
+    // ========================================
+    // 🎨 Design System Components
+    // ========================================
+
+    function Button({ variant = 'primary', size = 'md', disabled = false, onClick, className = '', type = 'button', title, children }) {
+      const base = 'inline-flex items-center justify-center gap-1.5 font-semibold rounded-xl transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-offset-1 disabled:opacity-40 disabled:cursor-not-allowed active:scale-[0.97]';
+      const variants = {
+        primary:   'bg-indigo-600 text-white hover:bg-indigo-700 focus:ring-indigo-400 shadow-sm',
+        secondary: 'bg-white text-slate-700 border border-slate-300 hover:bg-slate-50 focus:ring-slate-300',
+        danger:    'bg-rose-50 text-rose-600 border border-rose-200 hover:bg-rose-100 focus:ring-rose-300',
+        ghost:     'bg-transparent text-slate-600 hover:bg-slate-100 focus:ring-slate-300',
+      };
+      const sizes = { sm: 'px-2.5 py-1.5 text-xs', md: 'px-4 py-2 text-sm', lg: 'px-5 py-3 text-base' };
+      return (
+        <button type={type} title={title} disabled={disabled} onClick={onClick}
+          className={`${base} ${variants[variant]} ${sizes[size]} ${className}`}>
+          {children}
+        </button>
+      );
+    }
+
+    function Card({ className = '', children }) {
+      return <div className={`bg-white rounded-2xl shadow-sm border border-slate-200 ${className}`}>{children}</div>;
+    }
+
+    function Field({ label, hint, children }) {
+      return (
+        <div className="space-y-1.5">
+          <div className="flex items-baseline justify-between">
+            <label className="text-xs font-semibold text-slate-600">{label}</label>
+            {hint && <span className="text-[11px] text-slate-400 tabular-nums">{hint}</span>}
+          </div>
+          {children}
+        </div>
+      );
+    }
+
+    function Textarea({ value, onChange, placeholder, rows = 3, disabled }) {
+      return (
+        <textarea
+          value={value} onChange={(e) => onChange(e.target.value)}
+          placeholder={placeholder} rows={rows} disabled={disabled}
+          className="w-full px-3 py-2 text-sm rounded-xl border border-slate-300 resize-none
+                     focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-indigo-400
+                     disabled:bg-slate-50 disabled:text-slate-400 placeholder:text-slate-400"
+        />
+      );
+    }
+
+    function Select({ value, onChange, options, disabled }) {
+      return (
+        <select
+          value={value} onChange={(e) => onChange(e.target.value)} disabled={disabled}
+          className="w-full px-3 py-2 text-sm rounded-xl border border-slate-300 bg-white
+                     focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-indigo-400
+                     disabled:bg-slate-50 disabled:text-slate-400">
+          {options.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
+        </select>
+      );
+    }
+
+    function Slider({ value, onChange, min, max, step = 1, disabled, ariaLabel }) {
+      return (
+        <input
+          type="range" min={min} max={max} step={step} value={value} disabled={disabled}
+          aria-label={ariaLabel}
+          onChange={(e) => onChange(Number(e.target.value))}
+          className="w-full h-2 rounded-full bg-slate-200 appearance-none cursor-pointer disabled:cursor-not-allowed disabled:opacity-50"
+        />
+      );
+    }
+
+    function ColorSwatch({ value, onChange, label, disabled }) {
+      return (
+        <div className="flex items-center gap-2">
+          <input
+            type="color" value={value} disabled={disabled} aria-label={label}
+            onChange={(e) => onChange(e.target.value)}
+            className="w-9 h-9 rounded-lg shrink-0 disabled:opacity-50"
+          />
+          <span className="text-xs text-slate-500 font-mono uppercase">{value}</span>
+        </div>
+      );
+    }
+
+    function SegmentedControl({ value, onChange, options, disabled }) {
+      return (
+        <div className="inline-flex w-full p-0.5 bg-slate-100 rounded-xl" role="group">
+          {options.map((o) => {
+            const active = o.value === value;
+            return (
+              <button
+                key={o.value} type="button" disabled={disabled}
+                aria-pressed={active}
+                onClick={() => onChange(o.value)}
+                className={`flex-1 px-2 py-1.5 text-xs font-semibold rounded-[10px] transition-colors disabled:opacity-40
+                  ${active ? 'bg-white text-indigo-600 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}>
+                {o.label}
+              </button>
+            );
+          })}
+        </div>
+      );
+    }
+
+    function Badge({ tone = 'slate', children }) {
+      const tones = {
+        slate:  'bg-slate-100 text-slate-600',
+        indigo: 'bg-indigo-50 text-indigo-600',
+      };
+      return <span className={`px-2 py-0.5 rounded-full text-[11px] font-semibold ${tones[tone]}`}>{children}</span>;
+    }
+
+    function Toast({ message }) {
+      if (!message) return null;
+      return (
+        <div role="status" aria-live="polite"
+          className="animate-toast fixed bottom-6 left-1/2 z-50 px-4 py-2.5 rounded-xl
+                     bg-slate-900 text-white text-sm font-medium shadow-lg">
+          {message}
+        </div>
+      );
+    }
+
+    // ========================================
+    // 🧩 Layout Components
+    // ========================================
+
+    function Header({ onReset }) {
+      return (
+        <header className="bg-white border-b border-slate-200 sticky top-0 z-30">
+          <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
+            <div className="flex items-center gap-2.5 min-w-0">
+              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-fuchsia-500 grid place-items-center text-lg shrink-0">
+                🖼️
+              </div>
+              <div className="min-w-0">
+                <h1 className="text-base font-extrabold text-slate-900 truncate">짤 생성기</h1>
+                <p className="text-[11px] text-slate-500 truncate">Canvas 밈 메이커</p>
+              </div>
+            </div>
+            <Button variant="ghost" size="sm" onClick={onReset} title="처음 상태로 되돌립니다">
+              초기화
+            </Button>
+          </div>
+        </header>
+      );
+    }
+
+    // ========================================
+    // 📄 Page Components
+    // ========================================
+
+    /** 이미지 업로드 드롭존 */
+    function ImageDropzone({ onFile, hasImage, onClear, fileName }) {
+      const inputRef = useRef(null);
+      const [dragging, setDragging] = useState(false);
+
+      const pick = (files) => {
+        const file = Array.from(files || []).find((f) => f.type.startsWith('image/'));
+        if (file) onFile(file);
+        else if (files && files.length) onFile(null, '이미지 파일만 올릴 수 있어요.');
+      };
+
+      return (
+        <div>
+          <div
+            onDragOver={(e) => { e.preventDefault(); setDragging(true); }}
+            onDragLeave={() => setDragging(false)}
+            onDrop={(e) => { e.preventDefault(); setDragging(false); pick(e.dataTransfer.files); }}
+            onClick={() => inputRef.current && inputRef.current.click()}
+            role="button" tabIndex={0}
+            onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); inputRef.current.click(); } }}
+            className={`cursor-pointer rounded-xl border-2 border-dashed px-4 py-5 text-center transition-colors
+              ${dragging ? 'animate-drop bg-indigo-50' : 'border-slate-300 hover:border-indigo-400 hover:bg-slate-50'}`}>
+            <div className="text-2xl mb-1">{dragging ? '📥' : '📁'}</div>
+            <p className="text-xs font-semibold text-slate-700">
+              {dragging ? '여기에 놓으세요' : '이미지를 끌어다 놓거나 클릭'}
+            </p>
+            <p className="text-[11px] text-slate-400 mt-0.5">PNG · JPG · GIF · WEBP</p>
+          </div>
+
+          <input ref={inputRef} type="file" accept="image/*" className="hidden"
+            onChange={(e) => { pick(e.target.files); e.target.value = ''; }} />
+
+          {hasImage && (
+            <div className="mt-2 flex items-center justify-between gap-2 px-3 py-2 bg-slate-50 rounded-lg">
+              <span className="text-[11px] text-slate-600 truncate">{fileName || '업로드된 이미지'}</span>
+              <button onClick={onClear} className="text-[11px] font-semibold text-rose-600 hover:underline shrink-0">
+                제거
+              </button>
+            </div>
+          )}
+        </div>
+      );
+    }
+
+    /** 레이어 목록 */
+    function LayerList({ layers, selectedId, onSelect, onDelete, onDuplicate, onMove }) {
+      if (layers.length === 0) {
+        return (
+          <p className="text-xs text-slate-400 text-center py-6 border border-dashed border-slate-200 rounded-xl">
+            아직 텍스트가 없어요.<br />아래 버튼으로 추가해 보세요.
+          </p>
+        );
+      }
+      return (
+        <ul className="space-y-1.5 max-h-56 overflow-y-auto thin-scroll pr-1">
+          {layers.map((l, i) => {
+            const active = l.id === selectedId;
+            return (
+              <li key={l.id}>
+                <div
+                  onClick={() => onSelect(l.id)}
+                  className={`group flex items-center gap-2 px-2.5 py-2 rounded-lg cursor-pointer border transition-colors
+                    ${active ? 'bg-indigo-50 border-indigo-300' : 'bg-white border-slate-200 hover:bg-slate-50'}`}>
+                  <span className="w-5 h-5 rounded grid place-items-center text-[10px] font-bold shrink-0
+                                   bg-slate-200 text-slate-600">{i + 1}</span>
+                  <span className={`flex-1 text-xs truncate ${active ? 'text-indigo-800 font-semibold' : 'text-slate-600'}`}>
+                    {l.text.split('\n')[0] || '(빈 텍스트)'}
+                  </span>
+                  <div className="flex items-center gap-0.5 opacity-0 group-hover:opacity-100 focus-within:opacity-100 transition-opacity">
+                    <button onClick={(e) => { e.stopPropagation(); onMove(l.id, -1); }}
+                      disabled={i === 0} title="아래로" aria-label="아래 레이어로 이동"
+                      className="w-6 h-6 rounded grid place-items-center text-slate-400 hover:bg-slate-200 disabled:opacity-25">↓</button>
+                    <button onClick={(e) => { e.stopPropagation(); onMove(l.id, 1); }}
+                      disabled={i === layers.length - 1} title="위로" aria-label="위 레이어로 이동"
+                      className="w-6 h-6 rounded grid place-items-center text-slate-400 hover:bg-slate-200 disabled:opacity-25">↑</button>
+                    <button onClick={(e) => { e.stopPropagation(); onDuplicate(l.id); }}
+                      title="복제" aria-label="레이어 복제"
+                      className="w-6 h-6 rounded grid place-items-center text-slate-400 hover:bg-slate-200">⧉</button>
+                    <button onClick={(e) => { e.stopPropagation(); onDelete(l.id); }}
+                      title="삭제" aria-label="레이어 삭제"
+                      className="w-6 h-6 rounded grid place-items-center text-rose-400 hover:bg-rose-100">✕</button>
+                  </div>
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+      );
+    }
+
+    /** 선택된 레이어의 스타일 편집 패널 */
+    function LayerEditor({ layer, onChange }) {
+      if (!layer) {
+        return (
+          <p className="text-xs text-slate-400 text-center py-6 border border-dashed border-slate-200 rounded-xl">
+            레이어를 선택하면<br />스타일을 편집할 수 있어요.
+          </p>
+        );
+      }
+
+      const set = (patch) => onChange(layer.id, patch);
+
+      return (
+        <div className="space-y-4">
+          <Field label="내용" hint="Enter 로 줄바꿈">
+            <Textarea value={layer.text} onChange={(v) => set({ text: v })} placeholder="짤 문구를 입력하세요" rows={2} />
+          </Field>
+
+          <Field label="스타일 프리셋">
+            <div className="grid grid-cols-2 gap-1.5">
+              {TEXT_PRESETS.map((p) => (
+                <button key={p.id} type="button" title={p.label}
+                  onClick={() => set({ fill: p.fill, stroke: p.stroke, strokeRatio: p.strokeRatio, shadow: p.shadow })}
+                  className="flex items-center gap-1.5 px-2 py-1.5 rounded-lg border border-slate-200
+                             hover:border-indigo-400 hover:bg-indigo-50 transition-colors">
+                  {/* 밝은 색 프리셋도 보이도록 미리보기는 중간톤 칩 위에 그린다 */}
+                  <span className="w-6 h-6 rounded shrink-0 grid place-items-center text-sm font-black bg-slate-500"
+                    style={{ color: p.fill, WebkitTextStroke: `1px ${p.stroke}`, paintOrder: 'stroke fill' }}>
+                    가
+                  </span>
+                  <span className="text-[11px] font-semibold text-slate-600 truncate">{p.label}</span>
+                </button>
+              ))}
+            </div>
+          </Field>
+
+          <Field label="글꼴">
+            <Select value={layer.fontId} onChange={(v) => set({ fontId: v })}
+              options={FONTS.map((f) => ({ value: f.id, label: f.label }))} />
+          </Field>
+
+          <Field label="정렬">
+            <SegmentedControl value={layer.align} onChange={(v) => set({ align: v })}
+              options={[{ value: 'left', label: '왼쪽' }, { value: 'center', label: '가운데' }, { value: 'right', label: '오른쪽' }]} />
+          </Field>
+
+          <Field label="글자 크기" hint={`${Math.round(layer.size * 100)}%`}>
+            <Slider ariaLabel="글자 크기" value={Math.round(layer.size * 1000)} min={20} max={300} step={1}
+              onChange={(v) => set({ size: v / 1000 })} />
+          </Field>
+
+          <Field label="회전" hint={`${layer.rotation}°`}>
+            <Slider ariaLabel="회전" value={layer.rotation} min={-45} max={45} step={1}
+              onChange={(v) => set({ rotation: v })} />
+          </Field>
+
+          <div className="grid grid-cols-2 gap-3">
+            <Field label="글자색">
+              <ColorSwatch label="글자색" value={layer.fill} onChange={(v) => set({ fill: v })} />
+            </Field>
+            <Field label="테두리색">
+              <ColorSwatch label="테두리색" value={layer.stroke} onChange={(v) => set({ stroke: v })} />
+            </Field>
+          </div>
+
+          <Field label="테두리 두께" hint={`${Math.round(layer.strokeRatio * 100)}%`}>
+            <Slider ariaLabel="테두리 두께" value={Math.round(layer.strokeRatio * 100)} min={0} max={30} step={1}
+              onChange={(v) => set({ strokeRatio: v / 100 })} />
+          </Field>
+
+          <Field label="그림자" hint={`${Math.round(layer.shadow * 100)}%`}>
+            <Slider ariaLabel="그림자" value={Math.round(layer.shadow * 100)} min={0} max={70} step={1}
+              onChange={(v) => set({ shadow: v / 100 })} />
+          </Field>
+
+          <label className="flex items-center gap-2 cursor-pointer select-none">
+            <input type="checkbox" checked={layer.uppercase}
+              onChange={(e) => set({ uppercase: e.target.checked })}
+              className="w-4 h-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-400" />
+            <span className="text-xs font-semibold text-slate-600">영문 대문자로 표시</span>
+          </label>
+        </div>
+      );
+    }
+
+    /** 메인 에디터 페이지 */
+    function MemeMaker() {
+      const canvasRef = useRef(null);
+      const boxesRef = useRef([]);          // 마지막 렌더의 히트박스
+      const dragRef = useRef(null);         // { id, offsetX, offsetY } — 비율 좌표 오프셋
+      const wrapRef = useRef(null);
+
+      const [image, setImage] = useState(null);       // HTMLImageElement
+      const [fileName, setFileName] = useState('');
+      const [background, setBackground] = useState('dark');
+      const [ratio, setRatio] = useState('1:1');
+      const [layers, setLayers] = useState(() => [
+        makeLayer({ text: '내가 만든 짤', y: 0.12 }),
+        makeLayer({ text: '드래그해서 옮겨보세요', y: 0.88, size: 0.075 }),
+      ]);
+      const [selectedId, setSelectedId] = useState(null);
+      const [fontTick, setFontTick] = useState(0);    // 웹폰트 로드 후 재렌더 트리거
+      const [toast, setToast] = useState('');
+      const [isDragging, setIsDragging] = useState(false);
+
+      const selected = useMemo(() => layers.find((l) => l.id === selectedId) || null, [layers, selectedId]);
+
+      const toastTimer = useRef(null);
+      const notify = useCallback((msg) => {
+        setToast(msg);
+        window.clearTimeout(toastTimer.current);
+        toastTimer.current = window.setTimeout(() => setToast(''), 2000);
+      }, []);
+
+      useEffect(() => () => window.clearTimeout(toastTimer.current), []);
+
+      // --- 웹폰트가 준비되면 다시 그린다 (canvas 는 폰트 로드를 기다려주지 않음) ---
+      useEffect(() => {
+        if (!document.fonts) return;
+        const specs = FONTS.map((f) => `${f.weight} 100px ${f.css}`);
+        Promise.all(specs.map((s) => document.fonts.load(s).catch(() => null)))
+          .then(() => setFontTick((t) => t + 1));
+      }, []);
+
+      // --- 캔버스 크기 계산 ---
+      const canvasSize = useMemo(() => {
+        const preset = RATIOS.find((r) => r.id === ratio);
+        let ar;
+
+        if (preset && preset.value) {
+          ar = preset.value;
+        } else if (image) {
+          ar = image.naturalWidth / image.naturalHeight;
+        } else {
+          ar = 1; // 이미지 없이 '원본'을 고르면 정사각으로
+        }
+
+        let w, h;
+        if (ar >= 1) { w = MAX_CANVAS_EDGE; h = Math.round(MAX_CANVAS_EDGE / ar); }
+        else         { h = MAX_CANVAS_EDGE; w = Math.round(MAX_CANVAS_EDGE * ar); }
+
+        // 원본이 더 작으면 원본 해상도를 넘기지 않는다
+        if (image && preset && !preset.value) {
+          const scale = Math.min(1, MAX_CANVAS_EDGE / Math.max(image.naturalWidth, image.naturalHeight));
+          w = Math.round(image.naturalWidth * scale);
+          h = Math.round(image.naturalHeight * scale);
+        }
+        return { w, h };
+      }, [ratio, image]);
+
+      // --- 렌더링 ---
+      const redraw = useCallback((withGuides = true) => {
+        const canvas = canvasRef.current;
+        if (!canvas) return;
+        boxesRef.current = renderMeme(canvas, {
+          image, layers, background,
+          selectedId: withGuides ? selectedId : null,
+          showGuides: withGuides,
+        });
+      }, [image, layers, background, selectedId]);
+
+      useEffect(() => {
+        const canvas = canvasRef.current;
+        if (!canvas) return;
+        canvas.width = canvasSize.w;
+        canvas.height = canvasSize.h;
+        redraw(true);
+      }, [canvasSize, redraw, fontTick]);
+
+      // --- 포인터 드래그로 레이어 이동 ---
+      const toCanvasPoint = (e) => {
+        const canvas = canvasRef.current;
+        const rect = canvas.getBoundingClientRect();
+        return {
+          x: ((e.clientX - rect.left) / rect.width) * canvas.width,
+          y: ((e.clientY - rect.top) / rect.height) * canvas.height,
+        };
+      };
+
+      const handlePointerDown = (e) => {
+        const canvas = canvasRef.current;
+        const p = toCanvasPoint(e);
+        const hitId = hitTest(boxesRef.current, p.x, p.y);
+
+        setSelectedId(hitId);
+        if (!hitId) return;
+
+        const layer = layers.find((l) => l.id === hitId);
+        dragRef.current = {
+          id: hitId,
+          dx: layer.x - p.x / canvas.width,
+          dy: layer.y - p.y / canvas.height,
+        };
+        setIsDragging(true);
+        // 일부 환경에서 pointerId 가 유효하지 않으면 throw — 캡처 실패해도 드래그는 동작한다
+        try { canvas.setPointerCapture(e.pointerId); } catch (err) { /* noop */ }
+      };
+
+      const handlePointerMove = (e) => {
+        const drag = dragRef.current;
+        if (!drag) return;
+        const canvas = canvasRef.current;
+        const p = toCanvasPoint(e);
+        const nx = Math.min(1.05, Math.max(-0.05, p.x / canvas.width + drag.dx));
+        const ny = Math.min(1.05, Math.max(-0.05, p.y / canvas.height + drag.dy));
+        setLayers((ls) => ls.map((l) => (l.id === drag.id ? { ...l, x: nx, y: ny } : l)));
+      };
+
+      const handlePointerUp = (e) => {
+        if (!dragRef.current) return;
+        dragRef.current = null;
+        setIsDragging(false);
+        const canvas = canvasRef.current;
+        try {
+          if (canvas && canvas.hasPointerCapture(e.pointerId)) canvas.releasePointerCapture(e.pointerId);
+        } catch (err) { /* noop */ }
+      };
+
+      // --- 키보드: 방향키 미세 이동 / Delete 삭제 ---
+      useEffect(() => {
+        const onKey = (e) => {
+          if (!selectedId) return;
+          const tag = (e.target.tagName || '').toLowerCase();
+          if (tag === 'input' || tag === 'textarea' || tag === 'select') return;
+
+          const step = e.shiftKey ? 0.02 : 0.005;
+          const moves = {
+            ArrowLeft:  { x: -step }, ArrowRight: { x: step },
+            ArrowUp:    { y: -step }, ArrowDown:  { y: step },
+          };
+
+          if (moves[e.key]) {
+            e.preventDefault();
+            const m = moves[e.key];
+            setLayers((ls) => ls.map((l) => l.id === selectedId
+              ? { ...l, x: Math.min(1.05, Math.max(-0.05, l.x + (m.x || 0))), y: Math.min(1.05, Math.max(-0.05, l.y + (m.y || 0))) }
+              : l));
+          } else if (e.key === 'Delete' || e.key === 'Backspace') {
+            e.preventDefault();
+            deleteLayer(selectedId);
+          }
+        };
+        window.addEventListener('keydown', onKey);
+        return () => window.removeEventListener('keydown', onKey);
+      }, [selectedId]);
+
+      // --- 레이어 조작 ---
+      const addLayer = (overrides) => {
+        const l = makeLayer(overrides);
+        setLayers((ls) => [...ls, l]);
+        setSelectedId(l.id);
+      };
+
+      const updateLayer = (id, patch) =>
+        setLayers((ls) => ls.map((l) => (l.id === id ? { ...l, ...patch } : l)));
+
+      const deleteLayer = (id) => {
+        setLayers((ls) => ls.filter((l) => l.id !== id));
+        setSelectedId((cur) => (cur === id ? null : cur));
+      };
+
+      const duplicateLayer = (id) => {
+        const src = layers.find((l) => l.id === id);
+        if (!src) return;
+        const copy = { ...src, id: uid(), x: Math.min(1, src.x + 0.04), y: Math.min(1, src.y + 0.04) };
+        setLayers((ls) => [...ls, copy]);
+        setSelectedId(copy.id);
+      };
+
+      const moveLayer = (id, dir) => {
+        setLayers((ls) => {
+          const i = ls.findIndex((l) => l.id === id);
+          const j = i + dir;
+          if (i < 0 || j < 0 || j >= ls.length) return ls;
+          const next = [...ls];
+          [next[i], next[j]] = [next[j], next[i]];
+          return next;
+        });
+      };
+
+      // --- 이미지 로드 ---
+      const handleFile = (file, errorMsg) => {
+        if (!file) { if (errorMsg) notify(errorMsg); return; }
+        const reader = new FileReader();
+        reader.onload = () => {
+          const img = new Image();
+          img.onload = () => {
+            setImage(img);
+            setFileName(file.name);
+            setRatio('original');
+            notify('이미지를 불러왔어요');
+          };
+          img.onerror = () => notify('이미지를 읽지 못했어요');
+          img.src = reader.result;
+        };
+        reader.onerror = () => notify('파일을 읽지 못했어요');
+        reader.readAsDataURL(file);
+      };
+
+      const clearImage = () => {
+        setImage(null);
+        setFileName('');
+        setRatio('1:1');
+      };
+
+      // --- 내보내기 (가이드 박스 없이 다시 그린 뒤 저장) ---
+      const withCleanCanvas = (job) => {
+        redraw(false);
+        // 다음 프레임에 실행해 가이드 없는 상태가 확실히 반영되게 한다
+        requestAnimationFrame(() => {
+          job(canvasRef.current);
+          redraw(true);
+        });
+      };
+
+      const handleDownload = () => {
+        withCleanCanvas((canvas) => {
+          canvas.toBlob((blob) => {
+            if (!blob) { notify('저장에 실패했어요'); return; }
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `짤_${Date.now()}.png`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            notify('PNG 로 저장했어요');
+          }, 'image/png');
+        });
+      };
+
+      const handleCopy = () => {
+        if (!navigator.clipboard || !window.ClipboardItem) {
+          notify('이 브라우저는 복사를 지원하지 않아요');
+          return;
+        }
+        withCleanCanvas((canvas) => {
+          canvas.toBlob((blob) => {
+            if (!blob) { notify('복사에 실패했어요'); return; }
+            navigator.clipboard.write([new window.ClipboardItem({ 'image/png': blob })])
+              .then(() => notify('클립보드에 복사했어요'))
+              .catch(() => notify('복사 권한이 없어요'));
+          }, 'image/png');
+        });
+      };
+
+      const handleReset = () => {
+        setImage(null);
+        setFileName('');
+        setBackground('dark');
+        setRatio('1:1');
+        setLayers([makeLayer({ text: '내가 만든 짤', y: 0.12 })]);
+        setSelectedId(null);
+        notify('초기화했어요');
+      };
+
+      return (
+        <>
+          <Header onReset={handleReset} />
+
+          <main className="max-w-7xl mx-auto px-4 py-5 grid gap-5 lg:grid-cols-[minmax(0,1fr)_380px] items-start">
+
+            {/* ---------- 캔버스 영역 ---------- */}
+            <section className="space-y-3">
+              <Card className="p-4">
+                <div ref={wrapRef} className="checkerboard rounded-xl p-3 grid place-items-center">
+                  <canvas
+                    ref={canvasRef}
+                    onPointerDown={handlePointerDown}
+                    onPointerMove={handlePointerMove}
+                    onPointerUp={handlePointerUp}
+                    onPointerCancel={handlePointerUp}
+                    className={`no-select touch-none max-w-full rounded-lg shadow-md bg-white
+                                ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
+                    style={{ maxHeight: '62vh' }}
+                    aria-label="짤 미리보기 캔버스"
+                  />
+                </div>
+
+                <div className="mt-3 flex flex-wrap items-center justify-between gap-2">
+                  <div className="flex items-center gap-2 text-[11px] text-slate-500">
+                    <Badge tone="indigo">{canvasSize.w} × {canvasSize.h}</Badge>
+                    <span className="hidden sm:inline">텍스트를 끌어서 이동 · 방향키로 미세 조정</span>
+                  </div>
+                  <div className="flex gap-2">
+                    <Button variant="secondary" size="sm" onClick={handleCopy} title="클립보드에 이미지 복사">
+                      📋 복사
+                    </Button>
+                    <Button size="sm" onClick={handleDownload} title="PNG 파일로 저장">
+                      ⬇️ PNG 저장
+                    </Button>
+                  </div>
+                </div>
+              </Card>
+
+              {/* 빠른 추가 */}
+              <Card className="p-4 space-y-3">
+                <h2 className="text-xs font-bold text-slate-700">빠른 추가</h2>
+                <div className="flex flex-wrap gap-2">
+                  <Button variant="secondary" size="sm"
+                    onClick={() => addLayer({ text: '위쪽 자막', y: 0.12, size: 0.1 })}>
+                    ⬆️ 상단 자막
+                  </Button>
+                  <Button variant="secondary" size="sm"
+                    onClick={() => addLayer({ text: '아래쪽 자막', y: 0.88, size: 0.1 })}>
+                    ⬇️ 하단 자막
+                  </Button>
+                  <Button variant="secondary" size="sm"
+                    onClick={() => addLayer({ text: '가운데 문구', y: 0.5, size: 0.12 })}>
+                    ➕ 가운데
+                  </Button>
+                </div>
+
+                <div>
+                  <p className="text-xs font-semibold text-slate-600 mb-1.5">이모지 스티커</p>
+                  <div className="flex flex-wrap gap-1">
+                    {STICKERS.map((s) => (
+                      <button key={s} type="button" title={`${s} 추가`}
+                        onClick={() => addLayer({ text: s, size: 0.22, strokeRatio: 0, shadow: 0.3, x: 0.5, y: 0.5 })}
+                        className="w-9 h-9 text-xl rounded-lg hover:bg-slate-100 active:scale-90 transition-transform">
+                        {s}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </Card>
+            </section>
+
+            {/* ---------- 사이드 패널 ---------- */}
+            <aside className="space-y-4">
+              <Card className="p-4 space-y-4">
+                <h2 className="text-xs font-bold text-slate-700">배경</h2>
+
+                <ImageDropzone onFile={handleFile} hasImage={!!image} onClear={clearImage} fileName={fileName} />
+
+                {!image && (
+                  <Field label="배경 색상">
+                    <div className="grid grid-cols-3 gap-1.5">
+                      {BACKGROUNDS.map((b) => (
+                        <button key={b.id} type="button"
+                          onClick={() => setBackground(b.id)}
+                          aria-pressed={background === b.id}
+                          className={`h-11 rounded-lg border-2 transition-all text-[10px] font-bold
+                            ${background === b.id ? 'border-indigo-500 scale-[1.03]' : 'border-transparent hover:border-slate-300'}`}
+                          style={{ background: `linear-gradient(135deg, ${b.from}, ${b.to})`,
+                                   color: b.id === 'white' ? '#475569' : '#ffffff' }}>
+                          {b.label}
+                        </button>
+                      ))}
+                    </div>
+                  </Field>
+                )}
+
+                <Field label="캔버스 비율">
+                  <div className="grid grid-cols-5 gap-1">
+                    {RATIOS.map((r) => (
+                      <button key={r.id} type="button"
+                        onClick={() => setRatio(r.id)}
+                        aria-pressed={ratio === r.id}
+                        className={`px-1 py-1.5 text-[11px] font-semibold rounded-lg border transition-colors
+                          ${ratio === r.id
+                            ? 'bg-indigo-600 text-white border-indigo-600'
+                            : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'}`}>
+                        {r.label}
+                      </button>
+                    ))}
+                  </div>
+                </Field>
+              </Card>
+
+              <Card className="p-4 space-y-3">
+                <div className="flex items-center justify-between">
+                  <h2 className="text-xs font-bold text-slate-700">텍스트 레이어</h2>
+                  <Button size="sm" variant="secondary" onClick={() => addLayer({})}>+ 추가</Button>
+                </div>
+                <LayerList
+                  layers={layers}
+                  selectedId={selectedId}
+                  onSelect={setSelectedId}
+                  onDelete={deleteLayer}
+                  onDuplicate={duplicateLayer}
+                  onMove={moveLayer}
+                />
+              </Card>
+
+              <Card className="p-4 space-y-3">
+                <h2 className="text-xs font-bold text-slate-700">
+                  스타일 {selected && <span className="font-normal text-slate-400">— 선택됨</span>}
+                </h2>
+                <LayerEditor layer={selected} onChange={updateLayer} />
+              </Card>
+            </aside>
+          </main>
+
+          <footer className="max-w-7xl mx-auto px-4 pb-8 text-center text-[11px] text-slate-400">
+            모든 처리는 브라우저 안에서만 이뤄집니다 · 이미지는 서버로 전송되지 않아요
+          </footer>
+
+          <Toast message={toast} />
+        </>
+      );
+    }
+
+    // ========================================
+    // 🚀 App
+    // ========================================
+
+    function App() {
+      return (
+        <div className="min-h-screen bg-slate-100">
+          <MemeMaker />
+        </div>
+      );
+    }
+
+    // ========================================
+    // Rendering
+    // ========================================
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>

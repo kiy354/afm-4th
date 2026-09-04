@@ -20,3 +20,6 @@ dist/
 build/
 __pycache__/
 *.pyc
+
+# 로컬 전용 (API 키 포함)
+week-1/quest/CLAUDE.md
