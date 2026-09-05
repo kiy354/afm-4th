@@ -1,0 +1,13 @@
+- banner [ref=e4]:
+  - generic [ref=e6]:
+    - generic [ref=e7]:
+      - button "가이드" [ref=e9] [cursor=pointer]
+      - generic [ref=e11]:
+        - link:
+          - /url: /
+    - search [ref=e13]:
+      - generic [ref=e15]:
+        - generic [ref=e16]:
+          - combobox [expanded] [ref=e18]
+          - button [ref=e21] [cursor=pointer]
+        - button "Search" [ref=e22] [cursor=pointer]

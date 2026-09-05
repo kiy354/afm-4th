@@ -1,0 +1,8 @@
+- generic [ref=f26e1]:
+  - generic [ref=f26e3]:
+    - generic [ref=f26e5]:
+      - button [ref=f26e6] [cursor=pointer]:
+        - img "이전으로" [ref=f26e7]
+      - searchbox "어떤 상품을 찾고 계세요?" [active] [ref=f26e15]
+    - generic [ref=f26e16]: 최근 검색어 내역이 없네요. 상품을 입력하면 N+스토어 플리마켓에서 바로 찾아드릴게요.
+  - alert [ref=f26e22]

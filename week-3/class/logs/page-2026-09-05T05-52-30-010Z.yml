@@ -1,0 +1,637 @@
+- generic [ref=e1]:
+  - generic:
+    - link "상단영역 바로가기" [ref=e2] [cursor=pointer]:
+      - /url: "#topAsideButton"
+    - link "서비스 메뉴 바로가기" [ref=e4] [cursor=pointer]:
+      - /url: "#shortcutArea"
+    - link "새소식 블록 바로가기" [ref=e6] [cursor=pointer]:
+      - /url: "#newsstand"
+    - link "쇼핑 블록 바로가기" [ref=e8] [cursor=pointer]:
+      - /url: "#shopping"
+    - link "관심사 블록 바로가기" [ref=e10] [cursor=pointer]:
+      - /url: "#feed"
+    - link "MY 영역 바로가기" [ref=e12] [cursor=pointer]:
+      - /url: "#account"
+    - link "위젯 보드 바로가기" [ref=e14] [cursor=pointer]:
+      - /url: "#widgetboard"
+    - link "보기 설정 바로가기" [ref=e16] [cursor=pointer]:
+      - /url: "#viewSetting"
+  - generic [ref=e18]:
+    - complementary "웨일 브라우저 설치 안내" [ref=e20]:
+      - generic [ref=e21]:
+        - generic [ref=e22]:
+          - text: 네이버 공식 브라우저
+          - emphasis [ref=e24]: 웨일을 설치하세요
+          - link "다운로드" [ref=e25] [cursor=pointer]:
+            - /url: https://whale.naver.com/ko/?wpid=main_theme2
+        - button "배너 닫기" [ref=e27] [cursor=pointer]
+    - complementary "웨일 브라우저 설치 안내" [ref=e29]:
+      - generic [ref=e30]:
+        - img "웨일 브라우저 이미지" [ref=e32]
+        - generic [ref=e33]: 안전한 브라우저 설정하기
+        - generic [ref=e34]: 나의 개인정보를 보호하는 웨일 브라우저를 지금 설치하세요
+      - link "웨일 다운로드" [ref=e36] [cursor=pointer]:
+        - /url: https://whale.naver.com/ko/?wpid=mainpopup_theme4
+      - button "배너 닫기" [ref=e37] [cursor=pointer]
+    - banner [ref=e39]:
+      - generic [ref=e40]:
+        - generic [ref=e44]:
+          - heading [level=1] [ref=e45]:
+            - link [ref=e46] [cursor=pointer]:
+              - /url: /
+              - img "NAVER" [ref=e47]
+            - link "NAVER" [ref=e48] [cursor=pointer]:
+              - /url: /
+          - search [ref=e53]:
+            - group "검색" [ref=e54]:
+              - combobox "검색어를 입력해 주세요." [active] [ref=e57]
+              - button "AI 검색" [ref=e58] [cursor=pointer]
+          - button "입력도구" [ref=e73] [cursor=pointer]
+        - link [ref=e75] [cursor=pointer]:
+          - /url: https://siape.veta.naver.com/fxclick?eu=EU10044129&calp=-&oj=ZJlEFeSBKmLf40n3ktJ9%2FI1dfRmhn6NutwOU%2FnjIfPfEBuML%2BqEJJ2x%2FhcG054wn2qsQsVX0oX2JDpgSbYHhj7%2BSC3Y%2B77Mj0Fq1jWAfR8FooXhi31%2F3vw&ac=9318220&src=8221095&br=4979591&evtcd=P901&x_ti=1587&tb=&oid=&sid1=&sid2=&rk=iTQIh3oDoPhhn4qyY4VhKA&eltts=P4wqMHCsdQYXAbVlQUc%2FWw%3D%3D&brs=Y&&a=84B7F876F846C0AB70F31F6D90A469ABE661629CB41D0326CA75E37C105E0AC3B9E8C8DAA6877FA37A8E6D34D0B1913103387BCABF950408AECF557522C09DA7D8C38043E1DA60BDB1833BC65BCCC4A59629E82A59AE5D5707D8779E75540D140DC571B1E8099293B318A4F54FEA50059244A30DA4B582076486513C67EBEF7144E314EEDC227A350327F988FF54A9A39C2BC44D92D237B0C534C10BDFEE6F9E5D088630FEA627EDAA64C654EA132FF9F26541763EDD47AD928CD5D453504E727615ADA98FA6ACBA3B5AE5431E7B279DA6E6985669331D341DA6BD3735696CA8F2CE06996B80EC31C1D395164B293E6905D1B263E2F7EC577F3375CF78884C14F80F6481D44880B8
+          - img "[광고]올릴수록 커지는 포인트 혜택 오늘 클립 챌린지" [ref=e76]
+        - navigation "주요 서비스" [ref=e77]:
+          - list [ref=e78]:
+            - listitem [ref=e79]:
+              - link "메일" [ref=e80] [cursor=pointer]:
+                - /url: https://mail.naver.com
+            - listitem [ref=e83]:
+              - link "카페" [ref=e84] [cursor=pointer]:
+                - /url: https://cafe.naver.com
+            - listitem [ref=e87]:
+              - link "블로그" [ref=e88] [cursor=pointer]:
+                - /url: https://blog.naver.com
+            - listitem [ref=e91]:
+              - link "쇼핑" [ref=e92] [cursor=pointer]:
+                - /url: https://shopping.naver.com/ns/home
+            - listitem [ref=e95]:
+              - link "뉴스" [ref=e96] [cursor=pointer]:
+                - /url: https://news.naver.com/
+            - listitem [ref=e99]:
+              - link "증권" [ref=e100] [cursor=pointer]:
+                - /url: https://finance.naver.com/
+            - listitem [ref=e103]:
+              - link "부동산" [ref=e104] [cursor=pointer]:
+                - /url: https://fin.land.naver.com/
+            - listitem [ref=e107]:
+              - link "지도" [ref=e108] [cursor=pointer]:
+                - /url: https://map.naver.com
+            - listitem [ref=e111]:
+              - link "웹툰" [ref=e112] [cursor=pointer]:
+                - /url: https://comic.naver.com
+            - listitem [ref=e115]:
+              - link "치지직 치지직 추천" [ref=e116] [cursor=pointer]:
+                - /url: https://chzzk.naver.com/?tracking_code=home_recommend
+                - img "치지직" [ref=e118]
+                - generic [ref=e119]: 치지직
+                - generic [ref=e120]: 추천
+            - listitem [ref=e122]:
+              - button "바로가기 펼침" [ref=e123] [cursor=pointer]
+        - button "확장 영역" [ref=e127] [cursor=pointer]
+        - link "페이 바로가기" [ref=e130] [cursor=pointer]:
+          - /url: https://pay.naver.com
+        - button "알림" [ref=e133] [cursor=pointer]
+        - link "장바구니 알림" [ref=e136] [cursor=pointer]:
+          - /url: https://shopping.naver.com/cart
+          - generic [ref=e137]: 장바구니
+          - generic [ref=e138]: 알림
+    - main [ref=e139]:
+      - generic [ref=e141]:
+        - generic [ref=e142]:
+          - region "뉴스스탠드" [ref=e145]:
+            - tablist [ref=e148]:
+              - generic [ref=e149]:
+                - tab "뉴스스탠드" [selected] [ref=e150] [cursor=pointer]
+                - tab "언론사편집" [ref=e151] [cursor=pointer]
+              - tab "엔터" [ref=e152] [cursor=pointer]
+              - tab "스포츠 LIVE" [ref=e153] [cursor=pointer]:
+                - text: 스포츠
+                - generic [ref=e154]: LIVE
+              - tab "게임" [ref=e155] [cursor=pointer]
+              - tab "경제" [ref=e156] [cursor=pointer]
+              - tab "쇼핑투데이" [ref=e157] [cursor=pointer]
+            - generic [ref=e158]:
+              - button "전체언론사" [ref=e159] [cursor=pointer]
+              - generic [ref=e161]:
+                - link "연합뉴스" [ref=e162] [cursor=pointer]:
+                  - /url: https://news.naver.com/main/list.naver?mode=LPOD&mid=sec&sid1=001&sid2=140&oid=001&isYeonhapFlash=Y
+                - link "\"김승원, 브로커에 '보고 싶어 눈물'·'복지부에도 푸시해줄까'\"" [ref=e167] [cursor=pointer]:
+                  - /url: https://news.naver.com/main/list.naver?mode=LPOD&mid=sec&sid1=001&sid2=140&oid=001&isYeonhapFlash=Y&aid=0016291534
+              - generic [ref=e168]:
+                - link "뉴스스탠드" [ref=e169] [cursor=pointer]:
+                  - /url: https://newsstand.naver.com/
+                - link "뉴스홈" [ref=e170] [cursor=pointer]:
+                  - /url: https://news.naver.com/
+            - tabpanel [ref=e171]:
+              - generic [ref=e182]:
+                - link [ref=e184] [cursor=pointer]:
+                  - /url: "#"
+                  - img "디지털타임스" [ref=e185]
+                - link [ref=e187] [cursor=pointer]:
+                  - /url: "#"
+                  - img "시사IN" [ref=e188]
+                - link [ref=e190] [cursor=pointer]:
+                  - /url: "#"
+                  - img "한겨레" [ref=e191]
+                - link [ref=e193] [cursor=pointer]:
+                  - /url: "#"
+                  - img "뉴스타파" [ref=e194]
+                - link [ref=e196] [cursor=pointer]:
+                  - /url: "#"
+                  - img "프레시안" [ref=e197]
+                - link [ref=e199] [cursor=pointer]:
+                  - /url: "#"
+                  - img "스포츠조선" [ref=e200]
+                - link [ref=e202] [cursor=pointer]:
+                  - /url: "#"
+                  - img "OSEN" [ref=e203]
+                - link [ref=e205] [cursor=pointer]:
+                  - /url: "#"
+                  - img "KBS World" [ref=e206]
+                - generic [ref=e207]:
+                  - link [ref=e208] [cursor=pointer]:
+                    - /url: "#"
+                    - img "연합뉴스TV" [ref=e209]
+                  - generic [ref=e210]:
+                    - button "구독" [ref=e211] [cursor=pointer]
+                    - link "기사보기" [ref=e212] [cursor=pointer]:
+                      - /url: https://newsstand.naver.com/?list&pcode=422
+                - link [ref=e214] [cursor=pointer]:
+                  - /url: "#"
+                  - img "국민일보" [ref=e215]
+                - link [ref=e217] [cursor=pointer]:
+                  - /url: "#"
+                  - img "MBC" [ref=e218]
+                - link [ref=e220] [cursor=pointer]:
+                  - /url: "#"
+                  - img "조선일보" [ref=e221]
+                - link [ref=e223] [cursor=pointer]:
+                  - /url: "#"
+                  - img "이데일리" [ref=e224]
+                - link [ref=e226] [cursor=pointer]:
+                  - /url: "#"
+                  - img "전자신문" [ref=e227]
+                - link [ref=e229] [cursor=pointer]:
+                  - /url: "#"
+                  - img "문화일보" [ref=e230]
+                - link [ref=e232] [cursor=pointer]:
+                  - /url: "#"
+                  - img "스포츠투데이" [ref=e233]
+                - link [ref=e235] [cursor=pointer]:
+                  - /url: "#"
+                  - img "YTN사이언스" [ref=e236]
+                - link [ref=e238] [cursor=pointer]:
+                  - /url: "#"
+                  - img "보안뉴스" [ref=e239]
+                - link [ref=e241] [cursor=pointer]:
+                  - /url: "#"
+                  - img "BBS NEWS" [ref=e242]
+                - link [ref=e244] [cursor=pointer]:
+                  - /url: "#"
+                  - img "식품저널 foodnews" [ref=e245]
+                - link [ref=e247] [cursor=pointer]:
+                  - /url: "#"
+                  - img "정신의학신문" [ref=e248]
+                - link [ref=e250] [cursor=pointer]:
+                  - /url: "#"
+                  - img "법률신문" [ref=e251]
+                - link [ref=e253] [cursor=pointer]:
+                  - /url: "#"
+                  - img "독서신문" [ref=e254]
+                - link [ref=e256] [cursor=pointer]:
+                  - /url: "#"
+                  - img "텐아시아" [ref=e257]
+            - generic [ref=e258]:
+              - radiogroup [ref=e259]:
+                - radio "리스트형" [ref=e260] [cursor=pointer]
+                - radio "썸네일형" [checked] [ref=e262] [cursor=pointer]
+              - button "이전 페이지" [ref=e264] [cursor=pointer]
+              - generic [ref=e266]:
+                - generic [ref=e267]: 언론사 더보기
+                - generic [ref=e268]:
+                  - text: "1"
+                  - generic [ref=e269]: 페이지
+                - generic [ref=e270]:
+                  - generic [ref=e271]: 전체
+                  - text: /4
+              - button "다음 페이지" [ref=e272] [cursor=pointer]
+          - region "쇼핑" [ref=e274]:
+            - iframe [ref=e275]:
+              - tablist [ref=f2e5]:
+                - tab "쇼핑" [selected] [ref=f2e6] [cursor=pointer]
+                - tab "맨즈" [ref=f2e7] [cursor=pointer]
+                - tab "브랜드샵" [ref=f2e8] [cursor=pointer]
+                - tab "지금뜨는" [ref=f2e9] [cursor=pointer]
+                - tab "N+스토어 혜택" [ref=f2e10] [cursor=pointer]:
+                  - generic [ref=f2e11]: N+스토어
+                  - text: 혜택
+                - tab "추천핫딜" [ref=f2e13] [cursor=pointer]
+                - tab "쇼핑라이브" [ref=f2e14] [cursor=pointer]
+          - region "추천 관심사" [ref=e276]:
+            - generic [ref=e278]:
+              - tablist [ref=e279]:
+                - tab "추천" [ref=e281] [cursor=pointer]
+                - tab "카테크" [ref=e282] [cursor=pointer]
+                - tab "웹툰" [ref=e283] [cursor=pointer]
+                - tab "패션뷰티" [ref=e284] [cursor=pointer]
+                - tab "리빙푸드" [ref=e285] [cursor=pointer]
+                - tab "책방" [ref=e286] [cursor=pointer]
+                - tab "지식" [ref=e287] [cursor=pointer]
+                - tab "건강" [selected] [ref=e288] [cursor=pointer]
+              - link "구독홈" [ref=e289] [cursor=pointer]:
+                - /url: https://m.naver.com/mysubs?mode=pc
+            - tabpanel [ref=e290]:
+              - list [ref=e292]:
+                - listitem [ref=e293]:
+                  - link "‘한 가지 음식’만 끊었는데, 23kg 쏙 빠졌다… 대체 뭐야? 헬스조선" [ref=e294] [cursor=pointer]:
+                    - /url: https://n.news.naver.com/article/346/0000115517
+                    - generic [ref=e297]:
+                      - strong [ref=e298]: ‘한 가지 음식’만 끊었는데, 23kg 쏙 빠졌다… 대체 뭐야?
+                      - generic [ref=e299]: 헬스조선
+                - listitem [ref=e302]:
+                  - link "'양파의 47배..' 의사들도 놀란 막힌 혈관 뻥 뚫는 고지혈증 예방 채소 1위 유까유까" [ref=e303] [cursor=pointer]:
+                    - /url: https://in.naver.com/rjinaa3/contents/internal/986718971755840
+                    - generic [ref=e306]:
+                      - strong [ref=e307]: "'양파의 47배..' 의사들도 놀란 막힌 혈관 뻥 뚫는 고지혈증 예방 채소 1위"
+                      - generic [ref=e308]: 유까유까
+                - listitem [ref=e311]:
+                  - link "\"아작아작 씹어 먹었더니\" 혈관 속 기름때 싹 녹이는 1등 보약 채소 다온" [ref=e312] [cursor=pointer]:
+                    - /url: https://in.naver.com/bini/contents/internal/989715293068672
+                    - generic [ref=e315]:
+                      - strong [ref=e316]: "\"아작아작 씹어 먹었더니\" 혈관 속 기름때 싹 녹이는 1등 보약 채소"
+                      - generic [ref=e317]: 다온
+                - listitem [ref=e320]
+                - listitem [ref=e321]:
+                  - link "\"라면도 과자도 아니다\" 나도 모르게 치매 부르는 뜻밖의 음식 1위 온별맘" [ref=e322] [cursor=pointer]:
+                    - /url: https://in.naver.com/ays3258/contents/internal/986496001080832
+                    - generic [ref=e325]:
+                      - strong [ref=e326]: "\"라면도 과자도 아니다\" 나도 모르게 치매 부르는 뜻밖의 음식 1위"
+                      - generic [ref=e327]: 온별맘
+                - listitem [ref=e330]:
+                  - link "“뱃살 빼려면 라면보다 먼저 끊어야 할 음식..“ 의외로 1위는 이것? 봄니아" [ref=e331] [cursor=pointer]:
+                    - /url: https://in.naver.com/shmom__/contents/internal/990696753983200
+                    - generic [ref=e334]:
+                      - strong [ref=e335]: “뱃살 빼려면 라면보다 먼저 끊어야 할 음식..“ 의외로 1위는 이것?
+                      - generic [ref=e336]: 봄니아
+                - listitem [ref=e339]:
+                  - link "4시간만 자도 괜찮다? 몸은 부족한 잠을 이렇게 돌아온다 조세일보" [ref=e340] [cursor=pointer]:
+                    - /url: https://n.news.naver.com/article/123/0002389646
+                    - generic [ref=e343]:
+                      - strong [ref=e344]: 4시간만 자도 괜찮다? 몸은 부족한 잠을 이렇게 돌아온다
+                      - generic [ref=e345]: 조세일보
+                - listitem [ref=e348]:
+                  - link "대변보다 \"휴지\"에 먼저 남습니다, 췌장 지쳤을 때 화장실에서 보이는 신호 4가지 윤로그" [ref=e349] [cursor=pointer]:
+                    - /url: https://in.naver.com/yoon8863_/contents/internal/982534194888256
+                    - generic [ref=e352]:
+                      - strong [ref=e353]: 대변보다 "휴지"에 먼저 남습니다, 췌장 지쳤을 때 화장실에서 보이는 신호 4가지
+                      - generic [ref=e354]: 윤로그
+                - listitem [ref=e357]:
+                  - link "\"설마 유방암1기일 줄은 몰랐습니다\" 무심코 넘긴 가슴 신호 4가지 쵸리" [ref=e358] [cursor=pointer]:
+                    - /url: https://in.naver.com/dldl3318/contents/internal/982548086341344
+                    - generic [ref=e361]:
+                      - strong [ref=e362]: "\"설마 유방암1기일 줄은 몰랐습니다\" 무심코 넘긴 가슴 신호 4가지"
+                      - generic [ref=e363]: 쵸리
+            - button "펼쳐보기" [ref=e367] [cursor=pointer]
+        - generic [ref=e373]:
+          - region "로그인 정보" [ref=e374]:
+            - generic [ref=e375]:
+              - paragraph [ref=e376]: 네이버를 더 안전하고 편리하게 이용하세요
+              - link "NAVER 로그인" [ref=e377] [cursor=pointer]:
+                - /url: https://nid.naver.com/nidlogin.login?mode=form&url=https://www.naver.com/
+                - generic [ref=e378]: NAVER
+                - text: 로그인
+              - generic [ref=e380]:
+                - link "아이디 찾기" [ref=e381] [cursor=pointer]:
+                  - /url: https://nid.naver.com/user2/api/route?m=routeIdInquiry
+                - link "비밀번호 찾기" [ref=e382] [cursor=pointer]:
+                  - /url: https://nid.naver.com/user2/api/route?m=routePwInquiry
+                - link "회원가입" [ref=e383] [cursor=pointer]:
+                  - /url: https://nid.naver.com/nidregister.form?url=https%3A%2F%2Fwww.naver.com
+          - iframe [ref=e389]:
+            - generic:
+              - main
+              - alert [ref=f3e1]
+          - region "날씨" [ref=e390]:
+            - generic [ref=e391]:
+              - generic [ref=e392]:
+                - link "날씨" [ref=e393] [cursor=pointer]:
+                  - /url: https://weather.naver.com/
+                - link "예보 비교" [ref=e394] [cursor=pointer]:
+                  - /url: https://weather.naver.com/compare/09650106
+                - generic [ref=e395]: 서울시 잠원동
+              - generic [ref=e396]:
+                - generic [ref=e397]:
+                  - link "28.4° 구름많음 최저기온 19° 최고기온 29°" [ref=e398] [cursor=pointer]:
+                    - /url: https://weather.naver.com/today/09650106?cpName=KMA
+                    - generic [ref=e401]:
+                      - text: 28.4°
+                      - generic [ref=e402]: 구름많음
+                    - generic [ref=e403]:
+                      - generic [ref=e404]:
+                        - generic [ref=e405]: 최저기온
+                        - text: 19°
+                      - generic [ref=e406]:
+                        - generic [ref=e407]: 최고기온
+                        - text: 29°
+                  - link "미세좋음 초미세좋음" [ref=e408] [cursor=pointer]:
+                    - /url: https://weather.naver.com/air/09650106?cpName=KMA
+                    - generic [ref=e409]: 미세좋음
+                    - generic [ref=e410]: 초미세좋음
+                - link "15시 구름많음 28° 17 맑음 27° 19 맑음 25° 21 맑음 23° 23 맑음 22°" [ref=e412] [cursor=pointer]:
+                  - /url: https://weather.naver.com/today/09650106?cpName=KMA
+                  - list [ref=e415]:
+                    - listitem [ref=e416]:
+                      - generic [ref=e417]: 15시
+                      - generic [ref=e418]: 구름많음
+                      - generic [ref=e420]: 28°
+                    - listitem [ref=e421]:
+                      - generic [ref=e422]: "17"
+                      - generic [ref=e423]: 맑음
+                      - generic [ref=e425]: 27°
+                    - listitem [ref=e426]:
+                      - generic [ref=e427]: "19"
+                      - generic [ref=e428]: 맑음
+                      - generic [ref=e430]: 25°
+                    - listitem [ref=e431]:
+                      - generic [ref=e432]: "21"
+                      - generic [ref=e433]: 맑음
+                      - generic [ref=e435]: 23°
+                    - listitem [ref=e436]:
+                      - generic [ref=e437]: "23"
+                      - generic [ref=e438]: 맑음
+                      - generic [ref=e440]: 22°
+          - region "증시" [ref=e441]:
+            - generic [ref=e442]:
+              - generic [ref=e443]:
+                - link "증시" [ref=e444] [cursor=pointer]:
+                  - /url: https://finance.naver.com/
+                - button "정보 더보기" [ref=e445] [cursor=pointer]
+                - generic [ref=e447]:
+                  - text: 09.05. 14:52
+                  - button "새로고침" [ref=e448] [cursor=pointer]
+              - generic [ref=e450]:
+                - link "다우존스 53,414.25 하락 271.86-0.51%" [ref=e454] [cursor=pointer]:
+                  - /url: https://finance.naver.com/world/sise.nhn?symbol=DJI@DJI
+                  - generic [ref=e455]:
+                    - generic [ref=e456]: 다우존스
+                    - generic [ref=e457]: 53,414.25
+                    - generic [ref=e458]:
+                      - generic [ref=e459]: 하락
+                      - text: "271.86"
+                      - generic [ref=e461]: "-0.51%"
+                - list [ref=e464]:
+                  - listitem [ref=e465]:
+                    - link "삼성전자 상승 2.20% 255,500" [ref=e466] [cursor=pointer]:
+                      - /url: https://finance.naver.com/item/main.naver?code=005930
+                      - generic [ref=e467]: 삼성전자
+                      - generic [ref=e468]:
+                        - generic [ref=e469]: 상승
+                        - generic [ref=e471]: 2.20%
+                        - text: 255,500
+                  - listitem [ref=e472]:
+                    - link "SK하이닉스 상승 3.20% 1,647,000" [ref=e473] [cursor=pointer]:
+                      - /url: https://finance.naver.com/item/main.naver?code=000660
+                      - generic [ref=e474]: SK하이닉스
+                      - generic [ref=e475]:
+                        - generic [ref=e476]: 상승
+                        - generic [ref=e478]: 3.20%
+                        - text: 1,647,000
+                  - listitem [ref=e479]:
+                    - link "삼성전기 상승 3.93% 1,401,000" [ref=e480] [cursor=pointer]:
+                      - /url: https://finance.naver.com/item/main.naver?code=009150
+                      - generic [ref=e481]: 삼성전기
+                      - generic [ref=e482]:
+                        - generic [ref=e483]: 상승
+                        - generic [ref=e485]: 3.93%
+                        - text: 1,401,000
+                  - listitem [ref=e486]:
+                    - link "인기종목 더보기" [ref=e487] [cursor=pointer]:
+                      - /url: https://finance.naver.com/sise/lastsearch2.naver
+          - region "위젯" [ref=e488]:
+            - generic [ref=e489]: 위젯 보드
+            - generic [ref=e490]:
+              - generic [ref=e491]:
+                - generic [ref=e492]:
+                  - generic [ref=e493]:
+                    - generic [ref=e494]: 캘린더
+                    - generic [ref=e497]:
+                      - text: "9.5"
+                      - generic [ref=e498]: 토
+                    - link "로그인하기":
+                      - /url: https://nid.naver.com/nidlogin.login?mode=form&url=https://www.naver.com/?to=widget
+                    - link [ref=e500] [cursor=pointer]:
+                      - /url: https://nid.naver.com/nidlogin.login?mode=form&url=https://www.naver.com/?to=widget
+                      - table [ref=e501]:
+                        - caption [ref=e502]: 2026년 9월 캘린더 - 이번 달의 일정을 날짜별로 확인할 수 있는 표입니다. 각 셀에는 날짜와 해당 일정이 포함됩니다.
+                        - rowgroup [ref=e503]:
+                          - row [ref=e504]:
+                            - columnheader "일" [ref=e505]
+                            - columnheader "월" [ref=e506]
+                            - columnheader "화" [ref=e507]
+                            - columnheader "수" [ref=e508]
+                            - columnheader "목" [ref=e509]
+                            - columnheader "금" [ref=e510]
+                            - columnheader "토" [ref=e511]
+                        - rowgroup [ref=e512]:
+                          - row [ref=e513]:
+                            - cell "30" [ref=e514]
+                            - cell "31" [ref=e515]
+                            - cell "1" [ref=e516]
+                            - cell "2" [ref=e517]
+                            - cell "3" [ref=e518]
+                            - cell "4" [ref=e519]
+                            - cell "5" [ref=e520]
+                          - row [ref=e521]:
+                            - cell "6" [ref=e522]
+                            - cell "7" [ref=e523]
+                            - cell "8" [ref=e524]
+                            - cell "9" [ref=e525]
+                            - cell "10" [ref=e526]
+                            - cell "11" [ref=e527]
+                            - cell "12" [ref=e528]
+                          - row [ref=e529]:
+                            - cell "13" [ref=e530]
+                            - cell "14" [ref=e531]
+                            - cell "15" [ref=e532]
+                            - cell "16" [ref=e533]
+                            - cell "17" [ref=e534]
+                            - cell "18" [ref=e535]
+                            - cell "19" [ref=e536]
+                          - row [ref=e537]:
+                            - cell "20" [ref=e538]
+                            - cell "21" [ref=e539]
+                            - cell "22" [ref=e540]
+                            - cell "23" [ref=e541]
+                            - cell "24" [ref=e542]
+                            - cell "25" [ref=e543]
+                            - cell "26" [ref=e544]
+                          - row [ref=e545]:
+                            - cell "27" [ref=e546]
+                            - cell "28" [ref=e547]
+                            - cell "29" [ref=e548]
+                            - cell "30" [ref=e549]
+                            - cell "1" [ref=e550]
+                            - cell "2" [ref=e551]
+                            - cell "3" [ref=e552]
+                  - generic [ref=e553]:
+                    - generic [ref=e554]:
+                      - generic [ref=e555]: VIBE
+                      - generic [ref=e557]: 감성피아노사운드
+                      - button "다른 추천 보기" [ref=e558] [cursor=pointer]
+                    - list [ref=e559]:
+                      - listitem [ref=e560]:
+                        - link "봄이 올까요 재생" [ref=e561] [cursor=pointer]:
+                          - /url: https://vibe.naver.com/audio_player?curationId=1062&contentId=CH_1622_EP_46&audioContentId=CH_1622_EP_46
+                          - strong [ref=e563]: 봄이 올까요
+                          - generic [ref=e564]: 재생
+                      - listitem [ref=e566]:
+                        - link "Snow 재생" [ref=e567] [cursor=pointer]:
+                          - /url: https://vibe.naver.com/audio_player?curationId=1062&contentId=CH_1622_EP_27&audioContentId=CH_1622_EP_27
+                          - strong [ref=e569]: Snow
+                          - generic [ref=e570]: 재생
+                      - listitem [ref=e572]:
+                        - link "사랑에 빠졌을 때 재생" [ref=e573] [cursor=pointer]:
+                          - /url: https://vibe.naver.com/audio_player?curationId=1062&contentId=CH_1622_EP_56&audioContentId=CH_1622_EP_56
+                          - strong [ref=e575]: 사랑에 빠졌을 때
+                          - generic [ref=e576]: 재생
+                - generic [ref=e578]:
+                  - generic [ref=e579]:
+                    - generic [ref=e580]:
+                      - link "영어사전" [ref=e581] [cursor=pointer]:
+                        - /url: https://en.dict.naver.com/#/mini/main
+                      - link "How do you spend your free time?" [ref=e582] [cursor=pointer]:
+                        - /url: https://learn.dict.naver.com/m/endic/today/conversation.dict
+                    - link "단어 검색하기" [ref=e585] [cursor=pointer]:
+                      - /url: https://en.dict.naver.com/#/mini/main
+                  - link "papago 번역하기" [ref=e586] [cursor=pointer]:
+                    - /url: https://papago.naver.com/?sk=ko&st=&tk=en
+                    - generic [ref=e587]: papago
+                    - generic [ref=e589]: 번역하기
+                  - link "메모 로그인하기" [ref=e590] [cursor=pointer]:
+                    - /url: https://nid.naver.com/nidlogin.login?mode=form&url=https://www.naver.com/?to=widget
+                    - generic [ref=e591]: 메모
+                    - list [ref=e594]:
+                      - listitem [ref=e595]
+                      - listitem [ref=e596]
+                      - listitem [ref=e597]:
+                        - generic [ref=e598]: 로그인하기
+              - button "다음 페이지" [ref=e599] [cursor=pointer]
+            - link [ref=e601] [cursor=pointer]:
+              - /url: https://m.naver.com/
+              - strong [ref=e602]: 모바일 네이버 메인
+              - text: 열기
+    - contentinfo [ref=e605]:
+      - generic [ref=e606]:
+        - generic [ref=e607]:
+          - iframe [ref=e610]:
+            - link "광고 이미지 광고 월드비전 딱 7년만 더 살면 좋겠어요 암 투병 중에도 홀로 남을 하윤이 걱정뿐입니다" [ref=f4e3] [cursor=pointer]:
+              - /url: https://siape.veta.naver.com/fxclick?eu=EU10043568&calp=-&oj=cQgn6aire5MOnC6WBYbmb41dfRmhn6NutwOU%2FnjIfPfEBuML%2BqEJJ2x%2FhcG054wn2qsQsVX0oX310uVTq2BuZRdydDzcFoevlQWOqql%2F96IvSVkj2lZkpA&ac=9316034&src=8219666&br=4979031&evtcd=P901&x_ti=1529&tb=&oid=&sid1=&sid2=&rk=ii3l4RvQuZaVEQ39pmrbKQ&eltts=P4wqMHCsdQaO5XCy3aE0ZA%3D%3D&brs=Y&
+              - generic [ref=f4e4]:
+                - img "광고 이미지" [ref=f4e5]
+                - generic "광고" [ref=f4e6]
+              - generic [ref=f4e7]:
+                - strong [ref=f4e8]: 월드비전
+                - strong [ref=f4e9]: 딱 7년만 더 살면 좋겠어요
+                - generic [ref=f4e10]: 암 투병 중에도
+                - generic [ref=f4e11]: 홀로 남을 하윤이 걱정뿐입니다
+          - iframe [ref=e613]:
+            - link "광고 이미지 광고 초록우산 네팔 대홍수 긴급구호 사람들을 지킬 골든타임에 함께해 주세요" [ref=f5e3] [cursor=pointer]:
+              - /url: https://siape.veta.naver.com/fxclick?eu=EU10043569&calp=-&oj=cQgn6aire5Nx8cfS51TDuo1dfRmhn6NutwOU%2FnjIfPfEBuML%2BqEJJ2x%2FhcG054wn2qsQsVX0oX310uVTq2BuZRdydDzcFoevlQWOqql%2F96IvSVkj2lZkpA&ac=9317724&src=8225497&br=4981468&evtcd=P901&x_ti=1529&tb=&oid=&sid1=&sid2=&rk=NQppIDA1iogCFMWnHjbuqQ&eltts=P4wqMHCsdQaO5XCy3aE0ZA%3D%3D&brs=Y&
+              - generic [ref=f5e4]:
+                - img "광고 이미지" [ref=f5e5]
+                - generic "광고" [ref=f5e6]
+              - generic [ref=f5e7]:
+                - strong [ref=f5e8]: 초록우산
+                - strong [ref=f5e9]: 네팔 대홍수 긴급구호
+                - generic [ref=f5e10]: 사람들을 지킬
+                - generic [ref=f5e11]: 골든타임에 함께해 주세요
+          - iframe [ref=e616]:
+            - link "광고 이미지 네이버 커넥트재단 AI로 쉽게 웹사이트 뚝딱 AI 바이브 코딩 강좌 모음 지금 무료로 만나보세요!" [ref=f6e3] [cursor=pointer]:
+              - /url: https://siape.veta.naver.com/fxclick?eu=EU10043570&calp=-&oj=9gPJTdEI4gHf40n3ktJ9%2FI1dfRmhn6NutwOU%2FnjIfPfEBuML%2BqEJJ2x%2FhcG054wn2qsQsVX0oX310uVTq2BuZRdydDzcFoevlQWOqql%2F96IvSVkj2lZkpA&ac=9316585&src=8221062&br=4979583&evtcd=P901&x_ti=1507&tb=&oid=&sid1=&sid2=&rk=ii3l4RvQuZaVEQ39pmrbNw&eltts=P4wqMHCsdQaO5XCy3aE0ZA%3D%3D&brs=Y&
+              - img "광고 이미지" [ref=f6e5]
+              - generic [ref=f6e6]:
+                - strong [ref=f6e7]: 네이버 커넥트재단
+                - strong [ref=f6e8]: AI로 쉽게 웹사이트 뚝딱
+                - generic [ref=f6e9]: AI 바이브 코딩 강좌 모음
+                - generic [ref=f6e10]: 지금 무료로 만나보세요!
+        - generic [ref=e617]:
+          - heading [level=3] [ref=e619]:
+            - link "공지사항" [ref=e620] [cursor=pointer]:
+              - /url: https://www.naver.com/NOTICE
+          - link "서비스 전체보기" [ref=e621] [cursor=pointer]:
+            - /url: /more.html
+        - generic [ref=e622]:
+          - generic [ref=e623]:
+            - generic [ref=e624]:
+              - heading "Partners" [level=3] [ref=e625]
+              - link "네이버 광고주센터" [ref=e626] [cursor=pointer]:
+                - /url: https://naver.me/FJO6jm6w
+              - link "스마트스토어센터" [ref=e627] [cursor=pointer]:
+                - /url: https://naver.me/GsBOYhte
+              - link "스마트플레이스" [ref=e628] [cursor=pointer]:
+                - /url: https://naver.me/FRoWm3Ei
+              - link "비즈니스 스쿨" [ref=e629] [cursor=pointer]:
+                - /url: https://naver.me/5K6OWByt
+              - link "네이버 임팩트" [ref=e630] [cursor=pointer]:
+                - /url: https://naver.me/551yFEFD
+            - generic [ref=e631]:
+              - heading "Developers" [level=3] [ref=e632]
+              - link "네이버 개발자 센터" [ref=e633] [cursor=pointer]:
+                - /url: https://developers.naver.com/
+              - link "오픈 API" [ref=e634] [cursor=pointer]:
+                - /url: https://developers.naver.com/docs/common/openapiguide/#/apilist.md
+              - link "오픈소스" [ref=e635] [cursor=pointer]:
+                - /url: https://naver.github.io/
+              - link "네이버 D2" [ref=e636] [cursor=pointer]:
+                - /url: https://d2.naver.com/
+              - link "네이버 D2SF" [ref=e637] [cursor=pointer]:
+                - /url: http://d2startup.com/
+              - link "네이버 랩스" [ref=e638] [cursor=pointer]:
+                - /url: https://www.naverlabs.com/
+          - generic [ref=e639]:
+            - generic [ref=e640]:
+              - link [ref=e641] [cursor=pointer]:
+                - /url: http://whale.naver.com/
+                - img "웨일 브라우저" [ref=e642]
+              - generic [ref=e643]:
+                - strong [ref=e644]: 웨일 브라우저
+                - link "이용안내" [ref=e645] [cursor=pointer]:
+                  - /url: http://whale.naver.com/
+            - generic [ref=e646]:
+              - link [ref=e647] [cursor=pointer]:
+                - /url: https://www.navercorp.com
+                - img "기업 사이트" [ref=e648]
+              - generic [ref=e649]:
+                - strong [ref=e650]: 기업 사이트
+                - link "바로가기" [ref=e651] [cursor=pointer]:
+                  - /url: https://www.navercorp.com
+        - generic [ref=e652]:
+          - heading "네이버 정책 및 약관" [level=3] [ref=e653]
+          - list [ref=e654]:
+            - listitem [ref=e655]:
+              - link "회사소개" [ref=e656] [cursor=pointer]:
+                - /url: https://www.navercorp.com/
+            - listitem [ref=e657]:
+              - link "인재채용" [ref=e658] [cursor=pointer]:
+                - /url: https://recruit.navercorp.com/
+            - listitem [ref=e659]:
+              - link "제휴제안" [ref=e660] [cursor=pointer]:
+                - /url: https://www.navercorp.com/company/partnership
+            - listitem [ref=e661]:
+              - link "이용약관" [ref=e662] [cursor=pointer]:
+                - /url: https://www.naver.com/policy/service.html
+            - listitem [ref=e663]:
+              - link [ref=e664] [cursor=pointer]:
+                - /url: https://www.naver.com/policy/privacy.html
+                - strong [ref=e665]: 개인정보처리방침
+            - listitem [ref=e666]:
+              - link "청소년보호정책" [ref=e667] [cursor=pointer]:
+                - /url: https://www.naver.com/policy/youthpolicy.html
+            - listitem [ref=e668]:
+              - link "네이버 정책" [ref=e669] [cursor=pointer]:
+                - /url: https://policy.naver.com/policy/service_group.html
+            - listitem [ref=e670]:
+              - link "고객센터" [ref=e671] [cursor=pointer]:
+                - /url: https://help.naver.com/
+          - link "ⓒ NAVER Corp." [ref=e673] [cursor=pointer]:
+            - /url: https://www.navercorp.com/

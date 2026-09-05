@@ -1,0 +1,44 @@
+- generic [active] [ref=f25e1]:
+  - generic [ref=f25e2]:
+    - generic [ref=f25e4]:
+      - link [ref=f25e5] [cursor=pointer]:
+        - /url: /
+        - heading "N 플리마켓" [level=1] [ref=f25e6]
+      - generic [ref=f25e10]:
+        - link [ref=f25e11] [cursor=pointer]:
+          - /url: /search
+          - img "검색" [ref=f25e12]
+        - link "알림" [ref=f25e15] [cursor=pointer]:
+          - /url: /my-news
+        - link [ref=f25e19] [cursor=pointer]:
+          - /url: /my
+          - img "프로필" [ref=f25e22]
+    - generic [ref=f25e23]:
+      - generic [ref=f25e25]:
+        - button "홈" [ref=f25e26] [cursor=pointer]
+        - button [ref=f25e28] [cursor=pointer]:
+          - img "N+스토어" [ref=f25e29]
+      - generic [ref=f25e30]:
+        - generic [ref=f25e35]:
+          - generic [ref=f25e36]:
+            - heading "지금 눈여겨볼 상품" [level=2] [ref=f25e39]
+            - button "구매자 보호 수수료 2.2% 별도 · 안전거래 등 안내" [ref=f25e41] [cursor=pointer]
+          - list [ref=f25e46]
+          - separator [aria-hidden] [ref=f25e47]
+          - list [ref=f25e50]
+          - separator [aria-hidden] [ref=f25e51]
+          - list [ref=f25e54]
+        - button "판매하기" [ref=f25e55] [cursor=pointer]
+    - generic [ref=f25e59]:
+      - generic [ref=f25e61]:
+        - link "N플리마켓 이용약관" [ref=f25e62] [cursor=pointer]:
+          - /url: /terms-and-policy
+        - link "개인정보처리방침" [ref=f25e63] [cursor=pointer]:
+          - /url: https://policy.naver.com/rules/privacy.html
+        - link "공지사항" [ref=f25e64] [cursor=pointer]:
+          - /url: https://notice.naver.com/notices/nflea
+        - link "고객센터" [ref=f25e65] [cursor=pointer]:
+          - /url: https://help.pay.naver.com/faq/alias/fleamarket.help
+      - paragraph [ref=f25e66]: 네이버(주)는 통신판매 중개자이며, 통신판매 당사자가 아닙니다. 상품, 상품정보, 거래에 관한 의무 및 책임은 개별 판매자에게 있습니다.
+      - button "네이버(주) 사업자 정보" [ref=f25e68] [cursor=pointer]
+  - alert [ref=f25e72]

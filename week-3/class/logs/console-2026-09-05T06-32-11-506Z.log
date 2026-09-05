@@ -1,0 +1,16 @@
+[    2857ms] [WARNING] Error with Permissions-Policy header: Unrecognized feature: 'attribution-reporting'. @ :0
+[    3040ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://www.instagram.com/:0
+[    3603ms] [INFO] Banner not shown: beforeinstallpromptevent.preventDefault() called. The page must call beforeinstallpromptevent.prompt() to show the banner. @ https://www.instagram.com/:0
+[    3626ms] [LOG] 
+%c잠깐만! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black; @ https://static.cdninstagram.com/rsrc.php/v4iMgt4/yv/l/ko_KR/euYUQxemn1x.js:8
+[    3626ms] [LOG] 
+%c이 기능은 개발자용으로 브라우저에서 제공되는 내용입니다. 누군가 Instagram 기능을 사용하거나 다른 사람의 계정을 '해킹'하기 위해 여기에 특정 콘텐츠를 복사하여 붙여넣으라고 했다면 사기 행위로 간주하세요. 이 기능은 회원님의 Instagram 계정에 대한 액세스 권한을 상대편에게 부여하는 것입니다. font-family:helvetica; font-size:20px;  @ https://static.cdninstagram.com/rsrc.php/v4iMgt4/yv/l/ko_KR/euYUQxemn1x.js:8
+[    3626ms] [LOG] 
+%c자세한 정보는 https://www.facebook.com/selfxss를 참고하세요. font-family:helvetica; font-size:20px;  @ https://static.cdninstagram.com/rsrc.php/v4iMgt4/yv/l/ko_KR/euYUQxemn1x.js:8
+[    3626ms] [LOG] 
+%c  @ https://static.cdninstagram.com/rsrc.php/v4iMgt4/yv/l/ko_KR/euYUQxemn1x.js:8
+[   28467ms] [ERROR] ErrorUtils caught an error:
+
+signal is aborted without reason [Caught in: Passkey authentication failed]
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. {column: 2854, clientTime: 1788589959, extra: Object, guardList: Array(0), hash: 2v3yl0} @ https://static.cdninstagram.com/rsrc.php/v4/yN/r/_2Sbe8vUrUC.js:83

@@ -1,0 +1,542 @@
+- generic [ref=f26e1]:
+  - generic [ref=f26e3]:
+    - generic [ref=f26e5]:
+      - button [ref=f26e6] [cursor=pointer]:
+        - img "이전으로" [ref=f26e7]
+      - generic [ref=f26e11]:
+        - searchbox "어떤 상품을 찾고 계세요?" [ref=f26e15]: 차량용 핸드폰 거치대
+        - button "삭제하기" [ref=f26e23] [cursor=pointer]
+    - generic [ref=f26e16]:
+      - generic [ref=f26e28]:
+        - button "안전거래 상품" [ref=f26e29] [cursor=pointer]
+        - button "N+스토어 상품" [ref=f26e31] [cursor=pointer]
+      - generic [ref=f26e37]:
+        - generic [ref=f26e39]:
+          - button "필터" [ref=f26e40] [cursor=pointer]
+          - button "네이버 구매인증" [ref=f26e44] [cursor=pointer]
+          - button "배송 방법" [ref=f26e46] [cursor=pointer]
+          - button "지역" [ref=f26e50] [cursor=pointer]
+          - button "가격" [ref=f26e54] [cursor=pointer]
+          - button "카테고리" [ref=f26e58] [cursor=pointer]
+          - button "상품 상태" [ref=f26e62] [cursor=pointer]
+          - button "판매완료 포함" [ref=f26e66] [cursor=pointer]
+        - button "다음 필터" [ref=f26e68] [cursor=pointer]
+      - generic [ref=f26e71]:
+        - generic [ref=f26e72]:
+          - button "구매자 보호 수수료 2.2% 별도 · 안전거래 등 안내" [ref=f26e74] [cursor=pointer]
+          - button "낮은 가격순" [ref=f26e602] [cursor=pointer]
+        - generic [ref=f26e81]:
+          - list [ref=f26e84]:
+            - listitem [ref=f26e603]:
+              - generic [ref=f26e604]:
+                - generic [ref=f26e605]:
+                  - img "상품이미지" [ref=f26e607]
+                  - button "찜" [ref=f26e608] [cursor=pointer]
+                  - link "상세화면으로 이동" [ref=f26e611] [cursor=pointer]:
+                    - /url: /market-products/01KK6MT9684RJSSNS853FJF35J?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%93%9C%ED%8F%B0%20%EA%B1%B0%EC%B9%98%EB%8C%80&tc=nflea_search
+                - generic [ref=f26e613]:
+                  - link "상세화면으로 이동 Futhope 하이랜드/주니퍼용 대시보드 거치대 팝니다. 5,000원" [ref=f26e614] [cursor=pointer]:
+                    - /url: /market-products/01KK6MT9684RJSSNS853FJF35J?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%93%9C%ED%8F%B0%20%EA%B1%B0%EC%B9%98%EB%8C%80&tc=nflea_search
+                    - generic [ref=f26e615]: 상세화면으로 이동
+                    - generic [ref=f26e616]:
+                      - text: Futhope 하이랜드/주니퍼용 대시보드
+                      - strong [ref=f26e617]: 거치대
+                      - text: 팝니다.
+                    - generic [ref=f26e618]:
+                      - strong [ref=f26e619]: 5,000
+                      - text: 원
+                  - generic [ref=f26e620]:
+                    - generic [ref=f26e621]: 배송비 3,500원
+                    - generic [ref=f26e622]:
+                      - generic [ref=f26e623]: 날짜
+                      - text: 03.08.
+            - listitem [ref=f26e624]:
+              - generic [ref=f26e625]:
+                - generic [ref=f26e626]:
+                  - img "상품이미지" [ref=f26e628]
+                  - button "찜" [ref=f26e629] [cursor=pointer]
+                  - link "상세화면으로 이동" [ref=f26e632] [cursor=pointer]:
+                    - /url: /market-products/01K76PNK542EAAM9A9P4XF9PD8?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%93%9C%ED%8F%B0%20%EA%B1%B0%EC%B9%98%EB%8C%80&tc=nflea_search
+                - generic [ref=f26e634]:
+                  - link "상세화면으로 이동 픽스 디 올 뉴 코나 페이스리프트 전용 차량용 핸드폰 거치대 마운트 단일 5,000원" [ref=f26e635] [cursor=pointer]:
+                    - /url: /market-products/01K76PNK542EAAM9A9P4XF9PD8?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%93%9C%ED%8F%B0%20%EA%B1%B0%EC%B9%98%EB%8C%80&tc=nflea_search
+                    - generic [ref=f26e636]: 상세화면으로 이동
+                    - generic [ref=f26e637]:
+                      - text: 픽스 디 올 뉴 코나 페이스리프트 전용
+                      - strong [ref=f26e638]: 차량용
+                      - strong [ref=f26e639]: 핸드폰
+                      - strong [ref=f26e640]: 거치대
+                      - text: 마운트 단일
+                    - generic [ref=f26e641]:
+                      - strong [ref=f26e642]: 5,000
+                      - text: 원
+                  - generic [ref=f26e643]:
+                    - generic [ref=f26e644]: 배송비 3,600원
+                    - generic [ref=f26e645]:
+                      - generic [ref=f26e646]: 날짜
+                      - text: 2025.10.10.
+            - listitem [ref=f26e647]:
+              - generic [ref=f26e648]:
+                - generic [ref=f26e649]:
+                  - img "상품이미지" [ref=f26e651]
+                  - button "찜" [ref=f26e652] [cursor=pointer]
+                  - link "상세화면으로 이동" [ref=f26e655] [cursor=pointer]:
+                    - /url: /market-products/01KPQCNR9P59Z7G7Q1EDTJ5GGD?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%93%9C%ED%8F%B0%20%EA%B1%B0%EC%B9%98%EB%8C%80&tc=nflea_search
+                - generic [ref=f26e657]:
+                  - link "상세화면으로 이동 카템 차량용 고속 무선충전 거치대 7,000원" [ref=f26e658] [cursor=pointer]:
+                    - /url: /market-products/01KPQCNR9P59Z7G7Q1EDTJ5GGD?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%93%9C%ED%8F%B0%20%EA%B1%B0%EC%B9%98%EB%8C%80&tc=nflea_search
+                    - generic [ref=f26e659]: 상세화면으로 이동
+                    - generic [ref=f26e660]:
+                      - text: 카템
+                      - strong [ref=f26e661]: 차량용
+                      - text: 고속 무선충전
+                      - strong [ref=f26e662]: 거치대
+                    - generic [ref=f26e663]:
+                      - strong [ref=f26e664]: 7,000
+                      - text: 원
+                  - generic [ref=f26e665]:
+                    - generic [ref=f26e666]: 배송비 3,600원
+                    - generic [ref=f26e667]:
+                      - generic [ref=f26e668]: 날짜
+                      - text: 04.21.
+            - listitem [ref=f26e151]:
+              - generic [ref=f26e152]:
+                - generic [ref=f26e153]:
+                  - img "상품이미지" [ref=f26e155]
+                  - button "찜" [ref=f26e156] [cursor=pointer]
+                  - link "상세화면으로 이동" [ref=f26e159] [cursor=pointer]:
+                    - /url: /market-products/01KT60PBC7DDF5CZBEP029BS7F?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%93%9C%ED%8F%B0%20%EA%B1%B0%EC%B9%98%EB%8C%80&tc=nflea_search
+                - generic [ref=f26e161]:
+                  - link "상세화면으로 이동 예약중주파집 테슬라 모델3/Y 차량용 핸드폰 거치대 7,000원" [ref=f26e162] [cursor=pointer]:
+                    - /url: /market-products/01KT60PBC7DDF5CZBEP029BS7F?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%93%9C%ED%8F%B0%20%EA%B1%B0%EC%B9%98%EB%8C%80&tc=nflea_search
+                    - generic [ref=f26e163]: 상세화면으로 이동
+                    - generic [ref=f26e164]:
+                      - strong [ref=f26e165]: 예약중
+                      - text: 주파집 테슬라 모델3/Y
+                      - strong [ref=f26e166]: 차량용
+                      - strong [ref=f26e167]: 핸드폰
+                      - strong [ref=f26e168]: 거치대
+                    - generic [ref=f26e169]:
+                      - strong [ref=f26e170]: 7,000
+                      - text: 원
+                  - generic [ref=f26e171]:
+                    - generic [ref=f26e172]: 배송비 3,600원
+                    - generic [ref=f26e173]:
+                      - generic [ref=f26e174]: 날짜
+                      - text: 06.03.
+            - listitem [ref=f26e669]:
+              - generic [ref=f26e670]:
+                - generic [ref=f26e671]:
+                  - img "상품이미지" [ref=f26e673]
+                  - button "찜" [ref=f26e674] [cursor=pointer]
+                  - link "상세화면으로 이동" [ref=f26e677] [cursor=pointer]:
+                    - /url: /market-products/01KF8D9KD9E1PQJBH6CRSW2XH4?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%93%9C%ED%8F%B0%20%EA%B1%B0%EC%B9%98%EB%8C%80&tc=nflea_search
+                - generic [ref=f26e679]:
+                  - link "상세화면으로 이동 ES300H 핸드폰 거치대 OBSIDIAN 차량용 휴대폰 무소음 중력 거치대 CT-G10 팝니다 7,000원" [ref=f26e680] [cursor=pointer]:
+                    - /url: /market-products/01KF8D9KD9E1PQJBH6CRSW2XH4?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%93%9C%ED%8F%B0%20%EA%B1%B0%EC%B9%98%EB%8C%80&tc=nflea_search
+                    - generic [ref=f26e681]: 상세화면으로 이동
+                    - generic [ref=f26e682]:
+                      - text: ES300H
+                      - strong [ref=f26e683]: 핸드폰
+                      - strong [ref=f26e684]: 거치대
+                      - text: OBSIDIAN
+                      - strong [ref=f26e685]: 차량용
+                      - text: 휴대폰 무소음 중력
+                      - strong [ref=f26e686]: 거치대
+                      - text: CT-G10 팝니다
+                    - generic [ref=f26e687]:
+                      - strong [ref=f26e688]: 7,000
+                      - text: 원
+                  - generic [ref=f26e689]:
+                    - generic [ref=f26e690]: 배송비 3,000원
+                    - generic [ref=f26e691]:
+                      - generic [ref=f26e692]: 날짜
+                      - text: 01.18.
+            - listitem [ref=f26e693]:
+              - generic [ref=f26e694]:
+                - generic [ref=f26e695]:
+                  - img "상품이미지" [ref=f26e697]
+                  - generic [ref=f26e698]: 구매인증
+                  - button "찜" [ref=f26e701] [cursor=pointer]
+                  - link "상세화면으로 이동" [ref=f26e704] [cursor=pointer]:
+                    - /url: /market-products/01K6W5Q5KHAW0QF252EBHAHBZY?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%93%9C%ED%8F%B0%20%EA%B1%B0%EC%B9%98%EB%8C%80&tc=nflea_search
+                - generic [ref=f26e706]:
+                  - link "상세화면으로 이동 더존 맥세이프 전용 3 in 1 차량용 휴대폰 고속 무선충전 거치대 N100S 10,000원" [ref=f26e707] [cursor=pointer]:
+                    - /url: /market-products/01K6W5Q5KHAW0QF252EBHAHBZY?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%93%9C%ED%8F%B0%20%EA%B1%B0%EC%B9%98%EB%8C%80&tc=nflea_search
+                    - generic [ref=f26e708]: 상세화면으로 이동
+                    - generic [ref=f26e709]:
+                      - text: 더존 맥세이프 전용 3 in 1
+                      - strong [ref=f26e710]: 차량용
+                      - text: 휴대폰 고속 무선충전
+                      - strong [ref=f26e711]: 거치대
+                      - text: N100S
+                    - generic [ref=f26e712]:
+                      - strong [ref=f26e713]: 10,000
+                      - text: 원
+                  - generic [ref=f26e714]:
+                    - generic [ref=f26e715]: 배송비 3,600원
+                    - generic [ref=f26e716]:
+                      - generic [ref=f26e717]: 날짜
+                      - text: 2025.10.06.
+          - list [ref=f26e225]:
+            - listitem [ref=f26e718]:
+              - generic [ref=f26e719]:
+                - generic [ref=f26e720]:
+                  - img "상품이미지" [ref=f26e722]
+                  - button "찜" [ref=f26e723] [cursor=pointer]
+                  - link "상세화면으로 이동" [ref=f26e726] [cursor=pointer]:
+                    - /url: /market-products/01KRRNVXE3V3MR2C9HJBPRP9BH?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%93%9C%ED%8F%B0%20%EA%B1%B0%EC%B9%98%EB%8C%80&tc=nflea_search
+                - generic [ref=f26e728]:
+                  - link "상세화면으로 이동 픽스코리아 벤츠 C GLC 클래스 W205 X253 차량용 핸드폰 거치대 GLC클래스 8 모니터 마운트만 10,000원" [ref=f26e729] [cursor=pointer]:
+                    - /url: /market-products/01KRRNVXE3V3MR2C9HJBPRP9BH?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%93%9C%ED%8F%B0%20%EA%B1%B0%EC%B9%98%EB%8C%80&tc=nflea_search
+                    - generic [ref=f26e730]: 상세화면으로 이동
+                    - generic [ref=f26e731]:
+                      - text: 픽스코리아 벤츠 C GLC 클래스 W205 X253
+                      - strong [ref=f26e732]: 차량용
+                      - strong [ref=f26e733]: 핸드폰
+                      - strong [ref=f26e734]: 거치대
+                      - text: GLC클래스 8 모니터 마운트만
+                    - generic [ref=f26e735]:
+                      - strong [ref=f26e736]: 10,000
+                      - text: 원
+                  - generic [ref=f26e737]:
+                    - generic [ref=f26e738]: 배송비 3,600원
+                    - generic [ref=f26e739]:
+                      - generic [ref=f26e740]: 날짜
+                      - text: 05.17.
+            - listitem [ref=f26e741]:
+              - generic [ref=f26e742]:
+                - generic [ref=f26e743]:
+                  - img "상품이미지" [ref=f26e745]
+                  - button "찜" [ref=f26e746] [cursor=pointer]
+                  - link "상세화면으로 이동" [ref=f26e749] [cursor=pointer]:
+                    - /url: /market-products/01K602JPRR9V0WYK0N2DRNC6X9?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%93%9C%ED%8F%B0%20%EA%B1%B0%EC%B9%98%EB%8C%80&tc=nflea_search
+                - generic [ref=f26e751]:
+                  - link "상세화면으로 이동 본스펙 차량용 충전거치대 10,000원" [ref=f26e752] [cursor=pointer]:
+                    - /url: /market-products/01K602JPRR9V0WYK0N2DRNC6X9?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%93%9C%ED%8F%B0%20%EA%B1%B0%EC%B9%98%EB%8C%80&tc=nflea_search
+                    - generic [ref=f26e753]: 상세화면으로 이동
+                    - generic [ref=f26e754]:
+                      - text: 본스펙
+                      - strong [ref=f26e755]: 차량용
+                      - text: 충전
+                      - strong [ref=f26e756]: 거치대
+                    - generic [ref=f26e757]:
+                      - strong [ref=f26e758]: 10,000
+                      - text: 원
+                  - generic [ref=f26e759]:
+                    - generic [ref=f26e760]: 배송비 2,000원
+                    - generic [ref=f26e761]:
+                      - generic [ref=f26e762]: 날짜
+                      - text: 2025.09.25.
+            - listitem [ref=f26e342]:
+              - generic [ref=f26e343]:
+                - generic [ref=f26e344]:
+                  - img "상품이미지" [ref=f26e346]
+                  - generic [ref=f26e347]: 구매인증
+                  - button "찜" [ref=f26e350] [cursor=pointer]
+                  - link "상세화면으로 이동" [ref=f26e353] [cursor=pointer]:
+                    - /url: /market-products/01KM21DEK2J5MFD2R1HF6CHW13?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%93%9C%ED%8F%B0%20%EA%B1%B0%EC%B9%98%EB%8C%80&tc=nflea_search
+                - generic [ref=f26e355]:
+                  - link "상세화면으로 이동 주파집 더뉴 레이 (17년식이후) 차량용 핸드폰 거치대 10,000원" [ref=f26e356] [cursor=pointer]:
+                    - /url: /market-products/01KM21DEK2J5MFD2R1HF6CHW13?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%93%9C%ED%8F%B0%20%EA%B1%B0%EC%B9%98%EB%8C%80&tc=nflea_search
+                    - generic [ref=f26e357]: 상세화면으로 이동
+                    - generic [ref=f26e358]:
+                      - text: 주파집 더뉴 레이 (17년식이후)
+                      - strong [ref=f26e359]: 차량용
+                      - strong [ref=f26e360]: 핸드폰
+                      - strong [ref=f26e361]: 거치대
+                    - generic [ref=f26e362]:
+                      - strong [ref=f26e363]: 10,000
+                      - text: 원
+                  - generic [ref=f26e364]:
+                    - generic [ref=f26e365]: 배송비 3,600원
+                    - generic [ref=f26e366]:
+                      - generic [ref=f26e367]: 날짜
+                      - text: 03.19.
+            - listitem [ref=f26e763]:
+              - generic [ref=f26e764]:
+                - generic [ref=f26e765]:
+                  - img "상품이미지" [ref=f26e767]
+                  - button "찜" [ref=f26e768] [cursor=pointer]
+                  - link "상세화면으로 이동" [ref=f26e771] [cursor=pointer]:
+                    - /url: /market-products/01M1R1A136FBS54XYVXPK393XP?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%93%9C%ED%8F%B0%20%EA%B1%B0%EC%B9%98%EB%8C%80&tc=nflea_search
+                - generic [ref=f26e773]:
+                  - link "상세화면으로 이동 YZ 테슬라 맥세이프 차량용 휴대폰 거치대 10,000원" [ref=f26e774] [cursor=pointer]:
+                    - /url: /market-products/01M1R1A136FBS54XYVXPK393XP?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%93%9C%ED%8F%B0%20%EA%B1%B0%EC%B9%98%EB%8C%80&tc=nflea_search
+                    - generic [ref=f26e775]: 상세화면으로 이동
+                    - generic [ref=f26e776]:
+                      - text: YZ 테슬라 맥세이프
+                      - strong [ref=f26e777]: 차량용
+                      - text: 휴대폰
+                      - strong [ref=f26e778]: 거치대
+                    - generic [ref=f26e779]:
+                      - strong [ref=f26e780]: 10,000
+                      - text: 원
+                  - generic [ref=f26e782]:
+                    - generic [ref=f26e783]: 날짜
+                    - text: 32분 전
+            - listitem [ref=f26e293]:
+              - generic [ref=f26e294]:
+                - generic [ref=f26e295]:
+                  - img "상품이미지" [ref=f26e297]
+                  - generic [ref=f26e298]: 구매인증
+                  - button "찜" [ref=f26e301] [cursor=pointer]
+                  - link "상세화면으로 이동" [ref=f26e304] [cursor=pointer]:
+                    - /url: /market-products/01KQ67BY32XZ9GH0C2SCXFA7NM?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%93%9C%ED%8F%B0%20%EA%B1%B0%EC%B9%98%EB%8C%80&tc=nflea_search
+                - generic [ref=f26e306]:
+                  - link "상세화면으로 이동 벤딕트 맥세이프 차량용 핸드폰 거치대 무선 충전기 루나서클 15,000원" [ref=f26e307] [cursor=pointer]:
+                    - /url: /market-products/01KQ67BY32XZ9GH0C2SCXFA7NM?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%93%9C%ED%8F%B0%20%EA%B1%B0%EC%B9%98%EB%8C%80&tc=nflea_search
+                    - generic [ref=f26e308]: 상세화면으로 이동
+                    - generic [ref=f26e309]:
+                      - text: 벤딕트 맥세이프
+                      - strong [ref=f26e310]: 차량용
+                      - strong [ref=f26e311]: 핸드폰
+                      - strong [ref=f26e312]: 거치대
+                      - text: 무선 충전기 루나서클
+                    - generic [ref=f26e313]:
+                      - strong [ref=f26e314]: 15,000
+                      - text: 원
+                  - generic [ref=f26e315]:
+                    - generic [ref=f26e316]: 배송비 3,600원
+                    - generic [ref=f26e317]:
+                      - generic [ref=f26e318]: 날짜
+                      - text: 04.27.
+            - listitem [ref=f26e460]:
+              - generic [ref=f26e461]:
+                - generic [ref=f26e462]:
+                  - img "상품이미지" [ref=f26e464]
+                  - button "찜" [ref=f26e465] [cursor=pointer]
+                  - link "상세화면으로 이동" [ref=f26e468] [cursor=pointer]:
+                    - /url: /market-products/01KJMFD3GWTMWVH7ZNHS3JVW5H?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%93%9C%ED%8F%B0%20%EA%B1%B0%EC%B9%98%EB%8C%80&tc=nflea_search
+                - generic [ref=f26e470]:
+                  - link "상세화면으로 이동 게이즈카 와이드H 2세대 차량용 무선충전 거치대 15,000원" [ref=f26e471] [cursor=pointer]:
+                    - /url: /market-products/01KJMFD3GWTMWVH7ZNHS3JVW5H?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%93%9C%ED%8F%B0%20%EA%B1%B0%EC%B9%98%EB%8C%80&tc=nflea_search
+                    - generic [ref=f26e472]: 상세화면으로 이동
+                    - generic [ref=f26e473]:
+                      - text: 게이즈카 와이드H 2세대
+                      - strong [ref=f26e474]: 차량용
+                      - text: 무선충전
+                      - strong [ref=f26e475]: 거치대
+                    - generic [ref=f26e476]:
+                      - strong [ref=f26e477]: 15,000
+                      - text: 원
+                  - generic [ref=f26e478]:
+                    - generic [ref=f26e479]: 배송비 4,000원
+                    - generic [ref=f26e480]:
+                      - generic [ref=f26e481]: 날짜
+                      - text: 03.01.
+            - listitem [ref=f26e784]:
+              - generic [ref=f26e785]:
+                - generic [ref=f26e786]:
+                  - img "상품이미지" [ref=f26e788]
+                  - button "찜" [ref=f26e789] [cursor=pointer]
+                  - link "상세화면으로 이동" [ref=f26e792] [cursor=pointer]:
+                    - /url: /market-products/01KC5JMW3CVQF19GZMPB4ZPPW3?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%93%9C%ED%8F%B0%20%EA%B1%B0%EC%B9%98%EB%8C%80&tc=nflea_search
+                - generic [ref=f26e794]:
+                  - link "상세화면으로 이동 브릭스 차량용 맥세이프 충전기 거치대 무선 쏘렌토 MQ4 15,000원" [ref=f26e795] [cursor=pointer]:
+                    - /url: /market-products/01KC5JMW3CVQF19GZMPB4ZPPW3?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%93%9C%ED%8F%B0%20%EA%B1%B0%EC%B9%98%EB%8C%80&tc=nflea_search
+                    - generic [ref=f26e796]: 상세화면으로 이동
+                    - generic [ref=f26e797]:
+                      - text: 브릭스
+                      - strong [ref=f26e798]: 차량용
+                      - text: 맥세이프 충전기
+                      - strong [ref=f26e799]: 거치대
+                      - text: 무선 쏘렌토 MQ4
+                    - generic [ref=f26e800]:
+                      - strong [ref=f26e801]: 15,000
+                      - text: 원
+                  - generic [ref=f26e802]:
+                    - generic [ref=f26e803]: 배송비 4,000원
+                    - generic [ref=f26e804]:
+                      - generic [ref=f26e805]: 날짜
+                      - text: 2025.12.11.
+            - listitem [ref=f26e390]:
+              - generic [ref=f26e391]:
+                - generic [ref=f26e392]:
+                  - img "상품이미지" [ref=f26e394]
+                  - button "찜" [ref=f26e395] [cursor=pointer]
+                  - link "상세화면으로 이동" [ref=f26e398] [cursor=pointer]:
+                    - /url: /market-products/01KG39SC895FPVENCABN856A51?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%93%9C%ED%8F%B0%20%EA%B1%B0%EC%B9%98%EB%8C%80&tc=nflea_search
+                - generic [ref=f26e400]:
+                  - link "상세화면으로 이동 별다섯 차량용 핸드폰 태블릿 거치대 듀얼패드 흡착형 FEM-3C 16,000원" [ref=f26e401] [cursor=pointer]:
+                    - /url: /market-products/01KG39SC895FPVENCABN856A51?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%93%9C%ED%8F%B0%20%EA%B1%B0%EC%B9%98%EB%8C%80&tc=nflea_search
+                    - generic [ref=f26e402]: 상세화면으로 이동
+                    - generic [ref=f26e403]:
+                      - text: 별다섯
+                      - strong [ref=f26e404]: 차량용
+                      - strong [ref=f26e405]: 핸드폰
+                      - text: 태블릿
+                      - strong [ref=f26e406]: 거치대
+                      - text: 듀얼패드 흡착형 FEM-3C
+                    - generic [ref=f26e407]:
+                      - strong [ref=f26e408]: 16,000
+                      - text: 원
+                  - generic [ref=f26e409]:
+                    - generic [ref=f26e410]: 배송비 4,000원
+                    - generic [ref=f26e411]:
+                      - generic [ref=f26e412]: 날짜
+                      - text: 01.29.
+            - listitem [ref=f26e806]:
+              - generic [ref=f26e807]:
+                - generic [ref=f26e808]:
+                  - img "상품이미지" [ref=f26e810]
+                  - button "찜" [ref=f26e811] [cursor=pointer]
+                  - link "상세화면으로 이동" [ref=f26e814] [cursor=pointer]:
+                    - /url: /market-products/01M12TBS49W7MEVWVV9J13DF8W?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%93%9C%ED%8F%B0%20%EA%B1%B0%EC%B9%98%EB%8C%80&tc=nflea_search
+                - generic [ref=f26e816]:
+                  - link "상세화면으로 이동 TEMAI 테슬라 전용 차량용 핸드폰 거치대 17,000원" [ref=f26e817] [cursor=pointer]:
+                    - /url: /market-products/01M12TBS49W7MEVWVV9J13DF8W?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%93%9C%ED%8F%B0%20%EA%B1%B0%EC%B9%98%EB%8C%80&tc=nflea_search
+                    - generic [ref=f26e818]: 상세화면으로 이동
+                    - generic [ref=f26e819]:
+                      - text: TEMAI 테슬라 전용
+                      - strong [ref=f26e820]: 차량용
+                      - strong [ref=f26e821]: 핸드폰
+                      - strong [ref=f26e822]: 거치대
+                    - generic [ref=f26e823]:
+                      - strong [ref=f26e824]: 17,000
+                      - text: 원
+                  - generic [ref=f26e825]:
+                    - generic [ref=f26e826]: 배송비 3,600원
+                    - generic [ref=f26e827]:
+                      - generic [ref=f26e828]: 날짜
+                      - text: 1주 전
+            - listitem [ref=f26e530]:
+              - generic [ref=f26e531]:
+                - generic [ref=f26e532]:
+                  - img "상품이미지" [ref=f26e534]
+                  - button "찜" [ref=f26e535] [cursor=pointer]
+                  - link "상세화면으로 이동" [ref=f26e538] [cursor=pointer]:
+                    - /url: /market-products/01KBY6NTSR5TNFDFD6NQZB7TTT?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%93%9C%ED%8F%B0%20%EA%B1%B0%EC%B9%98%EB%8C%80&tc=nflea_search
+                - generic [ref=f26e540]:
+                  - link "상세화면으로 이동 스마텍 차량용 무선 충전거치대 (새상품) 19,500원" [ref=f26e541] [cursor=pointer]:
+                    - /url: /market-products/01KBY6NTSR5TNFDFD6NQZB7TTT?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%93%9C%ED%8F%B0%20%EA%B1%B0%EC%B9%98%EB%8C%80&tc=nflea_search
+                    - generic [ref=f26e542]: 상세화면으로 이동
+                    - generic [ref=f26e543]:
+                      - text: 스마텍
+                      - strong [ref=f26e544]: 차량용
+                      - text: 무선 충전
+                      - strong [ref=f26e545]: 거치대
+                      - text: (새상품)
+                    - generic [ref=f26e546]:
+                      - strong [ref=f26e547]: 19,500
+                      - text: 원
+                  - generic [ref=f26e548]:
+                    - generic [ref=f26e549]: 무료배송
+                    - generic [ref=f26e550]:
+                      - generic [ref=f26e551]: 날짜
+                      - text: 2025.12.08.
+            - listitem [ref=f26e829]:
+              - generic [ref=f26e830]:
+                - generic [ref=f26e831]:
+                  - img "상품이미지" [ref=f26e833]
+                  - button "찜" [ref=f26e834] [cursor=pointer]
+                  - link "상세화면으로 이동" [ref=f26e837] [cursor=pointer]:
+                    - /url: /market-products/01KRAASXFKBY3ESQ3MF86J9H6V?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%93%9C%ED%8F%B0%20%EA%B1%B0%EC%B9%98%EB%8C%80&tc=nflea_search
+                - generic [ref=f26e839]:
+                  - link "상세화면으로 이동 차량용 핸드폰 거치대랑 탭 거치대 전부 다 드립니다. 흡착형, 송풍구형 등 여러 종류 있어요. 사진에 있는 거치대 전부 다 해서 저렴하게 판매합니다 20,000원" [ref=f26e840] [cursor=pointer]:
+                    - /url: /market-products/01KRAASXFKBY3ESQ3MF86J9H6V?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%93%9C%ED%8F%B0%20%EA%B1%B0%EC%B9%98%EB%8C%80&tc=nflea_search
+                    - generic [ref=f26e841]: 상세화면으로 이동
+                    - generic [ref=f26e842]:
+                      - strong [ref=f26e843]: 차량용
+                      - strong [ref=f26e844]: 핸드폰
+                      - strong [ref=f26e845]: 거치대
+                      - text: 랑 탭
+                      - strong [ref=f26e846]: 거치대
+                      - text: 전부 다 드립니다. 흡착형, 송풍구형 등 여러 종류 있어요. 사진에 있는
+                      - strong [ref=f26e847]: 거치대
+                      - text: 전부 다 해서 저렴하게 판매합니다
+                    - generic [ref=f26e848]:
+                      - strong [ref=f26e849]: 20,000
+                      - text: 원
+                  - generic [ref=f26e850]:
+                    - generic [ref=f26e851]: 배송비 5,000원
+                    - generic [ref=f26e852]:
+                      - generic [ref=f26e853]: 날짜
+                      - text: 05.11.
+            - listitem [ref=f26e854]:
+              - generic [ref=f26e855]:
+                - generic [ref=f26e856]:
+                  - img "상품이미지" [ref=f26e858]
+                  - button "찜" [ref=f26e859] [cursor=pointer]
+                  - link "상세화면으로 이동" [ref=f26e862] [cursor=pointer]:
+                    - /url: /market-products/01KF0M9RSQ01FYHHG2P1ASXQRC?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%93%9C%ED%8F%B0%20%EA%B1%B0%EC%B9%98%EB%8C%80&tc=nflea_search
+                - generic [ref=f26e864]:
+                  - link "상세화면으로 이동 아콘차량거치대 20,000원" [ref=f26e865] [cursor=pointer]:
+                    - /url: /market-products/01KF0M9RSQ01FYHHG2P1ASXQRC?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%93%9C%ED%8F%B0%20%EA%B1%B0%EC%B9%98%EB%8C%80&tc=nflea_search
+                    - generic [ref=f26e866]: 상세화면으로 이동
+                    - generic [ref=f26e867]:
+                      - text: 아콘차량
+                      - strong [ref=f26e868]: 거치대
+                    - generic [ref=f26e869]:
+                      - strong [ref=f26e870]: 20,000
+                      - text: 원
+                  - generic [ref=f26e872]:
+                    - generic [ref=f26e873]: 날짜
+                    - text: 01.15.
+            - listitem [ref=f26e319]:
+              - generic [ref=f26e320]:
+                - generic [ref=f26e321]:
+                  - img "상품이미지" [ref=f26e323]
+                  - button "찜" [ref=f26e324] [cursor=pointer]
+                  - link "상세화면으로 이동" [ref=f26e327] [cursor=pointer]:
+                    - /url: /market-products/01KP606HH38QY9G9VG73SR7982?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%93%9C%ED%8F%B0%20%EA%B1%B0%EC%B9%98%EB%8C%80&tc=nflea_search
+                - generic [ref=f26e329]:
+                  - link "상세화면으로 이동 픽스코리아 EV3 전용 차량용 핸드폰 거치대 세트 25,000원" [ref=f26e330] [cursor=pointer]:
+                    - /url: /market-products/01KP606HH38QY9G9VG73SR7982?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%93%9C%ED%8F%B0%20%EA%B1%B0%EC%B9%98%EB%8C%80&tc=nflea_search
+                    - generic [ref=f26e331]: 상세화면으로 이동
+                    - generic [ref=f26e332]:
+                      - text: 픽스코리아 EV3 전용
+                      - strong [ref=f26e333]: 차량용
+                      - strong [ref=f26e334]: 핸드폰
+                      - strong [ref=f26e335]: 거치대
+                      - text: 세트
+                    - generic [ref=f26e336]:
+                      - strong [ref=f26e337]: 25,000
+                      - text: 원
+                  - generic [ref=f26e338]:
+                    - generic [ref=f26e339]: 무료배송
+                    - generic [ref=f26e340]:
+                      - generic [ref=f26e341]: 날짜
+                      - text: 04.14.
+            - listitem [ref=f26e874]:
+              - generic [ref=f26e875]:
+                - generic [ref=f26e876]:
+                  - img "상품이미지" [ref=f26e878]
+                  - button "찜" [ref=f26e879] [cursor=pointer]
+                  - link "상세화면으로 이동" [ref=f26e882] [cursor=pointer]:
+                    - /url: /market-products/01KYNMVKAAQZGJEQ8EDVBH539H?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%93%9C%ED%8F%B0%20%EA%B1%B0%EC%B9%98%EB%8C%80&tc=nflea_search
+                - generic [ref=f26e884]:
+                  - link "상세화면으로 이동 BMW g30 g32 코모드 차량용 거치대 30,000원" [ref=f26e885] [cursor=pointer]:
+                    - /url: /market-products/01KYNMVKAAQZGJEQ8EDVBH539H?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%93%9C%ED%8F%B0%20%EA%B1%B0%EC%B9%98%EB%8C%80&tc=nflea_search
+                    - generic [ref=f26e886]: 상세화면으로 이동
+                    - generic [ref=f26e887]:
+                      - text: BMW g30 g32 코모드
+                      - strong [ref=f26e888]: 차량용
+                      - strong [ref=f26e889]: 거치대
+                    - generic [ref=f26e890]:
+                      - strong [ref=f26e891]: 30,000
+                      - text: 원
+                  - generic [ref=f26e892]:
+                    - generic [ref=f26e893]: 배송비 3,600원
+                    - generic [ref=f26e894]:
+                      - generic [ref=f26e895]: 날짜
+                      - text: 07.29.
+      - generic [ref=f26e896]: 로딩중...
+  - alert [ref=f26e22]: "차량용 핸드폰 거치대 검색 : N플리마켓"
+  - generic:
+    - generic [ref=f26e562]:
+      - generic [ref=f26e563]: 정렬
+      - list [ref=f26e567]:
+        - generic [ref=f26e569]:
+          - radio "관련도순" [checked] [ref=f26e570]
+          - generic [ref=f26e571] [cursor=pointer]: 관련도순
+        - generic [ref=f26e577]:
+          - radio "최신순" [ref=f26e578]
+          - generic [ref=f26e579] [cursor=pointer]: 최신순
+        - generic [ref=f26e585]:
+          - radio "낮은 가격순" [active] [ref=f26e586]
+          - generic [ref=f26e587] [cursor=pointer]: 낮은 가격순
+        - generic [ref=f26e593]:
+          - radio "높은 가격순" [ref=f26e594]
+          - generic [ref=f26e595] [cursor=pointer]: 높은 가격순
+    - button "바텀시트 닫기" [ref=f26e600] [cursor=pointer]

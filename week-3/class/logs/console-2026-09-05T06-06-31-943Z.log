@@ -1,0 +1,2 @@
+[  138105ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://nid.naver.com/nidlogin.login?lang=ko_KR&url=https%3A%2F%2Fnaver.com%2F:0
+[  165119ms] [WARNING] Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://shopsquare.naver.com') does not match the recipient window's origin ('https://www.naver.com'). @ https://pm.pstatic.net/resources/js/main.c5f449ab.js:44

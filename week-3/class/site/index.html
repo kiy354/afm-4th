@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playwright MCP 챌린지 리서치 · AI 공장장 4기</title>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <!-- ⚠️ 모든 CDN 버전 고정. Babel 은 반드시 7.x (8.x 는 인라인 text/babel 미지원) -->
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone@7.25.9/babel.min.js"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background-color: #0b1020; }
+    /* Tailwind 로 표현 불가능한 애니메이션/스크롤바 커스터마이즈만 여기에 둔다 */
+    @keyframes floatUp {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .anim-in { animation: floatUp .5s cubic-bezier(.22,1,.36,1) both; }
+    @keyframes auroraShift {
+      0%, 100% { transform: translate3d(0,0,0) scale(1); }
+      50%      { transform: translate3d(4%, -3%, 0) scale(1.12); }
+    }
+    .aurora { animation: auroraShift 18s ease-in-out infinite; }
+    .shot-scroll { max-height: 320px; overflow: hidden; }
+    .shot-scroll img { transition: transform 6s cubic-bezier(.22,1,.36,1); }
+    .shot-scroll:hover img { transform: translateY(calc(-100% + 320px)); }
+    ::-webkit-scrollbar { width: 10px; height: 10px; }
+    ::-webkit-scrollbar-track { background: #0b1020; }
+    ::-webkit-scrollbar-thumb { background: #29335c; border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #3b4a80; }
+    @media (prefers-reduced-motion: reduce) {
+      .anim-in, .aurora { animation: none; }
+      .shot-scroll img, .shot-scroll:hover img { transition: none; transform: none; }
+    }
+  </style>
+</head>
+<body class="bg-[#0b1020] text-slate-200 antialiased">
+  <div id="root"></div>
+
+  <script type="text/babel">
+    // ========================================
+    // React Hooks
+    // ========================================
+    const { useState, useEffect, useMemo, useCallback, useContext, createContext } = React;
+
+    // ========================================
+    // 📊 Data — 2026-09-05 Playwright MCP 실습 기록
+    // ========================================
+    const RESEARCH = {
+      date: '2026-09-05',
+      tool: 'Claude Code + Playwright MCP (Chromium)',
+      docPath: '../docs/Playwright-MCP-챌린지-리서치.md',
+      logPath: '../logs/',
+    };
+
+    const CHALLENGES = [
+      {
+        id: 'naver-weather',
+        no: 1,
+        title: '네이버 날씨 검색 & 캡처',
+        tag: '검색 · 캡처',
+        time: '14:54',
+        status: 'success',
+        url: 'https://search.naver.com/search.naver?query=오늘날씨',
+        urlLabel: 'search.naver.com',
+        accent: 'from-emerald-400 to-teal-500',
+        summary: '검색창에 “오늘날씨”를 입력해 결과 페이지에 진입한 뒤, 전체 화면과 날씨 카드 영역을 각각 캡처했다.',
+        steps: [
+          '네이버 접속 → 검색창에 `오늘날씨` 입력 후 엔터',
+          '검색 결과 전체 페이지 스크린샷',
+          '날씨 카드 엘리먼트만 지정해 영역 스크린샷',
+        ],
+        findings: [
+          '서초구 잠원동 기준 28.4° · 구름많음 (어제보다 1° ↓)',
+          '체감 26.9° / 습도 39% / 동풍 3.5m/s',
+          '미세먼지·초미세먼지 모두 “좋음”, 자외선 높음, 일몰 18:56',
+          '주간예보 9.05 ~ 9.14 구간까지 카드에 노출',
+        ],
+        tip: '전체 스크린샷보다 특정 엘리먼트만 지정해 캡처하면 광고·배너가 빠져 결과물이 훨씬 깔끔하다.',
+        shots: [
+          { src: '../screenshots/naver-weather-2026-09-05.png', caption: '검색 결과 전체 화면' },
+          { src: '../screenshots/naver-weather-card-2026-09-05.png', caption: '날씨 카드 엘리먼트 단위 캡처' },
+        ],
+      },
+      {
+        id: 'google-form',
+        no: 2,
+        title: '구글폼 자동 작성 & 제출',
+        tag: '폼 자동화',
+        time: '14:59',
+        status: 'success',
+        url: 'https://docs.google.com/forms/d/e/1FAIpQLSfKyhtnKbiLrbZ3I6iaY5M2EBPVjOrlHnAWuOUFQvTzfo-g0w/viewform',
+        urlLabel: 'docs.google.com/forms',
+        accent: 'from-violet-400 to-indigo-500',
+        summary: '“AI 공장장 4기 — 구글폼 자동 작성 실습” 폼을 에이전트가 직접 채우고 제출까지 완료했다.',
+        steps: [
+          '폼 진입 (로그인 없이 제출 가능한 연습용 폼)',
+          '이름 · 이번 주 목표 텍스트 입력, 만족도 라디오 선택',
+          '제출 → “응답이 기록되었습니다.” 확인 페이지 도달',
+        ],
+        findings: [
+          '이름: Claude (AI 에이전트)',
+          '이번 주 목표: Playwright MCP로 브라우저 자동화 익히기 — 네이버 검색/스크린샷, 구글폼 자동 작성까지 실습 완주',
+          '이번 주 수업 만족도(1~5): 4',
+          '제출 확인 페이지까지 도달 → 성공 판정 명확',
+        ],
+        tip: '텍스트 입력 + 라디오 선택 + 제출이 한 번에 되는, 자동화 실습용으로 가장 안정적인 시나리오.',
+        shots: [
+          { src: '../screenshots/gform-before-submit.png', caption: '값이 모두 채워진 제출 직전 상태' },
+          { src: '../screenshots/gform-submitted.png', caption: '제출 완료 확인 화면' },
+        ],
+      },
+      {
+        id: 'naver-cafe',
+        no: 3,
+        title: '네이버 카페 — 비로그인 → 로그인',
+        tag: '세션 · 로그인',
+        time: '15:03 / 15:11',
+        status: 'success',
+        url: 'https://cafe.naver.com',
+        urlLabel: 'cafe.naver.com',
+        accent: 'from-lime-400 to-green-500',
+        summary: '같은 페이지를 로그인 전후로 두 번 캡처해, 세션이 실제로 붙었는지 화면으로 검증했다.',
+        steps: [
+          '비로그인 상태의 카페홈 캡처',
+          '네이버 로그인 진행',
+          '로그인 상태의 카페홈 재캡처 후 비교',
+        ],
+        findings: [
+          '로그인 후 우측에 계정 영역(kiy3564님 · 로그아웃 · 카페 만들기) 노출',
+          '“가입한 카페가 없습니다” 안내로 개인화 영역이 실제 렌더링됨을 확인',
+          '비로그인 화면에는 계정 영역 대신 프로모션 배너만 표시',
+        ],
+        tip: '로그인 여부는 상단·우측 계정 영역의 존재로 판별하는 게 가장 확실하다.',
+        shots: [
+          { src: '../screenshots/naver-cafe-home.png', caption: '비로그인 상태 카페홈' },
+          { src: '../screenshots/cafe-home-2.png', caption: '로그인 상태 카페홈 (계정 영역 노출)' },
+        ],
+      },
+      {
+        id: 'fleamarket',
+        no: 4,
+        title: '플리마켓 검색 + 낮은 가격순 정렬',
+        tag: '검색 · 정렬',
+        time: '15:13',
+        status: 'success',
+        url: 'https://fleamarket.naver.com/search?q=%EC%B0%A8%EB%9F%89%EC%9A%A9+%ED%95%B8%EB%93%9C%ED%8F%B0+%EA%B1%B0%EC%B9%98%EB%8C%80&sort=PRICE_ASC',
+        urlLabel: 'fleamarket.naver.com/search',
+        accent: 'from-amber-400 to-orange-500',
+        summary: '“차량용 핸드폰 거치대”를 검색하고 정렬을 낮은 가격순으로 바꿔, 정렬이 실제 적용됐는지 확인했다.',
+        steps: [
+          '플리마켓 검색창에 `차량용 핸드폰 거치대` 입력',
+          '안전거래 상품 탭 확인',
+          '정렬을 “낮은 가격순”으로 변경 (URL: sort=PRICE_ASC)',
+        ],
+        findings: [
+          '정렬 적용 후 상위 노출 상품이 모두 5,000원대',
+          '배송비 3,500 ~ 3,600원 별도 표기',
+          '구매자 보호 수수료 2.2% 별도 안내 확인',
+        ],
+        tip: '정렬·필터는 UI 클릭 대신 URL 쿼리(sort=PRICE_ASC)로 바로 진입하는 편이 빠르고 재현성이 높다.',
+        shots: [
+          { src: '../screenshots/fleamarket-holder-price-asc.png', caption: '낮은 가격순 정렬이 적용된 검색 결과' },
+        ],
+      },
+      {
+        id: 'coupang',
+        no: 5,
+        title: '쿠팡 — 회원가입 화면 → 홈',
+        tag: '커머스',
+        time: '15:21',
+        status: 'partial',
+        url: 'https://www.coupang.com',
+        urlLabel: 'coupang.com',
+        accent: 'from-sky-400 to-blue-500',
+        summary: '접근 과정에서 회원가입/약관 동의 화면을 먼저 만났고, 이후 홈 진입에 성공했다.',
+        steps: [
+          '쿠팡 접근 → 회원정보 입력·약관 동의 화면(login.coupang.com) 도달',
+          '해당 화면 캡처 (가입 진행은 하지 않음)',
+          '홈으로 이동해 메인 화면 캡처',
+        ],
+        findings: [
+          '홈 상단에 “최대 32,000원 한정 쿠폰” 배너 노출',
+          '로켓배송 · 로켓프레시 · 2026 추석 등 카테고리 탭 확인',
+          '봇 탐지·리다이렉트가 잦아 같은 흐름이 매번 재현되지는 않음',
+        ],
+        tip: '회원가입·결제처럼 실제 계정이 만들어지는 흐름은 자동화하지 않는 것이 원칙. 캡처까지만 진행했다.',
+        caution: '실제 가입 절차는 진행하지 않았다. 화면 도달 및 캡처까지만 수행.',
+        shots: [
+          { src: '../screenshots/coupang-home.png', caption: '회원정보 입력 / 약관 동의 화면' },
+          { src: '../screenshots/coupang-home-2.png', caption: '쿠팡 홈 (쿠폰 배너 · 오늘의 발견)' },
+        ],
+      },
+      {
+        id: 'instagram',
+        no: 6,
+        title: '인스타그램 — 로그인 벽',
+        tag: 'SNS',
+        time: '15:28',
+        status: 'partial',
+        url: 'https://www.instagram.com/',
+        urlLabel: 'instagram.com',
+        accent: 'from-pink-400 to-rose-500',
+        summary: '비로그인 접근 시 피드 대신 로그인 화면이 떠, 콘텐츠 자동화가 불가능함을 확인했다.',
+        steps: [
+          '비로그인 상태로 instagram.com 접근',
+          '노출되는 화면 캡처',
+        ],
+        findings: [
+          '피드 대신 로그인 폼 + “새 계정 만들기” + Facebook 로그인만 노출',
+          '로그인 없이는 게시물 데이터에 접근할 수 없음',
+        ],
+        tip: '로그인 벽이 있는 서비스는 “무엇을 못 하는지”를 먼저 확인하고 시나리오를 재설계해야 한다.',
+        shots: [
+          { src: '../screenshots/instagram-home.png', caption: '로그인 벽 화면' },
+        ],
+      },
+      {
+        id: 'youtube',
+        no: 7,
+        title: '유튜브 홈 — 비로그인 상태',
+        tag: '미디어',
+        time: '15:35',
+        status: 'partial',
+        url: 'https://www.youtube.com/',
+        urlLabel: 'youtube.com',
+        accent: 'from-red-400 to-rose-600',
+        summary: '홈은 열리지만 추천 피드가 비어 있어, 개인화 영역이 로그인에 종속됨을 확인했다.',
+        steps: [
+          '비로그인 상태로 youtube.com 접근',
+          '홈 화면 캡처',
+        ],
+        findings: [
+          '추천 피드 대신 “검색하여 시작하기” 안내만 표시',
+          '좌측 내비게이션(홈 · Shorts · 구독 · 기록)은 정상 렌더링',
+        ],
+        tip: '페이지가 200으로 열려도 콘텐츠가 비어 있을 수 있다. 성공 판정은 “특정 엘리먼트 존재”로 해야 한다.',
+        shots: [
+          { src: '../screenshots/youtube-home.png', caption: '비로그인 유튜브 홈' },
+        ],
+      },
+    ];
+
+    const LESSONS = [
+      { icon: '🔐', title: '로그인 여부가 결과를 좌우한다', body: '네이버 카페는 로그인 후 화면이 완전히 달라졌고, 인스타·유튜브는 비로그인이면 볼 게 없다.' },
+      { icon: '🎯', title: '엘리먼트 캡처 > 전체 캡처', body: '날씨 카드처럼 필요한 영역만 잡으면 광고가 섞이지 않아 결과물이 깔끔하다.' },
+      { icon: '🔗', title: 'URL 파라미터가 클릭보다 안정적', body: '검색어·정렬(sort=PRICE_ASC)은 URL로 바로 진입하는 게 재현성이 높다.' },
+      { icon: '📝', title: '폼 자동화는 구글폼이 최고의 연습 상대', body: '로그인 불필요 + 제출 확인 페이지가 명확해 성공/실패 판정이 쉽다.' },
+      { icon: '🛡️', title: '커머스·SNS는 봇 탐지에 민감', body: '쿠팡처럼 리다이렉트가 끼어들 수 있으니 실패를 전제로 단계를 잘게 나눈다.' },
+      { icon: '🚫', title: '계정 생성·결제·대량 요청은 하지 않는다', body: '조회와 캡처 중심으로만 실습하는 것을 원칙으로 삼았다.' },
+    ];
+
+    const STATUS_META = {
+      success: { label: '성공', dot: 'bg-emerald-400', chip: 'bg-emerald-400/10 text-emerald-300 ring-emerald-400/30' },
+      partial: { label: '제약 확인', dot: 'bg-amber-400', chip: 'bg-amber-400/10 text-amber-300 ring-amber-400/30' },
+    };
+
+    const TOTAL_SHOTS = CHALLENGES.reduce((n, c) => n + c.shots.length, 0);
+    const SUCCESS_COUNT = CHALLENGES.filter(c => c.status === 'success').length;
+
+    // ========================================
+    // 🎨 Design System Components
+    // ========================================
+    function Button({ variant = 'primary', size = 'md', className = '', children, ...props }) {
+      const base = 'inline-flex items-center justify-center gap-2 rounded-xl font-semibold transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0b1020] focus-visible:ring-indigo-400 disabled:opacity-40 disabled:cursor-not-allowed';
+      const variants = {
+        primary: 'bg-indigo-500 text-white hover:bg-indigo-400 shadow-lg shadow-indigo-500/25',
+        secondary: 'bg-white/5 text-slate-100 ring-1 ring-white/15 hover:bg-white/10 hover:ring-white/25',
+        ghost: 'text-slate-300 hover:text-white hover:bg-white/5',
+        danger: 'bg-rose-500 text-white hover:bg-rose-400',
+      };
+      const sizes = { sm: 'px-3 py-1.5 text-xs', md: 'px-4 py-2 text-sm', lg: 'px-6 py-3 text-base' };
+      return (
+        <button className={`${base} ${variants[variant]} ${sizes[size]} ${className}`} {...props}>
+          {children}
+        </button>
+      );
+    }
+
+    function Card({ className = '', children, ...props }) {
+      return (
+        <div
+          className={`rounded-2xl bg-white/[0.04] ring-1 ring-white/10 backdrop-blur-sm shadow-xl shadow-black/20 ${className}`}
+          {...props}
+        >
+          {children}
+        </div>
+      );
+    }
+
+    function Badge({ className = '', children }) {
+      return (
+        <span className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[11px] font-semibold ring-1 ${className}`}>
+          {children}
+        </span>
+      );
+    }
+
+    function StatusBadge({ status }) {
+      const meta = STATUS_META[status];
+      return (
+        <Badge className={meta.chip}>
+          <span className={`h-1.5 w-1.5 rounded-full ${meta.dot}`} aria-hidden="true"></span>
+          {meta.label}
+        </Badge>
+      );
+    }
+
+    function Modal({ isOpen, onClose, title, size = 'lg', children }) {
+      useEffect(() => {
+        if (!isOpen) return;
+        const onKey = (e) => { if (e.key === 'Escape') onClose(); };
+        document.addEventListener('keydown', onKey);
+        const prev = document.body.style.overflow;
+        document.body.style.overflow = 'hidden';
+        return () => {
+          document.removeEventListener('keydown', onKey);
+          document.body.style.overflow = prev;
+        };
+      }, [isOpen, onClose]);
+
+      if (!isOpen) return null;
+      const sizes = { md: 'max-w-2xl', lg: 'max-w-5xl', xl: 'max-w-7xl' };
+
+      return (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-8"
+          role="dialog"
+          aria-modal="true"
+          aria-label={title}
+        >
+          <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" onClick={onClose}></div>
+          <div className={`relative w-full ${sizes[size]} anim-in`}>
+            <div className="flex items-center justify-between gap-4 pb-3">
+              <p className="text-sm font-medium text-slate-300 truncate">{title}</p>
+              <Button variant="secondary" size="sm" onClick={onClose} aria-label="닫기">
+                닫기 <span aria-hidden="true">✕</span>
+              </Button>
+            </div>
+            <div className="max-h-[78vh] overflow-auto rounded-2xl ring-1 ring-white/15 bg-[#0b1020]">
+              {children}
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    // ========================================
+    // 🔀 Router Components (hash-based)
+    // ========================================
+    const RouterContext = createContext({ path: '/', navigate: () => {}, params: {} });
+
+    function Router({ children }) {
+      const [path, setPath] = useState(() => window.location.hash.slice(1) || '/');
+
+      useEffect(() => {
+        const onHashChange = () => setPath(window.location.hash.slice(1) || '/');
+        window.addEventListener('hashchange', onHashChange);
+        return () => window.removeEventListener('hashchange', onHashChange);
+      }, []);
+
+      useEffect(() => { window.scrollTo({ top: 0, behavior: 'auto' }); }, [path]);
+
+      const navigate = useCallback((to) => { window.location.hash = to; }, []);
+      const value = useMemo(() => ({ path, navigate }), [path, navigate]);
+
+      return <RouterContext.Provider value={value}>{children}</RouterContext.Provider>;
+    }
+
+    function matchRoute(pattern, path) {
+      const p = pattern.split('/').filter(Boolean);
+      const c = path.split('/').filter(Boolean);
+      if (p.length !== c.length) return null;
+      const params = {};
+      for (let i = 0; i < p.length; i++) {
+        if (p[i].startsWith(':')) params[p[i].slice(1)] = decodeURIComponent(c[i]);
+        else if (p[i] !== c[i]) return null;
+      }
+      return params;
+    }
+
+    function Routes({ children }) {
+      const { path } = useContext(RouterContext);
+      const routes = React.Children.toArray(children);
+      for (const route of routes) {
+        const params = matchRoute(route.props.path, path);
+        if (params) {
+          return <RouteParamsProvider params={params}>{route.props.element}</RouteParamsProvider>;
+        }
+      }
+      const fallback = routes.find(r => r.props.path === '*');
+      return fallback ? fallback.props.element : null;
+    }
+
+    function Route() { return null; }
+
+    const ParamsContext = createContext({});
+    function RouteParamsProvider({ params, children }) {
+      const value = useMemo(() => params, [JSON.stringify(params)]);
+      return <ParamsContext.Provider value={value}>{children}</ParamsContext.Provider>;
+    }
+
+    function useRouter() { return useContext(RouterContext); }
+    function useParams() { return useContext(ParamsContext); }
+
+    function Link({ to, className = '', children, ...props }) {
+      const { navigate } = useRouter();
+      return (
+        <a
+          href={`#${to}`}
+          className={className}
+          onClick={(e) => { e.preventDefault(); navigate(to); }}
+          {...props}
+        >
+          {children}
+        </a>
+      );
+    }
+
+    // ========================================
+    // 🧩 Common / Layout Components
+    // ========================================
+    function Header() {
+      const { path } = useRouter();
+      const [scrolled, setScrolled] = useState(false);
+
+      useEffect(() => {
+        const onScroll = () => setScrolled(window.scrollY > 12);
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+        return () => window.removeEventListener('scroll', onScroll);
+      }, []);
+
+      return (
+        <header
+          className={`sticky top-0 z-40 transition-all duration-300 ${
+            scrolled ? 'bg-[#0b1020]/85 backdrop-blur-md ring-1 ring-white/10' : 'bg-transparent'
+          }`}
+        >
+          <nav className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4" aria-label="주요">
+            <Link to="/" className="group flex items-center gap-3">
+              <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 text-base shadow-lg shadow-indigo-500/30">
+                🎭
+              </span>
+              <span className="leading-tight">
+                <span className="block text-sm font-bold text-white group-hover:text-indigo-200 transition-colors">
+                  Playwright MCP 챌린지
+                </span>
+                <span className="block text-[11px] text-slate-400">AI 공장장 4기 · {RESEARCH.date}</span>
+              </span>
+            </Link>
+
+            <div className="flex items-center gap-1 sm:gap-2">
+              <Link
+                to="/"
+                className={`rounded-xl px-3 py-2 text-sm font-medium transition-colors ${
+                  path === '/' ? 'text-white bg-white/10' : 'text-slate-400 hover:text-white hover:bg-white/5'
+                }`}
+              >
+                개요
+              </Link>
+              <Link
+                to="/lessons"
+                className={`rounded-xl px-3 py-2 text-sm font-medium transition-colors ${
+                  path === '/lessons' ? 'text-white bg-white/10' : 'text-slate-400 hover:text-white hover:bg-white/5'
+                }`}
+              >
+                배운 점
+              </Link>
+              <a
+                href={RESEARCH.docPath}
+                className="hidden sm:inline-flex rounded-xl px-3 py-2 text-sm font-medium text-slate-400 hover:text-white hover:bg-white/5 transition-colors"
+              >
+                원본 MD ↗
+              </a>
+            </div>
+          </nav>
+        </header>
+      );
+    }
+
+    function Footer() {
+      return (
+        <footer className="mt-24 border-t border-white/10">
+          <div className="mx-auto flex max-w-6xl flex-col gap-3 px-5 py-10 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+            <p>
+              {RESEARCH.date} · {RESEARCH.tool}
+            </p>
+            <p className="flex flex-wrap items-center gap-x-4 gap-y-1">
+              <a href={RESEARCH.docPath} className="hover:text-slate-300 transition-colors">리서치 원본 (.md)</a>
+              <a href={RESEARCH.logPath} className="hover:text-slate-300 transition-colors">Playwright 로그</a>
+            </p>
+          </div>
+        </footer>
+      );
+    }
+
+    function SectionTitle({ eyebrow, title, description }) {
+      return (
+        <div className="mb-8 max-w-2xl">
+          {eyebrow && (
+            <p className="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-indigo-400">{eyebrow}</p>
+          )}
+          <h2 className="text-2xl font-bold text-white sm:text-3xl">{title}</h2>
+          {description && <p className="mt-3 text-sm leading-relaxed text-slate-400">{description}</p>}
+        </div>
+      );
+    }
+
+    function Thumbnail({ shot, onOpen, className = '' }) {
+      const [loaded, setLoaded] = useState(false);
+      const [failed, setFailed] = useState(false);
+
+      if (failed) {
+        return (
+          <div className={`grid place-items-center rounded-xl bg-white/[0.03] ring-1 ring-white/10 p-8 text-center ${className}`}>
+            <div>
+              <p className="text-2xl" aria-hidden="true">🖼️</p>
+              <p className="mt-2 text-xs text-slate-500">이미지를 찾을 수 없습니다</p>
+              <p className="mt-1 text-[11px] text-slate-600 break-all">{shot.src}</p>
+            </div>
+          </div>
+        );
+      }
+
+      return (
+        <button
+          type="button"
+          onClick={() => onOpen(shot)}
+          className={`group relative block w-full overflow-hidden rounded-xl ring-1 ring-white/10 bg-white/[0.03] text-left transition-all duration-300 hover:ring-indigo-400/50 hover:shadow-2xl hover:shadow-indigo-500/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 ${className}`}
+          aria-label={`${shot.caption} 원본 보기`}
+        >
+          <div className="shot-scroll">
+            {!loaded && <div className="h-[220px] w-full animate-pulse bg-white/5"></div>}
+            <img
+              src={shot.src}
+              alt={shot.caption}
+              decoding="async"
+              onLoad={() => setLoaded(true)}
+              onError={() => setFailed(true)}
+              className={`w-full ${loaded ? 'block' : 'hidden'}`}
+            />
+          </div>
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-3 pt-10">
+            <p className="text-xs font-medium text-slate-200">{shot.caption}</p>
+            <p className="mt-0.5 text-[11px] text-slate-400 opacity-0 transition-opacity group-hover:opacity-100">
+              클릭해서 원본 크게 보기
+            </p>
+          </div>
+        </button>
+      );
+    }
+
+    function ChallengeCard({ challenge, onOpenShot }) {
+      const cover = challenge.shots[0];
+      return (
+        <Card className="group flex flex-col overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:ring-white/20">
+          <div className={`h-1 w-full bg-gradient-to-r ${challenge.accent}`}></div>
+
+          <div className="relative">
+            <Thumbnail shot={cover} onOpen={onOpenShot} className="rounded-none ring-0" />
+            <span className="absolute left-3 top-3 rounded-lg bg-black/70 px-2 py-1 text-[11px] font-bold text-white backdrop-blur-sm">
+              #{challenge.no}
+            </span>
+            <span className="absolute right-3 top-3">
+              <StatusBadge status={challenge.status} />
+            </span>
+          </div>
+
+          <div className="flex flex-1 flex-col p-5">
+            <div className="mb-2 flex items-center gap-2 text-[11px] text-slate-500">
+              <span className="rounded-md bg-white/5 px-2 py-0.5 font-medium text-slate-400">{challenge.tag}</span>
+              <span>{challenge.time}</span>
+            </div>
+
+            <h3 className="text-lg font-bold text-white">{challenge.title}</h3>
+            <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-400">{challenge.summary}</p>
+
+            <div className="mt-5 flex items-center justify-between gap-3">
+              <Link
+                to={`/challenge/${challenge.id}`}
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-indigo-300 hover:text-indigo-200 transition-colors"
+              >
+                자세히 보기 <span aria-hidden="true">→</span>
+              </Link>
+              <a
+                href={challenge.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="truncate text-xs text-slate-500 hover:text-slate-300 transition-colors"
+                title={challenge.url}
+              >
+                {challenge.urlLabel} ↗
+              </a>
+            </div>
+          </div>
+        </Card>
+      );
+    }
+
+    // ========================================
+    // 📄 Page Components
+    // ========================================
+    function HomePage({ onOpenShot }) {
+      const [filter, setFilter] = useState('all');
+
+      const visible = useMemo(() => {
+        if (filter === 'all') return CHALLENGES;
+        return CHALLENGES.filter(c => c.status === filter);
+      }, [filter]);
+
+      const filters = [
+        { key: 'all', label: `전체 ${CHALLENGES.length}` },
+        { key: 'success', label: `성공 ${SUCCESS_COUNT}` },
+        { key: 'partial', label: `제약 확인 ${CHALLENGES.length - SUCCESS_COUNT}` },
+      ];
+
+      return (
+        <main>
+          {/* Hero */}
+          <section className="relative overflow-hidden">
+            <div className="pointer-events-none absolute inset-0" aria-hidden="true">
+              <div className="aurora absolute -left-24 -top-32 h-96 w-96 rounded-full bg-indigo-600/25 blur-3xl"></div>
+              <div className="aurora absolute right-0 top-10 h-80 w-80 rounded-full bg-violet-600/20 blur-3xl" style={{ animationDelay: '3s' }}></div>
+              <div className="aurora absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-emerald-500/10 blur-3xl" style={{ animationDelay: '6s' }}></div>
+            </div>
+
+            <div className="relative mx-auto max-w-6xl px-5 pb-16 pt-16 sm:pt-24">
+              <div className="anim-in max-w-3xl">
+                <Badge className="bg-white/5 text-slate-300 ring-white/15">
+                  <span className="h-1.5 w-1.5 rounded-full bg-indigo-400" aria-hidden="true"></span>
+                  {RESEARCH.date} · 브라우저 자동화 실습 기록
+                </Badge>
+
+                <h1 className="mt-6 text-4xl font-black leading-tight tracking-tight text-white sm:text-6xl">
+                  에이전트가 직접 열고,<br />
+                  <span className="bg-gradient-to-r from-indigo-400 via-violet-400 to-emerald-300 bg-clip-text text-transparent">
+                    조작하고, 캡처한
+                  </span>{' '}
+                  7개의 화면
+                </h1>
+
+                <p className="mt-6 max-w-2xl text-base leading-relaxed text-slate-400 sm:text-lg">
+                  Claude Code와 Playwright MCP로 네이버 · 구글폼 · 쿠팡 · 인스타그램 · 유튜브를 차례로 다뤄본 기록입니다.
+                  성공한 것뿐 아니라 <strong className="font-semibold text-slate-200">로그인 벽에 막힌 것까지</strong> 그대로 남겼습니다.
+                </p>
+
+                <div className="mt-8 flex flex-wrap gap-3">
+                  <Button size="lg" onClick={() => document.getElementById('challenges')?.scrollIntoView({ behavior: 'smooth' })}>
+                    챌린지 둘러보기 <span aria-hidden="true">↓</span>
+                  </Button>
+                  <a href={RESEARCH.docPath}>
+                    <Button variant="secondary" size="lg">리서치 원본 (.md)</Button>
+                  </a>
+                </div>
+              </div>
+
+              {/* Stats */}
+              <dl className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-4">
+                {[
+                  { label: '챌린지', value: CHALLENGES.length, suffix: '개' },
+                  { label: '캡처 스크린샷', value: TOTAL_SHOTS, suffix: '장' },
+                  { label: '완주', value: SUCCESS_COUNT, suffix: '개' },
+                  { label: '실습 시간', value: '41', suffix: '분' },
+                ].map((stat, i) => (
+                  <Card key={stat.label} className="anim-in p-5" style={{ animationDelay: `${i * 60}ms` }}>
+                    <dt className="text-xs font-medium text-slate-500">{stat.label}</dt>
+                    <dd className="mt-1 text-3xl font-black text-white">
+                      {stat.value}
+                      <span className="ml-1 text-sm font-semibold text-slate-500">{stat.suffix}</span>
+                    </dd>
+                  </Card>
+                ))}
+              </dl>
+            </div>
+          </section>
+
+          {/* Timeline */}
+          <section className="mx-auto max-w-6xl px-5 py-8">
+            <Card className="overflow-hidden p-1">
+              <div className="overflow-x-auto">
+                <table className="w-full min-w-[640px] text-left text-sm">
+                  <caption className="sr-only">챌린지 요약 표</caption>
+                  <thead>
+                    <tr className="border-b border-white/10 text-xs uppercase tracking-wider text-slate-500">
+                      <th scope="col" className="px-4 py-3 font-semibold">#</th>
+                      <th scope="col" className="px-4 py-3 font-semibold">챌린지</th>
+                      <th scope="col" className="px-4 py-3 font-semibold">대상 링크</th>
+                      <th scope="col" className="px-4 py-3 font-semibold">시각</th>
+                      <th scope="col" className="px-4 py-3 font-semibold">결과</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-white/5">
+                    {CHALLENGES.map((c) => (
+                      <tr key={c.id} className="transition-colors hover:bg-white/[0.03]">
+                        <td className="px-4 py-3 font-mono text-xs text-slate-500">{c.no}</td>
+                        <td className="px-4 py-3">
+                          <Link to={`/challenge/${c.id}`} className="font-medium text-slate-100 hover:text-indigo-300 transition-colors">
+                            {c.title}
+                          </Link>
+                        </td>
+                        <td className="px-4 py-3">
+                          <a
+                            href={c.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-xs text-slate-400 hover:text-indigo-300 transition-colors"
+                          >
+                            {c.urlLabel} ↗
+                          </a>
+                        </td>
+                        <td className="px-4 py-3 font-mono text-xs text-slate-500">{c.time}</td>
+                        <td className="px-4 py-3"><StatusBadge status={c.status} /></td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </Card>
+          </section>
+
+          {/* Challenge grid */}
+          <section id="challenges" className="mx-auto max-w-6xl px-5 py-12 scroll-mt-24">
+            <div className="mb-8 flex flex-wrap items-end justify-between gap-6">
+              <SectionTitle
+                eyebrow="Challenges"
+                title="7개의 챌린지"
+                description="썸네일을 클릭하면 원본 스크린샷이 열리고, 카드를 누르면 단계·관찰 내용이 담긴 상세 페이지로 이동합니다."
+              />
+              <div className="mb-8 flex gap-2" role="group" aria-label="결과별 필터">
+                {filters.map(f => (
+                  <Button
+                    key={f.key}
+                    variant={filter === f.key ? 'primary' : 'secondary'}
+                    size="sm"
+                    onClick={() => setFilter(f.key)}
+                    aria-pressed={filter === f.key}
+                  >
+                    {f.label}
+                  </Button>
+                ))}
+              </div>
+            </div>
+
+            {visible.length === 0 ? (
+              <Card className="p-12 text-center">
+                <p className="text-3xl" aria-hidden="true">🔍</p>
+                <p className="mt-3 text-sm text-slate-400">해당하는 챌린지가 없습니다.</p>
+              </Card>
+            ) : (
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {visible.map((c, i) => (
+                  <div key={c.id} className="anim-in" style={{ animationDelay: `${i * 50}ms` }}>
+                    <ChallengeCard challenge={c} onOpenShot={onOpenShot} />
+                  </div>
+                ))}
+              </div>
+            )}
+          </section>
+
+          {/* Lessons preview */}
+          <section className="mx-auto max-w-6xl px-5 py-12">
+            <SectionTitle eyebrow="Takeaways" title="실습에서 건진 것들" />
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {LESSONS.slice(0, 3).map(l => (
+                <Card key={l.title} className="p-6">
+                  <p className="text-2xl" aria-hidden="true">{l.icon}</p>
+                  <h3 className="mt-3 font-bold text-white">{l.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-400">{l.body}</p>
+                </Card>
+              ))}
+            </div>
+            <div className="mt-6">
+              <Link to="/lessons">
+                <Button variant="secondary">배운 점 6가지 전부 보기 →</Button>
+              </Link>
+            </div>
+          </section>
+        </main>
+      );
+    }
+
+    function ChallengeDetailPage({ onOpenShot }) {
+      const { id } = useParams();
+      const index = CHALLENGES.findIndex(c => c.id === id);
+      const challenge = CHALLENGES[index];
+
+      if (!challenge) return <NotFoundPage />;
+
+      const prev = CHALLENGES[index - 1];
+      const next = CHALLENGES[index + 1];
+
+      return (
+        <main className="mx-auto max-w-5xl px-5 py-12">
+          <Link to="/" className="inline-flex items-center gap-1.5 text-sm text-slate-400 hover:text-white transition-colors">
+            <span aria-hidden="true">←</span> 전체 챌린지
+          </Link>
+
+          <header className="anim-in mt-6">
+            <div className="flex flex-wrap items-center gap-3">
+              <span className={`rounded-lg bg-gradient-to-r ${challenge.accent} px-2.5 py-1 text-xs font-black text-slate-900`}>
+                CHALLENGE #{challenge.no}
+              </span>
+              <StatusBadge status={challenge.status} />
+              <span className="text-xs text-slate-500">{challenge.tag} · {challenge.time} KST</span>
+            </div>
+
+            <h1 className="mt-4 text-3xl font-black text-white sm:text-4xl">{challenge.title}</h1>
+            <p className="mt-4 max-w-3xl text-base leading-relaxed text-slate-400">{challenge.summary}</p>
+
+            <a
+              href={challenge.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 inline-flex max-w-full items-center gap-2 rounded-xl bg-white/5 px-4 py-2.5 text-sm text-slate-300 ring-1 ring-white/10 transition-colors hover:bg-white/10 hover:text-white"
+            >
+              <span aria-hidden="true">🔗</span>
+              <span className="truncate">{challenge.url}</span>
+            </a>
+          </header>
+
+          {challenge.caution && (
+            <div className="mt-8 flex gap-3 rounded-2xl bg-amber-400/10 p-4 ring-1 ring-amber-400/20">
+              <span aria-hidden="true">⚠️</span>
+              <p className="text-sm leading-relaxed text-amber-200">{challenge.caution}</p>
+            </div>
+          )}
+
+          <div className="mt-10 grid gap-6 lg:grid-cols-2">
+            <Card className="p-6">
+              <h2 className="text-sm font-bold uppercase tracking-wider text-slate-500">진행 단계</h2>
+              <ol className="mt-4 space-y-3">
+                {challenge.steps.map((s, i) => (
+                  <li key={i} className="flex gap-3 text-sm leading-relaxed text-slate-300">
+                    <span className="mt-0.5 grid h-5 w-5 flex-none place-items-center rounded-full bg-white/10 text-[11px] font-bold text-slate-300">
+                      {i + 1}
+                    </span>
+                    <span>{s}</span>
+                  </li>
+                ))}
+              </ol>
+            </Card>
+
+            <Card className="p-6">
+              <h2 className="text-sm font-bold uppercase tracking-wider text-slate-500">관찰된 사실</h2>
+              <ul className="mt-4 space-y-3">
+                {challenge.findings.map((f, i) => (
+                  <li key={i} className="flex gap-3 text-sm leading-relaxed text-slate-300">
+                    <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-indigo-400" aria-hidden="true"></span>
+                    <span>{f}</span>
+                  </li>
+                ))}
+              </ul>
+            </Card>
+          </div>
+
+          <section className="mt-10">
+            <h2 className="mb-4 text-sm font-bold uppercase tracking-wider text-slate-500">
+              스크린샷 {challenge.shots.length}장
+            </h2>
+            <div className={`grid gap-5 ${challenge.shots.length > 1 ? 'sm:grid-cols-2' : ''}`}>
+              {challenge.shots.map(shot => (
+                <figure key={shot.src}>
+                  <Thumbnail shot={shot} onOpen={onOpenShot} />
+                  <figcaption className="mt-2 flex items-center justify-between gap-3 text-xs text-slate-500">
+                    <span>{shot.caption}</span>
+                    <a href={shot.src} target="_blank" rel="noopener noreferrer" className="hover:text-slate-300 transition-colors">
+                      원본 파일 ↗
+                    </a>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </section>
+
+          <div className="mt-10 rounded-2xl bg-gradient-to-r from-indigo-500/10 to-violet-500/10 p-6 ring-1 ring-indigo-400/20">
+            <p className="text-xs font-bold uppercase tracking-wider text-indigo-300">💡 포인트</p>
+            <p className="mt-2 text-sm leading-relaxed text-slate-200">{challenge.tip}</p>
+          </div>
+
+          <nav className="mt-12 flex items-stretch justify-between gap-4" aria-label="챌린지 이동">
+            {prev ? (
+              <Link to={`/challenge/${prev.id}`} className="group flex-1">
+                <Card className="h-full p-4 transition-colors group-hover:ring-white/20">
+                  <p className="text-[11px] text-slate-500">← 이전</p>
+                  <p className="mt-1 text-sm font-semibold text-slate-200 group-hover:text-white">{prev.title}</p>
+                </Card>
+              </Link>
+            ) : <div className="flex-1"></div>}
+
+            {next ? (
+              <Link to={`/challenge/${next.id}`} className="group flex-1">
+                <Card className="h-full p-4 text-right transition-colors group-hover:ring-white/20">
+                  <p className="text-[11px] text-slate-500">다음 →</p>
+                  <p className="mt-1 text-sm font-semibold text-slate-200 group-hover:text-white">{next.title}</p>
+                </Card>
+              </Link>
+            ) : <div className="flex-1"></div>}
+          </nav>
+        </main>
+      );
+    }
+
+    function LessonsPage() {
+      return (
+        <main className="mx-auto max-w-5xl px-5 py-12">
+          <Link to="/" className="inline-flex items-center gap-1.5 text-sm text-slate-400 hover:text-white transition-colors">
+            <span aria-hidden="true">←</span> 전체 챌린지
+          </Link>
+
+          <div className="mt-6">
+            <SectionTitle
+              eyebrow="Takeaways"
+              title="배운 점 6가지"
+              description="7개 챌린지를 돌면서 반복적으로 확인된 규칙들입니다. 다음 자동화 시나리오를 짤 때 그대로 적용합니다."
+            />
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2">
+            {LESSONS.map((l, i) => (
+              <Card key={l.title} className="anim-in p-6" style={{ animationDelay: `${i * 50}ms` }}>
+                <div className="flex items-start gap-4">
+                  <span className="grid h-11 w-11 flex-none place-items-center rounded-xl bg-white/5 text-xl ring-1 ring-white/10" aria-hidden="true">
+                    {l.icon}
+                  </span>
+                  <div>
+                    <h3 className="font-bold text-white">
+                      <span className="mr-2 font-mono text-xs text-slate-600">{String(i + 1).padStart(2, '0')}</span>
+                      {l.title}
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed text-slate-400">{l.body}</p>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+
+          <Card className="mt-10 p-6">
+            <h2 className="text-sm font-bold uppercase tracking-wider text-slate-500">기록 출처</h2>
+            <ul className="mt-4 space-y-2 text-sm text-slate-400">
+              <li>· 리서치 원본: <a href={RESEARCH.docPath} className="text-indigo-300 hover:text-indigo-200">{RESEARCH.docPath}</a></li>
+              <li>· 브라우저 로그·접근성 스냅샷: <a href={RESEARCH.logPath} className="text-indigo-300 hover:text-indigo-200">{RESEARCH.logPath}</a></li>
+              <li>· 스크린샷 {TOTAL_SHOTS}장은 이 문서와 같은 폴더에 있습니다.</li>
+            </ul>
+          </Card>
+        </main>
+      );
+    }
+
+    function NotFoundPage() {
+      return (
+        <main className="mx-auto grid min-h-[60vh] max-w-3xl place-items-center px-5 text-center">
+          <div>
+            <p className="text-6xl" aria-hidden="true">🧭</p>
+            <h1 className="mt-6 text-2xl font-bold text-white">페이지를 찾을 수 없습니다</h1>
+            <p className="mt-3 text-sm text-slate-400">주소를 다시 확인하거나 처음 화면으로 돌아가세요.</p>
+            <div className="mt-8">
+              <Link to="/"><Button>처음으로</Button></Link>
+            </div>
+          </div>
+        </main>
+      );
+    }
+
+    // ========================================
+    // 🚀 App Component
+    // ========================================
+    function App() {
+      const [activeShot, setActiveShot] = useState(null);
+      const openShot = useCallback((shot) => setActiveShot(shot), []);
+      const closeShot = useCallback(() => setActiveShot(null), []);
+
+      return (
+        <Router>
+          <div className="min-h-screen">
+            <Header />
+
+            <Routes>
+              <Route path="/" element={<HomePage onOpenShot={openShot} />} />
+              <Route path="/challenge/:id" element={<ChallengeDetailPage onOpenShot={openShot} />} />
+              <Route path="/lessons" element={<LessonsPage />} />
+              <Route path="*" element={<NotFoundPage />} />
+            </Routes>
+
+            <Footer />
+
+            <Modal isOpen={!!activeShot} onClose={closeShot} title={activeShot ? activeShot.caption : ''} size="xl">
+              {activeShot && <img src={activeShot.src} alt={activeShot.caption} className="w-full" />}
+            </Modal>
+          </div>
+        </Router>
+      );
+    }
+
+    // ========================================
+    // Rendering
+    // ========================================
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>

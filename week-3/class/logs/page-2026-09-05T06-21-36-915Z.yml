@@ -1,0 +1,289 @@
+- generic [active] [ref=f15e1]:
+  - generic [ref=f15e5]:
+    - link [ref=f15e6] [cursor=pointer]:
+      - /url: /np/campaigns/82?adType=DA&eventId=XqpGQqXN0UFPKcuv
+    - link [ref=f15e7] [cursor=pointer]:
+      - /url: https://pages.coupang.com/p/175342?adType=DA&eventId=3DE8x6pTOqDkOqgy
+  - generic [ref=f15e8]:
+    - generic [ref=f15e10]:
+      - list [ref=f15e11]:
+        - listitem [ref=f15e12]:
+          - link "판매자 가입" [ref=f15e13] [cursor=pointer]:
+            - /url: https://wing.coupang.com/tenants/vendor-signup/signup?utm_source=button_pc_coupang_top_right_cta&utm_medium=non_paid&utm_campaign=seller_registration
+        - listitem [ref=f15e14]:
+          - link "고객센터" [ref=f15e15] [cursor=pointer]:
+            - /url: https://mc.coupang.com/ssr/desktop/contact/faq
+        - listitem [ref=f15e16]:
+          - link "회원가입" [ref=f15e17] [cursor=pointer]:
+            - /url: https://login.coupang.com/login/memberJoinFrm.pang
+        - listitem [ref=f15e18]:
+          - link "로그인" [ref=f15e19] [cursor=pointer]:
+            - /url: https://login.coupang.com/login/login.pang?rtnUrl=https%3A%2F%2Fwww.coupang.com%2Fnp%2Fpost%2Flogin%3Fr%3Dhttp%253A%252F%252Fwww.coupang.com%252F
+      - list [ref=f15e20]:
+        - listitem [ref=f15e21]: 즐겨찾기
+        - listitem [ref=f15e22]:
+          - generic [ref=f15e23] [cursor=pointer]: 입점신청
+    - generic [ref=f15e26]:
+      - generic [ref=f15e27] [cursor=pointer]: 카테고리
+      - generic [ref=f15e33]:
+        - generic [ref=f15e34]:
+          - link [ref=f15e35] [cursor=pointer]:
+            - /url: https://www.coupang.com
+            - img "Coupang" [ref=f15e36]
+          - generic [ref=f15e37]:
+            - link "전체" [ref=f15e40] [cursor=pointer]:
+              - /url: "#"
+            - textbox "쿠팡 상품 검색" [ref=f15e42]:
+              - /placeholder: 찾고 싶은 상품을 검색해보세요!
+            - generic [ref=f15e43] [cursor=pointer]
+            - button "검색" [ref=f15e44] [cursor=pointer]
+          - list [ref=f15e45]:
+            - listitem [ref=f15e46]:
+              - link "마이쿠팡" [ref=f15e47] [cursor=pointer]:
+                - /url: https://mc.coupang.com/ssr/desktop/order/list
+            - listitem [ref=f15e49]:
+              - link "장바구니" [ref=f15e50] [cursor=pointer]:
+                - /url: //cart.coupang.com/cartView.pang
+                - emphasis [ref=f15e51]
+        - generic [ref=f15e54]:
+          - list [ref=f15e57]:
+            - listitem [ref=f15e58]:
+              - link "쿠팡플레이 쿠팡플레이" [ref=f15e59] [cursor=pointer]:
+                - /url: https://www.coupangplay.com/catalog
+                - img "쿠팡플레이" [ref=f15e60]
+                - generic [ref=f15e61]: 쿠팡플레이
+            - listitem [ref=f15e62]:
+              - link "로켓배송 로켓배송" [ref=f15e63] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/campaigns/82
+                - img "로켓배송" [ref=f15e64]
+                - generic [ref=f15e65]: 로켓배송
+            - listitem [ref=f15e66]:
+              - link "로켓프레시 로켓프레시" [ref=f15e67] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/categories/393760
+                - img "로켓프레시" [ref=f15e68]
+                - generic [ref=f15e69]: 로켓프레시
+            - listitem [ref=f15e70]:
+              - link "2026 추석 2026 추석" [ref=f15e71] [cursor=pointer]:
+                - /url: https://www.coupang.com/mlp/web/mlp-landing-page?landingId=4800
+                - img "2026 추석" [ref=f15e72]
+                - generic [ref=f15e73]: 2026 추석
+            - listitem [ref=f15e75]:
+              - link "다시 구매 다시 구매" [ref=f15e76] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/fbi?sourceType=home_section_fbi
+                - img "다시 구매" [ref=f15e77]
+                - generic [ref=f15e78]: 다시 구매
+            - listitem [ref=f15e80]:
+              - link "쿠팡비즈 쿠팡비즈" [ref=f15e81] [cursor=pointer]:
+                - /url: https://login.coupang.com/corporation/member/landing-page
+                - img "쿠팡비즈" [ref=f15e82]
+                - generic [ref=f15e83]: 쿠팡비즈
+            - listitem [ref=f15e84]:
+              - link "로켓직구 로켓직구" [ref=f15e85] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/coupangglobal
+                - img "로켓직구" [ref=f15e86]
+                - generic [ref=f15e87]: 로켓직구
+            - listitem [ref=f15e88]:
+              - link "골드박스 골드박스" [ref=f15e89] [cursor=pointer]:
+                - /url: https://www.coupang.com/mlp/web/mlp-landing-page?landingId=3712&sourceType=gm_crm_goldbox&subSourceType=gm_crm_gwsrtcut
+                - img "골드박스" [ref=f15e90]
+                - generic [ref=f15e91]: 골드박스
+            - listitem [ref=f15e92]:
+              - link "이달의신상 이달의신상" [ref=f15e93] [cursor=pointer]:
+                - /url: https://pages.coupang.com/p/136938
+                - img "이달의신상" [ref=f15e94]
+                - generic [ref=f15e95]: 이달의신상
+            - listitem [ref=f15e96]:
+              - link "입점신청 입점신청" [ref=f15e97] [cursor=pointer]:
+                - /url: https://wing.coupang.com/tenants/vendor-signup/signup?utm_source=button_pc_coupang_shortcut_1&utm_medium=non_paid&utm_id=onsite_ca&utm_content=202411
+                - img "입점신청" [ref=f15e98]
+                - generic [ref=f15e99]: 입점신청
+            - listitem [ref=f15e100]:
+              - link "판매자특가 판매자특가" [ref=f15e101] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/omp
+                - img "판매자특가" [ref=f15e102]
+                - generic [ref=f15e103]: 판매자특가
+            - listitem [ref=f15e104]:
+              - link "와우회원할인 와우회원할인" [ref=f15e105] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/campaigns/83
+                - img "와우회원할인" [ref=f15e106]
+                - generic [ref=f15e107]: 와우회원할인
+            - listitem [ref=f15e108]:
+              - link "이벤트/쿠폰 이벤트/쿠폰" [ref=f15e109] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/coupangbenefit
+                - img "이벤트/쿠폰" [ref=f15e110]
+                - generic [ref=f15e111]: 이벤트/쿠폰
+            - listitem [ref=f15e112]:
+              - link "반품마켓 반품마켓" [ref=f15e113] [cursor=pointer]:
+                - /url: https://pages.coupang.com/p/54908
+                - img "반품마켓" [ref=f15e114]
+                - generic [ref=f15e115]: 반품마켓
+            - listitem [ref=f15e116]:
+              - link "착한상점 착한상점" [ref=f15e117] [cursor=pointer]:
+                - /url: https://pages.coupang.com/p/63240
+                - img "착한상점" [ref=f15e118]
+                - generic [ref=f15e119]: 착한상점
+            - listitem [ref=f15e121]:
+              - link "기획전 기획전" [ref=f15e122] [cursor=pointer]:
+                - /url: https://pages.coupang.com/p/bep?sourceType=gm_crm_oms&subSourceType=gm_crm_gwsrtcut
+                - img "기획전" [ref=f15e123]
+                - generic [ref=f15e124]: 기획전
+            - listitem [ref=f15e125]:
+              - link "쿠팡트래블 쿠팡트래블" [ref=f15e126] [cursor=pointer]:
+                - /url: https://trip.coupang.com/?channel=gnb
+                - img "쿠팡트래블"
+                - generic [ref=f15e127]: 쿠팡트래블
+          - generic [ref=f15e129] [cursor=pointer]
+  - article [ref=f15e131]:
+    - list [ref=f15e132]:
+      - listitem [ref=f15e133]:
+        - link [ref=f15e134] [cursor=pointer]:
+          - /url: https://shop.coupang.com/cj/527324?source=brandstore_display_ads&adType=DA&eventId=Vfnay5MUNlMHayOc
+      - listitem [ref=f15e135]:
+        - link [ref=f15e136] [cursor=pointer]:
+          - /url: https://shop.coupang.com/maeil/262113?source=brandstore_display_ads&adType=DA&eventId=PDNH14gMwBVSFyFj
+      - listitem [ref=f15e137]:
+        - link [ref=f15e138] [cursor=pointer]:
+          - /url: https://www.coupang.com/np/campaigns/1440
+      - listitem [ref=f15e139]:
+        - link [ref=f15e140] [cursor=pointer]:
+          - /url: https://pages.coupang.com/p/175167
+      - listitem [ref=f15e141]:
+        - link [ref=f15e142] [cursor=pointer]:
+          - /url: https://pages.coupang.com/p/164807
+      - listitem [ref=f15e143]:
+        - link [ref=f15e144] [cursor=pointer]:
+          - /url: https://pages.coupang.com/p/68594
+      - listitem [ref=f15e145]:
+        - link [ref=f15e146] [cursor=pointer]:
+          - /url: https://wing.coupang.com/tenants/vendor-signup/signup?utm_source=button_pc_coupang_web_rignt_wing&utm_medium=non_paid&utm_id=onsite_ca&utm_content=20240516
+    - generic:
+      - link "장바구니" [ref=f15e148] [cursor=pointer]:
+        - /url: //cart.coupang.com/cartView.pang
+        - emphasis
+      - generic [ref=f15e150]:
+        - generic [ref=f15e151]: 최근본상품
+        - emphasis
+      - list [ref=f15e153]
+  - generic [ref=f15e154]:
+    - generic [ref=f15e157]:
+      - link [ref=f15e159] [cursor=pointer]:
+        - /url: https://login.coupang.com/login/login.pang?rtnUrl=https%3A%2Fmc.coupang.com%2Fssr&from=home_C1&traid=home_C1&trcid=812431261556
+      - list [ref=f15e160]:
+        - listitem [ref=f15e162]:
+          - link [ref=f15e163] [cursor=pointer]:
+            - /url: https://login.coupang.com/login/login.pang?rtnUrl=https%3A%2Fmc.coupang.com%2Fssr&from=home_C1&traid=home_C1&trcid=812431261556
+        - listitem [ref=f15e167]:
+          - link [ref=f15e168] [cursor=pointer]:
+            - /url: https://pages.coupang.com/p/175166?adType=DA&eventId=E3oOjMwqpatf8bWR&from=home_C1&traid=home_C1&trcid=11765319
+        - listitem [ref=f15e172]:
+          - link [ref=f15e173] [cursor=pointer]:
+            - /url: https://pages.coupang.com/p/156938?subSourceType=gm_crm_gwc1mainbnr_p4035_b1007787_c651182&sourceType=gm_crm_oms&from=home_C1&traid=home_C1&trcid=812431267757
+        - listitem [ref=f15e177]:
+          - link [ref=f15e178] [cursor=pointer]:
+            - /url: https://www.coupang.com/mlp/web/mlp-landing-page?landingId=4101&subSourceType=gm_crm_gwc1mainbnr_p4154_b1007790_c651184&sourceType=gm_crm_mlp&from=home_C1&traid=home_C1&trcid=812431267759
+        - listitem [ref=f15e182]:
+          - link [ref=f15e183] [cursor=pointer]:
+            - /url: https://shop.coupang.com/yk/529660?source=brandstore_display_ads&adType=DA&eventId=p7lsvlKzV1yIhm7f&from=home_C1&traid=home_C1&trcid=11766704
+        - listitem [ref=f15e187]:
+          - link [ref=f15e188] [cursor=pointer]:
+            - /url: https://shop.coupang.com/A00126071/321420?source=brandstore_display_ads&adType=DA&eventId=8laqwrv2IOW9veTD&from=home_C1&traid=home_C1&trcid=11766712
+    - generic [ref=f15e192]:
+      - generic [ref=f15e193]:
+        - generic [ref=f15e194]:
+          - heading "오늘의 발견" [level=2] [ref=f15e195]
+          - heading "오늘 쿠팡이 엄선한 가장 HOT한 상품!" [level=3] [ref=f15e196]
+        - list [ref=f15e198]:
+          - listitem [ref=f15e199]:
+            - link [ref=f15e200] [cursor=pointer]:
+              - /url: https://shop.coupang.com/pigeonofficial/528362?source=brandstore_display_ads&adType=DA&eventId=wlfYc0dZhST3gYsG&from=home_C2&traid=home_C2&trcid=11765764
+          - listitem [ref=f15e206]:
+            - link [ref=f15e207] [cursor=pointer]:
+              - /url: https://shop.coupang.com/A00081246/349767?source=brandstore_display_ads&adType=DA&eventId=Ve4nAB9gOBvpvylV&from=home_C2&traid=home_C2&trcid=11765431
+          - listitem [ref=f15e213]:
+            - link [ref=f15e214] [cursor=pointer]:
+              - /url: https://shop.coupang.com/A00126071/321420?source=brandstore_display_ads&adType=DA&eventId=aJj2a5uGGZU5taMY&from=home_C2&traid=home_C2&trcid=11765071
+          - listitem [ref=f15e220]:
+            - link [ref=f15e221] [cursor=pointer]:
+              - /url: https://pages.coupang.com/p/175987?adType=DA&eventId=4TSogCrMDZTGtDZs&from=home_C2&traid=home_C2&trcid=11766745
+          - listitem [ref=f15e227]:
+            - link "곰곰(로고) 이탈리안 포도씨유" [ref=f15e228] [cursor=pointer]:
+              - /url: /vp/products/7225189423?itemId=18319675609&vendorItemId=71239386725&from=home_C2&traid=home_C2&trcid=4750542
+              - img "곰곰(로고) 이탈리안 포도씨유" [ref=f15e229]
+          - listitem [ref=f15e235]:
+            - link "홈플래닛(로고) 실속형 전자레인지" [ref=f15e236] [cursor=pointer]:
+              - /url: /vp/products/7225189423?itemId=18319675609&vendorItemId=87489288057&from=home_C2&traid=home_C2&trcid=4750543
+              - img "홈플래닛(로고) 실속형 전자레인지" [ref=f15e237]
+          - listitem [ref=f15e243]:
+            - link [ref=f15e244] [cursor=pointer]:
+              - /url: https://shop.coupang.com/A00170647/369313?source=brandstore_display_ads&adType=DA&eventId=DSIKcwXznZye9KMy&from=home_C2&traid=home_C2&trcid=11766763
+          - listitem [ref=f15e250]:
+            - link [ref=f15e251] [cursor=pointer]:
+              - /url: https://shop.coupang.com/A00542523/528540?source=brandstore_display_ads&adType=DA&eventId=ARzZStHlFpVNvc9V&from=home_C2&traid=home_C2&trcid=11763912
+          - listitem [ref=f15e257]:
+            - link "코멧(로고) 어린이용 일회용 장갑" [ref=f15e258] [cursor=pointer]:
+              - /url: /vp/products/7225189423?itemId=18319675609&vendorItemId=80324048129&from=home_C2&traid=home_C2&trcid=4750546
+              - img "코멧(로고) 어린이용 일회용 장갑" [ref=f15e259]
+      - paragraph [ref=f15e267]: Loading...
+  - contentinfo [ref=f15e268]:
+    - generic [ref=f15e269]:
+      - generic [ref=f15e270]:
+        - link "회사소개" [ref=f15e271] [cursor=pointer]:
+          - /url: https://news.coupang.com/
+        - link "Investor Relations" [ref=f15e272] [cursor=pointer]:
+          - /url: https://ir.aboutcoupang.com/overview/default.aspx
+        - link "인재채용" [ref=f15e273] [cursor=pointer]:
+          - /url: https://rocketyourcareer.kr.coupang.com
+        - link "입점/제휴문의" [ref=f15e274] [cursor=pointer]:
+          - /url: https://marketplace.coupangcorp.com/s/?utm_source=button_pc&utm_medium=non_paid&utm_campaign=onsite_ca&utm_id=coupang_app?inflow=WEB_FOOTER_B
+        - link "공지사항" [ref=f15e275] [cursor=pointer]:
+          - /url: https://mc.coupang.com/ssr/desktop/contact/notice
+        - link "고객의 소리" [ref=f15e276] [cursor=pointer]:
+          - /url: https://mc.coupang.com/ssr/desktop/contact/voc
+        - link "이용약관" [ref=f15e277] [cursor=pointer]:
+          - /url: https://www.coupang.com/np/policies/terms
+        - link [ref=f15e278] [cursor=pointer]:
+          - /url: https://privacy.coupang.com/ko/center/coupang
+          - strong [ref=f15e279]: 개인정보 처리방침
+        - link "정보보호/개인정보보호 인증" [ref=f15e280] [cursor=pointer]:
+          - /url: https://privacy.coupang.com/ko/security/status
+        - link "쿠팡페이 이용약관" [ref=f15e281] [cursor=pointer]:
+          - /url: https://rocketpay.coupang.com/rocketpay/operationTerms/coupangPcFooter
+        - link "신뢰관리센터" [ref=f15e282] [cursor=pointer]:
+          - /url: https://www.coupang.com/np/safety
+        - link "제휴마케팅" [ref=f15e283] [cursor=pointer]:
+          - /url: https://partners.coupang.com/
+        - link "광고안내" [ref=f15e284] [cursor=pointer]:
+          - /url: https://ads.coupang.com
+      - paragraph [ref=f15e288] [cursor=pointer]: Global Site
+    - generic [ref=f15e290]:
+      - generic [ref=f15e291]:
+        - link "COUPANG" [ref=f15e292] [cursor=pointer]:
+          - /url: https://www.coupang.com/
+        - generic [ref=f15e293]:
+          - text: "상호명 및 호스팅 서비스 제공 : 쿠팡(주) 대표이사 : 로저스 해롤드 린(Rogers Harold Lynn) (05050) 서울시 광진구 아차산로 412, 2층 사업자 등록번호 : 120-88-00767 통신판매업신고 : 2026-서울광진-1253"
+          - link "사업자정보 확인 >" [ref=f15e294] [cursor=pointer]:
+            - /url: http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=1208800767
+      - link [ref=f15e296] [cursor=pointer]:
+        - /url: https://mc.coupang.com/ssr/desktop/contact/inquiry
+        - strong [ref=f15e297]: 365고객센터
+        - text: "| 전자금융거래분쟁처리담당"
+        - emphasis [ref=f15e298]: 1577-7011 (유료)
+        - text: "(05050) 서울시 광진구 아차산로 412, 2층 email : help@coupang.com"
+      - paragraph [ref=f15e299]:
+        - strong [ref=f15e300]: 채무지급보증 안내
+        - generic [ref=f15e301]: 당사는 고객님이 현금 결제한 금액에 대해 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.
+        - link "서비스 가입사실 확인 >" [ref=f15e302] [cursor=pointer]:
+          - /url: https://www.coupang.com/np/etc/popWooriService
+    - generic [ref=f15e308]:
+      - paragraph [ref=f15e309]: 사이버몰 내 판매되는 상품 중에는 쿠팡에 등록한 개별 판매자가 판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다. 마켓플레이스(오픈마켓) 상품의 경우 쿠팡은 통신판매중개자이며 통신판매의 당사자가 아닙니다. 쿠팡은 마켓플레이스(오픈마켓) 상품, 거래정보 및 거래 등에 대하여 책임을 지지 않습니다. 쿠팡은 소비자 보호와 안전거래를 위해 신뢰관리센터(CM112@coupang.com)를 운영하고 있으며, 관련 분쟁이 발생할 경우 별도의 분쟁 처리절차에 의거 분쟁이 처리됩니다. Copyright © Coupang Corp. 2010-2025 All Rights Reserved.
+      - list [ref=f15e310]:
+        - listitem [ref=f15e311]:
+          - link [ref=f15e312] [cursor=pointer]:
+            - /url: https://www.facebook.com/Coupang.korea
+        - listitem [ref=f15e313]:
+          - link [ref=f15e314] [cursor=pointer]:
+            - /url: https://news.coupang.com/
+        - listitem [ref=f15e315]:
+          - link [ref=f15e316] [cursor=pointer]:
+            - /url: https://www.instagram.com/coupang
+  - alert [ref=f15e317]
