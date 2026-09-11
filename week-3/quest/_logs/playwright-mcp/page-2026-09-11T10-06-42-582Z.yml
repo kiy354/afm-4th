@@ -1,0 +1,44 @@
+- generic [ref=f1e3]:
+  - banner [ref=f1e4]:
+    - generic [ref=f1e5]:
+      - generic [aria-hidden] [ref=f1e8]: 👁️
+      - generic [ref=f1e9]:
+        - heading "눈이 선생님" [level=1] [ref=f1e10]
+        - paragraph [ref=f1e11]: 👁️ 증상 살펴보기 모드
+      - button "진료 메모 복사" [ref=f1e12] [cursor=pointer]:
+        - text: 📋
+        - generic [ref=f1e13]: 메모 복사
+      - button "상담 새로 시작" [ref=f1e14] [cursor=pointer]:
+        - text: ↺
+        - generic [ref=f1e15]: 새 상담
+      - button "설정 열기" [ref=f1e16] [cursor=pointer]:
+        - text: ⚙
+        - generic [ref=f1e17]: 설정
+  - radiogroup "상담 주제 선택" [ref=f1e19]:
+    - radio "👁️ 증상 살펴보기 불편한 곳을 하나씩 여쭤볼게요" [checked] [ref=f1e20] [cursor=pointer]:
+      - generic [ref=f1e21]: 👁️ 증상 살펴보기
+      - generic [ref=f1e22]: 불편한 곳을 하나씩 여쭤볼게요
+    - radio "🕶️ 렌즈 · 안경 착용 습관과 관리법을 함께 봐요" [ref=f1e23] [cursor=pointer]:
+      - generic [ref=f1e24]: 🕶️ 렌즈 · 안경
+      - generic [ref=f1e25]: 착용 습관과 관리법을 함께 봐요
+    - radio "🔬 수술 · 검사 무엇을 준비하면 좋을지 알려드려요" [ref=f1e26] [cursor=pointer]:
+      - generic [ref=f1e27]: 🔬 수술 · 검사
+      - generic [ref=f1e28]: 무엇을 준비하면 좋을지 알려드려요
+    - radio "🌿 생활 눈관리 오늘부터 할 수 있는 습관이에요" [ref=f1e29] [cursor=pointer]:
+      - generic [ref=f1e30]: 🌿 생활 눈관리
+      - generic [ref=f1e31]: 오늘부터 할 수 있는 습관이에요
+  - main [ref=f1e32]:
+    - generic [ref=f1e34]:
+      - generic [ref=f1e35]: 눈앞에 날파리 같은 게 떠다녀요
+      - generic [ref=f1e36]: 오후 07:06
+    - alert [ref=f1e37]:
+      - generic [aria-hidden] [ref=f1e38]: ⚠️
+      - generic [ref=f1e39]:
+        - paragraph [ref=f1e40]: Failed to fetch
+        - button "설정 열기" [ref=f1e41] [cursor=pointer]
+  - generic [ref=f1e42]:
+    - generic [ref=f1e43]:
+      - textbox "메시지 입력" [ref=f1e44]:
+        - /placeholder: 눈의 불편한 점을 편하게 적어 주세요 (Enter 전송 · Shift+Enter 줄바꿈)
+      - button "보내기" [disabled] [ref=f1e45]
+    - paragraph [ref=f1e46]: 이 상담은 안과 진료를 대체하지 않으며 진단·처방을 하지 않습니다. 급한 증상은 119 또는 가까운 안과 응급실로 연락해 주세요.

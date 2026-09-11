@@ -1,0 +1,58 @@
+[    3218ms] [LOG] adobe_trace // omtr_code.js // loading external interface @ https://static.foxnews.com/static/isa/app/lib/omtr_code.js:1
+[    3257ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://cdn.segment.com/analytics.js/v1/null/analytics.min.js:0
+[    3457ms] [LOG] Confiant native init @ https://cdn.confiant-integrations.net/gptprebidnative/202609031720/wrap.js:120
+[    3707ms] [WARNING] [GPT] PubAdsService.setTargeting is deprecated, use googletag.setConfig({targeting: ...}) instead.
+https://goo.gle/gpt-message#170 @ https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202609040101/pubads_impl.js:18
+[    3724ms] [WARNING] [GPT] Slot.setTargeting is deprecated, use Slot.setConfig({targeting: ...}) instead.
+https://goo.gle/gpt-message#171 @ https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202609040101/pubads_impl.js:18
+[    4426ms] [LOG] Error: NotSupportedError: Failed to execute 'browsingTopics' on 'Document': document.browsingTopics() is deprecated and has been removed.
+    at getTopics (https://ads.pubmatic.com/AdServer/js/topics/topics_frame.html?bidder=pubmatic:19:41)
+    at https://ads.pubmatic.com/AdServer/js/topics/topics_frame.html?bidder=pubmatic:37:28
+    at https://ads.pubmatic.com/AdServer/js/topics/topics_frame.html?bidder=pubmatic:49:7 @ https://ads.pubmatic.com/AdServer/js/topics/topics_frame.html?bidder=pubmatic:31
+[    5067ms] [LOG] PJS 1.0 @ https://cdn.optimizely.com/js/5728063363743744.js:329
+[    5674ms] [LOG] adobe_trace // omtr_code.js // loading external interface @ https://static.foxnews.com/static/isa/app/lib/omtr_code.js:1
+[    6090ms] [WARNING] Event Service Validation Warnings: warning for event identify: device_make is undefined or null, warning for event identify: device_model is undefined or null, warning for event identify: advertising_id is undefined or null, warning for event identify: manufacturer_id is undefined or null, warning for event identify: us_privacy value is empty string, identify event: client_id property does not exist for the event, identify event: device_make is null or undefined value, identify event: device_model is null or undefined value, identify event: event_published property does not exist for the event, identify event: host property does not exist for the event, identify event: origin property does not exist for the event, identify event: user_agent property does not exist for the event @ https://prod-foxkit.kts.fox/js/sdk/event/v9.2.0/event-service.js:0
+[    6118ms] [LOG] PLSUB init called 17890953496935997 @ https://cdn-gl.imrworldwide.com/novms/js/2/nlsSDK600.bundle.min.js:5
+[    7475ms] [LOG] Found 7 supported native ad slots @ https://cdn.confiant-integrations.net/gptprebidnative/202609031720/wrap.js:120
+[    8800ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://match.prod.bidr.io/cookie-sync/gum?_bee_ppp=1:0
+[    9538ms] [ERROR] Failed to load resource: the server responded with a status of 451 () @ https://api.rlcdn.com/api/identity/envelope?pid=13258:0
+[    8800ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://match.prod.bidr.io/cookie-sync/gum?_bee_ppp=1:0
+[   10544ms] [INFO] Powered by AMP ⚡ HTML – Version 2607210106000 https://www.foxnews.com/ @ https://cdn.ampproject.org/rtv/012607210106000/amp4ads-v0.mjs:1
+[   10586ms] [LOG] foxprofile :: logged out, attempting identity login @ https://my.foxnews.com/v2/scripts/ag.app.js?v=v3.11.0:1
+[   10586ms] [LOG] foxprofile :: ident: bu >>> 1 true @ https://my.foxnews.com/v2/scripts/ag.app.js?v=v3.11.0:1
+[   10586ms] [LOG] foxprofile :: ident: ajs >>> false @ https://my.foxnews.com/v2/scripts/ag.app.js?v=v3.11.0:1
+[   10587ms] [LOG] fox.auth :: checking for: NATSSO @ https://my.foxnews.com/v2/scripts/ag.app.js?v=v3.11.0:1
+[   10587ms] [LOG] fox.auth :: checking for: FOXSSOACCT @ https://my.foxnews.com/v2/scripts/ag.app.js?v=v3.11.0:1
+[   10587ms] [LOG] foxprofile :: ident: sso >>> false @ https://my.foxnews.com/v2/scripts/ag.app.js?v=v3.11.0:1
+[   10587ms] [LOG] fox.auth :: checking for: NATSSO @ https://my.foxnews.com/v2/scripts/ag.app.js?v=v3.11.0:1
+[   10587ms] [LOG] fox.auth :: checking for: FOXSSOACCT @ https://my.foxnews.com/v2/scripts/ag.app.js?v=v3.11.0:1
+[   10616ms] [LOG] Skipped tag mbn c @ https://js.outcomes.net/fox_HIwSdqRDW9Jel05s/gam_display.js:0
+[   10960ms] [ERROR] Not signed in with the identity provider. @ https://www.foxnews.com/:0
+[   12045ms] [LOG] [LeapMetrics] >> [ WARN ] Page Events has been deprecated! @ https://static.foxnews.com/static/leap/core.js:2
+[   12099ms] [LOG] adobe_trace // omtr_code.js // loading external interface @ https://static.foxnews.com/static/isa/app/lib/omtr_code.js:1
+[   12272ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ https://www.foxnews.com/:0
+[   12862ms] [LOG] %cVideo enhancements powered by HolaSpark.com v1.165.211.T1596 Zone home_ab_enabled color: blue; font-size: 15px @ https://player.h-cdn.com/loader.js?customer=foxnews&no_conf=true&md5=936044-9e4c7f42:217
+[   12862ms] [LOG] %chttp://holaspark.com/?cam=wm_devconsole color: blue @ https://player.h-cdn.com/loader.js?customer=foxnews&no_conf=true&md5=936044-9e4c7f42:217
+[   12863ms] [LOG] %cGDPR-CCPA mode enabled color: green @ https://player.h-cdn.com/loader.js?customer=foxnews&no_conf=true&md5=936044-9e4c7f42:217
+[   12863ms] [LOG] %cEnabled features: Video preview, Watch next, Player thumbnails color: blue @ https://player.h-cdn.com/loader.js?customer=foxnews&no_conf=true&md5=936044-9e4c7f42:217
+[   12863ms] [LOG] %cAvailable features: Floating player, Image preview, Watch later, Position memory, Player auto play, Video search, Page sharing, TV video casting, YouTube-like controls, Video panel, Video heatmap, Newsreel, Sticky player, Top pages color: green @ https://player.h-cdn.com/loader.js?customer=foxnews&no_conf=true&md5=936044-9e4c7f42:217
+[   12863ms] [LOG] Embedded in foxnews frame: https://www.foxnews.com/ @ https://player.h-cdn.com/loader.js?customer=foxnews&no_conf=true&md5=936044-9e4c7f42:217
+[    8800ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://match.prod.bidr.io/cookie-sync/gum?_bee_ppp=1:0
+[   14433ms] [ERROR] Fox Profile promise getGoogleCredentials failed: NetworkError: Error retrieving a token. @ https://static.foxnews.com/static/isa/core-app.js:18
+[   14433ms] [ERROR] Error getting Google FEDCM credentials: NetworkError: Error retrieving a token. @ https://static.foxnews.com/static/orion/scripts/core/auth/ag.app.js:7
+[   15258ms] [WARNING] The resource https://client.aps.amazon-adsystem.com/publisher.js was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://www.foxnews.com/:0
+[   25365ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://dps.jp.cinarra.com/pxd?PLATFORM_ID=1&USER_ID=1611e22a-b8e1-8957-faef-e9c72baa5db1:0
+[    8800ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://match.prod.bidr.io/cookie-sync/gum?_bee_ppp=1:0
+[   42076ms] [LOG] [LeapMetrics] >> [ WARN ] Page Events has been deprecated! @ https://static.foxnews.com/static/leap/core.js:2
+[    8800ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://match.prod.bidr.io/cookie-sync/gum?_bee_ppp=1:0
+[   46244ms] [WARNING] [GPT] Slot desktop_desk_hp_lb2 rendered inside of the viewport.
+https://goo.gle/gpt-message#169 @ https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202609040101/pubads_impl.js:18
+[   46347ms] [LOG] Skipped tag mbn c @ https://js.outcomes.net/fox_HIwSdqRDW9Jel05s/gam_display.js:0
+[   47866ms] [INFO] Powered by AMP ⚡ HTML – Version 2607210106000 https://www.foxnews.com/ @ https://cdn.ampproject.org/rtv/012607210106000/amp4ads-v0.mjs:1
+[   51831ms] [WARNING] The resource https://client.aps.amazon-adsystem.com/publisher.js was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://www.foxnews.com/:0
+[   66070ms] [WARNING] Event Service Validation Warnings: warning for event content_impression: us_privacy value is empty string @ https://prod-foxkit.kts.fox/js/sdk/event/v9.2.0/event-service.js:0
+[   70407ms] [WARNING] The resource https://client.aps.amazon-adsystem.com/publisher.js was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://www.foxnews.com/:0
+[   72112ms] [LOG] [LeapMetrics] >> [ WARN ] Page Events has been deprecated! @ https://static.foxnews.com/static/leap/core.js:2
+[   72341ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_TIMED_OUT @ https://ads.yieldmo.com/pbsync?is=taboola&gdpr=0&us_privacy=1---&redirectUri=https%3A%2F%2Fsync.taboola.com%2Fsg%2Fyieldmortb-network%2F1%2Frtb-h%2F%3Ftaboola_hm%3D%24UID:0
+[   75373ms] [WARNING] The resource https://client.aps.amazon-adsystem.com/publisher.js was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://www.foxnews.com/:0
+[   90219ms] [WARNING] The resource https://client.aps.amazon-adsystem.com/publisher.js was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://www.foxnews.com/:0

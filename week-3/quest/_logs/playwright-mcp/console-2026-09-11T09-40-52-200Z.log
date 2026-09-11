@@ -1,0 +1,3 @@
+[     833ms] [ERROR] Access to script at 'http://static.imweb.me/brand-scope/bs.umd.js' from origin 'http://leeseye.co.kr' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://leeseye.co.kr/157:8043
+[     833ms] [ERROR] Failed to load resource: net::ERR_FAILED @ http://static.imweb.me/brand-scope/bs.umd.js:0
+[    1021ms] [LOG] IMWEB_DEPLOY_STRATEGY init event dispatched {accesstype: FO, features: Object, syncPeriod: 60000, syncTime: 1789119653220, instance: DeployStrategy} @ https://static.imweb.me/vendor/js/deploy_strategy.js:34

@@ -1,0 +1,833 @@
+- generic [active] [ref=f21e1]:
+  - generic [ref=f21e3]:
+    - generic [ref=f21e4]:
+      - banner [ref=f21e5]:
+        - generic [ref=f21e6]:
+          - link [ref=f21e7] [cursor=pointer]:
+            - /url: https://www.naver.com
+          - generic [ref=f21e8]:
+            - link "카페홈" [ref=f21e10] [cursor=pointer]:
+              - /url: https://section.cafe.naver.com
+            - link "이웃" [ref=f21e12] [cursor=pointer]:
+              - /url: https://cafe.naver.com/ca-fe/home/town
+            - button "가입카페" [ref=f21e14] [cursor=pointer]
+            - link "새글" [ref=f21e16] [cursor=pointer]:
+              - /url: https://section.cafe.naver.com/ca-fe/home/feed
+            - button "내소식" [ref=f21e18] [cursor=pointer]
+            - button "채팅" [ref=f21e20] [cursor=pointer]
+            - generic [ref=f21e22]:
+              - strong [ref=f21e23]: 사용자 링크
+              - list [ref=f21e24]:
+                - listitem [ref=f21e25]:
+                  - link "로그인" [ref=f21e26] [cursor=pointer]:
+                    - /url: https://nid.naver.com/nidlogin.login
+                - listitem [ref=f21e30]:
+                  - link "서비스 더보기" [ref=f21e31] [cursor=pointer]:
+                    - /url: javascript:;
+        - link [ref=f21e36] [cursor=pointer]:
+          - /url: https://cafe.naver.com/joonggonara
+          - img "중고나라" [ref=f21e37]
+      - list [ref=f21e39]:
+        - listitem [ref=f21e40]:
+          - link "이벤트" [ref=f21e41] [cursor=pointer]:
+            - /url: /f-e/cafes/10050146/menus/1257
+        - listitem [ref=f21e42]:
+          - link "공지사항" [ref=f21e43] [cursor=pointer]:
+            - /url: /f-e/cafes/10050146/menus/1256
+        - listitem [ref=f21e44]:
+          - link "이용정책" [ref=f21e45] [cursor=pointer]:
+            - /url: /f-e/cafes/10050146/menus/1805
+        - listitem [ref=f21e46]:
+          - link "★셀러 회원 신청★" [ref=f21e47] [cursor=pointer]:
+            - /url: /f-e/cafes/10050146/menus/2446
+    - generic [ref=f21e48]:
+      - complementary [ref=f21e50]:
+        - generic [ref=f21e52]:
+          - tablist [ref=f21e54]:
+            - tab "카페정보" [selected] [ref=f21e55] [cursor=pointer]
+            - tab "나의활동" [ref=f21e56] [cursor=pointer]
+          - tabpanel [ref=f21e57]:
+            - generic [ref=f21e59]:
+              - link [ref=f21e61] [cursor=pointer]:
+                - /url: https://cafe.naver.com/joonggonara
+                - img "카페아이콘" [ref=f21e63]
+              - generic [ref=f21e64]:
+                - generic [ref=f21e65]:
+                  - link "중고나라운영진1" [ref=f21e66] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/f-e/cafes/10050146/members/MokGI1z_orABW9EK8LpfFo6WVvnUzJvKl-gGIbFuTRw
+                  - emphasis [ref=f21e67]: 매니저
+                - link "2003.12.10. 개설" [ref=f21e69] [cursor=pointer]:
+                  - /url: https://cafe.naver.com/f-e/cafes/10050146/introduction/history
+                - link "카페소개" [ref=f21e71] [cursor=pointer]:
+                  - /url: https://cafe.naver.com/CafeProfileView.nhn?clubid=10050146
+            - list [ref=f21e73]:
+              - listitem [ref=f21e74]:
+                - link [ref=f21e75] [cursor=pointer]:
+                  - /url: https://cafe.naver.com/f-e/cafes/10050146/introduction/ranking
+                  - strong [ref=f21e76]: 카페등급
+                  - emphasis [ref=f21e78]: 숲
+              - listitem [ref=f21e79]:
+                - button "카페멤버수 19,320,441 멤버목록 비공개" [ref=f21e80] [cursor=pointer]:
+                  - generic [ref=f21e81]: 카페멤버수
+                  - emphasis [ref=f21e83]:
+                    - text: 19,320,441
+                    - img "멤버목록 비공개"
+                - link "초대" [ref=f21e84] [cursor=pointer]:
+                  - /url: https://cafe.naver.com/joonggonara?iframe_url=/CafeInviteCheck.nhn?m=check&clubid=10050146
+              - listitem [ref=f21e85]:
+                - generic [ref=f21e86]:
+                  - strong [ref=f21e87]: 대표 인기카페
+                  - img "NAVER 대표카페"
+        - button "카페 가입하기" [ref=f21e89] [cursor=pointer]
+        - button "카페 채팅" [ref=f21e91] [cursor=pointer]
+        - generic [ref=f21e93]:
+          - textbox "카페글 검색어 입력" [ref=f21e94]
+          - button "검색" [ref=f21e95] [cursor=pointer]
+        - generic [ref=f21e96]:
+          - menu [ref=f21e97]:
+            - menuitem "전체글보기" [ref=f21e98] [cursor=pointer]
+            - generic [ref=f21e99]: 230,250,071
+            - menuitem "인기글새 게시글" [ref=f21e100] [cursor=pointer]:
+              - text: 인기글
+              - img "새 게시글"
+          - strong [ref=f21e102]: ✨인기 게시판
+          - list [ref=f21e103]:
+            - menuitem "🃏트레이딩카드새 게시글" [ref=f21e104] [cursor=pointer]:
+              - text: 🃏트레이딩카드
+              - img "새 게시글"
+            - menuitem "[앱상품] IT 새상품새 게시글" [ref=f21e105] [cursor=pointer]:
+              - text: "[앱상품] IT 새상품"
+              - img "새 게시글"
+            - menuitem "[앱상품] 패션 새상품새 게시글" [ref=f21e106] [cursor=pointer]:
+              - text: "[앱상품] 패션 새상품"
+              - img "새 게시글"
+            - menuitem "[앱상품] 기타 새상품새 게시글" [ref=f21e107] [cursor=pointer]:
+              - text: "[앱상품] 기타 새상품"
+              - img "새 게시글"
+          - list [ref=f21e108]:
+            - menuitem "📦문앞택배 배송비 무료" [ref=f21e109] [cursor=pointer]
+            - menuitem "💸 빠르게 상품 팔기" [ref=f21e110] [cursor=pointer]
+            - menuitem "📊 중고 시세 확인하기" [ref=f21e111] [cursor=pointer]
+            - menuitem "상품등록 및 판매 팁✅" [ref=f21e112] [cursor=pointer]
+            - menuitem "[필독] 중고나라 상품등록 변경안내" [ref=f21e113] [cursor=pointer]
+            - menuitem "중고나라 고객센터" [ref=f21e114] [cursor=pointer]
+            - menuitem "셀러 회원 신청" [ref=f21e115] [cursor=pointer]
+            - menuitem "광고/제휴 문의" [ref=f21e116] [cursor=pointer]
+            - menuitem "네이버 쪽지함>" [ref=f21e117] [cursor=pointer]
+          - strong [ref=f21e119]: 🚨 중고거래 사기방지 🚨
+          - list [ref=f21e120]:
+            - menuitem "사기 예방 가이드" [ref=f21e121] [cursor=pointer]
+            - menuitem "거래 불가 상품 확인" [ref=f21e122] [cursor=pointer]
+            - menuitem "거래 전 상대방 확인" [ref=f21e123] [cursor=pointer]
+            - menuitem "카톡으로 간편 상대 확인" [ref=f21e124] [cursor=pointer]
+            - menuitem "이상거래 신고새 게시글" [ref=f21e125] [cursor=pointer]:
+              - text: 이상거래 신고
+              - img "새 게시글"
+            - menuitem "※ 이상거래 신고 전 필독" [ref=f21e127] [cursor=pointer]
+            - menuitem "중고폰 거래사실확인서 발급 받기" [ref=f21e128] [cursor=pointer]
+          - strong [ref=f21e130]: ★ 중고나라 커뮤니티
+          - list [ref=f21e131]:
+            - menuitem "중고나라 무료나눔새 게시글" [ref=f21e133] [cursor=pointer]:
+              - text: 중고나라 무료나눔
+              - img "새 게시글"
+            - menuitem "믿고 보는 후기&추천" [ref=f21e135] [cursor=pointer]
+            - menuitem "자유 주제 커뮤니티" [ref=f21e137] [cursor=pointer]
+            - menuitem "어려운 이웃 사연" [ref=f21e139] [cursor=pointer]
+            - menuitem "IT 커뮤니티" [ref=f21e141] [cursor=pointer]
+            - menuitem "패션 커뮤니티" [ref=f21e143] [cursor=pointer]
+            - menuitem "긍정거래 후기" [ref=f21e145] [cursor=pointer]
+          - strong [ref=f21e147]: ★ 중고나라 제휴사(AD)
+          - list [ref=f21e148]:
+            - menuitem "오늘특가새 게시글" [ref=f21e149] [cursor=pointer]:
+              - text: 오늘특가
+              - img "새 게시글"
+            - menuitem "중고인사이드새 게시글" [ref=f21e150] [cursor=pointer]:
+              - text: 중고인사이드
+              - img "새 게시글"
+            - menuitem "골프/콘도 회원권서치새 게시글" [ref=f21e151] [cursor=pointer]:
+              - text: 골프/콘도 회원권서치
+              - img "새 게시글"
+            - menuitem "동부회원권거래소 급매물새 게시글" [ref=f21e152] [cursor=pointer]:
+              - text: 동부회원권거래소 급매물
+              - img "새 게시글"
+            - menuitem "알리X중고나라 특가" [ref=f21e153] [cursor=pointer]
+            - menuitem "중고나라 광고 문의하기" [ref=f21e154] [cursor=pointer]
+          - strong [ref=f21e156]: ★ 전문가 서비스
+          - list [ref=f21e157]:
+            - menuitem "가전/컴퓨터/기타 수리" [ref=f21e159] [cursor=pointer]
+            - menuitem "청소 서비스" [ref=f21e161] [cursor=pointer]
+            - menuitem "이사/용달/운송 서비스" [ref=f21e163] [cursor=pointer]
+            - menuitem "인테리어/철거 서비스" [ref=f21e165] [cursor=pointer]
+            - menuitem "취미/공방/레슨 서비스" [ref=f21e167] [cursor=pointer]
+            - menuitem "헬스/운동/건강 서비스" [ref=f21e169] [cursor=pointer]
+            - menuitem "회계/세무/법률" [ref=f21e171] [cursor=pointer]
+            - menuitem "창업/폐업 컨설팅" [ref=f21e173] [cursor=pointer]
+            - menuitem "온라인마케팅/대행 컨설팅" [ref=f21e175] [cursor=pointer]
+            - menuitem "인터넷 개통 서비스새 게시글" [ref=f21e177] [cursor=pointer]:
+              - text: 인터넷 개통 서비스
+              - img "새 게시글"
+            - menuitem "렌탈 서비스새 게시글" [ref=f21e179] [cursor=pointer]:
+              - text: 렌탈 서비스
+              - img "새 게시글"
+          - strong [ref=f21e181]: ★ 수입명품
+          - list [ref=f21e182]:
+            - menuitem "[수입명품]여성신발새 게시글" [ref=f21e184] [cursor=pointer]:
+              - text: "[수입명품]여성신발"
+              - img "새 게시글"
+            - menuitem "[수입명품]남성신발새 게시글" [ref=f21e186] [cursor=pointer]:
+              - text: "[수입명품]남성신발"
+              - img "새 게시글"
+            - menuitem "[수입명품]가방/핸드백새 게시글" [ref=f21e188] [cursor=pointer]:
+              - text: "[수입명품]가방/핸드백"
+              - img "새 게시글"
+            - menuitem "[수입명품]지갑/벨트새 게시글" [ref=f21e190] [cursor=pointer]:
+              - text: "[수입명품]지갑/벨트"
+              - img "새 게시글"
+            - menuitem "[수입명품]여성의류새 게시글" [ref=f21e192] [cursor=pointer]:
+              - text: "[수입명품]여성의류"
+              - img "새 게시글"
+            - menuitem "[수입명품]남성의류새 게시글" [ref=f21e194] [cursor=pointer]:
+              - text: "[수입명품]남성의류"
+              - img "새 게시글"
+            - menuitem "[수입명품]패션잡화새 게시글" [ref=f21e196] [cursor=pointer]:
+              - text: "[수입명품]패션잡화"
+              - img "새 게시글"
+            - menuitem "[수입명품]기타 새 게시글" [ref=f21e198] [cursor=pointer]:
+              - text: "[수입명품]기타"
+              - img "새 게시글"
+            - menuitem "[수입명품]유아동새 게시글" [ref=f21e200] [cursor=pointer]:
+              - text: "[수입명품]유아동"
+              - img "새 게시글"
+            - menuitem "[수입명품]시계/쥬얼리새 게시글" [ref=f21e202] [cursor=pointer]:
+              - text: "[수입명품]시계/쥬얼리"
+              - img "새 게시글"
+          - strong [ref=f21e204]: ★ 패션의류
+          - list [ref=f21e205]:
+            - menuitem "[패션의류]여성의류새 게시글" [ref=f21e207] [cursor=pointer]:
+              - text: "[패션의류]여성의류"
+              - img "새 게시글"
+            - menuitem "[패션의류]남성의류새 게시글" [ref=f21e209] [cursor=pointer]:
+              - text: "[패션의류]남성의류"
+              - img "새 게시글"
+            - menuitem "[패션의류]교복/체육복/단복새 게시글" [ref=f21e211] [cursor=pointer]:
+              - text: "[패션의류]교복/체육복/단복"
+              - img "새 게시글"
+          - strong [ref=f21e213]: ★ 패션잡화
+          - list [ref=f21e214]:
+            - menuitem "[악세서리/귀금속]반지/귀걸이새 게시글" [ref=f21e216] [cursor=pointer]:
+              - text: "[악세서리/귀금속]반지/귀걸이"
+              - img "새 게시글"
+            - menuitem "[악세서리/귀금속]목걸이/팬던트새 게시글" [ref=f21e218] [cursor=pointer]:
+              - text: "[악세서리/귀금속]목걸이/팬던트"
+              - img "새 게시글"
+            - menuitem "[악세서리/귀금속]팔찌/발찌새 게시글" [ref=f21e220] [cursor=pointer]:
+              - text: "[악세서리/귀금속]팔찌/발찌"
+              - img "새 게시글"
+            - menuitem "[악세서리/귀금속]순금/골드바/돌반지새 게시글" [ref=f21e222] [cursor=pointer]:
+              - text: "[악세서리/귀금속]순금/골드바/돌반지"
+              - img "새 게시글"
+            - menuitem "[패션잡화]운동화새 게시글" [ref=f21e224] [cursor=pointer]:
+              - text: "[패션잡화]운동화"
+              - img "새 게시글"
+            - menuitem "[패션잡화]여성신발새 게시글" [ref=f21e226] [cursor=pointer]:
+              - text: "[패션잡화]여성신발"
+              - img "새 게시글"
+            - menuitem "[패션잡화]남성신발새 게시글" [ref=f21e228] [cursor=pointer]:
+              - text: "[패션잡화]남성신발"
+              - img "새 게시글"
+            - menuitem "[패션잡화]가방/핸드백새 게시글" [ref=f21e230] [cursor=pointer]:
+              - text: "[패션잡화]가방/핸드백"
+              - img "새 게시글"
+            - menuitem "[패션잡화]지갑/벨트새 게시글" [ref=f21e232] [cursor=pointer]:
+              - text: "[패션잡화]지갑/벨트"
+              - img "새 게시글"
+            - menuitem "[패션잡화]시계새 게시글" [ref=f21e234] [cursor=pointer]:
+              - text: "[패션잡화]시계"
+              - img "새 게시글"
+            - menuitem "[패션잡화]선글라스/안경새 게시글" [ref=f21e236] [cursor=pointer]:
+              - text: "[패션잡화]선글라스/안경"
+              - img "새 게시글"
+            - menuitem "[패션잡화]모자새 게시글" [ref=f21e238] [cursor=pointer]:
+              - text: "[패션잡화]모자"
+              - img "새 게시글"
+            - menuitem "[패션잡화]기타잡화/관련용품새 게시글" [ref=f21e240] [cursor=pointer]:
+              - text: "[패션잡화]기타잡화/관련용품"
+              - img "새 게시글"
+          - strong [ref=f21e242]: ★ 뷰티
+          - list [ref=f21e243]:
+            - menuitem "스킨케어새 게시글" [ref=f21e245] [cursor=pointer]:
+              - text: 스킨케어
+              - img "새 게시글"
+            - menuitem "메이크업새 게시글" [ref=f21e247] [cursor=pointer]:
+              - text: 메이크업
+              - img "새 게시글"
+            - menuitem "팩/클렌징/필링새 게시글" [ref=f21e249] [cursor=pointer]:
+              - text: 팩/클렌징/필링
+              - img "새 게시글"
+            - menuitem "헤어/바디새 게시글" [ref=f21e251] [cursor=pointer]:
+              - text: 헤어/바디
+              - img "새 게시글"
+            - menuitem "향수새 게시글" [ref=f21e253] [cursor=pointer]:
+              - text: 향수
+              - img "새 게시글"
+            - menuitem "네일케어새 게시글" [ref=f21e255] [cursor=pointer]:
+              - text: 네일케어
+              - img "새 게시글"
+            - menuitem "남성 화장품새 게시글" [ref=f21e257] [cursor=pointer]:
+              - text: 남성 화장품
+              - img "새 게시글"
+            - menuitem "가발/기타용품새 게시글" [ref=f21e259] [cursor=pointer]:
+              - text: 가발/기타용품
+              - img "새 게시글"
+          - strong [ref=f21e261]: ★ 출산/유아동
+          - list [ref=f21e262]:
+            - menuitem "출산/육아용품새 게시글" [ref=f21e264] [cursor=pointer]:
+              - text: 출산/육아용품
+              - img "새 게시글"
+            - menuitem "유아동안전/실내용품새 게시글" [ref=f21e266] [cursor=pointer]:
+              - text: 유아동안전/실내용품
+              - img "새 게시글"
+            - menuitem "유아동의류새 게시글" [ref=f21e268] [cursor=pointer]:
+              - text: 유아동의류
+              - img "새 게시글"
+            - menuitem "유아동잡화새 게시글" [ref=f21e270] [cursor=pointer]:
+              - text: 유아동잡화
+              - img "새 게시글"
+            - menuitem "유아동가구새 게시글" [ref=f21e272] [cursor=pointer]:
+              - text: 유아동가구
+              - img "새 게시글"
+            - menuitem "유아동교구/완구새 게시글" [ref=f21e274] [cursor=pointer]:
+              - text: 유아동교구/완구
+              - img "새 게시글"
+            - menuitem "기타 유아동용품새 게시글" [ref=f21e276] [cursor=pointer]:
+              - text: 기타 유아동용품
+              - img "새 게시글"
+          - strong [ref=f21e278]: ★ 모바일/태블릿
+          - list [ref=f21e279]:
+            - menuitem "스마트폰새 게시글" [ref=f21e281] [cursor=pointer]:
+              - text: 스마트폰
+              - img "새 게시글"
+            - menuitem "태블릿PC새 게시글" [ref=f21e283] [cursor=pointer]:
+              - text: 태블릿PC
+              - img "새 게시글"
+            - menuitem "스마트워치/밴드새 게시글" [ref=f21e285] [cursor=pointer]:
+              - text: 스마트워치/밴드
+              - img "새 게시글"
+            - menuitem "메모리/젠더/리더기새 게시글" [ref=f21e287] [cursor=pointer]:
+              - text: 메모리/젠더/리더기
+              - img "새 게시글"
+            - menuitem "일반/피쳐폰새 게시글" [ref=f21e289] [cursor=pointer]:
+              - text: 일반/피쳐폰
+              - img "새 게시글"
+            - menuitem "케이스/거치대/보호필름새 게시글" [ref=f21e291] [cursor=pointer]:
+              - text: 케이스/거치대/보호필름
+              - img "새 게시글"
+            - menuitem "배터리/충전기/케이블새 게시글" [ref=f21e293] [cursor=pointer]:
+              - text: 배터리/충전기/케이블
+              - img "새 게시글"
+          - strong [ref=f21e295]: ★ 가전제품
+          - list [ref=f21e296]:
+            - menuitem "냉장고새 게시글" [ref=f21e298] [cursor=pointer]:
+              - text: 냉장고
+              - img "새 게시글"
+            - menuitem "TV새 게시글" [ref=f21e300] [cursor=pointer]:
+              - text: TV
+              - img "새 게시글"
+            - menuitem "세탁기/건조기새 게시글" [ref=f21e302] [cursor=pointer]:
+              - text: 세탁기/건조기
+              - img "새 게시글"
+            - menuitem "주방가전새 게시글" [ref=f21e304] [cursor=pointer]:
+              - text: 주방가전
+              - img "새 게시글"
+            - menuitem "스마트홈새 게시글" [ref=f21e306] [cursor=pointer]:
+              - text: 스마트홈
+              - img "새 게시글"
+            - menuitem "영상가전새 게시글" [ref=f21e308] [cursor=pointer]:
+              - text: 영상가전
+              - img "새 게시글"
+            - menuitem "음향가전새 게시글" [ref=f21e310] [cursor=pointer]:
+              - text: 음향가전
+              - img "새 게시글"
+            - menuitem "계절가전새 게시글" [ref=f21e312] [cursor=pointer]:
+              - text: 계절가전
+              - img "새 게시글"
+            - menuitem "생활가전새 게시글" [ref=f21e314] [cursor=pointer]:
+              - text: 생활가전
+              - img "새 게시글"
+            - menuitem "미용가전새 게시글" [ref=f21e316] [cursor=pointer]:
+              - text: 미용가전
+              - img "새 게시글"
+            - menuitem "기타 가전제품새 게시글" [ref=f21e318] [cursor=pointer]:
+              - text: 기타 가전제품
+              - img "새 게시글"
+          - strong [ref=f21e320]: ★ 노트북/PC
+          - list [ref=f21e321]:
+            - menuitem "노트북/넷북새 게시글" [ref=f21e323] [cursor=pointer]:
+              - text: 노트북/넷북
+              - img "새 게시글"
+            - menuitem "데스크탑/본체새 게시글" [ref=f21e325] [cursor=pointer]:
+              - text: 데스크탑/본체
+              - img "새 게시글"
+            - menuitem "모니터새 게시글" [ref=f21e327] [cursor=pointer]:
+              - text: 모니터
+              - img "새 게시글"
+            - menuitem "CPU/메인보드새 게시글" [ref=f21e329] [cursor=pointer]:
+              - text: CPU/메인보드
+              - img "새 게시글"
+            - menuitem "HDD/SSD/ODD새 게시글" [ref=f21e331] [cursor=pointer]:
+              - text: HDD/SSD/ODD
+              - img "새 게시글"
+            - menuitem "RAM/VGA/SOUND새 게시글" [ref=f21e333] [cursor=pointer]:
+              - text: RAM/VGA/SOUND
+              - img "새 게시글"
+            - menuitem "USB/케이블새 게시글" [ref=f21e335] [cursor=pointer]:
+              - text: USB/케이블
+              - img "새 게시글"
+            - menuitem "케이스/파워/쿨러새 게시글" [ref=f21e337] [cursor=pointer]:
+              - text: 케이스/파워/쿨러
+              - img "새 게시글"
+            - menuitem "키보드/마우스/스피커새 게시글" [ref=f21e339] [cursor=pointer]:
+              - text: 키보드/마우스/스피커
+              - img "새 게시글"
+            - menuitem "프린터/복합기/잉크/토너새 게시글" [ref=f21e341] [cursor=pointer]:
+              - text: 프린터/복합기/잉크/토너
+              - img "새 게시글"
+            - menuitem "공유기/랜카드새 게시글" [ref=f21e343] [cursor=pointer]:
+              - text: 공유기/랜카드
+              - img "새 게시글"
+            - menuitem "소프트웨어새 게시글" [ref=f21e345] [cursor=pointer]:
+              - text: 소프트웨어
+              - img "새 게시글"
+            - menuitem "기타 주변기기새 게시글" [ref=f21e347] [cursor=pointer]:
+              - text: 기타 주변기기
+              - img "새 게시글"
+          - strong [ref=f21e349]: ★ 카메라/캠코더
+          - list [ref=f21e350]:
+            - menuitem "DSLR새 게시글" [ref=f21e352] [cursor=pointer]:
+              - text: DSLR
+              - img "새 게시글"
+            - menuitem "미러리스새 게시글" [ref=f21e354] [cursor=pointer]:
+              - text: 미러리스
+              - img "새 게시글"
+            - menuitem "디지털카메라새 게시글" [ref=f21e356] [cursor=pointer]:
+              - text: 디지털카메라
+              - img "새 게시글"
+            - menuitem "필름/즉석카메라새 게시글" [ref=f21e358] [cursor=pointer]:
+              - text: 필름/즉석카메라
+              - img "새 게시글"
+            - menuitem "캠코더/액션캠새 게시글" [ref=f21e360] [cursor=pointer]:
+              - text: 캠코더/액션캠
+              - img "새 게시글"
+            - menuitem "기타 카메라새 게시글" [ref=f21e362] [cursor=pointer]:
+              - text: 기타 카메라
+              - img "새 게시글"
+            - menuitem "카메라렌즈새 게시글" [ref=f21e364] [cursor=pointer]:
+              - text: 카메라렌즈
+              - img "새 게시글"
+            - menuitem "삼각대/조명/플래시새 게시글" [ref=f21e366] [cursor=pointer]:
+              - text: 삼각대/조명/플래시
+              - img "새 게시글"
+            - menuitem "기타 악세서리새 게시글" [ref=f21e368] [cursor=pointer]:
+              - text: 기타 악세서리
+              - img "새 게시글"
+          - strong [ref=f21e370]: ★ 가구/인테리어
+          - list [ref=f21e371]:
+            - menuitem "침실가구새 게시글" [ref=f21e373] [cursor=pointer]:
+              - text: 침실가구
+              - img "새 게시글"
+            - menuitem "거실가구새 게시글" [ref=f21e375] [cursor=pointer]:
+              - text: 거실가구
+              - img "새 게시글"
+            - menuitem "주방가구새 게시글" [ref=f21e377] [cursor=pointer]:
+              - text: 주방가구
+              - img "새 게시글"
+            - menuitem "수납/선반/공간박스새 게시글" [ref=f21e379] [cursor=pointer]:
+              - text: 수납/선반/공간박스
+              - img "새 게시글"
+            - menuitem "학생/서재/사무용가구새 게시글" [ref=f21e381] [cursor=pointer]:
+              - text: 학생/서재/사무용가구
+              - img "새 게시글"
+            - menuitem "기타가구새 게시글" [ref=f21e383] [cursor=pointer]:
+              - text: 기타가구
+              - img "새 게시글"
+            - menuitem "침구새 게시글" [ref=f21e385] [cursor=pointer]:
+              - text: 침구
+              - img "새 게시글"
+            - menuitem "커튼/카페트새 게시글" [ref=f21e387] [cursor=pointer]:
+              - text: 커튼/카페트
+              - img "새 게시글"
+            - menuitem "조명/무드등새 게시글" [ref=f21e389] [cursor=pointer]:
+              - text: 조명/무드등
+              - img "새 게시글"
+            - menuitem "인테리어소품새 게시글" [ref=f21e391] [cursor=pointer]:
+              - text: 인테리어소품
+              - img "새 게시글"
+            - menuitem "이벤트/파티용품" [ref=f21e393] [cursor=pointer]
+            - menuitem "디퓨저/캔들새 게시글" [ref=f21e395] [cursor=pointer]:
+              - text: 디퓨저/캔들
+              - img "새 게시글"
+            - menuitem "시계/액자/팝아트새 게시글" [ref=f21e397] [cursor=pointer]:
+              - text: 시계/액자/팝아트
+              - img "새 게시글"
+            - menuitem "원예새 게시글" [ref=f21e399] [cursor=pointer]:
+              - text: 원예
+              - img "새 게시글"
+          - strong [ref=f21e401]: ★ 리빙/생활
+          - list [ref=f21e402]:
+            - menuitem "[차량용품]휠/타이어새 게시글" [ref=f21e404] [cursor=pointer]:
+              - text: "[차량용품]휠/타이어"
+              - img "새 게시글"
+            - menuitem "[차량용품]블랙박스/네비게이션새 게시글" [ref=f21e406] [cursor=pointer]:
+              - text: "[차량용품]블랙박스/네비게이션"
+              - img "새 게시글"
+            - menuitem "[차량용품]카오디오/카시트새 게시글" [ref=f21e408] [cursor=pointer]:
+              - text: "[차량용품]카오디오/카시트"
+              - img "새 게시글"
+            - menuitem "[차량용품]기타 부품/용품새 게시글" [ref=f21e410] [cursor=pointer]:
+              - text: "[차량용품]기타 부품/용품"
+              - img "새 게시글"
+            - menuitem "주방용품새 게시글" [ref=f21e412] [cursor=pointer]:
+              - text: 주방용품
+              - img "새 게시글"
+            - menuitem "식품새 게시글" [ref=f21e414] [cursor=pointer]:
+              - text: 식품
+              - img "새 게시글"
+            - menuitem "욕실용품새 게시글" [ref=f21e416] [cursor=pointer]:
+              - text: 욕실용품
+              - img "새 게시글"
+            - menuitem "청소/세탁용품새 게시글" [ref=f21e418] [cursor=pointer]:
+              - text: 청소/세탁용품
+              - img "새 게시글"
+            - menuitem "생활잡화새 게시글" [ref=f21e420] [cursor=pointer]:
+              - text: 생활잡화
+              - img "새 게시글"
+            - menuitem "기타 생활용품새 게시글" [ref=f21e422] [cursor=pointer]:
+              - text: 기타 생활용품
+              - img "새 게시글"
+          - strong [ref=f21e424]: ★ 게임
+          - list [ref=f21e425]:
+            - menuitem "PC게임새 게시글" [ref=f21e427] [cursor=pointer]:
+              - text: PC게임
+              - img "새 게시글"
+            - menuitem "플레이스테이션새 게시글" [ref=f21e429] [cursor=pointer]:
+              - text: 플레이스테이션
+              - img "새 게시글"
+            - menuitem "PSP새 게시글" [ref=f21e431] [cursor=pointer]:
+              - text: PSP
+              - img "새 게시글"
+            - menuitem "닌텐도새 게시글" [ref=f21e433] [cursor=pointer]:
+              - text: 닌텐도
+              - img "새 게시글"
+            - menuitem "Wii새 게시글" [ref=f21e435] [cursor=pointer]:
+              - text: Wii
+              - img "새 게시글"
+            - menuitem "XBOX새 게시글" [ref=f21e437] [cursor=pointer]:
+              - text: XBOX
+              - img "새 게시글"
+            - menuitem "게임타이틀새 게시글" [ref=f21e439] [cursor=pointer]:
+              - text: 게임타이틀
+              - img "새 게시글"
+            - menuitem "기타 게임새 게시글" [ref=f21e441] [cursor=pointer]:
+              - text: 기타 게임
+              - img "새 게시글"
+          - strong [ref=f21e443]: ★ 반려동물/취미
+          - list [ref=f21e444]:
+            - menuitem "[키덜트] 피규어/브릭새 게시글" [ref=f21e446] [cursor=pointer]:
+              - text: "[키덜트] 피규어/브릭"
+              - img "새 게시글"
+            - menuitem "[키덜트] 프라모델새 게시글" [ref=f21e448] [cursor=pointer]:
+              - text: "[키덜트] 프라모델"
+              - img "새 게시글"
+            - menuitem "[키덜트] 레고/조립/블록새 게시글" [ref=f21e450] [cursor=pointer]:
+              - text: "[키덜트] 레고/조립/블록"
+              - img "새 게시글"
+            - menuitem "[키덜트] 무선조종/드론/헬리캠새 게시글" [ref=f21e452] [cursor=pointer]:
+              - text: "[키덜트] 무선조종/드론/헬리캠"
+              - img "새 게시글"
+            - menuitem "반려동물새 게시글" [ref=f21e454] [cursor=pointer]:
+              - text: 반려동물
+              - img "새 게시글"
+            - menuitem "핸드메이드/DIY새 게시글" [ref=f21e456] [cursor=pointer]:
+              - text: 핸드메이드/DIY
+              - img "새 게시글"
+            - menuitem "악기새 게시글" [ref=f21e458] [cursor=pointer]:
+              - text: 악기
+              - img "새 게시글"
+            - menuitem "예술작품/골동품/수집새 게시글" [ref=f21e460] [cursor=pointer]:
+              - text: 예술작품/골동품/수집
+              - img "새 게시글"
+            - menuitem "미술재료/미술도구새 게시글" [ref=f21e462] [cursor=pointer]:
+              - text: 미술재료/미술도구
+              - img "새 게시글"
+          - strong [ref=f21e464]: ★ 도서/음반/문구
+          - list [ref=f21e465]:
+            - menuitem "유아동도서/음반새 게시글" [ref=f21e467] [cursor=pointer]:
+              - text: 유아동도서/음반
+              - img "새 게시글"
+            - menuitem "학습/교육새 게시글" [ref=f21e469] [cursor=pointer]:
+              - text: 학습/교육
+              - img "새 게시글"
+            - menuitem "소설/만화책새 게시글" [ref=f21e471] [cursor=pointer]:
+              - text: 소설/만화책
+              - img "새 게시글"
+            - menuitem "여행/취미/레저새 게시글" [ref=f21e473] [cursor=pointer]:
+              - text: 여행/취미/레저
+              - img "새 게시글"
+            - menuitem "문학/과학/경영새 게시글" [ref=f21e475] [cursor=pointer]:
+              - text: 문학/과학/경영
+              - img "새 게시글"
+            - menuitem "예술/디자인새 게시글" [ref=f21e477] [cursor=pointer]:
+              - text: 예술/디자인
+              - img "새 게시글"
+            - menuitem "잡지새 게시글" [ref=f21e479] [cursor=pointer]:
+              - text: 잡지
+              - img "새 게시글"
+            - menuitem "기타 도서새 게시글" [ref=f21e481] [cursor=pointer]:
+              - text: 기타 도서
+              - img "새 게시글"
+            - menuitem "음반/DVD/굿즈새 게시글" [ref=f21e483] [cursor=pointer]:
+              - text: 음반/DVD/굿즈
+              - img "새 게시글"
+            - menuitem "문구/사무용품새 게시글" [ref=f21e485] [cursor=pointer]:
+              - text: 문구/사무용품
+              - img "새 게시글"
+          - strong [ref=f21e487]: ★ 티켓/쿠폰
+          - list [ref=f21e488]:
+            - menuitem "[상품권/쿠폰] 백화점/마트/편의점새 게시글" [ref=f21e490] [cursor=pointer]:
+              - text: "[상품권/쿠폰] 백화점/마트/편의점"
+              - img "새 게시글"
+            - menuitem "[상품권/쿠폰] 영화/문화/게임새 게시글" [ref=f21e492] [cursor=pointer]:
+              - text: "[상품권/쿠폰] 영화/문화/게임"
+              - img "새 게시글"
+            - menuitem "[상품권/쿠폰] 외식 주유새 게시글" [ref=f21e494] [cursor=pointer]:
+              - text: "[상품권/쿠폰] 외식 주유"
+              - img "새 게시글"
+            - menuitem "티켓새 게시글" [ref=f21e496] [cursor=pointer]:
+              - text: 티켓
+              - img "새 게시글"
+            - menuitem "기타 티켓/쿠폰/이용권새 게시글" [ref=f21e498] [cursor=pointer]:
+              - text: 기타 티켓/쿠폰/이용권
+              - img "새 게시글"
+          - strong [ref=f21e500]: ★ 스포츠
+          - list [ref=f21e501]:
+            - menuitem "[골프] 드라이버새 게시글" [ref=f21e503] [cursor=pointer]:
+              - text: "[골프] 드라이버"
+              - img "새 게시글"
+            - menuitem "[골프] 우드/유틸리티새 게시글" [ref=f21e505] [cursor=pointer]:
+              - text: "[골프] 우드/유틸리티"
+              - img "새 게시글"
+            - menuitem "[골프] 아이언새 게시글" [ref=f21e507] [cursor=pointer]:
+              - text: "[골프] 아이언"
+              - img "새 게시글"
+            - menuitem "[골프] 웨지/퍼터새 게시글" [ref=f21e509] [cursor=pointer]:
+              - text: "[골프] 웨지/퍼터"
+              - img "새 게시글"
+            - menuitem "[골프] 골프백/풀세트새 게시글" [ref=f21e511] [cursor=pointer]:
+              - text: "[골프] 골프백/풀세트"
+              - img "새 게시글"
+            - menuitem "[골프] 볼/용품/기타새 게시글" [ref=f21e513] [cursor=pointer]:
+              - text: "[골프] 볼/용품/기타"
+              - img "새 게시글"
+            - menuitem "[골프] 골프의류/골프화새 게시글" [ref=f21e515] [cursor=pointer]:
+              - text: "[골프] 골프의류/골프화"
+              - img "새 게시글"
+            - menuitem "자전거새 게시글" [ref=f21e517] [cursor=pointer]:
+              - text: 자전거
+              - img "새 게시글"
+            - menuitem "인라인/스케이트/전동새 게시글" [ref=f21e519] [cursor=pointer]:
+              - text: 인라인/스케이트/전동
+              - img "새 게시글"
+            - menuitem "축구새 게시글" [ref=f21e521] [cursor=pointer]:
+              - text: 축구
+              - img "새 게시글"
+            - menuitem "야구새 게시글" [ref=f21e523] [cursor=pointer]:
+              - text: 야구
+              - img "새 게시글"
+            - menuitem "농구새 게시글" [ref=f21e525] [cursor=pointer]:
+              - text: 농구
+              - img "새 게시글"
+            - menuitem "라켓스포츠새 게시글" [ref=f21e527] [cursor=pointer]:
+              - text: 라켓스포츠
+              - img "새 게시글"
+            - menuitem "헬스/요가새 게시글" [ref=f21e529] [cursor=pointer]:
+              - text: 헬스/요가
+              - img "새 게시글"
+            - menuitem "수상스포츠새 게시글" [ref=f21e531] [cursor=pointer]:
+              - text: 수상스포츠
+              - img "새 게시글"
+            - menuitem "겨울스포츠새 게시글" [ref=f21e533] [cursor=pointer]:
+              - text: 겨울스포츠
+              - img "새 게시글"
+            - menuitem "검도/격투/권투새 게시글" [ref=f21e535] [cursor=pointer]:
+              - text: 검도/격투/권투
+              - img "새 게시글"
+            - menuitem "기타 스포츠새 게시글" [ref=f21e537] [cursor=pointer]:
+              - text: 기타 스포츠
+              - img "새 게시글"
+          - strong [ref=f21e539]: ★ 여행/여가활동
+          - list [ref=f21e540]:
+            - menuitem "[여행] 등산용품" [ref=f21e542] [cursor=pointer]
+            - menuitem "[여행] 여행/숙박 티켓새 게시글" [ref=f21e544] [cursor=pointer]:
+              - text: "[여행] 여행/숙박 티켓"
+              - img "새 게시글"
+            - menuitem "[여행] 여행가방/용품" [ref=f21e546] [cursor=pointer]
+            - menuitem "[여행] 기타" [ref=f21e548] [cursor=pointer]
+          - strong [ref=f21e550]: ★ 레저/여행
+          - list [ref=f21e551]:
+            - menuitem "등산의류/용품새 게시글" [ref=f21e553] [cursor=pointer]:
+              - text: 등산의류/용품
+              - img "새 게시글"
+            - menuitem "낚시용품새 게시글" [ref=f21e555] [cursor=pointer]:
+              - text: 낚시용품
+              - img "새 게시글"
+            - menuitem "기타 레저/여행용품새 게시글" [ref=f21e557] [cursor=pointer]:
+              - text: 기타 레저/여행용품
+              - img "새 게시글"
+            - menuitem "캠핑용품새 게시글" [ref=f21e559] [cursor=pointer]:
+              - text: 캠핑용품
+              - img "새 게시글"
+          - strong [ref=f21e561]: ★ 오토바이
+          - list [ref=f21e562]:
+            - menuitem "125cc 이하새 게시글" [ref=f21e564] [cursor=pointer]:
+              - text: 125cc 이하
+              - img "새 게시글"
+            - menuitem "125cc 초과새 게시글" [ref=f21e566] [cursor=pointer]:
+              - text: 125cc 초과
+              - img "새 게시글"
+            - menuitem "오토바이 용품새 게시글" [ref=f21e568] [cursor=pointer]:
+              - text: 오토바이 용품
+              - img "새 게시글"
+            - menuitem "신차새 게시글" [ref=f21e570] [cursor=pointer]:
+              - text: 신차
+              - img "새 게시글"
+          - strong [ref=f21e572]: ★ 공구/산업용품
+          - list [ref=f21e573]:
+            - menuitem "드릴/전동공구새 게시글" [ref=f21e575] [cursor=pointer]:
+              - text: 드릴/전동공구
+              - img "새 게시글"
+            - menuitem "에어/유압새 게시글" [ref=f21e577] [cursor=pointer]:
+              - text: 에어/유압
+              - img "새 게시글"
+            - menuitem "작업공구새 게시글" [ref=f21e579] [cursor=pointer]:
+              - text: 작업공구
+              - img "새 게시글"
+            - menuitem "측정공구새 게시글" [ref=f21e581] [cursor=pointer]:
+              - text: 측정공구
+              - img "새 게시글"
+            - menuitem "초경/절삭/접착윤활새 게시글" [ref=f21e583] [cursor=pointer]:
+              - text: 초경/절삭/접착윤활
+              - img "새 게시글"
+            - menuitem "전기/전자새 게시글" [ref=f21e585] [cursor=pointer]:
+              - text: 전기/전자
+              - img "새 게시글"
+            - menuitem "배관설비/포장운송새 게시글" [ref=f21e587] [cursor=pointer]:
+              - text: 배관설비/포장운송
+              - img "새 게시글"
+            - menuitem "금형공작새 게시글" [ref=f21e589] [cursor=pointer]:
+              - text: 금형공작
+              - img "새 게시글"
+            - menuitem "용접기자재새 게시글" [ref=f21e591] [cursor=pointer]:
+              - text: 용접기자재
+              - img "새 게시글"
+            - menuitem "산업/안전/공구함새 게시글" [ref=f21e593] [cursor=pointer]:
+              - text: 산업/안전/공구함
+              - img "새 게시글"
+            - menuitem "산업자재새 게시글" [ref=f21e595] [cursor=pointer]:
+              - text: 산업자재
+              - img "새 게시글"
+            - menuitem "농기계/농업용공구새 게시글" [ref=f21e597] [cursor=pointer]:
+              - text: 농기계/농업용공구
+              - img "새 게시글"
+          - strong [ref=f21e599]: ★ 중고차
+          - list [ref=f21e600]:
+            - menuitem "[국산차] 제네시스" [ref=f21e602] [cursor=pointer]
+            - menuitem "[국산차] 현대새 게시글" [ref=f21e604] [cursor=pointer]:
+              - text: "[국산차] 현대"
+              - img "새 게시글"
+            - menuitem "[국산차] 기아새 게시글" [ref=f21e606] [cursor=pointer]:
+              - text: "[국산차] 기아"
+              - img "새 게시글"
+            - menuitem "[국산차] 쉐보레(GM대우)새 게시글" [ref=f21e608] [cursor=pointer]:
+              - text: "[국산차] 쉐보레(GM대우)"
+              - img "새 게시글"
+            - menuitem "[국산차] 르노새 게시글" [ref=f21e610] [cursor=pointer]:
+              - text: "[국산차] 르노"
+              - img "새 게시글"
+            - menuitem "[국산차] KGM새 게시글" [ref=f21e612] [cursor=pointer]:
+              - text: "[국산차] KGM"
+              - img "새 게시글"
+            - menuitem "[국산차] 기타 국산차" [ref=f21e614] [cursor=pointer]
+            - menuitem "[수입차] BMW새 게시글" [ref=f21e616] [cursor=pointer]:
+              - text: "[수입차] BMW"
+              - img "새 게시글"
+            - menuitem "[수입차] 벤츠새 게시글" [ref=f21e618] [cursor=pointer]:
+              - text: "[수입차] 벤츠"
+              - img "새 게시글"
+            - menuitem "[수입차] 아우디새 게시글" [ref=f21e620] [cursor=pointer]:
+              - text: "[수입차] 아우디"
+              - img "새 게시글"
+            - menuitem "[수입차] 폭스바겐새 게시글" [ref=f21e622] [cursor=pointer]:
+              - text: "[수입차] 폭스바겐"
+              - img "새 게시글"
+            - menuitem "[수입차] 미니새 게시글" [ref=f21e624] [cursor=pointer]:
+              - text: "[수입차] 미니"
+              - img "새 게시글"
+            - menuitem "[수입차] 렉서스" [ref=f21e626] [cursor=pointer]
+            - menuitem "[수입차] 도요타" [ref=f21e628] [cursor=pointer]
+            - menuitem "[수입차] 기타수입차새 게시글" [ref=f21e630] [cursor=pointer]:
+              - text: "[수입차] 기타수입차"
+              - img "새 게시글"
+          - strong [ref=f21e632]: ★ 중고나라 커뮤니티
+          - list [ref=f21e633]:
+            - menuitem "믿고 보는 후기&추천" [ref=f21e635] [cursor=pointer]
+            - menuitem "자유 주제 커뮤니티새 게시글" [ref=f21e637] [cursor=pointer]:
+              - text: 자유 주제 커뮤니티
+              - img "새 게시글"
+            - menuitem "어려운 이웃 사연새 게시글" [ref=f21e639] [cursor=pointer]:
+              - text: 어려운 이웃 사연
+              - img "새 게시글"
+            - menuitem "IT 커뮤니티새 게시글" [ref=f21e641] [cursor=pointer]:
+              - text: IT 커뮤니티
+              - img "새 게시글"
+            - menuitem "패션 커뮤니티새 게시글" [ref=f21e643] [cursor=pointer]:
+              - text: 패션 커뮤니티
+              - img "새 게시글"
+            - menuitem "긍정거래 후기새 게시글" [ref=f21e645] [cursor=pointer]:
+              - text: 긍정거래 후기
+              - img "새 게시글"
+          - strong [ref=f21e647]: ★ 중나 회원 이벤트
+          - list [ref=f21e648]:
+            - menuitem "이벤트" [ref=f21e650] [cursor=pointer]
+            - menuitem "당첨자발표/종료" [ref=f21e652] [cursor=pointer]
+            - menuitem "이벤트 신청하기" [ref=f21e654] [cursor=pointer]
+          - strong [ref=f21e656]: ★ 중나 이용팁
+          - list [ref=f21e657]:
+            - menuitem "중고나라 공식 블로그" [ref=f21e659] [cursor=pointer]
+            - menuitem "슬기로운 중나생활정보" [ref=f21e661] [cursor=pointer]
+            - menuitem "편의점 택배 신청" [ref=f21e663] [cursor=pointer]
+          - strong [ref=f21e665]: ★ 공지사항
+          - list [ref=f21e666]:
+            - menuitem "공지사항" [ref=f21e668] [cursor=pointer]
+            - menuitem "셀러 회원 공지사항" [ref=f21e670] [cursor=pointer]
+            - menuitem "이용정책" [ref=f21e672] [cursor=pointer]
+            - menuitem "인기 검색 HOT!새 게시글" [ref=f21e674] [cursor=pointer]:
+              - text: 인기 검색 HOT!
+              - img "새 게시글"
+          - strong [ref=f21e676]: ★ 문의하기
+          - list [ref=f21e677]:
+            - menuitem "중고나라 광고 문의하기" [ref=f21e679] [cursor=pointer]
+            - menuitem "셀러 회원 신청" [ref=f21e681] [cursor=pointer]
+          - button "폐쇄게시판 새 게시글 그룹펴기" [ref=f21e683] [cursor=pointer]:
+            - strong [ref=f21e684]:
+              - text: 폐쇄게시판
+              - img "새 게시글"
+            - generic [ref=f21e685]: 그룹펴기
+      - main [ref=f21e687]:
+        - iframe [ref=f21e688]
+    - contentinfo [ref=f21e689]:
+      - heading "중고나라" [level=2] [ref=f21e690]
+      - link "https://cafe.naver.com/joonggonara" [ref=f21e691] [cursor=pointer]:
+        - /url: https://cafe.naver.com/joonggonara
+      - link "NAVER 카페" [ref=f21e692] [cursor=pointer]:
+        - /url: https://cafe.naver.com/joonggonara
+  - alert [ref=f21e694]

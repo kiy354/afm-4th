@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>구로구 안과 추천 3곳</title>
+<style>
+  :root{
+    --bg:#f7f8fa; --card:#ffffff; --ink:#16181d; --muted:#666e7a;
+    --line:#e3e6ea; --accent:#1f6feb; --accent-soft:#e8f0fe;
+    --gold:#a97408; --gold-soft:#fdf4e0; --warn:#b4443a; --warn-soft:#fdeceb;
+    --ok:#1a7f5a; --ok-soft:#e6f4ee;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0f1115; --card:#171a20; --ink:#e8eaed; --muted:#9aa3af;
+      --line:#272b33; --accent:#5b9bff; --accent-soft:#17233a;
+      --gold:#e0b64a; --gold-soft:#2a2415; --warn:#f08a80; --warn-soft:#2e1a18;
+      --ok:#5fd0a0; --ok-soft:#13291f;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0f1115; --card:#171a20; --ink:#e8eaed; --muted:#9aa3af;
+    --line:#272b33; --accent:#5b9bff; --accent-soft:#17233a;
+    --gold:#e0b64a; --gold-soft:#2a2415; --warn:#f08a80; --warn-soft:#2e1a18;
+    --ok:#5fd0a0; --ok-soft:#13291f;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,-apple-system,sans-serif;
+    line-height:1.65; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:860px; margin:0 auto; padding:40px 20px 80px}
+
+  header{margin-bottom:36px}
+  .eyebrow{font-size:13px; letter-spacing:.08em; color:var(--accent); font-weight:700}
+  h1{font-size:30px; line-height:1.3; margin:8px 0 12px; letter-spacing:-.02em}
+  .sub{color:var(--muted); font-size:15px; margin:0}
+
+  .sources{
+    display:flex; flex-wrap:wrap; gap:8px; margin-top:20px;
+    padding:14px; background:var(--card); border:1px solid var(--line); border-radius:10px;
+  }
+  .sources .lbl{font-size:12px; color:var(--muted); width:100%; margin-bottom:2px}
+  .src{
+    font-size:13px; text-decoration:none; color:var(--ink);
+    border:1px solid var(--line); border-radius:999px; padding:4px 11px; background:var(--bg);
+  }
+  .src:hover{border-color:var(--accent); color:var(--accent)}
+  .src span{color:var(--muted); font-size:12px}
+
+  h2{font-size:19px; margin:44px 0 6px; letter-spacing:-.01em}
+  h2 + .note{color:var(--muted); font-size:14px; margin:0 0 18px}
+
+  .card{
+    background:var(--card); border:1px solid var(--line); border-radius:14px;
+    padding:22px 22px 18px; margin-bottom:16px;
+  }
+  .card.top{border-color:var(--accent)}
+  .rank{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:26px; height:26px; border-radius:8px; background:var(--accent-soft);
+    color:var(--accent); font-weight:800; font-size:14px; margin-right:9px;
+    vertical-align:middle;
+  }
+  .name{font-size:20px; font-weight:700; letter-spacing:-.01em; display:inline-block; vertical-align:middle}
+  .tagline{color:var(--accent); font-size:14px; font-weight:600; margin:6px 0 14px}
+
+  .badges{display:flex; flex-wrap:wrap; gap:6px; margin:0 0 14px}
+  .b{font-size:12px; font-weight:600; padding:3px 9px; border-radius:6px; white-space:nowrap}
+  .b.ok{background:var(--ok-soft); color:var(--ok)}
+  .b.gold{background:var(--gold-soft); color:var(--gold)}
+  .b.acc{background:var(--accent-soft); color:var(--accent)}
+
+  dl{display:grid; grid-template-columns:76px 1fr; gap:7px 14px; margin:0 0 14px; font-size:14.5px}
+  dt{color:var(--muted); font-size:13.5px}
+  dd{margin:0}
+  dd a{color:var(--accent); text-decoration:none; font-weight:600}
+  dd a:hover{text-decoration:underline}
+
+  .why{
+    font-size:14.5px; color:var(--ink); background:var(--bg);
+    border-left:3px solid var(--accent); border-radius:0 8px 8px 0;
+    padding:11px 14px; margin:0;
+  }
+  .caveat{font-size:13.5px; color:var(--warn); margin:10px 0 0}
+
+  .alt{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:12px}
+  .alt .card{margin:0; padding:18px}
+  .alt .name{font-size:16.5px}
+
+  .scroll{overflow-x:auto; border:1px solid var(--line); border-radius:12px; background:var(--card)}
+  table{border-collapse:collapse; width:100%; font-size:13.5px; min-width:680px}
+  th,td{text-align:left; padding:10px 14px; border-bottom:1px solid var(--line); vertical-align:top}
+  th{background:var(--bg); font-size:12.5px; color:var(--muted); font-weight:600; white-space:nowrap}
+  tr:last-child td{border-bottom:none}
+  td.c{text-align:center; color:var(--muted)}
+  td.c.y{color:var(--ok); font-weight:700}
+  tr.pick td{background:var(--accent-soft)}
+  tr.pick td:first-child{font-weight:700}
+
+  .callout{
+    background:var(--warn-soft); border-left:3px solid var(--warn);
+    border-radius:0 10px 10px 0; padding:16px 18px; margin:28px 0 0;
+  }
+  .callout h3{margin:0 0 8px; font-size:15.5px; color:var(--warn)}
+  .callout p{margin:0 0 8px; font-size:14.5px}
+  .callout ul{margin:0 0 10px; padding-left:18px; font-size:14.5px}
+  .callout li{margin:3px 0}
+  .callout a{color:var(--warn); font-weight:700}
+
+  footer{margin-top:46px; padding-top:20px; border-top:1px solid var(--line); font-size:13px; color:var(--muted)}
+  footer p{margin:0 0 8px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">서울 구로구 · 안과 진료</div>
+  <h1>구로구 안과, 이 3곳을 추천합니다</h1>
+  <p class="sub">심평원 · 대한안과의사회 · 닥터나우 세 사이트를 직접 열어 구로구 안과 19곳을 수집했습니다.
+  세 곳에 모두 등재됐는지(실재·전문의 운영 여부), 안과 전문의 수, 접근성을 기준으로 추렸습니다.</p>
+
+  <div class="sources">
+    <div class="lbl">수집 출처 — 2026년 9월 11일 기준</div>
+    <a class="src" href="https://www.hira.or.kr/ra/dtlCndHospSrch/dtlCndHospSrch.do?pgmid=HIRAA050200000000" target="_blank" rel="noopener">건강보험심사평가원 <span>19곳</span></a>
+    <a class="src" href="https://www.eyedoctor.or.kr/area/area01.asp" target="_blank" rel="noopener">대한안과의사회 <span>8곳</span></a>
+    <a class="src" href="https://doctornow.co.kr/hospitals/search?keyword=%EA%B5%AC%EB%A1%9C%EA%B5%AC+%EC%95%88%EA%B3%BC" target="_blank" rel="noopener">닥터나우 <span>16곳</span></a>
+  </div>
+</header>
+
+<h2>추천 3곳</h2>
+<p class="note">성격이 다른 세 곳입니다. 증상과 위치에 따라 고르세요.</p>
+
+<div class="card top">
+  <div><span class="rank">1</span><span class="name">이안과의원</span></div>
+  <div class="tagline">의료진 6명 · 5개 층 단독 — 구로구에서 압도적으로 큰 안과</div>
+  <div class="badges">
+    <span class="b gold">의료진 6명 · 구로구 최다</span>
+    <span class="b gold">5개 층 단독 사용</span>
+    <span class="b ok">심평원 등재</span>
+    <span class="b ok">안과의사회 회원</span>
+    <span class="b acc">구로중앙로 · 이안과빌딩</span>
+  </div>
+  <dl>
+    <dt>주소</dt><dd>서울 구로구 구로중앙로 217, 지하 1층 · 5~8층 (구로동, 이안과빌딩)</dd>
+    <dt>전화</dt><dd><a href="tel:0263827007">02-6382-7007</a></dd>
+    <dt>진료시간</dt><dd>평일 09:00~18:00 (점심 13:00~14:00)<br>토요일 09:00~13:30 (점심 없음)<br>일요일·공휴일 휴진</dd>
+    <dt>의료진</dt><dd>이태곤(대표원장) · 진경현 · 남우호 · 김응석 · 성현경 · 이원주</dd>
+    <dt>홈페이지</dt><dd><a href="http://leeseye.co.kr/" target="_blank" rel="noopener">leeseye.co.kr</a></dd>
+  </dl>
+  <p class="why"><strong>이럴 때 추천:</strong> <strong>백내장·망막·녹내장 등 수술이나 정밀검사가 필요한 경우.</strong>
+  의료진이 6명으로 구로구 19곳 중 가장 많고, 두 번째로 많은 곳(3명)의 두 배입니다.
+  건물 이름 자체가 &ldquo;이안과빌딩&rdquo;이고 5개 층을 단독으로 쓰는 규모도 구로구에서 유일합니다.
+  의료진이 많다는 건 질환별로 나눠 볼 수 있다는 뜻이라, 어떤 증상이든 대응 범위가 넓습니다.</p>
+  <p class="caveat">※ 예약 우선제입니다. 대기를 줄이려면 전화로 예약하고 가세요.</p>
+</div>
+
+<div class="card top">
+  <div><span class="rank">2</span><span class="name">서울연세안과의원</span></div>
+  <div class="tagline">구로디지털단지 쪽에서 전문의가 가장 많은 곳 — 3명</div>
+  <div class="badges">
+    <span class="b gold">전문의 3명</span>
+    <span class="b ok">심평원 등재</span>
+    <span class="b acc">구로디지털단지</span>
+  </div>
+  <dl>
+    <dt>주소</dt><dd>서울 구로구 디지털로32길 79, 조영빌딩 7층 (구로동)</dd>
+    <dt>전화</dt><dd><a href="tel:028620055">02-862-0055</a></dd>
+    <dt>진료시간</dt><dd>공개 정보 없음 — 방문 전 전화 확인 필요</dd>
+  </dl>
+  <p class="why"><strong>이럴 때 추천:</strong> 백내장·녹내장·망막처럼 <strong>정밀 검사와 2차 소견이 필요한데,
+  구로디지털단지 쪽이 더 가까운 경우.</strong> 전문의가 3명이라 한 명이 휴진해도 진료가 돌아가고,
+  검사 장비와 진료 범위도 1인 의원보다 넓은 편입니다. 직장인 접근성이 좋습니다.</p>
+  <p class="caveat">※ 진료시간이 공개돼 있지 않습니다. 반드시 전화로 확인하고 가세요.</p>
+</div>
+
+<div class="card top">
+  <div><span class="rank">3</span><span class="name">서울눈에빛안과의원</span></div>
+  <div class="tagline">세 사이트에 주소까지 일치 — 정보 신뢰도가 가장 높은 곳</div>
+  <div class="badges">
+    <span class="b gold">3개 사이트 전부 등재</span>
+    <span class="b ok">심평원 등재</span>
+    <span class="b ok">안과의사회 회원</span>
+    <span class="b acc">신도림역 인근</span>
+  </div>
+  <dl>
+    <dt>주소</dt><dd>서울 구로구 경인로 661, 신도림1차푸르지오 104동 401호 (신도림동)</dd>
+    <dt>전화</dt><dd><a href="tel:0269560880">02-6956-0880</a></dd>
+    <dt>진료시간</dt><dd>공개 정보 없음 — 방문 전 전화 확인 필요</dd>
+  </dl>
+  <p class="why"><strong>이럴 때 추천:</strong> 충혈·안구건조·다래끼·시력 검사 같은 <strong>일반 진료.</strong>
+  세 사이트에 모두 등재됐고 주소 표기까지 완전히 일치하는 몇 안 되는 곳이라, 정보가 가장 믿을 만합니다.
+  신도림역에서 가까워 1·2호선 어느 쪽에서든 접근이 편합니다.</p>
+</div>
+
+<h2>이런 경우엔 여기로</h2>
+<p class="note">퇴근 후 진료가 필요하거나, 위치가 다른 쪽이라면.</p>
+
+<div class="alt">
+  <div class="card">
+    <div class="name">밝은이안과의원</div>
+    <div class="badges" style="margin-top:8px">
+      <span class="b gold">야간진료</span>
+      <span class="b ok">3개 사이트 전부 등재</span>
+    </div>
+    <dl>
+      <dt>주소</dt><dd>구로구 경인로 193, 상임빌딩 4층 (오류동)<br><span style="color:var(--muted);font-size:13px">리안헤어·정금당 건물 4층</span></dd>
+      <dt>전화</dt><dd><a href="tel:0226150075">02-2615-0075</a></dd>
+      <dt>진료시간</dt><dd>평일 09:30~18:30<br>토요일 09:30~13:00<br>공휴일 휴무</dd>
+    </dl>
+    <p class="why" style="font-size:14px">구로구에서 <strong>진료시간이 정확히 공개된 몇 안 되는 곳.</strong>
+    야간진료 기관으로 등록돼 있습니다. 오류동·개봉동 쪽이라면 여기가 가장 가깝습니다.</p>
+  </div>
+
+  <div class="card">
+    <div class="name">정안과의원</div>
+    <div class="badges" style="margin-top:8px">
+      <span class="b gold">전문의 2명</span>
+      <span class="b ok">심평원 등재</span>
+    </div>
+    <dl>
+      <dt>주소</dt><dd>구로구 경인로 572, 스타팰리스 411·412호 (구로동)</dd>
+      <dt>진료시간</dt><dd>평일 09:30 시작</dd>
+    </dl>
+    <p class="why" style="font-size:14px">전문의 2명으로 <strong>구로구에서 두 번째로 규모가 큰 의원.</strong>
+    1순위 서울연세안과가 예약이 안 될 때의 대안으로 적합합니다.</p>
+  </div>
+</div>
+
+<h2>구로구 안과 전체 19곳</h2>
+<p class="note">심평원 공식 등록 기준. 세 사이트에 모두 실린 곳일수록 정보 신뢰도가 높습니다.</p>
+
+<div class="scroll">
+<table>
+  <thead>
+    <tr>
+      <th>병원명</th><th>소재지</th><th>전문의</th>
+      <th>심평원</th><th>의사회</th><th>닥터나우</th><th>비고</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="pick"><td>이안과의원</td><td>구로중앙로 217, 지하1층·5~8층 (구로동)</td><td>6명</td><td class="c y">O</td><td class="c y">O</td><td class="c">-</td><td>추천 1</td></tr>
+    <tr class="pick"><td>서울연세안과의원</td><td>디지털로32길 79, 조영빌딩 7층 (구로동)</td><td>3명</td><td class="c y">O</td><td class="c">-</td><td class="c y">O</td><td>추천 2</td></tr>
+    <tr class="pick"><td>서울눈에빛안과의원</td><td>경인로 661, 신도림1차푸르지오 104동 401호 (신도림동)</td><td>1명</td><td class="c y">O</td><td class="c y">O</td><td class="c y">O</td><td>추천 3</td></tr>
+    <tr><td>밝은이안과의원</td><td>경인로 193, 상임빌딩 4층 (오류동)</td><td>1명</td><td class="c y">O</td><td class="c y">O</td><td class="c y">O</td><td>야간진료</td></tr>
+    <tr><td>정안과의원</td><td>경인로 572, 스타팰리스 411·412호 (구로동)</td><td>2명</td><td class="c y">O</td><td class="c">-</td><td class="c y">O</td><td>09:30 시작</td></tr>
+    <tr><td>삼성드림안과의원</td><td>새말로 89, 302호 (구로동)</td><td>1명</td><td class="c y">O</td><td class="c y">O</td><td class="c y">O</td><td style="color:var(--warn)">주소 불일치</td></tr>
+    <tr><td>삼성밝은안과의원</td><td>도림로 69 (구로동)</td><td>1명</td><td class="c y">O</td><td class="c y">O</td><td class="c y">O</td><td></td></tr>
+    <tr><td>이기현안과의원</td><td>경인로 319, 대림프라자 (개봉동)</td><td>1명</td><td class="c y">O</td><td class="c y">O</td><td class="c y">O</td><td>09:00 시작</td></tr>
+    <tr><td>타임안과의원</td><td>경인로 387, 5층 (고척동)</td><td>1명</td><td class="c y">O</td><td class="c y">O</td><td class="c y">O</td><td></td></tr>
+    <tr><td>최안과의원</td><td>경인로 211-1 (오류동)</td><td>1명</td><td class="c y">O</td><td class="c y">O</td><td class="c y">O</td><td>18:30 마감</td></tr>
+    <tr><td>한의수안과의원</td><td>개봉로 23 (개봉동, 고려크리닉센터)</td><td>1명</td><td class="c y">O</td><td class="c">-</td><td class="c y">O</td><td>야간진료</td></tr>
+    <tr><td>구로밝은빛안과의원</td><td>구로동로26길 37, 4층 (구로동)</td><td>1명</td><td class="c y">O</td><td class="c">-</td><td class="c y">O</td><td>09:00 시작</td></tr>
+    <tr><td>김&amp;홍안과의원</td><td>구로중앙로 68 (구로동, 신안타워)</td><td>1명</td><td class="c y">O</td><td class="c">-</td><td class="c y">O</td><td></td></tr>
+    <tr><td>전안과의원</td><td>경인로 643, 205동 201호 (신도림동)</td><td>1명</td><td class="c y">O</td><td class="c">-</td><td class="c y">O</td><td>10:00 시작</td></tr>
+    <tr><td>조은성모안과의원</td><td>중앙로 60, 강산메디칼프라자 201·202호 (고척동)</td><td>1명</td><td class="c y">O</td><td class="c">-</td><td class="c y">O</td><td>09:30 시작</td></tr>
+    <tr><td>연세안과의원</td><td>고척로 142-1 (고척동)</td><td>1명</td><td class="c y">O</td><td class="c">-</td><td class="c y">O</td><td>09:00 시작</td></tr>
+    <tr><td>서울안과의원</td><td>남부순환로97길 3, KS프리미어빌딩 702호 (개봉동)</td><td>1명</td><td class="c y">O</td><td class="c">-</td><td class="c y">O</td><td></td></tr>
+    <tr><td>눈에힘안과의원</td><td>시흥대로 551, 광희빌딩 5층 (구로동)</td><td class="c">-</td><td class="c y">O</td><td class="c">-</td><td class="c">-</td><td></td></tr>
+    <tr><td>서울삼성안과의원</td><td>경인로 204, 8층 (오류동)</td><td class="c">-</td><td class="c y">O</td><td class="c">-</td><td class="c">-</td><td></td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout">
+  <h3>이런 증상이면 동네 의원 말고 응급실로</h3>
+  <p>아래는 시간을 다투는 증상입니다. 의원 진료를 기다리지 말고 바로 상급종합병원 안과로 가세요.</p>
+  <ul>
+    <li>갑작스러운 시력 저하, 또는 시야 일부가 가려짐</li>
+    <li>눈앞의 번쩍임(광시증)이나 날파리가 갑자기 늘어남 &mdash; 망막박리 의심</li>
+    <li>심한 눈 통증에 두통·구역질이 동반 &mdash; 급성 녹내장 의심</li>
+    <li>눈에 화학물질이 들어갔거나 외상을 입은 경우</li>
+  </ul>
+  <p><strong>가장 가까운 상급종합병원:</strong>
+  <a href="https://guro.kumc.or.kr/kr/doctor-department/department/view.do?deptCd=GROP" target="_blank" rel="noopener">고려대학교 구로병원 안과</a>
+  (구로구 구로동로 148) &middot; 대표전화 1577-0083</p>
+</div>
+
+<footer>
+  <p><strong>수집일:</strong> 2026년 9월 11일 &middot; Playwright로 세 사이트를 직접 열어 수집하고 교차 검증했습니다.</p>
+  <p><strong>이안과의원 의료진 수 출처:</strong> 이안과의원은 닥터나우에 등재돼 있지 않아 세 사이트로는 의료진 수를 알 수 없었고,
+  병원 공식 홈페이지(<a href="http://leeseye.co.kr/137" target="_blank" rel="noopener" style="color:var(--accent)">의료진 소개</a>)에서 원장 6명을 확인했습니다.
+  홈페이지는 각 원장의 전문의 자격을 따로 표기하지 않으므로, 표의 &ldquo;6명&rdquo;은 <strong>안과 전문의 수가 아니라 홈페이지 기준 원장 수</strong>입니다.
+  다른 병원의 전문의 수는 닥터나우 기준이라 집계 방식이 다를 수 있습니다.</p>
+  <p><strong>진료시간 주의:</strong> 대부분의 의원이 진료시간을 공개하지 않습니다. 표의 &ldquo;09:00 시작&rdquo; 등은 수집 시점에 확인된 정보이므로, <strong>방문 전 반드시 전화로 확인</strong>하세요.</p>
+  <p><strong>삼성드림안과의원 주소 불일치:</strong> 심평원은 &ldquo;새말로 89, 302호&rdquo;, 안과의사회는 &ldquo;새말로 97 신도림테크노마트 사무동 10층&rdquo;으로 등록돼 있습니다. 이전 가능성이 있으니 전화(02-2111-8300)로 확인 후 방문하세요.</p>
+  <p><strong>안내:</strong> 이 문서는 공개된 의료기관 등록 정보를 정리한 것으로, 의학적 진단이나 특정 병원에 대한 보증이 아닙니다.</p>
+</footer>
+
+</div>
+</body>
+</html>

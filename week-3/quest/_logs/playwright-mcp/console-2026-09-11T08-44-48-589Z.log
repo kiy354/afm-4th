@@ -1,0 +1,6 @@
+[    1343ms] [LOG] [weblog] FCP {name: FCP, value: 1080, rating: good, delta: 1080, entries: Array(1)} @ https://assets.coupangcdn.com/front/purchase-next/_next/static/chunks/2562-eff7a80ce3f624b8.js:3
+[    1344ms] [LOG] [weblog] LCP {name: LCP, value: 1080, rating: good, delta: 1080, entries: Array(1)} @ https://assets.coupangcdn.com/front/purchase-next/_next/static/chunks/2562-eff7a80ce3f624b8.js:3
+[    1346ms] [LOG] [weblog] LCP {name: LCP, value: 1156, rating: good, delta: 76, entries: Array(1)} @ https://assets.coupangcdn.com/front/purchase-next/_next/static/chunks/2562-eff7a80ce3f624b8.js:3
+[    1352ms] [LOG] [weblog] tti: 1233, serverTime: 812, domReady: 1233, imageLoadingTime: 0 @ https://assets.coupangcdn.com/front/purchase-next/_next/static/chunks/2562-eff7a80ce3f624b8.js:3
+[   11290ms] [LOG] call once for useThrottle @ https://assets.coupangcdn.com/front/purchase-next/_next/static/chunks/app/cart/page-15e155205b25f633.js:0
+[   11695ms] [LOG] [weblog] INP {name: INP, value: 72, rating: good, delta: 72, entries: Array(2)} @ https://assets.coupangcdn.com/front/purchase-next/_next/static/chunks/2562-eff7a80ce3f624b8.js:3

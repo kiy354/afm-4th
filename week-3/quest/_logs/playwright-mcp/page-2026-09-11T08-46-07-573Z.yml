@@ -1,0 +1,1748 @@
+- generic [active] [ref=f68e1]:
+  - generic [ref=f68e5]:
+    - link [ref=f68e6] [cursor=pointer]:
+      - /url: /np/campaigns/82?adType=DA&eventId=m7eQrUbT5l9efEAk
+    - link [ref=f68e7] [cursor=pointer]:
+      - /url: https://shop.coupang.com/sajodaerim/268667?source=brandstore_display_ads&adType=DA&eventId=vkkokItmxZLsg8eM
+  - generic [ref=f68e8]:
+    - generic [ref=f68e10]:
+      - list [ref=f68e11]:
+        - listitem [ref=f68e12]:
+          - link "판매자 가입" [ref=f68e13] [cursor=pointer]:
+            - /url: https://wing.coupang.com/tenants/vendor-signup/signup?utm_source=button_pc_coupang_top_right_cta&utm_medium=non_paid&utm_campaign=seller_registration
+        - listitem [ref=f68e14]:
+          - link "고객센터" [ref=f68e15] [cursor=pointer]:
+            - /url: https://mc.coupang.com/ssr/desktop/contact/faq
+        - listitem [ref=f68e16]:
+          - link "회원가입" [ref=f68e17] [cursor=pointer]:
+            - /url: https://login.coupang.com/login/memberJoinFrm.pang
+        - listitem [ref=f68e18]:
+          - link "로그인" [ref=f68e19] [cursor=pointer]:
+            - /url: https://login.coupang.com/login/login.pang?rtnUrl=https%3A%2F%2Fwww.coupang.com%2Fnp%2Fpost%2Flogin%3Fr%3Dhttp%253A%252F%252Fwww.coupang.com%252Fnp%252Fsearch%253Fq%253D%2525EC%25259A%252594%2525EA%2525B1%2525B0%2525ED%25258A%2525B8%2526filterType%253Drocket%2526sorter%253DsalePriceAsc
+      - list [ref=f68e20]:
+        - listitem [ref=f68e21]: 즐겨찾기
+        - listitem [ref=f68e22]:
+          - generic [ref=f68e23] [cursor=pointer]: 입점신청
+    - generic [ref=f68e26]:
+      - generic [ref=f68e27] [cursor=pointer]: 카테고리
+      - generic [ref=f68e33]:
+        - generic [ref=f68e34]:
+          - link [ref=f68e35] [cursor=pointer]:
+            - /url: https://www.coupang.com
+            - img "Coupang" [ref=f68e36]
+          - generic [ref=f68e37]:
+            - generic [ref=f68e38]: 전체
+            - textbox "쿠팡 상품 검색" [ref=f68e42]:
+              - /placeholder: 찾고 싶은 상품을 검색해보세요!
+              - text: 요거트
+            - button "검색" [ref=f68e43] [cursor=pointer]
+          - list [ref=f68e44]:
+            - listitem [ref=f68e45]:
+              - link "마이쿠팡" [ref=f68e46] [cursor=pointer]:
+                - /url: https://mc.coupang.com/ssr/desktop/order/list
+            - listitem [ref=f68e48]:
+              - link "장바구니" [ref=f68e49] [cursor=pointer]:
+                - /url: //cart.coupang.com/cartView.pang
+                - emphasis [ref=f68e50]
+        - list [ref=f68e54]:
+          - listitem [ref=f68e55]:
+            - link "쿠팡플레이 쿠팡플레이" [ref=f68e56] [cursor=pointer]:
+              - /url: https://www.coupangplay.com/catalog
+              - img "쿠팡플레이" [ref=f68e57]
+              - generic [ref=f68e58]: 쿠팡플레이
+          - listitem [ref=f68e59]:
+            - link "로켓배송 로켓배송" [ref=f68e60] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/campaigns/82
+              - img "로켓배송" [ref=f68e61]
+              - generic [ref=f68e62]: 로켓배송
+          - listitem [ref=f68e63]:
+            - link "로켓프레시 로켓프레시" [ref=f68e64] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/categories/393760
+              - img "로켓프레시" [ref=f68e65]
+              - generic [ref=f68e66]: 로켓프레시
+          - listitem [ref=f68e67]:
+            - link "2026 추석 2026 추석" [ref=f68e68] [cursor=pointer]:
+              - /url: https://www.coupang.com/mlp/web/mlp-landing-page?landingId=4800
+              - img "2026 추석" [ref=f68e69]
+              - generic [ref=f68e70]: 2026 추석
+          - listitem [ref=f68e72]:
+            - link "다시 구매 다시 구매" [ref=f68e73] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/fbi?sourceType=home_section_fbi
+              - img "다시 구매" [ref=f68e74]
+              - generic [ref=f68e75]: 다시 구매
+          - listitem [ref=f68e77]:
+            - link "쿠팡비즈 쿠팡비즈" [ref=f68e78] [cursor=pointer]:
+              - /url: https://login.coupang.com/corporation/member/landing-page
+              - img "쿠팡비즈" [ref=f68e79]
+              - generic [ref=f68e80]: 쿠팡비즈
+          - listitem [ref=f68e81]:
+            - link "로켓직구 로켓직구" [ref=f68e82] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/coupangglobal
+              - img "로켓직구" [ref=f68e83]
+              - generic [ref=f68e84]: 로켓직구
+          - listitem [ref=f68e85]:
+            - link "골드박스 골드박스" [ref=f68e86] [cursor=pointer]:
+              - /url: https://www.coupang.com/mlp/web/mlp-landing-page?landingId=3712&sourceType=gm_crm_goldbox&subSourceType=gm_crm_gwsrtcut
+              - img "골드박스" [ref=f68e87]
+              - generic [ref=f68e88]: 골드박스
+          - listitem [ref=f68e89]:
+            - link "이달의신상 이달의신상" [ref=f68e90] [cursor=pointer]:
+              - /url: https://pages.coupang.com/p/136938
+              - img "이달의신상" [ref=f68e91]
+              - generic [ref=f68e92]: 이달의신상
+          - listitem [ref=f68e93]:
+            - link "입점신청 입점신청" [ref=f68e94] [cursor=pointer]:
+              - /url: https://wing.coupang.com/tenants/vendor-signup/signup?utm_source=button_pc_coupang_shortcut_1&utm_medium=non_paid&utm_id=onsite_ca&utm_content=202411
+              - img "입점신청" [ref=f68e95]
+              - generic [ref=f68e96]: 입점신청
+          - listitem [ref=f68e97]:
+            - link "판매자특가 판매자특가" [ref=f68e98] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/omp
+              - img "판매자특가" [ref=f68e99]
+              - generic [ref=f68e100]: 판매자특가
+          - listitem [ref=f68e101]:
+            - link "와우회원할인 와우회원할인" [ref=f68e102] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/campaigns/83
+              - img "와우회원할인" [ref=f68e103]
+              - generic [ref=f68e104]: 와우회원할인
+          - listitem [ref=f68e105]:
+            - link "반품마켓 반품마켓" [ref=f68e106] [cursor=pointer]:
+              - /url: https://pages.coupang.com/p/54908
+              - img "반품마켓" [ref=f68e107]
+              - generic [ref=f68e108]: 반품마켓
+          - listitem [ref=f68e109]:
+            - link "착한상점 착한상점" [ref=f68e110] [cursor=pointer]:
+              - /url: https://pages.coupang.com/p/63240
+              - img "착한상점" [ref=f68e111]
+              - generic [ref=f68e112]: 착한상점
+          - listitem [ref=f68e114]:
+            - link "기획전 기획전" [ref=f68e115] [cursor=pointer]:
+              - /url: https://pages.coupang.com/p/bep?sourceType=gm_crm_oms&subSourceType=gm_crm_gwsrtcut
+              - img "기획전" [ref=f68e116]
+              - generic [ref=f68e117]: 기획전
+          - listitem [ref=f68e118]:
+            - link "쿠팡트래블 쿠팡트래블" [ref=f68e119] [cursor=pointer]:
+              - /url: https://trip.coupang.com/?channel=gnb
+              - img "쿠팡트래블" [ref=f68e120]
+              - generic [ref=f68e121]: 쿠팡트래블
+  - article [ref=f68e123]:
+    - link "12% 강훈목장 수제요거트 블루베리, 1L, 1개입, 3개 광고 Ad information 더 알아보기" [ref=f68e127] [cursor=pointer]:
+      - /url: /vp/products/6497400457?itemId=19225556444&vendorItemId=86342200651&sourceType=srp_top_banner_ads&clickEventId=47aab4f0-adbd-11f1-8d00-a34414177f46&korePlacement=19
+      - generic [ref=f68e128]:
+        - generic [ref=f68e129]: 12%
+        - generic [ref=f68e135]: 강훈목장 수제요거트 블루베리, 1L, 1개입, 3개
+        - generic [ref=f68e139]:
+          - generic [ref=f68e140]: 광고
+          - button "Ad information" [ref=f68e141]
+      - generic [ref=f68e142]: 더 알아보기
+    - generic:
+      - link "장바구니" [ref=f68e144] [cursor=pointer]:
+        - /url: //cart.coupang.com/cartView.pang
+        - emphasis
+      - generic [ref=f68e146]:
+        - generic [ref=f68e147]: 최근본상품
+        - emphasis
+  - generic [ref=f68e150]:
+    - generic [ref=f68e153]:
+      - list [ref=f68e154]:
+        - listitem [ref=f68e155]:
+          - link "전체" [ref=f68e156] [cursor=pointer]:
+            - /url: /np/search?q=%EC%9A%94%EA%B1%B0%ED%8A%B8&filterType=rocket&sorter=salePriceAsc
+      - strong [ref=f68e160]: "'요거트'"
+    - generic [ref=f68e163]:
+      - generic [ref=f68e164]:
+        - generic [ref=f68e167]:
+          - generic [ref=f68e168]:
+            - heading "필터" [level=4] [ref=f68e169]
+            - button "전체해제" [ref=f68e171] [cursor=pointer]
+          - list [ref=f68e174]:
+            - listitem [ref=f68e175]:
+              - img "rocket_luxury,rocket,coupang_global" [ref=f68e179] [cursor=pointer]
+              - list [ref=f68e181]:
+                - listitem [ref=f68e182]:
+                  - generic:
+                    - generic:
+                      - img "rocket_luxury"
+                    - text: 만 보기
+                - listitem [ref=f68e183]:
+                  - generic [ref=f68e184] [cursor=pointer]:
+                    - img "rocket" [ref=f68e187]
+                    - text: 만 보기
+                - listitem [ref=f68e188]:
+                  - generic [ref=f68e189] [cursor=pointer]:
+                    - img "coupang_global" [ref=f68e192]
+                    - text: 만 보기
+            - listitem [ref=f68e193]:
+              - img "top_brand" [ref=f68e197] [cursor=pointer]
+            - listitem [ref=f68e198]:
+              - generic [ref=f68e199] [cursor=pointer]: 무료배송
+          - separator [ref=f68e201]
+          - generic [ref=f68e202]:
+            - heading "카테고리" [level=5] [ref=f68e203]
+            - generic [ref=f68e204]:
+              - list [ref=f68e205]:
+                - listitem [ref=f68e206]:
+                  - link "전체" [ref=f68e208] [cursor=pointer]:
+                    - /url: https://www.coupang.com
+                - listitem [ref=f68e209]:
+                  - link "식품" [ref=f68e211] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/194276
+                - listitem [ref=f68e212]:
+                  - link "싱글라이프" [ref=f68e214] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/433784
+                - listitem [ref=f68e215]:
+                  - link "출산/유아동" [ref=f68e217] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/221934
+                - listitem [ref=f68e218]:
+                  - link "로켓직구" [ref=f68e220] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/coupangglobal
+                - listitem:
+                  - link "쿠팡수입" [ref=f68e222] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/510691
+                - listitem:
+                  - link "주방용품" [ref=f68e224] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/185669
+                - listitem:
+                  - link "헬스/건강식품" [ref=f68e226] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/305798
+                - listitem:
+                  - link "결혼준비" [ref=f68e228] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/416130
+                - listitem:
+                  - link "뷰티" [ref=f68e230] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/176522
+                - listitem:
+                  - link "홈카페" [ref=f68e232] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/316168
+                - listitem:
+                  - link "패션의류/잡화" [ref=f68e234] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/564653
+                - listitem:
+                  - link "생활용품" [ref=f68e236] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/115673
+                - listitem:
+                  - link "반려동물용품" [ref=f68e238] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/115674
+                - listitem:
+                  - link "실버스토어" [ref=f68e240] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/383370
+                - listitem:
+                  - link "R.LUX" [ref=f68e242] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/campaigns/18530
+                - listitem:
+                  - link "스포츠/레저" [ref=f68e244] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/317778
+                - listitem:
+                  - link "홈인테리어" [ref=f68e246] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/184555
+                - listitem:
+                  - link "가전디지털" [ref=f68e248] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/178255
+                - listitem:
+                  - link "완구/취미" [ref=f68e250] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/317779
+                - listitem:
+                  - link "문구/오피스" [ref=f68e252] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/177295
+                - listitem:
+                  - link "미세먼지용품" [ref=f68e254] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/campaigns/17593
+                - listitem:
+                  - link "아트/공예" [ref=f68e256] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/410273
+                - listitem:
+                  - link "도서/음반/DVD" [ref=f68e258] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/317777
+                - listitem:
+                  - link "자동차용품" [ref=f68e260] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/184060
+                - listitem:
+                  - link "국내여행" [ref=f68e262] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/396463
+              - generic [ref=f68e263] [cursor=pointer]: + 더보기
+          - separator [ref=f68e264]
+          - generic [ref=f68e265]:
+            - heading "브랜드" [level=5] [ref=f68e266]
+            - generic [ref=f68e267]:
+              - list [ref=f68e268]:
+                - listitem [ref=f68e269]:
+                  - generic [ref=f68e270] [cursor=pointer]: 서울우유
+                - listitem [ref=f68e272]:
+                  - generic [ref=f68e273] [cursor=pointer]: 매일바이오
+                - listitem [ref=f68e275]:
+                  - generic [ref=f68e276] [cursor=pointer]: 그릭데이
+                - listitem [ref=f68e278]:
+                  - generic [ref=f68e279] [cursor=pointer]: 강훈목장
+                - listitem [ref=f68e281]:
+                  - generic [ref=f68e282] [cursor=pointer]: 불가리스
+                - listitem:
+                  - generic [ref=f68e284] [cursor=pointer]: gomgom
+                - listitem:
+                  - generic [ref=f68e286] [cursor=pointer]: 소와나무
+                - listitem:
+                  - generic [ref=f68e288] [cursor=pointer]: 풀무원
+                - listitem:
+                  - generic [ref=f68e290] [cursor=pointer]: 상하목장
+                - listitem:
+                  - generic [ref=f68e292] [cursor=pointer]: 요플레
+                - listitem:
+                  - generic [ref=f68e294] [cursor=pointer]: 덴마크
+                - listitem:
+                  - generic [ref=f68e296] [cursor=pointer]: 파스퇴르
+                - listitem:
+                  - generic [ref=f68e298] [cursor=pointer]: 비요뜨
+                - listitem:
+                  - generic [ref=f68e300] [cursor=pointer]: 다논
+                - listitem:
+                  - generic [ref=f68e302] [cursor=pointer]: 세브란스에이투
+                - listitem:
+                  - generic [ref=f68e304] [cursor=pointer]: 액티비아
+                - listitem:
+                  - generic [ref=f68e306] [cursor=pointer]: 런
+                - listitem:
+                  - generic [ref=f68e308] [cursor=pointer]: 요프로
+                - listitem:
+                  - generic [ref=f68e310] [cursor=pointer]: 후디스그릭요거트
+                - listitem:
+                  - generic [ref=f68e312] [cursor=pointer]: 덴마크하이
+              - generic [ref=f68e314] [cursor=pointer]: + 더보기
+          - separator [ref=f68e315]
+          - generic [ref=f68e316]:
+            - heading "상품 상태" [level=5] [ref=f68e317]
+            - list [ref=f68e319]:
+              - listitem [ref=f68e320]:
+                - generic [ref=f68e321] [cursor=pointer]: 새 상품
+              - listitem [ref=f68e323]:
+                - generic [ref=f68e324] [cursor=pointer]: 박스 훼손
+              - listitem [ref=f68e326]:
+                - generic [ref=f68e327] [cursor=pointer]: 재포장
+              - listitem [ref=f68e329]:
+                - generic [ref=f68e330] [cursor=pointer]: 리퍼
+              - listitem [ref=f68e332]:
+                - generic [ref=f68e333] [cursor=pointer]: 반품
+              - listitem [ref=f68e335]:
+                - generic [ref=f68e336] [cursor=pointer]: 중고
+          - separator [ref=f68e338]
+          - generic [ref=f68e339]:
+            - heading "낱개상품 여부" [level=5] [ref=f68e340]
+            - list [ref=f68e342]:
+              - listitem [ref=f68e343]:
+                - generic [ref=f68e344] [cursor=pointer]: 낱개상품
+          - separator [ref=f68e346]
+          - generic [ref=f68e347]:
+            - heading "총 수량" [level=5] [ref=f68e348]
+            - list [ref=f68e350]:
+              - listitem [ref=f68e351]:
+                - generic [ref=f68e352] [cursor=pointer]: 10개 이하
+              - listitem [ref=f68e354]:
+                - generic [ref=f68e355] [cursor=pointer]: 10~20개
+              - listitem [ref=f68e357]:
+                - generic [ref=f68e358] [cursor=pointer]: 20개 이상
+          - separator [ref=f68e360]
+          - generic [ref=f68e361]:
+            - heading "개당 중량" [level=5] [ref=f68e362]
+            - list [ref=f68e364]:
+              - listitem [ref=f68e365]:
+                - generic [ref=f68e366] [cursor=pointer]: 500g 이하
+              - listitem [ref=f68e368]:
+                - generic [ref=f68e369] [cursor=pointer]: 500g~1kg
+              - listitem [ref=f68e371]:
+                - generic [ref=f68e372] [cursor=pointer]: 1~3kg
+              - listitem [ref=f68e374]:
+                - generic [ref=f68e375] [cursor=pointer]: 3kg 이상
+          - separator [ref=f68e377]
+          - generic [ref=f68e378]:
+            - heading "개당 용량" [level=5] [ref=f68e379]
+            - generic [ref=f68e380]:
+              - list [ref=f68e381]:
+                - listitem [ref=f68e382]:
+                  - generic [ref=f68e383] [cursor=pointer]: 80ml 이하
+                - listitem [ref=f68e385]:
+                  - generic [ref=f68e386] [cursor=pointer]: 80~100ml
+                - listitem [ref=f68e388]:
+                  - generic [ref=f68e389] [cursor=pointer]: 100~120ml
+                - listitem [ref=f68e391]:
+                  - generic [ref=f68e392] [cursor=pointer]: 120~140ml
+                - listitem [ref=f68e394]:
+                  - generic [ref=f68e395] [cursor=pointer]: 140~160ml
+                - listitem:
+                  - generic [ref=f68e397] [cursor=pointer]: 160~180ml
+                - listitem:
+                  - generic [ref=f68e399] [cursor=pointer]: 180~200ml
+                - listitem:
+                  - generic [ref=f68e401] [cursor=pointer]: 200~240ml
+                - listitem:
+                  - generic [ref=f68e403] [cursor=pointer]: 240ml 이상
+              - generic [ref=f68e405] [cursor=pointer]: + 더보기
+          - separator [ref=f68e406]
+          - generic [ref=f68e407]:
+            - heading "섭취방법" [level=5] [ref=f68e408]
+            - list [ref=f68e410]:
+              - listitem [ref=f68e411]:
+                - generic [ref=f68e412] [cursor=pointer]: 떠먹는 요거트
+              - listitem [ref=f68e414]:
+                - generic [ref=f68e415] [cursor=pointer]: 마시는 요거트
+              - listitem [ref=f68e417]:
+                - generic [ref=f68e418] [cursor=pointer]: 짜먹는 요거트
+          - separator [ref=f68e420]
+          - generic [ref=f68e421]:
+            - heading "맛" [level=5] [ref=f68e422]
+            - generic [ref=f68e423]:
+              - list [ref=f68e424]:
+                - listitem [ref=f68e425]:
+                  - generic [ref=f68e426] [cursor=pointer]: 플레인
+                - listitem [ref=f68e428]:
+                  - generic [ref=f68e429] [cursor=pointer]: 딸기
+                - listitem [ref=f68e431]:
+                  - generic [ref=f68e432] [cursor=pointer]: 블루베리
+                - listitem [ref=f68e434]:
+                  - generic [ref=f68e435] [cursor=pointer]: 복숭아
+                - listitem [ref=f68e437]:
+                  - generic [ref=f68e438] [cursor=pointer]: 사과
+                - listitem:
+                  - generic [ref=f68e440] [cursor=pointer]: 혼합
+                - listitem:
+                  - generic [ref=f68e442] [cursor=pointer]: 기타
+              - generic [ref=f68e444] [cursor=pointer]: + 더보기
+          - separator [ref=f68e445]
+          - generic [ref=f68e446]:
+            - heading "용기형태" [level=5] [ref=f68e447]
+            - generic [ref=f68e448]:
+              - list [ref=f68e449]:
+                - listitem [ref=f68e450]:
+                  - generic [ref=f68e451] [cursor=pointer]: 플라스틱병
+                - listitem [ref=f68e453]:
+                  - generic [ref=f68e454] [cursor=pointer]: 유리병
+                - listitem [ref=f68e456]:
+                  - generic [ref=f68e457] [cursor=pointer]: 캔
+                - listitem [ref=f68e459]:
+                  - generic [ref=f68e460] [cursor=pointer]: 파우치
+                - listitem [ref=f68e462]:
+                  - generic [ref=f68e463] [cursor=pointer]: 종이팩
+                - listitem:
+                  - generic [ref=f68e465] [cursor=pointer]: 컵
+                - listitem:
+                  - generic [ref=f68e467] [cursor=pointer]: 스틱/포
+                - listitem:
+                  - generic [ref=f68e469] [cursor=pointer]: 튜브
+              - generic [ref=f68e471] [cursor=pointer]: + 더보기
+          - separator [ref=f68e472]
+          - generic [ref=f68e473]:
+            - heading "설탕함량" [level=5] [ref=f68e474]
+            - list [ref=f68e476]:
+              - listitem [ref=f68e477]:
+                - generic [ref=f68e478] [cursor=pointer]: 무설탕
+              - listitem [ref=f68e480]:
+                - generic [ref=f68e481] [cursor=pointer]: 저설탕
+              - listitem [ref=f68e483]:
+                - generic [ref=f68e484] [cursor=pointer]: 설탕첨가
+              - listitem [ref=f68e486]:
+                - generic [ref=f68e487] [cursor=pointer]: 당 첨가
+          - separator [ref=f68e489]
+          - generic [ref=f68e490]:
+            - heading "대용량 여부" [level=5] [ref=f68e491]
+            - list [ref=f68e493]:
+              - listitem [ref=f68e494]:
+                - generic [ref=f68e495] [cursor=pointer]: 대용량 (개당 400g 이상)
+          - separator [ref=f68e497]
+          - generic [ref=f68e498]:
+            - heading "종류" [level=5] [ref=f68e499]
+            - list [ref=f68e501]:
+              - listitem [ref=f68e502]:
+                - generic [ref=f68e503] [cursor=pointer]: 그릭
+              - listitem [ref=f68e505]:
+                - generic [ref=f68e506] [cursor=pointer]: 토핑
+              - listitem [ref=f68e508]:
+                - generic [ref=f68e509] [cursor=pointer]: 아기/어린이
+              - listitem [ref=f68e511]:
+                - generic [ref=f68e512] [cursor=pointer]: 요거트파우더
+              - listitem [ref=f68e514]:
+                - generic [ref=f68e515] [cursor=pointer]: 생크림
+          - separator [ref=f68e517]
+          - generic [ref=f68e518]:
+            - heading "당/지방함량" [level=5] [ref=f68e519]
+            - list [ref=f68e521]:
+              - listitem [ref=f68e522]:
+                - generic [ref=f68e523] [cursor=pointer]: 무가당
+              - listitem [ref=f68e525]:
+                - generic [ref=f68e526] [cursor=pointer]: 저지방
+              - listitem [ref=f68e528]:
+                - generic [ref=f68e529] [cursor=pointer]: 무지방
+          - separator [ref=f68e531]
+          - generic [ref=f68e532]:
+            - heading "1회 제공량당 열량" [level=5] [ref=f68e533]
+            - generic [ref=f68e534]:
+              - list [ref=f68e535]:
+                - listitem [ref=f68e536]:
+                  - generic [ref=f68e537] [cursor=pointer]: 0Kcal
+                - listitem [ref=f68e539]:
+                  - generic [ref=f68e540] [cursor=pointer]: 1Kcal 이상 ~ 20Kcal 이하
+                - listitem [ref=f68e542]:
+                  - generic [ref=f68e543] [cursor=pointer]: 20Kcal 이상 ~ 40Kcal 이하
+                - listitem [ref=f68e545]:
+                  - generic [ref=f68e546] [cursor=pointer]: 40Kcal 이상 ~ 100Kcal 이하
+                - listitem [ref=f68e548]:
+                  - generic [ref=f68e549] [cursor=pointer]: 100Kcal 이상 ~ 200Kcal 이하
+                - listitem:
+                  - generic [ref=f68e551] [cursor=pointer]: 200Kcal 이상 ~ 300Kcal 이하
+                - listitem:
+                  - generic [ref=f68e553] [cursor=pointer]: 300Kcal 이상
+              - generic [ref=f68e555] [cursor=pointer]: + 더보기
+          - separator [ref=f68e556]
+          - generic [ref=f68e557]:
+            - heading "보관방식" [level=5] [ref=f68e558]
+            - list [ref=f68e560]:
+              - listitem [ref=f68e561]:
+                - generic [ref=f68e562] [cursor=pointer]: 냉장보관
+              - listitem [ref=f68e564]:
+                - generic [ref=f68e565] [cursor=pointer]: 냉동보관
+              - listitem [ref=f68e567]:
+                - generic [ref=f68e568] [cursor=pointer]: 실온보관
+          - separator [ref=f68e570]
+          - generic [ref=f68e571]:
+            - heading "친환경 인증" [level=5] [ref=f68e572]
+            - list [ref=f68e574]:
+              - listitem [ref=f68e575]:
+                - generic [ref=f68e576] [cursor=pointer]: 유기
+              - listitem [ref=f68e578]:
+                - generic [ref=f68e579] [cursor=pointer]: 무농약
+              - listitem [ref=f68e581]:
+                - generic [ref=f68e582] [cursor=pointer]: 기타(무항생제 등)
+          - separator [ref=f68e584]
+          - generic [ref=f68e585]:
+            - heading "토핑 여부" [level=5] [ref=f68e586]
+            - list [ref=f68e588]:
+              - listitem [ref=f68e589]:
+                - generic [ref=f68e590] [cursor=pointer]: 토핑 있음
+          - separator [ref=f68e592]
+          - generic [ref=f68e593]:
+            - heading "별점" [level=5] [ref=f68e594]
+            - list [ref=f68e596]:
+              - listitem [ref=f68e597]:
+                - generic "전체" [ref=f68e598]: 별점전체
+              - listitem [ref=f68e599]:
+                - generic "4점 이상" [ref=f68e600]:
+                  - generic [ref=f68e601] [cursor=pointer]
+                  - text: 4점 이상
+              - listitem [ref=f68e602]:
+                - generic "3점 이상" [ref=f68e603]:
+                  - generic [ref=f68e604] [cursor=pointer]
+                  - text: 3점 이상
+              - listitem [ref=f68e605]:
+                - generic "2점 이상" [ref=f68e606]:
+                  - generic [ref=f68e607] [cursor=pointer]
+                  - text: 2점 이상
+              - listitem [ref=f68e608]:
+                - generic "1점 이상" [ref=f68e609]:
+                  - generic [ref=f68e610] [cursor=pointer]
+                  - text: 1점 이상
+          - separator [ref=f68e611]
+          - generic [ref=f68e612]:
+            - heading "가격" [level=5] [ref=f68e613]
+            - list [ref=f68e615]:
+              - listitem [ref=f68e616]:
+                - generic "priceFilter" [ref=f68e617]: 가격 전체
+              - listitem [ref=f68e618]:
+                - generic "priceFilter" [ref=f68e619]: 4천원 이하
+              - listitem [ref=f68e620]:
+                - generic "priceFilter" [ref=f68e621]: 4천원~8천원
+              - listitem [ref=f68e622]:
+                - generic "priceFilter" [ref=f68e623]: 8천원~1만 2천원
+              - listitem [ref=f68e624]:
+                - generic "priceFilter" [ref=f68e625]: 1만 2천원~1만 6천원
+              - listitem [ref=f68e626]:
+                - generic "priceFilter" [ref=f68e627]: 1만 6천원 이상
+            - generic [ref=f68e628]:
+              - generic [ref=f68e629]:
+                - textbox "minPrice" [ref=f68e630]
+                - generic [ref=f68e631]: ~
+                - textbox "maxPrice" [ref=f68e632]
+                - text: 원
+              - generic "priceFilter" [ref=f68e633]: 검색
+          - separator [ref=f68e634]
+        - generic [ref=f68e637]:
+          - generic [ref=f68e638]: 현재 검색 결과에 만족하셨나요?
+          - button [ref=f68e639] [cursor=pointer]
+          - button [ref=f68e640] [cursor=pointer]
+          - generic [ref=f68e641]:
+            - paragraph [ref=f68e642]: 어떤 문제가 있었나요?
+            - list [ref=f68e643]:
+              - listitem [ref=f68e644] [cursor=pointer]: 기타 원하는 옵션이 없어요
+      - generic [ref=f68e645]:
+        - generic [ref=f68e646]:
+          - heading [level=1] [ref=f68e647]:
+            - strong [ref=f68e648]: "'요거트'"
+            - text: 에 대한 검색결과
+          - generic [ref=f68e649]:
+            - text: "선택한 필터:"
+            - link "로켓배송 삭제" [ref=f68e651] [cursor=pointer]:
+              - /url: "#"
+              - text: 로켓배송
+              - generic [ref=f68e652]: 삭제
+          - generic [ref=f68e653]:
+            - generic [ref=f68e656]:
+              - checkbox "배송비 포함" [ref=f68e657] [cursor=pointer]
+              - generic [ref=f68e660]: 배송비 포함
+            - list [ref=f68e664]:
+              - listitem [ref=f68e665]:
+                - radio "쿠팡 랭킹순" [ref=f68e666]
+                - generic [ref=f68e667] [cursor=pointer]: 쿠팡 랭킹순
+                - generic [ref=f68e668]: 설명
+              - listitem [ref=f68e669]:
+                - radio "낮은가격순" [checked] [ref=f68e670]
+                - generic [ref=f68e671] [cursor=pointer]: 낮은가격순
+              - listitem [ref=f68e672]:
+                - radio "높은가격순" [ref=f68e673]
+                - generic [ref=f68e674] [cursor=pointer]: 높은가격순
+              - listitem [ref=f68e675]:
+                - radio "판매량순" [ref=f68e676]
+                - generic [ref=f68e677] [cursor=pointer]: 판매량순
+              - listitem [ref=f68e678]:
+                - radio "최신순" [ref=f68e679]
+                - generic [ref=f68e680] [cursor=pointer]: 최신순
+        - generic [ref=f68e685]:
+          - link [ref=f68e687] [cursor=pointer]:
+            - /url: https://shop.coupang.com/namyang/271773?source=brandstore_display_ads&adType=DA&eventId=E6hq1Xb90MzC71eA
+            - img "11765681" [ref=f68e688]
+          - link [ref=f68e690] [cursor=pointer]:
+            - /url: https://shop.coupang.com/namyang/481147?source=brandstore_display_ads&adType=DA&eventId=Kufemj5tyiN3jEIc
+            - img "11765679" [ref=f68e691]
+          - generic:
+            - link "11767410":
+              - /url: https://shop.coupang.com/A00003172/250068?source=brandstore_display_ads&adType=DA&eventId=U4giWuvU6Jg7Ysj3
+              - img "11767410"
+          - generic:
+            - link "11767396":
+              - /url: https://shop.coupang.com/A00003172/250068?source=brandstore_display_ads&adType=DA&eventId=4wSOWsObO0zwFH40
+              - img "11767396"
+          - generic:
+            - link "11765683":
+              - /url: https://shop.coupang.com/namyang/527009?source=brandstore_display_ads&adType=DA&eventId=JxufDCciRCN2LvNF
+              - img "11765683"
+        - generic [ref=f68e692]:
+          - list [ref=f68e694]:
+            - listitem [ref=f68e695] [cursor=pointer]:
+              - link "풀무원 액티비아 저지방 딸기 요구르트, 1개, 1개입, 150g 1,500원 (10g당 100원) 내일(토) 새벽 도착 보장 5 (2,563) 최대 75원 적립 최대 75원 적립 1" [ref=f68e696]:
+                - /url: /vp/products/8563864557?itemId=24803444499&vendorItemId=91811123110&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=0&rank=0
+                - figure [ref=f68e697]:
+                  - img "풀무원 액티비아 저지방 딸기 요구르트, 1개, 1개입, 150g" [ref=f68e698]
+                - generic [ref=f68e699]:
+                  - generic [ref=f68e701]: 풀무원 액티비아 저지방 딸기 요구르트, 1개, 1개입, 150g
+                  - generic [ref=f68e704]:
+                    - generic [ref=f68e705]: 1,500원
+                    - generic [ref=f68e706]: (10g당 100원)
+                  - generic [ref=f68e707]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e713]:
+                    - generic "5" [ref=f68e714]
+                    - generic [ref=f68e720]: (2,563)
+                  - generic [ref=f68e723]:
+                    - img "최대 75원 적립" [ref=f68e724]
+                    - generic [ref=f68e725]: 최대 75원 적립
+                  - generic [ref=f68e726]: "1"
+            - listitem [ref=f68e727] [cursor=pointer]:
+              - link "연세우유 플레인 요거트, 1개, 1개입, 300ml 1,600원 (10ml당 53원) 내일(토) 새벽 도착 보장 5 (218) 최대 80원 적립 최대 80원 적립 2" [ref=f68e728]:
+                - /url: /vp/products/9486780472?itemId=28250363448&vendorItemId=95203770895&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=1&rank=1
+                - figure [ref=f68e729]:
+                  - img "연세우유 플레인 요거트, 1개, 1개입, 300ml" [ref=f68e730]
+                - generic [ref=f68e731]:
+                  - generic [ref=f68e733]: 연세우유 플레인 요거트, 1개, 1개입, 300ml
+                  - generic [ref=f68e736]:
+                    - generic [ref=f68e737]: 1,600원
+                    - generic [ref=f68e738]: (10ml당 53원)
+                  - generic [ref=f68e739]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e745]:
+                    - generic "5" [ref=f68e746]
+                    - generic [ref=f68e752]: (218)
+                  - generic [ref=f68e755]:
+                    - img "최대 80원 적립" [ref=f68e756]
+                    - generic [ref=f68e757]: 최대 80원 적립
+                  - generic [ref=f68e758]: "2"
+            - listitem [ref=f68e759] [cursor=pointer]:
+              - link "풀무원 그릭 설탕무첨가 플레인, 150g, 1개 1,900원 (10g당 127원) 내일(토) 새벽 도착 보장 5 (68) 최대 95원 적립 최대 95원 적립 3" [ref=f68e760]:
+                - /url: /vp/products/9393801001?itemId=27897438222&vendorItemId=94856319698&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=2&rank=2
+                - figure [ref=f68e761]:
+                  - img "풀무원 그릭 설탕무첨가 플레인, 150g, 1개" [ref=f68e762]
+                - generic [ref=f68e763]:
+                  - generic [ref=f68e765]: 풀무원 그릭 설탕무첨가 플레인, 150g, 1개
+                  - generic [ref=f68e768]:
+                    - generic [ref=f68e769]: 1,900원
+                    - generic [ref=f68e770]: (10g당 127원)
+                  - generic [ref=f68e771]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e777]:
+                    - generic "5" [ref=f68e778]
+                    - generic [ref=f68e784]: (68)
+                  - generic [ref=f68e787]:
+                    - img "최대 95원 적립" [ref=f68e788]
+                    - generic [ref=f68e789]: 최대 95원 적립
+                  - generic [ref=f68e790]: "3"
+            - listitem [ref=f68e791] [cursor=pointer]:
+              - link "풀무원 다논 요거톡 스타볼 요거트, 132.25g, 2개 3,280원 39% 1,980원 (10g당 75원) 내일(토) 새벽 도착 보장 5 (33,202) 최대 99원 적립 최대 99원 적립 4" [ref=f68e792]:
+                - /url: /vp/products/2279371037?itemId=24402379165&vendorItemId=91417184138&pickType=COU_PICK&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=3&rank=3
+                - figure [ref=f68e793]:
+                  - img "풀무원 다논 요거톡 스타볼 요거트, 132.25g, 2개" [ref=f68e794]
+                - generic [ref=f68e795]:
+                  - generic [ref=f68e800]: 풀무원 다논 요거톡 스타볼 요거트, 132.25g, 2개
+                  - generic [ref=f68e801]:
+                    - deletion [ref=f68e803]: 3,280원
+                    - generic [ref=f68e805]:
+                      - generic [ref=f68e806]: 39%
+                      - generic [ref=f68e807]: 1,980원
+                      - generic [ref=f68e808]: (10g당 75원)
+                  - generic [ref=f68e809]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e815]:
+                    - generic "5" [ref=f68e816]
+                    - generic [ref=f68e822]: (33,202)
+                  - generic [ref=f68e825]:
+                    - img "최대 99원 적립" [ref=f68e826]
+                    - generic [ref=f68e827]: 최대 99원 적립
+                  - generic [ref=f68e828]: "4"
+            - listitem [ref=f68e829] [cursor=pointer]:
+              - link "풀무원 다논 요거톡 초코그래놀라 2개입, 129g, 1세트 3,280원 39% 1,980원 (10g당 77원) 내일(토) 새벽 도착 보장 5 (4,962) 최대 99원 적립 최대 99원 적립 5" [ref=f68e830]:
+                - /url: /vp/products/9019415733?itemId=24240486993&vendorItemId=91257525584&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=4&rank=4
+                - figure [ref=f68e831]:
+                  - img "풀무원 다논 요거톡 초코그래놀라 2개입, 129g, 1세트" [ref=f68e832]
+                - generic [ref=f68e833]:
+                  - generic [ref=f68e835]: 풀무원 다논 요거톡 초코그래놀라 2개입, 129g, 1세트
+                  - generic [ref=f68e836]:
+                    - deletion [ref=f68e838]: 3,280원
+                    - generic [ref=f68e840]:
+                      - generic [ref=f68e841]: 39%
+                      - generic [ref=f68e842]: 1,980원
+                      - generic [ref=f68e843]: (10g당 77원)
+                  - generic [ref=f68e844]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e850]:
+                    - generic "5" [ref=f68e851]
+                    - generic [ref=f68e857]: (4,962)
+                  - generic [ref=f68e860]:
+                    - img "최대 99원 적립" [ref=f68e861]
+                    - generic [ref=f68e862]: 최대 99원 적립
+                  - generic [ref=f68e863]: "5"
+            - listitem [ref=f68e864] [cursor=pointer]:
+              - link "연세유업 세브란스 A2 요거트 플레인 4개입, 1개, 80g 1,990원 (10g당 62원) 내일(토) 새벽 도착 보장 5 (4,039) 최대 100원 적립 최대 100원 적립 6" [ref=f68e865]:
+                - /url: /vp/products/8469535924?itemId=24503367084&vendorItemId=91516399590&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=5&rank=5
+                - figure [ref=f68e866]:
+                  - img "연세유업 세브란스 A2 요거트 플레인 4개입, 1개, 80g" [ref=f68e867]
+                - generic [ref=f68e868]:
+                  - generic [ref=f68e870]: 연세유업 세브란스 A2 요거트 플레인 4개입, 1개, 80g
+                  - generic [ref=f68e873]:
+                    - generic [ref=f68e874]: 1,990원
+                    - generic [ref=f68e875]: (10g당 62원)
+                  - generic [ref=f68e876]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e882]:
+                    - generic "5" [ref=f68e883]
+                    - generic [ref=f68e889]: (4,039)
+                  - generic [ref=f68e892]:
+                    - img "최대 100원 적립" [ref=f68e893]
+                    - generic [ref=f68e894]: 최대 100원 적립
+                  - generic [ref=f68e895]: "6"
+            - listitem [ref=f68e896] [cursor=pointer]:
+              - link "소와나무 동원 비피더스 명장 플레인 당저감 요구르트, 1개, 8개입, 125ml 2,480원 (10ml당 25원) 내일(토) 새벽 도착 보장 5 (953) 최대 124원 적립 최대 124원 적립 7" [ref=f68e897]:
+                - /url: /vp/products/9393778535?itemId=27897321514&vendorItemId=94856204720&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=6&rank=6
+                - figure [ref=f68e898]:
+                  - img "소와나무 동원 비피더스 명장 플레인 당저감 요구르트, 1개, 8개입, 125ml" [ref=f68e899]
+                - generic [ref=f68e900]:
+                  - generic [ref=f68e902]: 소와나무 동원 비피더스 명장 플레인 당저감 요구르트, 1개, 8개입, 125ml
+                  - generic [ref=f68e905]:
+                    - generic [ref=f68e906]: 2,480원
+                    - generic [ref=f68e907]: (10ml당 25원)
+                  - generic [ref=f68e908]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e914]:
+                    - generic "5" [ref=f68e915]
+                    - generic [ref=f68e921]: (953)
+                  - generic [ref=f68e924]:
+                    - img "최대 124원 적립" [ref=f68e925]
+                    - generic [ref=f68e926]: 최대 124원 적립
+                  - generic [ref=f68e927]: "7"
+            - listitem [ref=f68e928] [cursor=pointer]:
+              - link "풀무원다논 요거트 그릭시그니처, 150g, 1개입, 1개 2,380원 (10g당 159원) 내일(토) 새벽 도착 보장 5 (4,901) 최대 119원 적립 최대 119원 적립 8" [ref=f68e929]:
+                - /url: /vp/products/8115235810?itemId=23006214896&vendorItemId=90040098098&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=7&rank=7
+                - figure [ref=f68e930]:
+                  - img "풀무원다논 요거트 그릭시그니처, 150g, 1개입, 1개" [ref=f68e931]
+                - generic [ref=f68e932]:
+                  - generic [ref=f68e934]: 풀무원다논 요거트 그릭시그니처, 150g, 1개입, 1개
+                  - generic [ref=f68e937]:
+                    - generic [ref=f68e938]: 2,380원
+                    - generic [ref=f68e939]: (10g당 159원)
+                  - generic [ref=f68e940]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e946]:
+                    - generic "5" [ref=f68e947]
+                    - generic [ref=f68e953]: (4,901)
+                  - generic [ref=f68e956]:
+                    - img "최대 119원 적립" [ref=f68e957]
+                    - generic [ref=f68e958]: 최대 119원 적립
+                  - generic [ref=f68e959]: "8"
+            - listitem [ref=f68e960] [cursor=pointer]:
+              - link "서울우유 요거트 플레인, 380g, 1개입, 1개 2,690원 (10g당 71원) 내일(토) 새벽 도착 보장 5 (9,227) 최대 135원 적립 최대 135원 적립 9" [ref=f68e961]:
+                - /url: /vp/products/7991089427?itemId=22212404986&vendorItemId=89258429470&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=8&rank=8
+                - figure [ref=f68e962]:
+                  - img "서울우유 요거트 플레인, 380g, 1개입, 1개" [ref=f68e963]
+                - generic [ref=f68e964]:
+                  - generic [ref=f68e966]: 서울우유 요거트 플레인, 380g, 1개입, 1개
+                  - generic [ref=f68e969]:
+                    - generic [ref=f68e970]: 2,690원
+                    - generic [ref=f68e971]: (10g당 71원)
+                  - generic [ref=f68e972]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e978]:
+                    - generic "5" [ref=f68e979]
+                    - generic [ref=f68e985]: (9,227)
+                  - generic [ref=f68e988]:
+                    - img "최대 135원 적립" [ref=f68e989]
+                    - generic [ref=f68e990]: 최대 135원 적립
+                  - generic [ref=f68e991]: "9"
+            - listitem [ref=f68e992] [cursor=pointer]:
+              - link "요플레 바이오플레 플레인, 130ml, 8개입, 1개 2,700원 (10ml당 26원) 내일(토) 새벽 도착 보장 5 (35,388) 최대 135원 적립 최대 135원 적립 10" [ref=f68e993]:
+                - /url: /vp/products/129241308?itemId=380699746&vendorItemId=3922486429&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=9&rank=9
+                - figure [ref=f68e994]:
+                  - img "요플레 바이오플레 플레인, 130ml, 8개입, 1개" [ref=f68e995]
+                - generic [ref=f68e996]:
+                  - generic [ref=f68e998]: 요플레 바이오플레 플레인, 130ml, 8개입, 1개
+                  - generic [ref=f68e1001]:
+                    - generic [ref=f68e1002]: 2,700원
+                    - generic [ref=f68e1003]: (10ml당 26원)
+                  - generic [ref=f68e1004]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e1010]:
+                    - generic "5" [ref=f68e1011]
+                    - generic [ref=f68e1017]: (35,388)
+                  - generic [ref=f68e1020]:
+                    - img "최대 135원 적립" [ref=f68e1021]
+                    - generic [ref=f68e1022]: 최대 135원 적립
+                  - generic [ref=f68e1023]: "10"
+            - listitem [ref=f68e1024] [cursor=pointer]:
+              - link "곰곰 플레인 요거트 (마시는타입), 1개, 750ml 2,480원 내일(토) 새벽 도착 보장 4.5 (1,818) 최대 124원 적립 최대 124원 적립" [ref=f68e1025]:
+                - /url: /vp/products/9233326263?itemId=27295573116&vendorItemId=94262145246&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=10&rank=10
+                - figure [ref=f68e1026]:
+                  - img "곰곰 플레인 요거트 (마시는타입), 1개, 750ml" [ref=f68e1027]
+                - generic [ref=f68e1028]:
+                  - generic [ref=f68e1030]: 곰곰 플레인 요거트 (마시는타입), 1개, 750ml
+                  - generic [ref=f68e1031]: 2,480원
+                  - generic [ref=f68e1035]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e1041]:
+                    - generic "4.5" [ref=f68e1042]
+                    - generic [ref=f68e1048]: (1,818)
+                  - generic [ref=f68e1051]:
+                    - img "최대 124원 적립" [ref=f68e1052]
+                    - generic [ref=f68e1053]: 최대 124원 적립
+            - listitem [ref=f68e1054] [cursor=pointer]:
+              - link "서울우유 요거트 블루베리, 380g, 1개입, 1개 2,480원 (10g당 65원) 내일(토) 새벽 도착 보장 5 (4,063) 최대 124원 적립 최대 124원 적립" [ref=f68e1055]:
+                - /url: /vp/products/8230214990?itemId=23685873824&vendorItemId=90711050967&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=11&rank=11
+                - figure [ref=f68e1056]:
+                  - img "서울우유 요거트 블루베리, 380g, 1개입, 1개" [ref=f68e1057]
+                - generic [ref=f68e1058]:
+                  - generic [ref=f68e1060]: 서울우유 요거트 블루베리, 380g, 1개입, 1개
+                  - generic [ref=f68e1063]:
+                    - generic [ref=f68e1064]: 2,480원
+                    - generic [ref=f68e1065]: (10g당 65원)
+                  - generic [ref=f68e1066]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e1072]:
+                    - generic "5" [ref=f68e1073]
+                    - generic [ref=f68e1079]: (4,063)
+                  - generic [ref=f68e1082]:
+                    - img "최대 124원 적립" [ref=f68e1083]
+                    - generic [ref=f68e1084]: 최대 124원 적립
+            - listitem [ref=f68e1085] [cursor=pointer]:
+              - link "서울우유 요거트 딸기, 380g, 1개입, 1개 2,480원 (10g당 65원) 내일(토) 새벽 도착 보장 5 (4,295) 최대 124원 적립 최대 124원 적립" [ref=f68e1086]:
+                - /url: /vp/products/8230214992?itemId=23685873825&vendorItemId=90711050974&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=12&rank=12
+                - figure [ref=f68e1087]:
+                  - img "서울우유 요거트 딸기, 380g, 1개입, 1개" [ref=f68e1088]
+                - generic [ref=f68e1089]:
+                  - generic [ref=f68e1091]: 서울우유 요거트 딸기, 380g, 1개입, 1개
+                  - generic [ref=f68e1094]:
+                    - generic [ref=f68e1095]: 2,480원
+                    - generic [ref=f68e1096]: (10g당 65원)
+                  - generic [ref=f68e1097]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e1103]:
+                    - generic "5" [ref=f68e1104]
+                    - generic [ref=f68e1110]: (4,295)
+                  - generic [ref=f68e1113]:
+                    - img "최대 124원 적립" [ref=f68e1114]
+                    - generic [ref=f68e1115]: 최대 124원 적립
+            - listitem [ref=f68e1116] [cursor=pointer]:
+              - link "곰곰 무가당 플레인 요거트, 450g, 1개 2,630원 (10g당 58원) 내일(토) 새벽 도착 보장 4.5 (2,646) 최대 131원 적립 최대 131원 적립" [ref=f68e1117]:
+                - /url: /vp/products/9040028814?itemId=26523573397&vendorItemId=93497881816&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=13&rank=13
+                - figure [ref=f68e1118]:
+                  - img "곰곰 무가당 플레인 요거트, 450g, 1개" [ref=f68e1119]
+                - generic [ref=f68e1120]:
+                  - generic [ref=f68e1122]: 곰곰 무가당 플레인 요거트, 450g, 1개
+                  - generic [ref=f68e1125]:
+                    - generic [ref=f68e1126]: 2,630원
+                    - generic [ref=f68e1127]: (10g당 58원)
+                  - generic [ref=f68e1128]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e1134]:
+                    - generic "4.5" [ref=f68e1135]
+                    - generic [ref=f68e1141]: (2,646)
+                  - generic [ref=f68e1144]:
+                    - img "최대 131원 적립" [ref=f68e1145]
+                    - generic [ref=f68e1146]: 최대 131원 적립
+            - listitem [ref=f68e1147] [cursor=pointer]:
+              - link "남양유업 불가리스 유당제로 요거트 복숭아, 80g, 4개 2,680원 (10g당 84원) 내일(토) 새벽 도착 보장 5 (7,755) 최대 134원 적립 최대 134원 적립" [ref=f68e1148]:
+                - /url: /vp/products/8399368783?itemId=24279182543&vendorItemId=91295556617&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=14&rank=14
+                - figure [ref=f68e1149]:
+                  - img "남양유업 불가리스 유당제로 요거트 복숭아, 80g, 4개" [ref=f68e1150]
+                - generic [ref=f68e1151]:
+                  - generic [ref=f68e1153]: 남양유업 불가리스 유당제로 요거트 복숭아, 80g, 4개
+                  - generic [ref=f68e1156]:
+                    - generic [ref=f68e1157]: 2,680원
+                    - generic [ref=f68e1158]: (10g당 84원)
+                  - generic [ref=f68e1159]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e1165]:
+                    - generic "5" [ref=f68e1166]
+                    - generic [ref=f68e1172]: (7,755)
+                  - generic [ref=f68e1175]:
+                    - img "최대 134원 적립" [ref=f68e1176]
+                    - generic [ref=f68e1177]: 최대 134원 적립
+            - listitem [ref=f68e1178] [cursor=pointer]:
+              - link "불가리스 유당 제로 요거트 딸기, 80g, 4개 2,680원 (10g당 84원) 내일(토) 새벽 도착 보장 5 (5,947) 최대 134원 적립 최대 134원 적립" [ref=f68e1179]:
+                - /url: /vp/products/8399368777?itemId=24279182539&vendorItemId=91295556600&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=15&rank=15
+                - figure [ref=f68e1180]:
+                  - img "불가리스 유당 제로 요거트 딸기, 80g, 4개" [ref=f68e1181]
+                - generic [ref=f68e1182]:
+                  - generic [ref=f68e1184]: 불가리스 유당 제로 요거트 딸기, 80g, 4개
+                  - generic [ref=f68e1187]:
+                    - generic [ref=f68e1188]: 2,680원
+                    - generic [ref=f68e1189]: (10g당 84원)
+                  - generic [ref=f68e1190]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e1196]:
+                    - generic "5" [ref=f68e1197]
+                    - generic [ref=f68e1203]: (5,947)
+                  - generic [ref=f68e1206]:
+                    - img "최대 134원 적립" [ref=f68e1207]
+                    - generic [ref=f68e1208]: 최대 134원 적립
+            - listitem [ref=f68e1209] [cursor=pointer]:
+              - link "남양유업 불가리스 유당제로 요거트 플레인, 80g, 4개 2,680원 (10g당 84원) 내일(토) 새벽 도착 보장 5 (5,372) 최대 134원 적립 최대 134원 적립" [ref=f68e1210]:
+                - /url: /vp/products/8399368789?itemId=24279182549&vendorItemId=91295556628&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=16&rank=16
+                - figure [ref=f68e1211]:
+                  - img "남양유업 불가리스 유당제로 요거트 플레인, 80g, 4개" [ref=f68e1212]
+                - generic [ref=f68e1213]:
+                  - generic [ref=f68e1215]: 남양유업 불가리스 유당제로 요거트 플레인, 80g, 4개
+                  - generic [ref=f68e1218]:
+                    - generic [ref=f68e1219]: 2,680원
+                    - generic [ref=f68e1220]: (10g당 84원)
+                  - generic [ref=f68e1221]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e1227]:
+                    - generic "5" [ref=f68e1228]
+                    - generic [ref=f68e1234]: (5,372)
+                  - generic [ref=f68e1237]:
+                    - img "최대 134원 적립" [ref=f68e1238]
+                    - generic [ref=f68e1239]: 최대 134원 적립
+            - listitem [ref=f68e1240] [cursor=pointer]:
+              - link "요플레 바이오플레 사과, 130ml, 8개입, 1개 2,700원 (10ml당 26원) 내일(토) 새벽 도착 보장 5 (124,009) 최대 135원 적립 최대 135원 적립" [ref=f68e1241]:
+                - /url: /vp/products/130232621?itemId=383267711&vendorItemId=3930466763&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=17&rank=17
+                - figure [ref=f68e1242]:
+                  - img "요플레 바이오플레 사과, 130ml, 8개입, 1개" [ref=f68e1243]
+                - generic [ref=f68e1244]:
+                  - generic [ref=f68e1246]: 요플레 바이오플레 사과, 130ml, 8개입, 1개
+                  - generic [ref=f68e1249]:
+                    - generic [ref=f68e1250]: 2,700원
+                    - generic [ref=f68e1251]: (10ml당 26원)
+                  - generic [ref=f68e1252]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e1258]:
+                    - generic "5" [ref=f68e1259]
+                    - generic [ref=f68e1265]: (124,009)
+                  - generic [ref=f68e1268]:
+                    - img "최대 135원 적립" [ref=f68e1269]
+                    - generic [ref=f68e1270]: 최대 135원 적립
+            - listitem [ref=f68e1271] [cursor=pointer]:
+              - link "덴마크 떠먹는 요거트 포스트 바이오틱스 플레인, 450g, 1개입, 1개 3,020원 (10g당 67원) 내일(토) 새벽 도착 보장 5 (4,177) 최대 151원 적립 최대 151원 적립" [ref=f68e1272]:
+                - /url: /vp/products/7351031375?itemId=18916423478&vendorItemId=86043655801&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=18&rank=18
+                - figure [ref=f68e1273]:
+                  - img "덴마크 떠먹는 요거트 포스트 바이오틱스 플레인, 450g, 1개입, 1개" [ref=f68e1274]
+                - generic [ref=f68e1275]:
+                  - generic [ref=f68e1277]: 덴마크 떠먹는 요거트 포스트 바이오틱스 플레인, 450g, 1개입, 1개
+                  - generic [ref=f68e1280]:
+                    - generic [ref=f68e1281]: 3,020원
+                    - generic [ref=f68e1282]: (10g당 67원)
+                  - generic [ref=f68e1283]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e1289]:
+                    - generic "5" [ref=f68e1290]
+                    - generic [ref=f68e1296]: (4,177)
+                  - generic [ref=f68e1299]:
+                    - img "최대 151원 적립" [ref=f68e1300]
+                    - generic [ref=f68e1301]: 최대 151원 적립
+            - listitem [ref=f68e1302] [cursor=pointer]:
+              - link "덴마크 동원 하이 그릭요거트 고단백 무가당 플레인, 80g, 4개 2,780원 (10g당 87원) 내일(토) 새벽 도착 보장 5 (4,040) 최대 139원 적립 최대 139원 적립" [ref=f68e1303]:
+                - /url: /vp/products/9380737092?itemId=27849399210&vendorItemId=94808797589&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=19&rank=19
+                - figure [ref=f68e1304]:
+                  - img "덴마크 동원 하이 그릭요거트 고단백 무가당 플레인, 80g, 4개" [ref=f68e1305]
+                - generic [ref=f68e1306]:
+                  - generic [ref=f68e1308]: 덴마크 동원 하이 그릭요거트 고단백 무가당 플레인, 80g, 4개
+                  - generic [ref=f68e1311]:
+                    - generic [ref=f68e1312]: 2,780원
+                    - generic [ref=f68e1313]: (10g당 87원)
+                  - generic [ref=f68e1314]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e1320]:
+                    - generic "5" [ref=f68e1321]
+                    - generic [ref=f68e1327]: (4,040)
+                  - generic [ref=f68e1330]:
+                    - img "최대 139원 적립" [ref=f68e1331]
+                    - generic [ref=f68e1332]: 최대 139원 적립
+            - listitem [ref=f68e1333] [cursor=pointer]:
+              - link "곰곰 망고 듬뿍 요거트, 750ml, 1개 2,880원 (10ml당 38원) 내일(토) 새벽 도착 보장 5 (12,130) 최대 144원 적립 최대 144원 적립" [ref=f68e1334]:
+                - /url: /vp/products/8585134057?itemId=24887821418&vendorItemId=91894491780&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=20&rank=20
+                - figure [ref=f68e1335]:
+                  - img "곰곰 망고 듬뿍 요거트, 750ml, 1개" [ref=f68e1336]
+                - generic [ref=f68e1337]:
+                  - generic [ref=f68e1339]: 곰곰 망고 듬뿍 요거트, 750ml, 1개
+                  - generic [ref=f68e1342]:
+                    - generic [ref=f68e1343]: 2,880원
+                    - generic [ref=f68e1344]: (10ml당 38원)
+                  - generic [ref=f68e1345]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e1351]:
+                    - generic "5" [ref=f68e1352]
+                    - generic [ref=f68e1358]: (12,130)
+                  - generic [ref=f68e1361]:
+                    - img "최대 144원 적립" [ref=f68e1362]
+                    - generic [ref=f68e1363]: 최대 144원 적립
+            - listitem [ref=f68e1364] [cursor=pointer]:
+              - link "곰곰 베리믹스 요거트, 1개, 750ml 2,880원 내일(토) 새벽 도착 보장 5 (1,846) 최대 144원 적립 최대 144원 적립" [ref=f68e1365]:
+                - /url: /vp/products/9233326259?itemId=27295573107&vendorItemId=94262145245&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=21&rank=21
+                - figure [ref=f68e1366]:
+                  - img "곰곰 베리믹스 요거트, 1개, 750ml" [ref=f68e1367]
+                - generic [ref=f68e1368]:
+                  - generic [ref=f68e1370]: 곰곰 베리믹스 요거트, 1개, 750ml
+                  - generic [ref=f68e1371]: 2,880원
+                  - generic [ref=f68e1375]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e1381]:
+                    - generic "5" [ref=f68e1382]
+                    - generic [ref=f68e1388]: (1,846)
+                  - generic [ref=f68e1391]:
+                    - img "최대 144원 적립" [ref=f68e1392]
+                    - generic [ref=f68e1393]: 최대 144원 적립
+            - listitem [ref=f68e1394] [cursor=pointer]:
+              - link "매일바이오 무가당 플레인, 450g, 1개 2,940원 (10g당 65원) 내일(토) 새벽 도착 보장 5 (135,151) 최대 147원 적립 최대 147원 적립" [ref=f68e1395]:
+                - /url: /vp/products/1477952039?itemId=335040131&vendorItemId=3822099450&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=22&rank=22
+                - figure [ref=f68e1396]:
+                  - img "매일바이오 무가당 플레인, 450g, 1개" [ref=f68e1397]
+                - generic [ref=f68e1398]:
+                  - generic [ref=f68e1400]: 매일바이오 무가당 플레인, 450g, 1개
+                  - generic [ref=f68e1403]:
+                    - generic [ref=f68e1404]: 2,940원
+                    - generic [ref=f68e1405]: (10g당 65원)
+                  - generic [ref=f68e1406]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e1412]:
+                    - generic "5" [ref=f68e1413]
+                    - generic [ref=f68e1419]: (135,151)
+                  - generic [ref=f68e1422]:
+                    - img "최대 147원 적립" [ref=f68e1423]
+                    - generic [ref=f68e1424]: 최대 147원 적립
+            - listitem [ref=f68e1425] [cursor=pointer]:
+              - link "매일바이오 플레인 저지방 요거트, 450g, 1개입, 1개 2,940원 (10g당 65원) 내일(토) 새벽 도착 보장 5 (66,091) 최대 147원 적립 최대 147원 적립" [ref=f68e1426]:
+                - /url: /vp/products/116345488?itemId=348494130&vendorItemId=3850674730&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=23&rank=23
+                - figure [ref=f68e1427]:
+                  - img "매일바이오 플레인 저지방 요거트, 450g, 1개입, 1개" [ref=f68e1428]
+                - generic [ref=f68e1429]:
+                  - generic [ref=f68e1431]: 매일바이오 플레인 저지방 요거트, 450g, 1개입, 1개
+                  - generic [ref=f68e1434]:
+                    - generic [ref=f68e1435]: 2,940원
+                    - generic [ref=f68e1436]: (10g당 65원)
+                  - generic [ref=f68e1437]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e1443]:
+                    - generic "5" [ref=f68e1444]
+                    - generic [ref=f68e1450]: (66,091)
+                  - generic [ref=f68e1453]:
+                    - img "최대 147원 적립" [ref=f68e1454]
+                    - generic [ref=f68e1455]: 최대 147원 적립
+            - listitem [ref=f68e1456] [cursor=pointer]:
+              - link "곰곰 딸기 듬뿍 요거트, 750ml, 1개 2,990원 (10ml당 40원) 내일(토) 새벽 도착 보장 5 (11,823) 최대 150원 적립 최대 150원 적립" [ref=f68e1457]:
+                - /url: /vp/products/8585134060?itemId=24887821422&vendorItemId=91894491782&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=24&rank=24
+                - figure [ref=f68e1458]:
+                  - img "곰곰 딸기 듬뿍 요거트, 750ml, 1개" [ref=f68e1459]
+                - generic [ref=f68e1460]:
+                  - generic [ref=f68e1462]: 곰곰 딸기 듬뿍 요거트, 750ml, 1개
+                  - generic [ref=f68e1465]:
+                    - generic [ref=f68e1466]: 2,990원
+                    - generic [ref=f68e1467]: (10ml당 40원)
+                  - generic [ref=f68e1468]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e1474]:
+                    - generic "5" [ref=f68e1475]
+                    - generic [ref=f68e1481]: (11,823)
+                  - generic [ref=f68e1484]:
+                    - img "최대 150원 적립" [ref=f68e1485]
+                    - generic [ref=f68e1486]: 최대 150원 적립
+            - listitem [ref=f68e1487] [cursor=pointer]:
+              - link "불가리스 락토프리 그릭요거트 프로틴, 150g, 2개 3,120원 (10g당 104원) 내일(토) 새벽 도착 보장 5 (1,155) 최대 156원 적립 최대 156원 적립" [ref=f68e1488]:
+                - /url: /vp/products/9574455015?itemId=28675792352&vendorItemId=95617606369&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=25&rank=25
+                - figure [ref=f68e1489]:
+                  - img "불가리스 락토프리 그릭요거트 프로틴, 150g, 2개" [ref=f68e1490]
+                - generic [ref=f68e1491]:
+                  - generic [ref=f68e1493]: 불가리스 락토프리 그릭요거트 프로틴, 150g, 2개
+                  - generic [ref=f68e1496]:
+                    - generic [ref=f68e1497]: 3,120원
+                    - generic [ref=f68e1498]: (10g당 104원)
+                  - generic [ref=f68e1499]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e1505]:
+                    - generic "5" [ref=f68e1506]
+                    - generic [ref=f68e1512]: (1,155)
+                  - generic [ref=f68e1515]:
+                    - img "최대 156원 적립" [ref=f68e1516]
+                    - generic [ref=f68e1517]: 최대 156원 적립
+            - listitem [ref=f68e1518] [cursor=pointer]:
+              - link "매일바이오 딸기 요거트, 85g, 4개 3,180원 (10g당 94원) 내일(토) 새벽 도착 보장 5 (2,061) 최대 159원 적립 최대 159원 적립 품절임박" [ref=f68e1519]:
+                - /url: /vp/products/6617555135?itemId=2360398957&vendorItemId=70356785737&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=26&rank=26
+                - figure [ref=f68e1520]:
+                  - img "매일바이오 딸기 요거트, 85g, 4개" [ref=f68e1521]
+                - generic [ref=f68e1522]:
+                  - generic [ref=f68e1524]: 매일바이오 딸기 요거트, 85g, 4개
+                  - generic [ref=f68e1527]:
+                    - generic [ref=f68e1528]: 3,180원
+                    - generic [ref=f68e1529]: (10g당 94원)
+                  - generic [ref=f68e1530]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e1536]:
+                    - generic "5" [ref=f68e1537]
+                    - generic [ref=f68e1543]: (2,061)
+                  - generic [ref=f68e1546]:
+                    - img "최대 159원 적립" [ref=f68e1547]
+                    - generic [ref=f68e1548]: 최대 159원 적립
+                  - generic [ref=f68e1549]: 품절임박
+            - listitem [ref=f68e1551] [cursor=pointer]:
+              - link "매일바이오 무가당 플레인, 85g, 4개 3,180원 (10g당 94원) 내일(토) 새벽 도착 보장 5 (135,151) 최대 159원 적립 최대 159원 적립" [ref=f68e1552]:
+                - /url: /vp/products/1477952039?itemId=2539281776&vendorItemId=70532038387&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=27&rank=27
+                - figure [ref=f68e1553]:
+                  - img "매일바이오 무가당 플레인, 85g, 4개" [ref=f68e1554]
+                - generic [ref=f68e1555]:
+                  - generic [ref=f68e1557]: 매일바이오 무가당 플레인, 85g, 4개
+                  - generic [ref=f68e1560]:
+                    - generic [ref=f68e1561]: 3,180원
+                    - generic [ref=f68e1562]: (10g당 94원)
+                  - generic [ref=f68e1563]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e1569]:
+                    - generic "5" [ref=f68e1570]
+                    - generic [ref=f68e1576]: (135,151)
+                  - generic [ref=f68e1579]:
+                    - img "최대 159원 적립" [ref=f68e1580]
+                    - generic [ref=f68e1581]: 최대 159원 적립
+            - listitem [ref=f68e1582] [cursor=pointer]:
+              - link "남양유업 불가리스 락토프리 그릭요거트, 400g, 1개 할인 3,780원 5% 3,580원 (10g당 90원) 내일(토) 새벽 도착 보장 5 (18,572) 최대 169원 적립 최대 169원 적립" [ref=f68e1583]:
+                - /url: /vp/products/7525491587?itemId=19746722706&vendorItemId=86850310349&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=28&rank=28
+                - figure [ref=f68e1584]:
+                  - img "남양유업 불가리스 락토프리 그릭요거트, 400g, 1개" [ref=f68e1585]
+                - generic [ref=f68e1586]:
+                  - generic [ref=f68e1588]: 남양유업 불가리스 락토프리 그릭요거트, 400g, 1개
+                  - generic [ref=f68e1589]:
+                    - generic [ref=f68e1590]:
+                      - generic [ref=f68e1591]: 할인
+                      - deletion [ref=f68e1592]: 3,780원
+                    - generic [ref=f68e1594]:
+                      - generic [ref=f68e1595]: 5%
+                      - generic [ref=f68e1600]: 3,580원
+                      - generic [ref=f68e1601]: (10g당 90원)
+                  - generic [ref=f68e1602]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e1608]:
+                    - generic "5" [ref=f68e1609]
+                    - generic [ref=f68e1615]: (18,572)
+                  - generic [ref=f68e1618]:
+                    - img "최대 169원 적립" [ref=f68e1619]
+                    - generic [ref=f68e1620]: 최대 169원 적립
+            - listitem [ref=f68e1621] [cursor=pointer]:
+              - link "불가리스 락토프리 그릭요거트 알룰로스, 400g, 1개 할인 3,780원 5% 3,580원 (10g당 90원) 내일(토) 새벽 도착 보장 5 (1,155) 최대 169원 적립 최대 169원 적립" [ref=f68e1622]:
+                - /url: /vp/products/9574455015?itemId=28578620001&vendorItemId=95522750633&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=29&rank=29
+                - figure [ref=f68e1623]:
+                  - img "불가리스 락토프리 그릭요거트 알룰로스, 400g, 1개" [ref=f68e1624]
+                - generic [ref=f68e1625]:
+                  - generic [ref=f68e1627]: 불가리스 락토프리 그릭요거트 알룰로스, 400g, 1개
+                  - generic [ref=f68e1628]:
+                    - generic [ref=f68e1629]:
+                      - generic [ref=f68e1630]: 할인
+                      - deletion [ref=f68e1631]: 3,780원
+                    - generic [ref=f68e1633]:
+                      - generic [ref=f68e1634]: 5%
+                      - generic [ref=f68e1639]: 3,580원
+                      - generic [ref=f68e1640]: (10g당 90원)
+                  - generic [ref=f68e1641]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e1647]:
+                    - generic "5" [ref=f68e1648]
+                    - generic [ref=f68e1654]: (1,155)
+                  - generic [ref=f68e1657]:
+                    - img "최대 169원 적립" [ref=f68e1658]
+                    - generic [ref=f68e1659]: 최대 169원 적립
+            - listitem [ref=f68e1660] [cursor=pointer]:
+              - link "연세유업 연세 요거트 복숭아, 320g, 2개 3,470원 (10g당 54원) 내일(토) 새벽 도착 보장 5 (1,685) 최대 174원 적립 최대 174원 적립" [ref=f68e1661]:
+                - /url: /vp/products/8415152658?itemId=24414415707&vendorItemId=91428936988&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=30&rank=30
+                - figure [ref=f68e1662]:
+                  - img "연세유업 연세 요거트 복숭아, 320g, 2개" [ref=f68e1663]
+                - generic [ref=f68e1664]:
+                  - generic [ref=f68e1666]: 연세유업 연세 요거트 복숭아, 320g, 2개
+                  - generic [ref=f68e1669]:
+                    - generic [ref=f68e1670]: 3,470원
+                    - generic [ref=f68e1671]: (10g당 54원)
+                  - generic [ref=f68e1672]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e1678]:
+                    - generic "5" [ref=f68e1679]
+                    - generic [ref=f68e1685]: (1,685)
+                  - generic [ref=f68e1688]:
+                    - img "최대 174원 적립" [ref=f68e1689]
+                    - generic [ref=f68e1690]: 최대 174원 적립
+            - listitem [ref=f68e1691] [cursor=pointer]:
+              - link "매일바이오 그릭요거트 무가당 플레인, 400g, 1개 3,490원 (10g당 87원) 내일(토) 새벽 도착 보장 5 (184,352) 최대 175원 적립 최대 175원 적립" [ref=f68e1692]:
+                - /url: /vp/products/7216495213?itemId=18276534652&vendorItemId=85422597428&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=31&rank=31
+                - figure [ref=f68e1693]:
+                  - img "매일바이오 그릭요거트 무가당 플레인, 400g, 1개" [ref=f68e1694]
+                - generic [ref=f68e1695]:
+                  - generic [ref=f68e1697]: 매일바이오 그릭요거트 무가당 플레인, 400g, 1개
+                  - generic [ref=f68e1700]:
+                    - generic [ref=f68e1701]: 3,490원
+                    - generic [ref=f68e1702]: (10g당 87원)
+                  - generic [ref=f68e1703]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e1709]:
+                    - generic "5" [ref=f68e1710]
+                    - generic [ref=f68e1716]: (184,352)
+                  - generic [ref=f68e1719]:
+                    - img "최대 175원 적립" [ref=f68e1720]
+                    - generic [ref=f68e1721]: 최대 175원 적립
+            - listitem [ref=f68e1722] [cursor=pointer]:
+              - link "요플레 플레인 멀티, 85g, 4개 할인 3,980원 3% 3,850원 내일(토) 새벽 도착 보장 5 (97,255) 최대 179원 적립 최대 179원 적립" [ref=f68e1723]:
+                - /url: /vp/products/4986663036?itemId=380699693&vendorItemId=3922486305&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=32&rank=32
+                - figure [ref=f68e1724]:
+                  - img "요플레 플레인 멀티, 85g, 4개" [ref=f68e1725]
+                - generic [ref=f68e1726]:
+                  - generic [ref=f68e1728]: 요플레 플레인 멀티, 85g, 4개
+                  - generic [ref=f68e1729]:
+                    - generic [ref=f68e1730]:
+                      - generic [ref=f68e1731]: 할인
+                      - deletion [ref=f68e1732]: 3,980원
+                    - generic [ref=f68e1734]:
+                      - generic [ref=f68e1735]: 3%
+                      - generic [ref=f68e1740]: 3,850원
+                  - generic [ref=f68e1741]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e1747]:
+                    - generic "5" [ref=f68e1748]
+                    - generic [ref=f68e1754]: (97,255)
+                  - generic [ref=f68e1757]:
+                    - img "최대 179원 적립" [ref=f68e1758]
+                    - generic [ref=f68e1759]: 최대 179원 적립
+            - listitem [ref=f68e1760] [cursor=pointer]:
+              - link "액티비아 더블제로 청사과, 1개, 4개입, 150ml 4,480원 (10ml당 75원) 내일(토) 새벽 도착 보장 5 (110) 최대 224원 적립 최대 224원 적립" [ref=f68e1761]:
+                - /url: /vp/products/9557576779?itemId=28519772757&vendorItemId=95467646796&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=33&rank=33
+                - figure [ref=f68e1762]:
+                  - img "액티비아 더블제로 청사과, 1개, 4개입, 150ml" [ref=f68e1763]
+                - generic [ref=f68e1764]:
+                  - generic [ref=f68e1766]: 액티비아 더블제로 청사과, 1개, 4개입, 150ml
+                  - generic [ref=f68e1769]:
+                    - generic [ref=f68e1770]: 4,480원
+                    - generic [ref=f68e1771]: (10ml당 75원)
+                  - generic [ref=f68e1772]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e1778]:
+                    - generic "5" [ref=f68e1779]
+                    - generic [ref=f68e1785]: (110)
+                  - generic [ref=f68e1788]:
+                    - img "최대 224원 적립" [ref=f68e1789]
+                    - generic [ref=f68e1790]: 최대 224원 적립
+            - listitem [ref=f68e1791] [cursor=pointer]:
+              - link "풀무원 액티비아 설탕무첨가 화이트, 400g, 1개 3,670원 (10g당 92원) 내일(토) 새벽 도착 보장 5 (70,357) 최대 184원 적립 최대 184원 적립" [ref=f68e1792]:
+                - /url: /vp/products/1261683744?itemId=27821514368&vendorItemId=94781231186&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=34&rank=34
+                - figure [ref=f68e1793]:
+                  - img "풀무원 액티비아 설탕무첨가 화이트, 400g, 1개" [ref=f68e1794]
+                - generic [ref=f68e1795]:
+                  - generic [ref=f68e1797]: 풀무원 액티비아 설탕무첨가 화이트, 400g, 1개
+                  - generic [ref=f68e1800]:
+                    - generic [ref=f68e1801]: 3,670원
+                    - generic [ref=f68e1802]: (10g당 92원)
+                  - generic [ref=f68e1803]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e1809]:
+                    - generic "5" [ref=f68e1810]
+                    - generic [ref=f68e1816]: (70,357)
+                  - generic [ref=f68e1819]:
+                    - img "최대 184원 적립" [ref=f68e1820]
+                    - generic [ref=f68e1821]: 최대 184원 적립
+            - listitem [ref=f68e1822] [cursor=pointer]:
+              - link "풀무원 그릭 설탕무첨가 플레인, 150g, 2개 3,680원 (10g당 123원) 내일(토) 새벽 도착 보장 5 (68) 최대 184원 적립 최대 184원 적립" [ref=f68e1823]:
+                - /url: /vp/products/9393801001?itemId=27905313566&vendorItemId=94864077789&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=35&rank=35
+                - figure [ref=f68e1824]:
+                  - img "풀무원 그릭 설탕무첨가 플레인, 150g, 2개" [ref=f68e1825]
+                - generic [ref=f68e1826]:
+                  - generic [ref=f68e1828]: 풀무원 그릭 설탕무첨가 플레인, 150g, 2개
+                  - generic [ref=f68e1831]:
+                    - generic [ref=f68e1832]: 3,680원
+                    - generic [ref=f68e1833]: (10g당 123원)
+                  - generic [ref=f68e1834]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e1840]:
+                    - generic "5" [ref=f68e1841]
+                    - generic [ref=f68e1847]: (68)
+                  - generic [ref=f68e1850]:
+                    - img "최대 184원 적립" [ref=f68e1851]
+                    - generic [ref=f68e1852]: 최대 184원 적립
+            - listitem [ref=f68e1853] [cursor=pointer]:
+              - link "서울우유 신선함이 살아있는 목장 요거트 블루베리, 750ml, 1개입, 1개 3,710원 (10ml당 49원) 내일(토) 새벽 도착 보장 5 (22,486) 최대 185원 적립 최대 185원 적립" [ref=f68e1854]:
+                - /url: /vp/products/8005712516?itemId=22314846566&vendorItemId=89360248453&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=36&rank=36
+                - figure [ref=f68e1855]:
+                  - img "서울우유 신선함이 살아있는 목장 요거트 블루베리, 750ml, 1개입, 1개" [ref=f68e1856]
+                - generic [ref=f68e1857]:
+                  - generic [ref=f68e1859]: 서울우유 신선함이 살아있는 목장 요거트 블루베리, 750ml, 1개입, 1개
+                  - generic [ref=f68e1862]:
+                    - generic [ref=f68e1863]: 3,710원
+                    - generic [ref=f68e1864]: (10ml당 49원)
+                  - generic [ref=f68e1865]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e1871]:
+                    - generic "5" [ref=f68e1872]
+                    - generic [ref=f68e1878]: (22,486)
+                  - generic [ref=f68e1881]:
+                    - img "최대 185원 적립" [ref=f68e1882]
+                    - generic [ref=f68e1883]: 최대 185원 적립
+            - listitem [ref=f68e1884] [cursor=pointer]:
+              - link "덴마크 떠먹는 요거트 포스트 바이오틱스 딸기, 85g, 8개입, 1개 4,690원 (10g당 69원) 내일(토) 새벽 도착 보장 5 (5,204) 최대 235원 적립 최대 235원 적립" [ref=f68e1885]:
+                - /url: /vp/products/7351031359?itemId=18916423317&vendorItemId=86043655745&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=37&rank=37
+                - figure [ref=f68e1886]:
+                  - img "덴마크 떠먹는 요거트 포스트 바이오틱스 딸기, 85g, 8개입, 1개" [ref=f68e1887]
+                - generic [ref=f68e1888]:
+                  - generic [ref=f68e1890]: 덴마크 떠먹는 요거트 포스트 바이오틱스 딸기, 85g, 8개입, 1개
+                  - generic [ref=f68e1893]:
+                    - generic [ref=f68e1894]: 4,690원
+                    - generic [ref=f68e1895]: (10g당 69원)
+                  - generic [ref=f68e1896]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e1902]:
+                    - generic "5" [ref=f68e1903]
+                    - generic [ref=f68e1909]: (5,204)
+                  - generic [ref=f68e1912]:
+                    - img "최대 235원 적립" [ref=f68e1913]
+                    - generic [ref=f68e1914]: 최대 235원 적립
+            - listitem [ref=f68e1915] [cursor=pointer]:
+              - link "요즘 블루베리 그릭 요거트, 100g, 1개 3,780원 (10g당 378원) 내일(토) 새벽 도착 보장 5 (163) 최대 189원 적립 최대 189원 적립" [ref=f68e1916]:
+                - /url: /vp/products/9614809758?itemId=28682172127&vendorItemId=95623794302&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=38&rank=38
+                - figure [ref=f68e1917]:
+                  - img "요즘 블루베리 그릭 요거트, 100g, 1개" [ref=f68e1918]
+                - generic [ref=f68e1919]:
+                  - generic [ref=f68e1921]: 요즘 블루베리 그릭 요거트, 100g, 1개
+                  - generic [ref=f68e1924]:
+                    - generic [ref=f68e1925]: 3,780원
+                    - generic [ref=f68e1926]: (10g당 378원)
+                  - generic [ref=f68e1927]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e1933]:
+                    - generic "5" [ref=f68e1934]
+                    - generic [ref=f68e1940]: (163)
+                  - generic [ref=f68e1943]:
+                    - img "최대 189원 적립" [ref=f68e1944]
+                    - generic [ref=f68e1945]: 최대 189원 적립
+            - listitem [ref=f68e1946] [cursor=pointer]:
+              - link "남양유업 불가리스 요거트 설탕무첨가 플레인, 85g, 4개 3,780원 (10g당 111원) 내일(토) 새벽 도착 보장 5 (7,368) 최대 189원 적립 최대 189원 적립" [ref=f68e1947]:
+                - /url: /vp/products/7387553685?itemId=19093554160&vendorItemId=86214401303&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=39&rank=39
+                - figure [ref=f68e1948]:
+                  - img "남양유업 불가리스 요거트 설탕무첨가 플레인, 85g, 4개" [ref=f68e1949]
+                - generic [ref=f68e1950]:
+                  - generic [ref=f68e1952]: 남양유업 불가리스 요거트 설탕무첨가 플레인, 85g, 4개
+                  - generic [ref=f68e1955]:
+                    - generic [ref=f68e1956]: 3,780원
+                    - generic [ref=f68e1957]: (10g당 111원)
+                  - generic [ref=f68e1958]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e1964]:
+                    - generic "5" [ref=f68e1965]
+                    - generic [ref=f68e1971]: (7,368)
+                  - generic [ref=f68e1974]:
+                    - img "최대 189원 적립" [ref=f68e1975]
+                    - generic [ref=f68e1976]: 최대 189원 적립
+            - listitem [ref=f68e1977] [cursor=pointer]:
+              - link "서울우유 신선함이 살아있는 목장요거트 딸기, 750ml, 1개입, 1개 3,780원 (10ml당 50원) 내일(토) 새벽 도착 보장 5 (5,441) 최대 189원 적립 최대 189원 적립" [ref=f68e1978]:
+                - /url: /vp/products/188264775?itemId=537705208&vendorItemId=4404196123&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=40&rank=40
+                - figure [ref=f68e1979]:
+                  - img "서울우유 신선함이 살아있는 목장요거트 딸기, 750ml, 1개입, 1개" [ref=f68e1980]
+                - generic [ref=f68e1981]:
+                  - generic [ref=f68e1983]: 서울우유 신선함이 살아있는 목장요거트 딸기, 750ml, 1개입, 1개
+                  - generic [ref=f68e1986]:
+                    - generic [ref=f68e1987]: 3,780원
+                    - generic [ref=f68e1988]: (10ml당 50원)
+                  - generic [ref=f68e1989]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e1995]:
+                    - generic "5" [ref=f68e1996]
+                    - generic [ref=f68e2002]: (5,441)
+                  - generic [ref=f68e2005]:
+                    - img "최대 189원 적립" [ref=f68e2006]
+                    - generic [ref=f68e2007]: 최대 189원 적립
+            - listitem [ref=f68e2008] [cursor=pointer]:
+              - link "남양유업 리얼 슬로우 요거트 플레인, 80g, 4개 3,780원 (10g당 118원) 내일(토) 새벽 도착 보장 5 (689) 최대 189원 적립 최대 189원 적립" [ref=f68e2009]:
+                - /url: /vp/products/8248090210?itemId=23741947238&vendorItemId=90766543314&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=41&rank=41
+                - figure [ref=f68e2010]:
+                  - img "남양유업 리얼 슬로우 요거트 플레인, 80g, 4개" [ref=f68e2011]
+                - generic [ref=f68e2012]:
+                  - generic [ref=f68e2014]: 남양유업 리얼 슬로우 요거트 플레인, 80g, 4개
+                  - generic [ref=f68e2017]:
+                    - generic [ref=f68e2018]: 3,780원
+                    - generic [ref=f68e2019]: (10g당 118원)
+                  - generic [ref=f68e2020]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e2026]:
+                    - generic "5" [ref=f68e2027]
+                    - generic [ref=f68e2033]: (689)
+                  - generic [ref=f68e2036]:
+                    - img "최대 189원 적립" [ref=f68e2037]
+                    - generic [ref=f68e2038]: 최대 189원 적립
+            - listitem [ref=f68e2039] [cursor=pointer]:
+              - link "요플레 오리지널 딸기, 85g, 4개 3,850원 (10g당 113원) 내일(토) 새벽 도착 보장 5 (72,139) 최대 193원 적립 최대 193원 적립" [ref=f68e2040]:
+                - /url: /vp/products/4986663040?itemId=380699748&vendorItemId=3922486437&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=42&rank=42
+                - figure [ref=f68e2041]:
+                  - img "요플레 오리지널 딸기, 85g, 4개" [ref=f68e2042]
+                - generic [ref=f68e2043]:
+                  - generic [ref=f68e2045]: 요플레 오리지널 딸기, 85g, 4개
+                  - generic [ref=f68e2048]:
+                    - generic [ref=f68e2049]: 3,850원
+                    - generic [ref=f68e2050]: (10g당 113원)
+                  - generic [ref=f68e2051]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e2057]:
+                    - generic "5" [ref=f68e2058]
+                    - generic [ref=f68e2064]: (72,139)
+                  - generic [ref=f68e2067]:
+                    - img "최대 193원 적립" [ref=f68e2068]
+                    - generic [ref=f68e2069]: 최대 193원 적립
+            - listitem [ref=f68e2070] [cursor=pointer]:
+              - link "연세유업 세브란스 A2 요거트 플레인 4개입, 2개, 80g 3,860원 (10g당 60원) 내일(토) 새벽 도착 보장 5 (4,039) 최대 193원 적립 최대 193원 적립" [ref=f68e2071]:
+                - /url: /vp/products/8469535924?itemId=24507476752&vendorItemId=91520436489&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=43&rank=43
+                - figure [ref=f68e2072]:
+                  - img "연세유업 세브란스 A2 요거트 플레인 4개입, 2개, 80g" [ref=f68e2073]
+                - generic [ref=f68e2074]:
+                  - generic [ref=f68e2076]: 연세유업 세브란스 A2 요거트 플레인 4개입, 2개, 80g
+                  - generic [ref=f68e2079]:
+                    - generic [ref=f68e2080]: 3,860원
+                    - generic [ref=f68e2081]: (10g당 60원)
+                  - generic [ref=f68e2082]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e2088]:
+                    - generic "5" [ref=f68e2089]
+                    - generic [ref=f68e2095]: (4,039)
+                  - generic [ref=f68e2098]:
+                    - img "최대 193원 적립" [ref=f68e2099]
+                    - generic [ref=f68e2100]: 최대 193원 적립
+            - listitem [ref=f68e2101] [cursor=pointer]:
+              - link "연세유업 세브란스 A2 요거트 딸기 4개입, 2개, 80g 3,860원 (10g당 60원) 내일(토) 새벽 도착 보장 5 (2,102) 최대 193원 적립 최대 193원 적립" [ref=f68e2102]:
+                - /url: /vp/products/8469535918?itemId=24507476875&vendorItemId=91520436580&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=44&rank=44
+                - figure [ref=f68e2103]:
+                  - img "연세유업 세브란스 A2 요거트 딸기 4개입, 2개, 80g" [ref=f68e2104]
+                - generic [ref=f68e2105]:
+                  - generic [ref=f68e2107]: 연세유업 세브란스 A2 요거트 딸기 4개입, 2개, 80g
+                  - generic [ref=f68e2110]:
+                    - generic [ref=f68e2111]: 3,860원
+                    - generic [ref=f68e2112]: (10g당 60원)
+                  - generic [ref=f68e2113]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e2119]:
+                    - generic "5" [ref=f68e2120]
+                    - generic [ref=f68e2126]: (2,102)
+                  - generic [ref=f68e2129]:
+                    - img "최대 193원 적립" [ref=f68e2130]
+                    - generic [ref=f68e2131]: 최대 193원 적립
+            - listitem [ref=f68e2132] [cursor=pointer]:
+              - link "요플레 복숭아 멀티 4p, 340g, 1개 3,910원 (10g당 115원) 내일(토) 새벽 도착 보장 5 (42,046) 최대 195원 적립 최대 195원 적립" [ref=f68e2133]:
+                - /url: /vp/products/169631935?itemId=380699828&vendorItemId=3922486597&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=45&rank=45
+                - figure [ref=f68e2134]:
+                  - img "요플레 복숭아 멀티 4p, 340g, 1개" [ref=f68e2135]
+                - generic [ref=f68e2136]:
+                  - generic [ref=f68e2138]: 요플레 복숭아 멀티 4p, 340g, 1개
+                  - generic [ref=f68e2141]:
+                    - generic [ref=f68e2142]: 3,910원
+                    - generic [ref=f68e2143]: (10g당 115원)
+                  - generic [ref=f68e2144]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e2150]:
+                    - generic "5" [ref=f68e2151]
+                    - generic [ref=f68e2157]: (42,046)
+                  - generic [ref=f68e2160]:
+                    - img "최대 195원 적립" [ref=f68e2161]
+                    - generic [ref=f68e2162]: 최대 195원 적립
+            - listitem [ref=f68e2163] [cursor=pointer]:
+              - link "풀무원 다논 요거톡 스타볼 요거트, 132.25g, 4개 쿠폰할인 6,560원 50% 3,280원 (10g당 62원) 내일(토) 새벽 도착 보장 5 (33,202) 최대 164원 적립 최대 164원 적립" [ref=f68e2164]:
+                - /url: /vp/products/2279371037?itemId=24408928851&vendorItemId=91423607505&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=46&rank=46
+                - figure [ref=f68e2165]:
+                  - img "풀무원 다논 요거톡 스타볼 요거트, 132.25g, 4개" [ref=f68e2166]
+                - generic [ref=f68e2167]:
+                  - generic [ref=f68e2169]: 풀무원 다논 요거톡 스타볼 요거트, 132.25g, 4개
+                  - generic [ref=f68e2170]:
+                    - generic [ref=f68e2171]:
+                      - generic [ref=f68e2172]: 쿠폰할인
+                      - deletion [ref=f68e2173]: 6,560원
+                    - generic [ref=f68e2175]:
+                      - generic [ref=f68e2176]: 50%
+                      - generic [ref=f68e2181]: 3,280원
+                      - generic [ref=f68e2182]: (10g당 62원)
+                  - generic [ref=f68e2183]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e2189]:
+                    - generic "5" [ref=f68e2190]
+                    - generic [ref=f68e2196]: (33,202)
+                  - generic [ref=f68e2199]:
+                    - img "최대 164원 적립" [ref=f68e2200]
+                    - generic [ref=f68e2201]: 최대 164원 적립
+            - listitem [ref=f68e2202] [cursor=pointer]:
+              - link "풀무원 하루 건강 요거트 컵 플레인, 320g, 2개 7,960원 50% 3,980원 (10g당 62원) 내일(토) 새벽 도착 보장 5 (13,578) 최대 199원 적립 최대 199원 적립" [ref=f68e2203]:
+                - /url: /vp/products/8323358535?itemId=24032981199&vendorItemId=91053338803&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=47&rank=47
+                - figure [ref=f68e2204]:
+                  - img "풀무원 하루 건강 요거트 컵 플레인, 320g, 2개" [ref=f68e2205]
+                - generic [ref=f68e2206]:
+                  - generic [ref=f68e2208]: 풀무원 하루 건강 요거트 컵 플레인, 320g, 2개
+                  - generic [ref=f68e2209]:
+                    - deletion [ref=f68e2211]: 7,960원
+                    - generic [ref=f68e2213]:
+                      - generic [ref=f68e2214]: 50%
+                      - generic [ref=f68e2215]: 3,980원
+                      - generic [ref=f68e2216]: (10g당 62원)
+                  - generic [ref=f68e2217]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e2223]:
+                    - generic "5" [ref=f68e2224]
+                    - generic [ref=f68e2230]: (13,578)
+                  - generic [ref=f68e2233]:
+                    - img "최대 199원 적립" [ref=f68e2234]
+                    - generic [ref=f68e2235]: 최대 199원 적립
+            - listitem [ref=f68e2236] [cursor=pointer]:
+              - link "덴마크 드링킹 포스트바이오틱스 요구르트 사과, 1개, 1개입, 750ml 3,980원 (10ml당 53원) 내일(토) 새벽 도착 보장 5 (19) 최대 199원 적립 최대 199원 적립" [ref=f68e2237]:
+                - /url: /vp/products/9670409515?itemId=28913548905&vendorItemId=95845391547&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=48&rank=48
+                - figure [ref=f68e2238]:
+                  - img "덴마크 드링킹 포스트바이오틱스 요구르트 사과, 1개, 1개입, 750ml" [ref=f68e2239]
+                - generic [ref=f68e2240]:
+                  - generic [ref=f68e2242]: 덴마크 드링킹 포스트바이오틱스 요구르트 사과, 1개, 1개입, 750ml
+                  - generic [ref=f68e2245]:
+                    - generic [ref=f68e2246]: 3,980원
+                    - generic [ref=f68e2247]: (10ml당 53원)
+                  - generic [ref=f68e2248]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e2254]:
+                    - generic "5" [ref=f68e2255]
+                    - generic [ref=f68e2261]: (19)
+                  - generic [ref=f68e2264]:
+                    - img "최대 199원 적립" [ref=f68e2265]
+                    - generic [ref=f68e2266]: 최대 199원 적립
+            - listitem [ref=f68e2267] [cursor=pointer]:
+              - link "덴마크 떠먹는 요거트 포스트 바이오틱스 플레인, 450g, 1개입, 2개 4,550원 (10g당 51원) 내일(토) 새벽 도착 보장 5 (4,177) 최대 228원 적립 최대 228원 적립" [ref=f68e2268]:
+                - /url: /vp/products/7351031375?itemId=19598351129&vendorItemId=86705555496&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=49&rank=49
+                - figure [ref=f68e2269]:
+                  - img "덴마크 떠먹는 요거트 포스트 바이오틱스 플레인, 450g, 1개입, 2개" [ref=f68e2270]
+                - generic [ref=f68e2271]:
+                  - generic [ref=f68e2273]: 덴마크 떠먹는 요거트 포스트 바이오틱스 플레인, 450g, 1개입, 2개
+                  - generic [ref=f68e2276]:
+                    - generic [ref=f68e2277]: 4,550원
+                    - generic [ref=f68e2278]: (10g당 51원)
+                  - generic [ref=f68e2279]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e2285]:
+                    - generic "5" [ref=f68e2286]
+                    - generic [ref=f68e2292]: (4,177)
+                  - generic [ref=f68e2295]:
+                    - img "최대 228원 적립" [ref=f68e2296]
+                    - generic [ref=f68e2297]: 최대 228원 적립
+            - listitem [ref=f68e2298] [cursor=pointer]:
+              - link "후디스그릭요거트 무가당 플레인 그릭요거트, 400g, 1개 할인 5,010원 13% 4,310원 (10g당 108원) 내일(토) 새벽 도착 보장 4.5 (9) 최대 215원 적립 최대 215원 적립" [ref=f68e2299]:
+                - /url: /vp/products/9693258299?itemId=28992062223&vendorItemId=95920784566&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=50&rank=50
+                - figure [ref=f68e2300]:
+                  - img "후디스그릭요거트 무가당 플레인 그릭요거트, 400g, 1개" [ref=f68e2301]
+                - generic [ref=f68e2302]:
+                  - generic [ref=f68e2304]: 후디스그릭요거트 무가당 플레인 그릭요거트, 400g, 1개
+                  - generic [ref=f68e2305]:
+                    - generic [ref=f68e2306]:
+                      - generic [ref=f68e2307]: 할인
+                      - deletion [ref=f68e2308]: 5,010원
+                    - generic [ref=f68e2310]:
+                      - generic [ref=f68e2311]: 13%
+                      - generic [ref=f68e2316]: 4,310원
+                      - generic [ref=f68e2317]: (10g당 108원)
+                  - generic [ref=f68e2318]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e2324]:
+                    - generic "4.5" [ref=f68e2325]
+                    - generic [ref=f68e2331]: (9)
+                  - generic [ref=f68e2334]:
+                    - img "최대 215원 적립" [ref=f68e2335]
+                    - generic [ref=f68e2336]: 최대 215원 적립
+            - listitem [ref=f68e2337] [cursor=pointer]:
+              - link "불가리스 락토프리 그릭요거트 프로틴 41g, 400g, 1개 4,400원 (10g당 110원) 내일(토) 새벽 도착 보장 4.5 (754) 최대 220원 적립 최대 220원 적립" [ref=f68e2338]:
+                - /url: /vp/products/9574455225?itemId=28578620634&vendorItemId=95522751068&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=51&rank=51
+                - figure [ref=f68e2339]:
+                  - img "불가리스 락토프리 그릭요거트 프로틴 41g, 400g, 1개" [ref=f68e2340]
+                - generic [ref=f68e2341]:
+                  - generic [ref=f68e2343]: 불가리스 락토프리 그릭요거트 프로틴 41g, 400g, 1개
+                  - generic [ref=f68e2346]:
+                    - generic [ref=f68e2347]: 4,400원
+                    - generic [ref=f68e2348]: (10g당 110원)
+                  - generic [ref=f68e2349]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e2355]:
+                    - generic "4.5" [ref=f68e2356]
+                    - generic [ref=f68e2362]: (754)
+                  - generic [ref=f68e2365]:
+                    - img "최대 220원 적립" [ref=f68e2366]
+                    - generic [ref=f68e2367]: 최대 220원 적립
+            - listitem [ref=f68e2368] [cursor=pointer]:
+              - link "액티비아 더블제로 그린플레인, 1개, 4개입, 150ml 4,480원 (10ml당 75원) 내일(토) 새벽 도착 보장 4.5 (107) 최대 224원 적립 최대 224원 적립" [ref=f68e2369]:
+                - /url: /vp/products/9557576488?itemId=28519771655&vendorItemId=95467645931&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=52&rank=52
+                - figure [ref=f68e2370]:
+                  - img "액티비아 더블제로 그린플레인, 1개, 4개입, 150ml" [ref=f68e2371]
+                - generic [ref=f68e2372]:
+                  - generic [ref=f68e2374]: 액티비아 더블제로 그린플레인, 1개, 4개입, 150ml
+                  - generic [ref=f68e2377]:
+                    - generic [ref=f68e2378]: 4,480원
+                    - generic [ref=f68e2379]: (10ml당 75원)
+                  - generic [ref=f68e2380]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e2386]:
+                    - generic "4.5" [ref=f68e2387]
+                    - generic [ref=f68e2393]: (107)
+                  - generic [ref=f68e2396]:
+                    - img "최대 224원 적립" [ref=f68e2397]
+                    - generic [ref=f68e2398]: 최대 224원 적립
+            - listitem [ref=f68e2399] [cursor=pointer]:
+              - link "서울우유 파머스 그릭 블루베리, 400g, 1개 4,650원 (10g당 116원) 내일(토) 새벽 도착 보장 5 (168) 최대 233원 적립 최대 233원 적립" [ref=f68e2400]:
+                - /url: /vp/products/9570495617?itemId=28564523123&vendorItemId=95509029471&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=53&rank=53
+                - figure [ref=f68e2401]:
+                  - img "서울우유 파머스 그릭 블루베리, 400g, 1개" [ref=f68e2402]
+                - generic [ref=f68e2403]:
+                  - generic [ref=f68e2405]: 서울우유 파머스 그릭 블루베리, 400g, 1개
+                  - generic [ref=f68e2408]:
+                    - generic [ref=f68e2409]: 4,650원
+                    - generic [ref=f68e2410]: (10g당 116원)
+                  - generic [ref=f68e2411]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e2417]:
+                    - generic "5" [ref=f68e2418]
+                    - generic [ref=f68e2424]: (168)
+                  - generic [ref=f68e2427]:
+                    - img "최대 233원 적립" [ref=f68e2428]
+                    - generic [ref=f68e2429]: 최대 233원 적립
+            - listitem [ref=f68e2430] [cursor=pointer]:
+              - link "덴마크 떠먹는 요거트 포스트 바이오틱스 플레인, 85g, 8개입, 1개 4,690원 (10g당 69원) 내일(토) 새벽 도착 보장 5 (3,229) 최대 235원 적립 최대 235원 적립" [ref=f68e2431]:
+                - /url: /vp/products/7351031402?itemId=18916423670&vendorItemId=86043655977&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=54&rank=54
+                - figure [ref=f68e2432]:
+                  - img "덴마크 떠먹는 요거트 포스트 바이오틱스 플레인, 85g, 8개입, 1개" [ref=f68e2433]
+                - generic [ref=f68e2434]:
+                  - generic [ref=f68e2436]: 덴마크 떠먹는 요거트 포스트 바이오틱스 플레인, 85g, 8개입, 1개
+                  - generic [ref=f68e2439]:
+                    - generic [ref=f68e2440]: 4,690원
+                    - generic [ref=f68e2441]: (10g당 69원)
+                  - generic [ref=f68e2442]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e2448]:
+                    - generic "5" [ref=f68e2449]
+                    - generic [ref=f68e2455]: (3,229)
+                  - generic [ref=f68e2458]:
+                    - img "최대 235원 적립" [ref=f68e2459]
+                    - generic [ref=f68e2460]: 최대 235원 적립
+            - listitem [ref=f68e2461] [cursor=pointer]:
+              - link "소와나무 비피더스 명장 포도 요구르트, 125ml, 8개입, 2개 4,980원 (10ml당 25원) 내일(토) 새벽 도착 보장 5 (17,122) 최대 249원 적립 최대 249원 적립" [ref=f68e2462]:
+                - /url: /vp/products/7090919025?itemId=19224575776&vendorItemId=86341239155&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=55&rank=55
+                - figure [ref=f68e2463]:
+                  - img "소와나무 비피더스 명장 포도 요구르트, 125ml, 8개입, 2개" [ref=f68e2464]
+                - generic [ref=f68e2465]:
+                  - generic [ref=f68e2467]: 소와나무 비피더스 명장 포도 요구르트, 125ml, 8개입, 2개
+                  - generic [ref=f68e2470]:
+                    - generic [ref=f68e2471]: 4,980원
+                    - generic [ref=f68e2472]: (10ml당 25원)
+                  - generic [ref=f68e2473]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e2479]:
+                    - generic "5" [ref=f68e2480]
+                    - generic [ref=f68e2486]: (17,122)
+                  - generic [ref=f68e2489]:
+                    - img "최대 249원 적립" [ref=f68e2490]
+                    - generic [ref=f68e2491]: 최대 249원 적립
+            - listitem [ref=f68e2492] [cursor=pointer]:
+              - link "요플레 빙그레 플레인 화이트, 80g, 8개 4,780원 (10g당 75원) 내일(토) 새벽 도착 보장 5 (69,517) 최대 239원 적립 최대 239원 적립" [ref=f68e2493]:
+                - /url: /vp/products/129241404?itemId=19345181475&vendorItemId=86458580503&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=56&rank=56
+                - figure [ref=f68e2494]:
+                  - img "요플레 빙그레 플레인 화이트, 80g, 8개" [ref=f68e2495]
+                - generic [ref=f68e2496]:
+                  - generic [ref=f68e2498]: 요플레 빙그레 플레인 화이트, 80g, 8개
+                  - generic [ref=f68e2501]:
+                    - generic [ref=f68e2502]: 4,780원
+                    - generic [ref=f68e2503]: (10g당 75원)
+                  - generic [ref=f68e2504]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e2510]:
+                    - generic "5" [ref=f68e2511]
+                    - generic [ref=f68e2517]: (69,517)
+                  - generic [ref=f68e2520]:
+                    - img "최대 239원 적립" [ref=f68e2521]
+                    - generic [ref=f68e2522]: 최대 239원 적립
+            - listitem [ref=f68e2523] [cursor=pointer]:
+              - link "요플레 플레인 멀티, 85g, 8개 5,610원 내일(토) 새벽 도착 보장 5 (97,255) 최대 240원 적립 최대 240원 적립" [ref=f68e2524]:
+                - /url: /vp/products/4986663036?itemId=24995527037&vendorItemId=92000780108&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=57&rank=57
+                - figure [ref=f68e2525]:
+                  - img "요플레 플레인 멀티, 85g, 8개" [ref=f68e2526]
+                - generic [ref=f68e2527]:
+                  - generic [ref=f68e2529]: 요플레 플레인 멀티, 85g, 8개
+                  - generic [ref=f68e2530]: 5,610원
+                  - generic [ref=f68e2534]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e2540]:
+                    - generic "5" [ref=f68e2541]
+                    - generic [ref=f68e2547]: (97,255)
+                  - generic [ref=f68e2550]:
+                    - img "최대 240원 적립" [ref=f68e2551]
+                    - generic [ref=f68e2552]: 최대 240원 적립
+            - listitem [ref=f68e2553] [cursor=pointer]:
+              - link "곰곰 무가당 플레인 요거트, 450g, 2개 5,100원 (10g당 57원) 내일(토) 새벽 도착 보장 4.5 (2,646) 최대 255원 적립 최대 255원 적립" [ref=f68e2554]:
+                - /url: /vp/products/9040028814?itemId=27957286332&vendorItemId=94915392930&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=58&rank=58
+                - figure [ref=f68e2555]:
+                  - img "곰곰 무가당 플레인 요거트, 450g, 2개" [ref=f68e2556]
+                - generic [ref=f68e2557]:
+                  - generic [ref=f68e2559]: 곰곰 무가당 플레인 요거트, 450g, 2개
+                  - generic [ref=f68e2562]:
+                    - generic [ref=f68e2563]: 5,100원
+                    - generic [ref=f68e2564]: (10g당 57원)
+                  - generic [ref=f68e2565]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e2571]:
+                    - generic "4.5" [ref=f68e2572]
+                    - generic [ref=f68e2578]: (2,646)
+                  - generic [ref=f68e2581]:
+                    - img "최대 255원 적립" [ref=f68e2582]
+                    - generic [ref=f68e2583]: 최대 255원 적립
+            - listitem [ref=f68e2584] [cursor=pointer]:
+              - link "파스퇴르 바른목장 요구르트, 100ml, 5개입, 2개 4,850원 (10ml당 49원) 내일(토) 새벽 도착 보장 4.5 (4,922) 최대 243원 적립 최대 243원 적립" [ref=f68e2585]:
+                - /url: /vp/products/111271600?itemId=28928217633&vendorItemId=95859631682&q=요거트&searchId=1ca37fc936275413&sourceType=search&itemsCount=60&searchRank=59&rank=59
+                - figure [ref=f68e2586]:
+                  - img "파스퇴르 바른목장 요구르트, 100ml, 5개입, 2개" [ref=f68e2587]
+                - generic [ref=f68e2588]:
+                  - generic [ref=f68e2590]: 파스퇴르 바른목장 요구르트, 100ml, 5개입, 2개
+                  - generic [ref=f68e2593]:
+                    - generic [ref=f68e2594]: 4,850원
+                    - generic [ref=f68e2595]: (10ml당 49원)
+                  - generic [ref=f68e2596]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f68e2602]:
+                    - generic "4.5" [ref=f68e2603]
+                    - generic [ref=f68e2609]: (4,922)
+                  - generic [ref=f68e2612]:
+                    - img "최대 243원 적립" [ref=f68e2613]
+                    - generic [ref=f68e2614]: 최대 243원 적립
+          - region "찾는 상품이 없나요?" [ref=f68e2615]:
+            - generic [ref=f68e2616]:
+              - heading "찾는 상품이 없나요?" [level=2] [ref=f68e2617]
+              - paragraph [ref=f68e2618]: 로그인하고 더 많은 상품을 확인해보세요
+            - button "로그인" [ref=f68e2619] [cursor=pointer]
+  - contentinfo [ref=f68e2621]:
+    - generic [ref=f68e2622]:
+      - generic [ref=f68e2623]:
+        - link "회사소개" [ref=f68e2624] [cursor=pointer]:
+          - /url: https://news.coupang.com/
+        - link "Investor Relations" [ref=f68e2625] [cursor=pointer]:
+          - /url: https://ir.aboutcoupang.com/overview/default.aspx
+        - link "인재채용" [ref=f68e2626] [cursor=pointer]:
+          - /url: https://rocketyourcareer.kr.coupang.com
+        - link "입점/제휴문의" [ref=f68e2627] [cursor=pointer]:
+          - /url: https://marketplace.coupangcorp.com/s/?utm_source=button_pc&utm_medium=non_paid&utm_campaign=onsite_ca&utm_id=coupang_app?inflow=WEB_FOOTER_B
+        - link "공지사항" [ref=f68e2628] [cursor=pointer]:
+          - /url: https://mc.coupang.com/ssr/desktop/contact/notice
+        - link "고객의 소리" [ref=f68e2629] [cursor=pointer]:
+          - /url: https://mc.coupang.com/ssr/desktop/contact/voc
+        - link "이용약관" [ref=f68e2630] [cursor=pointer]:
+          - /url: https://www.coupang.com/np/policies/terms
+        - link [ref=f68e2631] [cursor=pointer]:
+          - /url: https://privacy.coupang.com/ko/center/coupang
+          - strong [ref=f68e2632]: 개인정보 처리방침
+        - link "정보보호/개인정보보호 인증" [ref=f68e2633] [cursor=pointer]:
+          - /url: https://privacy.coupang.com/ko/security/status
+        - link "쿠팡페이 이용약관" [ref=f68e2634] [cursor=pointer]:
+          - /url: https://rocketpay.coupang.com/rocketpay/operationTerms/coupangPcFooter
+        - link "신뢰관리센터" [ref=f68e2635] [cursor=pointer]:
+          - /url: https://www.coupang.com/np/safety
+        - link "제휴마케팅" [ref=f68e2636] [cursor=pointer]:
+          - /url: https://partners.coupang.com/
+        - link "광고안내" [ref=f68e2637] [cursor=pointer]:
+          - /url: https://ads.coupang.com
+      - paragraph [ref=f68e2641] [cursor=pointer]: Global Site
+    - generic [ref=f68e2643]:
+      - generic [ref=f68e2644]:
+        - link "COUPANG" [ref=f68e2645] [cursor=pointer]:
+          - /url: https://www.coupang.com/
+        - generic [ref=f68e2646]:
+          - text: "상호명 및 호스팅 서비스 제공 : 쿠팡(주) 대표이사 : 로저스 해롤드 린(Rogers Harold Lynn) (05050) 서울시 광진구 아차산로 412, 2층 사업자 등록번호 : 120-88-00767 통신판매업신고 : 2026-서울광진-1253"
+          - link "사업자정보 확인 >" [ref=f68e2647] [cursor=pointer]:
+            - /url: http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=1208800767
+      - link [ref=f68e2649] [cursor=pointer]:
+        - /url: https://mc.coupang.com/ssr/desktop/contact/inquiry
+        - strong [ref=f68e2650]: 365고객센터
+        - text: "| 전자금융거래분쟁처리담당"
+        - emphasis [ref=f68e2651]: 1577-7011 (유료)
+        - text: "(05050) 서울시 광진구 아차산로 412, 2층 email : help@coupang.com"
+      - paragraph [ref=f68e2652]:
+        - strong [ref=f68e2653]: 채무지급보증 안내
+        - generic [ref=f68e2654]: 당사는 고객님이 현금 결제한 금액에 대해 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.
+        - link "서비스 가입사실 확인 >" [ref=f68e2655] [cursor=pointer]:
+          - /url: https://www.coupang.com/np/etc/popWooriService
+    - generic [ref=f68e2661]:
+      - paragraph [ref=f68e2662]: 사이버몰 내 판매되는 상품 중에는 쿠팡에 등록한 개별 판매자가 판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다. 마켓플레이스(오픈마켓) 상품의 경우 쿠팡은 통신판매중개자이며 통신판매의 당사자가 아닙니다. 쿠팡은 마켓플레이스(오픈마켓) 상품, 거래정보 및 거래 등에 대하여 책임을 지지 않습니다. 쿠팡은 소비자 보호와 안전거래를 위해 신뢰관리센터(CM112@coupang.com)를 운영하고 있으며, 관련 분쟁이 발생할 경우 별도의 분쟁 처리절차에 의거 분쟁이 처리됩니다. Copyright © Coupang Corp. 2010-2025 All Rights Reserved.
+      - list [ref=f68e2663]:
+        - listitem [ref=f68e2664]:
+          - link [ref=f68e2665] [cursor=pointer]:
+            - /url: https://www.facebook.com/Coupang.korea
+        - listitem [ref=f68e2666]:
+          - link [ref=f68e2667] [cursor=pointer]:
+            - /url: https://news.coupang.com/
+        - listitem [ref=f68e2668]:
+          - link [ref=f68e2669] [cursor=pointer]:
+            - /url: https://www.instagram.com/coupang

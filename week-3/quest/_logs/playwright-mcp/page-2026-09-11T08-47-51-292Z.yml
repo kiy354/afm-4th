@@ -1,0 +1,2075 @@
+- generic [active] [ref=f86e1]:
+  - generic [ref=f86e5]:
+    - link [ref=f86e6] [cursor=pointer]:
+      - /url: /np/campaigns/82?adType=DA&eventId=O7iyCnltr35HsQrW
+    - link [ref=f86e7] [cursor=pointer]:
+      - /url: https://shop.coupang.com/sajodaerim/268667?source=brandstore_display_ads&adType=DA&eventId=x1a2x0Nd6G7EqZry
+  - generic [ref=f86e8]:
+    - generic [ref=f86e10]:
+      - list [ref=f86e11]:
+        - listitem [ref=f86e12]:
+          - link "판매자 가입" [ref=f86e13] [cursor=pointer]:
+            - /url: https://wing.coupang.com/tenants/vendor-signup/signup?utm_source=button_pc_coupang_top_right_cta&utm_medium=non_paid&utm_campaign=seller_registration
+        - listitem [ref=f86e14]:
+          - link "고객센터" [ref=f86e15] [cursor=pointer]:
+            - /url: https://mc.coupang.com/ssr/desktop/contact/faq
+        - listitem [ref=f86e16]:
+          - link "회원가입" [ref=f86e17] [cursor=pointer]:
+            - /url: https://login.coupang.com/login/memberJoinFrm.pang
+        - listitem [ref=f86e18]:
+          - link "로그인" [ref=f86e19] [cursor=pointer]:
+            - /url: https://login.coupang.com/login/login.pang?rtnUrl=https%3A%2F%2Fwww.coupang.com%2Fnp%2Fpost%2Flogin%3Fr%3Dhttp%253A%252F%252Fwww.coupang.com%252Fnp%252Fsearch%253Fq%253D%2525EC%2525BB%2525B5%2525EC%25258A%2525A4%2525ED%252594%252584%2526filterType%253Drocket%2526sorter%253DsalePriceAsc
+      - list [ref=f86e20]:
+        - listitem [ref=f86e21]: 즐겨찾기
+        - listitem [ref=f86e22]:
+          - generic [ref=f86e23] [cursor=pointer]: 입점신청
+    - generic [ref=f86e26]:
+      - generic [ref=f86e27] [cursor=pointer]: 카테고리
+      - generic [ref=f86e33]:
+        - generic [ref=f86e34]:
+          - link [ref=f86e35] [cursor=pointer]:
+            - /url: https://www.coupang.com
+            - img "Coupang" [ref=f86e36]
+          - generic [ref=f86e37]:
+            - link "전체" [ref=f86e40] [cursor=pointer]:
+              - /url: "#"
+            - textbox "쿠팡 상품 검색" [ref=f86e42]:
+              - /placeholder: 찾고 싶은 상품을 검색해보세요!
+              - text: 컵스프
+            - generic [ref=f86e43] [cursor=pointer]
+            - button "검색" [ref=f86e44] [cursor=pointer]
+          - list [ref=f86e45]:
+            - listitem [ref=f86e46]:
+              - link "마이쿠팡" [ref=f86e47] [cursor=pointer]:
+                - /url: https://mc.coupang.com/ssr/desktop/order/list
+            - listitem [ref=f86e49]:
+              - link "2 장바구니" [ref=f86e50] [cursor=pointer]:
+                - /url: //cart.coupang.com/cartView.pang
+                - emphasis [ref=f86e51]: "2"
+                - generic [ref=f86e52]: 장바구니
+        - generic [ref=f86e54]:
+          - list [ref=f86e57]:
+            - listitem [ref=f86e58]:
+              - link "쿠팡플레이 쿠팡플레이" [ref=f86e59] [cursor=pointer]:
+                - /url: https://www.coupangplay.com/catalog
+                - img "쿠팡플레이" [ref=f86e60]
+                - generic [ref=f86e61]: 쿠팡플레이
+            - listitem [ref=f86e62]:
+              - link "로켓배송 로켓배송" [ref=f86e63] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/campaigns/82
+                - img "로켓배송" [ref=f86e64]
+                - generic [ref=f86e65]: 로켓배송
+            - listitem [ref=f86e66]:
+              - link "로켓프레시 로켓프레시" [ref=f86e67] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/categories/393760
+                - img "로켓프레시" [ref=f86e68]
+                - generic [ref=f86e69]: 로켓프레시
+            - listitem [ref=f86e70]:
+              - link "2026 추석 2026 추석" [ref=f86e71] [cursor=pointer]:
+                - /url: https://www.coupang.com/mlp/web/mlp-landing-page?landingId=4800
+                - img "2026 추석" [ref=f86e72]
+                - generic [ref=f86e73]: 2026 추석
+            - listitem [ref=f86e75]:
+              - link "다시 구매 다시 구매" [ref=f86e76] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/fbi?sourceType=home_section_fbi
+                - img "다시 구매" [ref=f86e77]
+                - generic [ref=f86e78]: 다시 구매
+            - listitem [ref=f86e80]:
+              - link "쿠팡비즈 쿠팡비즈" [ref=f86e81] [cursor=pointer]:
+                - /url: https://login.coupang.com/corporation/member/landing-page
+                - img "쿠팡비즈" [ref=f86e82]
+                - generic [ref=f86e83]: 쿠팡비즈
+            - listitem [ref=f86e84]:
+              - link "로켓직구 로켓직구" [ref=f86e85] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/coupangglobal
+                - img "로켓직구" [ref=f86e86]
+                - generic [ref=f86e87]: 로켓직구
+            - listitem [ref=f86e88]:
+              - link "골드박스 골드박스" [ref=f86e89] [cursor=pointer]:
+                - /url: https://www.coupang.com/mlp/web/mlp-landing-page?landingId=3712&sourceType=gm_crm_goldbox&subSourceType=gm_crm_gwsrtcut
+                - img "골드박스" [ref=f86e90]
+                - generic [ref=f86e91]: 골드박스
+            - listitem [ref=f86e92]:
+              - link "이달의신상 이달의신상" [ref=f86e93] [cursor=pointer]:
+                - /url: https://pages.coupang.com/p/136938
+                - img "이달의신상" [ref=f86e94]
+                - generic [ref=f86e95]: 이달의신상
+            - listitem [ref=f86e96]:
+              - link "입점신청 입점신청" [ref=f86e97] [cursor=pointer]:
+                - /url: https://wing.coupang.com/tenants/vendor-signup/signup?utm_source=button_pc_coupang_shortcut_1&utm_medium=non_paid&utm_id=onsite_ca&utm_content=202411
+                - img "입점신청" [ref=f86e98]
+                - generic [ref=f86e99]: 입점신청
+            - listitem [ref=f86e100]:
+              - link "판매자특가 판매자특가" [ref=f86e101] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/omp
+                - img "판매자특가" [ref=f86e102]
+                - generic [ref=f86e103]: 판매자특가
+            - listitem [ref=f86e104]:
+              - link "와우회원할인 와우회원할인" [ref=f86e105] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/campaigns/83
+                - img "와우회원할인" [ref=f86e106]
+                - generic [ref=f86e107]: 와우회원할인
+            - listitem [ref=f86e108]:
+              - link "반품마켓 반품마켓" [ref=f86e109] [cursor=pointer]:
+                - /url: https://pages.coupang.com/p/54908
+                - img "반품마켓" [ref=f86e110]
+                - generic [ref=f86e111]: 반품마켓
+            - listitem [ref=f86e112]:
+              - link "착한상점 착한상점" [ref=f86e113] [cursor=pointer]:
+                - /url: https://pages.coupang.com/p/63240
+                - img "착한상점" [ref=f86e114]
+                - generic [ref=f86e115]: 착한상점
+            - listitem [ref=f86e117]:
+              - link "기획전 기획전" [ref=f86e118] [cursor=pointer]:
+                - /url: https://pages.coupang.com/p/bep?sourceType=gm_crm_oms&subSourceType=gm_crm_gwsrtcut
+                - img "기획전" [ref=f86e119]
+                - generic [ref=f86e120]: 기획전
+            - listitem [ref=f86e121]:
+              - link "쿠팡트래블 쿠팡트래블" [ref=f86e122] [cursor=pointer]:
+                - /url: https://trip.coupang.com/?channel=gnb
+                - img "쿠팡트래블" [ref=f86e123]
+                - generic [ref=f86e124]: 쿠팡트래블
+          - generic [ref=f86e126] [cursor=pointer]
+  - generic:
+    - article:
+      - generic:
+        - link "장바구니 2" [ref=f86e129] [cursor=pointer]:
+          - /url: //cart.coupang.com/cartView.pang
+          - generic [ref=f86e130]: 장바구니
+          - emphasis [ref=f86e131]: "2"
+        - generic [ref=f86e132]:
+          - generic [ref=f86e133]: 최근본상품
+          - emphasis [ref=f86e134]: "0"
+        - generic [ref=f86e135]:
+          - list [ref=f86e136]
+          - paragraph [ref=f86e137]:
+            - generic [ref=f86e138]:
+              - strong
+              - text: /
+              - emphasis
+            - generic [ref=f86e139]:
+              - link "prev" [ref=f86e140] [cursor=pointer]:
+                - /url: 이전 페이지 보기
+              - link "next" [ref=f86e141] [cursor=pointer]:
+                - /url: 다음 페이지 보기
+  - generic [ref=f86e143]:
+    - generic [ref=f86e146]:
+      - list [ref=f86e147]:
+        - listitem [ref=f86e148]:
+          - link "전체" [ref=f86e149] [cursor=pointer]:
+            - /url: /np/search?q=%EC%BB%B5%EC%8A%A4%ED%94%84&filterType=rocket&sorter=salePriceAsc
+      - strong [ref=f86e153]: "'컵스프'"
+    - generic [ref=f86e155]:
+      - generic [ref=f86e156]:
+        - generic [ref=f86e157]:
+          - generic [ref=f86e160]:
+            - generic [ref=f86e161]:
+              - heading "필터" [level=4] [ref=f86e162]
+              - button "전체해제" [ref=f86e164] [cursor=pointer]
+            - list [ref=f86e167]:
+              - listitem [ref=f86e168]:
+                - img "rocket_luxury,rocket,coupang_global" [ref=f86e172] [cursor=pointer]
+                - list [ref=f86e174]:
+                  - listitem [ref=f86e175]:
+                    - generic:
+                      - generic:
+                        - img "rocket_luxury"
+                      - text: 만 보기
+                  - listitem [ref=f86e176]:
+                    - generic [ref=f86e177] [cursor=pointer]:
+                      - img "rocket" [ref=f86e180]
+                      - text: 만 보기
+                  - listitem [ref=f86e181]:
+                    - generic [ref=f86e182] [cursor=pointer]:
+                      - img "coupang_global" [ref=f86e185]
+                      - text: 만 보기
+              - listitem [ref=f86e186]:
+                - img "top_brand" [ref=f86e190] [cursor=pointer]
+              - listitem [ref=f86e191]:
+                - generic [ref=f86e192] [cursor=pointer]: 무료배송
+            - separator [ref=f86e194]
+            - generic [ref=f86e195]:
+              - heading "카테고리" [level=5] [ref=f86e196]
+              - generic [ref=f86e197]:
+                - list [ref=f86e198]:
+                  - listitem [ref=f86e199]:
+                    - link "전체" [ref=f86e201] [cursor=pointer]:
+                      - /url: https://www.coupang.com
+                  - listitem [ref=f86e202]:
+                    - link "식품" [ref=f86e204] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/categories/194276
+                  - listitem [ref=f86e205]:
+                    - link "로켓직구" [ref=f86e207] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/coupangglobal
+                  - listitem [ref=f86e208]:
+                    - link "싱글라이프" [ref=f86e210] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/categories/433784
+                  - listitem [ref=f86e211]:
+                    - link "실버스토어" [ref=f86e213] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/categories/383370
+                  - listitem:
+                    - link "홈카페" [ref=f86e215] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/categories/316168
+                  - listitem:
+                    - link "생활용품" [ref=f86e217] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/categories/115673
+                  - listitem:
+                    - link "가전디지털" [ref=f86e219] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/categories/178255
+                  - listitem:
+                    - link "홈인테리어" [ref=f86e221] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/categories/184555
+                  - listitem:
+                    - link "헬스/건강식품" [ref=f86e223] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/categories/305798
+                  - listitem:
+                    - link "스포츠/레저" [ref=f86e225] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/categories/317778
+                  - listitem:
+                    - link "완구/취미" [ref=f86e227] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/categories/317779
+                  - listitem:
+                    - link "문구/오피스" [ref=f86e229] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/categories/177295
+                  - listitem:
+                    - link "패션의류/잡화" [ref=f86e231] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/categories/564653
+                  - listitem:
+                    - link "자동차용품" [ref=f86e233] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/categories/184060
+                  - listitem:
+                    - link "아트/공예" [ref=f86e235] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/categories/410273
+                  - listitem:
+                    - link "미세먼지용품" [ref=f86e237] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/campaigns/17593
+                  - listitem:
+                    - link "안전전문관" [ref=f86e239] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/categories/568926
+                  - listitem:
+                    - link "도서/음반/DVD" [ref=f86e241] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/categories/317777
+                  - listitem:
+                    - link "R.LUX" [ref=f86e243] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/campaigns/18530
+                  - listitem:
+                    - link "뷰티" [ref=f86e245] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/categories/176522
+                - generic [ref=f86e246] [cursor=pointer]: + 더보기
+            - separator [ref=f86e247]
+            - generic [ref=f86e248]:
+              - heading "브랜드" [level=5] [ref=f86e249]
+              - generic [ref=f86e250]:
+                - list [ref=f86e251]:
+                  - listitem [ref=f86e252]:
+                    - generic [ref=f86e253] [cursor=pointer]: 폰타나
+                  - listitem [ref=f86e255]:
+                    - generic [ref=f86e256] [cursor=pointer]: 보노
+                  - listitem [ref=f86e258]:
+                    - generic [ref=f86e259] [cursor=pointer]: 오뚜기
+                  - listitem [ref=f86e261]:
+                    - generic [ref=f86e262] [cursor=pointer]: 청정원
+                  - listitem [ref=f86e264]:
+                    - generic [ref=f86e265] [cursor=pointer]: 샘표
+                  - listitem:
+                    - generic [ref=f86e267] [cursor=pointer]: 오뚜기프레스코
+                  - listitem:
+                    - generic [ref=f86e269] [cursor=pointer]: 로마나
+                - generic [ref=f86e271] [cursor=pointer]: + 더보기
+            - separator [ref=f86e272]
+            - generic [ref=f86e273]:
+              - heading "상품 상태" [level=5] [ref=f86e274]
+              - list [ref=f86e276]:
+                - listitem [ref=f86e277]:
+                  - generic [ref=f86e278] [cursor=pointer]: 새 상품
+                - listitem [ref=f86e280]:
+                  - generic [ref=f86e281] [cursor=pointer]: 박스 훼손
+                - listitem [ref=f86e283]:
+                  - generic [ref=f86e284] [cursor=pointer]: 재포장
+                - listitem [ref=f86e286]:
+                  - generic [ref=f86e287] [cursor=pointer]: 반품
+                - listitem [ref=f86e289]:
+                  - generic [ref=f86e290] [cursor=pointer]: 중고
+            - separator [ref=f86e292]
+            - generic [ref=f86e293]:
+              - heading "개당 중량" [level=5] [ref=f86e294]
+              - list [ref=f86e296]:
+                - listitem [ref=f86e297]:
+                  - generic [ref=f86e298] [cursor=pointer]: 300g 이하
+                - listitem [ref=f86e300]:
+                  - generic [ref=f86e301] [cursor=pointer]: 300~450g
+                - listitem [ref=f86e303]:
+                  - generic [ref=f86e304] [cursor=pointer]: 450g 이상
+            - separator [ref=f86e306]
+            - generic [ref=f86e307]:
+              - heading "낱개상품 여부" [level=5] [ref=f86e308]
+              - list [ref=f86e310]:
+                - listitem [ref=f86e311]:
+                  - generic [ref=f86e312] [cursor=pointer]: 낱개상품
+            - separator [ref=f86e314]
+            - generic [ref=f86e315]:
+              - heading "총 수량" [level=5] [ref=f86e316]
+              - list [ref=f86e318]:
+                - listitem [ref=f86e319]:
+                  - generic [ref=f86e320] [cursor=pointer]: 6개 이하
+                - listitem [ref=f86e322]:
+                  - generic [ref=f86e323] [cursor=pointer]: 6~12개
+                - listitem [ref=f86e325]:
+                  - generic [ref=f86e326] [cursor=pointer]: 12~24개
+                - listitem [ref=f86e328]:
+                  - generic [ref=f86e329] [cursor=pointer]: 24개 이상
+            - separator [ref=f86e331]
+            - generic [ref=f86e332]:
+              - heading "종류" [level=5] [ref=f86e333]
+              - generic [ref=f86e334]:
+                - list [ref=f86e335]:
+                  - listitem [ref=f86e336]:
+                    - generic [ref=f86e337] [cursor=pointer]: 버섯
+                  - listitem [ref=f86e339]:
+                    - generic [ref=f86e340] [cursor=pointer]: 콘
+                  - listitem [ref=f86e342]:
+                    - generic [ref=f86e343] [cursor=pointer]: 크림
+                  - listitem [ref=f86e345]:
+                    - generic [ref=f86e346] [cursor=pointer]: 소고기
+                  - listitem [ref=f86e348]:
+                    - generic [ref=f86e349] [cursor=pointer]: 감자
+                  - listitem:
+                    - generic [ref=f86e351] [cursor=pointer]: 브로콜리
+                  - listitem:
+                    - generic [ref=f86e353] [cursor=pointer]: 단호박
+                  - listitem:
+                    - generic [ref=f86e355] [cursor=pointer]: 클램차우더
+                  - listitem:
+                    - generic [ref=f86e357] [cursor=pointer]: 토마토
+                  - listitem:
+                    - generic [ref=f86e359] [cursor=pointer]: 기타
+                - generic [ref=f86e361] [cursor=pointer]: + 더보기
+            - separator [ref=f86e362]
+            - generic [ref=f86e363]:
+              - heading "구성" [level=5] [ref=f86e364]
+              - list [ref=f86e366]:
+                - listitem [ref=f86e367]:
+                  - generic [ref=f86e368] [cursor=pointer]: 단품
+                - listitem [ref=f86e370]:
+                  - generic [ref=f86e371] [cursor=pointer]: 단품세트
+                - listitem [ref=f86e373]:
+                  - generic [ref=f86e374] [cursor=pointer]: 혼합세트
+            - separator [ref=f86e376]
+            - generic [ref=f86e377]:
+              - heading "간편식" [level=5] [ref=f86e378]
+              - list [ref=f86e380]:
+                - listitem [ref=f86e381]:
+                  - generic [ref=f86e382] [cursor=pointer]: 즉석섭취음료
+                - listitem [ref=f86e384]:
+                  - generic [ref=f86e385] [cursor=pointer]: 즉석섭취식품
+                - listitem [ref=f86e387]:
+                  - generic [ref=f86e388] [cursor=pointer]: 즉석조리식품
+                - listitem [ref=f86e390]:
+                  - generic [ref=f86e391] [cursor=pointer]: 밀키트
+            - separator [ref=f86e393]
+            - generic [ref=f86e394]:
+              - heading "용기형태" [level=5] [ref=f86e395]
+              - generic [ref=f86e396]:
+                - list [ref=f86e397]:
+                  - listitem [ref=f86e398]:
+                    - generic [ref=f86e399] [cursor=pointer]: 플라스틱병
+                  - listitem [ref=f86e401]:
+                    - generic [ref=f86e402] [cursor=pointer]: 유리병
+                  - listitem [ref=f86e404]:
+                    - generic [ref=f86e405] [cursor=pointer]: 캔
+                  - listitem [ref=f86e407]:
+                    - generic [ref=f86e408] [cursor=pointer]: 스프레이
+                  - listitem [ref=f86e410]:
+                    - generic [ref=f86e411] [cursor=pointer]: 파우치
+                  - listitem:
+                    - generic [ref=f86e413] [cursor=pointer]: 종이팩
+                  - listitem:
+                    - generic [ref=f86e415] [cursor=pointer]: 컵
+                  - listitem:
+                    - generic [ref=f86e417] [cursor=pointer]: 스틱/포
+                  - listitem:
+                    - generic [ref=f86e419] [cursor=pointer]: 튜브
+                - generic [ref=f86e421] [cursor=pointer]: + 더보기
+            - separator [ref=f86e422]
+            - generic [ref=f86e423]:
+              - heading "보관방식" [level=5] [ref=f86e424]
+              - list [ref=f86e426]:
+                - listitem [ref=f86e427]:
+                  - generic [ref=f86e428] [cursor=pointer]: 냉장보관
+                - listitem [ref=f86e430]:
+                  - generic [ref=f86e431] [cursor=pointer]: 냉동보관
+                - listitem [ref=f86e433]:
+                  - generic [ref=f86e434] [cursor=pointer]: 실온보관
+            - separator [ref=f86e436]
+            - generic [ref=f86e437]:
+              - heading "설탕함량" [level=5] [ref=f86e438]
+              - list [ref=f86e440]:
+                - listitem [ref=f86e441]:
+                  - generic [ref=f86e442] [cursor=pointer]: 무설탕
+                - listitem [ref=f86e444]:
+                  - generic [ref=f86e445] [cursor=pointer]: 저설탕
+                - listitem [ref=f86e447]:
+                  - generic [ref=f86e448] [cursor=pointer]: 설탕첨가
+                - listitem [ref=f86e450]:
+                  - generic [ref=f86e451] [cursor=pointer]: 당 첨가
+            - separator [ref=f86e453]
+            - generic [ref=f86e454]:
+              - heading "유형" [level=5] [ref=f86e455]
+              - list [ref=f86e457]:
+                - listitem [ref=f86e458]:
+                  - generic [ref=f86e459] [cursor=pointer]: 밥
+                - listitem [ref=f86e461]:
+                  - generic [ref=f86e462] [cursor=pointer]: 국밥
+                - listitem [ref=f86e464]:
+                  - generic [ref=f86e465] [cursor=pointer]: 덮밥/비빔밥
+            - separator [ref=f86e467]
+            - generic [ref=f86e468]:
+              - heading "포장형태" [level=5] [ref=f86e469]
+              - list [ref=f86e471]:
+                - listitem [ref=f86e472]:
+                  - generic [ref=f86e473] [cursor=pointer]: 용기/통
+                - listitem [ref=f86e475]:
+                  - generic [ref=f86e476] [cursor=pointer]: 파우치
+                - listitem [ref=f86e478]:
+                  - generic [ref=f86e479] [cursor=pointer]: 튜브형
+            - separator [ref=f86e481]
+            - generic [ref=f86e482]:
+              - heading "비건 여부" [level=5] [ref=f86e483]
+              - list [ref=f86e485]:
+                - listitem [ref=f86e486]:
+                  - generic [ref=f86e487] [cursor=pointer]: 비건
+            - separator [ref=f86e489]
+            - generic [ref=f86e490]:
+              - heading "어린이용 여부" [level=5] [ref=f86e491]
+              - list [ref=f86e493]:
+                - listitem [ref=f86e494]:
+                  - generic [ref=f86e495] [cursor=pointer]: 어린이용
+            - separator [ref=f86e497]
+            - generic [ref=f86e498]:
+              - heading "전자레인지 가능 여부" [level=5] [ref=f86e499]
+              - list [ref=f86e501]:
+                - listitem [ref=f86e502]:
+                  - generic [ref=f86e503] [cursor=pointer]: 전자레인지 가능
+            - separator [ref=f86e505]
+            - generic [ref=f86e506]:
+              - heading "색상" [level=5] [ref=f86e507]
+              - generic [ref=f86e508]:
+                - list [ref=f86e509]:
+                  - listitem [ref=f86e510]:
+                    - generic [ref=f86e511] [cursor=pointer]: 블랙
+                  - listitem [ref=f86e513]:
+                    - generic [ref=f86e514] [cursor=pointer]: 네이비
+                  - listitem [ref=f86e516]:
+                    - generic [ref=f86e517] [cursor=pointer]: 그레이
+                  - listitem [ref=f86e519]:
+                    - generic [ref=f86e520] [cursor=pointer]: 실버
+                  - listitem [ref=f86e522]:
+                    - generic [ref=f86e523] [cursor=pointer]: 레드
+                  - listitem:
+                    - generic [ref=f86e525] [cursor=pointer]: 오렌지
+                  - listitem:
+                    - generic [ref=f86e527] [cursor=pointer]: 옐로우
+                  - listitem:
+                    - generic [ref=f86e529] [cursor=pointer]: 그린
+                  - listitem:
+                    - generic [ref=f86e531] [cursor=pointer]: 블루
+                  - listitem:
+                    - generic [ref=f86e533] [cursor=pointer]: 퍼플
+                  - listitem:
+                    - generic [ref=f86e535] [cursor=pointer]: 핑크
+                  - listitem:
+                    - generic [ref=f86e537] [cursor=pointer]: 화이트
+                  - listitem:
+                    - generic [ref=f86e539] [cursor=pointer]: 브라운
+                  - listitem:
+                    - generic [ref=f86e541] [cursor=pointer]: 골드
+                  - listitem:
+                    - generic [ref=f86e543] [cursor=pointer]: 베이지
+                  - listitem:
+                    - generic [ref=f86e545] [cursor=pointer]: 혼합
+                  - listitem:
+                    - generic [ref=f86e547] [cursor=pointer]: 투명
+                - generic [ref=f86e549] [cursor=pointer]: + 더보기
+            - separator [ref=f86e550]
+            - generic [ref=f86e551]:
+              - heading "별점" [level=5] [ref=f86e552]
+              - list [ref=f86e554]:
+                - listitem [ref=f86e555]:
+                  - generic "전체" [ref=f86e556]: 별점전체
+                - listitem [ref=f86e557]:
+                  - generic "4점 이상" [ref=f86e558]:
+                    - generic [ref=f86e559] [cursor=pointer]
+                    - text: 4점 이상
+                - listitem [ref=f86e560]:
+                  - generic "3점 이상" [ref=f86e561]:
+                    - generic [ref=f86e562] [cursor=pointer]
+                    - text: 3점 이상
+                - listitem [ref=f86e563]:
+                  - generic "2점 이상" [ref=f86e564]:
+                    - generic [ref=f86e565] [cursor=pointer]
+                    - text: 2점 이상
+                - listitem [ref=f86e566]:
+                  - generic "1점 이상" [ref=f86e567]:
+                    - generic [ref=f86e568] [cursor=pointer]
+                    - text: 1점 이상
+            - separator [ref=f86e569]
+            - generic [ref=f86e570]:
+              - heading "가격" [level=5] [ref=f86e571]
+              - list [ref=f86e573]:
+                - listitem [ref=f86e574]:
+                  - generic "priceFilter" [ref=f86e575]: 가격 전체
+                - listitem [ref=f86e576]:
+                  - generic "priceFilter" [ref=f86e577]: 6천원 이하
+                - listitem [ref=f86e578]:
+                  - generic "priceFilter" [ref=f86e579]: 6천원~1만 2천원
+                - listitem [ref=f86e580]:
+                  - generic "priceFilter" [ref=f86e581]: 1만 2천원~1만 8천원
+                - listitem [ref=f86e582]:
+                  - generic "priceFilter" [ref=f86e583]: 1만 8천원~2만 4천원
+                - listitem [ref=f86e584]:
+                  - generic "priceFilter" [ref=f86e585]: 2만 4천원 이상
+              - generic [ref=f86e586]:
+                - generic [ref=f86e587]:
+                  - textbox "minPrice" [ref=f86e588]
+                  - generic [ref=f86e589]: ~
+                  - textbox "maxPrice" [ref=f86e590]
+                  - text: 원
+                - generic "priceFilter" [ref=f86e591]: 검색
+            - separator [ref=f86e592]
+          - generic [ref=f86e595]:
+            - generic [ref=f86e596]: 현재 검색 결과에 만족하셨나요?
+            - button [ref=f86e597] [cursor=pointer]
+            - button [ref=f86e598] [cursor=pointer]
+            - generic [ref=f86e599]:
+              - paragraph [ref=f86e600]: 어떤 문제가 있었나요?
+              - list [ref=f86e601]:
+                - listitem [ref=f86e602] [cursor=pointer]: 필터가 도움이 안 돼요
+                - listitem [ref=f86e603] [cursor=pointer]: 이미지나 정보가 부정확해요
+                - listitem [ref=f86e604] [cursor=pointer]: 관련 없는 상품이 있어요
+                - listitem [ref=f86e605] [cursor=pointer]: 추천해준 검색어가 도움이 안 돼요
+                - listitem [ref=f86e606] [cursor=pointer]: 기타 원하는 옵션이 없어요
+        - generic [ref=f86e607]:
+          - generic [ref=f86e608]:
+            - heading [level=1] [ref=f86e609]:
+              - strong [ref=f86e610]: "'컵스프'"
+              - text: 에 대한 검색결과
+            - generic [ref=f86e611]:
+              - text: "선택한 필터:"
+              - link "로켓배송 삭제" [ref=f86e613] [cursor=pointer]:
+                - /url: "#"
+                - text: 로켓배송
+                - generic [ref=f86e614]: 삭제
+            - generic [ref=f86e615]:
+              - generic [ref=f86e618]:
+                - checkbox "배송비 포함" [ref=f86e619] [cursor=pointer]
+                - generic [ref=f86e622]: 배송비 포함
+              - list [ref=f86e626]:
+                - listitem [ref=f86e627]:
+                  - radio "쿠팡 랭킹순" [ref=f86e628]
+                  - generic [ref=f86e629] [cursor=pointer]: 쿠팡 랭킹순
+                  - generic [ref=f86e630]: 설명
+                - listitem [ref=f86e631]:
+                  - radio "낮은가격순" [checked] [ref=f86e632]
+                  - generic [ref=f86e633] [cursor=pointer]: 낮은가격순
+                - listitem [ref=f86e634]:
+                  - radio "높은가격순" [ref=f86e635]
+                  - generic [ref=f86e636] [cursor=pointer]: 높은가격순
+                - listitem [ref=f86e637]:
+                  - radio "판매량순" [ref=f86e638]
+                  - generic [ref=f86e639] [cursor=pointer]: 판매량순
+                - listitem [ref=f86e640]:
+                  - radio "최신순" [ref=f86e641]
+                  - generic [ref=f86e642] [cursor=pointer]: 최신순
+          - generic [ref=f86e648] [cursor=pointer]:
+            - generic [ref=f86e655]:
+              - generic [ref=f86e656]: 올따옴 농심 보노 7종 혼합기획세트 (콘스프57g+포르치니버섯54g+포타주크림51g+체다치즈63g+어니언54g+클램차우더63g+옥수수알그대로63g)
+              - generic [ref=f86e657]: 내일(토) 도착 보장
+              - generic [ref=f86e666]:
+                - emphasis [ref=f86e669]
+                - generic [ref=f86e670]: (464)
+            - generic [ref=f86e671]: 광고
+          - generic [ref=f86e678]:
+            - list [ref=f86e680]:
+              - listitem [ref=f86e681] [cursor=pointer]:
+                - link "폰타나 프렌치 어니언 크림수프, 1개, 20g 1,700원 20% 1,350원 (100g당 6,750원) 내일(토) 새벽 도착 보장 최대 68원 적립 최대 68원 적립 1" [ref=f86e682]:
+                  - /url: /vp/products/9718149360?itemId=28297231792&vendorItemId=95250044253&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=0&rank=0
+                  - figure [ref=f86e683]:
+                    - img "폰타나 프렌치 어니언 크림수프, 1개, 20g" [ref=f86e684]
+                  - generic [ref=f86e685]:
+                    - generic [ref=f86e687]: 폰타나 프렌치 어니언 크림수프, 1개, 20g
+                    - generic [ref=f86e688]:
+                      - deletion [ref=f86e690]: 1,700원
+                      - generic [ref=f86e692]:
+                        - generic [ref=f86e693]: 20%
+                        - generic [ref=f86e694]: 1,350원
+                        - generic [ref=f86e695]: (100g당 6,750원)
+                    - generic [ref=f86e696]: 내일(토) 새벽 도착 보장
+                    - generic [ref=f86e702]:
+                      - img "최대 68원 적립" [ref=f86e703]
+                      - generic [ref=f86e704]: 최대 68원 적립
+                    - generic [ref=f86e705]: "1"
+              - listitem [ref=f86e706] [cursor=pointer]:
+                - link "폰타나 잉글랜드 브로콜리 앤 체다치즈 분말 즉석 수프, 20g, 1개 1,700원 11% 1,500원 (100g당 7,500원) 내일(토) 새벽 도착 보장 4.5 (96) 최대 75원 적립 최대 75원 적립 2" [ref=f86e707]:
+                  - /url: /vp/products/7851799808?itemId=21403262274&vendorItemId=88459856732&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=1&rank=1
+                  - figure [ref=f86e708]:
+                    - img "폰타나 잉글랜드 브로콜리 앤 체다치즈 분말 즉석 수프, 20g, 1개" [ref=f86e709]
+                  - generic [ref=f86e710]:
+                    - generic [ref=f86e712]: 폰타나 잉글랜드 브로콜리 앤 체다치즈 분말 즉석 수프, 20g, 1개
+                    - generic [ref=f86e713]:
+                      - deletion [ref=f86e715]: 1,700원
+                      - generic [ref=f86e717]:
+                        - generic [ref=f86e718]: 11%
+                        - generic [ref=f86e719]: 1,500원
+                        - generic [ref=f86e720]: (100g당 7,500원)
+                    - generic [ref=f86e721]: 내일(토) 새벽 도착 보장
+                    - generic [ref=f86e727]:
+                      - generic "4.5" [ref=f86e728]
+                      - generic [ref=f86e734]: (96)
+                    - generic [ref=f86e737]:
+                      - img "최대 75원 적립" [ref=f86e738]
+                      - generic [ref=f86e739]: 최대 75원 적립
+                    - generic [ref=f86e740]: "2"
+              - listitem [ref=f86e741] [cursor=pointer]:
+                - link "폰타나 프렌치 로스티드 어니언 크림 컵수프, 60g, 1개 2,780원 (100g당 4,633원) 내일(토) 새벽 도착 보장 4 (11) 최대 139원 적립 최대 139원 적립 3" [ref=f86e742]:
+                  - /url: /vp/products/9499011148?itemId=28297425519&vendorItemId=95250234180&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=2&rank=2
+                  - figure [ref=f86e743]:
+                    - img "폰타나 프렌치 로스티드 어니언 크림 컵수프, 60g, 1개" [ref=f86e744]
+                  - generic [ref=f86e745]:
+                    - generic [ref=f86e747]: 폰타나 프렌치 로스티드 어니언 크림 컵수프, 60g, 1개
+                    - generic [ref=f86e750]:
+                      - generic [ref=f86e751]: 2,780원
+                      - generic [ref=f86e752]: (100g당 4,633원)
+                    - generic [ref=f86e753]: 내일(토) 새벽 도착 보장
+                    - generic [ref=f86e759]:
+                      - generic "4" [ref=f86e760]
+                      - generic [ref=f86e766]: (11)
+                    - generic [ref=f86e769]:
+                      - img "최대 139원 적립" [ref=f86e770]
+                      - generic [ref=f86e771]: 최대 139원 적립
+                    - generic [ref=f86e772]: "3"
+              - listitem [ref=f86e773] [cursor=pointer]:
+                - link "보노 콘스프, 57g, 1개 2,800원 (100g당 4,912원) 내일(토) 새벽 도착 보장 4.5 (74) 최대 140원 적립 최대 140원 적립 4" [ref=f86e774]:
+                  - /url: /vp/products/9498950504?itemId=28297232383&vendorItemId=95250044928&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=3&rank=3
+                  - figure [ref=f86e775]:
+                    - img "보노 콘스프, 57g, 1개" [ref=f86e776]
+                  - generic [ref=f86e777]:
+                    - generic [ref=f86e779]: 보노 콘스프, 57g, 1개
+                    - generic [ref=f86e782]:
+                      - generic [ref=f86e783]: 2,800원
+                      - generic [ref=f86e784]: (100g당 4,912원)
+                    - generic [ref=f86e785]: 내일(토) 새벽 도착 보장
+                    - generic [ref=f86e791]:
+                      - generic "4.5" [ref=f86e792]
+                      - generic [ref=f86e798]: (74)
+                    - generic [ref=f86e801]:
+                      - img "최대 140원 적립" [ref=f86e802]
+                      - generic [ref=f86e803]: 최대 140원 적립
+                    - generic [ref=f86e804]: "4"
+              - listitem [ref=f86e805] [cursor=pointer]:
+                - link "폰타나 프렌치 어니언 크림수프, 20g, 2개 3,400원 15% 2,870원 (100g당 7,175원) 내일(토) 새벽 도착 보장 5 (11) 최대 144원 적립 최대 144원 적립 5" [ref=f86e806]:
+                  - /url: /vp/products/9498950302?itemId=28297232009&vendorItemId=95250044399&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=4&rank=4
+                  - figure [ref=f86e807]:
+                    - img "폰타나 프렌치 어니언 크림수프, 20g, 2개" [ref=f86e808]
+                  - generic [ref=f86e809]:
+                    - generic [ref=f86e811]: 폰타나 프렌치 어니언 크림수프, 20g, 2개
+                    - generic [ref=f86e812]:
+                      - deletion [ref=f86e814]: 3,400원
+                      - generic [ref=f86e816]:
+                        - generic [ref=f86e817]: 15%
+                        - generic [ref=f86e818]: 2,870원
+                        - generic [ref=f86e819]: (100g당 7,175원)
+                    - generic [ref=f86e820]: 내일(토) 새벽 도착 보장
+                    - generic [ref=f86e826]:
+                      - generic "5" [ref=f86e827]
+                      - generic [ref=f86e833]: (11)
+                    - generic [ref=f86e836]:
+                      - img "최대 144원 적립" [ref=f86e837]
+                      - generic [ref=f86e838]: 최대 144원 적립
+                    - generic [ref=f86e839]: "5"
+              - listitem [ref=f86e840] [cursor=pointer]:
+                - link "폰타나 그릴드 머쉬룸 크림 컵수프, 60g, 2개 3,870원 (100g당 3,225원) 내일(토) 새벽 도착 보장 4.5 (83) 최대 194원 적립 최대 194원 적립 6" [ref=f86e841]:
+                  - /url: /vp/products/8989477302?itemId=26331013081&vendorItemId=93308278672&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=5&rank=5
+                  - figure [ref=f86e842]:
+                    - img "폰타나 그릴드 머쉬룸 크림 컵수프, 60g, 2개" [ref=f86e843]
+                  - generic [ref=f86e844]:
+                    - generic [ref=f86e846]: 폰타나 그릴드 머쉬룸 크림 컵수프, 60g, 2개
+                    - generic [ref=f86e849]:
+                      - generic [ref=f86e850]: 3,870원
+                      - generic [ref=f86e851]: (100g당 3,225원)
+                    - generic [ref=f86e852]: 내일(토) 새벽 도착 보장
+                    - generic [ref=f86e858]:
+                      - generic "4.5" [ref=f86e859]
+                      - generic [ref=f86e865]: (83)
+                    - generic [ref=f86e868]:
+                      - img "최대 194원 적립" [ref=f86e869]
+                      - generic [ref=f86e870]: 최대 194원 적립
+                    - generic [ref=f86e871]: "6"
+              - listitem [ref=f86e872] [cursor=pointer]:
+                - link "보노 체다치즈스프, 63g, 1개 3,960원 (100g당 6,286원) 내일(토) 새벽 도착 보장 5 (242) 최대 198원 적립 최대 198원 적립 7" [ref=f86e873]:
+                  - /url: /vp/products/9065762569?itemId=26621968242&vendorItemId=93594909087&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=6&rank=6
+                  - figure [ref=f86e874]:
+                    - img "보노 체다치즈스프, 63g, 1개" [ref=f86e875]
+                  - generic [ref=f86e876]:
+                    - generic [ref=f86e878]: 보노 체다치즈스프, 63g, 1개
+                    - generic [ref=f86e881]:
+                      - generic [ref=f86e882]: 3,960원
+                      - generic [ref=f86e883]: (100g당 6,286원)
+                    - generic [ref=f86e884]: 내일(토) 새벽 도착 보장
+                    - generic [ref=f86e890]:
+                      - generic "5" [ref=f86e891]
+                      - generic [ref=f86e897]: (242)
+                    - generic [ref=f86e900]:
+                      - img "최대 198원 적립" [ref=f86e901]
+                      - generic [ref=f86e902]: 최대 198원 적립
+                    - generic [ref=f86e903]: "7"
+              - listitem [ref=f86e904] [cursor=pointer]:
+                - link "폰타나 잉글랜드 브로콜리 체다치즈 컵수프, 20g, 3개 5,100원 11% 4,500원 (100g당 7,500원) 내일(토) 새벽 도착 보장 4.5 (96) 최대 225원 적립 최대 225원 적립 8" [ref=f86e905]:
+                  - /url: /vp/products/7851799808?itemId=21403262276&vendorItemId=88459856735&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=7&rank=7
+                  - figure [ref=f86e906]:
+                    - img "폰타나 잉글랜드 브로콜리 체다치즈 컵수프, 20g, 3개" [ref=f86e907]
+                  - generic [ref=f86e908]:
+                    - generic [ref=f86e910]: 폰타나 잉글랜드 브로콜리 체다치즈 컵수프, 20g, 3개
+                    - generic [ref=f86e911]:
+                      - deletion [ref=f86e913]: 5,100원
+                      - generic [ref=f86e915]:
+                        - generic [ref=f86e916]: 11%
+                        - generic [ref=f86e917]: 4,500원
+                        - generic [ref=f86e918]: (100g당 7,500원)
+                    - generic [ref=f86e919]: 내일(토) 새벽 도착 보장
+                    - generic [ref=f86e925]:
+                      - generic "4.5" [ref=f86e926]
+                      - generic [ref=f86e932]: (96)
+                    - generic [ref=f86e935]:
+                      - img "최대 225원 적립" [ref=f86e936]
+                      - generic [ref=f86e937]: 최대 225원 적립
+                    - generic [ref=f86e938]: "8"
+              - listitem [ref=f86e939] [cursor=pointer]:
+                - link "보노 체다치즈 스프, 63g, 2개 4,620원 (100g당 3,667원) 내일(토) 새벽 도착 보장 5 (242) 최대 231원 적립 최대 231원 적립 9" [ref=f86e940]:
+                  - /url: /vp/products/9065762569?itemId=26331201837&vendorItemId=93308462793&pickType=COU_PICK&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=8&rank=8
+                  - figure [ref=f86e941]:
+                    - img "보노 체다치즈 스프, 63g, 2개" [ref=f86e942]
+                  - generic [ref=f86e943]:
+                    - generic [ref=f86e948]: 보노 체다치즈 스프, 63g, 2개
+                    - generic [ref=f86e951]:
+                      - generic [ref=f86e952]: 4,620원
+                      - generic [ref=f86e953]: (100g당 3,667원)
+                    - generic [ref=f86e954]: 내일(토) 새벽 도착 보장
+                    - generic [ref=f86e960]:
+                      - generic "5" [ref=f86e961]
+                      - generic [ref=f86e967]: (242)
+                    - generic [ref=f86e970]:
+                      - img "최대 231원 적립" [ref=f86e971]
+                      - generic [ref=f86e972]: 최대 231원 적립
+                    - generic [ref=f86e973]: "9"
+              - listitem [ref=f86e974] [cursor=pointer]:
+                - link "폰타나 피에몬테 그릴드 머쉬룸 크림 분말 즉석 수프, 20g, 4개 6,800원 31% 4,640원 (100g당 5,800원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 4.5 (9,997) 최대 232원 적립 최대 232원 적립 단 1개 남음 빨리 주문하세요! 10" [ref=f86e975]:
+                  - /url: /vp/products/6297847984?itemId=5662838275&vendorItemId=93487565824&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=9&rank=9
+                  - figure [ref=f86e976]:
+                    - img "폰타나 피에몬테 그릴드 머쉬룸 크림 분말 즉석 수프, 20g, 4개" [ref=f86e977]
+                  - generic [ref=f86e978]:
+                    - generic [ref=f86e980]: 폰타나 피에몬테 그릴드 머쉬룸 크림 분말 즉석 수프, 20g, 4개
+                    - generic [ref=f86e981]:
+                      - deletion [ref=f86e983]: 6,800원
+                      - generic [ref=f86e985]:
+                        - generic [ref=f86e986]: 31%
+                        - generic [ref=f86e987]: 4,640원
+                        - generic [ref=f86e988]: (100g당 5,800원)
+                    - generic [ref=f86e989]:
+                      - generic [ref=f86e990]: 내일(토) 도착 보장
+                      - generic [ref=f86e994]: 와우는 무료배송 ∙ 무료반품
+                    - generic [ref=f86e996]:
+                      - generic "4.5" [ref=f86e997]
+                      - generic [ref=f86e1003]: (9,997)
+                    - generic [ref=f86e1006]:
+                      - img "최대 232원 적립" [ref=f86e1007]
+                      - generic [ref=f86e1008]: 최대 232원 적립
+                    - generic [ref=f86e1009]:
+                      - strong [ref=f86e1010]: 단 1개 남음
+                      - generic [ref=f86e1011]: 빨리 주문하세요!
+                    - generic [ref=f86e1012]: "10"
+              - listitem [ref=f86e1013] [cursor=pointer]:
+                - link "폰타나 프렌치 로스티드 어니언 크림 컵수프, 60g, 2개 6,960원 26% 5,100원 (100g당 4,250원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (3,282) 최대 255원 적립 최대 255원 적립" [ref=f86e1014]:
+                  - /url: /vp/products/7680156221?itemId=18739935823&vendorItemId=3628071223&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=10&rank=10
+                  - figure [ref=f86e1015]:
+                    - img "폰타나 프렌치 로스티드 어니언 크림 컵수프, 60g, 2개" [ref=f86e1016]
+                  - generic [ref=f86e1017]:
+                    - generic [ref=f86e1019]: 폰타나 프렌치 로스티드 어니언 크림 컵수프, 60g, 2개
+                    - generic [ref=f86e1020]:
+                      - deletion [ref=f86e1022]: 6,960원
+                      - generic [ref=f86e1024]:
+                        - generic [ref=f86e1025]: 26%
+                        - generic [ref=f86e1026]: 5,100원
+                        - generic [ref=f86e1027]: (100g당 4,250원)
+                    - generic [ref=f86e1028]:
+                      - generic [ref=f86e1029]: 내일(토) 도착 보장
+                      - generic [ref=f86e1033]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e1035]:
+                      - generic "4.5" [ref=f86e1036]
+                      - generic [ref=f86e1042]: (3,282)
+                    - generic [ref=f86e1045]:
+                      - img "최대 255원 적립" [ref=f86e1046]
+                      - generic [ref=f86e1047]: 최대 255원 적립
+              - listitem [ref=f86e1048] [cursor=pointer]:
+                - link "보노 콘스프, 57g, 2개 5,100원 (100g당 4,474원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (22,060) 최대 255원 적립 최대 255원 적립" [ref=f86e1049]:
+                  - /url: /vp/products/2038492934?itemId=17847613552&vendorItemId=88352960207&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=11&rank=11
+                  - figure [ref=f86e1050]:
+                    - img "보노 콘스프, 57g, 2개" [ref=f86e1051]
+                  - generic [ref=f86e1052]:
+                    - generic [ref=f86e1054]: 보노 콘스프, 57g, 2개
+                    - generic [ref=f86e1057]:
+                      - generic [ref=f86e1058]: 5,100원
+                      - generic [ref=f86e1059]: (100g당 4,474원)
+                    - generic [ref=f86e1060]:
+                      - generic [ref=f86e1061]: 내일(토) 도착 보장
+                      - generic [ref=f86e1065]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e1067]:
+                      - generic "5" [ref=f86e1068]
+                      - generic [ref=f86e1074]: (22,060)
+                    - generic [ref=f86e1077]:
+                      - img "최대 255원 적립" [ref=f86e1078]
+                      - generic [ref=f86e1079]: 최대 255원 적립
+              - listitem [ref=f86e1080] [cursor=pointer]:
+                - link "폰타나 피에몬테 그릴드 머쉬룸 크림 수프 즉석지함, 60g, 3개 10,440원 49% 5,230원 (100g당 2,906원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (6,084) 최대 261원 적립 최대 261원 적립" [ref=f86e1081]:
+                  - /url: /vp/products/2450615?itemId=24251317319&vendorItemId=86281803749&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=12&rank=12
+                  - figure [ref=f86e1082]:
+                    - img "폰타나 피에몬테 그릴드 머쉬룸 크림 수프 즉석지함, 60g, 3개" [ref=f86e1083]
+                  - generic [ref=f86e1084]:
+                    - generic [ref=f86e1086]: 폰타나 피에몬테 그릴드 머쉬룸 크림 수프 즉석지함, 60g, 3개
+                    - generic [ref=f86e1087]:
+                      - deletion [ref=f86e1089]: 10,440원
+                      - generic [ref=f86e1091]:
+                        - generic [ref=f86e1092]: 49%
+                        - generic [ref=f86e1093]: 5,230원
+                        - generic [ref=f86e1094]: (100g당 2,906원)
+                    - generic [ref=f86e1095]:
+                      - generic [ref=f86e1096]: 내일(토) 도착 보장
+                      - generic [ref=f86e1100]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e1102]:
+                      - generic "5" [ref=f86e1103]
+                      - generic [ref=f86e1109]: (6,084)
+                    - generic [ref=f86e1112]:
+                      - img "최대 261원 적립" [ref=f86e1113]
+                      - generic [ref=f86e1114]: 최대 261원 적립
+              - listitem [ref=f86e1115] [cursor=pointer]:
+                - link "청정원 신우리쌀 포테이토컵수프, 60g, 2개 5,600원 1% 5,510원 (100g당 4,592원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (738) 최대 275원 적립 최대 275원 적립" [ref=f86e1116]:
+                  - /url: /vp/products/7228098999?itemId=18333903817&vendorItemId=3087657351&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=13&rank=13
+                  - figure [ref=f86e1117]:
+                    - img "청정원 신우리쌀 포테이토컵수프, 60g, 2개" [ref=f86e1118]
+                  - generic [ref=f86e1119]:
+                    - generic [ref=f86e1121]: 청정원 신우리쌀 포테이토컵수프, 60g, 2개
+                    - generic [ref=f86e1122]:
+                      - deletion [ref=f86e1124]: 5,600원
+                      - generic [ref=f86e1126]:
+                        - generic [ref=f86e1127]: 1%
+                        - generic [ref=f86e1128]: 5,510원
+                        - generic [ref=f86e1129]: (100g당 4,592원)
+                    - generic [ref=f86e1130]:
+                      - generic [ref=f86e1131]: 내일(토) 도착 보장
+                      - generic [ref=f86e1135]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e1137]:
+                      - generic "4.5" [ref=f86e1138]
+                      - generic [ref=f86e1144]: (738)
+                    - generic [ref=f86e1147]:
+                      - img "최대 275원 적립" [ref=f86e1148]
+                      - generic [ref=f86e1149]: 최대 275원 적립
+              - listitem [ref=f86e1150] [cursor=pointer]:
+                - link "폰타나 뉴질랜드 스위트콘 수프 즉석지함, 60g, 3개 10,440원 45% 5,740원 (100g당 3,189원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (6,507) 최대 287원 적립 최대 287원 적립" [ref=f86e1151]:
+                  - /url: /vp/products/8168595094?itemId=20407809721&vendorItemId=86554419483&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=14&rank=14
+                  - figure [ref=f86e1152]:
+                    - img "폰타나 뉴질랜드 스위트콘 수프 즉석지함, 60g, 3개" [ref=f86e1153]
+                  - generic [ref=f86e1154]:
+                    - generic [ref=f86e1156]: 폰타나 뉴질랜드 스위트콘 수프 즉석지함, 60g, 3개
+                    - generic [ref=f86e1157]:
+                      - deletion [ref=f86e1159]: 10,440원
+                      - generic [ref=f86e1161]:
+                        - generic [ref=f86e1162]: 45%
+                        - generic [ref=f86e1163]: 5,740원
+                        - generic [ref=f86e1164]: (100g당 3,189원)
+                    - generic [ref=f86e1165]:
+                      - generic [ref=f86e1166]: 내일(토) 도착 보장
+                      - generic [ref=f86e1170]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e1172]:
+                      - generic "4.5" [ref=f86e1173]
+                      - generic [ref=f86e1179]: (6,507)
+                    - generic [ref=f86e1182]:
+                      - img "최대 287원 적립" [ref=f86e1183]
+                      - generic [ref=f86e1184]: 최대 287원 적립
+              - listitem [ref=f86e1185] [cursor=pointer]:
+                - link "폰타나 프렌치 어니언 크림수프, 20g, 5개 8,500원 31% 5,820원 (100g당 5,820원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (3,282) 최대 291원 적립 최대 291원 적립" [ref=f86e1186]:
+                  - /url: /vp/products/7680156221?itemId=25425506209&vendorItemId=92418598614&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=15&rank=15
+                  - figure [ref=f86e1187]:
+                    - img "폰타나 프렌치 어니언 크림수프, 20g, 5개" [ref=f86e1188]
+                  - generic [ref=f86e1189]:
+                    - generic [ref=f86e1191]: 폰타나 프렌치 어니언 크림수프, 20g, 5개
+                    - generic [ref=f86e1192]:
+                      - deletion [ref=f86e1194]: 8,500원
+                      - generic [ref=f86e1196]:
+                        - generic [ref=f86e1197]: 31%
+                        - generic [ref=f86e1198]: 5,820원
+                        - generic [ref=f86e1199]: (100g당 5,820원)
+                    - generic [ref=f86e1200]:
+                      - generic [ref=f86e1201]: 내일(토) 도착 보장
+                      - generic [ref=f86e1205]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e1207]:
+                      - generic "4.5" [ref=f86e1208]
+                      - generic [ref=f86e1214]: (3,282)
+                    - generic [ref=f86e1217]:
+                      - img "최대 291원 적립" [ref=f86e1218]
+                      - generic [ref=f86e1219]: 최대 291원 적립
+              - listitem [ref=f86e1220] [cursor=pointer]:
+                - link "보노 크림스프 포타주, 51g, 2개 5,950원 (100g당 5,833원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (3,161) 최대 298원 적립 최대 298원 적립" [ref=f86e1221]:
+                  - /url: /vp/products/9550776?itemId=21293098619&vendorItemId=88352960221&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=16&rank=16
+                  - figure [ref=f86e1222]:
+                    - img "보노 크림스프 포타주, 51g, 2개" [ref=f86e1223]
+                  - generic [ref=f86e1224]:
+                    - generic [ref=f86e1226]: 보노 크림스프 포타주, 51g, 2개
+                    - generic [ref=f86e1229]:
+                      - generic [ref=f86e1230]: 5,950원
+                      - generic [ref=f86e1231]: (100g당 5,833원)
+                    - generic [ref=f86e1232]:
+                      - generic [ref=f86e1233]: 내일(토) 도착 보장
+                      - generic [ref=f86e1237]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e1239]:
+                      - generic "5" [ref=f86e1240]
+                      - generic [ref=f86e1246]: (3,161)
+                    - generic [ref=f86e1249]:
+                      - img "최대 298원 적립" [ref=f86e1250]
+                      - generic [ref=f86e1251]: 최대 298원 적립
+              - listitem [ref=f86e1252] [cursor=pointer]:
+                - link "폰타나 잉글랜드 브로콜리 체다치즈 컵수프, 20g, 4개 6,800원 11% 6,000원 (100g당 7,500원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (3,198) 최대 300원 적립 최대 300원 적립" [ref=f86e1253]:
+                  - /url: /vp/products/8093453?itemId=18356573775&vendorItemId=85500409051&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=17&rank=17
+                  - figure [ref=f86e1254]:
+                    - img "폰타나 잉글랜드 브로콜리 체다치즈 컵수프, 20g, 4개" [ref=f86e1255]
+                  - generic [ref=f86e1256]:
+                    - generic [ref=f86e1258]: 폰타나 잉글랜드 브로콜리 체다치즈 컵수프, 20g, 4개
+                    - generic [ref=f86e1259]:
+                      - deletion [ref=f86e1261]: 6,800원
+                      - generic [ref=f86e1263]:
+                        - generic [ref=f86e1264]: 11%
+                        - generic [ref=f86e1265]: 6,000원
+                        - generic [ref=f86e1266]: (100g당 7,500원)
+                    - generic [ref=f86e1267]:
+                      - generic [ref=f86e1268]: 내일(토) 도착 보장
+                      - generic [ref=f86e1272]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e1274]:
+                      - generic "4.5" [ref=f86e1275]
+                      - generic [ref=f86e1281]: (3,198)
+                    - generic [ref=f86e1284]:
+                      - img "최대 300원 적립" [ref=f86e1285]
+                      - generic [ref=f86e1286]: 최대 300원 적립
+              - listitem [ref=f86e1287] [cursor=pointer]:
+                - link "보노 포르치니 버섯스프, 54g, 2개 쿠폰할인 6,060원 5% 5,700원 (100g당 5,278원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (13,982) 최대 285원 적립 최대 285원 적립" [ref=f86e1288]:
+                  - /url: /vp/products/1132956314?itemId=3547125232&vendorItemId=4443051211&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=18&rank=18
+                  - figure [ref=f86e1289]:
+                    - img "보노 포르치니 버섯스프, 54g, 2개" [ref=f86e1290]
+                  - generic [ref=f86e1291]:
+                    - generic [ref=f86e1293]: 보노 포르치니 버섯스프, 54g, 2개
+                    - generic [ref=f86e1294]:
+                      - generic [ref=f86e1295]:
+                        - generic [ref=f86e1296]: 쿠폰할인
+                        - deletion [ref=f86e1297]: 6,060원
+                      - generic [ref=f86e1299]:
+                        - generic [ref=f86e1300]: 5%
+                        - generic [ref=f86e1305]: 5,700원
+                        - generic [ref=f86e1306]: (100g당 5,278원)
+                    - generic [ref=f86e1307]:
+                      - generic [ref=f86e1308]: 내일(토) 도착 보장
+                      - generic [ref=f86e1312]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e1314]:
+                      - generic "5" [ref=f86e1315]
+                      - generic [ref=f86e1321]: (13,982)
+                    - generic [ref=f86e1324]:
+                      - img "최대 285원 적립" [ref=f86e1325]
+                      - generic [ref=f86e1326]: 최대 285원 적립
+              - listitem [ref=f86e1327] [cursor=pointer]:
+                - link "보노 어니언 크림 스프 3p, 54g, 2개 7,406원 17% 6,100원 (100g당 5,648원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 5 (2,328) 최대 305원 적립 최대 305원 적립" [ref=f86e1328]:
+                  - /url: /vp/products/108946086?itemId=21474553596&vendorItemId=88528823460&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=19&rank=19
+                  - figure [ref=f86e1329]:
+                    - img "보노 어니언 크림 스프 3p, 54g, 2개" [ref=f86e1330]
+                  - generic [ref=f86e1331]:
+                    - generic [ref=f86e1333]: 보노 어니언 크림 스프 3p, 54g, 2개
+                    - generic [ref=f86e1334]:
+                      - deletion [ref=f86e1336]: 7,406원
+                      - generic [ref=f86e1338]:
+                        - generic [ref=f86e1339]: 17%
+                        - generic [ref=f86e1340]: 6,100원
+                        - generic [ref=f86e1341]: (100g당 5,648원)
+                    - generic [ref=f86e1342]:
+                      - generic [ref=f86e1343]: 내일(토) 도착 보장
+                      - generic [ref=f86e1347]: 와우는 무료배송 ∙ 무료반품
+                    - generic [ref=f86e1349]:
+                      - generic "5" [ref=f86e1350]
+                      - generic [ref=f86e1356]: (2,328)
+                    - generic [ref=f86e1359]:
+                      - img "최대 305원 적립" [ref=f86e1360]
+                      - generic [ref=f86e1361]: 최대 305원 적립
+              - listitem [ref=f86e1362] [cursor=pointer]:
+                - link "오뚜기프레스코 리치 머쉬룸 크림 컵스프 3p, 72g, 2개 6,420원 (100g당 4,458원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (45) 최대 321원 적립 최대 321원 적립" [ref=f86e1363]:
+                  - /url: /vp/products/9160989439?itemId=26990564615&vendorItemId=93959310380&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=20&rank=20
+                  - figure [ref=f86e1364]:
+                    - img "오뚜기프레스코 리치 머쉬룸 크림 컵스프 3p, 72g, 2개" [ref=f86e1365]
+                  - generic [ref=f86e1366]:
+                    - generic [ref=f86e1368]: 오뚜기프레스코 리치 머쉬룸 크림 컵스프 3p, 72g, 2개
+                    - generic [ref=f86e1371]:
+                      - generic [ref=f86e1372]: 6,420원
+                      - generic [ref=f86e1373]: (100g당 4,458원)
+                    - generic [ref=f86e1374]:
+                      - generic [ref=f86e1375]: 내일(토) 도착 보장
+                      - generic [ref=f86e1379]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e1381]:
+                      - generic "5" [ref=f86e1382]
+                      - generic [ref=f86e1388]: (45)
+                    - generic [ref=f86e1391]:
+                      - img "최대 321원 적립" [ref=f86e1392]
+                      - generic [ref=f86e1393]: 최대 321원 적립
+              - listitem [ref=f86e1394] [cursor=pointer]:
+                - link "오뚜기 로스티드 콘크림 컵스프 3p, 72g, 2개 6,420원 (100g당 4,458원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (44) 최대 321원 적립 최대 321원 적립" [ref=f86e1395]:
+                  - /url: /vp/products/9163557083?itemId=27004169405&vendorItemId=93972862840&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=21&rank=21
+                  - figure [ref=f86e1396]:
+                    - img "오뚜기 로스티드 콘크림 컵스프 3p, 72g, 2개" [ref=f86e1397]
+                  - generic [ref=f86e1398]:
+                    - generic [ref=f86e1400]: 오뚜기 로스티드 콘크림 컵스프 3p, 72g, 2개
+                    - generic [ref=f86e1403]:
+                      - generic [ref=f86e1404]: 6,420원
+                      - generic [ref=f86e1405]: (100g당 4,458원)
+                    - generic [ref=f86e1406]:
+                      - generic [ref=f86e1407]: 내일(토) 도착 보장
+                      - generic [ref=f86e1411]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e1413]:
+                      - generic "4.5" [ref=f86e1414]
+                      - generic [ref=f86e1420]: (44)
+                    - generic [ref=f86e1423]:
+                      - img "최대 321원 적립" [ref=f86e1424]
+                      - generic [ref=f86e1425]: 최대 321원 적립
+              - listitem [ref=f86e1426] [cursor=pointer]:
+                - link "보노 체다치즈 스프, 63g, 3개 6,840원 5% 6,430원 (100g당 3,402원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (3,886) 최대 321원 적립 최대 321원 적립" [ref=f86e1427]:
+                  - /url: /vp/products/2153930641?itemId=13093599016&vendorItemId=88352960287&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=22&rank=22
+                  - figure [ref=f86e1428]:
+                    - img "보노 체다치즈 스프, 63g, 3개" [ref=f86e1429]
+                  - generic [ref=f86e1430]:
+                    - generic [ref=f86e1432]: 보노 체다치즈 스프, 63g, 3개
+                    - generic [ref=f86e1433]:
+                      - deletion [ref=f86e1435]: 6,840원
+                      - generic [ref=f86e1437]:
+                        - generic [ref=f86e1438]: 5%
+                        - generic [ref=f86e1439]: 6,430원
+                        - generic [ref=f86e1440]: (100g당 3,402원)
+                    - generic [ref=f86e1441]:
+                      - generic [ref=f86e1442]: 내일(토) 도착 보장
+                      - generic [ref=f86e1446]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e1448]:
+                      - generic "5" [ref=f86e1449]
+                      - generic [ref=f86e1455]: (3,886)
+                    - generic [ref=f86e1458]:
+                      - img "최대 321원 적립" [ref=f86e1459]
+                      - generic [ref=f86e1460]: 최대 321원 적립
+              - listitem [ref=f86e1461] [cursor=pointer]:
+                - link "폰타나 프렌치 로스티드 어니언 크림 컵수프, 60g, 3개 10,440원 37% 6,480원 (100g당 3,600원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (3,282) 최대 324원 적립 최대 324원 적립" [ref=f86e1462]:
+                  - /url: /vp/products/7680156221?itemId=18739947549&vendorItemId=85500409181&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=23&rank=23
+                  - figure [ref=f86e1463]:
+                    - img "폰타나 프렌치 로스티드 어니언 크림 컵수프, 60g, 3개" [ref=f86e1464]
+                  - generic [ref=f86e1465]:
+                    - generic [ref=f86e1467]: 폰타나 프렌치 로스티드 어니언 크림 컵수프, 60g, 3개
+                    - generic [ref=f86e1468]:
+                      - deletion [ref=f86e1470]: 10,440원
+                      - generic [ref=f86e1472]:
+                        - generic [ref=f86e1473]: 37%
+                        - generic [ref=f86e1474]: 6,480원
+                        - generic [ref=f86e1475]: (100g당 3,600원)
+                    - generic [ref=f86e1476]:
+                      - generic [ref=f86e1477]: 내일(토) 도착 보장
+                      - generic [ref=f86e1481]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e1483]:
+                      - generic "4.5" [ref=f86e1484]
+                      - generic [ref=f86e1490]: (3,282)
+                    - generic [ref=f86e1493]:
+                      - img "최대 324원 적립" [ref=f86e1494]
+                      - generic [ref=f86e1495]: 최대 324원 적립
+              - listitem [ref=f86e1496] [cursor=pointer]:
+                - link "오뚜기프레스코 크리미 포테이토 크림 컵스프 3p, 72g, 2개 6,560원 (100g당 4,556원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (247) 최대 328원 적립 최대 328원 적립" [ref=f86e1497]:
+                  - /url: /vp/products/1997982573?itemId=26990611537&vendorItemId=93959357184&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=24&rank=24
+                  - figure [ref=f86e1498]:
+                    - img "오뚜기프레스코 크리미 포테이토 크림 컵스프 3p, 72g, 2개" [ref=f86e1499]
+                  - generic [ref=f86e1500]:
+                    - generic [ref=f86e1502]: 오뚜기프레스코 크리미 포테이토 크림 컵스프 3p, 72g, 2개
+                    - generic [ref=f86e1505]:
+                      - generic [ref=f86e1506]: 6,560원
+                      - generic [ref=f86e1507]: (100g당 4,556원)
+                    - generic [ref=f86e1508]:
+                      - generic [ref=f86e1509]: 내일(토) 도착 보장
+                      - generic [ref=f86e1513]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e1515]:
+                      - generic "5" [ref=f86e1516]
+                      - generic [ref=f86e1522]: (247)
+                    - generic [ref=f86e1525]:
+                      - img "최대 328원 적립" [ref=f86e1526]
+                      - generic [ref=f86e1527]: 최대 328원 적립
+              - listitem [ref=f86e1528] [cursor=pointer]:
+                - link "폰타나 그릴드 머쉬룸 크림 컵수프, 60g, 4개 13,920원 52% 6,590원 (100g당 2,746원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (6,084) 최대 330원 적립 최대 330원 적립" [ref=f86e1529]:
+                  - /url: /vp/products/2450615?itemId=5683150506&vendorItemId=86216963149&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=25&rank=25
+                  - figure [ref=f86e1530]:
+                    - img "폰타나 그릴드 머쉬룸 크림 컵수프, 60g, 4개" [ref=f86e1531]
+                  - generic [ref=f86e1532]:
+                    - generic [ref=f86e1534]: 폰타나 그릴드 머쉬룸 크림 컵수프, 60g, 4개
+                    - generic [ref=f86e1535]:
+                      - deletion [ref=f86e1537]: 13,920원
+                      - generic [ref=f86e1539]:
+                        - generic [ref=f86e1540]: 52%
+                        - generic [ref=f86e1541]: 6,590원
+                        - generic [ref=f86e1542]: (100g당 2,746원)
+                    - generic [ref=f86e1543]:
+                      - generic [ref=f86e1544]: 내일(토) 도착 보장
+                      - generic [ref=f86e1548]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e1550]:
+                      - generic "5" [ref=f86e1551]
+                      - generic [ref=f86e1557]: (6,084)
+                    - generic [ref=f86e1560]:
+                      - img "최대 330원 적립" [ref=f86e1561]
+                      - generic [ref=f86e1562]: 최대 330원 적립
+              - listitem [ref=f86e1563] [cursor=pointer]:
+                - link "폰타나 그릴드 머쉬룸 크림 컵수프, 20g, 6개 10,200원 31% 6,960원 (100g당 5,800원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (9,997) 최대 348원 적립 최대 348원 적립" [ref=f86e1564]:
+                  - /url: /vp/products/6297847984?itemId=20317829952&vendorItemId=3443171135&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=26&rank=26
+                  - figure [ref=f86e1565]:
+                    - img "폰타나 그릴드 머쉬룸 크림 컵수프, 20g, 6개" [ref=f86e1566]
+                  - generic [ref=f86e1567]:
+                    - generic [ref=f86e1569]: 폰타나 그릴드 머쉬룸 크림 컵수프, 20g, 6개
+                    - generic [ref=f86e1570]:
+                      - deletion [ref=f86e1572]: 10,200원
+                      - generic [ref=f86e1574]:
+                        - generic [ref=f86e1575]: 31%
+                        - generic [ref=f86e1576]: 6,960원
+                        - generic [ref=f86e1577]: (100g당 5,800원)
+                    - generic [ref=f86e1578]:
+                      - generic [ref=f86e1579]: 내일(토) 도착 보장
+                      - generic [ref=f86e1583]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e1585]:
+                      - generic "4.5" [ref=f86e1586]
+                      - generic [ref=f86e1592]: (9,997)
+                    - generic [ref=f86e1595]:
+                      - img "최대 348원 적립" [ref=f86e1596]
+                      - generic [ref=f86e1597]: 최대 348원 적립
+              - listitem [ref=f86e1598] [cursor=pointer]:
+                - link "폰타나 프렌치 어니언 크림수프, 20g, 6개 10,200원 31% 6,980원 (100g당 5,817원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (3,282) 최대 349원 적립 최대 349원 적립" [ref=f86e1599]:
+                  - /url: /vp/products/7680156221?itemId=25425505858&vendorItemId=92418598257&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=27&rank=27
+                  - figure [ref=f86e1600]:
+                    - img "폰타나 프렌치 어니언 크림수프, 20g, 6개" [ref=f86e1601]
+                  - generic [ref=f86e1602]:
+                    - generic [ref=f86e1604]: 폰타나 프렌치 어니언 크림수프, 20g, 6개
+                    - generic [ref=f86e1605]:
+                      - deletion [ref=f86e1607]: 10,200원
+                      - generic [ref=f86e1609]:
+                        - generic [ref=f86e1610]: 31%
+                        - generic [ref=f86e1611]: 6,980원
+                        - generic [ref=f86e1612]: (100g당 5,817원)
+                    - generic [ref=f86e1613]:
+                      - generic [ref=f86e1614]: 내일(토) 도착 보장
+                      - generic [ref=f86e1618]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e1620]:
+                      - generic "4.5" [ref=f86e1621]
+                      - generic [ref=f86e1627]: (3,282)
+                    - generic [ref=f86e1630]:
+                      - img "최대 349원 적립" [ref=f86e1631]
+                      - generic [ref=f86e1632]: 최대 349원 적립
+              - listitem [ref=f86e1633] [cursor=pointer]:
+                - link "오뚜기 비밀 크림컵스프 3개입, 66g, 2개 7,380원 4% 7,020원 (100g당 5,318원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (542) 최대 351원 적립 최대 351원 적립" [ref=f86e1634]:
+                  - /url: /vp/products/9096311943?itemId=26746316099&vendorItemId=93717474510&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=28&rank=28
+                  - figure [ref=f86e1635]:
+                    - img "오뚜기 비밀 크림컵스프 3개입, 66g, 2개" [ref=f86e1636]
+                  - generic [ref=f86e1637]:
+                    - generic [ref=f86e1639]: 오뚜기 비밀 크림컵스프 3개입, 66g, 2개
+                    - generic [ref=f86e1640]:
+                      - deletion [ref=f86e1642]: 7,380원
+                      - generic [ref=f86e1644]:
+                        - generic [ref=f86e1645]: 4%
+                        - generic [ref=f86e1646]: 7,020원
+                        - generic [ref=f86e1647]: (100g당 5,318원)
+                    - generic [ref=f86e1648]:
+                      - generic [ref=f86e1649]: 내일(토) 도착 보장
+                      - generic [ref=f86e1653]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e1655]:
+                      - generic "4.5" [ref=f86e1656]
+                      - generic [ref=f86e1662]: (542)
+                    - generic [ref=f86e1665]:
+                      - img "최대 351원 적립" [ref=f86e1666]
+                      - generic [ref=f86e1667]: 최대 351원 적립
+              - listitem [ref=f86e1668] [cursor=pointer]:
+                - link "오뚜기 비밀 머쉬룸 크림 컵스프 3p, 66g, 2개 7,380원 4% 7,020원 (100g당 5,318원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (101) 최대 351원 적립 최대 351원 적립" [ref=f86e1669]:
+                  - /url: /vp/products/9096309100?itemId=26746316068&vendorItemId=93717474387&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=29&rank=29
+                  - figure [ref=f86e1670]:
+                    - img "오뚜기 비밀 머쉬룸 크림 컵스프 3p, 66g, 2개" [ref=f86e1671]
+                  - generic [ref=f86e1672]:
+                    - generic [ref=f86e1674]: 오뚜기 비밀 머쉬룸 크림 컵스프 3p, 66g, 2개
+                    - generic [ref=f86e1675]:
+                      - deletion [ref=f86e1677]: 7,380원
+                      - generic [ref=f86e1679]:
+                        - generic [ref=f86e1680]: 4%
+                        - generic [ref=f86e1681]: 7,020원
+                        - generic [ref=f86e1682]: (100g당 5,318원)
+                    - generic [ref=f86e1683]:
+                      - generic [ref=f86e1684]: 내일(토) 도착 보장
+                      - generic [ref=f86e1688]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e1690]:
+                      - generic "4.5" [ref=f86e1691]
+                      - generic [ref=f86e1697]: (101)
+                    - generic [ref=f86e1700]:
+                      - img "최대 351원 적립" [ref=f86e1701]
+                      - generic [ref=f86e1702]: 최대 351원 적립
+              - listitem [ref=f86e1703] [cursor=pointer]:
+                - link "보노 콘스프, 57g, 3개 7,150원 (100g당 4,181원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (22,060) 최대 358원 적립 최대 358원 적립" [ref=f86e1704]:
+                  - /url: /vp/products/2038492934?itemId=11201552774&vendorItemId=3028309139&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=30&rank=30
+                  - figure [ref=f86e1705]:
+                    - img "보노 콘스프, 57g, 3개" [ref=f86e1706]
+                  - generic [ref=f86e1707]:
+                    - generic [ref=f86e1709]: 보노 콘스프, 57g, 3개
+                    - generic [ref=f86e1712]:
+                      - generic [ref=f86e1713]: 7,150원
+                      - generic [ref=f86e1714]: (100g당 4,181원)
+                    - generic [ref=f86e1715]:
+                      - generic [ref=f86e1716]: 내일(토) 도착 보장
+                      - generic [ref=f86e1720]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e1722]:
+                      - generic "5" [ref=f86e1723]
+                      - generic [ref=f86e1729]: (22,060)
+                    - generic [ref=f86e1732]:
+                      - img "최대 358원 적립" [ref=f86e1733]
+                      - generic [ref=f86e1734]: 최대 358원 적립
+              - listitem [ref=f86e1735] [cursor=pointer]:
+                - link "폰타나 뉴질랜드 스위트콘 컵수프, 60g, 4개 13,920원 47% 7,320원 (100g당 3,050원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (6,507) 최대 366원 적립 최대 366원 적립" [ref=f86e1736]:
+                  - /url: /vp/products/8168595094?itemId=18237316185&vendorItemId=85666594927&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=31&rank=31
+                  - figure [ref=f86e1737]:
+                    - img "폰타나 뉴질랜드 스위트콘 컵수프, 60g, 4개" [ref=f86e1738]
+                  - generic [ref=f86e1739]:
+                    - generic [ref=f86e1741]: 폰타나 뉴질랜드 스위트콘 컵수프, 60g, 4개
+                    - generic [ref=f86e1742]:
+                      - deletion [ref=f86e1744]: 13,920원
+                      - generic [ref=f86e1746]:
+                        - generic [ref=f86e1747]: 47%
+                        - generic [ref=f86e1748]: 7,320원
+                        - generic [ref=f86e1749]: (100g당 3,050원)
+                    - generic [ref=f86e1750]:
+                      - generic [ref=f86e1751]: 내일(토) 도착 보장
+                      - generic [ref=f86e1755]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e1757]:
+                      - generic "4.5" [ref=f86e1758]
+                      - generic [ref=f86e1764]: (6,507)
+                    - generic [ref=f86e1767]:
+                      - img "최대 366원 적립" [ref=f86e1768]
+                      - generic [ref=f86e1769]: 최대 366원 적립
+              - listitem [ref=f86e1770] [cursor=pointer]:
+                - link "오뚜기 비밀 콘크림컵스프, 22g, 6개 7,400원 (100g당 5,606원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (170) 최대 370원 적립 최대 370원 적립" [ref=f86e1771]:
+                  - /url: /vp/products/9096952065?itemId=26748982772&vendorItemId=93720078685&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=32&rank=32
+                  - figure [ref=f86e1772]:
+                    - img "오뚜기 비밀 콘크림컵스프, 22g, 6개" [ref=f86e1773]
+                  - generic [ref=f86e1774]:
+                    - generic [ref=f86e1776]: 오뚜기 비밀 콘크림컵스프, 22g, 6개
+                    - generic [ref=f86e1779]:
+                      - generic [ref=f86e1780]: 7,400원
+                      - generic [ref=f86e1781]: (100g당 5,606원)
+                    - generic [ref=f86e1782]:
+                      - generic [ref=f86e1783]: 내일(토) 도착 보장
+                      - generic [ref=f86e1787]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e1789]:
+                      - generic "5" [ref=f86e1790]
+                      - generic [ref=f86e1796]: (170)
+                    - generic [ref=f86e1799]:
+                      - img "최대 370원 적립" [ref=f86e1800]
+                      - generic [ref=f86e1801]: 최대 370원 적립
+              - listitem [ref=f86e1802] [cursor=pointer]:
+                - link "청정원 우리쌀 콘크림 컵수프, 60g, 3개 9,150원 17% 7,550원 (100g당 4,194원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (524) 최대 378원 적립 최대 378원 적립" [ref=f86e1803]:
+                  - /url: /vp/products/3945123?itemId=19271832&vendorItemId=3028249755&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=33&rank=33
+                  - figure [ref=f86e1804]:
+                    - img "청정원 우리쌀 콘크림 컵수프, 60g, 3개" [ref=f86e1805]
+                  - generic [ref=f86e1806]:
+                    - generic [ref=f86e1808]: 청정원 우리쌀 콘크림 컵수프, 60g, 3개
+                    - generic [ref=f86e1809]:
+                      - deletion [ref=f86e1811]: 9,150원
+                      - generic [ref=f86e1813]:
+                        - generic [ref=f86e1814]: 17%
+                        - generic [ref=f86e1815]: 7,550원
+                        - generic [ref=f86e1816]: (100g당 4,194원)
+                    - generic [ref=f86e1817]:
+                      - generic [ref=f86e1818]: 내일(토) 도착 보장
+                      - generic [ref=f86e1822]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e1824]:
+                      - generic "4.5" [ref=f86e1825]
+                      - generic [ref=f86e1831]: (524)
+                    - generic [ref=f86e1834]:
+                      - img "최대 378원 적립" [ref=f86e1835]
+                      - generic [ref=f86e1836]: 최대 378원 적립
+              - listitem [ref=f86e1837] [cursor=pointer]:
+                - link "폰타나 잉글랜드 체다치즈 & 브로콜리 컵수프, 20g, 6개 10,200원 24% 7,680원 (100g당 6,400원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (3,198) 최대 384원 적립 최대 384원 적립" [ref=f86e1838]:
+                  - /url: /vp/products/8093453?itemId=186101237&vendorItemId=85500409043&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=34&rank=34
+                  - figure [ref=f86e1839]:
+                    - img "폰타나 잉글랜드 체다치즈 & 브로콜리 컵수프, 20g, 6개" [ref=f86e1840]
+                  - generic [ref=f86e1841]:
+                    - generic [ref=f86e1843]: 폰타나 잉글랜드 체다치즈 & 브로콜리 컵수프, 20g, 6개
+                    - generic [ref=f86e1844]:
+                      - deletion [ref=f86e1846]: 10,200원
+                      - generic [ref=f86e1848]:
+                        - generic [ref=f86e1849]: 24%
+                        - generic [ref=f86e1850]: 7,680원
+                        - generic [ref=f86e1851]: (100g당 6,400원)
+                    - generic [ref=f86e1852]:
+                      - generic [ref=f86e1853]: 내일(토) 도착 보장
+                      - generic [ref=f86e1857]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e1859]:
+                      - generic "4.5" [ref=f86e1860]
+                      - generic [ref=f86e1866]: (3,198)
+                    - generic [ref=f86e1869]:
+                      - img "최대 384원 적립" [ref=f86e1870]
+                      - generic [ref=f86e1871]: 최대 384원 적립
+              - listitem [ref=f86e1872] [cursor=pointer]:
+                - link "청정원 우리쌀 포테이토컵수프, 60g, 3개 8,400원 6% 7,850원 (100g당 4,361원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (738) 최대 393원 적립 최대 393원 적립" [ref=f86e1873]:
+                  - /url: /vp/products/7228098999?itemId=18333908700&vendorItemId=3030116234&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=35&rank=35
+                  - figure [ref=f86e1874]:
+                    - img "청정원 우리쌀 포테이토컵수프, 60g, 3개" [ref=f86e1875]
+                  - generic [ref=f86e1876]:
+                    - generic [ref=f86e1878]: 청정원 우리쌀 포테이토컵수프, 60g, 3개
+                    - generic [ref=f86e1879]:
+                      - deletion [ref=f86e1881]: 8,400원
+                      - generic [ref=f86e1883]:
+                        - generic [ref=f86e1884]: 6%
+                        - generic [ref=f86e1885]: 7,850원
+                        - generic [ref=f86e1886]: (100g당 4,361원)
+                    - generic [ref=f86e1887]:
+                      - generic [ref=f86e1888]: 내일(토) 도착 보장
+                      - generic [ref=f86e1892]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e1894]:
+                      - generic "4.5" [ref=f86e1895]
+                      - generic [ref=f86e1901]: (738)
+                    - generic [ref=f86e1904]:
+                      - img "최대 393원 적립" [ref=f86e1905]
+                      - generic [ref=f86e1906]: 최대 393원 적립
+              - listitem [ref=f86e1907] [cursor=pointer]:
+                - link "폰타나 그릴드 머쉬룸 크림 컵수프, 60g, 5개 17,400원 54% 7,950원 (100g당 2,650원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (6,084) 최대 398원 적립 최대 398원 적립" [ref=f86e1908]:
+                  - /url: /vp/products/2450615?itemId=5200880943&vendorItemId=86216963536&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=36&rank=36
+                  - figure [ref=f86e1909]:
+                    - img "폰타나 그릴드 머쉬룸 크림 컵수프, 60g, 5개" [ref=f86e1910]
+                  - generic [ref=f86e1911]:
+                    - generic [ref=f86e1913]: 폰타나 그릴드 머쉬룸 크림 컵수프, 60g, 5개
+                    - generic [ref=f86e1914]:
+                      - deletion [ref=f86e1916]: 17,400원
+                      - generic [ref=f86e1918]:
+                        - generic [ref=f86e1919]: 54%
+                        - generic [ref=f86e1920]: 7,950원
+                        - generic [ref=f86e1921]: (100g당 2,650원)
+                    - generic [ref=f86e1922]:
+                      - generic [ref=f86e1923]: 내일(토) 도착 보장
+                      - generic [ref=f86e1927]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e1929]:
+                      - generic "5" [ref=f86e1930]
+                      - generic [ref=f86e1936]: (6,084)
+                    - generic [ref=f86e1939]:
+                      - img "최대 398원 적립" [ref=f86e1940]
+                      - generic [ref=f86e1941]: 최대 398원 적립
+              - listitem [ref=f86e1942] [cursor=pointer]:
+                - link "보노 체다치즈 스프, 63g, 4개 9,120원 9% 8,240원 (100g당 3,270원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (3,886) 최대 412원 적립 최대 412원 적립" [ref=f86e1943]:
+                  - /url: /vp/products/2153930641?itemId=13093599019&vendorItemId=88352960321&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=37&rank=37
+                  - figure [ref=f86e1944]:
+                    - img "보노 체다치즈 스프, 63g, 4개" [ref=f86e1945]
+                  - generic [ref=f86e1946]:
+                    - generic [ref=f86e1948]: 보노 체다치즈 스프, 63g, 4개
+                    - generic [ref=f86e1949]:
+                      - deletion [ref=f86e1951]: 9,120원
+                      - generic [ref=f86e1953]:
+                        - generic [ref=f86e1954]: 9%
+                        - generic [ref=f86e1955]: 8,240원
+                        - generic [ref=f86e1956]: (100g당 3,270원)
+                    - generic [ref=f86e1957]:
+                      - generic [ref=f86e1958]: 내일(토) 도착 보장
+                      - generic [ref=f86e1962]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e1964]:
+                      - generic "5" [ref=f86e1965]
+                      - generic [ref=f86e1971]: (3,886)
+                    - generic [ref=f86e1974]:
+                      - img "최대 412원 적립" [ref=f86e1975]
+                      - generic [ref=f86e1976]: 최대 412원 적립
+              - listitem [ref=f86e1977] [cursor=pointer]:
+                - link "보노 크림스프 포타주, 51g, 3개 8,300원 (100g당 5,425원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (3,161) 최대 415원 적립 최대 415원 적립" [ref=f86e1978]:
+                  - /url: /vp/products/9550776?itemId=21293098461&vendorItemId=88352960128&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=38&rank=38
+                  - figure [ref=f86e1979]:
+                    - img "보노 크림스프 포타주, 51g, 3개" [ref=f86e1980]
+                  - generic [ref=f86e1981]:
+                    - generic [ref=f86e1983]: 보노 크림스프 포타주, 51g, 3개
+                    - generic [ref=f86e1986]:
+                      - generic [ref=f86e1987]: 8,300원
+                      - generic [ref=f86e1988]: (100g당 5,425원)
+                    - generic [ref=f86e1989]:
+                      - generic [ref=f86e1990]: 내일(토) 도착 보장
+                      - generic [ref=f86e1994]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e1996]:
+                      - generic "5" [ref=f86e1997]
+                      - generic [ref=f86e2003]: (3,161)
+                    - generic [ref=f86e2006]:
+                      - img "최대 415원 적립" [ref=f86e2007]
+                      - generic [ref=f86e2008]: 최대 415원 적립
+              - listitem [ref=f86e2009] [cursor=pointer]:
+                - link "보노 어니언 크림 스프, 54g, 3개 11,109원 24% 8,400원 (100g당 5,185원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 5 (2,328) 최대 420원 적립 최대 420원 적립" [ref=f86e2010]:
+                  - /url: /vp/products/108946086?itemId=21474553592&vendorItemId=88528823455&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=39&rank=39
+                  - figure [ref=f86e2011]:
+                    - img "보노 어니언 크림 스프, 54g, 3개" [ref=f86e2012]
+                  - generic [ref=f86e2013]:
+                    - generic [ref=f86e2015]: 보노 어니언 크림 스프, 54g, 3개
+                    - generic [ref=f86e2016]:
+                      - deletion [ref=f86e2018]: 11,109원
+                      - generic [ref=f86e2020]:
+                        - generic [ref=f86e2021]: 24%
+                        - generic [ref=f86e2022]: 8,400원
+                        - generic [ref=f86e2023]: (100g당 5,185원)
+                    - generic [ref=f86e2024]:
+                      - generic [ref=f86e2025]: 내일(토) 도착 보장
+                      - generic [ref=f86e2029]: 와우는 무료배송 ∙ 무료반품
+                    - generic [ref=f86e2031]:
+                      - generic "5" [ref=f86e2032]
+                      - generic [ref=f86e2038]: (2,328)
+                    - generic [ref=f86e2041]:
+                      - img "최대 420원 적립" [ref=f86e2042]
+                      - generic [ref=f86e2043]: 최대 420원 적립
+              - listitem [ref=f86e2044] [cursor=pointer]:
+                - link "폰타나 프렌치 로스티드 어니언 크림 컵수프, 60g, 4개 13,920원 38% 8,500원 (100g당 3,542원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (3,282) 최대 425원 적립 최대 425원 적립" [ref=f86e2045]:
+                  - /url: /vp/products/7680156221?itemId=19725075662&vendorItemId=86829132254&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=40&rank=40
+                  - figure [ref=f86e2046]:
+                    - img "폰타나 프렌치 로스티드 어니언 크림 컵수프, 60g, 4개" [ref=f86e2047]
+                  - generic [ref=f86e2048]:
+                    - generic [ref=f86e2050]: 폰타나 프렌치 로스티드 어니언 크림 컵수프, 60g, 4개
+                    - generic [ref=f86e2051]:
+                      - deletion [ref=f86e2053]: 13,920원
+                      - generic [ref=f86e2055]:
+                        - generic [ref=f86e2056]: 38%
+                        - generic [ref=f86e2057]: 8,500원
+                        - generic [ref=f86e2058]: (100g당 3,542원)
+                    - generic [ref=f86e2059]:
+                      - generic [ref=f86e2060]: 내일(토) 도착 보장
+                      - generic [ref=f86e2064]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e2066]:
+                      - generic "4.5" [ref=f86e2067]
+                      - generic [ref=f86e2073]: (3,282)
+                    - generic [ref=f86e2076]:
+                      - img "최대 425원 적립" [ref=f86e2077]
+                      - generic [ref=f86e2078]: 최대 425원 적립
+              - listitem [ref=f86e2079] [cursor=pointer]:
+                - link "보노 포르치니 버섯스프, 54g, 3개 8,520원 (100g당 5,259원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (13,982) 최대 426원 적립 최대 426원 적립" [ref=f86e2080]:
+                  - /url: /vp/products/1132956314?itemId=19443147598&vendorItemId=86554125298&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=41&rank=41
+                  - figure [ref=f86e2081]:
+                    - img "보노 포르치니 버섯스프, 54g, 3개" [ref=f86e2082]
+                  - generic [ref=f86e2083]:
+                    - generic [ref=f86e2085]: 보노 포르치니 버섯스프, 54g, 3개
+                    - generic [ref=f86e2088]:
+                      - generic [ref=f86e2089]: 8,520원
+                      - generic [ref=f86e2090]: (100g당 5,259원)
+                    - generic [ref=f86e2091]:
+                      - generic [ref=f86e2092]: 내일(토) 도착 보장
+                      - generic [ref=f86e2096]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e2098]:
+                      - generic "5" [ref=f86e2099]
+                      - generic [ref=f86e2105]: (13,982)
+                    - generic [ref=f86e2108]:
+                      - img "최대 426원 적립" [ref=f86e2109]
+                      - generic [ref=f86e2110]: 최대 426원 적립
+              - listitem [ref=f86e2111] [cursor=pointer]:
+                - link "오뚜기프레스코 리치 머쉬룸 크림 컵스프 3p, 72g, 3개 8,880원 (100g당 4,111원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (45) 최대 444원 적립 최대 444원 적립" [ref=f86e2112]:
+                  - /url: /vp/products/9160989439?itemId=26990564508&vendorItemId=93959310337&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=42&rank=42
+                  - figure [ref=f86e2113]:
+                    - img "오뚜기프레스코 리치 머쉬룸 크림 컵스프 3p, 72g, 3개" [ref=f86e2114]
+                  - generic [ref=f86e2115]:
+                    - generic [ref=f86e2117]: 오뚜기프레스코 리치 머쉬룸 크림 컵스프 3p, 72g, 3개
+                    - generic [ref=f86e2120]:
+                      - generic [ref=f86e2121]: 8,880원
+                      - generic [ref=f86e2122]: (100g당 4,111원)
+                    - generic [ref=f86e2123]:
+                      - generic [ref=f86e2124]: 내일(토) 도착 보장
+                      - generic [ref=f86e2128]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e2130]:
+                      - generic "5" [ref=f86e2131]
+                      - generic [ref=f86e2137]: (45)
+                    - generic [ref=f86e2140]:
+                      - img "최대 444원 적립" [ref=f86e2141]
+                      - generic [ref=f86e2142]: 최대 444원 적립
+              - listitem [ref=f86e2143] [cursor=pointer]:
+                - link "오뚜기 로스티드 콘크림 컵스프 3p, 72g, 3개 8,880원 (100g당 4,111원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (44) 최대 444원 적립 최대 444원 적립" [ref=f86e2144]:
+                  - /url: /vp/products/9163557083?itemId=27004169366&vendorItemId=93972862807&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=43&rank=43
+                  - figure [ref=f86e2145]:
+                    - img "오뚜기 로스티드 콘크림 컵스프 3p, 72g, 3개" [ref=f86e2146]
+                  - generic [ref=f86e2147]:
+                    - generic [ref=f86e2149]: 오뚜기 로스티드 콘크림 컵스프 3p, 72g, 3개
+                    - generic [ref=f86e2152]:
+                      - generic [ref=f86e2153]: 8,880원
+                      - generic [ref=f86e2154]: (100g당 4,111원)
+                    - generic [ref=f86e2155]:
+                      - generic [ref=f86e2156]: 내일(토) 도착 보장
+                      - generic [ref=f86e2160]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e2162]:
+                      - generic "4.5" [ref=f86e2163]
+                      - generic [ref=f86e2169]: (44)
+                    - generic [ref=f86e2172]:
+                      - img "최대 444원 적립" [ref=f86e2173]
+                      - generic [ref=f86e2174]: 최대 444원 적립
+              - listitem [ref=f86e2175] [cursor=pointer]:
+                - link "폰타나 뉴질랜드 스위트콘 컵수프, 60g, 5개 17,400원 48% 8,900원 (100g당 2,967원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (6,507) 최대 445원 적립 최대 445원 적립" [ref=f86e2176]:
+                  - /url: /vp/products/8168595094?itemId=20407825118&vendorItemId=86554419482&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=44&rank=44
+                  - figure [ref=f86e2177]:
+                    - img "폰타나 뉴질랜드 스위트콘 컵수프, 60g, 5개" [ref=f86e2178]
+                  - generic [ref=f86e2179]:
+                    - generic [ref=f86e2181]: 폰타나 뉴질랜드 스위트콘 컵수프, 60g, 5개
+                    - generic [ref=f86e2182]:
+                      - deletion [ref=f86e2184]: 17,400원
+                      - generic [ref=f86e2186]:
+                        - generic [ref=f86e2187]: 48%
+                        - generic [ref=f86e2188]: 8,900원
+                        - generic [ref=f86e2189]: (100g당 2,967원)
+                    - generic [ref=f86e2190]:
+                      - generic [ref=f86e2191]: 내일(토) 도착 보장
+                      - generic [ref=f86e2195]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e2197]:
+                      - generic "4.5" [ref=f86e2198]
+                      - generic [ref=f86e2204]: (6,507)
+                    - generic [ref=f86e2207]:
+                      - img "최대 445원 적립" [ref=f86e2208]
+                      - generic [ref=f86e2209]: 최대 445원 적립
+              - listitem [ref=f86e2210] [cursor=pointer]:
+                - link "오뚜기 포테이토 컵스프, 72g, 3개 9,090원 (100g당 4,208원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (247) 최대 455원 적립 최대 455원 적립" [ref=f86e2211]:
+                  - /url: /vp/products/1997982573?itemId=19754662973&vendorItemId=93959357186&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=45&rank=45
+                  - figure [ref=f86e2212]:
+                    - img "오뚜기 포테이토 컵스프, 72g, 3개" [ref=f86e2213]
+                  - generic [ref=f86e2214]:
+                    - generic [ref=f86e2216]: 오뚜기 포테이토 컵스프, 72g, 3개
+                    - generic [ref=f86e2219]:
+                      - generic [ref=f86e2220]: 9,090원
+                      - generic [ref=f86e2221]: (100g당 4,208원)
+                    - generic [ref=f86e2222]:
+                      - generic [ref=f86e2223]: 내일(토) 도착 보장
+                      - generic [ref=f86e2227]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e2229]:
+                      - generic "5" [ref=f86e2230]
+                      - generic [ref=f86e2236]: (247)
+                    - generic [ref=f86e2239]:
+                      - img "최대 455원 적립" [ref=f86e2240]
+                      - generic [ref=f86e2241]: 최대 455원 적립
+              - listitem [ref=f86e2242] [cursor=pointer]:
+                - link "보노 콘스프, 57g, 4개 9,200원 (100g당 4,035원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (22,060) 최대 460원 적립 최대 460원 적립" [ref=f86e2243]:
+                  - /url: /vp/products/2038492934?itemId=25730004381&vendorItemId=88352960208&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=46&rank=46
+                  - figure [ref=f86e2244]:
+                    - img "보노 콘스프, 57g, 4개" [ref=f86e2245]
+                  - generic [ref=f86e2246]:
+                    - generic [ref=f86e2248]: 보노 콘스프, 57g, 4개
+                    - generic [ref=f86e2251]:
+                      - generic [ref=f86e2252]: 9,200원
+                      - generic [ref=f86e2253]: (100g당 4,035원)
+                    - generic [ref=f86e2254]:
+                      - generic [ref=f86e2255]: 내일(토) 도착 보장
+                      - generic [ref=f86e2259]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e2261]:
+                      - generic "5" [ref=f86e2262]
+                      - generic [ref=f86e2268]: (22,060)
+                    - generic [ref=f86e2271]:
+                      - img "최대 460원 적립" [ref=f86e2272]
+                      - generic [ref=f86e2273]: 최대 460원 적립
+              - listitem [ref=f86e2274] [cursor=pointer]:
+                - link "폰타나 프렌치 어니언 크림수프, 20g, 8개 13,600원 31% 9,300원 (100g당 5,813원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (3,282) 최대 465원 적립 최대 465원 적립" [ref=f86e2275]:
+                  - /url: /vp/products/7680156221?itemId=18654691349&vendorItemId=85500410006&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=47&rank=47
+                  - figure [ref=f86e2276]:
+                    - img "폰타나 프렌치 어니언 크림수프, 20g, 8개" [ref=f86e2277]
+                  - generic [ref=f86e2278]:
+                    - generic [ref=f86e2280]: 폰타나 프렌치 어니언 크림수프, 20g, 8개
+                    - generic [ref=f86e2281]:
+                      - deletion [ref=f86e2283]: 13,600원
+                      - generic [ref=f86e2285]:
+                        - generic [ref=f86e2286]: 31%
+                        - generic [ref=f86e2287]: 9,300원
+                        - generic [ref=f86e2288]: (100g당 5,813원)
+                    - generic [ref=f86e2289]:
+                      - generic [ref=f86e2290]: 내일(토) 도착 보장
+                      - generic [ref=f86e2294]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e2296]:
+                      - generic "4.5" [ref=f86e2297]
+                      - generic [ref=f86e2303]: (3,282)
+                    - generic [ref=f86e2306]:
+                      - img "최대 465원 적립" [ref=f86e2307]
+                      - generic [ref=f86e2308]: 최대 465원 적립
+              - listitem [ref=f86e2309] [cursor=pointer]:
+                - link "폰타나 그릴드 머쉬룸 크림 컵수프, 60g, 6개 20,880원 54% 9,540원 (100g당 2,650원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (6,084) 최대 477원 적립 최대 477원 적립" [ref=f86e2310]:
+                  - /url: /vp/products/2450615?itemId=20709422855&vendorItemId=86281803748&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=48&rank=48
+                  - figure [ref=f86e2311]:
+                    - img "폰타나 그릴드 머쉬룸 크림 컵수프, 60g, 6개" [ref=f86e2312]
+                  - generic [ref=f86e2313]:
+                    - generic [ref=f86e2315]: 폰타나 그릴드 머쉬룸 크림 컵수프, 60g, 6개
+                    - generic [ref=f86e2316]:
+                      - deletion [ref=f86e2318]: 20,880원
+                      - generic [ref=f86e2320]:
+                        - generic [ref=f86e2321]: 54%
+                        - generic [ref=f86e2322]: 9,540원
+                        - generic [ref=f86e2323]: (100g당 2,650원)
+                    - generic [ref=f86e2324]:
+                      - generic [ref=f86e2325]: 내일(토) 도착 보장
+                      - generic [ref=f86e2329]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e2331]:
+                      - generic "5" [ref=f86e2332]
+                      - generic [ref=f86e2338]: (6,084)
+                    - generic [ref=f86e2341]:
+                      - img "최대 477원 적립" [ref=f86e2342]
+                      - generic [ref=f86e2343]: 최대 477원 적립
+              - listitem [ref=f86e2344] [cursor=pointer]:
+                - link "오뚜기 비밀 머쉬룸 크림 컵스프 3p, 66g, 3개 쿠폰할인 11,070원 28% 7,880원 (100g당 3,980원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (101) 최대 394원 적립 최대 394원 적립" [ref=f86e2345]:
+                  - /url: /vp/products/9096309100?itemId=26746315998&vendorItemId=93717474379&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=49&rank=49
+                  - figure [ref=f86e2346]:
+                    - img "오뚜기 비밀 머쉬룸 크림 컵스프 3p, 66g, 3개" [ref=f86e2347]
+                  - generic [ref=f86e2348]:
+                    - generic [ref=f86e2350]: 오뚜기 비밀 머쉬룸 크림 컵스프 3p, 66g, 3개
+                    - generic [ref=f86e2351]:
+                      - generic [ref=f86e2352]:
+                        - generic [ref=f86e2353]: 쿠폰할인
+                        - deletion [ref=f86e2354]: 11,070원
+                      - generic [ref=f86e2356]:
+                        - generic [ref=f86e2357]: 28%
+                        - generic [ref=f86e2362]: 7,880원
+                        - generic [ref=f86e2363]: (100g당 3,980원)
+                    - generic [ref=f86e2364]:
+                      - generic [ref=f86e2365]: 내일(토) 도착 보장
+                      - generic [ref=f86e2369]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e2371]:
+                      - generic "4.5" [ref=f86e2372]
+                      - generic [ref=f86e2378]: (101)
+                    - generic [ref=f86e2381]:
+                      - img "최대 394원 적립" [ref=f86e2382]
+                      - generic [ref=f86e2383]: 최대 394원 적립
+              - listitem [ref=f86e2384] [cursor=pointer]:
+                - link "보노 체다치즈 스프, 63g, 5개 11,400원 11% 10,050원 (100g당 3,190원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (3,886) 최대 503원 적립 최대 503원 적립" [ref=f86e2385]:
+                  - /url: /vp/products/2153930641?itemId=13093599020&vendorItemId=88352960319&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=50&rank=50
+                  - figure [ref=f86e2386]:
+                    - img "보노 체다치즈 스프, 63g, 5개" [ref=f86e2387]
+                  - generic [ref=f86e2388]:
+                    - generic [ref=f86e2390]: 보노 체다치즈 스프, 63g, 5개
+                    - generic [ref=f86e2391]:
+                      - deletion [ref=f86e2393]: 11,400원
+                      - generic [ref=f86e2395]:
+                        - generic [ref=f86e2396]: 11%
+                        - generic [ref=f86e2397]: 10,050원
+                        - generic [ref=f86e2398]: (100g당 3,190원)
+                    - generic [ref=f86e2399]:
+                      - generic [ref=f86e2400]: 내일(토) 도착 보장
+                      - generic [ref=f86e2404]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e2406]:
+                      - generic "5" [ref=f86e2407]
+                      - generic [ref=f86e2413]: (3,886)
+                    - generic [ref=f86e2416]:
+                      - img "최대 503원 적립" [ref=f86e2417]
+                      - generic [ref=f86e2418]: 최대 503원 적립
+              - listitem [ref=f86e2419] [cursor=pointer]:
+                - link "청정원 신우리쌀 포테이토컵수프, 60g, 4개 11,200원 9% 10,190원 (100g당 4,246원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (738) 최대 510원 적립 최대 510원 적립" [ref=f86e2420]:
+                  - /url: /vp/products/7228098999?itemId=18627087086&vendorItemId=85762459464&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=51&rank=51
+                  - figure [ref=f86e2421]:
+                    - img "청정원 신우리쌀 포테이토컵수프, 60g, 4개" [ref=f86e2422]
+                  - generic [ref=f86e2423]:
+                    - generic [ref=f86e2425]: 청정원 신우리쌀 포테이토컵수프, 60g, 4개
+                    - generic [ref=f86e2426]:
+                      - deletion [ref=f86e2428]: 11,200원
+                      - generic [ref=f86e2430]:
+                        - generic [ref=f86e2431]: 9%
+                        - generic [ref=f86e2432]: 10,190원
+                        - generic [ref=f86e2433]: (100g당 4,246원)
+                    - generic [ref=f86e2434]:
+                      - generic [ref=f86e2435]: 내일(토) 도착 보장
+                      - generic [ref=f86e2439]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e2441]:
+                      - generic "4.5" [ref=f86e2442]
+                      - generic [ref=f86e2448]: (738)
+                    - generic [ref=f86e2451]:
+                      - img "최대 510원 적립" [ref=f86e2452]
+                      - generic [ref=f86e2453]: 최대 510원 적립
+              - listitem [ref=f86e2454] [cursor=pointer]:
+                - link "오뚜기 비밀 크림컵스프, 66g, 3개 11,070원 7% 10,200원 (100g당 5,152원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (542) 최대 510원 적립 최대 510원 적립" [ref=f86e2455]:
+                  - /url: /vp/products/9096311943?itemId=26746316101&vendorItemId=93717474514&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=52&rank=52
+                  - figure [ref=f86e2456]:
+                    - img "오뚜기 비밀 크림컵스프, 66g, 3개" [ref=f86e2457]
+                  - generic [ref=f86e2458]:
+                    - generic [ref=f86e2460]: 오뚜기 비밀 크림컵스프, 66g, 3개
+                    - generic [ref=f86e2461]:
+                      - deletion [ref=f86e2463]: 11,070원
+                      - generic [ref=f86e2465]:
+                        - generic [ref=f86e2466]: 7%
+                        - generic [ref=f86e2467]: 10,200원
+                        - generic [ref=f86e2468]: (100g당 5,152원)
+                    - generic [ref=f86e2469]:
+                      - generic [ref=f86e2470]: 내일(토) 도착 보장
+                      - generic [ref=f86e2474]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e2476]:
+                      - generic "4.5" [ref=f86e2477]
+                      - generic [ref=f86e2483]: (542)
+                    - generic [ref=f86e2486]:
+                      - img "최대 510원 적립" [ref=f86e2487]
+                      - generic [ref=f86e2488]: 최대 510원 적립
+              - listitem [ref=f86e2489] [cursor=pointer]:
+                - link "폰타나 잉글랜드 브로콜리 체다치즈 컵수프, 20g, 8개 13,600원 24% 10,240원 (100g당 6,400원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (3,198) 최대 512원 적립 최대 512원 적립" [ref=f86e2490]:
+                  - /url: /vp/products/8093453?itemId=681922168&vendorItemId=85500409048&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=53&rank=53
+                  - figure [ref=f86e2491]:
+                    - img "폰타나 잉글랜드 브로콜리 체다치즈 컵수프, 20g, 8개" [ref=f86e2492]
+                  - generic [ref=f86e2493]:
+                    - generic [ref=f86e2495]: 폰타나 잉글랜드 브로콜리 체다치즈 컵수프, 20g, 8개
+                    - generic [ref=f86e2496]:
+                      - deletion [ref=f86e2498]: 13,600원
+                      - generic [ref=f86e2500]:
+                        - generic [ref=f86e2501]: 24%
+                        - generic [ref=f86e2502]: 10,240원
+                        - generic [ref=f86e2503]: (100g당 6,400원)
+                    - generic [ref=f86e2504]:
+                      - generic [ref=f86e2505]: 내일(토) 도착 보장
+                      - generic [ref=f86e2509]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e2511]:
+                      - generic "4.5" [ref=f86e2512]
+                      - generic [ref=f86e2518]: (3,198)
+                    - generic [ref=f86e2521]:
+                      - img "최대 512원 적립" [ref=f86e2522]
+                      - generic [ref=f86e2523]: 최대 512원 적립
+              - listitem [ref=f86e2524] [cursor=pointer]:
+                - link "오뚜기 비밀 콘크림컵스프, 22g, 9개 11,070원 6% 10,350원 (100g당 5,227원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (170) 최대 518원 적립 최대 518원 적립" [ref=f86e2525]:
+                  - /url: /vp/products/9096952065?itemId=26748982844&vendorItemId=93720078735&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=54&rank=54
+                  - figure [ref=f86e2526]:
+                    - img "오뚜기 비밀 콘크림컵스프, 22g, 9개" [ref=f86e2527]
+                  - generic [ref=f86e2528]:
+                    - generic [ref=f86e2530]: 오뚜기 비밀 콘크림컵스프, 22g, 9개
+                    - generic [ref=f86e2531]:
+                      - deletion [ref=f86e2533]: 11,070원
+                      - generic [ref=f86e2535]:
+                        - generic [ref=f86e2536]: 6%
+                        - generic [ref=f86e2537]: 10,350원
+                        - generic [ref=f86e2538]: (100g당 5,227원)
+                    - generic [ref=f86e2539]:
+                      - generic [ref=f86e2540]: 내일(토) 도착 보장
+                      - generic [ref=f86e2544]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e2546]:
+                      - generic "5" [ref=f86e2547]
+                      - generic [ref=f86e2553]: (170)
+                    - generic [ref=f86e2556]:
+                      - img "최대 518원 적립" [ref=f86e2557]
+                      - generic [ref=f86e2558]: 최대 518원 적립
+              - listitem [ref=f86e2559] [cursor=pointer]:
+                - link "폰타나 프렌치 로스티드 어니언 크림 컵수프, 60g, 5개 17,400원 40% 10,370원 (100g당 3,457원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (3,282) 최대 519원 적립 최대 519원 적립" [ref=f86e2560]:
+                  - /url: /vp/products/7680156221?itemId=19725075873&vendorItemId=86829132549&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=55&rank=55
+                  - figure [ref=f86e2561]:
+                    - img "폰타나 프렌치 로스티드 어니언 크림 컵수프, 60g, 5개" [ref=f86e2562]
+                  - generic [ref=f86e2563]:
+                    - generic [ref=f86e2565]: 폰타나 프렌치 로스티드 어니언 크림 컵수프, 60g, 5개
+                    - generic [ref=f86e2566]:
+                      - deletion [ref=f86e2568]: 17,400원
+                      - generic [ref=f86e2570]:
+                        - generic [ref=f86e2571]: 40%
+                        - generic [ref=f86e2572]: 10,370원
+                        - generic [ref=f86e2573]: (100g당 3,457원)
+                    - generic [ref=f86e2574]:
+                      - generic [ref=f86e2575]: 내일(토) 도착 보장
+                      - generic [ref=f86e2579]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e2581]:
+                      - generic "4.5" [ref=f86e2582]
+                      - generic [ref=f86e2588]: (3,282)
+                    - generic [ref=f86e2591]:
+                      - img "최대 519원 적립" [ref=f86e2592]
+                      - generic [ref=f86e2593]: 최대 519원 적립
+              - listitem [ref=f86e2594] [cursor=pointer]:
+                - link "폰타나 뉴질랜드 스위트콘 컵수프, 60g, 6개 20,880원 49% 10,480원 (100g당 2,911원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (6,507) 최대 524원 적립 최대 524원 적립" [ref=f86e2595]:
+                  - /url: /vp/products/8168595094?itemId=19354035614&vendorItemId=86554419564&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=56&rank=56
+                  - figure [ref=f86e2596]:
+                    - img "폰타나 뉴질랜드 스위트콘 컵수프, 60g, 6개" [ref=f86e2597]
+                  - generic [ref=f86e2598]:
+                    - generic [ref=f86e2600]: 폰타나 뉴질랜드 스위트콘 컵수프, 60g, 6개
+                    - generic [ref=f86e2601]:
+                      - deletion [ref=f86e2603]: 20,880원
+                      - generic [ref=f86e2605]:
+                        - generic [ref=f86e2606]: 49%
+                        - generic [ref=f86e2607]: 10,480원
+                        - generic [ref=f86e2608]: (100g당 2,911원)
+                    - generic [ref=f86e2609]:
+                      - generic [ref=f86e2610]: 내일(토) 도착 보장
+                      - generic [ref=f86e2614]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e2616]:
+                      - generic "4.5" [ref=f86e2617]
+                      - generic [ref=f86e2623]: (6,507)
+                    - generic [ref=f86e2626]:
+                      - img "최대 524원 적립" [ref=f86e2627]
+                      - generic [ref=f86e2628]: 최대 524원 적립
+              - listitem [ref=f86e2629] [cursor=pointer]:
+                - link "보노 크림스프 포타주, 51g, 4개 10,650원 (100g당 5,221원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (3,161) 최대 533원 적립 최대 533원 적립" [ref=f86e2630]:
+                  - /url: /vp/products/9550776?itemId=21293098468&vendorItemId=88352960129&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=57&rank=57
+                  - figure [ref=f86e2631]:
+                    - img "보노 크림스프 포타주, 51g, 4개" [ref=f86e2632]
+                  - generic [ref=f86e2633]:
+                    - generic [ref=f86e2635]: 보노 크림스프 포타주, 51g, 4개
+                    - generic [ref=f86e2638]:
+                      - generic [ref=f86e2639]: 10,650원
+                      - generic [ref=f86e2640]: (100g당 5,221원)
+                    - generic [ref=f86e2641]:
+                      - generic [ref=f86e2642]: 내일(토) 도착 보장
+                      - generic [ref=f86e2646]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e2648]:
+                      - generic "5" [ref=f86e2649]
+                      - generic [ref=f86e2655]: (3,161)
+                    - generic [ref=f86e2658]:
+                      - img "최대 533원 적립" [ref=f86e2659]
+                      - generic [ref=f86e2660]: 최대 533원 적립
+              - listitem [ref=f86e2661] [cursor=pointer]:
+                - link "보노 어니언 크림 스프 3개입, 54g, 4개 14,812원 27% 10,700원 (100g당 4,954원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 5 (2,328) 최대 535원 적립 최대 535원 적립" [ref=f86e2662]:
+                  - /url: /vp/products/108946086?itemId=21474550869&vendorItemId=88528820575&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=58&rank=58
+                  - figure [ref=f86e2663]:
+                    - img "보노 어니언 크림 스프 3개입, 54g, 4개" [ref=f86e2664]
+                  - generic [ref=f86e2665]:
+                    - generic [ref=f86e2667]: 보노 어니언 크림 스프 3개입, 54g, 4개
+                    - generic [ref=f86e2668]:
+                      - deletion [ref=f86e2670]: 14,812원
+                      - generic [ref=f86e2672]:
+                        - generic [ref=f86e2673]: 27%
+                        - generic [ref=f86e2674]: 10,700원
+                        - generic [ref=f86e2675]: (100g당 4,954원)
+                    - generic [ref=f86e2676]:
+                      - generic [ref=f86e2677]: 내일(토) 도착 보장
+                      - generic [ref=f86e2681]: 와우는 무료배송 ∙ 무료반품
+                    - generic [ref=f86e2683]:
+                      - generic "5" [ref=f86e2684]
+                      - generic [ref=f86e2690]: (2,328)
+                    - generic [ref=f86e2693]:
+                      - img "최대 535원 적립" [ref=f86e2694]
+                      - generic [ref=f86e2695]: 최대 535원 적립
+              - listitem [ref=f86e2696] [cursor=pointer]:
+                - link "보노 포르치니 버섯스프, 54g, 4개 10,860원 (100g당 5,028원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (13,982) 최대 543원 적립 최대 543원 적립" [ref=f86e2697]:
+                  - /url: /vp/products/1132956314?itemId=19443148296&vendorItemId=86554125787&q=컵스프&searchId=fdc48ea410827977&sourceType=search&itemsCount=60&searchRank=59&rank=59
+                  - figure [ref=f86e2698]:
+                    - img "보노 포르치니 버섯스프, 54g, 4개" [ref=f86e2699]
+                  - generic [ref=f86e2700]:
+                    - generic [ref=f86e2702]: 보노 포르치니 버섯스프, 54g, 4개
+                    - generic [ref=f86e2705]:
+                      - generic [ref=f86e2706]: 10,860원
+                      - generic [ref=f86e2707]: (100g당 5,028원)
+                    - generic [ref=f86e2708]:
+                      - generic [ref=f86e2709]: 내일(토) 도착 보장
+                      - generic [ref=f86e2713]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f86e2715]:
+                      - generic "5" [ref=f86e2716]
+                      - generic [ref=f86e2722]: (13,982)
+                    - generic [ref=f86e2725]:
+                      - img "최대 543원 적립" [ref=f86e2726]
+                      - generic [ref=f86e2727]: 최대 543원 적립
+            - region "찾는 상품이 없나요?" [ref=f86e2728]:
+              - generic [ref=f86e2729]:
+                - heading "찾는 상품이 없나요?" [level=2] [ref=f86e2730]
+                - paragraph [ref=f86e2731]: 로그인하고 더 많은 상품을 확인해보세요
+              - button "로그인" [ref=f86e2732] [cursor=pointer]
+      - generic [ref=f86e2735]:
+        - heading "이 상품을 검색한 다른 분들이 함께 본 상품" [level=2] [ref=f86e2736]
+        - generic [ref=f86e2738]:
+          - list [ref=f86e2740]:
+            - listitem [ref=f86e2741]:
+              - link "큐센 구름 팜레스트, 화이트, 1개 큐센 구름 팜레스트, 화이트, 1개 6,230원 (1개당 6,230원) 5 (579)" [ref=f86e2742] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/8582583430?vendorItemId=91885174826&sourceType=srp_also_viewed_item&rmdId=747550016e5b4fbe8bc39be400a14d17&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_A&rmdValue=p9718149360:vt-1.0.0:p8582583430
+                - img "큐센 구름 팜레스트, 화이트, 1개"
+                - generic [ref=f86e2744]: 큐센 구름 팜레스트, 화이트, 1개
+                - generic [ref=f86e2745]:
+                  - strong [ref=f86e2747]: 6,230원
+                  - generic [ref=f86e2748]: (1개당 6,230원)
+                - generic [ref=f86e2752]:
+                  - generic "5" [ref=f86e2753]
+                  - generic [ref=f86e2759]: (579)
+            - listitem [ref=f86e2761]:
+              - link "오뚜기프레스코 양송이 크림스프, 180g, 2개 오뚜기프레스코 양송이 크림스프, 180g, 2개 2,980원 (100g당 828원) 4.5 (3,955)" [ref=f86e2762] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/7852072617?vendorItemId=88460883009&sourceType=srp_also_viewed_item&rmdId=747550016e5b4fbe8bc39be400a14d17&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_A&rmdValue=p9718149360:vt-1.0.0:p7852072617
+                - img "오뚜기프레스코 양송이 크림스프, 180g, 2개"
+                - generic [ref=f86e2764]: 오뚜기프레스코 양송이 크림스프, 180g, 2개
+                - generic [ref=f86e2765]:
+                  - strong [ref=f86e2767]: 2,980원
+                  - generic [ref=f86e2768]: (100g당 828원)
+                - generic [ref=f86e2772]:
+                  - generic "4.5" [ref=f86e2773]
+                  - generic [ref=f86e2779]: (3,955)
+            - listitem [ref=f86e2781]:
+              - link "샘표 부산자갈치 고등어조림 양념, 1개, 150g 샘표 부산자갈치 고등어조림 양념, 1개, 150g 1,730원 (100g당 1,153원) 4.5 (36)" [ref=f86e2782] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/9498950249?vendorItemId=95250044058&sourceType=srp_also_viewed_item&rmdId=747550016e5b4fbe8bc39be400a14d17&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_A&rmdValue=p9718149360:vt-1.0.0:p9498950249
+                - img "샘표 부산자갈치 고등어조림 양념, 1개, 150g"
+                - generic [ref=f86e2784]: 샘표 부산자갈치 고등어조림 양념, 1개, 150g
+                - generic [ref=f86e2785]:
+                  - strong [ref=f86e2787]: 1,730원
+                  - generic [ref=f86e2788]: (100g당 1,153원)
+                - generic [ref=f86e2792]:
+                  - generic "4.5" [ref=f86e2793]
+                  - generic [ref=f86e2799]: (36)
+            - listitem [ref=f86e2801]:
+              - link "폰타나 프렌치 어니언 크림수프, 20g, 6개 폰타나 프렌치 어니언 크림수프, 20g, 6개 6,980원 (100g당 5,817원) 4.5 (3,282)" [ref=f86e2802] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/7680156221?vendorItemId=92418598257&sourceType=srp_also_viewed_item&rmdId=747550016e5b4fbe8bc39be400a14d17&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_A&rmdValue=p9718149360:vt-1.0.0:p7680156221
+                - img "폰타나 프렌치 어니언 크림수프, 20g, 6개"
+                - generic [ref=f86e2804]: 폰타나 프렌치 어니언 크림수프, 20g, 6개
+                - generic [ref=f86e2805]:
+                  - strong [ref=f86e2807]: 6,980원
+                  - generic [ref=f86e2808]: (100g당 5,817원)
+                - generic [ref=f86e2812]:
+                  - generic "4.5" [ref=f86e2813]
+                  - generic [ref=f86e2819]: (3,282)
+            - listitem [ref=f86e2821]:
+              - link "폰타나 스위트콘 크림 전자레인지용 수프, 180g, 1개 폰타나 스위트콘 크림 전자레인지용 수프, 180g, 1개 2,100원 (100g당 1,167원) 4.5 (17)" [ref=f86e2822] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/9499098427?vendorItemId=95250575267&sourceType=srp_also_viewed_item&rmdId=747550016e5b4fbe8bc39be400a14d17&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_A&rmdValue=p9718149360:vt-1.0.0:p9499098427
+                - img "폰타나 스위트콘 크림 전자레인지용 수프, 180g, 1개"
+                - generic [ref=f86e2824]: 폰타나 스위트콘 크림 전자레인지용 수프, 180g, 1개
+                - generic [ref=f86e2825]:
+                  - strong [ref=f86e2827]: 2,100원
+                  - generic [ref=f86e2828]: (100g당 1,167원)
+                - generic [ref=f86e2832]:
+                  - generic "4.5" [ref=f86e2833]
+                  - generic [ref=f86e2839]: (17)
+            - listitem [ref=f86e2841]:
+              - link "오뚜기 프레스코 쇠고기 크림스프 상온, 180g, 2개 오뚜기 프레스코 쇠고기 크림스프 상온, 180g, 2개 2,980원 (100g당 828원) 5 (9)" [ref=f86e2842] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/9499099425?vendorItemId=95250578080&sourceType=srp_also_viewed_item&rmdId=747550016e5b4fbe8bc39be400a14d17&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_A&rmdValue=p9718149360:vt-1.0.0:p9499099425
+                - img "오뚜기 프레스코 쇠고기 크림스프 상온, 180g, 2개"
+                - generic [ref=f86e2844]: 오뚜기 프레스코 쇠고기 크림스프 상온, 180g, 2개
+                - generic [ref=f86e2845]:
+                  - strong [ref=f86e2847]: 2,980원
+                  - generic [ref=f86e2848]: (100g당 828원)
+                - generic [ref=f86e2852]:
+                  - generic "5" [ref=f86e2853]
+                  - generic [ref=f86e2859]: (9)
+            - listitem [ref=f86e2861]:
+              - link "곰곰 곡물 호기빵 5개입(냉동), 65g, 5개입, 1개 곰곰 곡물 호기빵 5개입(냉동), 65g, 5개입, 1개 3,990원 (10g당 123원) 5 (6,903)" [ref=f86e2862] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/7538765551?vendorItemId=86914666680&sourceType=srp_also_viewed_item&rmdId=747550016e5b4fbe8bc39be400a14d17&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_A&rmdValue=p9718149360:vt-1.0.0:p7538765551
+                - img "곰곰 곡물 호기빵 5개입(냉동), 65g, 5개입, 1개"
+                - generic [ref=f86e2864]: 곰곰 곡물 호기빵 5개입(냉동), 65g, 5개입, 1개
+                - generic [ref=f86e2865]:
+                  - strong [ref=f86e2867]: 3,990원
+                  - generic [ref=f86e2868]: (10g당 123원)
+                - generic [ref=f86e2872]:
+                  - generic "5" [ref=f86e2873]
+                  - generic [ref=f86e2879]: (6,903)
+            - listitem [ref=f86e2881]:
+              - link "폰타나 그릴드 머쉬룸 크림 컵수프, 20g, 12개 폰타나 그릴드 머쉬룸 크림 컵수프, 20g, 12개 11,900원 (100g당 4,958원) 5 (892)" [ref=f86e2882] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/6135466689?vendorItemId=79003719685&sourceType=srp_also_viewed_item&rmdId=747550016e5b4fbe8bc39be400a14d17&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_A&rmdValue=p9718149360:vt-1.0.0:p6135466689
+                - img "폰타나 그릴드 머쉬룸 크림 컵수프, 20g, 12개"
+                - generic [ref=f86e2884]: 폰타나 그릴드 머쉬룸 크림 컵수프, 20g, 12개
+                - generic [ref=f86e2885]:
+                  - strong [ref=f86e2887]: 11,900원
+                  - generic [ref=f86e2888]: (100g당 4,958원)
+                - generic [ref=f86e2892]:
+                  - generic "5" [ref=f86e2893]
+                  - generic [ref=f86e2899]: (892)
+            - listitem [ref=f86e2901]:
+              - link "폰타나 컵수프 머쉬룸 2p + 콘 2p + 브로콜리 2p + 어니언 2p, 480g, 1세트 폰타나 컵수프 머쉬룸 2p + 콘 2p + 브로콜리 2p + 어니언 2p, 480g, 1세트 12,510원 (100g당 2,606원) 4.5 (7,282)" [ref=f86e2902] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/8169306605?vendorItemId=87943700268&sourceType=srp_also_viewed_item&rmdId=747550016e5b4fbe8bc39be400a14d17&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_A&rmdValue=p9718149360:vt-1.0.0:p8169306605
+                - img "폰타나 컵수프 머쉬룸 2p + 콘 2p + 브로콜리 2p + 어니언 2p, 480g, 1세트"
+                - generic [ref=f86e2904]: 폰타나 컵수프 머쉬룸 2p + 콘 2p + 브로콜리 2p + 어니언 2p, 480g, 1세트
+                - generic [ref=f86e2905]:
+                  - strong [ref=f86e2907]: 12,510원
+                  - generic [ref=f86e2908]: (100g당 2,606원)
+                - generic [ref=f86e2912]:
+                  - generic "4.5" [ref=f86e2913]
+                  - generic [ref=f86e2919]: (7,282)
+            - listitem [ref=f86e2921]:
+              - link "청정원 우리쌀 크림수프, 60g, 3개 청정원 우리쌀 크림수프, 60g, 3개 3,170원 (100g당 1,761원) 5 (1,752)" [ref=f86e2922] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/7511005658?vendorItemId=86953378626&sourceType=srp_also_viewed_item&rmdId=747550016e5b4fbe8bc39be400a14d17&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_A&rmdValue=p9718149360:vt-1.0.0:p7511005658
+                - img "청정원 우리쌀 크림수프, 60g, 3개"
+                - generic [ref=f86e2924]: 청정원 우리쌀 크림수프, 60g, 3개
+                - generic [ref=f86e2925]:
+                  - strong [ref=f86e2927]: 3,170원
+                  - generic [ref=f86e2928]: (100g당 1,761원)
+                - generic [ref=f86e2932]:
+                  - generic "5" [ref=f86e2933]
+                  - generic [ref=f86e2939]: (1,752)
+            - listitem [ref=f86e2941]:
+              - link "샘표 차돌 토장 찌개양념, 450g, 1개 샘표 차돌 토장 찌개양념, 450g, 1개 4,190원 (100g당 931원) 5 (95)" [ref=f86e2942] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/8989802584?vendorItemId=93308664345&sourceType=srp_also_viewed_item&rmdId=747550016e5b4fbe8bc39be400a14d17&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_A&rmdValue=p9718149360:vt-1.0.0:p8989802584
+                - img "샘표 차돌 토장 찌개양념, 450g, 1개"
+                - generic [ref=f86e2944]: 샘표 차돌 토장 찌개양념, 450g, 1개
+                - generic [ref=f86e2945]:
+                  - strong [ref=f86e2947]: 4,190원
+                  - generic [ref=f86e2948]: (100g당 931원)
+                - generic [ref=f86e2952]:
+                  - generic "5" [ref=f86e2953]
+                  - generic [ref=f86e2959]: (95)
+            - listitem [ref=f86e2961]:
+              - link "폰타나 시칠리아 페페론치노 아라비아따 파스타 토마토소스, 1.5kg, 1개 폰타나 시칠리아 페페론치노 아라비아따 파스타 토마토소스, 1.5kg, 1개 9,980원 (100g당 665원) 5 (5,350)" [ref=f86e2962] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/9273988465?vendorItemId=88741278585&sourceType=srp_also_viewed_item&rmdId=747550016e5b4fbe8bc39be400a14d17&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_A&rmdValue=p9718149360:vt-1.0.0:p9273988465
+                - img "폰타나 시칠리아 페페론치노 아라비아따 파스타 토마토소스, 1.5kg, 1개"
+                - generic [ref=f86e2964]: 폰타나 시칠리아 페페론치노 아라비아따 파스타 토마토소스, 1.5kg, 1개
+                - generic [ref=f86e2965]:
+                  - strong [ref=f86e2967]: 9,980원
+                  - generic [ref=f86e2968]: (100g당 665원)
+                - generic [ref=f86e2972]:
+                  - generic "5" [ref=f86e2973]
+                  - generic [ref=f86e2979]: (5,350)
+            - listitem [ref=f86e2981]:
+              - link "곰곰 크림 수프, 1kg, 1개 곰곰 크림 수프, 1kg, 1개 7,430원 (100g당 743원) 4 (372)" [ref=f86e2982] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/9260068875?vendorItemId=94363210656&sourceType=srp_also_viewed_item&rmdId=747550016e5b4fbe8bc39be400a14d17&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_A&rmdValue=p9718149360:vt-1.0.0:p9260068875
+                - img "곰곰 크림 수프, 1kg, 1개"
+                - generic [ref=f86e2984]: 곰곰 크림 수프, 1kg, 1개
+                - generic [ref=f86e2985]:
+                  - strong [ref=f86e2987]: 7,430원
+                  - generic [ref=f86e2988]: (100g당 743원)
+                - generic [ref=f86e2992]:
+                  - generic "4" [ref=f86e2993]
+                  - generic [ref=f86e2999]: (372)
+            - listitem [ref=f86e3001]:
+              - link "청정원 순창 양념듬뿍 쌈장, 200g, 1개 청정원 순창 양념듬뿍 쌈장, 200g, 1개 1,620원 (100g당 810원) 5 (862)" [ref=f86e3002] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/9499155589?vendorItemId=95250782723&sourceType=srp_also_viewed_item&rmdId=747550016e5b4fbe8bc39be400a14d17&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_A&rmdValue=p9718149360:vt-1.0.0:p9499155589
+                - img "청정원 순창 양념듬뿍 쌈장, 200g, 1개"
+                - generic [ref=f86e3004]: 청정원 순창 양념듬뿍 쌈장, 200g, 1개
+                - generic [ref=f86e3005]:
+                  - strong [ref=f86e3007]: 1,620원
+                  - generic [ref=f86e3008]: (100g당 810원)
+                - generic [ref=f86e3012]:
+                  - generic "5" [ref=f86e3013]
+                  - generic [ref=f86e3019]: (862)
+          - button "다음 상품 보기" [ref=f86e3021] [cursor=pointer]
+  - contentinfo [ref=f86e3022]:
+    - generic [ref=f86e3023]:
+      - generic [ref=f86e3024]:
+        - link "회사소개" [ref=f86e3025] [cursor=pointer]:
+          - /url: https://news.coupang.com/
+        - link "Investor Relations" [ref=f86e3026] [cursor=pointer]:
+          - /url: https://ir.aboutcoupang.com/overview/default.aspx
+        - link "인재채용" [ref=f86e3027] [cursor=pointer]:
+          - /url: https://rocketyourcareer.kr.coupang.com
+        - link "입점/제휴문의" [ref=f86e3028] [cursor=pointer]:
+          - /url: https://marketplace.coupangcorp.com/s/?utm_source=button_pc&utm_medium=non_paid&utm_campaign=onsite_ca&utm_id=coupang_app?inflow=WEB_FOOTER_B
+        - link "공지사항" [ref=f86e3029] [cursor=pointer]:
+          - /url: https://mc.coupang.com/ssr/desktop/contact/notice
+        - link "고객의 소리" [ref=f86e3030] [cursor=pointer]:
+          - /url: https://mc.coupang.com/ssr/desktop/contact/voc
+        - link "이용약관" [ref=f86e3031] [cursor=pointer]:
+          - /url: https://www.coupang.com/np/policies/terms
+        - link [ref=f86e3032] [cursor=pointer]:
+          - /url: https://privacy.coupang.com/ko/center/coupang
+          - strong [ref=f86e3033]: 개인정보 처리방침
+        - link "정보보호/개인정보보호 인증" [ref=f86e3034] [cursor=pointer]:
+          - /url: https://privacy.coupang.com/ko/security/status
+        - link "쿠팡페이 이용약관" [ref=f86e3035] [cursor=pointer]:
+          - /url: https://rocketpay.coupang.com/rocketpay/operationTerms/coupangPcFooter
+        - link "신뢰관리센터" [ref=f86e3036] [cursor=pointer]:
+          - /url: https://www.coupang.com/np/safety
+        - link "제휴마케팅" [ref=f86e3037] [cursor=pointer]:
+          - /url: https://partners.coupang.com/
+        - link "광고안내" [ref=f86e3038] [cursor=pointer]:
+          - /url: https://ads.coupang.com
+      - paragraph [ref=f86e3042] [cursor=pointer]: Global Site
+    - generic [ref=f86e3044]:
+      - generic [ref=f86e3045]:
+        - link "COUPANG" [ref=f86e3046] [cursor=pointer]:
+          - /url: https://www.coupang.com/
+        - generic [ref=f86e3047]:
+          - text: "상호명 및 호스팅 서비스 제공 : 쿠팡(주) 대표이사 : 로저스 해롤드 린(Rogers Harold Lynn) (05050) 서울시 광진구 아차산로 412, 2층 사업자 등록번호 : 120-88-00767 통신판매업신고 : 2026-서울광진-1253"
+          - link "사업자정보 확인 >" [ref=f86e3048] [cursor=pointer]:
+            - /url: http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=1208800767
+      - link [ref=f86e3050] [cursor=pointer]:
+        - /url: https://mc.coupang.com/ssr/desktop/contact/inquiry
+        - strong [ref=f86e3051]: 365고객센터
+        - text: "| 전자금융거래분쟁처리담당"
+        - emphasis [ref=f86e3052]: 1577-7011 (유료)
+        - text: "(05050) 서울시 광진구 아차산로 412, 2층 email : help@coupang.com"
+      - paragraph [ref=f86e3053]:
+        - strong [ref=f86e3054]: 채무지급보증 안내
+        - generic [ref=f86e3055]: 당사는 고객님이 현금 결제한 금액에 대해 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.
+        - link "서비스 가입사실 확인 >" [ref=f86e3056] [cursor=pointer]:
+          - /url: https://www.coupang.com/np/etc/popWooriService
+    - generic [ref=f86e3062]:
+      - paragraph [ref=f86e3063]: 사이버몰 내 판매되는 상품 중에는 쿠팡에 등록한 개별 판매자가 판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다. 마켓플레이스(오픈마켓) 상품의 경우 쿠팡은 통신판매중개자이며 통신판매의 당사자가 아닙니다. 쿠팡은 마켓플레이스(오픈마켓) 상품, 거래정보 및 거래 등에 대하여 책임을 지지 않습니다. 쿠팡은 소비자 보호와 안전거래를 위해 신뢰관리센터(CM112@coupang.com)를 운영하고 있으며, 관련 분쟁이 발생할 경우 별도의 분쟁 처리절차에 의거 분쟁이 처리됩니다. Copyright © Coupang Corp. 2010-2025 All Rights Reserved.
+      - list [ref=f86e3064]:
+        - listitem [ref=f86e3065]:
+          - link [ref=f86e3066] [cursor=pointer]:
+            - /url: https://www.facebook.com/Coupang.korea
+        - listitem [ref=f86e3067]:
+          - link [ref=f86e3068] [cursor=pointer]:
+            - /url: https://news.coupang.com/
+        - listitem [ref=f86e3069]:
+          - link [ref=f86e3070] [cursor=pointer]:
+            - /url: https://www.instagram.com/coupang
+  - alert [ref=f86e3071]

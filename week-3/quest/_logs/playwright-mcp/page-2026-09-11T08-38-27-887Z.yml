@@ -1,0 +1,1554 @@
+- generic [active] [ref=f257e1]:
+  - generic [ref=f257e5]:
+    - link [ref=f257e6] [cursor=pointer]:
+      - /url: /np/campaigns/82?adType=DA&eventId=5yQY8vQoyFZWXckb
+    - link [ref=f257e7] [cursor=pointer]:
+      - /url: https://shop.coupang.com/sajodaerim/268667?source=brandstore_display_ads&adType=DA&eventId=aE6Lt0RrqouIwPSm
+  - generic [ref=f257e8]:
+    - generic [ref=f257e10]:
+      - list [ref=f257e11]:
+        - listitem [ref=f257e12]:
+          - link "판매자 가입" [ref=f257e13] [cursor=pointer]:
+            - /url: https://wing.coupang.com/tenants/vendor-signup/signup?utm_source=button_pc_coupang_top_right_cta&utm_medium=non_paid&utm_campaign=seller_registration
+        - listitem [ref=f257e14]:
+          - link "고객센터" [ref=f257e15] [cursor=pointer]:
+            - /url: https://mc.coupang.com/ssr/desktop/contact/inquiry
+        - listitem [ref=f257e16]:
+          - link "로그아웃" [ref=f257e17] [cursor=pointer]:
+            - /url: https://login.coupang.com/login/logout.pang?rtnUrl=https%3A%2F%2Fwww.coupang.com%2Fnp%2Fpost%2Flogout%3Fr%3Dhttp%253A%252F%252Fwww.coupang.com%252Fnp%252Fsearch%253Fq%253D%2525EC%252584%25259C%2525EC%25259A%2525B8%2525EC%25259A%2525B0%2525EC%25259C%2525A0%252B1L
+        - listitem [ref=f257e18]:
+          - link [ref=f257e19] [cursor=pointer]:
+            - /url: https://mc.coupang.com/ssr/desktop/order/list
+            - strong [ref=f257e20]: 김*임
+            - text: 님
+      - list [ref=f257e21]:
+        - listitem [ref=f257e22]: 즐겨찾기
+        - listitem [ref=f257e23]:
+          - generic [ref=f257e24] [cursor=pointer]: 입점신청
+    - generic [ref=f257e27]:
+      - generic [ref=f257e28] [cursor=pointer]: 카테고리
+      - generic [ref=f257e34]:
+        - generic [ref=f257e35]:
+          - link [ref=f257e36] [cursor=pointer]:
+            - /url: https://www.coupang.com
+            - img "Coupang" [ref=f257e37]
+          - generic [ref=f257e38]:
+            - link "전체" [ref=f257e41] [cursor=pointer]:
+              - /url: "#"
+            - textbox "쿠팡 상품 검색" [ref=f257e43]:
+              - /placeholder: 찾고 싶은 상품을 검색해보세요!
+              - text: 서울우유 1L
+            - generic [ref=f257e44] [cursor=pointer]
+            - button "검색" [ref=f257e45] [cursor=pointer]
+          - list [ref=f257e46]:
+            - listitem [ref=f257e47]:
+              - link "마이쿠팡" [ref=f257e48] [cursor=pointer]:
+                - /url: https://mc.coupang.com/ssr/desktop/order/list
+            - listitem [ref=f257e50]:
+              - link "1 장바구니" [ref=f257e51] [cursor=pointer]:
+                - /url: //cart.coupang.com/cartView.pang
+                - emphasis [ref=f257e52]: "1"
+                - generic [ref=f257e53]: 장바구니
+        - generic [ref=f257e55]:
+          - list [ref=f257e58]:
+            - listitem [ref=f257e59]:
+              - link "쿠팡플레이 쿠팡플레이" [ref=f257e60] [cursor=pointer]:
+                - /url: https://www.coupangplay.com/catalog
+                - img "쿠팡플레이" [ref=f257e61]
+                - generic [ref=f257e62]: 쿠팡플레이
+            - listitem [ref=f257e63]:
+              - link "로켓배송 로켓배송" [ref=f257e64] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/campaigns/82
+                - img "로켓배송" [ref=f257e65]
+                - generic [ref=f257e66]: 로켓배송
+            - listitem [ref=f257e67]:
+              - link "로켓프레시 로켓프레시" [ref=f257e68] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/categories/393760
+                - img "로켓프레시" [ref=f257e69]
+                - generic [ref=f257e70]: 로켓프레시
+            - listitem [ref=f257e71]:
+              - link "2026 추석 2026 추석" [ref=f257e72] [cursor=pointer]:
+                - /url: https://www.coupang.com/mlp/web/mlp-landing-page?landingId=4800
+                - img "2026 추석" [ref=f257e73]
+                - generic [ref=f257e74]: 2026 추석
+            - listitem [ref=f257e76]:
+              - link "다시 구매 다시 구매" [ref=f257e77] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/fbi?sourceType=home_section_fbi
+                - img "다시 구매" [ref=f257e78]
+                - generic [ref=f257e79]: 다시 구매
+            - listitem [ref=f257e81]:
+              - link "쿠팡비즈 쿠팡비즈" [ref=f257e82] [cursor=pointer]:
+                - /url: https://login.coupang.com/corporation/member/landing-page
+                - img "쿠팡비즈" [ref=f257e83]
+                - generic [ref=f257e84]: 쿠팡비즈
+            - listitem [ref=f257e85]:
+              - link "로켓직구 로켓직구" [ref=f257e86] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/coupangglobal
+                - img "로켓직구" [ref=f257e87]
+                - generic [ref=f257e88]: 로켓직구
+            - listitem [ref=f257e89]:
+              - link "골드박스 골드박스" [ref=f257e90] [cursor=pointer]:
+                - /url: https://www.coupang.com/mlp/web/mlp-landing-page?landingId=3712&sourceType=gm_crm_goldbox&subSourceType=gm_crm_gwsrtcut
+                - img "골드박스" [ref=f257e91]
+                - generic [ref=f257e92]: 골드박스
+            - listitem [ref=f257e93]:
+              - link "이달의신상 이달의신상" [ref=f257e94] [cursor=pointer]:
+                - /url: https://pages.coupang.com/p/136938
+                - img "이달의신상" [ref=f257e95]
+                - generic [ref=f257e96]: 이달의신상
+            - listitem [ref=f257e97]:
+              - link "입점신청 입점신청" [ref=f257e98] [cursor=pointer]:
+                - /url: https://wing.coupang.com/tenants/vendor-signup/signup?utm_source=button_pc_coupang_shortcut_1&utm_medium=non_paid&utm_id=onsite_ca&utm_content=202411
+                - img "입점신청" [ref=f257e99]
+                - generic [ref=f257e100]: 입점신청
+            - listitem [ref=f257e101]:
+              - link "판매자특가 판매자특가" [ref=f257e102] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/omp
+                - img "판매자특가" [ref=f257e103]
+                - generic [ref=f257e104]: 판매자특가
+            - listitem [ref=f257e105]:
+              - link "와우회원할인 와우회원할인" [ref=f257e106] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/campaigns/83
+                - img "와우회원할인" [ref=f257e107]
+                - generic [ref=f257e108]: 와우회원할인
+            - listitem [ref=f257e109]:
+              - link "반품마켓 반품마켓" [ref=f257e110] [cursor=pointer]:
+                - /url: https://pages.coupang.com/p/54908
+                - img "반품마켓" [ref=f257e111]
+                - generic [ref=f257e112]: 반품마켓
+            - listitem [ref=f257e113]:
+              - link "착한상점 착한상점" [ref=f257e114] [cursor=pointer]:
+                - /url: https://pages.coupang.com/p/63240
+                - img "착한상점" [ref=f257e115]
+                - generic [ref=f257e116]: 착한상점
+            - listitem [ref=f257e118]:
+              - link "기획전 기획전" [ref=f257e119] [cursor=pointer]:
+                - /url: https://pages.coupang.com/p/bep?sourceType=gm_crm_oms&subSourceType=gm_crm_gwsrtcut
+                - img "기획전" [ref=f257e120]
+                - generic [ref=f257e121]: 기획전
+            - listitem [ref=f257e122]:
+              - link "쿠팡트래블 쿠팡트래블" [ref=f257e123] [cursor=pointer]:
+                - /url: https://trip.coupang.com/?channel=gnb
+                - img "쿠팡트래블" [ref=f257e124]
+                - generic [ref=f257e125]: 쿠팡트래블
+          - generic [ref=f257e127] [cursor=pointer]
+  - generic:
+    - article:
+      - generic:
+        - link "장바구니 1" [ref=f257e130] [cursor=pointer]:
+          - /url: //cart.coupang.com/cartView.pang
+          - generic [ref=f257e131]: 장바구니
+          - emphasis [ref=f257e132]: "1"
+        - generic [ref=f257e133]:
+          - generic [ref=f257e134]: 최근본상품
+          - emphasis
+        - list [ref=f257e136]
+  - generic [ref=f257e138]:
+    - generic [ref=f257e141]:
+      - list [ref=f257e142]:
+        - listitem [ref=f257e143]:
+          - link "전체" [ref=f257e144] [cursor=pointer]:
+            - /url: /np/search?q=%EC%84%9C%EC%9A%B8%EC%9A%B0%EC%9C%A0+1L
+      - strong [ref=f257e148]: "'서울우유 1L'"
+    - generic [ref=f257e151]:
+      - generic [ref=f257e152]:
+        - generic [ref=f257e155]:
+          - heading "필터" [level=4] [ref=f257e157]
+          - list [ref=f257e160]:
+            - listitem [ref=f257e161]:
+              - img "rocket_luxury,rocket_wow,coupang_global" [ref=f257e165] [cursor=pointer]
+              - list [ref=f257e167]:
+                - listitem [ref=f257e168]:
+                  - generic:
+                    - generic:
+                      - img "rocket_luxury"
+                    - text: 만 보기
+                - listitem [ref=f257e169]:
+                  - generic [ref=f257e170] [cursor=pointer]:
+                    - img "rocket_wow" [ref=f257e173]
+                    - text: 만 보기
+                - listitem [ref=f257e174]:
+                  - generic:
+                    - generic:
+                      - img "coupang_global"
+                    - text: 만 보기
+            - listitem [ref=f257e175]:
+              - generic:
+                - generic:
+                  - img "top_brand"
+            - listitem [ref=f257e176]:
+              - generic [ref=f257e177] [cursor=pointer]: 무료배송
+          - separator [ref=f257e179]
+          - generic [ref=f257e180]:
+            - heading "카테고리" [level=5] [ref=f257e181]
+            - list [ref=f257e183]:
+              - listitem [ref=f257e184]:
+                - link "전체" [ref=f257e186] [cursor=pointer]:
+                  - /url: https://www.coupang.com
+              - listitem [ref=f257e187]:
+                - link "식품" [ref=f257e189] [cursor=pointer]:
+                  - /url: https://www.coupang.com/np/categories/194276
+              - listitem [ref=f257e190]:
+                - link "싱글라이프" [ref=f257e192] [cursor=pointer]:
+                  - /url: https://www.coupang.com/np/categories/433784
+              - listitem [ref=f257e193]:
+                - link "로켓직구" [ref=f257e195] [cursor=pointer]:
+                  - /url: https://www.coupang.com/np/coupangglobal
+              - listitem [ref=f257e196]:
+                - link "쿠팡수입" [ref=f257e198] [cursor=pointer]:
+                  - /url: https://www.coupang.com/np/categories/510691
+              - listitem [ref=f257e199]:
+                - link "헬스/건강식품" [ref=f257e201] [cursor=pointer]:
+                  - /url: https://www.coupang.com/np/categories/305798
+          - separator [ref=f257e202]
+          - generic [ref=f257e203]:
+            - heading "브랜드" [level=5] [ref=f257e204]
+            - generic [ref=f257e205]:
+              - list [ref=f257e206]:
+                - listitem [ref=f257e207]:
+                  - generic [ref=f257e208] [cursor=pointer]: 서울우유
+                - listitem [ref=f257e210]:
+                  - generic [ref=f257e211] [cursor=pointer]: 리솔라
+                - listitem [ref=f257e213]:
+                  - generic [ref=f257e214] [cursor=pointer]: MLEKPOL
+                - listitem [ref=f257e216]:
+                  - generic [ref=f257e217] [cursor=pointer]: 와치아테
+                - listitem [ref=f257e219]:
+                  - generic [ref=f257e220] [cursor=pointer]: 매일유업
+                - listitem:
+                  - generic [ref=f257e222] [cursor=pointer]: 믈레코비타
+                - listitem:
+                  - generic [ref=f257e224] [cursor=pointer]: 매일우유
+                - listitem:
+                  - generic [ref=f257e226] [cursor=pointer]: 프레지덩
+                - listitem:
+                  - generic [ref=f257e228] [cursor=pointer]: RPC
+              - generic [ref=f257e230] [cursor=pointer]: + 더보기
+          - separator [ref=f257e231]
+          - generic [ref=f257e232]:
+            - heading "상품 상태" [level=5] [ref=f257e233]
+            - list [ref=f257e235]:
+              - listitem [ref=f257e236]:
+                - generic [ref=f257e237] [cursor=pointer]: 새 상품
+              - listitem [ref=f257e239]:
+                - generic [ref=f257e240] [cursor=pointer]: 박스 훼손
+          - separator [ref=f257e242]
+          - generic [ref=f257e243]:
+            - heading "개당 용량" [level=5] [ref=f257e244]
+            - list [ref=f257e246]:
+              - listitem [ref=f257e247]:
+                - generic [ref=f257e248] [cursor=pointer]: 125ml 이하
+              - listitem [ref=f257e250]:
+                - generic [ref=f257e251] [cursor=pointer]: 125~200ml
+              - listitem [ref=f257e253]:
+                - generic [ref=f257e254] [cursor=pointer]: 200~500ml
+              - listitem [ref=f257e256]:
+                - generic [ref=f257e257] [cursor=pointer]: 500ml~1L
+              - listitem [ref=f257e259]:
+                - generic [ref=f257e260] [cursor=pointer]: 1~2L
+              - listitem [ref=f257e262]:
+                - generic: 2L 이상
+          - separator [ref=f257e263]
+          - generic [ref=f257e264]:
+            - heading "낱개상품 여부" [level=5] [ref=f257e265]
+            - list [ref=f257e267]:
+              - listitem [ref=f257e268]:
+                - generic [ref=f257e269] [cursor=pointer]: 낱개상품
+          - separator [ref=f257e271]
+          - generic [ref=f257e272]:
+            - heading "총 수량" [level=5] [ref=f257e273]
+            - list [ref=f257e275]:
+              - listitem [ref=f257e276]:
+                - generic [ref=f257e277] [cursor=pointer]: 10개 이하
+              - listitem [ref=f257e279]:
+                - generic [ref=f257e280] [cursor=pointer]: 10~20개
+              - listitem [ref=f257e282]:
+                - generic [ref=f257e283] [cursor=pointer]: 20개 이상
+          - separator [ref=f257e285]
+          - generic [ref=f257e286]:
+            - heading "맛" [level=5] [ref=f257e287]
+            - list [ref=f257e289]:
+              - listitem [ref=f257e290]:
+                - generic [ref=f257e291] [cursor=pointer]: 흰우유
+              - listitem [ref=f257e293]:
+                - generic [ref=f257e294] [cursor=pointer]: 커피우유
+          - separator [ref=f257e296]
+          - generic [ref=f257e297]:
+            - heading "멸균/냉장" [level=5] [ref=f257e298]
+            - list [ref=f257e300]:
+              - listitem [ref=f257e301]:
+                - generic [ref=f257e302] [cursor=pointer]: 냉장우유
+              - listitem [ref=f257e304]:
+                - generic [ref=f257e305] [cursor=pointer]: 멸균우유
+          - separator [ref=f257e307]
+          - generic [ref=f257e308]:
+            - heading "용기형태" [level=5] [ref=f257e309]
+            - list [ref=f257e311]:
+              - listitem [ref=f257e312]:
+                - generic [ref=f257e313] [cursor=pointer]: 플라스틱병
+              - listitem [ref=f257e315]:
+                - generic [ref=f257e316] [cursor=pointer]: 파우치
+              - listitem [ref=f257e318]:
+                - generic [ref=f257e319] [cursor=pointer]: 종이팩
+          - separator [ref=f257e321]
+          - generic [ref=f257e322]:
+            - heading "종류" [level=5] [ref=f257e323]
+            - generic [ref=f257e324]:
+              - list [ref=f257e325]:
+                - listitem [ref=f257e326]:
+                  - generic [ref=f257e327] [cursor=pointer]: 우유
+                - listitem [ref=f257e329]:
+                  - generic: 두유
+                - listitem [ref=f257e330]:
+                  - generic: 과즙음료
+                - listitem [ref=f257e331]:
+                  - generic: 탄산음료
+                - listitem [ref=f257e332]:
+                  - generic: 생수
+                - listitem:
+                  - generic: 탄산수
+                - listitem:
+                  - generic: 어린이음료
+                - listitem:
+                  - generic: 차음료
+                - listitem:
+                  - generic: 커피음료
+                - listitem:
+                  - generic: 기능성음료
+                - listitem:
+                  - generic: 혼합구성
+              - generic [ref=f257e333] [cursor=pointer]: + 더보기
+          - separator [ref=f257e334]
+          - generic [ref=f257e335]:
+            - heading "보관방식" [level=5] [ref=f257e336]
+            - list [ref=f257e338]:
+              - listitem [ref=f257e339]:
+                - generic [ref=f257e340] [cursor=pointer]: 냉장보관
+              - listitem [ref=f257e342]:
+                - generic [ref=f257e343] [cursor=pointer]: 실온보관
+          - separator [ref=f257e345]
+          - generic [ref=f257e346]:
+            - heading "용도" [level=5] [ref=f257e347]
+            - list [ref=f257e349]:
+              - listitem [ref=f257e350]:
+                - generic [ref=f257e351] [cursor=pointer]: 가정용
+              - listitem [ref=f257e353]:
+                - generic [ref=f257e354] [cursor=pointer]: 업소용
+          - separator [ref=f257e356]
+          - generic [ref=f257e357]:
+            - heading "간편식" [level=5] [ref=f257e358]
+            - list [ref=f257e360]:
+              - listitem [ref=f257e361]:
+                - generic [ref=f257e362] [cursor=pointer]: 즉석섭취음료
+              - listitem [ref=f257e364]:
+                - generic [ref=f257e365] [cursor=pointer]: 즉석섭취식품
+          - separator [ref=f257e367]
+          - generic [ref=f257e368]:
+            - heading "설탕함량" [level=5] [ref=f257e369]
+            - list [ref=f257e371]:
+              - listitem [ref=f257e372]:
+                - generic [ref=f257e373] [cursor=pointer]: 무설탕
+              - listitem [ref=f257e375]:
+                - generic [ref=f257e376] [cursor=pointer]: 저설탕
+              - listitem [ref=f257e378]:
+                - generic [ref=f257e379] [cursor=pointer]: 설탕첨가
+              - listitem [ref=f257e381]:
+                - generic [ref=f257e382] [cursor=pointer]: 당 첨가
+          - separator [ref=f257e384]
+          - generic [ref=f257e385]:
+            - heading "어린이용 여부" [level=5] [ref=f257e386]
+            - list [ref=f257e388]:
+              - listitem [ref=f257e389]:
+                - generic [ref=f257e390] [cursor=pointer]: 어린이용
+          - separator [ref=f257e392]
+          - generic [ref=f257e393]:
+            - heading "비건 여부" [level=5] [ref=f257e394]
+            - list [ref=f257e396]:
+              - listitem [ref=f257e397]:
+                - generic [ref=f257e398] [cursor=pointer]: 비건
+          - separator [ref=f257e400]
+          - generic [ref=f257e401]:
+            - heading "성분" [level=5] [ref=f257e402]
+            - list [ref=f257e404]:
+              - listitem [ref=f257e405]:
+                - generic [ref=f257e406] [cursor=pointer]: 동물성
+              - listitem [ref=f257e408]:
+                - generic [ref=f257e409] [cursor=pointer]: 식물성
+          - separator [ref=f257e411]
+          - generic [ref=f257e412]:
+            - heading "형태" [level=5] [ref=f257e413]
+            - list [ref=f257e415]:
+              - listitem [ref=f257e416]:
+                - generic: 스프레이
+              - listitem [ref=f257e417]:
+                - generic [ref=f257e418] [cursor=pointer]: 액상
+          - separator [ref=f257e420]
+          - generic [ref=f257e421]:
+            - heading "별점" [level=5] [ref=f257e422]
+            - list [ref=f257e424]:
+              - listitem [ref=f257e425]:
+                - generic "전체" [ref=f257e426]: 별점전체
+              - listitem [ref=f257e427]:
+                - generic "4점 이상" [ref=f257e428]:
+                  - generic [ref=f257e429] [cursor=pointer]
+                  - text: 4점 이상
+              - listitem [ref=f257e430]:
+                - generic "3점 이상" [ref=f257e431]:
+                  - generic [ref=f257e432] [cursor=pointer]
+                  - text: 3점 이상
+              - listitem [ref=f257e433]:
+                - generic "2점 이상" [ref=f257e434]:
+                  - generic [ref=f257e435] [cursor=pointer]
+                  - text: 2점 이상
+              - listitem [ref=f257e436]:
+                - generic "1점 이상" [ref=f257e437]:
+                  - generic [ref=f257e438] [cursor=pointer]
+                  - text: 1점 이상
+          - separator [ref=f257e439]
+          - generic [ref=f257e440]:
+            - heading "가격" [level=5] [ref=f257e441]
+            - list [ref=f257e443]:
+              - listitem [ref=f257e444]:
+                - generic "priceFilter" [ref=f257e445]: 가격 전체
+              - listitem [ref=f257e446]:
+                - generic "priceFilter" [ref=f257e447]: 2만원 이하
+              - listitem [ref=f257e448]:
+                - generic "priceFilter" [ref=f257e449]: 2만원~4만원
+              - listitem [ref=f257e450]:
+                - generic "priceFilter" [ref=f257e451]: 4만원~6만원
+              - listitem [ref=f257e452]:
+                - generic "priceFilter" [ref=f257e453]: 6만원~8만원
+              - listitem [ref=f257e454]:
+                - generic "priceFilter" [ref=f257e455]: 8만원 이상
+            - generic [ref=f257e456]:
+              - generic [ref=f257e457]:
+                - textbox "minPrice" [ref=f257e458]
+                - generic [ref=f257e459]: ~
+                - textbox "maxPrice" [ref=f257e460]
+                - text: 원
+              - generic "priceFilter" [ref=f257e461]: 검색
+          - separator [ref=f257e462]
+        - generic [ref=f257e465]:
+          - generic [ref=f257e466]: 현재 검색 결과에 만족하셨나요?
+          - button [ref=f257e467] [cursor=pointer]
+          - button [ref=f257e468] [cursor=pointer]
+          - generic [ref=f257e469]:
+            - paragraph [ref=f257e470]: 어떤 문제가 있었나요?
+            - list [ref=f257e471]:
+              - listitem [ref=f257e472] [cursor=pointer]: 관련 없는 상품이 있어요
+              - listitem [ref=f257e473] [cursor=pointer]: 추천해준 검색어가 도움이 안 돼요
+              - listitem [ref=f257e474] [cursor=pointer]: 필터가 도움이 안 돼요
+              - listitem [ref=f257e475] [cursor=pointer]: 이미지나 정보가 부정확해요
+              - listitem [ref=f257e476] [cursor=pointer]: 기타 원하는 옵션이 없어요
+      - generic [ref=f257e477]:
+        - generic [ref=f257e478]:
+          - heading [level=1] [ref=f257e479]:
+            - strong [ref=f257e480]: "'서울우유 1L'"
+            - text: 에 대한 검색결과
+          - generic [ref=f257e481]:
+            - generic [ref=f257e482]: "연관검색어:"
+            - link "서울우유1l" [ref=f257e483] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=%EC%84%9C%EC%9A%B8%EC%9A%B0%EC%9C%A01l&channel=relate
+            - link "1l멸균우유서울" [ref=f257e484] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=1l%EB%A9%B8%EA%B7%A0%EC%9A%B0%EC%9C%A0%EC%84%9C%EC%9A%B8&channel=relate
+            - link "멸균서울우유1l" [ref=f257e485] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=%EB%A9%B8%EA%B7%A0%EC%84%9C%EC%9A%B8%EC%9A%B0%EC%9C%A01l&channel=relate
+            - link "서울우유" [ref=f257e486] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=%EC%84%9C%EC%9A%B8%EC%9A%B0%EC%9C%A0&channel=relate
+            - link "멸균우유" [ref=f257e487] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=%EB%A9%B8%EA%B7%A0%EC%9A%B0%EC%9C%A0&channel=relate
+            - link "멸균우유1l" [ref=f257e488] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=%EB%A9%B8%EA%B7%A0%EC%9A%B0%EC%9C%A01l&channel=relate
+            - link "우유" [ref=f257e489] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=%EC%9A%B0%EC%9C%A0&channel=relate
+            - link "우유1리터팩" [ref=f257e490] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=%EC%9A%B0%EC%9C%A01%EB%A6%AC%ED%84%B0%ED%8C%A9&channel=relate
+            - link "1l멸균우유" [ref=f257e491] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=1l%EB%A9%B8%EA%B7%A0%EC%9A%B0%EC%9C%A0&channel=relate
+            - link "멸균우유1리터" [ref=f257e492] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=%EB%A9%B8%EA%B7%A0%EC%9A%B0%EC%9C%A01%EB%A6%AC%ED%84%B0&channel=relate
+          - generic [ref=f257e493]:
+            - generic [ref=f257e496]:
+              - checkbox "배송비 포함" [ref=f257e497] [cursor=pointer]
+              - generic [ref=f257e500]: 배송비 포함
+            - list [ref=f257e504]:
+              - listitem [ref=f257e505]:
+                - radio "쿠팡 랭킹순" [checked] [ref=f257e506]
+                - generic [ref=f257e507] [cursor=pointer]: 쿠팡 랭킹순
+                - generic [ref=f257e508]: 설명
+              - listitem [ref=f257e509]:
+                - radio "낮은가격순" [ref=f257e510]
+                - generic [ref=f257e511] [cursor=pointer]: 낮은가격순
+              - listitem [ref=f257e512]:
+                - radio "높은가격순" [ref=f257e513]
+                - generic [ref=f257e514] [cursor=pointer]: 높은가격순
+              - listitem [ref=f257e515]:
+                - radio "판매량순" [ref=f257e516]
+                - generic [ref=f257e517] [cursor=pointer]: 판매량순
+              - listitem [ref=f257e518]:
+                - radio "최신순" [ref=f257e519]
+                - generic [ref=f257e520] [cursor=pointer]: 최신순
+            - list [ref=f257e525]:
+              - listitem [ref=f257e526] [cursor=pointer]:
+                - radio "36개씩 보기" [checked] [ref=f257e527]
+                - generic [ref=f257e528]: 36개씩 보기
+        - generic [ref=f257e530]:
+          - list [ref=f257e532]:
+            - listitem [ref=f257e533] [cursor=pointer]:
+              - link "서울우유 멸균 흰우유, 1L, 10개 31,500원 34% 20,490원 (100ml당 205원) 내일(토) 도착 보장 무료배송 5 (556,093) 최대 1,025원 적립 최대 1,025원 적립 1" [ref=f257e534]:
+                - /url: /vp/products/4975075206?itemId=18639195957&vendorItemId=3001406678&pickType=COU_PICK&q=서울우유 1L&searchId=71b8558b11471643&sourceType=search&itemsCount=35&searchRank=0&rank=0
+                - figure [ref=f257e535]:
+                  - img "서울우유 멸균 흰우유, 1L, 10개" [ref=f257e536]
+                - generic [ref=f257e537]:
+                  - generic [ref=f257e543]:
+                    - mark [ref=f257e544]: 서울우유
+                    - text: 멸균 흰우유,
+                    - mark [ref=f257e545]: 1L
+                    - text: ", 10개"
+                  - generic [ref=f257e546]:
+                    - deletion [ref=f257e548]: 31,500원
+                    - generic [ref=f257e550]:
+                      - generic [ref=f257e551]: 34%
+                      - generic [ref=f257e552]: 20,490원
+                      - generic [ref=f257e553]: (100ml당 205원)
+                  - generic [ref=f257e554]:
+                    - generic [ref=f257e555]: 내일(토) 도착 보장
+                    - generic [ref=f257e559]: 무료배송
+                  - generic [ref=f257e561]:
+                    - generic "5" [ref=f257e562]
+                    - generic [ref=f257e568]: (556,093)
+                  - generic [ref=f257e571]:
+                    - img "최대 1,025원 적립" [ref=f257e572]
+                    - generic [ref=f257e573]: 최대 1,025원 적립
+                  - generic [ref=f257e574]: "1"
+            - listitem [ref=f257e575] [cursor=pointer]:
+              - link "서울우유 유기농 멸균우유, 120ml, 32개 30,610원 (100ml당 797원) 9/16(수) 도착 예정 무료배송 5 (3,386) 최대 1,530원 적립 최대 1,530원 적립 광고 Ad information" [ref=f257e576]:
+                - /url: /vp/products/7060182058?itemId=17503433356&vendorItemId=88550800310&sourceType=srp_product_ads&clickEventId=357f7b40-adbc-11f1-be7c-1baec8b6736a&korePlacement=15&koreSubPlacement=1&clickEventId=357f7b40-adbc-11f1-be7c-1baec8b6736a&korePlacement=15&koreSubPlacement=1
+                - figure [ref=f257e577]:
+                  - img "서울우유 유기농 멸균우유, 120ml, 32개" [ref=f257e578]
+                - generic [ref=f257e579]:
+                  - generic [ref=f257e581]: 서울우유 유기농 멸균우유, 120ml, 32개
+                  - generic [ref=f257e584]:
+                    - generic [ref=f257e585]: 30,610원
+                    - generic [ref=f257e586]: (100ml당 797원)
+                  - generic [ref=f257e587]:
+                    - generic [ref=f257e588]: 9/16(수) 도착 예정
+                    - generic [ref=f257e590]: 무료배송
+                  - generic [ref=f257e592]:
+                    - generic "5" [ref=f257e593]
+                    - generic [ref=f257e599]: (3,386)
+                  - generic [ref=f257e602]:
+                    - img "최대 1,530원 적립" [ref=f257e603]
+                    - generic [ref=f257e604]: 최대 1,530원 적립
+                  - generic [ref=f257e606]:
+                    - generic [ref=f257e607]: 광고
+                    - button "Ad information" [ref=f257e608]
+            - listitem [ref=f257e611] [cursor=pointer]:
+              - link "바르트밀크 매도우스타 멸균우유, 6팩, 1L 13,900원 (100ml당 232원) 9/15(화) 도착 예정 무료배송 ∙ 오늘출발 4.5 (193) 최대 695원 적립 최대 695원 적립 광고 Ad information" [ref=f257e612]:
+                - /url: /vp/products/9122210924?itemId=26833571839&vendorItemId=94151747728&sourceType=srp_product_ads&clickEventId=357fa250-adbc-11f1-abb2-d4e4f0522ad5&korePlacement=15&koreSubPlacement=5&clickEventId=357fa250-adbc-11f1-abb2-d4e4f0522ad5&korePlacement=15&koreSubPlacement=5
+                - figure [ref=f257e613]:
+                  - img "바르트밀크 매도우스타 멸균우유, 6팩, 1L" [ref=f257e614]
+                - generic [ref=f257e615]:
+                  - generic [ref=f257e617]: 바르트밀크 매도우스타 멸균우유, 6팩, 1L
+                  - generic [ref=f257e620]:
+                    - generic [ref=f257e621]: 13,900원
+                    - generic [ref=f257e622]: (100ml당 232원)
+                  - generic [ref=f257e623]:
+                    - generic [ref=f257e624]: 9/15(화) 도착 예정
+                    - generic [ref=f257e626]: 무료배송 ∙ 오늘출발
+                  - generic [ref=f257e628]:
+                    - generic "4.5" [ref=f257e629]
+                    - generic [ref=f257e635]: (193)
+                  - generic [ref=f257e638]:
+                    - img "최대 695원 적립" [ref=f257e639]
+                    - generic [ref=f257e640]: 최대 695원 적립
+                  - generic [ref=f257e642]:
+                    - generic [ref=f257e643]: 광고
+                    - button "Ad information" [ref=f257e644]
+            - listitem [ref=f257e647] [cursor=pointer]:
+              - link "서울우유 멸균 흰우유, 1L, 20개 38,900원 (100ml당 195원) 내일(토) 도착 보장 무료배송 5 (556,093) 최대 1,945원 적립 최대 1,945원 적립 2" [ref=f257e648]:
+                - /url: /vp/products/4975075206?itemId=19187142623&vendorItemId=4438029491&q=서울우유 1L&searchId=71b8558b11471643&sourceType=search&itemsCount=35&searchRank=3&rank=3
+                - figure [ref=f257e649]:
+                  - img "서울우유 멸균 흰우유, 1L, 20개" [ref=f257e650]
+                - generic [ref=f257e651]:
+                  - generic [ref=f257e654]:
+                    - mark [ref=f257e655]: 서울우유
+                    - text: 멸균 흰우유,
+                    - mark [ref=f257e656]: 1L
+                    - text: ", 20개"
+                  - generic [ref=f257e659]:
+                    - generic [ref=f257e660]: 38,900원
+                    - generic [ref=f257e661]: (100ml당 195원)
+                  - generic [ref=f257e662]:
+                    - generic [ref=f257e663]: 내일(토) 도착 보장
+                    - generic [ref=f257e667]: 무료배송
+                  - generic [ref=f257e669]:
+                    - generic "5" [ref=f257e670]
+                    - generic [ref=f257e676]: (556,093)
+                  - generic [ref=f257e679]:
+                    - img "최대 1,945원 적립" [ref=f257e680]
+                    - generic [ref=f257e681]: 최대 1,945원 적립
+                  - generic [ref=f257e682]: "2"
+            - listitem [ref=f257e683] [cursor=pointer]:
+              - link "서울우유 멸균 흰우유, 1L, 5개 11,950원 (100ml당 239원) 9/15(화) 도착 예정 무료배송 5 (556,093) 최대 598원 적립 최대 598원 적립 3" [ref=f257e684]:
+                - /url: /vp/products/4975075206?itemId=583870822&vendorItemId=92004269700&q=서울우유 1L&searchId=71b8558b11471643&sourceType=search&itemsCount=35&searchRank=4&rank=4
+                - figure [ref=f257e685]:
+                  - img "서울우유 멸균 흰우유, 1L, 5개" [ref=f257e686]
+                - generic [ref=f257e687]:
+                  - generic [ref=f257e690]:
+                    - mark [ref=f257e691]: 서울우유
+                    - text: 멸균 흰우유,
+                    - mark [ref=f257e692]: 1L
+                    - text: ", 5개"
+                  - generic [ref=f257e695]:
+                    - generic [ref=f257e696]: 11,950원
+                    - generic [ref=f257e697]: (100ml당 239원)
+                  - generic [ref=f257e698]:
+                    - generic [ref=f257e699]: 9/15(화) 도착 예정
+                    - generic [ref=f257e701]: 무료배송
+                  - generic [ref=f257e703]:
+                    - generic "5" [ref=f257e704]
+                    - generic [ref=f257e710]: (556,093)
+                  - generic [ref=f257e713]:
+                    - img "최대 598원 적립" [ref=f257e714]
+                    - generic [ref=f257e715]: 최대 598원 적립
+                  - generic [ref=f257e716]: "3"
+            - listitem [ref=f257e717] [cursor=pointer]:
+              - link "A2우유 갓밀크 3.8% 멸균우유, 3개, 1L 할인 · 17:31:32 12,880원 4% 12,280원 (100ml당 409원) 내일(토) 도착 보장 4.5 (435) 최대 614원 적립 최대 614원 적립 광고 Ad information" [ref=f257e718]:
+                - /url: /vp/products/9561907456?itemId=28719217368&vendorItemId=95659753194&sourceType=srp_product_ads&clickEventId=357fa250-adbc-11f1-830a-e46add433a03&korePlacement=15&koreSubPlacement=6&clickEventId=357fa250-adbc-11f1-830a-e46add433a03&korePlacement=15&koreSubPlacement=6
+                - figure [ref=f257e719]:
+                  - img "A2우유 갓밀크 3.8% 멸균우유, 3개, 1L" [ref=f257e720]
+                - generic [ref=f257e721]:
+                  - generic [ref=f257e723]: A2우유 갓밀크 3.8% 멸균우유, 3개, 1L
+                  - generic [ref=f257e724]:
+                    - generic [ref=f257e725]:
+                      - generic [ref=f257e726]: 할인
+                      - generic [ref=f257e727]: · 17:31:32
+                      - deletion [ref=f257e728]: 12,880원
+                    - generic [ref=f257e730]:
+                      - generic [ref=f257e731]: 4%
+                      - generic [ref=f257e736]: 12,280원
+                      - generic [ref=f257e737]: (100ml당 409원)
+                  - generic [ref=f257e738]: 내일(토) 도착 보장
+                  - generic [ref=f257e744]:
+                    - generic "4.5" [ref=f257e745]
+                    - generic [ref=f257e751]: (435)
+                  - generic [ref=f257e754]:
+                    - img "최대 614원 적립" [ref=f257e755]
+                    - generic [ref=f257e756]: 최대 614원 적립
+                  - generic [ref=f257e758]:
+                    - generic [ref=f257e759]: 광고
+                    - button "Ad information" [ref=f257e760]
+            - listitem [ref=f257e763] [cursor=pointer]:
+              - link "동원목장 유기농목초우유 1000ml 3병, 3개, 1L 할인 23,100원 15% 19,630원 (100ml당 654원) 9/15(화) 도착 예정 무료배송 ∙ 오늘출발 5 (630) 최대 981원 적립 최대 981원 적립 광고 Ad information" [ref=f257e764]:
+                - /url: /vp/products/8185532107?itemId=23760943042&vendorItemId=90436112998&sourceType=srp_product_ads&clickEventId=357fa250-adbc-11f1-8bfa-db51bf54b591&korePlacement=15&koreSubPlacement=9&clickEventId=357fa250-adbc-11f1-8bfa-db51bf54b591&korePlacement=15&koreSubPlacement=9
+                - figure [ref=f257e765]:
+                  - img "동원목장 유기농목초우유 1000ml 3병, 3개, 1L" [ref=f257e766]
+                - generic [ref=f257e767]:
+                  - generic [ref=f257e769]: 동원목장 유기농목초우유 1000ml 3병, 3개, 1L
+                  - generic [ref=f257e770]:
+                    - generic [ref=f257e771]:
+                      - generic [ref=f257e772]: 할인
+                      - deletion [ref=f257e773]: 23,100원
+                    - generic [ref=f257e775]:
+                      - generic [ref=f257e776]: 15%
+                      - generic [ref=f257e781]: 19,630원
+                      - generic [ref=f257e782]: (100ml당 654원)
+                  - generic [ref=f257e783]:
+                    - generic [ref=f257e784]: 9/15(화) 도착 예정
+                    - generic [ref=f257e786]: 무료배송 ∙ 오늘출발
+                  - generic [ref=f257e788]:
+                    - generic "5" [ref=f257e789]
+                    - generic [ref=f257e795]: (630)
+                  - generic [ref=f257e798]:
+                    - img "최대 981원 적립" [ref=f257e799]
+                    - generic [ref=f257e800]: 최대 981원 적립
+                  - generic [ref=f257e802]:
+                    - generic [ref=f257e803]: 광고
+                    - button "Ad information" [ref=f257e804]
+            - listitem [ref=f257e807] [cursor=pointer]:
+              - link "서울우유 나100% 1000ml, 1L, 4개 할인 · 17:31:32 14,200원 4% 13,500원 (100ml당 338원) 9/17(목) 도착 예정 무료배송 4.5 (2,851) 최대 675원 적립 최대 675원 적립 4" [ref=f257e808]:
+                - /url: /vp/products/5033082985?itemId=6761155402&vendorItemId=92003854194&q=서울우유 1L&searchId=71b8558b11471643&sourceType=search&itemsCount=35&searchRank=7&rank=7
+                - figure [ref=f257e809]:
+                  - img "서울우유 나100% 1000ml, 1L, 4개" [ref=f257e810]
+                - generic [ref=f257e811]:
+                  - generic [ref=f257e814]:
+                    - mark [ref=f257e815]: 서울우유
+                    - text: 나100% 1000ml,
+                    - mark [ref=f257e816]: 1L
+                    - text: ", 4개"
+                  - generic [ref=f257e817]:
+                    - generic [ref=f257e818]:
+                      - generic [ref=f257e819]: 할인
+                      - generic [ref=f257e820]: · 17:31:32
+                      - deletion [ref=f257e821]: 14,200원
+                    - generic [ref=f257e823]:
+                      - generic [ref=f257e824]: 4%
+                      - generic [ref=f257e829]: 13,500원
+                      - generic [ref=f257e830]: (100ml당 338원)
+                  - generic [ref=f257e831]:
+                    - generic [ref=f257e832]: 9/17(목) 도착 예정
+                    - generic [ref=f257e834]: 무료배송
+                  - generic [ref=f257e836]:
+                    - generic "4.5" [ref=f257e837]
+                    - generic [ref=f257e843]: (2,851)
+                  - generic [ref=f257e846]:
+                    - img "최대 675원 적립" [ref=f257e847]
+                    - generic [ref=f257e848]: 최대 675원 적립
+                  - generic [ref=f257e849]: "4"
+            - listitem [ref=f257e850] [cursor=pointer]:
+              - link "서울우유 나 100% 우유, 1L, 6개 18,900원 5% 17,820원 (100ml당 297원) 내일(토) 새벽 도착 보장 5 (149,084) 최대 891원 적립 최대 891원 적립 5" [ref=f257e851]:
+                - /url: /vp/products/7748460732?itemId=21053182623&vendorItemId=88115663588&q=서울우유 1L&searchId=71b8558b11471643&sourceType=search&itemsCount=35&searchRank=8&rank=8
+                - figure [ref=f257e852]:
+                  - img "서울우유 나 100% 우유, 1L, 6개" [ref=f257e853]
+                - generic [ref=f257e854]:
+                  - generic [ref=f257e857]:
+                    - mark [ref=f257e858]: 서울우유
+                    - text: 나 100% 우유,
+                    - mark [ref=f257e859]: 1L
+                    - text: ", 6개"
+                  - generic [ref=f257e860]:
+                    - deletion [ref=f257e862]: 18,900원
+                    - generic [ref=f257e864]:
+                      - generic [ref=f257e865]: 5%
+                      - generic [ref=f257e866]: 17,820원
+                      - generic [ref=f257e867]: (100ml당 297원)
+                  - generic [ref=f257e868]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f257e874]:
+                    - generic "5" [ref=f257e875]
+                    - generic [ref=f257e881]: (149,084)
+                  - generic [ref=f257e884]:
+                    - img "최대 891원 적립" [ref=f257e885]
+                    - generic [ref=f257e886]: 최대 891원 적립
+                  - generic [ref=f257e887]: "5"
+            - listitem [ref=f257e888] [cursor=pointer]:
+              - link "강훈목장 오리지날 목장우유 1000ml, 2개, 1L 12,800원 9% 11,600원 (100ml당 580원) 9/15(화) 도착 예정 무료배송 4.5 (709) 최대 580원 적립 최대 580원 적립 광고 Ad information" [ref=f257e889]:
+                - /url: /vp/products/9112746474?itemId=26796621896&vendorItemId=84547553149&sourceType=srp_product_ads&clickEventId=357fa250-adbc-11f1-9bba-38c807b4f54e&korePlacement=15&koreSubPlacement=11&clickEventId=357fa250-adbc-11f1-9bba-38c807b4f54e&korePlacement=15&koreSubPlacement=11
+                - figure [ref=f257e890]:
+                  - img "강훈목장 오리지날 목장우유 1000ml, 2개, 1L" [ref=f257e891]
+                - generic [ref=f257e892]:
+                  - generic [ref=f257e894]: 강훈목장 오리지날 목장우유 1000ml, 2개, 1L
+                  - generic [ref=f257e895]:
+                    - deletion [ref=f257e897]: 12,800원
+                    - generic [ref=f257e899]:
+                      - generic [ref=f257e900]: 9%
+                      - generic [ref=f257e901]: 11,600원
+                      - generic [ref=f257e902]: (100ml당 580원)
+                  - generic [ref=f257e903]:
+                    - generic [ref=f257e904]: 9/15(화) 도착 예정
+                    - generic [ref=f257e906]: 무료배송
+                  - generic [ref=f257e908]:
+                    - generic "4.5" [ref=f257e909]
+                    - generic [ref=f257e915]: (709)
+                  - generic [ref=f257e918]:
+                    - img "최대 580원 적립" [ref=f257e919]
+                    - generic [ref=f257e920]: 최대 580원 적립
+                  - generic [ref=f257e922]:
+                    - generic [ref=f257e923]: 광고
+                    - button "Ad information" [ref=f257e924]
+            - listitem [ref=f257e927] [cursor=pointer]:
+              - link "서울우유 멸균 흰우유, 200ml, 48개 44,160원 36% 27,880원 (100ml당 290원) 내일(토) 도착 보장 무료배송 5 (556,093) 최대 1,394원 적립 최대 1,394원 적립 6" [ref=f257e928]:
+                - /url: /vp/products/4975075206?itemId=17910004106&vendorItemId=85072693107&q=서울우유 1L&searchId=71b8558b11471643&sourceType=search&itemsCount=35&searchRank=10&rank=10
+                - figure [ref=f257e929]:
+                  - img "서울우유 멸균 흰우유, 200ml, 48개" [ref=f257e930]
+                - generic [ref=f257e931]:
+                  - generic [ref=f257e933]: 서울우유 멸균 흰우유, 200ml, 48개
+                  - generic [ref=f257e934]:
+                    - deletion [ref=f257e936]: 44,160원
+                    - generic [ref=f257e938]:
+                      - generic [ref=f257e939]: 36%
+                      - generic [ref=f257e940]: 27,880원
+                      - generic [ref=f257e941]: (100ml당 290원)
+                  - generic [ref=f257e942]:
+                    - generic [ref=f257e943]: 내일(토) 도착 보장
+                    - generic [ref=f257e947]: 무료배송
+                  - generic [ref=f257e949]:
+                    - generic "5" [ref=f257e950]
+                    - generic [ref=f257e956]: (556,093)
+                  - generic [ref=f257e959]:
+                    - img "최대 1,394원 적립" [ref=f257e960]
+                    - generic [ref=f257e961]: 최대 1,394원 적립
+                  - generic [ref=f257e962]: "6"
+            - listitem [ref=f257e963] [cursor=pointer]:
+              - link "데이리스타 밀쉬 저지방 멸균우유, 1L, 12개 26,400원 (100ml당 220원) 내일(토) 도착 보장 무료배송 4.5 (1,247) 최대 1,320원 적립 최대 1,320원 적립 광고 Ad information" [ref=f257e964]:
+                - /url: /vp/products/7193817761?itemId=18168919800&vendorItemId=84882074697&sourceType=srp_product_ads&clickEventId=357fa250-adbc-11f1-b356-b16c1e5aed20&korePlacement=15&koreSubPlacement=12&clickEventId=357fa250-adbc-11f1-b356-b16c1e5aed20&korePlacement=15&koreSubPlacement=12
+                - figure [ref=f257e965]:
+                  - img "데이리스타 밀쉬 저지방 멸균우유, 1L, 12개" [ref=f257e966]
+                - generic [ref=f257e967]:
+                  - generic [ref=f257e969]: 데이리스타 밀쉬 저지방 멸균우유, 1L, 12개
+                  - generic [ref=f257e972]:
+                    - generic [ref=f257e973]: 26,400원
+                    - generic [ref=f257e974]: (100ml당 220원)
+                  - generic [ref=f257e975]:
+                    - generic [ref=f257e976]: 내일(토) 도착 보장
+                    - generic [ref=f257e980]: 무료배송
+                  - generic [ref=f257e982]:
+                    - generic "4.5" [ref=f257e983]
+                    - generic [ref=f257e989]: (1,247)
+                  - generic [ref=f257e992]:
+                    - img "최대 1,320원 적립" [ref=f257e993]
+                    - generic [ref=f257e994]: 최대 1,320원 적립
+                  - generic [ref=f257e996]:
+                    - generic [ref=f257e997]: 광고
+                    - button "Ad information" [ref=f257e998]
+            - listitem [ref=f257e1001] [cursor=pointer]:
+              - link "빙그레 단지우유240ml 3종 12개(바나나4개+딸기4개+메로나4개), 240ml, 1개, 12개 할인 21,600원 12% 18,980원 (100ml당 659원) 9/14(월) 도착 예정 무료배송 ∙ 오늘출발 5 (749) 최대 949원 적립 최대 949원 적립 광고 Ad information" [ref=f257e1002]:
+                - /url: /vp/products/7366815810?itemId=18993108140&vendorItemId=91139141122&sourceType=srp_product_ads&clickEventId=357fa250-adbc-11f1-a65b-24bb3ddf5c4f&korePlacement=15&koreSubPlacement=21&clickEventId=357fa250-adbc-11f1-a65b-24bb3ddf5c4f&korePlacement=15&koreSubPlacement=21
+                - figure [ref=f257e1003]:
+                  - img "빙그레 단지우유240ml 3종 12개(바나나4개+딸기4개+메로나4개), 240ml, 1개, 12개" [ref=f257e1004]
+                - generic [ref=f257e1005]:
+                  - generic [ref=f257e1007]: 빙그레 단지우유240ml 3종 12개(바나나4개+딸기4개+메로나4개), 240ml, 1개, 12개
+                  - generic [ref=f257e1008]:
+                    - generic [ref=f257e1009]:
+                      - generic [ref=f257e1010]: 할인
+                      - deletion [ref=f257e1011]: 21,600원
+                    - generic [ref=f257e1013]:
+                      - generic [ref=f257e1014]: 12%
+                      - generic [ref=f257e1015]: 18,980원
+                      - generic [ref=f257e1016]: (100ml당 659원)
+                  - generic [ref=f257e1017]:
+                    - generic [ref=f257e1018]: 9/14(월) 도착 예정
+                    - generic [ref=f257e1020]: 무료배송 ∙ 오늘출발
+                  - generic [ref=f257e1022]:
+                    - generic "5" [ref=f257e1023]
+                    - generic [ref=f257e1029]: (749)
+                  - generic [ref=f257e1032]:
+                    - img "최대 949원 적립" [ref=f257e1033]
+                    - generic [ref=f257e1034]: 최대 949원 적립
+                  - generic [ref=f257e1036]:
+                    - generic [ref=f257e1037]: 광고
+                    - button "Ad information" [ref=f257e1038]
+            - listitem [ref=f257e1041] [cursor=pointer]:
+              - link "코스트코 서울우유 플레인 요거트, 2개, 1L 22,640원 20% 18,110원 9/17(목) 도착 예정 무료배송 최대 905원 적립 최대 905원 적립 7" [ref=f257e1042]:
+                - /url: /vp/products/9731161867?itemId=29120040230&vendorItemId=96044454851&q=서울우유 1L&searchId=71b8558b11471643&sourceType=search&itemsCount=35&searchRank=13&rank=13
+                - figure [ref=f257e1043]:
+                  - img "코스트코 서울우유 플레인 요거트, 2개, 1L" [ref=f257e1044]
+                - generic [ref=f257e1045]:
+                  - generic [ref=f257e1048]:
+                    - text: 코스트코
+                    - mark [ref=f257e1049]: 서울우유
+                    - text: 플레인 요거트, 2개,
+                    - mark [ref=f257e1050]: 1L
+                  - generic [ref=f257e1051]:
+                    - deletion [ref=f257e1053]: 22,640원
+                    - generic [ref=f257e1055]:
+                      - generic [ref=f257e1056]: 20%
+                      - generic [ref=f257e1057]: 18,110원
+                  - generic [ref=f257e1058]:
+                    - generic [ref=f257e1059]: 9/17(목) 도착 예정
+                    - generic [ref=f257e1061]: 무료배송
+                  - generic [ref=f257e1063]:
+                    - img "최대 905원 적립" [ref=f257e1064]
+                    - generic [ref=f257e1065]: 최대 905원 적립
+                  - generic [ref=f257e1066]: "7"
+            - listitem [ref=f257e1067] [cursor=pointer]:
+              - link "서울우유 서울우유 1000ml 나100%, 1L, 1개 2,100원 (100ml당 210원) 배송비 3,500원 9/15(화) 도착 예정 4.5 (2,851) 최대 105원 적립 최대 105원 적립 8" [ref=f257e1068]:
+                - /url: /vp/products/5033082985?itemId=968649196&vendorItemId=92046173323&q=서울우유 1L&searchId=71b8558b11471643&sourceType=search&itemsCount=35&searchRank=14&rank=14
+                - figure [ref=f257e1069]:
+                  - img "서울우유 서울우유 1000ml 나100%, 1L, 1개" [ref=f257e1070]
+                - generic [ref=f257e1071]:
+                  - generic [ref=f257e1074]:
+                    - mark [ref=f257e1075]: 서울우유
+                    - mark [ref=f257e1076]: 서울우유
+                    - text: 1000ml 나100%,
+                    - mark [ref=f257e1077]: 1L
+                    - text: ", 1개"
+                  - generic [ref=f257e1079]:
+                    - generic [ref=f257e1080]:
+                      - generic [ref=f257e1081]: 2,100원
+                      - generic [ref=f257e1082]: (100ml당 210원)
+                    - generic [ref=f257e1083]: 배송비 3,500원
+                  - generic [ref=f257e1084]: 9/15(화) 도착 예정
+                  - generic [ref=f257e1088]:
+                    - generic "4.5" [ref=f257e1089]
+                    - generic [ref=f257e1095]: (2,851)
+                  - generic [ref=f257e1098]:
+                    - img "최대 105원 적립" [ref=f257e1099]
+                    - generic [ref=f257e1100]: 최대 105원 적립
+                  - generic [ref=f257e1101]: "8"
+            - listitem [ref=f257e1102] [cursor=pointer]:
+              - link "서울우유 멸균 흰우유, 1L, 40개 126,000원 38% 77,500원 (100ml당 194원) 내일(토) 도착 보장 무료배송 5 (556,093) 최대 3,875원 적립 최대 3,875원 적립 9" [ref=f257e1103]:
+                - /url: /vp/products/4975075206?itemId=14389260011&vendorItemId=84994378955&q=서울우유 1L&searchId=71b8558b11471643&sourceType=search&itemsCount=35&searchRank=15&rank=15
+                - figure [ref=f257e1104]:
+                  - img "서울우유 멸균 흰우유, 1L, 40개" [ref=f257e1105]
+                - generic [ref=f257e1106]:
+                  - generic [ref=f257e1109]:
+                    - mark [ref=f257e1110]: 서울우유
+                    - text: 멸균 흰우유,
+                    - mark [ref=f257e1111]: 1L
+                    - text: ", 40개"
+                  - generic [ref=f257e1112]:
+                    - deletion [ref=f257e1114]: 126,000원
+                    - generic [ref=f257e1116]:
+                      - generic [ref=f257e1117]: 38%
+                      - generic [ref=f257e1118]: 77,500원
+                      - generic [ref=f257e1119]: (100ml당 194원)
+                  - generic [ref=f257e1120]:
+                    - generic [ref=f257e1121]: 내일(토) 도착 보장
+                    - generic [ref=f257e1125]: 무료배송
+                  - generic [ref=f257e1127]:
+                    - generic "5" [ref=f257e1128]
+                    - generic [ref=f257e1134]: (556,093)
+                  - generic [ref=f257e1137]:
+                    - img "최대 3,875원 적립" [ref=f257e1138]
+                    - generic [ref=f257e1139]: 최대 3,875원 적립
+                  - generic [ref=f257e1140]: "9"
+            - listitem [ref=f257e1141] [cursor=pointer]:
+              - link "서울우유 멸균 흰우유, 200ml, 96개 할인 · 17:31:32 48,800원 5% 46,300원 (100ml당 241원) 9/15(화) 도착 예정 무료배송 5 (556,093) 최대 2,315원 적립 최대 2,315원 적립 10" [ref=f257e1142]:
+                - /url: /vp/products/4975075206?itemId=16570354971&vendorItemId=92002138896&q=서울우유 1L&searchId=71b8558b11471643&sourceType=search&itemsCount=35&searchRank=16&rank=16
+                - figure [ref=f257e1143]:
+                  - img "서울우유 멸균 흰우유, 200ml, 96개" [ref=f257e1144]
+                - generic [ref=f257e1145]:
+                  - generic [ref=f257e1147]: 서울우유 멸균 흰우유, 200ml, 96개
+                  - generic [ref=f257e1148]:
+                    - generic [ref=f257e1149]:
+                      - generic [ref=f257e1150]: 할인
+                      - generic [ref=f257e1151]: · 17:31:32
+                      - deletion [ref=f257e1152]: 48,800원
+                    - generic [ref=f257e1154]:
+                      - generic [ref=f257e1155]: 5%
+                      - generic [ref=f257e1160]: 46,300원
+                      - generic [ref=f257e1161]: (100ml당 241원)
+                  - generic [ref=f257e1162]:
+                    - generic [ref=f257e1163]: 9/15(화) 도착 예정
+                    - generic [ref=f257e1165]: 무료배송
+                  - generic [ref=f257e1167]:
+                    - generic "5" [ref=f257e1168]
+                    - generic [ref=f257e1174]: (556,093)
+                  - generic [ref=f257e1177]:
+                    - img "최대 2,315원 적립" [ref=f257e1178]
+                    - generic [ref=f257e1179]: 최대 2,315원 적립
+                  - generic [ref=f257e1180]: "10"
+            - listitem [ref=f257e1181] [cursor=pointer]:
+              - link "서울우유 소이마스터 두유, 12개, 1L 할인 · 17:31:32 29,900원 19% 24,100원 (100ml당 201원) 9/15(화) 도착 예정 무료배송 4.5 (187) 최대 1,205원 적립 최대 1,205원 적립" [ref=f257e1182]:
+                - /url: /vp/products/9031997520?itemId=27096811429&vendorItemId=95770070121&q=서울우유 1L&searchId=71b8558b11471643&sourceType=search&itemsCount=35&searchRank=17&rank=17
+                - figure [ref=f257e1183]:
+                  - img "서울우유 소이마스터 두유, 12개, 1L" [ref=f257e1184]
+                - generic [ref=f257e1185]:
+                  - generic [ref=f257e1188]:
+                    - mark [ref=f257e1189]: 서울우유
+                    - text: 소이마스터 두유, 12개,
+                    - mark [ref=f257e1190]: 1L
+                  - generic [ref=f257e1191]:
+                    - generic [ref=f257e1192]:
+                      - generic [ref=f257e1193]: 할인
+                      - generic [ref=f257e1194]: · 17:31:32
+                      - deletion [ref=f257e1195]: 29,900원
+                    - generic [ref=f257e1197]:
+                      - generic [ref=f257e1198]: 19%
+                      - generic [ref=f257e1203]: 24,100원
+                      - generic [ref=f257e1204]: (100ml당 201원)
+                  - generic [ref=f257e1205]:
+                    - generic [ref=f257e1206]: 9/15(화) 도착 예정
+                    - generic [ref=f257e1208]: 무료배송
+                  - generic [ref=f257e1210]:
+                    - generic "4.5" [ref=f257e1211]
+                    - generic [ref=f257e1217]: (187)
+                  - generic [ref=f257e1220]:
+                    - img "최대 1,205원 적립" [ref=f257e1221]
+                    - generic [ref=f257e1222]: 최대 1,205원 적립
+            - listitem [ref=f257e1223] [cursor=pointer]:
+              - link "서울우유 목장의 신선함이 살아있는 우유 1000ml, 1L, 3개 16,000원 24% 12,090원 (100ml당 403원) 9/15(화) 도착 예정 무료배송 5 (1,940) 최대 605원 적립 최대 605원 적립" [ref=f257e1224]:
+                - /url: /vp/products/6273123320?itemId=20011391165&vendorItemId=81778103461&q=서울우유 1L&searchId=71b8558b11471643&sourceType=search&itemsCount=35&searchRank=18&rank=18
+                - figure [ref=f257e1225]:
+                  - img "서울우유 목장의 신선함이 살아있는 우유 1000ml, 1L, 3개" [ref=f257e1226]
+                - generic [ref=f257e1227]:
+                  - generic [ref=f257e1230]:
+                    - mark [ref=f257e1231]: 서울우유
+                    - text: 목장의 신선함이 살아있는 우유 1000ml,
+                    - mark [ref=f257e1232]: 1L
+                    - text: ", 3개"
+                  - generic [ref=f257e1233]:
+                    - deletion [ref=f257e1235]: 16,000원
+                    - generic [ref=f257e1237]:
+                      - generic [ref=f257e1238]: 24%
+                      - generic [ref=f257e1239]: 12,090원
+                      - generic [ref=f257e1240]: (100ml당 403원)
+                  - generic [ref=f257e1241]:
+                    - generic [ref=f257e1242]: 9/15(화) 도착 예정
+                    - generic [ref=f257e1244]: 무료배송
+                  - generic [ref=f257e1246]:
+                    - generic "5" [ref=f257e1247]
+                    - generic [ref=f257e1253]: (1,940)
+                  - generic [ref=f257e1256]:
+                    - img "최대 605원 적립" [ref=f257e1257]
+                    - generic [ref=f257e1258]: 최대 605원 적립
+            - listitem [ref=f257e1259] [cursor=pointer]:
+              - link "서울우유 속편한 우유 플러스 저지방, 190ml, 48개 할인 · 17:31:32 31,500원 13% 27,400원 (100ml당 300원) 9/17(목) 도착 예정 무료배송 5 (31,062) 최대 1,370원 적립 최대 1,370원 적립" [ref=f257e1260]:
+                - /url: /vp/products/5374224808?itemId=14967952868&vendorItemId=92090641911&q=서울우유 1L&searchId=71b8558b11471643&sourceType=search&itemsCount=35&searchRank=19&rank=19
+                - figure [ref=f257e1261]:
+                  - img "서울우유 속편한 우유 플러스 저지방, 190ml, 48개" [ref=f257e1262]
+                - generic [ref=f257e1263]:
+                  - generic [ref=f257e1265]: 서울우유 속편한 우유 플러스 저지방, 190ml, 48개
+                  - generic [ref=f257e1266]:
+                    - generic [ref=f257e1267]:
+                      - generic [ref=f257e1268]: 할인
+                      - generic [ref=f257e1269]: · 17:31:32
+                      - deletion [ref=f257e1270]: 31,500원
+                    - generic [ref=f257e1272]:
+                      - generic [ref=f257e1273]: 13%
+                      - generic [ref=f257e1278]: 27,400원
+                      - generic [ref=f257e1279]: (100ml당 300원)
+                  - generic [ref=f257e1280]:
+                    - generic [ref=f257e1281]: 9/17(목) 도착 예정
+                    - generic [ref=f257e1283]: 무료배송
+                  - generic [ref=f257e1285]:
+                    - generic "5" [ref=f257e1286]
+                    - generic [ref=f257e1292]: (31,062)
+                  - generic [ref=f257e1295]:
+                    - img "최대 1,370원 적립" [ref=f257e1296]
+                    - generic [ref=f257e1297]: 최대 1,370원 적립
+            - listitem [ref=f257e1298] [cursor=pointer]:
+              - link "서울우유 멸균우유, 10개, 1L 28,000원 (100ml당 280원) 9/16(수) 도착 예정 무료배송 4.5 (17) 최대 1,400원 적립 최대 1,400원 적립" [ref=f257e1299]:
+                - /url: /vp/products/8989938249?itemId=28964246931&vendorItemId=96032635472&q=서울우유 1L&searchId=71b8558b11471643&sourceType=search&itemsCount=35&searchRank=20&rank=20
+                - figure [ref=f257e1300]:
+                  - img "서울우유 멸균우유, 10개, 1L" [ref=f257e1301]
+                - generic [ref=f257e1302]:
+                  - generic [ref=f257e1305]:
+                    - mark [ref=f257e1306]: 서울우유
+                    - text: 멸균우유, 10개,
+                    - mark [ref=f257e1307]: 1L
+                  - generic [ref=f257e1310]:
+                    - generic [ref=f257e1311]: 28,000원
+                    - generic [ref=f257e1312]: (100ml당 280원)
+                  - generic [ref=f257e1313]:
+                    - generic [ref=f257e1314]: 9/16(수) 도착 예정
+                    - generic [ref=f257e1316]: 무료배송
+                  - generic [ref=f257e1318]:
+                    - generic "4.5" [ref=f257e1319]
+                    - generic [ref=f257e1325]: (17)
+                  - generic [ref=f257e1328]:
+                    - img "최대 1,400원 적립" [ref=f257e1329]
+                    - generic [ref=f257e1330]: 최대 1,400원 적립
+            - listitem [ref=f257e1331] [cursor=pointer]:
+              - link "곰곰 초콜릿 우유, 190ml, 24개 19,200원 28% 13,720원 (100ml당 301원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 5 (7,968) 최대 686원 적립 최대 686원 적립 광고 Ad information" [ref=f257e1332]:
+                - /url: /vp/products/191162630?itemId=546353838&vendorItemId=5251749632&sourceType=srp_product_ads&clickEventId=357fa250-adbc-11f1-a83c-7437a1be3a66&korePlacement=15&koreSubPlacement=22&clickEventId=357fa250-adbc-11f1-a83c-7437a1be3a66&korePlacement=15&koreSubPlacement=22
+                - figure [ref=f257e1333]:
+                  - img "곰곰 초콜릿 우유, 190ml, 24개" [ref=f257e1334]
+                - generic [ref=f257e1335]:
+                  - generic [ref=f257e1337]: 곰곰 초콜릿 우유, 190ml, 24개
+                  - generic [ref=f257e1338]:
+                    - deletion [ref=f257e1340]: 19,200원
+                    - generic [ref=f257e1342]:
+                      - generic [ref=f257e1343]: 28%
+                      - generic [ref=f257e1344]: 13,720원
+                      - generic [ref=f257e1345]: (100ml당 301원)
+                  - generic [ref=f257e1346]:
+                    - generic [ref=f257e1347]: 내일(토) 도착 보장
+                    - generic [ref=f257e1351]: 와우는 무료배송 ∙ 무료반품
+                  - generic [ref=f257e1353]:
+                    - generic "5" [ref=f257e1354]
+                    - generic [ref=f257e1360]: (7,968)
+                  - generic [ref=f257e1363]:
+                    - img "최대 686원 적립" [ref=f257e1364]
+                    - generic [ref=f257e1365]: 최대 686원 적립
+                  - generic [ref=f257e1367]:
+                    - generic [ref=f257e1368]: 광고
+                    - button "Ad information" [ref=f257e1369]
+            - listitem [ref=f257e1372] [cursor=pointer]:
+              - link "파스퇴르 산양유 프로틴 우유 180ml, 18개 할인 26,640원 7% 24,640원 (100ml당 760원) 9/14(월) 도착 예정 무료배송 5 (2,202) 최대 1,232원 적립 최대 1,232원 적립 광고 Ad information" [ref=f257e1373]:
+                - /url: /vp/products/7136653352?itemId=19873841265&vendorItemId=91289492169&sourceType=srp_product_ads&clickEventId=357fa250-adbc-11f1-960e-76083d982668&korePlacement=15&koreSubPlacement=24&clickEventId=357fa250-adbc-11f1-960e-76083d982668&korePlacement=15&koreSubPlacement=24
+                - figure [ref=f257e1374]:
+                  - img "파스퇴르 산양유 프로틴 우유 180ml, 18개" [ref=f257e1375]
+                - generic [ref=f257e1376]:
+                  - generic [ref=f257e1378]: 파스퇴르 산양유 프로틴 우유 180ml, 18개
+                  - generic [ref=f257e1379]:
+                    - generic [ref=f257e1380]:
+                      - generic [ref=f257e1381]: 할인
+                      - deletion [ref=f257e1382]: 26,640원
+                    - generic [ref=f257e1384]:
+                      - generic [ref=f257e1385]: 7%
+                      - generic [ref=f257e1386]: 24,640원
+                      - generic [ref=f257e1387]: (100ml당 760원)
+                  - generic [ref=f257e1388]:
+                    - generic [ref=f257e1389]: 9/14(월) 도착 예정
+                    - generic [ref=f257e1391]: 무료배송
+                  - generic [ref=f257e1393]:
+                    - generic "5" [ref=f257e1394]
+                    - generic [ref=f257e1400]: (2,202)
+                  - generic [ref=f257e1403]:
+                    - img "최대 1,232원 적립" [ref=f257e1404]
+                    - generic [ref=f257e1405]: 최대 1,232원 적립
+                  - generic [ref=f257e1407]:
+                    - generic [ref=f257e1408]: 광고
+                    - button "Ad information" [ref=f257e1409]
+            - listitem [ref=f257e1412] [cursor=pointer]:
+              - link "서울우유 목장의 신선함이 살아있는 우유, 1L, 6개 35,000원 31% 24,140원 (100ml당 402원) 9/15(화) 도착 예정 무료배송 5 (1,940) 최대 1,207원 적립 최대 1,207원 적립" [ref=f257e1413]:
+                - /url: /vp/products/6273123320?itemId=26124506649&vendorItemId=91656659236&q=서울우유 1L&searchId=71b8558b11471643&sourceType=search&itemsCount=35&searchRank=23&rank=23
+                - figure [ref=f257e1414]:
+                  - img "서울우유 목장의 신선함이 살아있는 우유, 1L, 6개" [ref=f257e1415]
+                - generic [ref=f257e1416]:
+                  - generic [ref=f257e1419]:
+                    - mark [ref=f257e1420]: 서울우유
+                    - text: 목장의 신선함이 살아있는 우유,
+                    - mark [ref=f257e1421]: 1L
+                    - text: ", 6개"
+                  - generic [ref=f257e1422]:
+                    - deletion [ref=f257e1424]: 35,000원
+                    - generic [ref=f257e1426]:
+                      - generic [ref=f257e1427]: 31%
+                      - generic [ref=f257e1428]: 24,140원
+                      - generic [ref=f257e1429]: (100ml당 402원)
+                  - generic [ref=f257e1430]:
+                    - generic [ref=f257e1431]: 9/15(화) 도착 예정
+                    - generic [ref=f257e1433]: 무료배송
+                  - generic [ref=f257e1435]:
+                    - generic "5" [ref=f257e1436]
+                    - generic [ref=f257e1442]: (1,940)
+                  - generic [ref=f257e1445]:
+                    - img "최대 1,207원 적립" [ref=f257e1446]
+                    - generic [ref=f257e1447]: 최대 1,207원 적립
+            - listitem [ref=f257e1448] [cursor=pointer]:
+              - link "서울우유 멸균 흰우유, 1L, 50개 157,500원 38% 96,500원 (100ml당 193원) 내일(토) 도착 보장 무료배송 5 (556,093) 최대 4,825원 적립 최대 4,825원 적립" [ref=f257e1449]:
+                - /url: /vp/products/4975075206?itemId=12946681028&vendorItemId=84994379219&q=서울우유 1L&searchId=71b8558b11471643&sourceType=search&itemsCount=35&searchRank=24&rank=24
+                - figure [ref=f257e1450]:
+                  - img "서울우유 멸균 흰우유, 1L, 50개" [ref=f257e1451]
+                - generic [ref=f257e1452]:
+                  - generic [ref=f257e1455]:
+                    - mark [ref=f257e1456]: 서울우유
+                    - text: 멸균 흰우유,
+                    - mark [ref=f257e1457]: 1L
+                    - text: ", 50개"
+                  - generic [ref=f257e1458]:
+                    - deletion [ref=f257e1460]: 157,500원
+                    - generic [ref=f257e1462]:
+                      - generic [ref=f257e1463]: 38%
+                      - generic [ref=f257e1464]: 96,500원
+                      - generic [ref=f257e1465]: (100ml당 193원)
+                  - generic [ref=f257e1466]:
+                    - generic [ref=f257e1467]: 내일(토) 도착 보장
+                    - generic [ref=f257e1471]: 무료배송
+                  - generic [ref=f257e1473]:
+                    - generic "5" [ref=f257e1474]
+                    - generic [ref=f257e1480]: (556,093)
+                  - generic [ref=f257e1483]:
+                    - img "최대 4,825원 적립" [ref=f257e1484]
+                    - generic [ref=f257e1485]: 최대 4,825원 적립
+            - listitem [ref=f257e1486] [cursor=pointer]:
+              - link "서울우유 목장의 신선함이 살아있는 우유, 1L, 8개 40,000원 19% 32,190원 (100ml당 402원) 9/15(화) 도착 예정 무료배송 ∙ 오늘출발 5 (1,940) 최대 1,610원 적립 최대 1,610원 적립" [ref=f257e1487]:
+                - /url: /vp/products/6273123320?itemId=26124506651&vendorItemId=91656659227&q=서울우유 1L&searchId=71b8558b11471643&sourceType=search&itemsCount=35&searchRank=25&rank=25
+                - figure [ref=f257e1488]:
+                  - img "서울우유 목장의 신선함이 살아있는 우유, 1L, 8개" [ref=f257e1489]
+                - generic [ref=f257e1490]:
+                  - generic [ref=f257e1493]:
+                    - mark [ref=f257e1494]: 서울우유
+                    - text: 목장의 신선함이 살아있는 우유,
+                    - mark [ref=f257e1495]: 1L
+                    - text: ", 8개"
+                  - generic [ref=f257e1496]:
+                    - deletion [ref=f257e1498]: 40,000원
+                    - generic [ref=f257e1500]:
+                      - generic [ref=f257e1501]: 19%
+                      - generic [ref=f257e1502]: 32,190원
+                      - generic [ref=f257e1503]: (100ml당 402원)
+                  - generic [ref=f257e1504]:
+                    - generic [ref=f257e1505]: 9/15(화) 도착 예정
+                    - generic [ref=f257e1507]: 무료배송 ∙ 오늘출발
+                  - generic [ref=f257e1509]:
+                    - generic "5" [ref=f257e1510]
+                    - generic [ref=f257e1516]: (1,940)
+                  - generic [ref=f257e1519]:
+                    - img "최대 1,610원 적립" [ref=f257e1520]
+                    - generic [ref=f257e1521]: 최대 1,610원 적립
+            - listitem [ref=f257e1522] [cursor=pointer]:
+              - link "서울우유 멸균우유, 1L 38,500원 30% 26,900원 (100ml당 269원) 9/16(수) 도착 예정 무료배송 4.5 (2,851) 최대 1,345원 적립 최대 1,345원 적립" [ref=f257e1523]:
+                - /url: /vp/products/5033082985?itemId=28914941723&vendorItemId=95846749131&q=서울우유 1L&searchId=71b8558b11471643&sourceType=search&itemsCount=35&searchRank=26&rank=26
+                - figure [ref=f257e1524]:
+                  - img "서울우유 멸균우유, 1L" [ref=f257e1525]
+                - generic [ref=f257e1526]:
+                  - generic [ref=f257e1529]:
+                    - mark [ref=f257e1530]: 서울우유
+                    - text: 멸균우유,
+                    - mark [ref=f257e1531]: 1L
+                  - generic [ref=f257e1532]:
+                    - deletion [ref=f257e1534]: 38,500원
+                    - generic [ref=f257e1536]:
+                      - generic [ref=f257e1537]: 30%
+                      - generic [ref=f257e1538]: 26,900원
+                      - generic [ref=f257e1539]: (100ml당 269원)
+                  - generic [ref=f257e1540]:
+                    - generic [ref=f257e1541]: 9/16(수) 도착 예정
+                    - generic [ref=f257e1543]: 무료배송
+                  - generic [ref=f257e1545]:
+                    - generic "4.5" [ref=f257e1546]
+                    - generic [ref=f257e1552]: (2,851)
+                  - generic [ref=f257e1555]:
+                    - img "최대 1,345원 적립" [ref=f257e1556]
+                    - generic [ref=f257e1557]: 최대 1,345원 적립
+            - listitem [ref=f257e1558] [cursor=pointer]:
+              - link "클릭유 1A등급 우유, 950ml, 8개 28,750원 (100ml당 378원) 9/15(화) 도착 예정 무료배송 ∙ 오늘출발 5 (16,160) 최대 1,438원 적립 최대 1,438원 적립" [ref=f257e1559]:
+                - /url: /vp/products/8144488510?itemId=26973922463&vendorItemId=95698711313&q=서울우유 1L&searchId=71b8558b11471643&sourceType=search&itemsCount=35&searchRank=27&rank=27
+                - figure [ref=f257e1560]:
+                  - img "클릭유 1A등급 우유, 950ml, 8개" [ref=f257e1561]
+                - generic [ref=f257e1562]:
+                  - generic [ref=f257e1564]: 클릭유 1A등급 우유, 950ml, 8개
+                  - generic [ref=f257e1567]:
+                    - generic [ref=f257e1568]: 28,750원
+                    - generic [ref=f257e1569]: (100ml당 378원)
+                  - generic [ref=f257e1570]:
+                    - generic [ref=f257e1571]: 9/15(화) 도착 예정
+                    - generic [ref=f257e1573]: 무료배송 ∙ 오늘출발
+                  - generic [ref=f257e1575]:
+                    - generic "5" [ref=f257e1576]
+                    - generic [ref=f257e1582]: (16,160)
+                  - generic [ref=f257e1585]:
+                    - img "최대 1,438원 적립" [ref=f257e1586]
+                    - generic [ref=f257e1587]: 최대 1,438원 적립
+            - listitem [ref=f257e1588] [cursor=pointer]:
+              - link "서울우유 멸균 흰우유, 1L, 70개 220,500원 39% 134,500원 (100ml당 192원) 내일(토) 도착 보장 무료배송 5 (556,093) 최대 6,725원 적립 최대 6,725원 적립" [ref=f257e1589]:
+                - /url: /vp/products/4975075206?itemId=21314787407&vendorItemId=84639394497&q=서울우유 1L&searchId=71b8558b11471643&sourceType=search&itemsCount=35&searchRank=28&rank=28
+                - figure [ref=f257e1590]:
+                  - img "서울우유 멸균 흰우유, 1L, 70개" [ref=f257e1591]
+                - generic [ref=f257e1592]:
+                  - generic [ref=f257e1595]:
+                    - mark [ref=f257e1596]: 서울우유
+                    - text: 멸균 흰우유,
+                    - mark [ref=f257e1597]: 1L
+                    - text: ", 70개"
+                  - generic [ref=f257e1598]:
+                    - deletion [ref=f257e1600]: 220,500원
+                    - generic [ref=f257e1602]:
+                      - generic [ref=f257e1603]: 39%
+                      - generic [ref=f257e1604]: 134,500원
+                      - generic [ref=f257e1605]: (100ml당 192원)
+                  - generic [ref=f257e1606]:
+                    - generic [ref=f257e1607]: 내일(토) 도착 보장
+                    - generic [ref=f257e1611]: 무료배송
+                  - generic [ref=f257e1613]:
+                    - generic "5" [ref=f257e1614]
+                    - generic [ref=f257e1620]: (556,093)
+                  - generic [ref=f257e1623]:
+                    - img "최대 6,725원 적립" [ref=f257e1624]
+                    - generic [ref=f257e1625]: 최대 6,725원 적립
+            - listitem [ref=f257e1626] [cursor=pointer]:
+              - link "서울우유 나100%, 1L, 3개 18,000원 27% 12,980원 (100ml당 433원) 9/15(화) 도착 예정 무료배송 4.5 (2,851) 최대 649원 적립 최대 649원 적립" [ref=f257e1627]:
+                - /url: /vp/products/5033082985?itemId=27247228775&vendorItemId=91652866772&q=서울우유 1L&searchId=71b8558b11471643&sourceType=search&itemsCount=35&searchRank=29&rank=29
+                - figure [ref=f257e1628]:
+                  - img "서울우유 나100%, 1L, 3개" [ref=f257e1629]
+                - generic [ref=f257e1630]:
+                  - generic [ref=f257e1633]:
+                    - mark [ref=f257e1634]: 서울우유
+                    - text: 나100%,
+                    - mark [ref=f257e1635]: 1L
+                    - text: ", 3개"
+                  - generic [ref=f257e1636]:
+                    - deletion [ref=f257e1638]: 18,000원
+                    - generic [ref=f257e1640]:
+                      - generic [ref=f257e1641]: 27%
+                      - generic [ref=f257e1642]: 12,980원
+                      - generic [ref=f257e1643]: (100ml당 433원)
+                  - generic [ref=f257e1644]:
+                    - generic [ref=f257e1645]: 9/15(화) 도착 예정
+                    - generic [ref=f257e1647]: 무료배송
+                  - generic [ref=f257e1649]:
+                    - generic "4.5" [ref=f257e1650]
+                    - generic [ref=f257e1656]: (2,851)
+                  - generic [ref=f257e1659]:
+                    - img "최대 649원 적립" [ref=f257e1660]
+                    - generic [ref=f257e1661]: 최대 649원 적립
+            - listitem [ref=f257e1662] [cursor=pointer]:
+              - link "서울우유 멸균 흰우유, 200ml, 72개 66,240원 40% 39,740원 (100ml당 276원) 내일(토) 도착 보장 무료배송 5 (556,093) 최대 1,987원 적립 최대 1,987원 적립" [ref=f257e1663]:
+                - /url: /vp/products/4975075206?itemId=21325318801&vendorItemId=85072692015&q=서울우유 1L&searchId=71b8558b11471643&sourceType=search&itemsCount=35&searchRank=30&rank=30
+                - figure [ref=f257e1664]:
+                  - img "서울우유 멸균 흰우유, 200ml, 72개" [ref=f257e1665]
+                - generic [ref=f257e1666]:
+                  - generic [ref=f257e1668]: 서울우유 멸균 흰우유, 200ml, 72개
+                  - generic [ref=f257e1669]:
+                    - deletion [ref=f257e1671]: 66,240원
+                    - generic [ref=f257e1673]:
+                      - generic [ref=f257e1674]: 40%
+                      - generic [ref=f257e1675]: 39,740원
+                      - generic [ref=f257e1676]: (100ml당 276원)
+                  - generic [ref=f257e1677]:
+                    - generic [ref=f257e1678]: 내일(토) 도착 보장
+                    - generic [ref=f257e1682]: 무료배송
+                  - generic [ref=f257e1684]:
+                    - generic "5" [ref=f257e1685]
+                    - generic [ref=f257e1691]: (556,093)
+                  - generic [ref=f257e1694]:
+                    - img "최대 1,987원 적립" [ref=f257e1695]
+                    - generic [ref=f257e1696]: 최대 1,987원 적립
+            - listitem [ref=f257e1697] [cursor=pointer]:
+              - link "서울우유 멸균우유, 10개, 1L 31,080원 (100ml당 311원) 9/16(수) 도착 예정 무료배송 4.5 (17) 최대 1,554원 적립 최대 1,554원 적립" [ref=f257e1698]:
+                - /url: /vp/products/8989938249?itemId=29086226489&vendorItemId=96025964403&q=서울우유 1L&searchId=71b8558b11471643&sourceType=search&itemsCount=35&searchRank=31&rank=31
+                - figure [ref=f257e1699]:
+                  - img "서울우유 멸균우유, 10개, 1L" [ref=f257e1700]
+                - generic [ref=f257e1701]:
+                  - generic [ref=f257e1704]:
+                    - mark [ref=f257e1705]: 서울우유
+                    - text: 멸균우유, 10개,
+                    - mark [ref=f257e1706]: 1L
+                  - generic [ref=f257e1709]:
+                    - generic [ref=f257e1710]: 31,080원
+                    - generic [ref=f257e1711]: (100ml당 311원)
+                  - generic [ref=f257e1712]:
+                    - generic [ref=f257e1713]: 9/16(수) 도착 예정
+                    - generic [ref=f257e1715]: 무료배송
+                  - generic [ref=f257e1717]:
+                    - generic "4.5" [ref=f257e1718]
+                    - generic [ref=f257e1724]: (17)
+                  - generic [ref=f257e1727]:
+                    - img "최대 1,554원 적립" [ref=f257e1728]
+                    - generic [ref=f257e1729]: 최대 1,554원 적립
+            - listitem [ref=f257e1730] [cursor=pointer]:
+              - link "코스트코 서울우유 A2플러스 2.3L*2개 아이스박스포장, 2.3L 22,820원 (100ml당 496원) 9/16(수) 도착 예정 무료배송 ∙ 오늘출발 5 (1,274) 최대 1,141원 적립 최대 1,141원 적립" [ref=f257e1731]:
+                - /url: /vp/products/8018129407?itemId=28490285576&vendorItemId=95440282711&q=서울우유 1L&searchId=71b8558b11471643&sourceType=search&itemsCount=35&searchRank=32&rank=32
+                - figure [ref=f257e1732]:
+                  - img "코스트코 서울우유 A2플러스 2.3L*2개 아이스박스포장, 2.3L" [ref=f257e1733]
+                - generic [ref=f257e1734]:
+                  - generic [ref=f257e1736]: 코스트코 서울우유 A2플러스 2.3L*2개 아이스박스포장, 2.3L
+                  - generic [ref=f257e1739]:
+                    - generic [ref=f257e1740]: 22,820원
+                    - generic [ref=f257e1741]: (100ml당 496원)
+                  - generic [ref=f257e1742]:
+                    - generic [ref=f257e1743]: 9/16(수) 도착 예정
+                    - generic [ref=f257e1745]: 무료배송 ∙ 오늘출발
+                  - generic [ref=f257e1747]:
+                    - generic "5" [ref=f257e1748]
+                    - generic [ref=f257e1754]: (1,274)
+                  - generic [ref=f257e1757]:
+                    - img "최대 1,141원 적립" [ref=f257e1758]
+                    - generic [ref=f257e1759]: 최대 1,141원 적립
+            - listitem [ref=f257e1760] [cursor=pointer]:
+              - link "서울우유 서울우유 1000ml 나100%, 1L, 2개 15,000원 28% 10,780원 (100ml당 539원) 9/15(화) 도착 예정 무료배송 4.5 (2,851) 최대 539원 적립 최대 539원 적립" [ref=f257e1761]:
+                - /url: /vp/products/5033082985?itemId=19851660954&vendorItemId=91652866768&q=서울우유 1L&searchId=71b8558b11471643&sourceType=search&itemsCount=35&searchRank=33&rank=33
+                - figure [ref=f257e1762]:
+                  - img "서울우유 서울우유 1000ml 나100%, 1L, 2개" [ref=f257e1763]
+                - generic [ref=f257e1764]:
+                  - generic [ref=f257e1767]:
+                    - mark [ref=f257e1768]: 서울우유
+                    - mark [ref=f257e1769]: 서울우유
+                    - text: 1000ml 나100%,
+                    - mark [ref=f257e1770]: 1L
+                    - text: ", 2개"
+                  - generic [ref=f257e1771]:
+                    - deletion [ref=f257e1773]: 15,000원
+                    - generic [ref=f257e1775]:
+                      - generic [ref=f257e1776]: 28%
+                      - generic [ref=f257e1777]: 10,780원
+                      - generic [ref=f257e1778]: (100ml당 539원)
+                  - generic [ref=f257e1779]:
+                    - generic [ref=f257e1780]: 9/15(화) 도착 예정
+                    - generic [ref=f257e1782]: 무료배송
+                  - generic [ref=f257e1784]:
+                    - generic "4.5" [ref=f257e1785]
+                    - generic [ref=f257e1791]: (2,851)
+                  - generic [ref=f257e1794]:
+                    - img "최대 539원 적립" [ref=f257e1795]
+                    - generic [ref=f257e1796]: 최대 539원 적립
+            - listitem [ref=f257e1797] [cursor=pointer]:
+              - link "부산우유 멸균 축협우유 160ml, 24개 19,900원 20% 15,900원 (100ml당 414원) 9/15(화) 도착 예정 무료배송 ∙ 오늘출발 4.5 (80) 최대 795원 적립 최대 795원 적립 광고 Ad information" [ref=f257e1798]:
+                - /url: /vp/products/9493096436?itemId=28306566190&vendorItemId=95283572391&sourceType=srp_product_ads&clickEventId=357fa250-adbc-11f1-9a32-5c129fffea43&korePlacement=15&koreSubPlacement=25&clickEventId=357fa250-adbc-11f1-9a32-5c129fffea43&korePlacement=15&koreSubPlacement=25
+                - figure [ref=f257e1799]:
+                  - img "부산우유 멸균 축협우유 160ml, 24개" [ref=f257e1800]
+                - generic [ref=f257e1801]:
+                  - generic [ref=f257e1803]: 부산우유 멸균 축협우유 160ml, 24개
+                  - generic [ref=f257e1804]:
+                    - deletion [ref=f257e1806]: 19,900원
+                    - generic [ref=f257e1808]:
+                      - generic [ref=f257e1809]: 20%
+                      - generic [ref=f257e1810]: 15,900원
+                      - generic [ref=f257e1811]: (100ml당 414원)
+                  - generic [ref=f257e1812]:
+                    - generic [ref=f257e1813]: 9/15(화) 도착 예정
+                    - generic [ref=f257e1815]: 무료배송 ∙ 오늘출발
+                  - generic [ref=f257e1817]:
+                    - generic "4.5" [ref=f257e1818]
+                    - generic [ref=f257e1824]: (80)
+                  - generic [ref=f257e1827]:
+                    - img "최대 795원 적립" [ref=f257e1828]
+                    - generic [ref=f257e1829]: 최대 795원 적립
+                  - generic [ref=f257e1831]:
+                    - generic [ref=f257e1832]: 광고
+                    - button "Ad information" [ref=f257e1833]
+          - generic [ref=f257e1837]:
+            - button "next" [ref=f257e1838] [cursor=pointer]
+            - generic [ref=f257e1841]:
+              - generic [ref=f257e1842]:
+                - generic [ref=f257e1843]: 같이 보면 좋은 상품
+                - generic [ref=f257e1844]: 광고
+              - generic [ref=f257e1848]:
+                - generic [ref=f257e1850] [cursor=pointer]:
+                  - generic [ref=f257e1854]: 서울우유 유기농 멸균우유, 120ml, 32개
+                  - generic [ref=f257e1855]: 30,610원
+                  - generic [ref=f257e1859]: 무료배송
+                  - generic [ref=f257e1862]: 9/16(수) 도착 예정
+                  - generic [ref=f257e1863]:
+                    - emphasis [ref=f257e1866]
+                    - generic [ref=f257e1867]: (3,386)
+                - generic [ref=f257e1869] [cursor=pointer]:
+                  - generic [ref=f257e1873]: 네이쳐키즈 유기농 우유, 48개, 140ml
+                  - generic [ref=f257e1874]:
+                    - generic [ref=f257e1875]: 68,000원
+                    - generic [ref=f257e1877]:
+                      - generic [ref=f257e1878]: 36%
+                      - generic [ref=f257e1880]: 42,900원
+                  - generic [ref=f257e1882]: 무료배송
+                  - generic [ref=f257e1885]: 9/15(화) 도착 예정
+                  - generic [ref=f257e1886]:
+                    - emphasis [ref=f257e1889]
+                    - generic [ref=f257e1890]: (209)
+                - generic [ref=f257e1892] [cursor=pointer]:
+                  - generic [ref=f257e1896]: 네이쳐키즈 유기농 딸기 우유, 48팩, 140ml
+                  - generic [ref=f257e1897]:
+                    - generic [ref=f257e1898]: 68,000원
+                    - generic [ref=f257e1900]:
+                      - generic [ref=f257e1901]: 33%
+                      - generic [ref=f257e1903]: 44,900원
+                  - generic [ref=f257e1905]: 무료배송
+                  - generic [ref=f257e1908]: 9/15(화) 도착 예정
+                  - generic [ref=f257e1909]:
+                    - emphasis [ref=f257e1912]
+                    - generic [ref=f257e1913]: (13)
+                - generic [ref=f257e1915] [cursor=pointer]:
+                  - generic [ref=f257e1919]: 빙그레 단지우유240ml 3종 12개(바나나4개+딸기4개+메로나4개), 240ml, 1개, 12개
+                  - generic [ref=f257e1920]:
+                    - generic [ref=f257e1921]:
+                      - generic [ref=f257e1922]: 할인
+                      - generic [ref=f257e1924]: 21,600원
+                    - generic [ref=f257e1925]:
+                      - generic [ref=f257e1926]: 12%
+                      - generic [ref=f257e1928]: 18,980원
+                  - generic [ref=f257e1930]: 무료배송
+                  - generic [ref=f257e1933]: 9/14(월) 도착 예정
+                  - generic [ref=f257e1934]:
+                    - emphasis [ref=f257e1937]
+                    - generic [ref=f257e1938]: (749)
+                - generic [ref=f257e1940] [cursor=pointer]:
+                  - generic [ref=f257e1944]: 부산우유 멸균 축협우유 160ml, 24개
+                  - generic [ref=f257e1945]:
+                    - generic [ref=f257e1946]: 19,900원
+                    - generic [ref=f257e1948]:
+                      - generic [ref=f257e1949]: 20%
+                      - generic [ref=f257e1951]: 15,900원
+                  - generic [ref=f257e1953]: 무료배송
+                  - generic [ref=f257e1956]: 9/15(화) 도착 예정
+                  - generic [ref=f257e1957]:
+                    - emphasis [ref=f257e1960]
+                    - generic [ref=f257e1961]: (80)
+                - generic [ref=f257e1963] [cursor=pointer]:
+                  - generic [ref=f257e1967]: 솔브앤고 아이튼튼 초코 음료, 150ml, 24개
+                  - generic [ref=f257e1968]:
+                    - generic [ref=f257e1969]:
+                      - generic [ref=f257e1970]: 쿠폰할인
+                      - generic [ref=f257e1972]: 28,800원
+                    - generic [ref=f257e1973]:
+                      - generic [ref=f257e1976]:
+                        - generic [ref=f257e1977]: 31%
+                        - generic [ref=f257e1978]: H
+                      - generic [ref=f257e1979]: 19,710원
+                  - generic [ref=f257e1986]: 내일(토) 도착 보장
+                  - generic [ref=f257e1987]:
+                    - emphasis [ref=f257e1990]
+                    - generic [ref=f257e1991]: (1,213)
+                - generic [ref=f257e1993] [cursor=pointer]:
+                  - generic [ref=f257e1997]: 오스트렐리아스 A2 풀크림 멸균우유, 1L, 6개
+                  - generic [ref=f257e1998]:
+                    - generic [ref=f257e1999]:
+                      - generic [ref=f257e2000]: 할인
+                      - generic [ref=f257e2002]: 36,000원
+                    - generic [ref=f257e2003]:
+                      - generic [ref=f257e2006]:
+                        - generic [ref=f257e2007]: 44%
+                        - generic [ref=f257e2008]: H
+                      - generic [ref=f257e2009]: 19,900원
+                  - generic [ref=f257e2011]: 무료배송
+                  - generic [ref=f257e2014]: 9/15(화) 도착 예정
+                  - generic [ref=f257e2015]:
+                    - emphasis [ref=f257e2018]
+                    - generic [ref=f257e2019]: (3,249)
+                - generic [ref=f257e2021] [cursor=pointer]:
+                  - generic [ref=f257e2025]: 상하목장 유기농 저지방 멸균우유, 200ml, 24개
+                  - generic [ref=f257e2026]: 31,900원
+                  - generic [ref=f257e2030]: 무료배송
+                  - generic [ref=f257e2033]: 9/16(수) 도착 예정
+                  - generic [ref=f257e2034]:
+                    - emphasis [ref=f257e2037]
+                    - generic [ref=f257e2038]: (9,999+)
+          - generic [ref=f257e2041]:
+            - generic "이전" [ref=f257e2042]
+            - link "1" [ref=f257e2043] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=%EC%84%9C%EC%9A%B8%EC%9A%B0%EC%9C%A0+1L&page=1
+            - link "2" [ref=f257e2044] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=%EC%84%9C%EC%9A%B8%EC%9A%B0%EC%9C%A0+1L&page=2
+            - link "3" [ref=f257e2045] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=%EC%84%9C%EC%9A%B8%EC%9A%B0%EC%9C%A0+1L&page=3
+            - link "4" [ref=f257e2046] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=%EC%84%9C%EC%9A%B8%EC%9A%B0%EC%9C%A0+1L&page=4
+            - link "5" [ref=f257e2047] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=%EC%84%9C%EC%9A%B8%EC%9A%B0%EC%9C%A0+1L&page=5
+            - link "6" [ref=f257e2048] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=%EC%84%9C%EC%9A%B8%EC%9A%B0%EC%9C%A0+1L&page=6
+            - link "7" [ref=f257e2049] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=%EC%84%9C%EC%9A%B8%EC%9A%B0%EC%9C%A0+1L&page=7
+            - link "8" [ref=f257e2050] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=%EC%84%9C%EC%9A%B8%EC%9A%B0%EC%9C%A0+1L&page=8
+            - link "9" [ref=f257e2051] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=%EC%84%9C%EC%9A%B8%EC%9A%B0%EC%9C%A0+1L&page=9
+            - link "10" [ref=f257e2052] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=%EC%84%9C%EC%9A%B8%EC%9A%B0%EC%9C%A0+1L&page=10
+            - link "다음" [ref=f257e2053] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=%EC%84%9C%EC%9A%B8%EC%9A%B0%EC%9C%A0+1L&page=2
+  - contentinfo [ref=f257e2054]:
+    - generic [ref=f257e2055]:
+      - generic [ref=f257e2056]:
+        - link "회사소개" [ref=f257e2057] [cursor=pointer]:
+          - /url: https://news.coupang.com/
+        - link "Investor Relations" [ref=f257e2058] [cursor=pointer]:
+          - /url: https://ir.aboutcoupang.com/overview/default.aspx
+        - link "인재채용" [ref=f257e2059] [cursor=pointer]:
+          - /url: https://rocketyourcareer.kr.coupang.com
+        - link "입점/제휴문의" [ref=f257e2060] [cursor=pointer]:
+          - /url: https://marketplace.coupangcorp.com/s/?utm_source=button_pc&utm_medium=non_paid&utm_campaign=onsite_ca&utm_id=coupang_app?inflow=WEB_FOOTER_B
+        - link "공지사항" [ref=f257e2061] [cursor=pointer]:
+          - /url: https://mc.coupang.com/ssr/desktop/contact/notice
+        - link "고객의 소리" [ref=f257e2062] [cursor=pointer]:
+          - /url: https://mc.coupang.com/ssr/desktop/contact/voc
+        - link "이용약관" [ref=f257e2063] [cursor=pointer]:
+          - /url: https://www.coupang.com/np/policies/terms
+        - link [ref=f257e2064] [cursor=pointer]:
+          - /url: https://privacy.coupang.com/ko/center/coupang
+          - strong [ref=f257e2065]: 개인정보 처리방침
+        - link "정보보호/개인정보보호 인증" [ref=f257e2066] [cursor=pointer]:
+          - /url: https://privacy.coupang.com/ko/security/status
+        - link "쿠팡페이 이용약관" [ref=f257e2067] [cursor=pointer]:
+          - /url: https://rocketpay.coupang.com/rocketpay/operationTerms/coupangPcFooter
+        - link "신뢰관리센터" [ref=f257e2068] [cursor=pointer]:
+          - /url: https://www.coupang.com/np/safety
+        - link "제휴마케팅" [ref=f257e2069] [cursor=pointer]:
+          - /url: https://partners.coupang.com/
+        - link "광고안내" [ref=f257e2070] [cursor=pointer]:
+          - /url: https://ads.coupang.com
+      - paragraph [ref=f257e2074] [cursor=pointer]: Global Site
+    - generic [ref=f257e2076]:
+      - generic [ref=f257e2077]:
+        - link "COUPANG" [ref=f257e2078] [cursor=pointer]:
+          - /url: https://www.coupang.com/
+        - generic [ref=f257e2079]:
+          - text: "상호명 및 호스팅 서비스 제공 : 쿠팡(주) 대표이사 : 로저스 해롤드 린(Rogers Harold Lynn) (05050) 서울시 광진구 아차산로 412, 2층 사업자 등록번호 : 120-88-00767 통신판매업신고 : 2026-서울광진-1253"
+          - link "사업자정보 확인 >" [ref=f257e2080] [cursor=pointer]:
+            - /url: http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=1208800767
+      - link [ref=f257e2082] [cursor=pointer]:
+        - /url: https://mc.coupang.com/ssr/desktop/contact/inquiry
+        - strong [ref=f257e2083]: 365고객센터
+        - text: "| 전자금융거래분쟁처리담당"
+        - emphasis [ref=f257e2084]: 1577-7011 (유료)
+        - text: "(05050) 서울시 광진구 아차산로 412, 2층 email : help@coupang.com"
+      - paragraph [ref=f257e2085]:
+        - strong [ref=f257e2086]: 채무지급보증 안내
+        - generic [ref=f257e2087]: 당사는 고객님이 현금 결제한 금액에 대해 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.
+        - link "서비스 가입사실 확인 >" [ref=f257e2088] [cursor=pointer]:
+          - /url: https://www.coupang.com/np/etc/popWooriService
+    - generic [ref=f257e2094]:
+      - paragraph [ref=f257e2095]: 사이버몰 내 판매되는 상품 중에는 쿠팡에 등록한 개별 판매자가 판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다. 마켓플레이스(오픈마켓) 상품의 경우 쿠팡은 통신판매중개자이며 통신판매의 당사자가 아닙니다. 쿠팡은 마켓플레이스(오픈마켓) 상품, 거래정보 및 거래 등에 대하여 책임을 지지 않습니다. 쿠팡은 소비자 보호와 안전거래를 위해 신뢰관리센터(CM112@coupang.com)를 운영하고 있으며, 관련 분쟁이 발생할 경우 별도의 분쟁 처리절차에 의거 분쟁이 처리됩니다. Copyright © Coupang Corp. 2010-2025 All Rights Reserved.
+      - list [ref=f257e2096]:
+        - listitem [ref=f257e2097]:
+          - link [ref=f257e2098] [cursor=pointer]:
+            - /url: https://www.facebook.com/Coupang.korea
+        - listitem [ref=f257e2099]:
+          - link [ref=f257e2100] [cursor=pointer]:
+            - /url: https://news.coupang.com/
+        - listitem [ref=f257e2101]:
+          - link [ref=f257e2102] [cursor=pointer]:
+            - /url: https://www.instagram.com/coupang
+  - alert [ref=f257e2103]

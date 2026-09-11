@@ -1,0 +1,181 @@
+- generic [active] [ref=f167e1]:
+  - generic [ref=f167e4]:
+    - link "Coupang" [ref=f167e6] [cursor=pointer]:
+      - /url: //www.coupang.com
+    - generic [ref=f167e8]:
+      - generic [ref=f167e9]:
+        - generic [ref=f167e10]:
+          - generic [ref=f167e11] [cursor=pointer]
+          - generic [ref=f167e12]: 장바구니(3)
+        - generic [ref=f167e13]:
+          - generic [ref=f167e14]:
+            - generic [ref=f167e15]: "01"
+            - generic [ref=f167e16]: 옵션선택
+          - generic [ref=f167e18]:
+            - generic [ref=f167e19]: "02"
+            - generic [ref=f167e20]: 장바구니
+          - generic [ref=f167e22]:
+            - generic [ref=f167e23]: "03"
+            - generic [ref=f167e24]: 주문/결제
+          - generic [ref=f167e26]:
+            - generic [ref=f167e27]: "04"
+            - generic [ref=f167e28]: 주문완료
+      - generic [ref=f167e29]:
+        - generic [ref=f167e30]:
+          - generic [ref=f167e32]:
+            - generic [ref=f167e35]:
+              - generic [ref=f167e36]: 로켓배송 상품
+              - generic [ref=f167e37]: 무료배송 · 19,800원 이상 주문 가능
+            - generic [ref=f167e40]:
+              - generic [ref=f167e41]:
+                - checkbox [checked] [ref=f167e43]
+                - link [ref=f167e44] [cursor=pointer]:
+                  - /url: https://www.coupang.com/vp/products/181252754?vendorItemId=3084829518&sourceType=CART
+              - generic [ref=f167e45]:
+                - generic [ref=f167e46]:
+                  - 'link "베지밀 17곡 한끼두유 옵션: 190ml, 16개" [ref=f167e48] [cursor=pointer]':
+                    - /url: https://www.coupang.com/vp/products/181252754?vendorItemId=3084829518&sourceType=CART
+                    - text: 베지밀 17곡 한끼두유
+                    - generic [ref=f167e49]: "옵션: 190ml, 16개"
+                  - generic [ref=f167e50]: 삭제
+                - generic [ref=f167e51]:
+                  - generic [ref=f167e52]: 한달구매 2천+
+                  - generic [ref=f167e54]:
+                    - generic [ref=f167e56]:
+                      - generic [ref=f167e57]: 10,900
+                      - generic [ref=f167e58]: 원
+                    - paragraph [ref=f167e60]: (100ml당 359원)
+                  - textbox [ref=f167e65]: "1"
+            - generic [ref=f167e69]:
+              - generic [ref=f167e70]:
+                - checkbox [checked] [ref=f167e72]
+                - link [ref=f167e73] [cursor=pointer]:
+                  - /url: https://www.coupang.com/vp/products/293968217?vendorItemId=88038503920&sourceType=CART
+              - generic [ref=f167e74]:
+                - generic [ref=f167e75]:
+                  - 'link "프로메스 멸균 우유 옵션: 1L, 1개" [ref=f167e77] [cursor=pointer]':
+                    - /url: https://www.coupang.com/vp/products/293968217?vendorItemId=88038503920&sourceType=CART
+                    - text: 프로메스 멸균 우유
+                    - generic [ref=f167e78]: "옵션: 1L, 1개"
+                  - generic [ref=f167e79]: 삭제
+                - generic [ref=f167e80]:
+                  - generic [ref=f167e81]: 한달구매 200+
+                  - generic [ref=f167e83]:
+                    - generic [ref=f167e85]:
+                      - generic [ref=f167e86]: 4,090
+                      - generic [ref=f167e87]: 원
+                    - paragraph [ref=f167e89]: (100ml당 409원)
+                  - textbox [ref=f167e94]: "1"
+            - generic [ref=f167e98]:
+              - generic [ref=f167e99]:
+                - checkbox [checked] [ref=f167e101]
+                - link [ref=f167e102] [cursor=pointer]:
+                  - /url: https://www.coupang.com/vp/products/9643636922?vendorItemId=95752946190&sourceType=CART
+              - generic [ref=f167e103]:
+                - generic [ref=f167e104]:
+                  - 'link "부드럽고 촉촉한 한입 카스테라 옵션: 30개, 20g" [ref=f167e106] [cursor=pointer]':
+                    - /url: https://www.coupang.com/vp/products/9643636922?vendorItemId=95752946190&sourceType=CART
+                    - text: 부드럽고 촉촉한 한입 카스테라
+                    - generic [ref=f167e107]: "옵션: 30개, 20g"
+                  - generic [ref=f167e108]: 삭제
+                - generic [ref=f167e109]:
+                  - generic [ref=f167e110]: 한달구매 2천+
+                  - generic [ref=f167e112]:
+                    - generic [ref=f167e114]:
+                      - generic [ref=f167e115]: 12,900
+                      - generic [ref=f167e116]: 원
+                    - paragraph [ref=f167e118]: (10g당 215원)
+                  - textbox [ref=f167e123]: "1"
+            - link "로켓배송 상품 추가하기" [ref=f167e127] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/rocketdelivery
+          - generic [ref=f167e130]:
+            - generic [ref=f167e131]:
+              - checkbox "전체 선택 (3 / 3)" [checked] [ref=f167e132]
+              - generic [ref=f167e133]: 전체 선택
+              - generic [ref=f167e134]: (3 / 3)
+            - generic [ref=f167e135]:
+              - generic [ref=f167e136]: 선택삭제
+              - generic [ref=f167e137]: 품절/판매종료상품 전체삭제
+        - generic [ref=f167e138]:
+          - generic [ref=f167e139]:
+            - generic [ref=f167e140]:
+              - generic [ref=f167e141]: 주문 예상 금액
+              - generic [ref=f167e142]:
+                - generic [ref=f167e143]:
+                  - generic [ref=f167e144]: 총 상품 가격
+                  - generic [ref=f167e146]:
+                    - emphasis [ref=f167e147]: 27,890
+                    - generic [ref=f167e148]: 원
+                - generic [ref=f167e149]:
+                  - generic [ref=f167e150]: 총 배송비
+                  - generic [ref=f167e152]:
+                    - emphasis [ref=f167e153]: +
+                    - emphasis [ref=f167e154]: "0"
+                    - generic [ref=f167e155]: 원
+            - generic [ref=f167e158]:
+              - emphasis [ref=f167e159]: 27,890
+              - generic [ref=f167e160]: 원
+          - button "총 3개 상품 구매하기" [ref=f167e163] [cursor=pointer]
+  - contentinfo [ref=f167e167]:
+    - generic [ref=f167e168]:
+      - generic [ref=f167e169]:
+        - link "회사소개" [ref=f167e170] [cursor=pointer]:
+          - /url: https://news.coupang.com/
+        - link "Investor Relations" [ref=f167e171] [cursor=pointer]:
+          - /url: https://ir.aboutcoupang.com/overview/default.aspx
+        - link "인재채용" [ref=f167e172] [cursor=pointer]:
+          - /url: https://rocketyourcareer.kr.coupang.com
+        - link "입점/제휴문의" [ref=f167e173] [cursor=pointer]:
+          - /url: https://marketplace.coupangcorp.com/s/?utm_source=button_pc&utm_medium=non_paid&utm_campaign=onsite_ca&utm_id=coupang_app?inflow=WEB_FOOTER_B
+        - link "공지사항" [ref=f167e174] [cursor=pointer]:
+          - /url: https://mc.coupang.com/ssr/desktop/contact/notice
+        - link "고객의 소리" [ref=f167e175] [cursor=pointer]:
+          - /url: https://mc.coupang.com/ssr/desktop/contact/voc
+        - link "이용약관" [ref=f167e176] [cursor=pointer]:
+          - /url: https://www.coupang.com/np/policies/terms
+        - link [ref=f167e177] [cursor=pointer]:
+          - /url: https://privacy.coupang.com/ko/center/coupang
+          - strong [ref=f167e178]: 개인정보 처리방침
+        - link "정보보호/개인정보보호 인증" [ref=f167e179] [cursor=pointer]:
+          - /url: https://privacy.coupang.com/ko/security/status
+        - link "쿠팡페이 이용약관" [ref=f167e180] [cursor=pointer]:
+          - /url: https://rocketpay.coupang.com/rocketpay/operationTerms/coupangPcFooter
+        - link "신뢰관리센터" [ref=f167e181] [cursor=pointer]:
+          - /url: https://www.coupang.com/np/safety
+        - link "제휴마케팅" [ref=f167e182] [cursor=pointer]:
+          - /url: https://partners.coupang.com/
+        - link "광고안내" [ref=f167e183] [cursor=pointer]:
+          - /url: https://ads.coupang.com
+      - paragraph [ref=f167e187] [cursor=pointer]: Global Site
+    - generic [ref=f167e189]:
+      - generic [ref=f167e190]:
+        - link "COUPANG" [ref=f167e191] [cursor=pointer]:
+          - /url: https://www.coupang.com/
+        - generic [ref=f167e192]:
+          - text: "상호명 및 호스팅 서비스 제공 : 쿠팡(주) 대표이사 : 로저스 해롤드 린(Rogers Harold Lynn) (05050) 서울시 광진구 아차산로 412, 2층 사업자 등록번호 : 120-88-00767 통신판매업신고 : 2026-서울광진-1253"
+          - link "사업자정보 확인 >" [ref=f167e193] [cursor=pointer]:
+            - /url: http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=1208800767
+      - link [ref=f167e195] [cursor=pointer]:
+        - /url: https://mc.coupang.com/ssr/desktop/contact/inquiry
+        - strong [ref=f167e196]: 365고객센터
+        - text: "| 전자금융거래분쟁처리담당"
+        - emphasis [ref=f167e197]: 1577-7011 (유료)
+        - text: "(05050) 서울시 광진구 아차산로 412, 2층 email : help@coupang.com"
+      - paragraph [ref=f167e198]:
+        - strong [ref=f167e199]: 채무지급보증 안내
+        - generic [ref=f167e200]: 당사는 고객님이 현금 결제한 금액에 대해 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.
+        - link "서비스 가입사실 확인 >" [ref=f167e201] [cursor=pointer]:
+          - /url: https://www.coupang.com/np/etc/popWooriService
+    - generic [ref=f167e207]:
+      - paragraph [ref=f167e208]: 사이버몰 내 판매되는 상품 중에는 쿠팡에 등록한 개별 판매자가 판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다. 마켓플레이스(오픈마켓) 상품의 경우 쿠팡은 통신판매중개자이며 통신판매의 당사자가 아닙니다. 쿠팡은 마켓플레이스(오픈마켓) 상품, 거래정보 및 거래 등에 대하여 책임을 지지 않습니다. 쿠팡은 소비자 보호와 안전거래를 위해 신뢰관리센터(CM112@coupang.com)를 운영하고 있으며, 관련 분쟁이 발생할 경우 별도의 분쟁 처리절차에 의거 분쟁이 처리됩니다. Copyright © Coupang Corp. 2010-2025 All Rights Reserved.
+      - list [ref=f167e209]:
+        - listitem [ref=f167e210]:
+          - link [ref=f167e211] [cursor=pointer]:
+            - /url: https://www.facebook.com/Coupang.korea
+        - listitem [ref=f167e212]:
+          - link [ref=f167e213] [cursor=pointer]:
+            - /url: https://news.coupang.com/
+        - listitem [ref=f167e214]:
+          - link [ref=f167e215] [cursor=pointer]:
+            - /url: https://www.instagram.com/coupang
+  - alert [ref=f167e216]

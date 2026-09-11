@@ -1,0 +1,139 @@
+- generic [active] [ref=f4e1]:
+  - table [ref=f4e2]:
+    - rowgroup [ref=f4e3]:
+      - row [ref=f4e4]:
+        - cell [ref=f4e5]:
+          - link [ref=f4e6] [cursor=pointer]:
+            - /url: https://leeseye.imweb.me/145
+            - img "둘러보기" [ref=f4e7]
+      - row [ref=f4e8]:
+        - cell [ref=f4e9]:
+          - link [ref=f4e10] [cursor=pointer]:
+            - /url: https://leeseye.imweb.me/157?preview_mode=1
+            - img "진료안내" [ref=f4e11]
+      - row [ref=f4e12]:
+        - cell [ref=f4e13]:
+          - link [ref=f4e14] [cursor=pointer]:
+            - /url: https://leeseye.imweb.me/154?preview_mode=1
+            - img "오시는길" [ref=f4e15]
+      - row [ref=f4e16]:
+        - cell [ref=f4e17]:
+          - link [ref=f4e18] [cursor=pointer]:
+            - /url: http://blog.naver.com/leeseye2015
+            - img "블로그" [ref=f4e19]
+  - link [ref=f4e20] [cursor=pointer]:
+    - /url: javascript:;
+  - generic:  
+  - text: 
+  - generic:
+    - list [ref=f4e23]:       
+    - text: 
+  - banner [ref=f4e24]:
+    - generic [ref=f4e26]:
+      - generic [ref=f4e32]:
+        - link "이안과 이안과 이안과" [ref=f4e39] [cursor=pointer]:
+          - /url: /
+          - generic [ref=f4e40]: 이안과
+          - img "이안과" [ref=f4e41]
+          - img "이안과" [ref=f4e42]
+        - generic [ref=f4e46]:
+          - link "icon" [ref=f4e51] [cursor=pointer]:
+            - /url: http://pf.kakao.com/_zLwcxb
+            - generic [aria-hidden] [ref=f4e52]: 
+          - link "icon" [ref=f4e58] [cursor=pointer]:
+            - /url: https://blog.naver.com/leeseye2015
+            - generic [aria-hidden] [ref=f4e59]: 
+      - text:  
+  - main [ref=f4e64]:
+    - generic [ref=f4e77]:
+      - list [ref=f4e84]:
+        - listitem [ref=f4e85]:
+          - link "원장인사말" [ref=f4e86] [cursor=pointer]:
+            - /url: /163
+        - listitem [ref=f4e87]:
+          - link "첨단장비소개" [ref=f4e88] [cursor=pointer]:
+            - /url: /164
+        - listitem [ref=f4e89]:
+          - link "의료진소개" [ref=f4e90] [cursor=pointer]:
+            - /url: /137
+        - listitem [ref=f4e91]:
+          - link "병원둘러보기" [ref=f4e92] [cursor=pointer]:
+            - /url: /145
+        - listitem [ref=f4e93]:
+          - link "안전한안과" [ref=f4e94] [cursor=pointer]:
+            - /url: /166
+        - listitem [ref=f4e95]:
+          - link "진료시간안내" [ref=f4e96] [cursor=pointer]:
+            - /url: /157
+        - listitem [ref=f4e97]:
+          - link "찾아오시는길" [ref=f4e98] [cursor=pointer]:
+            - /url: /154
+      - generic [ref=f4e110]:
+        - paragraph [ref=f4e111]:
+          - generic [ref=f4e112]:
+            - strong [ref=f4e113]: 진료시간
+            - text: 안내
+        - separator [ref=f4e114]
+        - paragraph [ref=f4e115]: LEES EYE CLINIC
+      - separator [ref=f4e127]
+      - generic [ref=f4e128]:
+        - generic [ref=f4e134]:
+          - paragraph [ref=f4e135]:
+            - strong [ref=f4e136]: 진료예약 및 전화상담
+          - paragraph [ref=f4e137]
+          - paragraph [ref=f4e138]:
+            - text: 02)
+            - strong [ref=f4e140]: 6382-7007
+          - paragraph [ref=f4e141]
+          - paragraph [ref=f4e142]:
+            - text: 이안과는
+            - strong [ref=f4e144]: 예약 우선제 진료
+            - text: 를 시행합니다.
+          - paragraph [ref=f4e145]: 예약을 하시고 오시면 최대한 대기 시간을
+          - paragraph [ref=f4e146]: 단축하실 수 있습니다.
+        - generic [ref=f4e153]:
+          - paragraph [ref=f4e154]:
+            - text: ⚪
+            - generic [ref=f4e156]:
+              - text: 평 일 AM
+              - strong [ref=f4e159]: 09:00
+              - text: ~ PM
+              - strong [ref=f4e162]: 06:00
+          - paragraph [ref=f4e163]
+          - paragraph [ref=f4e164]:
+            - text: ⚪
+            - generic [ref=f4e166]:
+              - text: 점심시간 PM
+              - strong [ref=f4e169]: 01:00
+              - text: ~ PM
+              - strong [ref=f4e172]: 02:00
+          - paragraph [ref=f4e173]
+          - paragraph [ref=f4e174]:
+            - text: ⚪
+            - generic [ref=f4e175]: 토 요 일 AM
+            - strong [ref=f4e179]: 09:00
+            - generic [ref=f4e181]:
+              - text: ~ PM
+              - strong [ref=f4e184]: 01:30
+          - paragraph [ref=f4e185]:
+            - generic [ref=f4e186]: (토요일은 점심시간 없이 운영합니다.)
+          - paragraph [ref=f4e187]
+          - paragraph [ref=f4e188]: ❇공휴일 및 일요일은 휴진입니다.
+    - separator [ref=f4e201]
+  - contentinfo [ref=f4e211]:
+    - generic [ref=f4e217]:
+      - generic [ref=f4e219]:
+        - paragraph [ref=f4e220]
+        - paragraph [ref=f4e222]:
+          - strong [ref=f4e224]: Dr. Lee's Eye Clinic
+          - generic [ref=f4e225]:
+            - text: 서울시 구로구 구로중앙로 217 5~8
+            - link "F" [ref=f4e226] [cursor=pointer]:
+              - /url: http://leeseye.co.kr/?mode=login
+        - paragraph [ref=f4e227]: "대표자명: 이태곤"
+        - paragraph [ref=f4e228]:
+          - generic [ref=f4e229]: 사업자등록번호 364-39-00961 전화 02-6382-7007 ㅣ 팩스 02-6382-7020
+      - generic [ref=f4e230]:
+        - list
+      - generic [ref=f4e231]: Copyright ⓒ 2026 이안과 All rights reserved.
+  - iframe [ref=f4e232]

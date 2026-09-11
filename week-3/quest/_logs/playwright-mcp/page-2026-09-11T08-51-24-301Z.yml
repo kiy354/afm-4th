@@ -1,0 +1,1679 @@
+- generic [active] [ref=f172e1]:
+  - generic [ref=f172e5]:
+    - link [ref=f172e6] [cursor=pointer]:
+      - /url: /np/campaigns/82?adType=DA&eventId=1KA0NlRTBOA1B2cm
+    - link [ref=f172e7] [cursor=pointer]:
+      - /url: https://shop.coupang.com/sajodaerim/268667?source=brandstore_display_ads&adType=DA&eventId=T6hQ44PuEanp8mDU
+  - generic [ref=f172e8]:
+    - generic [ref=f172e10]:
+      - list [ref=f172e11]:
+        - listitem [ref=f172e12]:
+          - link "판매자 가입" [ref=f172e13] [cursor=pointer]:
+            - /url: https://wing.coupang.com/tenants/vendor-signup/signup?utm_source=button_pc_coupang_top_right_cta&utm_medium=non_paid&utm_campaign=seller_registration
+        - listitem [ref=f172e14]:
+          - link "고객센터" [ref=f172e15] [cursor=pointer]:
+            - /url: https://mc.coupang.com/ssr/desktop/contact/faq
+        - listitem [ref=f172e16]:
+          - link "회원가입" [ref=f172e17] [cursor=pointer]:
+            - /url: https://login.coupang.com/login/memberJoinFrm.pang
+        - listitem [ref=f172e18]:
+          - link "로그인" [ref=f172e19] [cursor=pointer]:
+            - /url: https://login.coupang.com/login/login.pang?rtnUrl=https%3A%2F%2Fwww.coupang.com%2Fnp%2Fpost%2Flogin%3Fr%3Dhttp%253A%252F%252Fwww.coupang.com%252Fnp%252Fsearch%253Fq%253D%2525EC%25258B%25259D%2525EB%2525B9%2525B5%2526filterType%253Drocket%2526sorter%253DsalePriceAsc
+      - list [ref=f172e20]:
+        - listitem [ref=f172e21]: 즐겨찾기
+        - listitem [ref=f172e22]:
+          - generic [ref=f172e23] [cursor=pointer]: 입점신청
+    - generic [ref=f172e26]:
+      - generic [ref=f172e27] [cursor=pointer]: 카테고리
+      - generic [ref=f172e33]:
+        - generic [ref=f172e34]:
+          - link [ref=f172e35] [cursor=pointer]:
+            - /url: https://www.coupang.com
+            - img "Coupang" [ref=f172e36]
+          - generic [ref=f172e37]:
+            - generic [ref=f172e38]: 전체
+            - textbox "쿠팡 상품 검색" [ref=f172e42]:
+              - /placeholder: 찾고 싶은 상품을 검색해보세요!
+              - text: 식빵
+            - button "검색" [ref=f172e43] [cursor=pointer]
+          - list [ref=f172e44]:
+            - listitem [ref=f172e45]:
+              - link "마이쿠팡" [ref=f172e46] [cursor=pointer]:
+                - /url: https://mc.coupang.com/ssr/desktop/order/list
+            - listitem [ref=f172e48]:
+              - link "장바구니" [ref=f172e49] [cursor=pointer]:
+                - /url: //cart.coupang.com/cartView.pang
+                - emphasis [ref=f172e50]
+        - list [ref=f172e54]:
+          - listitem [ref=f172e55]:
+            - link "쿠팡플레이 쿠팡플레이" [ref=f172e56] [cursor=pointer]:
+              - /url: https://www.coupangplay.com/catalog
+              - img "쿠팡플레이" [ref=f172e57]
+              - generic [ref=f172e58]: 쿠팡플레이
+          - listitem [ref=f172e59]:
+            - link "로켓배송 로켓배송" [ref=f172e60] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/campaigns/82
+              - img "로켓배송" [ref=f172e61]
+              - generic [ref=f172e62]: 로켓배송
+          - listitem [ref=f172e63]:
+            - link "로켓프레시 로켓프레시" [ref=f172e64] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/categories/393760
+              - img "로켓프레시" [ref=f172e65]
+              - generic [ref=f172e66]: 로켓프레시
+          - listitem [ref=f172e67]:
+            - link "2026 추석 2026 추석" [ref=f172e68] [cursor=pointer]:
+              - /url: https://www.coupang.com/mlp/web/mlp-landing-page?landingId=4800
+              - img "2026 추석" [ref=f172e69]
+              - generic [ref=f172e70]: 2026 추석
+          - listitem [ref=f172e72]:
+            - link "다시 구매 다시 구매" [ref=f172e73] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/fbi?sourceType=home_section_fbi
+              - img "다시 구매" [ref=f172e74]
+              - generic [ref=f172e75]: 다시 구매
+          - listitem [ref=f172e77]:
+            - link "쿠팡비즈 쿠팡비즈" [ref=f172e78] [cursor=pointer]:
+              - /url: https://login.coupang.com/corporation/member/landing-page
+              - img "쿠팡비즈" [ref=f172e79]
+              - generic [ref=f172e80]: 쿠팡비즈
+          - listitem [ref=f172e81]:
+            - link "로켓직구 로켓직구" [ref=f172e82] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/coupangglobal
+              - img "로켓직구" [ref=f172e83]
+              - generic [ref=f172e84]: 로켓직구
+          - listitem [ref=f172e85]:
+            - link "골드박스 골드박스" [ref=f172e86] [cursor=pointer]:
+              - /url: https://www.coupang.com/mlp/web/mlp-landing-page?landingId=3712&sourceType=gm_crm_goldbox&subSourceType=gm_crm_gwsrtcut
+              - img "골드박스" [ref=f172e87]
+              - generic [ref=f172e88]: 골드박스
+          - listitem [ref=f172e89]:
+            - link "이달의신상 이달의신상" [ref=f172e90] [cursor=pointer]:
+              - /url: https://pages.coupang.com/p/136938
+              - img "이달의신상" [ref=f172e91]
+              - generic [ref=f172e92]: 이달의신상
+          - listitem [ref=f172e93]:
+            - link "입점신청 입점신청" [ref=f172e94] [cursor=pointer]:
+              - /url: https://wing.coupang.com/tenants/vendor-signup/signup?utm_source=button_pc_coupang_shortcut_1&utm_medium=non_paid&utm_id=onsite_ca&utm_content=202411
+              - img "입점신청" [ref=f172e95]
+              - generic [ref=f172e96]: 입점신청
+          - listitem [ref=f172e97]:
+            - link "판매자특가 판매자특가" [ref=f172e98] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/omp
+              - img "판매자특가" [ref=f172e99]
+              - generic [ref=f172e100]: 판매자특가
+          - listitem [ref=f172e101]:
+            - link "와우회원할인 와우회원할인" [ref=f172e102] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/campaigns/83
+              - img "와우회원할인" [ref=f172e103]
+              - generic [ref=f172e104]: 와우회원할인
+          - listitem [ref=f172e105]:
+            - link "반품마켓 반품마켓" [ref=f172e106] [cursor=pointer]:
+              - /url: https://pages.coupang.com/p/54908
+              - img "반품마켓" [ref=f172e107]
+              - generic [ref=f172e108]: 반품마켓
+          - listitem [ref=f172e109]:
+            - link "착한상점 착한상점" [ref=f172e110] [cursor=pointer]:
+              - /url: https://pages.coupang.com/p/63240
+              - img "착한상점" [ref=f172e111]
+              - generic [ref=f172e112]: 착한상점
+          - listitem [ref=f172e114]:
+            - link "기획전 기획전" [ref=f172e115] [cursor=pointer]:
+              - /url: https://pages.coupang.com/p/bep?sourceType=gm_crm_oms&subSourceType=gm_crm_gwsrtcut
+              - img "기획전" [ref=f172e116]
+              - generic [ref=f172e117]: 기획전
+          - listitem [ref=f172e118]:
+            - link "쿠팡트래블 쿠팡트래블" [ref=f172e119] [cursor=pointer]:
+              - /url: https://trip.coupang.com/?channel=gnb
+              - img "쿠팡트래블" [ref=f172e120]
+              - generic [ref=f172e121]: 쿠팡트래블
+  - article [ref=f172e123]:
+    - link "널담 고단백 저당 슬랩 (냉동), 600g, 5개, 1개입 광고 Ad information 더 알아보기" [ref=f172e127] [cursor=pointer]:
+      - /url: /vp/products/9046838928?itemId=26612838433&vendorItemId=93585885098&sourceType=srp_top_banner_ads&clickEventId=043ca1f0-adbe-11f1-91ea-f7016e6c98de&korePlacement=19
+      - generic [ref=f172e128]:
+        - generic [ref=f172e130]: 널담 고단백 저당 슬랩 (냉동), 600g, 5개, 1개입
+        - generic [ref=f172e134]:
+          - generic [ref=f172e135]: 광고
+          - button "Ad information" [ref=f172e136]
+      - generic [ref=f172e137]: 더 알아보기
+    - generic:
+      - link "장바구니" [ref=f172e139] [cursor=pointer]:
+        - /url: //cart.coupang.com/cartView.pang
+        - emphasis
+      - generic [ref=f172e141]:
+        - generic [ref=f172e142]: 최근본상품
+        - emphasis
+  - generic [ref=f172e145]:
+    - generic [ref=f172e148]:
+      - list [ref=f172e149]:
+        - listitem [ref=f172e150]:
+          - link "전체" [ref=f172e151] [cursor=pointer]:
+            - /url: /np/search?q=%EC%8B%9D%EB%B9%B5&filterType=rocket&sorter=salePriceAsc
+      - strong [ref=f172e155]: "'식빵'"
+    - generic [ref=f172e158]:
+      - generic [ref=f172e159]:
+        - generic [ref=f172e162]:
+          - generic [ref=f172e163]:
+            - heading "필터" [level=4] [ref=f172e164]
+            - button "전체해제" [ref=f172e166] [cursor=pointer]
+          - list [ref=f172e169]:
+            - listitem [ref=f172e170]:
+              - img "rocket_luxury,rocket,coupang_global" [ref=f172e174] [cursor=pointer]
+              - list [ref=f172e176]:
+                - listitem [ref=f172e177]:
+                  - generic:
+                    - generic:
+                      - img "rocket_luxury"
+                    - text: 만 보기
+                - listitem [ref=f172e178]:
+                  - generic [ref=f172e179] [cursor=pointer]:
+                    - img "rocket" [ref=f172e182]
+                    - text: 만 보기
+                - listitem [ref=f172e183]:
+                  - generic [ref=f172e184] [cursor=pointer]:
+                    - img "coupang_global" [ref=f172e187]
+                    - text: 만 보기
+            - listitem [ref=f172e188]:
+              - generic:
+                - generic:
+                  - img "top_brand"
+            - listitem [ref=f172e189]:
+              - generic [ref=f172e190] [cursor=pointer]: 무료배송
+          - separator [ref=f172e192]
+          - generic [ref=f172e193]:
+            - heading "카테고리" [level=5] [ref=f172e194]
+            - generic [ref=f172e195]:
+              - list [ref=f172e196]:
+                - listitem [ref=f172e197]:
+                  - link "전체" [ref=f172e199] [cursor=pointer]:
+                    - /url: https://www.coupang.com
+                - listitem [ref=f172e200]:
+                  - link "식품" [ref=f172e202] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/194276
+                - listitem [ref=f172e203]:
+                  - link "싱글라이프" [ref=f172e205] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/433784
+                - listitem [ref=f172e206]:
+                  - link "로켓직구" [ref=f172e208] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/coupangglobal
+                - listitem [ref=f172e209]:
+                  - link "쿠팡수입" [ref=f172e211] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/510691
+                - listitem:
+                  - link "주방용품" [ref=f172e213] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/185669
+                - listitem:
+                  - link "결혼준비" [ref=f172e215] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/416130
+                - listitem:
+                  - link "가전디지털" [ref=f172e217] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/178255
+                - listitem:
+                  - link "생활용품" [ref=f172e219] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/115673
+                - listitem:
+                  - link "헬스/건강식품" [ref=f172e221] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/305798
+                - listitem:
+                  - link "홈인테리어" [ref=f172e223] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/184555
+                - listitem:
+                  - link "문구/오피스" [ref=f172e225] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/177295
+                - listitem:
+                  - link "아트/공예" [ref=f172e227] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/410273
+                - listitem:
+                  - link "출산/유아동" [ref=f172e229] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/221934
+                - listitem:
+                  - link "자동차용품" [ref=f172e231] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/184060
+                - listitem:
+                  - link "반려동물용품" [ref=f172e233] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/115674
+                - listitem:
+                  - link "도서/음반/DVD" [ref=f172e235] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/317777
+                - listitem:
+                  - link "실버스토어" [ref=f172e237] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/383370
+                - listitem:
+                  - link "뷰티" [ref=f172e239] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/176522
+                - listitem:
+                  - link "미세먼지용품" [ref=f172e241] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/campaigns/17593
+                - listitem:
+                  - link "R.LUX" [ref=f172e243] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/campaigns/18530
+                - listitem:
+                  - link "스포츠/레저" [ref=f172e245] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/317778
+                - listitem:
+                  - link "홈카페" [ref=f172e247] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/316168
+                - listitem:
+                  - link "국내여행" [ref=f172e249] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/396463
+                - listitem:
+                  - link "안전전문관" [ref=f172e251] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/568926
+              - generic [ref=f172e252] [cursor=pointer]: + 더보기
+          - separator [ref=f172e253]
+          - generic [ref=f172e254]:
+            - heading "브랜드" [level=5] [ref=f172e255]
+            - generic [ref=f172e256]:
+              - list [ref=f172e257]:
+                - listitem [ref=f172e258]:
+                  - generic [ref=f172e259] [cursor=pointer]: 아워홈
+                - listitem [ref=f172e261]:
+                  - generic [ref=f172e262] [cursor=pointer]: gomgom
+                - listitem [ref=f172e264]:
+                  - generic [ref=f172e265] [cursor=pointer]: 삼립
+                - listitem [ref=f172e267]:
+                  - generic [ref=f172e268] [cursor=pointer]: 롯데웰푸드
+                - listitem [ref=f172e270]:
+                  - generic [ref=f172e271] [cursor=pointer]: 행복한맛남
+                - listitem:
+                  - generic [ref=f172e273] [cursor=pointer]: 신라명과
+                - listitem:
+                  - generic [ref=f172e275] [cursor=pointer]: 키즈웰
+                - listitem:
+                  - generic [ref=f172e277] [cursor=pointer]: 밀도
+                - listitem:
+                  - generic [ref=f172e279] [cursor=pointer]: 도제식빵
+                - listitem:
+                  - generic [ref=f172e281] [cursor=pointer]: 델리팜
+                - listitem:
+                  - generic [ref=f172e283] [cursor=pointer]: 파스키에
+                - listitem:
+                  - generic [ref=f172e285] [cursor=pointer]: 미각제빵소
+                - listitem:
+                  - generic [ref=f172e287] [cursor=pointer]: 아티제
+                - listitem:
+                  - generic [ref=f172e289] [cursor=pointer]: 베즐리
+                - listitem:
+                  - generic [ref=f172e291] [cursor=pointer]: 얌
+                - listitem:
+                  - generic [ref=f172e293] [cursor=pointer]: 후앙
+                - listitem:
+                  - generic [ref=f172e295] [cursor=pointer]: 바른식방
+                - listitem:
+                  - generic [ref=f172e297] [cursor=pointer]: 교토마블
+              - generic [ref=f172e299] [cursor=pointer]: + 더보기
+          - separator [ref=f172e300]
+          - generic [ref=f172e301]:
+            - heading "상품 상태" [level=5] [ref=f172e302]
+            - list [ref=f172e304]:
+              - listitem [ref=f172e305]:
+                - generic [ref=f172e306] [cursor=pointer]: 새 상품
+              - listitem [ref=f172e308]:
+                - generic [ref=f172e309] [cursor=pointer]: 박스 훼손
+              - listitem [ref=f172e311]:
+                - generic [ref=f172e312] [cursor=pointer]: 재포장
+              - listitem [ref=f172e314]:
+                - generic [ref=f172e315] [cursor=pointer]: 리퍼
+              - listitem [ref=f172e317]:
+                - generic [ref=f172e318] [cursor=pointer]: 반품
+              - listitem [ref=f172e320]:
+                - generic [ref=f172e321] [cursor=pointer]: 중고
+          - separator [ref=f172e323]
+          - generic [ref=f172e324]:
+            - heading "낱개상품 여부" [level=5] [ref=f172e325]
+            - list [ref=f172e327]:
+              - listitem [ref=f172e328]:
+                - generic [ref=f172e329] [cursor=pointer]: 낱개상품
+          - separator [ref=f172e331]
+          - generic [ref=f172e332]:
+            - heading "총 중량" [level=5] [ref=f172e333]
+            - list [ref=f172e335]:
+              - listitem [ref=f172e336]:
+                - generic [ref=f172e337] [cursor=pointer]: 500g 이하
+              - listitem [ref=f172e339]:
+                - generic [ref=f172e340] [cursor=pointer]: 500g~1kg
+              - listitem [ref=f172e342]:
+                - generic [ref=f172e343] [cursor=pointer]: 1~3kg
+              - listitem [ref=f172e345]:
+                - generic [ref=f172e346] [cursor=pointer]: 3kg 이상
+          - separator [ref=f172e348]
+          - generic [ref=f172e349]:
+            - heading "총 수량" [level=5] [ref=f172e350]
+            - list [ref=f172e352]:
+              - listitem [ref=f172e353]:
+                - generic [ref=f172e354] [cursor=pointer]: 5구 이하
+              - listitem [ref=f172e356]:
+                - generic [ref=f172e357] [cursor=pointer]: 5~8구
+              - listitem [ref=f172e359]:
+                - generic [ref=f172e360] [cursor=pointer]: 9~12구
+              - listitem [ref=f172e362]:
+                - generic [ref=f172e363] [cursor=pointer]: 12구 이상
+          - separator [ref=f172e365]
+          - generic [ref=f172e366]:
+            - heading "종류" [level=5] [ref=f172e367]
+            - generic [ref=f172e368]:
+              - list [ref=f172e369]:
+                - listitem [ref=f172e370]:
+                  - generic [ref=f172e371] [cursor=pointer]: 일반
+                - listitem [ref=f172e373]:
+                  - generic [ref=f172e374] [cursor=pointer]: 통밀
+                - listitem [ref=f172e376]:
+                  - generic [ref=f172e377] [cursor=pointer]: 우유
+                - listitem [ref=f172e379]:
+                  - generic [ref=f172e380] [cursor=pointer]: 호밀
+                - listitem [ref=f172e382]:
+                  - generic [ref=f172e383] [cursor=pointer]: 쌀
+                - listitem:
+                  - generic [ref=f172e385] [cursor=pointer]: 밤
+                - listitem:
+                  - generic [ref=f172e387] [cursor=pointer]: 옥수수
+                - listitem:
+                  - generic [ref=f172e389] [cursor=pointer]: 치즈
+                - listitem:
+                  - generic [ref=f172e391] [cursor=pointer]: 버터
+                - listitem:
+                  - generic [ref=f172e393] [cursor=pointer]: 초코
+                - listitem:
+                  - generic [ref=f172e395] [cursor=pointer]: 페이스트리
+                - listitem:
+                  - generic [ref=f172e397] [cursor=pointer]: 기타
+              - generic [ref=f172e399] [cursor=pointer]: + 더보기
+          - separator [ref=f172e400]
+          - generic [ref=f172e401]:
+            - heading "보관방식" [level=5] [ref=f172e402]
+            - list [ref=f172e404]:
+              - listitem [ref=f172e405]:
+                - generic [ref=f172e406] [cursor=pointer]: 냉장보관
+              - listitem [ref=f172e408]:
+                - generic [ref=f172e409] [cursor=pointer]: 냉동보관
+              - listitem [ref=f172e411]:
+                - generic [ref=f172e412] [cursor=pointer]: 실온보관
+          - separator [ref=f172e414]
+          - generic [ref=f172e415]:
+            - heading "주재료" [level=5] [ref=f172e416]
+            - list [ref=f172e418]:
+              - listitem [ref=f172e419]:
+                - generic [ref=f172e420] [cursor=pointer]: 통밀
+              - listitem [ref=f172e422]:
+                - generic [ref=f172e423] [cursor=pointer]: 호밀
+              - listitem [ref=f172e425]:
+                - generic [ref=f172e426] [cursor=pointer]: 쌀
+          - separator [ref=f172e428]
+          - generic [ref=f172e429]:
+            - heading "슬라이스 여부" [level=5] [ref=f172e430]
+            - list [ref=f172e432]:
+              - listitem [ref=f172e433]:
+                - generic [ref=f172e434] [cursor=pointer]: 통
+              - listitem [ref=f172e436]:
+                - generic [ref=f172e437] [cursor=pointer]: 슬라이스
+          - separator [ref=f172e439]
+          - generic [ref=f172e440]:
+            - heading "설탕함량" [level=5] [ref=f172e441]
+            - list [ref=f172e443]:
+              - listitem [ref=f172e444]:
+                - generic [ref=f172e445] [cursor=pointer]: 무설탕
+              - listitem [ref=f172e447]:
+                - generic [ref=f172e448] [cursor=pointer]: 저설탕
+              - listitem [ref=f172e450]:
+                - generic [ref=f172e451] [cursor=pointer]: 설탕첨가
+              - listitem [ref=f172e453]:
+                - generic [ref=f172e454] [cursor=pointer]: 당 첨가
+          - separator [ref=f172e456]
+          - generic [ref=f172e457]:
+            - heading "포장형태" [level=5] [ref=f172e458]
+            - list [ref=f172e460]:
+              - listitem [ref=f172e461]:
+                - generic [ref=f172e462] [cursor=pointer]: 봉지/지퍼백
+              - listitem [ref=f172e464]:
+                - generic [ref=f172e465] [cursor=pointer]: 상자 (갑)
+              - listitem [ref=f172e467]:
+                - generic [ref=f172e468] [cursor=pointer]: 용기/통
+              - listitem [ref=f172e470]:
+                - generic [ref=f172e471] [cursor=pointer]: 컵/1회분
+          - separator [ref=f172e473]
+          - generic [ref=f172e474]:
+            - heading "간편식" [level=5] [ref=f172e475]
+            - list [ref=f172e477]:
+              - listitem [ref=f172e478]:
+                - generic [ref=f172e479] [cursor=pointer]: 즉석섭취음료
+              - listitem [ref=f172e481]:
+                - generic [ref=f172e482] [cursor=pointer]: 즉석섭취식품
+              - listitem [ref=f172e484]:
+                - generic [ref=f172e485] [cursor=pointer]: 즉석조리식품
+              - listitem [ref=f172e487]:
+                - generic [ref=f172e488] [cursor=pointer]: 밀키트
+          - separator [ref=f172e490]
+          - generic [ref=f172e491]:
+            - heading "크기" [level=5] [ref=f172e492]
+            - list [ref=f172e494]:
+              - listitem [ref=f172e495]:
+                - generic [ref=f172e496] [cursor=pointer]: 미니
+              - listitem [ref=f172e498]:
+                - generic [ref=f172e499] [cursor=pointer]: 일반형
+          - separator [ref=f172e501]
+          - generic [ref=f172e502]:
+            - heading "개별포장 여부" [level=5] [ref=f172e503]
+            - list [ref=f172e505]:
+              - listitem [ref=f172e506]:
+                - generic [ref=f172e507] [cursor=pointer]: 개별포장
+          - separator [ref=f172e509]
+          - generic [ref=f172e510]:
+            - heading "별점" [level=5] [ref=f172e511]
+            - list [ref=f172e513]:
+              - listitem [ref=f172e514]:
+                - generic "전체" [ref=f172e515]: 별점전체
+              - listitem [ref=f172e516]:
+                - generic "4점 이상" [ref=f172e517]:
+                  - generic [ref=f172e518] [cursor=pointer]
+                  - text: 4점 이상
+              - listitem [ref=f172e519]:
+                - generic "3점 이상" [ref=f172e520]:
+                  - generic [ref=f172e521] [cursor=pointer]
+                  - text: 3점 이상
+              - listitem [ref=f172e522]:
+                - generic "2점 이상" [ref=f172e523]:
+                  - generic [ref=f172e524] [cursor=pointer]
+                  - text: 2점 이상
+              - listitem [ref=f172e525]:
+                - generic "1점 이상" [ref=f172e526]:
+                  - generic [ref=f172e527] [cursor=pointer]
+                  - text: 1점 이상
+          - separator [ref=f172e528]
+          - generic [ref=f172e529]:
+            - heading "가격" [level=5] [ref=f172e530]
+            - list [ref=f172e532]:
+              - listitem [ref=f172e533]:
+                - generic "priceFilter" [ref=f172e534]: 가격 전체
+              - listitem [ref=f172e535]:
+                - generic "priceFilter" [ref=f172e536]: 5천원 이하
+              - listitem [ref=f172e537]:
+                - generic "priceFilter" [ref=f172e538]: 5천원~1만원
+              - listitem [ref=f172e539]:
+                - generic "priceFilter" [ref=f172e540]: 1만원~1만 5천원
+              - listitem [ref=f172e541]:
+                - generic "priceFilter" [ref=f172e542]: 1만 5천원~2만원
+              - listitem [ref=f172e543]:
+                - generic "priceFilter" [ref=f172e544]: 2만원 이상
+            - generic [ref=f172e545]:
+              - generic [ref=f172e546]:
+                - textbox "minPrice" [ref=f172e547]
+                - generic [ref=f172e548]: ~
+                - textbox "maxPrice" [ref=f172e549]
+                - text: 원
+              - generic "priceFilter" [ref=f172e550]: 검색
+          - separator [ref=f172e551]
+        - generic [ref=f172e554]:
+          - generic [ref=f172e555]: 현재 검색 결과에 만족하셨나요?
+          - button [ref=f172e556] [cursor=pointer]
+          - button [ref=f172e557] [cursor=pointer]
+          - generic [ref=f172e558]:
+            - paragraph [ref=f172e559]: 어떤 문제가 있었나요?
+            - list [ref=f172e560]:
+              - listitem [ref=f172e561] [cursor=pointer]: 기타 원하는 옵션이 없어요
+      - generic [ref=f172e562]:
+        - generic [ref=f172e563]:
+          - heading [level=1] [ref=f172e564]:
+            - strong [ref=f172e565]: "'식빵'"
+            - text: 에 대한 검색결과
+          - generic [ref=f172e566]:
+            - text: "선택한 필터:"
+            - link "로켓배송 삭제" [ref=f172e568] [cursor=pointer]:
+              - /url: "#"
+              - text: 로켓배송
+              - generic [ref=f172e569]: 삭제
+          - generic [ref=f172e570]:
+            - generic [ref=f172e573]:
+              - checkbox "배송비 포함" [ref=f172e574] [cursor=pointer]
+              - generic [ref=f172e577]: 배송비 포함
+            - list [ref=f172e581]:
+              - listitem [ref=f172e582]:
+                - radio "쿠팡 랭킹순" [ref=f172e583]
+                - generic [ref=f172e584] [cursor=pointer]: 쿠팡 랭킹순
+                - generic [ref=f172e585]: 설명
+              - listitem [ref=f172e586]:
+                - radio "낮은가격순" [checked] [ref=f172e587]
+                - generic [ref=f172e588] [cursor=pointer]: 낮은가격순
+              - listitem [ref=f172e589]:
+                - radio "높은가격순" [ref=f172e590]
+                - generic [ref=f172e591] [cursor=pointer]: 높은가격순
+              - listitem [ref=f172e592]:
+                - radio "판매량순" [ref=f172e593]
+                - generic [ref=f172e594] [cursor=pointer]: 판매량순
+              - listitem [ref=f172e595]:
+                - radio "최신순" [ref=f172e596]
+                - generic [ref=f172e597] [cursor=pointer]: 최신순
+        - link [ref=f172e604] [cursor=pointer]:
+          - /url: https://shop.coupang.com/cj/527311?source=brandstore_display_ads&adType=DA&eventId=rZWAldECJSlLsTvW
+          - img "11765565" [ref=f172e605]
+        - generic [ref=f172e606]:
+          - list [ref=f172e608]:
+            - listitem [ref=f172e609] [cursor=pointer]:
+              - link "곰곰 데일리 식빵, 330g, 1개 1,840원 (10g당 56원) 내일(토) 새벽 도착 보장 4.5 (34,307) 최대 92원 적립 최대 92원 적립 1" [ref=f172e610]:
+                - /url: /vp/products/8437193076?itemId=24402489407&vendorItemId=91417292989&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=0&rank=0
+                - figure [ref=f172e611]:
+                  - img "곰곰 데일리 식빵, 330g, 1개" [ref=f172e612]
+                - generic [ref=f172e613]:
+                  - generic [ref=f172e615]: 곰곰 데일리 식빵, 330g, 1개
+                  - generic [ref=f172e618]:
+                    - generic [ref=f172e619]: 1,840원
+                    - generic [ref=f172e620]: (10g당 56원)
+                  - generic [ref=f172e621]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e627]:
+                    - generic "4.5" [ref=f172e628]
+                    - generic [ref=f172e634]: (34,307)
+                  - generic [ref=f172e637]:
+                    - img "최대 92원 적립" [ref=f172e638]
+                    - generic [ref=f172e639]: 최대 92원 적립
+                  - generic [ref=f172e640]: "1"
+            - listitem [ref=f172e641] [cursor=pointer]:
+              - link "곰곰 옥수수식빵, 360g, 1개 1,990원 (10g당 55원) 내일(토) 새벽 도착 보장 4.5 (6,019) 최대 100원 적립 최대 100원 적립 2" [ref=f172e642]:
+                - /url: /vp/products/9074897297?itemId=26654873650&vendorItemId=93627343836&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=1&rank=1
+                - figure [ref=f172e643]:
+                  - img "곰곰 옥수수식빵, 360g, 1개" [ref=f172e644]
+                - generic [ref=f172e645]:
+                  - generic [ref=f172e647]: 곰곰 옥수수식빵, 360g, 1개
+                  - generic [ref=f172e650]:
+                    - generic [ref=f172e651]: 1,990원
+                    - generic [ref=f172e652]: (10g당 55원)
+                  - generic [ref=f172e653]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e659]:
+                    - generic "4.5" [ref=f172e660]
+                    - generic [ref=f172e666]: (6,019)
+                  - generic [ref=f172e669]:
+                    - img "최대 100원 적립" [ref=f172e670]
+                    - generic [ref=f172e671]: 최대 100원 적립
+                  - generic [ref=f172e672]: "2"
+            - listitem [ref=f172e673] [cursor=pointer]:
+              - link "곰곰 우유식빵, 330g, 1개 2,180원 (10g당 66원) 내일(토) 새벽 도착 보장 5 (374,994) 최대 109원 적립 최대 109원 적립 3" [ref=f172e674]:
+                - /url: /vp/products/1956171516?itemId=3323940471&vendorItemId=71310799325&pickType=COU_PICK&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=2&rank=2
+                - figure [ref=f172e675]:
+                  - img "곰곰 우유식빵, 330g, 1개" [ref=f172e676]
+                - generic [ref=f172e677]:
+                  - generic [ref=f172e682]: 곰곰 우유식빵, 330g, 1개
+                  - generic [ref=f172e685]:
+                    - generic [ref=f172e686]: 2,180원
+                    - generic [ref=f172e687]: (10g당 66원)
+                  - generic [ref=f172e688]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e694]:
+                    - generic "5" [ref=f172e695]
+                    - generic [ref=f172e701]: (374,994)
+                  - generic [ref=f172e704]:
+                    - img "최대 109원 적립" [ref=f172e705]
+                    - generic [ref=f172e706]: 최대 109원 적립
+                  - generic [ref=f172e707]: "3"
+            - listitem [ref=f172e708] [cursor=pointer]:
+              - link "곰곰 통밀 가득 식빵, 430g, 1개 2,490원 (10g당 58원) 내일(토) 새벽 도착 보장 4.5 (29,329) 최대 125원 적립 최대 125원 적립 4" [ref=f172e709]:
+                - /url: /vp/products/1730791677?itemId=16842131277&vendorItemId=84021336084&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=3&rank=3
+                - figure [ref=f172e710]:
+                  - img "곰곰 통밀 가득 식빵, 430g, 1개" [ref=f172e711]
+                - generic [ref=f172e712]:
+                  - generic [ref=f172e714]: 곰곰 통밀 가득 식빵, 430g, 1개
+                  - generic [ref=f172e717]:
+                    - generic [ref=f172e718]: 2,490원
+                    - generic [ref=f172e719]: (10g당 58원)
+                  - generic [ref=f172e720]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e726]:
+                    - generic "4.5" [ref=f172e727]
+                    - generic [ref=f172e733]: (29,329)
+                  - generic [ref=f172e736]:
+                    - img "최대 125원 적립" [ref=f172e737]
+                    - generic [ref=f172e738]: 최대 125원 적립
+                  - generic [ref=f172e739]: "4"
+            - listitem [ref=f172e740] [cursor=pointer]:
+              - link "삼립 촉촉한 우유식빵, 330g, 1개 2,580원 (10g당 78원) 내일(토) 새벽 도착 보장 5 (20,347) 최대 129원 적립 최대 129원 적립 5" [ref=f172e741]:
+                - /url: /vp/products/8336355749?itemId=24071444969&vendorItemId=91091152376&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=4&rank=4
+                - figure [ref=f172e742]:
+                  - img "삼립 촉촉한 우유식빵, 330g, 1개" [ref=f172e743]
+                - generic [ref=f172e744]:
+                  - generic [ref=f172e746]: 삼립 촉촉한 우유식빵, 330g, 1개
+                  - generic [ref=f172e749]:
+                    - generic [ref=f172e750]: 2,580원
+                    - generic [ref=f172e751]: (10g당 78원)
+                  - generic [ref=f172e752]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e758]:
+                    - generic "5" [ref=f172e759]
+                    - generic [ref=f172e765]: (20,347)
+                  - generic [ref=f172e768]:
+                    - img "최대 129원 적립" [ref=f172e769]
+                    - generic [ref=f172e770]: 최대 129원 적립
+                  - generic [ref=f172e771]: "5"
+            - listitem [ref=f172e772] [cursor=pointer]:
+              - link "부드러운 10결버터 데니쉬 식빵, 130g, 1개입, 1개 2,620원 (10g당 202원) 내일(토) 새벽 도착 보장 4.5 (3,725) 최대 131원 적립 최대 131원 적립 6" [ref=f172e773]:
+                - /url: /vp/products/8364145246?itemId=24165974201&vendorItemId=91184367419&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=5&rank=5
+                - figure [ref=f172e774]:
+                  - img "부드러운 10결버터 데니쉬 식빵, 130g, 1개입, 1개" [ref=f172e775]
+                - generic [ref=f172e776]:
+                  - generic [ref=f172e778]: 부드러운 10결버터 데니쉬 식빵, 130g, 1개입, 1개
+                  - generic [ref=f172e781]:
+                    - generic [ref=f172e782]: 2,620원
+                    - generic [ref=f172e783]: (10g당 202원)
+                  - generic [ref=f172e784]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e790]:
+                    - generic "4.5" [ref=f172e791]
+                    - generic [ref=f172e797]: (3,725)
+                  - generic [ref=f172e800]:
+                    - img "최대 131원 적립" [ref=f172e801]
+                    - generic [ref=f172e802]: 최대 131원 적립
+                  - generic [ref=f172e803]: "6"
+            - listitem [ref=f172e804] [cursor=pointer]:
+              - link "곰곰 저당 통밀 식빵, 360g, 1개 2,990원 (10g당 83원) 내일(토) 새벽 도착 보장 4.5 (9,559) 최대 150원 적립 최대 150원 적립 7" [ref=f172e805]:
+                - /url: /vp/products/8943313555?itemId=26157089336&vendorItemId=93136982216&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=6&rank=6
+                - figure [ref=f172e806]:
+                  - img "곰곰 저당 통밀 식빵, 360g, 1개" [ref=f172e807]
+                - generic [ref=f172e808]:
+                  - generic [ref=f172e810]: 곰곰 저당 통밀 식빵, 360g, 1개
+                  - generic [ref=f172e813]:
+                    - generic [ref=f172e814]: 2,990원
+                    - generic [ref=f172e815]: (10g당 83원)
+                  - generic [ref=f172e816]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e822]:
+                    - generic "4.5" [ref=f172e823]
+                    - generic [ref=f172e829]: (9,559)
+                  - generic [ref=f172e832]:
+                    - img "최대 150원 적립" [ref=f172e833]
+                    - generic [ref=f172e834]: 최대 150원 적립
+                  - generic [ref=f172e835]: "7"
+            - listitem [ref=f172e836] [cursor=pointer]:
+              - link "삼립 키키오븐 순수한 우유식빵 (냉동), 420g, 1개 할인 3,300원 1% 3,240원 (10g당 77원) 내일(토) 새벽 도착 보장 4.5 (822) 최대 149원 적립 최대 149원 적립 8" [ref=f172e837]:
+                - /url: /vp/products/9545900214?itemId=28478723199&vendorItemId=95428903869&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=7&rank=7
+                - figure [ref=f172e838]:
+                  - img "삼립 키키오븐 순수한 우유식빵 (냉동), 420g, 1개" [ref=f172e839]
+                - generic [ref=f172e840]:
+                  - generic [ref=f172e842]: 삼립 키키오븐 순수한 우유식빵 (냉동), 420g, 1개
+                  - generic [ref=f172e843]:
+                    - generic [ref=f172e844]:
+                      - generic [ref=f172e845]: 할인
+                      - deletion [ref=f172e846]: 3,300원
+                    - generic [ref=f172e848]:
+                      - generic [ref=f172e849]: 1%
+                      - generic [ref=f172e854]: 3,240원
+                      - generic [ref=f172e855]: (10g당 77원)
+                  - generic [ref=f172e856]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e862]:
+                    - generic "4.5" [ref=f172e863]
+                    - generic [ref=f172e869]: (822)
+                  - generic [ref=f172e872]:
+                    - img "최대 149원 적립" [ref=f172e873]
+                    - generic [ref=f172e874]: 최대 149원 적립
+                  - generic [ref=f172e875]: "8"
+            - listitem [ref=f172e876] [cursor=pointer]:
+              - link "삼립 56시간 저온숙성 탕종 찰 숙식빵, 420g, 1개 3,280원 (10g당 78원) 내일(토) 새벽 도착 보장 5 (177,820) 최대 164원 적립 최대 164원 적립 9" [ref=f172e877]:
+                - /url: /vp/products/7000118912?itemId=17163971844&vendorItemId=84336357270&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=8&rank=8
+                - figure [ref=f172e878]:
+                  - img "삼립 56시간 저온숙성 탕종 찰 숙식빵, 420g, 1개" [ref=f172e879]
+                - generic [ref=f172e880]:
+                  - generic [ref=f172e882]: 삼립 56시간 저온숙성 탕종 찰 숙식빵, 420g, 1개
+                  - generic [ref=f172e885]:
+                    - generic [ref=f172e886]: 3,280원
+                    - generic [ref=f172e887]: (10g당 78원)
+                  - generic [ref=f172e888]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e894]:
+                    - generic "5" [ref=f172e895]
+                    - generic [ref=f172e901]: (177,820)
+                  - generic [ref=f172e904]:
+                    - img "최대 164원 적립" [ref=f172e905]
+                    - generic [ref=f172e906]: 최대 164원 적립
+                  - generic [ref=f172e907]: "9"
+            - listitem [ref=f172e908] [cursor=pointer]:
+              - link "아워홈 부드러운 토스트식빵, 700g, 1개 3,250원 (10g당 46원) 내일(토) 새벽 도착 보장 5 (30,207) 최대 163원 적립 최대 163원 적립 10" [ref=f172e909]:
+                - /url: /vp/products/8386334253?itemId=24238914810&vendorItemId=91255989580&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=9&rank=9
+                - figure [ref=f172e910]:
+                  - img "아워홈 부드러운 토스트식빵, 700g, 1개" [ref=f172e911]
+                - generic [ref=f172e912]:
+                  - generic [ref=f172e914]: 아워홈 부드러운 토스트식빵, 700g, 1개
+                  - generic [ref=f172e917]:
+                    - generic [ref=f172e918]: 3,250원
+                    - generic [ref=f172e919]: (10g당 46원)
+                  - generic [ref=f172e920]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e926]:
+                    - generic "5" [ref=f172e927]
+                    - generic [ref=f172e933]: (30,207)
+                  - generic [ref=f172e936]:
+                    - img "최대 163원 적립" [ref=f172e937]
+                    - generic [ref=f172e938]: 최대 163원 적립
+                  - generic [ref=f172e939]: "10"
+            - listitem [ref=f172e940] [cursor=pointer]:
+              - link "곰곰 우유식빵, 660g, 1개 3,630원 (10g당 55원) 내일(토) 새벽 도착 보장 5 (374,994) 최대 181원 적립 최대 181원 적립" [ref=f172e941]:
+                - /url: /vp/products/1956171516?itemId=3323940470&vendorItemId=71310799287&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=10&rank=10
+                - figure [ref=f172e942]:
+                  - img "곰곰 우유식빵, 660g, 1개" [ref=f172e943]
+                - generic [ref=f172e944]:
+                  - generic [ref=f172e946]: 곰곰 우유식빵, 660g, 1개
+                  - generic [ref=f172e949]:
+                    - generic [ref=f172e950]: 3,630원
+                    - generic [ref=f172e951]: (10g당 55원)
+                  - generic [ref=f172e952]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e958]:
+                    - generic "5" [ref=f172e959]
+                    - generic [ref=f172e965]: (374,994)
+                  - generic [ref=f172e968]:
+                    - img "최대 181원 적립" [ref=f172e969]
+                    - generic [ref=f172e970]: 최대 181원 적립
+            - listitem [ref=f172e971] [cursor=pointer]:
+              - link "삼립 밀배아발효 샌드위치 식빵, 790g, 1개 3,980원 (10g당 50원) 내일(토) 새벽 도착 보장 5 (13,380) 최대 199원 적립 최대 199원 적립" [ref=f172e972]:
+                - /url: /vp/products/8653047613?itemId=25120377920&vendorItemId=92119754230&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=11&rank=11
+                - figure [ref=f172e973]:
+                  - img "삼립 밀배아발효 샌드위치 식빵, 790g, 1개" [ref=f172e974]
+                - generic [ref=f172e975]:
+                  - generic [ref=f172e977]: 삼립 밀배아발효 샌드위치 식빵, 790g, 1개
+                  - generic [ref=f172e980]:
+                    - generic [ref=f172e981]: 3,980원
+                    - generic [ref=f172e982]: (10g당 50원)
+                  - generic [ref=f172e983]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e989]:
+                    - generic "5" [ref=f172e990]
+                    - generic [ref=f172e996]: (13,380)
+                  - generic [ref=f172e999]:
+                    - img "최대 199원 적립" [ref=f172e1000]
+                    - generic [ref=f172e1001]: 최대 199원 적립
+            - listitem [ref=f172e1002] [cursor=pointer]:
+              - link "삼립 캘리포니아 호두듬뿍 호밀식빵, 385g, 1개 3,980원 (10g당 103원) 내일(토) 새벽 도착 보장 4.5 (386) 최대 199원 적립 최대 199원 적립" [ref=f172e1003]:
+                - /url: /vp/products/9486955902?itemId=28251059182&vendorItemId=95204453444&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=12&rank=12
+                - figure [ref=f172e1004]:
+                  - img "삼립 캘리포니아 호두듬뿍 호밀식빵, 385g, 1개" [ref=f172e1005]
+                - generic [ref=f172e1006]:
+                  - generic [ref=f172e1008]: 삼립 캘리포니아 호두듬뿍 호밀식빵, 385g, 1개
+                  - generic [ref=f172e1011]:
+                    - generic [ref=f172e1012]: 3,980원
+                    - generic [ref=f172e1013]: (10g당 103원)
+                  - generic [ref=f172e1014]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e1020]:
+                    - generic "4.5" [ref=f172e1021]
+                    - generic [ref=f172e1027]: (386)
+                  - generic [ref=f172e1030]:
+                    - img "최대 199원 적립" [ref=f172e1031]
+                    - generic [ref=f172e1032]: 최대 199원 적립
+            - listitem [ref=f172e1033] [cursor=pointer]:
+              - link "곰곰 우유 가득 식빵, 700g, 1개 3,850원 (10g당 55원) 내일(토) 새벽 도착 보장 5 (46,324) 최대 193원 적립 최대 193원 적립" [ref=f172e1034]:
+                - /url: /vp/products/6942954519?itemId=17413624637&vendorItemId=84582919388&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=13&rank=13
+                - figure [ref=f172e1035]:
+                  - img "곰곰 우유 가득 식빵, 700g, 1개" [ref=f172e1036]
+                - generic [ref=f172e1037]:
+                  - generic [ref=f172e1039]: 곰곰 우유 가득 식빵, 700g, 1개
+                  - generic [ref=f172e1042]:
+                    - generic [ref=f172e1043]: 3,850원
+                    - generic [ref=f172e1044]: (10g당 55원)
+                  - generic [ref=f172e1045]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e1051]:
+                    - generic "5" [ref=f172e1052]
+                    - generic [ref=f172e1058]: (46,324)
+                  - generic [ref=f172e1061]:
+                    - img "최대 193원 적립" [ref=f172e1062]
+                    - generic [ref=f172e1063]: 최대 193원 적립
+            - listitem [ref=f172e1064] [cursor=pointer]:
+              - link "기린 아이러브 토스트, 750g, 1개입, 1개 3,780원 (10g당 50원) 내일(토) 새벽 도착 보장 5 (16,209) 최대 189원 적립 최대 189원 적립" [ref=f172e1065]:
+                - /url: /vp/products/7361002195?itemId=18964835027&vendorItemId=86090640515&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=14&rank=14
+                - figure [ref=f172e1066]:
+                  - img "기린 아이러브 토스트, 750g, 1개입, 1개" [ref=f172e1067]
+                - generic [ref=f172e1068]:
+                  - generic [ref=f172e1070]: 기린 아이러브 토스트, 750g, 1개입, 1개
+                  - generic [ref=f172e1073]:
+                    - generic [ref=f172e1074]: 3,780원
+                    - generic [ref=f172e1075]: (10g당 50원)
+                  - generic [ref=f172e1076]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e1082]:
+                    - generic "5" [ref=f172e1083]
+                    - generic [ref=f172e1089]: (16,209)
+                  - generic [ref=f172e1092]:
+                    - img "최대 189원 적립" [ref=f172e1093]
+                    - generic [ref=f172e1094]: 최대 189원 적립
+            - listitem [ref=f172e1095] [cursor=pointer]:
+              - link "곰곰 옥수수식빵, 360g, 2개 3,860원 (10g당 54원) 내일(토) 새벽 도착 보장 4.5 (6,019) 최대 193원 적립 최대 193원 적립" [ref=f172e1096]:
+                - /url: /vp/products/9074897297?itemId=27406202074&vendorItemId=94371864183&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=15&rank=15
+                - figure [ref=f172e1097]:
+                  - img "곰곰 옥수수식빵, 360g, 2개" [ref=f172e1098]
+                - generic [ref=f172e1099]:
+                  - generic [ref=f172e1101]: 곰곰 옥수수식빵, 360g, 2개
+                  - generic [ref=f172e1104]:
+                    - generic [ref=f172e1105]: 3,860원
+                    - generic [ref=f172e1106]: (10g당 54원)
+                  - generic [ref=f172e1107]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e1113]:
+                    - generic "4.5" [ref=f172e1114]
+                    - generic [ref=f172e1120]: (6,019)
+                  - generic [ref=f172e1123]:
+                    - img "최대 193원 적립" [ref=f172e1124]
+                    - generic [ref=f172e1125]: 최대 193원 적립
+            - listitem [ref=f172e1126] [cursor=pointer]:
+              - link "도제식빵 더 촉촉한 우유 듬뿍 탕종식빵, 440g, 1개 4,320원 (10g당 98원) 내일(토) 새벽 도착 보장 4.5 (684) 최대 216원 적립 최대 216원 적립 단 4개 남음 빨리 주문하세요!" [ref=f172e1127]:
+                - /url: /vp/products/9423135854?itemId=28008639018&vendorItemId=94966018709&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=16&rank=16
+                - figure [ref=f172e1128]:
+                  - img "도제식빵 더 촉촉한 우유 듬뿍 탕종식빵, 440g, 1개" [ref=f172e1129]
+                - generic [ref=f172e1130]:
+                  - generic [ref=f172e1132]: 도제식빵 더 촉촉한 우유 듬뿍 탕종식빵, 440g, 1개
+                  - generic [ref=f172e1135]:
+                    - generic [ref=f172e1136]: 4,320원
+                    - generic [ref=f172e1137]: (10g당 98원)
+                  - generic [ref=f172e1138]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e1144]:
+                    - generic "4.5" [ref=f172e1145]
+                    - generic [ref=f172e1151]: (684)
+                  - generic [ref=f172e1154]:
+                    - img "최대 216원 적립" [ref=f172e1155]
+                    - generic [ref=f172e1156]: 최대 216원 적립
+                  - generic [ref=f172e1157]:
+                    - strong [ref=f172e1158]: 단 4개 남음
+                    - generic [ref=f172e1159]: 빨리 주문하세요!
+            - listitem [ref=f172e1160] [cursor=pointer]:
+              - link "아워홈 맛있는 모닝 우유식빵, 720g, 1개 3,960원 (10g당 55원) 내일(토) 새벽 도착 보장 5 (11,091) 최대 198원 적립 최대 198원 적립" [ref=f172e1161]:
+                - /url: /vp/products/8408932610?itemId=24311840646&vendorItemId=91327690964&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=17&rank=17
+                - figure [ref=f172e1162]:
+                  - img "아워홈 맛있는 모닝 우유식빵, 720g, 1개" [ref=f172e1163]
+                - generic [ref=f172e1164]:
+                  - generic [ref=f172e1166]: 아워홈 맛있는 모닝 우유식빵, 720g, 1개
+                  - generic [ref=f172e1169]:
+                    - generic [ref=f172e1170]: 3,960원
+                    - generic [ref=f172e1171]: (10g당 55원)
+                  - generic [ref=f172e1172]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e1178]:
+                    - generic "5" [ref=f172e1179]
+                    - generic [ref=f172e1185]: (11,091)
+                  - generic [ref=f172e1188]:
+                    - img "최대 198원 적립" [ref=f172e1189]
+                    - generic [ref=f172e1190]: 최대 198원 적립
+            - listitem [ref=f172e1191] [cursor=pointer]:
+              - link "프로젝트H 프로틴 에그식빵, 400g, 1개 3,980원 (10g당 100원) 내일(토) 새벽 도착 보장 4.5 (514) 최대 199원 적립 최대 199원 적립" [ref=f172e1192]:
+                - /url: /vp/products/9416758443?itemId=27983528324&vendorItemId=94941258803&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=18&rank=18
+                - figure [ref=f172e1193]:
+                  - img "프로젝트H 프로틴 에그식빵, 400g, 1개" [ref=f172e1194]
+                - generic [ref=f172e1195]:
+                  - generic [ref=f172e1197]: 프로젝트H 프로틴 에그식빵, 400g, 1개
+                  - generic [ref=f172e1200]:
+                    - generic [ref=f172e1201]: 3,980원
+                    - generic [ref=f172e1202]: (10g당 100원)
+                  - generic [ref=f172e1203]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e1209]:
+                    - generic "4.5" [ref=f172e1210]
+                    - generic [ref=f172e1216]: (514)
+                  - generic [ref=f172e1219]:
+                    - img "최대 199원 적립" [ref=f172e1220]
+                    - generic [ref=f172e1221]: 최대 199원 적립
+            - listitem [ref=f172e1222] [cursor=pointer]:
+              - link "곰곰 프렌치버터 토스트, 420g, 1개입, 1개 4,190원 (10g당 100원) 내일(토) 새벽 도착 보장 5 (23,789) 최대 210원 적립 최대 210원 적립" [ref=f172e1223]:
+                - /url: /vp/products/2304975424?itemId=3972839407&vendorItemId=71957188013&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=19&rank=19
+                - figure [ref=f172e1224]:
+                  - img "곰곰 프렌치버터 토스트, 420g, 1개입, 1개" [ref=f172e1225]
+                - generic [ref=f172e1226]:
+                  - generic [ref=f172e1228]: 곰곰 프렌치버터 토스트, 420g, 1개입, 1개
+                  - generic [ref=f172e1231]:
+                    - generic [ref=f172e1232]: 4,190원
+                    - generic [ref=f172e1233]: (10g당 100원)
+                  - generic [ref=f172e1234]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e1240]:
+                    - generic "5" [ref=f172e1241]
+                    - generic [ref=f172e1247]: (23,789)
+                  - generic [ref=f172e1250]:
+                    - img "최대 210원 적립" [ref=f172e1251]
+                    - generic [ref=f172e1252]: 최대 210원 적립
+            - listitem [ref=f172e1253] [cursor=pointer]:
+              - link "델리팜 더 부드러운 식빵 6입, 1개, 380g 4,980원 (10g당 131원) 내일(토) 새벽 도착 보장 5 (20,945) 최대 200원 적립 최대 200원 적립" [ref=f172e1254]:
+                - /url: /vp/products/6667225398?itemId=15326791909&vendorItemId=86091413660&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=20&rank=20
+                - figure [ref=f172e1255]:
+                  - img "델리팜 더 부드러운 식빵 6입, 1개, 380g" [ref=f172e1256]
+                - generic [ref=f172e1257]:
+                  - generic [ref=f172e1259]: 델리팜 더 부드러운 식빵 6입, 1개, 380g
+                  - generic [ref=f172e1262]:
+                    - generic [ref=f172e1263]: 4,980원
+                    - generic [ref=f172e1264]: (10g당 131원)
+                  - generic [ref=f172e1265]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e1271]:
+                    - generic "5" [ref=f172e1272]
+                    - generic [ref=f172e1278]: (20,945)
+                  - generic [ref=f172e1281]:
+                    - img "최대 200원 적립" [ref=f172e1282]
+                    - generic [ref=f172e1283]: 최대 200원 적립
+            - listitem [ref=f172e1284] [cursor=pointer]:
+              - link "삼립 토종효모로 만든 통밀식빵, 755g, 1개 4,280원 (10g당 57원) 내일(토) 새벽 도착 보장 5 (157,409) 최대 214원 적립 최대 214원 적립" [ref=f172e1285]:
+                - /url: /vp/products/5872656862?itemId=10279024538&vendorItemId=77561389901&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=21&rank=21
+                - figure [ref=f172e1286]:
+                  - img "삼립 토종효모로 만든 통밀식빵, 755g, 1개" [ref=f172e1287]
+                - generic [ref=f172e1288]:
+                  - generic [ref=f172e1290]: 삼립 토종효모로 만든 통밀식빵, 755g, 1개
+                  - generic [ref=f172e1293]:
+                    - generic [ref=f172e1294]: 4,280원
+                    - generic [ref=f172e1295]: (10g당 57원)
+                  - generic [ref=f172e1296]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e1302]:
+                    - generic "5" [ref=f172e1303]
+                    - generic [ref=f172e1309]: (157,409)
+                  - generic [ref=f172e1312]:
+                    - img "최대 214원 적립" [ref=f172e1313]
+                    - generic [ref=f172e1314]: 최대 214원 적립
+            - listitem [ref=f172e1315] [cursor=pointer]:
+              - link "서울우유 우유식빵, 410g, 1개 4,300원 (10g당 105원) 내일(토) 새벽 도착 보장 4.5 (569) 최대 215원 적립 최대 215원 적립" [ref=f172e1316]:
+                - /url: /vp/products/9661236758?itemId=28882025836&vendorItemId=95814951112&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=22&rank=22
+                - figure [ref=f172e1317]:
+                  - img "서울우유 우유식빵, 410g, 1개" [ref=f172e1318]
+                - generic [ref=f172e1319]:
+                  - generic [ref=f172e1321]: 서울우유 우유식빵, 410g, 1개
+                  - generic [ref=f172e1324]:
+                    - generic [ref=f172e1325]: 4,300원
+                    - generic [ref=f172e1326]: (10g당 105원)
+                  - generic [ref=f172e1327]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e1333]:
+                    - generic "4.5" [ref=f172e1334]
+                    - generic [ref=f172e1340]: (569)
+                  - generic [ref=f172e1343]:
+                    - img "최대 215원 적립" [ref=f172e1344]
+                    - generic [ref=f172e1345]: 최대 215원 적립
+            - listitem [ref=f172e1346] [cursor=pointer]:
+              - link "베즐리 비건식빵, 185g, 1개 4,400원 (10g당 238원) 내일(토) 새벽 도착 보장 4.5 (94) 최대 220원 적립 최대 220원 적립 단 2개 남음 빨리 주문하세요!" [ref=f172e1347]:
+                - /url: /vp/products/9096914783?itemId=26739939008&vendorItemId=93711197536&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=23&rank=23
+                - figure [ref=f172e1348]:
+                  - img "베즐리 비건식빵, 185g, 1개" [ref=f172e1349]
+                - generic [ref=f172e1350]:
+                  - generic [ref=f172e1352]: 베즐리 비건식빵, 185g, 1개
+                  - generic [ref=f172e1355]:
+                    - generic [ref=f172e1356]: 4,400원
+                    - generic [ref=f172e1357]: (10g당 238원)
+                  - generic [ref=f172e1358]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e1364]:
+                    - generic "4.5" [ref=f172e1365]
+                    - generic [ref=f172e1371]: (94)
+                  - generic [ref=f172e1374]:
+                    - img "최대 220원 적립" [ref=f172e1375]
+                    - generic [ref=f172e1376]: 최대 220원 적립
+                  - generic [ref=f172e1377]:
+                    - strong [ref=f172e1378]: 단 2개 남음
+                    - generic [ref=f172e1379]: 빨리 주문하세요!
+            - listitem [ref=f172e1380] [cursor=pointer]:
+              - link "삼립 샌드위치 식빵 (냉동), 990g, 1개 4,480원 (10g당 45원) 내일(토) 새벽 도착 보장 5 (5,220) 최대 224원 적립 최대 224원 적립" [ref=f172e1381]:
+                - /url: /vp/products/8585095386?itemId=24887671479&vendorItemId=91894344077&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=24&rank=24
+                - figure [ref=f172e1382]:
+                  - img "삼립 샌드위치 식빵 (냉동), 990g, 1개" [ref=f172e1383]
+                - generic [ref=f172e1384]:
+                  - generic [ref=f172e1386]: 삼립 샌드위치 식빵 (냉동), 990g, 1개
+                  - generic [ref=f172e1389]:
+                    - generic [ref=f172e1390]: 4,480원
+                    - generic [ref=f172e1391]: (10g당 45원)
+                  - generic [ref=f172e1392]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e1398]:
+                    - generic "5" [ref=f172e1399]
+                    - generic [ref=f172e1405]: (5,220)
+                  - generic [ref=f172e1408]:
+                    - img "최대 224원 적립" [ref=f172e1409]
+                    - generic [ref=f172e1410]: 최대 224원 적립
+            - listitem [ref=f172e1411] [cursor=pointer]:
+              - link "밀도 호밀잡곡 식빵, 480g, 1개 4,860원 (10g당 101원) 내일(토) 새벽 도착 보장 5 (31,473) 최대 243원 적립 최대 243원 적립" [ref=f172e1412]:
+                - /url: /vp/products/7313448931?itemId=18740936628&vendorItemId=85873224179&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=25&rank=25
+                - figure [ref=f172e1413]:
+                  - img "밀도 호밀잡곡 식빵, 480g, 1개" [ref=f172e1414]
+                - generic [ref=f172e1415]:
+                  - generic [ref=f172e1417]: 밀도 호밀잡곡 식빵, 480g, 1개
+                  - generic [ref=f172e1420]:
+                    - generic [ref=f172e1421]: 4,860원
+                    - generic [ref=f172e1422]: (10g당 101원)
+                  - generic [ref=f172e1423]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e1429]:
+                    - generic "5" [ref=f172e1430]
+                    - generic [ref=f172e1436]: (31,473)
+                  - generic [ref=f172e1439]:
+                    - img "최대 243원 적립" [ref=f172e1440]
+                    - generic [ref=f172e1441]: 최대 243원 적립
+            - listitem [ref=f172e1442] [cursor=pointer]:
+              - link "델리팜 더 부드러운 통밀식빵 8입, 380g, 1개 4,980원 (10g당 131원) 내일(토) 새벽 도착 보장 5 (4,831) 최대 249원 적립 최대 249원 적립" [ref=f172e1443]:
+                - /url: /vp/products/8067716063?itemId=22697340836&vendorItemId=89733014025&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=26&rank=26
+                - figure [ref=f172e1444]:
+                  - img "델리팜 더 부드러운 통밀식빵 8입, 380g, 1개" [ref=f172e1445]
+                - generic [ref=f172e1446]:
+                  - generic [ref=f172e1448]: 델리팜 더 부드러운 통밀식빵 8입, 380g, 1개
+                  - generic [ref=f172e1451]:
+                    - generic [ref=f172e1452]: 4,980원
+                    - generic [ref=f172e1453]: (10g당 131원)
+                  - generic [ref=f172e1454]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e1460]:
+                    - generic "5" [ref=f172e1461]
+                    - generic [ref=f172e1467]: (4,831)
+                  - generic [ref=f172e1470]:
+                    - img "최대 249원 적립" [ref=f172e1471]
+                    - generic [ref=f172e1472]: 최대 249원 적립
+            - listitem [ref=f172e1473] [cursor=pointer]:
+              - link "삼립 YAAM 브리오슈 식빵 (냉동), 610g, 1개 4,780원 (10g당 78원) 내일(토) 새벽 도착 보장 4.5 (1,221) 최대 239원 적립 최대 239원 적립" [ref=f172e1474]:
+                - /url: /vp/products/9047977340?itemId=26554325361&vendorItemId=93528126235&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=27&rank=27
+                - figure [ref=f172e1475]:
+                  - img "삼립 YAAM 브리오슈 식빵 (냉동), 610g, 1개" [ref=f172e1476]
+                - generic [ref=f172e1477]:
+                  - generic [ref=f172e1479]: 삼립 YAAM 브리오슈 식빵 (냉동), 610g, 1개
+                  - generic [ref=f172e1482]:
+                    - generic [ref=f172e1483]: 4,780원
+                    - generic [ref=f172e1484]: (10g당 78원)
+                  - generic [ref=f172e1485]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e1491]:
+                    - generic "4.5" [ref=f172e1492]
+                    - generic [ref=f172e1498]: (1,221)
+                  - generic [ref=f172e1501]:
+                    - img "최대 239원 적립" [ref=f172e1502]
+                    - generic [ref=f172e1503]: 최대 239원 적립
+            - listitem [ref=f172e1504] [cursor=pointer]:
+              - link "근대골목단팥빵 소금 식빵 (냉동), 170g, 1개 4,800원 (10g당 282원) 내일(토) 새벽 도착 보장 최대 240원 적립 최대 240원 적립" [ref=f172e1505]:
+                - /url: /vp/products/9691903632?itemId=28987348791&vendorItemId=95916269306&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=28&rank=28
+                - figure [ref=f172e1506]:
+                  - img "근대골목단팥빵 소금 식빵 (냉동), 170g, 1개" [ref=f172e1507]
+                - generic [ref=f172e1508]:
+                  - generic [ref=f172e1510]: 근대골목단팥빵 소금 식빵 (냉동), 170g, 1개
+                  - generic [ref=f172e1513]:
+                    - generic [ref=f172e1514]: 4,800원
+                    - generic [ref=f172e1515]: (10g당 282원)
+                  - generic [ref=f172e1516]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e1522]:
+                    - img "최대 240원 적립" [ref=f172e1523]
+                    - generic [ref=f172e1524]: 최대 240원 적립
+            - listitem [ref=f172e1525] [cursor=pointer]:
+              - link "삼립 촉촉한 우유식빵, 330g, 2개 4,960원 (10g당 75원) 내일(토) 새벽 도착 보장 5 (20,347) 최대 248원 적립 최대 248원 적립" [ref=f172e1526]:
+                - /url: /vp/products/8336355749?itemId=24118285519&vendorItemId=91137509504&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=29&rank=29
+                - figure [ref=f172e1527]:
+                  - img "삼립 촉촉한 우유식빵, 330g, 2개" [ref=f172e1528]
+                - generic [ref=f172e1529]:
+                  - generic [ref=f172e1531]: 삼립 촉촉한 우유식빵, 330g, 2개
+                  - generic [ref=f172e1534]:
+                    - generic [ref=f172e1535]: 4,960원
+                    - generic [ref=f172e1536]: (10g당 75원)
+                  - generic [ref=f172e1537]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e1543]:
+                    - generic "5" [ref=f172e1544]
+                    - generic [ref=f172e1550]: (20,347)
+                  - generic [ref=f172e1553]:
+                    - img "최대 248원 적립" [ref=f172e1554]
+                    - generic [ref=f172e1555]: 최대 248원 적립
+            - listitem [ref=f172e1556] [cursor=pointer]:
+              - link "부드러운 10결버터 데니쉬 식빵, 130g, 1개입, 2개 5,080원 (10g당 195원) 내일(토) 새벽 도착 보장 4.5 (3,725) 최대 254원 적립 최대 254원 적립" [ref=f172e1557]:
+                - /url: /vp/products/8364145246?itemId=24189692210&vendorItemId=91207446579&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=30&rank=30
+                - figure [ref=f172e1558]:
+                  - img "부드러운 10결버터 데니쉬 식빵, 130g, 1개입, 2개" [ref=f172e1559]
+                - generic [ref=f172e1560]:
+                  - generic [ref=f172e1562]: 부드러운 10결버터 데니쉬 식빵, 130g, 1개입, 2개
+                  - generic [ref=f172e1565]:
+                    - generic [ref=f172e1566]: 5,080원
+                    - generic [ref=f172e1567]: (10g당 195원)
+                  - generic [ref=f172e1568]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e1574]:
+                    - generic "4.5" [ref=f172e1575]
+                    - generic [ref=f172e1581]: (3,725)
+                  - generic [ref=f172e1584]:
+                    - img "최대 254원 적립" [ref=f172e1585]
+                    - generic [ref=f172e1586]: 최대 254원 적립
+            - listitem [ref=f172e1587] [cursor=pointer]:
+              - link "밀도 소화가 잘되는 우유로 만든 쌀 식빵, 480g, 1개 할인 5,800원 9% 5,270원 (10g당 110원) 내일(토) 새벽 도착 보장 5 (20,116) 최대 261원 적립 최대 261원 적립" [ref=f172e1588]:
+                - /url: /vp/products/8497210234?itemId=24593744863&vendorItemId=91605361117&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=31&rank=31
+                - figure [ref=f172e1589]:
+                  - img "밀도 소화가 잘되는 우유로 만든 쌀 식빵, 480g, 1개" [ref=f172e1590]
+                - generic [ref=f172e1591]:
+                  - generic [ref=f172e1593]: 밀도 소화가 잘되는 우유로 만든 쌀 식빵, 480g, 1개
+                  - generic [ref=f172e1594]:
+                    - generic [ref=f172e1595]:
+                      - generic [ref=f172e1596]: 할인
+                      - deletion [ref=f172e1597]: 5,800원
+                    - generic [ref=f172e1599]:
+                      - generic [ref=f172e1600]: 9%
+                      - generic [ref=f172e1605]: 5,270원
+                      - generic [ref=f172e1606]: (10g당 110원)
+                  - generic [ref=f172e1607]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e1613]:
+                    - generic "5" [ref=f172e1614]
+                    - generic [ref=f172e1620]: (20,116)
+                  - generic [ref=f172e1623]:
+                    - img "최대 261원 적립" [ref=f172e1624]
+                    - generic [ref=f172e1625]: 최대 261원 적립
+            - listitem [ref=f172e1626] [cursor=pointer]:
+              - link "곰곰 저당 통밀 식빵, 360g, 2개 5,800원 (10g당 81원) 내일(토) 새벽 도착 보장 4.5 (9,559) 최대 290원 적립 최대 290원 적립" [ref=f172e1627]:
+                - /url: /vp/products/8943313555?itemId=27688303562&vendorItemId=94650199426&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=32&rank=32
+                - figure [ref=f172e1628]:
+                  - img "곰곰 저당 통밀 식빵, 360g, 2개" [ref=f172e1629]
+                - generic [ref=f172e1630]:
+                  - generic [ref=f172e1632]: 곰곰 저당 통밀 식빵, 360g, 2개
+                  - generic [ref=f172e1635]:
+                    - generic [ref=f172e1636]: 5,800원
+                    - generic [ref=f172e1637]: (10g당 81원)
+                  - generic [ref=f172e1638]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e1644]:
+                    - generic "4.5" [ref=f172e1645]
+                    - generic [ref=f172e1651]: (9,559)
+                  - generic [ref=f172e1654]:
+                    - img "최대 290원 적립" [ref=f172e1655]
+                    - generic [ref=f172e1656]: 최대 290원 적립
+            - listitem [ref=f172e1657] [cursor=pointer]:
+              - link "페피트 파리 (PEPITE PARIS) 브리오슈 올리브 치즈 식빵, 230g, 1개 6,300원 (10g당 274원) 내일(토) 새벽 도착 보장 4.5 (194) 최대 315원 적립 최대 315원 적립 단 3개 남음 빨리 주문하세요!" [ref=f172e1658]:
+                - /url: /vp/products/9423062091?itemId=28008397505&vendorItemId=94965781975&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=33&rank=33
+                - figure [ref=f172e1659]:
+                  - img "페피트 파리 (PEPITE PARIS) 브리오슈 올리브 치즈 식빵, 230g, 1개" [ref=f172e1660]
+                - generic [ref=f172e1661]:
+                  - generic [ref=f172e1663]: 페피트 파리 (PEPITE PARIS) 브리오슈 올리브 치즈 식빵, 230g, 1개
+                  - generic [ref=f172e1666]:
+                    - generic [ref=f172e1667]: 6,300원
+                    - generic [ref=f172e1668]: (10g당 274원)
+                  - generic [ref=f172e1669]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e1675]:
+                    - generic "4.5" [ref=f172e1676]
+                    - generic [ref=f172e1682]: (194)
+                  - generic [ref=f172e1685]:
+                    - img "최대 315원 적립" [ref=f172e1686]
+                    - generic [ref=f172e1687]: 최대 315원 적립
+                  - generic [ref=f172e1688]:
+                    - strong [ref=f172e1689]: 단 3개 남음
+                    - generic [ref=f172e1690]: 빨리 주문하세요!
+            - listitem [ref=f172e1691] [cursor=pointer]:
+              - link "롯데웰푸드 KIRIN 우유식빵, 420g, 1개 5,360원 (10g당 128원) 내일(토) 새벽 도착 보장 5 (84) 최대 268원 적립 최대 268원 적립 단 1개 남음 빨리 주문하세요!" [ref=f172e1692]:
+                - /url: /vp/products/9185849278?itemId=27097268659&vendorItemId=94065453822&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=34&rank=34
+                - figure [ref=f172e1693]:
+                  - img "롯데웰푸드 KIRIN 우유식빵, 420g, 1개" [ref=f172e1694]
+                - generic [ref=f172e1695]:
+                  - generic [ref=f172e1697]: 롯데웰푸드 KIRIN 우유식빵, 420g, 1개
+                  - generic [ref=f172e1700]:
+                    - generic [ref=f172e1701]: 5,360원
+                    - generic [ref=f172e1702]: (10g당 128원)
+                  - generic [ref=f172e1703]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e1709]:
+                    - generic "5" [ref=f172e1710]
+                    - generic [ref=f172e1716]: (84)
+                  - generic [ref=f172e1719]:
+                    - img "최대 268원 적립" [ref=f172e1720]
+                    - generic [ref=f172e1721]: 최대 268원 적립
+                  - generic [ref=f172e1722]:
+                    - strong [ref=f172e1723]: 단 1개 남음
+                    - generic [ref=f172e1724]: 빨리 주문하세요!
+            - listitem [ref=f172e1725] [cursor=pointer]:
+              - link "밀도 통밀식빵, 480g, 1개 5,400원 (10g당 113원) 내일(토) 새벽 도착 보장 5 (12,003) 최대 270원 적립 최대 270원 적립" [ref=f172e1726]:
+                - /url: /vp/products/8089845326?itemId=22845564679&vendorItemId=89880272149&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=35&rank=35
+                - figure [ref=f172e1727]:
+                  - img "밀도 통밀식빵, 480g, 1개" [ref=f172e1728]
+                - generic [ref=f172e1729]:
+                  - generic [ref=f172e1731]: 밀도 통밀식빵, 480g, 1개
+                  - generic [ref=f172e1734]:
+                    - generic [ref=f172e1735]: 5,400원
+                    - generic [ref=f172e1736]: (10g당 113원)
+                  - generic [ref=f172e1737]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e1743]:
+                    - generic "5" [ref=f172e1744]
+                    - generic [ref=f172e1750]: (12,003)
+                  - generic [ref=f172e1753]:
+                    - img "최대 270원 적립" [ref=f172e1754]
+                    - generic [ref=f172e1755]: 최대 270원 적립
+            - listitem [ref=f172e1756] [cursor=pointer]:
+              - link "근대골목단팥빵 호떡 식빵 (냉동), 190g, 1개 5,500원 (10g당 289원) 내일(토) 새벽 도착 보장 최대 275원 적립 최대 275원 적립" [ref=f172e1757]:
+                - /url: /vp/products/9691903482?itemId=28987348272&vendorItemId=95916268889&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=36&rank=36
+                - figure [ref=f172e1758]:
+                  - img "근대골목단팥빵 호떡 식빵 (냉동), 190g, 1개" [ref=f172e1759]
+                - generic [ref=f172e1760]:
+                  - generic [ref=f172e1762]: 근대골목단팥빵 호떡 식빵 (냉동), 190g, 1개
+                  - generic [ref=f172e1765]:
+                    - generic [ref=f172e1766]: 5,500원
+                    - generic [ref=f172e1767]: (10g당 289원)
+                  - generic [ref=f172e1768]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e1774]:
+                    - img "최대 275원 적립" [ref=f172e1775]
+                    - generic [ref=f172e1776]: 최대 275원 적립
+            - listitem [ref=f172e1777] [cursor=pointer]:
+              - link "삼립 6쪽 식빵 (냉동), 996g, 1개 쿠폰할인 5,500원 9% 5,000원 (10g당 50원) 내일(토) 새벽 도착 보장 5 (1,290) 최대 250원 적립 최대 250원 적립" [ref=f172e1778]:
+                - /url: /vp/products/8585095375?itemId=24887671454&vendorItemId=91894344060&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=37&rank=37
+                - figure [ref=f172e1779]:
+                  - img "삼립 6쪽 식빵 (냉동), 996g, 1개" [ref=f172e1780]
+                - generic [ref=f172e1781]:
+                  - generic [ref=f172e1783]: 삼립 6쪽 식빵 (냉동), 996g, 1개
+                  - generic [ref=f172e1784]:
+                    - generic [ref=f172e1785]:
+                      - generic [ref=f172e1786]: 쿠폰할인
+                      - deletion [ref=f172e1787]: 5,500원
+                    - generic [ref=f172e1789]:
+                      - generic [ref=f172e1790]: 9%
+                      - generic [ref=f172e1795]: 5,000원
+                      - generic [ref=f172e1796]: (10g당 50원)
+                  - generic [ref=f172e1797]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e1803]:
+                    - generic "5" [ref=f172e1804]
+                    - generic [ref=f172e1810]: (1,290)
+                  - generic [ref=f172e1813]:
+                    - img "최대 250원 적립" [ref=f172e1814]
+                    - generic [ref=f172e1815]: 최대 250원 적립
+            - listitem [ref=f172e1816] [cursor=pointer]:
+              - link "곰곰 우유식빵, 330g, 3개 5,820원 (10g당 59원) 내일(토) 새벽 도착 보장 5 (374,994) 최대 291원 적립 최대 291원 적립" [ref=f172e1817]:
+                - /url: /vp/products/1956171516?itemId=19223679913&vendorItemId=86340365164&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=38&rank=38
+                - figure [ref=f172e1818]:
+                  - img "곰곰 우유식빵, 330g, 3개" [ref=f172e1819]
+                - generic [ref=f172e1820]:
+                  - generic [ref=f172e1822]: 곰곰 우유식빵, 330g, 3개
+                  - generic [ref=f172e1825]:
+                    - generic [ref=f172e1826]: 5,820원
+                    - generic [ref=f172e1827]: (10g당 59원)
+                  - generic [ref=f172e1828]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e1834]:
+                    - generic "5" [ref=f172e1835]
+                    - generic [ref=f172e1841]: (374,994)
+                  - generic [ref=f172e1844]:
+                    - img "최대 291원 적립" [ref=f172e1845]
+                    - generic [ref=f172e1846]: 최대 291원 적립
+            - listitem [ref=f172e1847] [cursor=pointer]:
+              - link "곰곰 옥수수식빵, 360g, 3개 5,670원 (10g당 53원) 내일(토) 새벽 도착 보장 4.5 (6,019) 최대 284원 적립 최대 284원 적립" [ref=f172e1848]:
+                - /url: /vp/products/9074897297?itemId=27406202085&vendorItemId=94371864185&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=39&rank=39
+                - figure [ref=f172e1849]:
+                  - img "곰곰 옥수수식빵, 360g, 3개" [ref=f172e1850]
+                - generic [ref=f172e1851]:
+                  - generic [ref=f172e1853]: 곰곰 옥수수식빵, 360g, 3개
+                  - generic [ref=f172e1856]:
+                    - generic [ref=f172e1857]: 5,670원
+                    - generic [ref=f172e1858]: (10g당 53원)
+                  - generic [ref=f172e1859]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e1865]:
+                    - generic "4.5" [ref=f172e1866]
+                    - generic [ref=f172e1872]: (6,019)
+                  - generic [ref=f172e1875]:
+                    - img "최대 284원 적립" [ref=f172e1876]
+                    - generic [ref=f172e1877]: 최대 284원 적립
+            - listitem [ref=f172e1878] [cursor=pointer]:
+              - link "페피트 파리 (PEPITE PARIS) 브리오슈 크랜베리 호두 식빵, 230g, 1개 6,300원 (10g당 274원) 내일(토) 새벽 도착 보장 4 (136) 최대 315원 적립 최대 315원 적립 단 3개 남음 빨리 주문하세요!" [ref=f172e1879]:
+                - /url: /vp/products/9425723535?itemId=28018496553&vendorItemId=94975755508&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=40&rank=40
+                - figure [ref=f172e1880]:
+                  - img "페피트 파리 (PEPITE PARIS) 브리오슈 크랜베리 호두 식빵, 230g, 1개" [ref=f172e1881]
+                - generic [ref=f172e1882]:
+                  - generic [ref=f172e1884]: 페피트 파리 (PEPITE PARIS) 브리오슈 크랜베리 호두 식빵, 230g, 1개
+                  - generic [ref=f172e1887]:
+                    - generic [ref=f172e1888]: 6,300원
+                    - generic [ref=f172e1889]: (10g당 274원)
+                  - generic [ref=f172e1890]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e1896]:
+                    - generic "4" [ref=f172e1897]
+                    - generic [ref=f172e1903]: (136)
+                  - generic [ref=f172e1906]:
+                    - img "최대 315원 적립" [ref=f172e1907]
+                    - generic [ref=f172e1908]: 최대 315원 적립
+                  - generic [ref=f172e1909]:
+                    - strong [ref=f172e1910]: 단 3개 남음
+                    - generic [ref=f172e1911]: 빨리 주문하세요!
+            - listitem [ref=f172e1912] [cursor=pointer]:
+              - link "삼립 56시간 저온숙성 탕종 찰 숙식빵, 420g, 2개 6,000원 (10g당 71원) 내일(토) 새벽 도착 보장 5 (177,820) 최대 300원 적립 최대 300원 적립" [ref=f172e1913]:
+                - /url: /vp/products/7000118912?itemId=19225633177&vendorItemId=86342274645&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=41&rank=41
+                - figure [ref=f172e1914]:
+                  - img "삼립 56시간 저온숙성 탕종 찰 숙식빵, 420g, 2개" [ref=f172e1915]
+                - generic [ref=f172e1916]:
+                  - generic [ref=f172e1918]: 삼립 56시간 저온숙성 탕종 찰 숙식빵, 420g, 2개
+                  - generic [ref=f172e1921]:
+                    - generic [ref=f172e1922]: 6,000원
+                    - generic [ref=f172e1923]: (10g당 71원)
+                  - generic [ref=f172e1924]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e1930]:
+                    - generic "5" [ref=f172e1931]
+                    - generic [ref=f172e1937]: (177,820)
+                  - generic [ref=f172e1940]:
+                    - img "최대 300원 적립" [ref=f172e1941]
+                    - generic [ref=f172e1942]: 최대 300원 적립
+            - listitem [ref=f172e1943] [cursor=pointer]:
+              - link "삼립 로만밀 통밀식빵, 420g, 2개입, 1세트 5,800원 (10g당 69원) 내일(토) 새벽 도착 보장 5 (229,468) 최대 290원 적립 최대 290원 적립" [ref=f172e1944]:
+                - /url: /vp/products/266030794?itemId=833912125&vendorItemId=5123123063&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=42&rank=42
+                - figure [ref=f172e1945]:
+                  - img "삼립 로만밀 통밀식빵, 420g, 2개입, 1세트" [ref=f172e1946]
+                - generic [ref=f172e1947]:
+                  - generic [ref=f172e1949]: 삼립 로만밀 통밀식빵, 420g, 2개입, 1세트
+                  - generic [ref=f172e1952]:
+                    - generic [ref=f172e1953]: 5,800원
+                    - generic [ref=f172e1954]: (10g당 69원)
+                  - generic [ref=f172e1955]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e1961]:
+                    - generic "5" [ref=f172e1962]
+                    - generic [ref=f172e1968]: (229,468)
+                  - generic [ref=f172e1971]:
+                    - img "최대 290원 적립" [ref=f172e1972]
+                    - generic [ref=f172e1973]: 최대 290원 적립
+            - listitem [ref=f172e1974] [cursor=pointer]:
+              - link "더브레드블루 멀티그레인 감자식빵 (냉동), 220g, 1개 5,800원 (10g당 264원) 내일(토) 새벽 도착 보장 4.5 (8) 최대 290원 적립 최대 290원 적립" [ref=f172e1975]:
+                - /url: /vp/products/9653224179?itemId=28853948095&vendorItemId=95787629502&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=43&rank=43
+                - figure [ref=f172e1976]:
+                  - img "더브레드블루 멀티그레인 감자식빵 (냉동), 220g, 1개" [ref=f172e1977]
+                - generic [ref=f172e1978]:
+                  - generic [ref=f172e1980]: 더브레드블루 멀티그레인 감자식빵 (냉동), 220g, 1개
+                  - generic [ref=f172e1983]:
+                    - generic [ref=f172e1984]: 5,800원
+                    - generic [ref=f172e1985]: (10g당 264원)
+                  - generic [ref=f172e1986]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e1992]:
+                    - generic "4.5" [ref=f172e1993]
+                    - generic [ref=f172e1999]: (8)
+                  - generic [ref=f172e2002]:
+                    - img "최대 290원 적립" [ref=f172e2003]
+                    - generic [ref=f172e2004]: 최대 290원 적립
+            - listitem [ref=f172e2005] [cursor=pointer]:
+              - link "더브레드블루 쫀득한 찰보리식빵 (냉동), 220g, 1개 5,900원 (10g당 268원) 내일(토) 새벽 도착 보장 4 (5) 최대 295원 적립 최대 295원 적립" [ref=f172e2006]:
+                - /url: /vp/products/9653225725?itemId=28853953001&vendorItemId=95787634121&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=44&rank=44
+                - figure [ref=f172e2007]:
+                  - img "더브레드블루 쫀득한 찰보리식빵 (냉동), 220g, 1개" [ref=f172e2008]
+                - generic [ref=f172e2009]:
+                  - generic [ref=f172e2011]: 더브레드블루 쫀득한 찰보리식빵 (냉동), 220g, 1개
+                  - generic [ref=f172e2014]:
+                    - generic [ref=f172e2015]: 5,900원
+                    - generic [ref=f172e2016]: (10g당 268원)
+                  - generic [ref=f172e2017]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e2023]:
+                    - generic "4" [ref=f172e2024]
+                    - generic [ref=f172e2030]: (5)
+                  - generic [ref=f172e2033]:
+                    - img "최대 295원 적립" [ref=f172e2034]
+                    - generic [ref=f172e2035]: 최대 295원 적립
+            - listitem [ref=f172e2036] [cursor=pointer]:
+              - link "삼립 키키오븐 순수한 우유식빵 (냉동), 420g, 2개 할인 6,600원 1% 6,480원 (10g당 77원) 내일(토) 새벽 도착 보장 4.5 (822) 최대 297원 적립 최대 297원 적립" [ref=f172e2037]:
+                - /url: /vp/products/9545900214?itemId=28505730861&vendorItemId=95455439806&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=45&rank=45
+                - figure [ref=f172e2038]:
+                  - img "삼립 키키오븐 순수한 우유식빵 (냉동), 420g, 2개" [ref=f172e2039]
+                - generic [ref=f172e2040]:
+                  - generic [ref=f172e2042]: 삼립 키키오븐 순수한 우유식빵 (냉동), 420g, 2개
+                  - generic [ref=f172e2043]:
+                    - generic [ref=f172e2044]:
+                      - generic [ref=f172e2045]: 할인
+                      - deletion [ref=f172e2046]: 6,600원
+                    - generic [ref=f172e2048]:
+                      - generic [ref=f172e2049]: 1%
+                      - generic [ref=f172e2054]: 6,480원
+                      - generic [ref=f172e2055]: (10g당 77원)
+                  - generic [ref=f172e2056]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e2062]:
+                    - generic "4.5" [ref=f172e2063]
+                    - generic [ref=f172e2069]: (822)
+                  - generic [ref=f172e2072]:
+                    - img "최대 297원 적립" [ref=f172e2073]
+                    - generic [ref=f172e2074]: 최대 297원 적립
+            - listitem [ref=f172e2075] [cursor=pointer]:
+              - link "페피트 파리 (PEPITE PARIS) 브리오슈 체다 치즈 식빵, 230g, 1개 5,980원 (10g당 260원) 내일(토) 새벽 도착 보장 4.5 (213) 최대 299원 적립 최대 299원 적립 품절임박" [ref=f172e2076]:
+                - /url: /vp/products/9423062082?itemId=28008397490&vendorItemId=94965781955&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=46&rank=46
+                - figure [ref=f172e2077]:
+                  - img "페피트 파리 (PEPITE PARIS) 브리오슈 체다 치즈 식빵, 230g, 1개" [ref=f172e2078]
+                - generic [ref=f172e2079]:
+                  - generic [ref=f172e2081]: 페피트 파리 (PEPITE PARIS) 브리오슈 체다 치즈 식빵, 230g, 1개
+                  - generic [ref=f172e2084]:
+                    - generic [ref=f172e2085]: 5,980원
+                    - generic [ref=f172e2086]: (10g당 260원)
+                  - generic [ref=f172e2087]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e2093]:
+                    - generic "4.5" [ref=f172e2094]
+                    - generic [ref=f172e2100]: (213)
+                  - generic [ref=f172e2103]:
+                    - img "최대 299원 적립" [ref=f172e2104]
+                    - generic [ref=f172e2105]: 최대 299원 적립
+                  - generic [ref=f172e2106]: 품절임박
+            - listitem [ref=f172e2108] [cursor=pointer]:
+              - link "밀도 The 부드러운 오트식빵, 480g, 1개 6,300원 (10g당 131원) 내일(토) 새벽 도착 보장 5 (63) 최대 315원 적립 최대 315원 적립 품절임박" [ref=f172e2109]:
+                - /url: /vp/products/9664889445?itemId=28894675995&vendorItemId=95827126277&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=47&rank=47
+                - figure [ref=f172e2110]:
+                  - img "밀도 The 부드러운 오트식빵, 480g, 1개" [ref=f172e2111]
+                - generic [ref=f172e2112]:
+                  - generic [ref=f172e2114]: 밀도 The 부드러운 오트식빵, 480g, 1개
+                  - generic [ref=f172e2117]:
+                    - generic [ref=f172e2118]: 6,300원
+                    - generic [ref=f172e2119]: (10g당 131원)
+                  - generic [ref=f172e2120]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e2126]:
+                    - generic "5" [ref=f172e2127]
+                    - generic [ref=f172e2133]: (63)
+                  - generic [ref=f172e2136]:
+                    - img "최대 315원 적립" [ref=f172e2137]
+                    - generic [ref=f172e2138]: 최대 315원 적립
+                  - generic [ref=f172e2139]: 품절임박
+            - listitem [ref=f172e2141] [cursor=pointer]:
+              - link "곰곰 우유식빵, 660g, 2개 7,040원 (10g당 53원) 내일(토) 새벽 도착 보장 5 (374,994) 최대 352원 적립 최대 352원 적립" [ref=f172e2142]:
+                - /url: /vp/products/1956171516?itemId=19223692883&vendorItemId=86340377830&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=48&rank=48
+                - figure [ref=f172e2143]:
+                  - img "곰곰 우유식빵, 660g, 2개" [ref=f172e2144]
+                - generic [ref=f172e2145]:
+                  - generic [ref=f172e2147]: 곰곰 우유식빵, 660g, 2개
+                  - generic [ref=f172e2150]:
+                    - generic [ref=f172e2151]: 7,040원
+                    - generic [ref=f172e2152]: (10g당 53원)
+                  - generic [ref=f172e2153]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e2159]:
+                    - generic "5" [ref=f172e2160]
+                    - generic [ref=f172e2166]: (374,994)
+                  - generic [ref=f172e2169]:
+                    - img "최대 352원 적립" [ref=f172e2170]
+                    - generic [ref=f172e2171]: 최대 352원 적립
+            - listitem [ref=f172e2172] [cursor=pointer]:
+              - link "삼립 밀배아발효 샌드위치 식빵, 790g, 2개 7,200원 (10g당 46원) 내일(토) 새벽 도착 보장 5 (13,380) 최대 360원 적립 최대 360원 적립" [ref=f172e2173]:
+                - /url: /vp/products/8653047613?itemId=25169795234&vendorItemId=92167181157&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=49&rank=49
+                - figure [ref=f172e2174]:
+                  - img "삼립 밀배아발효 샌드위치 식빵, 790g, 2개" [ref=f172e2175]
+                - generic [ref=f172e2176]:
+                  - generic [ref=f172e2178]: 삼립 밀배아발효 샌드위치 식빵, 790g, 2개
+                  - generic [ref=f172e2181]:
+                    - generic [ref=f172e2182]: 7,200원
+                    - generic [ref=f172e2183]: (10g당 46원)
+                  - generic [ref=f172e2184]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e2190]:
+                    - generic "5" [ref=f172e2191]
+                    - generic [ref=f172e2197]: (13,380)
+                  - generic [ref=f172e2200]:
+                    - img "최대 360원 적립" [ref=f172e2201]
+                    - generic [ref=f172e2202]: 최대 360원 적립
+            - listitem [ref=f172e2203] [cursor=pointer]:
+              - link "밀도 리치 식빵, 480g, 1개 7,200원 (10g당 150원) 내일(토) 새벽 도착 보장 5 (10,376) 최대 360원 적립 최대 360원 적립" [ref=f172e2204]:
+                - /url: /vp/products/7313448548?itemId=18740935245&vendorItemId=85873223316&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=50&rank=50
+                - figure [ref=f172e2205]:
+                  - img "밀도 리치 식빵, 480g, 1개" [ref=f172e2206]
+                - generic [ref=f172e2207]:
+                  - generic [ref=f172e2209]: 밀도 리치 식빵, 480g, 1개
+                  - generic [ref=f172e2212]:
+                    - generic [ref=f172e2213]: 7,200원
+                    - generic [ref=f172e2214]: (10g당 150원)
+                  - generic [ref=f172e2215]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e2221]:
+                    - generic "5" [ref=f172e2222]
+                    - generic [ref=f172e2228]: (10,376)
+                  - generic [ref=f172e2231]:
+                    - img "최대 360원 적립" [ref=f172e2232]
+                    - generic [ref=f172e2233]: 최대 360원 적립
+            - listitem [ref=f172e2234] [cursor=pointer]:
+              - link "브로드카세 단백질을더한 발효종 두유두부식빵, 390g, 1개 6,500원 (10g당 167원) 내일(토) 새벽 도착 보장 4.5 (637) 최대 325원 적립 최대 325원 적립 단 2개 남음 빨리 주문하세요!" [ref=f172e2235]:
+                - /url: /vp/products/6656816104?itemId=15269841352&vendorItemId=82490380973&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=51&rank=51
+                - figure [ref=f172e2236]:
+                  - img "브로드카세 단백질을더한 발효종 두유두부식빵, 390g, 1개" [ref=f172e2237]
+                - generic [ref=f172e2238]:
+                  - generic [ref=f172e2240]: 브로드카세 단백질을더한 발효종 두유두부식빵, 390g, 1개
+                  - generic [ref=f172e2243]:
+                    - generic [ref=f172e2244]: 6,500원
+                    - generic [ref=f172e2245]: (10g당 167원)
+                  - generic [ref=f172e2246]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e2252]:
+                    - generic "4.5" [ref=f172e2253]
+                    - generic [ref=f172e2259]: (637)
+                  - generic [ref=f172e2262]:
+                    - img "최대 325원 적립" [ref=f172e2263]
+                    - generic [ref=f172e2264]: 최대 325원 적립
+                  - generic [ref=f172e2265]:
+                    - strong [ref=f172e2266]: 단 2개 남음
+                    - generic [ref=f172e2267]: 빨리 주문하세요!
+            - listitem [ref=f172e2268] [cursor=pointer]:
+              - link "야미요밀 정성가득 채식 백미 식빵 (냉동), 435g, 1개 6,500원 (10g당 149원) 내일(토) 새벽 도착 보장 5 (2,902) 최대 325원 적립 최대 325원 적립" [ref=f172e2269]:
+                - /url: /vp/products/6597283702?itemId=14911278584&vendorItemId=82149922472&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=52&rank=52
+                - figure [ref=f172e2270]:
+                  - img "야미요밀 정성가득 채식 백미 식빵 (냉동), 435g, 1개" [ref=f172e2271]
+                - generic [ref=f172e2272]:
+                  - generic [ref=f172e2274]: 야미요밀 정성가득 채식 백미 식빵 (냉동), 435g, 1개
+                  - generic [ref=f172e2277]:
+                    - generic [ref=f172e2278]: 6,500원
+                    - generic [ref=f172e2279]: (10g당 149원)
+                  - generic [ref=f172e2280]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e2286]:
+                    - generic "5" [ref=f172e2287]
+                    - generic [ref=f172e2293]: (2,902)
+                  - generic [ref=f172e2296]:
+                    - img "최대 325원 적립" [ref=f172e2297]
+                    - generic [ref=f172e2298]: 최대 325원 적립
+            - listitem [ref=f172e2299] [cursor=pointer]:
+              - link "도제식빵 2cm, 600g, 1개 6,900원 (10g당 115원) 내일(토) 새벽 도착 보장 5 (14,939) 최대 345원 적립 최대 345원 적립" [ref=f172e2300]:
+                - /url: /vp/products/8934011805?itemId=26234765309&vendorItemId=93099543505&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=53&rank=53
+                - figure [ref=f172e2301]:
+                  - img "도제식빵 2cm, 600g, 1개" [ref=f172e2302]
+                - generic [ref=f172e2303]:
+                  - generic [ref=f172e2305]: 도제식빵 2cm, 600g, 1개
+                  - generic [ref=f172e2308]:
+                    - generic [ref=f172e2309]: 6,900원
+                    - generic [ref=f172e2310]: (10g당 115원)
+                  - generic [ref=f172e2311]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e2317]:
+                    - generic "5" [ref=f172e2318]
+                    - generic [ref=f172e2324]: (14,939)
+                  - generic [ref=f172e2327]:
+                    - img "최대 345원 적립" [ref=f172e2328]
+                    - generic [ref=f172e2329]: 최대 345원 적립
+            - listitem [ref=f172e2330] [cursor=pointer]:
+              - link "그래밀 알곡그대로눌러내린 무설탕 통밀식빵, 450g, 1개, 1개입 6,600원 (10g당 147원) 내일(토) 새벽 도착 보장 4.5 (2,462) 최대 330원 적립 최대 330원 적립" [ref=f172e2331]:
+                - /url: /vp/products/8618313347?itemId=25002544935&vendorItemId=92007669202&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=54&rank=54
+                - figure [ref=f172e2332]:
+                  - img "그래밀 알곡그대로눌러내린 무설탕 통밀식빵, 450g, 1개, 1개입" [ref=f172e2333]
+                - generic [ref=f172e2334]:
+                  - generic [ref=f172e2336]: 그래밀 알곡그대로눌러내린 무설탕 통밀식빵, 450g, 1개, 1개입
+                  - generic [ref=f172e2339]:
+                    - generic [ref=f172e2340]: 6,600원
+                    - generic [ref=f172e2341]: (10g당 147원)
+                  - generic [ref=f172e2342]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e2348]:
+                    - generic "4.5" [ref=f172e2349]
+                    - generic [ref=f172e2355]: (2,462)
+                  - generic [ref=f172e2358]:
+                    - img "최대 330원 적립" [ref=f172e2359]
+                    - generic [ref=f172e2360]: 최대 330원 적립
+            - listitem [ref=f172e2361] [cursor=pointer]:
+              - link "삼립 56시간 저온숙성 탕종 찰 숙식빵, 840g, 1개 6,770원 (10g당 81원) 내일(토) 새벽 도착 보장 4.5 (26,968) 최대 339원 적립 최대 339원 적립" [ref=f172e2362]:
+                - /url: /vp/products/5453525180?itemId=8330922846&vendorItemId=75618767406&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=55&rank=55
+                - figure [ref=f172e2363]:
+                  - img "삼립 56시간 저온숙성 탕종 찰 숙식빵, 840g, 1개" [ref=f172e2364]
+                - generic [ref=f172e2365]:
+                  - generic [ref=f172e2367]: 삼립 56시간 저온숙성 탕종 찰 숙식빵, 840g, 1개
+                  - generic [ref=f172e2370]:
+                    - generic [ref=f172e2371]: 6,770원
+                    - generic [ref=f172e2372]: (10g당 81원)
+                  - generic [ref=f172e2373]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e2379]:
+                    - generic "4.5" [ref=f172e2380]
+                    - generic [ref=f172e2386]: (26,968)
+                  - generic [ref=f172e2389]:
+                    - img "최대 339원 적립" [ref=f172e2390]
+                    - generic [ref=f172e2391]: 최대 339원 적립
+            - listitem [ref=f172e2392] [cursor=pointer]:
+              - link "곰곰 데일리 식빵, 330g, 4개 6,770원 (10g당 51원) 내일(토) 새벽 도착 보장 4.5 (34,307) 최대 339원 적립 최대 339원 적립" [ref=f172e2393]:
+                - /url: /vp/products/8437193076?itemId=24722756613&vendorItemId=91731962831&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=56&rank=56
+                - figure [ref=f172e2394]:
+                  - img "곰곰 데일리 식빵, 330g, 4개" [ref=f172e2395]
+                - generic [ref=f172e2396]:
+                  - generic [ref=f172e2398]: 곰곰 데일리 식빵, 330g, 4개
+                  - generic [ref=f172e2401]:
+                    - generic [ref=f172e2402]: 6,770원
+                    - generic [ref=f172e2403]: (10g당 51원)
+                  - generic [ref=f172e2404]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e2410]:
+                    - generic "4.5" [ref=f172e2411]
+                    - generic [ref=f172e2417]: (34,307)
+                  - generic [ref=f172e2420]:
+                    - img "최대 339원 적립" [ref=f172e2421]
+                    - generic [ref=f172e2422]: 최대 339원 적립
+            - listitem [ref=f172e2423] [cursor=pointer]:
+              - link "브로드카세 발효종 저당 쌀탕종으로 만든 우유식빵, 480g, 1개 6,900원 (10g당 144원) 내일(토) 새벽 도착 보장 4 (16) 최대 345원 적립 최대 345원 적립 품절임박" [ref=f172e2424]:
+                - /url: /vp/products/9675258943?itemId=28929615531&vendorItemId=95860946446&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=57&rank=57
+                - figure [ref=f172e2425]:
+                  - img "브로드카세 발효종 저당 쌀탕종으로 만든 우유식빵, 480g, 1개" [ref=f172e2426]
+                - generic [ref=f172e2427]:
+                  - generic [ref=f172e2429]: 브로드카세 발효종 저당 쌀탕종으로 만든 우유식빵, 480g, 1개
+                  - generic [ref=f172e2432]:
+                    - generic [ref=f172e2433]: 6,900원
+                    - generic [ref=f172e2434]: (10g당 144원)
+                  - generic [ref=f172e2435]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e2441]:
+                    - generic "4" [ref=f172e2442]
+                    - generic [ref=f172e2448]: (16)
+                  - generic [ref=f172e2451]:
+                    - img "최대 345원 적립" [ref=f172e2452]
+                    - generic [ref=f172e2453]: 최대 345원 적립
+                  - generic [ref=f172e2454]: 품절임박
+            - listitem [ref=f172e2456] [cursor=pointer]:
+              - link "얌 무테식빵, 300g, 1개 6,900원 (10g당 230원) 내일(토) 새벽 도착 보장 4.5 (11,879) 최대 345원 적립 최대 345원 적립" [ref=f172e2457]:
+                - /url: /vp/products/5257857320?itemId=7463146367&vendorItemId=74754044236&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=58&rank=58
+                - figure [ref=f172e2458]:
+                  - img "얌 무테식빵, 300g, 1개" [ref=f172e2459]
+                - generic [ref=f172e2460]:
+                  - generic [ref=f172e2462]: 얌 무테식빵, 300g, 1개
+                  - generic [ref=f172e2465]:
+                    - generic [ref=f172e2466]: 6,900원
+                    - generic [ref=f172e2467]: (10g당 230원)
+                  - generic [ref=f172e2468]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e2474]:
+                    - generic "4.5" [ref=f172e2475]
+                    - generic [ref=f172e2481]: (11,879)
+                  - generic [ref=f172e2484]:
+                    - img "최대 345원 적립" [ref=f172e2485]
+                    - generic [ref=f172e2486]: 최대 345원 적립
+            - listitem [ref=f172e2487] [cursor=pointer]:
+              - link "제로브레드 저당 속편한 우유 식빵 (냉동), 480g, 1개 6,900원 (10g당 144원) 내일(토) 새벽 도착 보장 4.5 (84) 최대 345원 적립 최대 345원 적립" [ref=f172e2488]:
+                - /url: /vp/products/9544202431?itemId=28472238373&vendorItemId=95422521325&q=식빵&searchId=281db9409347284&sourceType=search&itemsCount=60&searchRank=59&rank=59
+                - figure [ref=f172e2489]:
+                  - img "제로브레드 저당 속편한 우유 식빵 (냉동), 480g, 1개" [ref=f172e2490]
+                - generic [ref=f172e2491]:
+                  - generic [ref=f172e2493]: 제로브레드 저당 속편한 우유 식빵 (냉동), 480g, 1개
+                  - generic [ref=f172e2496]:
+                    - generic [ref=f172e2497]: 6,900원
+                    - generic [ref=f172e2498]: (10g당 144원)
+                  - generic [ref=f172e2499]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f172e2505]:
+                    - generic "4.5" [ref=f172e2506]
+                    - generic [ref=f172e2512]: (84)
+                  - generic [ref=f172e2515]:
+                    - img "최대 345원 적립" [ref=f172e2516]
+                    - generic [ref=f172e2517]: 최대 345원 적립
+          - region "찾는 상품이 없나요?" [ref=f172e2518]:
+            - generic [ref=f172e2519]:
+              - heading "찾는 상품이 없나요?" [level=2] [ref=f172e2520]
+              - paragraph [ref=f172e2521]: 로그인하고 더 많은 상품을 확인해보세요
+            - button "로그인" [ref=f172e2522] [cursor=pointer]
+  - contentinfo [ref=f172e2524]:
+    - generic [ref=f172e2525]:
+      - generic [ref=f172e2526]:
+        - link "회사소개" [ref=f172e2527] [cursor=pointer]:
+          - /url: https://news.coupang.com/
+        - link "Investor Relations" [ref=f172e2528] [cursor=pointer]:
+          - /url: https://ir.aboutcoupang.com/overview/default.aspx
+        - link "인재채용" [ref=f172e2529] [cursor=pointer]:
+          - /url: https://rocketyourcareer.kr.coupang.com
+        - link "입점/제휴문의" [ref=f172e2530] [cursor=pointer]:
+          - /url: https://marketplace.coupangcorp.com/s/?utm_source=button_pc&utm_medium=non_paid&utm_campaign=onsite_ca&utm_id=coupang_app?inflow=WEB_FOOTER_B
+        - link "공지사항" [ref=f172e2531] [cursor=pointer]:
+          - /url: https://mc.coupang.com/ssr/desktop/contact/notice
+        - link "고객의 소리" [ref=f172e2532] [cursor=pointer]:
+          - /url: https://mc.coupang.com/ssr/desktop/contact/voc
+        - link "이용약관" [ref=f172e2533] [cursor=pointer]:
+          - /url: https://www.coupang.com/np/policies/terms
+        - link [ref=f172e2534] [cursor=pointer]:
+          - /url: https://privacy.coupang.com/ko/center/coupang
+          - strong [ref=f172e2535]: 개인정보 처리방침
+        - link "정보보호/개인정보보호 인증" [ref=f172e2536] [cursor=pointer]:
+          - /url: https://privacy.coupang.com/ko/security/status
+        - link "쿠팡페이 이용약관" [ref=f172e2537] [cursor=pointer]:
+          - /url: https://rocketpay.coupang.com/rocketpay/operationTerms/coupangPcFooter
+        - link "신뢰관리센터" [ref=f172e2538] [cursor=pointer]:
+          - /url: https://www.coupang.com/np/safety
+        - link "제휴마케팅" [ref=f172e2539] [cursor=pointer]:
+          - /url: https://partners.coupang.com/
+        - link "광고안내" [ref=f172e2540] [cursor=pointer]:
+          - /url: https://ads.coupang.com
+      - paragraph [ref=f172e2544] [cursor=pointer]: Global Site
+    - generic [ref=f172e2546]:
+      - generic [ref=f172e2547]:
+        - link "COUPANG" [ref=f172e2548] [cursor=pointer]:
+          - /url: https://www.coupang.com/
+        - generic [ref=f172e2549]:
+          - text: "상호명 및 호스팅 서비스 제공 : 쿠팡(주) 대표이사 : 로저스 해롤드 린(Rogers Harold Lynn) (05050) 서울시 광진구 아차산로 412, 2층 사업자 등록번호 : 120-88-00767 통신판매업신고 : 2026-서울광진-1253"
+          - link "사업자정보 확인 >" [ref=f172e2550] [cursor=pointer]:
+            - /url: http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=1208800767
+      - link [ref=f172e2552] [cursor=pointer]:
+        - /url: https://mc.coupang.com/ssr/desktop/contact/inquiry
+        - strong [ref=f172e2553]: 365고객센터
+        - text: "| 전자금융거래분쟁처리담당"
+        - emphasis [ref=f172e2554]: 1577-7011 (유료)
+        - text: "(05050) 서울시 광진구 아차산로 412, 2층 email : help@coupang.com"
+      - paragraph [ref=f172e2555]:
+        - strong [ref=f172e2556]: 채무지급보증 안내
+        - generic [ref=f172e2557]: 당사는 고객님이 현금 결제한 금액에 대해 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.
+        - link "서비스 가입사실 확인 >" [ref=f172e2558] [cursor=pointer]:
+          - /url: https://www.coupang.com/np/etc/popWooriService
+    - generic [ref=f172e2564]:
+      - paragraph [ref=f172e2565]: 사이버몰 내 판매되는 상품 중에는 쿠팡에 등록한 개별 판매자가 판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다. 마켓플레이스(오픈마켓) 상품의 경우 쿠팡은 통신판매중개자이며 통신판매의 당사자가 아닙니다. 쿠팡은 마켓플레이스(오픈마켓) 상품, 거래정보 및 거래 등에 대하여 책임을 지지 않습니다. 쿠팡은 소비자 보호와 안전거래를 위해 신뢰관리센터(CM112@coupang.com)를 운영하고 있으며, 관련 분쟁이 발생할 경우 별도의 분쟁 처리절차에 의거 분쟁이 처리됩니다. Copyright © Coupang Corp. 2010-2025 All Rights Reserved.
+      - list [ref=f172e2566]:
+        - listitem [ref=f172e2567]:
+          - link [ref=f172e2568] [cursor=pointer]:
+            - /url: https://www.facebook.com/Coupang.korea
+        - listitem [ref=f172e2569]:
+          - link [ref=f172e2570] [cursor=pointer]:
+            - /url: https://news.coupang.com/
+        - listitem [ref=f172e2571]:
+          - link [ref=f172e2572] [cursor=pointer]:
+            - /url: https://www.instagram.com/coupang

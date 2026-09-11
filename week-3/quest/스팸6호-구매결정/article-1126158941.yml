@@ -1,0 +1,314 @@
+- main [ref=f42e99]:
+  - iframe [ref=f42e100]:
+    - generic [ref=f43e4]:
+      - generic [ref=f43e6]:
+        - button "이전글" [ref=f43e7] [cursor=pointer]
+        - button "다음글" [ref=f43e8] [cursor=pointer]
+        - button "목록" [ref=f43e9] [cursor=pointer]
+      - generic [ref=f43e10]:
+        - generic [ref=f43e11]:
+          - generic [ref=f43e13]:
+            - link "식품" [ref=f43e14] [cursor=pointer]:
+              - /url: https://cafe.naver.com/f-e/ArticleList.nhn?search.clubid=10050146&search.menuid=2655&search.boardtype=L
+            - heading "스팸c6호" [level=3] [ref=f43e16]
+          - generic [ref=f43e17]:
+            - link "프로필 사진 인기멤버" [ref=f43e19] [cursor=pointer]:
+              - /url: /ca-fe/cafes/10050146/members/cw0BuIKYhmWg5jlwKbyPB6E1Dddzg90X-Ao1eUwJYyI
+              - img "프로필 사진" [ref=f43e20]
+              - emphasis:
+                - generic [ref=f43e21]: 인기멤버
+            - generic [ref=f43e22]:
+              - generic [ref=f43e23]:
+                - button "leduk74" [ref=f43e25] [cursor=pointer]
+                - emphasis [ref=f43e26]: 본인인증 회원
+                - link "1:1 채팅" [ref=f43e28] [cursor=pointer]:
+                  - /url: "#"
+              - generic [ref=f43e29]: 2026.03.06. 06:14조회 9
+          - generic [ref=f43e30]:
+            - button [ref=f43e31] [cursor=pointer]:
+              - text: 댓글
+              - strong [ref=f43e32]: "0"
+            - button "URL 복사" [ref=f43e33] [cursor=pointer]
+            - button "더보기" [ref=f43e35] [cursor=pointer]:
+              - img "더보기"
+        - generic [ref=f43e36]:
+          - generic [ref=f43e40]:
+            - paragraph
+            - link "상품 정보 더보기 〉" [ref=f43e44] [cursor=pointer]:
+              - /url: https://tracking.joongna.com/5prrwd?productseq=225964167
+              - generic [ref=f43e47]:
+                - generic [ref=f43e48]: 상품 정보 더보기
+                - generic [ref=f43e49]: 〉
+            - generic [ref=f43e50]:
+              - paragraph [ref=f43e51]: 상품 정보
+              - paragraph [ref=f43e52]: 스팸c6호
+              - generic [ref=f43e53]:
+                - paragraph [ref=f43e54]: 50,000원
+                - link "시세조회" [ref=f43e55] [cursor=pointer]:
+                  - /url: https://tracking.joongna.com/461pxq
+              - generic [ref=f43e57]:
+                - generic [ref=f43e59]:
+                  - generic [ref=f43e60]: 결제 혜택
+                  - generic [ref=f43e61]: "N"
+                - generic [ref=f43e64]:
+                  - generic [ref=f43e65]: 상품 상태
+                  - generic [ref=f43e66]: 중고, 구성품 전체
+                - generic [ref=f43e67]:
+                  - generic [ref=f43e68]: 거래 방법
+                  - generic [ref=f43e69]: 직거래
+                - generic [ref=f43e70]:
+                  - generic [ref=f43e71]: 거래 희망지역
+                  - generic [ref=f43e72]: 외동읍
+                - generic [ref=f43e73]:
+                  - generic [ref=f43e74]: 판매자 정보
+                  - generic [ref=f43e75]:
+                    - generic [ref=f43e76]: hostba
+                    - link:
+                      - /url: https://tracking.joongna.com/t6wo7g?storeseq=2050539&storeSeq=2050539
+                    - link "상품 더보기 〉" [ref=f43e78] [cursor=pointer]:
+                      - /url: https://tracking.joongna.com/t6wo7g?storeseq=2050539&storeSeq=2050539
+                      - generic [ref=f43e79]:
+                        - text: 상품 더보기
+                        - generic [ref=f43e80]: 〉
+            - generic [ref=f43e82]:
+              - link "채팅하기" [ref=f43e84] [cursor=pointer]:
+                - /url: https://tracking.joongna.com/r0g79nc?productseq=225964167&storeseq=2050539&funcType=openChat
+              - link "구매하기" [ref=f43e89] [cursor=pointer]:
+                - /url: https://tracking.joongna.com/i1o5d9?tradingMethod=225964167&productseq=225964167&funcType=clickPurchase
+            - generic [ref=f43e94]:
+              - paragraph [ref=f43e95]: 상품 상세
+              - paragraph [ref=f43e96]: 이번설에. 회사에서 밭은 설물인데 저는 필요가 없어서요새 상품입니다.쿠팜 경색 거격이 69000 입니다.직거래 원하고 택배거래는 포장 박스없이 선물용 박스그대로 보냅니다
+            - generic [ref=f43e99]:
+              - link:
+                - /url: https://tracking.joongna.com/kobi4q
+              - link "💸 나도 상품 등록하기 〉" [ref=f43e101] [cursor=pointer]:
+                - /url: https://tracking.joongna.com/kobi4q
+                - generic [ref=f43e102]:
+                  - text: 💸 나도 상품 등록하기
+                  - generic [ref=f43e103]: 〉
+            - generic [ref=f43e104]:
+              - paragraph [ref=f43e105]: 거래 전 주의 사항
+              - paragraph [ref=f43e106]: "- 중고나라 앱에서 등록된 상품으로, 앱에서 안심결제가 가능합니다. - 사기 예방을 위하여 중고나라 앱 내 안심결제를 권장합니다. - 카톡 또는 기타 링크(안심결제 사칭, 블로그)로 거래 요청할 경우 거래를 피해주세요. - 판매자 정보를 통해 중고나라 사기 통합 조회 후 거래를 권장합니다. - 게시일자 : 2026.03.06 기준 정보입니다. [상품 정보 더보기]를 눌러 최신 상태와 가격을 확인해 주세요."
+            - link "hostba 님의 판매 상품 더보기 〉" [ref=f43e108] [cursor=pointer]:
+              - /url: https://tracking.joongna.com/40ipru?storeseq=2050539&storeSeq=2050539
+              - generic [ref=f43e109]:
+                - generic [ref=f43e110]: hostba
+                - generic [ref=f43e111]: 님의 판매 상품 더보기
+                - generic [ref=f43e112]: 〉
+            - text: TamfmLggk0EeJiNNpzkF
+            - paragraph
+          - link [ref=f43e116] [cursor=pointer]:
+            - /url: /ca-fe/cafes/10050146/members/cw0BuIKYhmWg5jlwKbyPB6E1Dddzg90X-Ao1eUwJYyI
+            - img "프로필 사진" [ref=f43e118]
+            - generic [ref=f43e119]:
+              - strong [ref=f43e120]: leduk74
+              - text: 님의 게시글 더보기
+          - generic [ref=f43e121]:
+            - generic [ref=f43e122]:
+              - generic [ref=f43e124]:
+                - button [ref=f43e125] [cursor=pointer]:
+                  - emphasis [ref=f43e127]: 좋아요
+                  - emphasis: "0"
+                - button "이 글을 '좋아요'한 멤버 리스트" [ref=f43e128] [cursor=pointer]
+              - button [pressed] [ref=f43e130] [cursor=pointer]:
+                - text: 댓글
+                - strong [ref=f43e132]: "0"
+            - generic [ref=f43e133]:
+              - link "공유" [ref=f43e136] [cursor=pointer]:
+                - /url: "#"
+              - link "신고" [ref=f43e139] [cursor=pointer]:
+                - /url: "#"
+      - generic [ref=f43e141]:
+        - button "목록" [ref=f43e142] [cursor=pointer]
+        - button "TOP" [ref=f43e143] [cursor=pointer]
+      - iframe [ref=f43e148]:
+        - generic [ref=f48e3]:
+          - generic [ref=f48e4]:
+            - heading "파워링크" [level=2] [ref=f48e5]
+            - link "광고" [ref=f48e6] [cursor=pointer]:
+              - /url: https://help.naver.com/service/5622/contents/4299?lang=ko&osType=COMMONOS
+          - list [ref=f48e11]:
+            - listitem [ref=f48e12]:
+              - link [ref=f48e13] [cursor=pointer]:
+                - /url: https://ader.naver.com/v1/Tj5ERl7CLPVHk3rlN60ijn49eAXlo0gdAqmZ4Uofv4q16QzZwHI9iHNICA17K5uEPZ8HZ1UqCwzHKkB3mT7Xe3vmK1GWu8uB3vfeHDZTyOVWM-4Ma_bWDJMOBo5rf_B-R3jOVZ9rtKuZObsYeYdx-fd0npzdUtgd-M_LJB_IdqiGc-QbxOWRB89xuft_GGVlUSUOe6wxd840gkeOTutg3Snq08hhQjMZb5Ar2EW3s_0kChktr9J3-K9gv8qAEp82wjezppEx4ZH51D3_bTwX83u06AQfqgzrOjYa96uWn3wxOEg4E-L7j2llt12IJWrMvLwZxjL5tcXuuaegxNaorZIUclcmvVpVHRkgWa-JN2qYpaTfkJSdRf4MBOyIAHitahjOZTgfCH5bP4VrGjYFPnwTPeIARfuejWkxkyHovvQ93-vdX_iDQX9ZNZyRPemxEb_z-KQdyXh3yFhr5yCP4iTW_2cNVBew23CsOzlwjb_RWzL-xYQM6FI5C-ypGdHpREZzPhYRe2oybKn2KeFDjQ==?c=pncafe.new&t=0
+              - generic [ref=f48e14]:
+                - generic [ref=f48e15]:
+                  - link [ref=f48e16] [cursor=pointer]:
+                    - /url: https://ader.naver.com/v1/cYMX3YXe2-VYWPe063oikabBDOeTZszhB6jxa0unhMugtJWiDq5uCsCMBR376qdE8bCYnk9_chZehOeiidYyAv47zDtUbj7xV3IUoFz_HaLvXHq1963XON05gRA-SbuKt3IgpGzX7SQUwBup0QSGAmgoAeDZ7fsttvq42LdCPypJwfxrB7pC2MBM0IXwAmj35AT5dcmvK3-FqKC5UejO8MGxYpoy-0oPkEIavPELAkmC6PI04kCfn3GyY_ZE62LygfVnvzwCu344Qq4JgUIJQxwlaexxp-ZO4sb7UFJd52P21CdRNcBfgAQFC6NgNnMdRDEphER09hDarXzCpRLMlRfUfA2xUa6SPj0HMkBcaL3CGtu1yArg6OjC2NZExFXEtdBOl1W_oexQpSeGUNg5nI6sf6qx3JR-x3td36Z77GiLlBwkheg54jo6aAXi-hTYMHLW8WLI4UozwGc5LQoKR1_6odzD_FF3ulccQZCytrW4lVJANRV4dOHr8c-mpMaC?c=pncafe.new&t=0
+                    - img "favicon" [ref=f48e17]
+                  - link "쿠팡 · coupang.com" [ref=f48e18] [cursor=pointer]:
+                    - /url: https://ader.naver.com/v1/cYMX3YXe2-VYWPe063oikabBDOeTZszhB6jxa0unhMugtJWiDq5uCsCMBR376qdE8bCYnk9_chZehOeiidYyAv47zDtUbj7xV3IUoFz_HaLvXHq1963XON05gRA-SbuKt3IgpGzX7SQUwBup0QSGAmgoAeDZ7fsttvq42LdCPypJwfxrB7pC2MBM0IXwAmj35AT5dcmvK3-FqKC5UejO8MGxYpoy-0oPkEIavPELAkmC6PI04kCfn3GyY_ZE62LygfVnvzwCu344Qq4JgUIJQxwlaexxp-ZO4sb7UFJd52P21CdRNcBfgAQFC6NgNnMdRDEphER09hDarXzCpRLMlRfUfA2xUa6SPj0HMkBcaL3CGtu1yArg6OjC2NZExFXEtdBOl1W_oexQpSeGUNg5nI6sf6qx3JR-x3td36Z77GiLlBwkheg54jo6aAXi-hTYMHLW8WLI4UozwGc5LQoKR1_6odzD_FF3ulccQZCytrW4lVJANRV4dOHr8c-mpMaC?c=pncafe.new&t=0&p=1
+                - link [ref=f48e19] [cursor=pointer]:
+                  - /url: https://ader.naver.com/v1/cYMX3YXe2-VYWPe063oikabBDOeTZszhB6jxa0unhMugtJWiDq5uCsCMBR376qdE8bCYnk9_chZehOeiidYyAv47zDtUbj7xV3IUoFz_HaLvXHq1963XON05gRA-SbuKt3IgpGzX7SQUwBup0QSGAmgoAeDZ7fsttvq42LdCPypJwfxrB7pC2MBM0IXwAmj35AT5dcmvK3-FqKC5UejO8MGxYpoy-0oPkEIavPELAkmC6PI04kCfn3GyY_ZE62LygfVnvzwCu344Qq4JgUIJQxwlaexxp-ZO4sb7UFJd52P21CdRNcBfgAQFC6NgNnMdRDEphER09hDarXzCpRLMlRfUfA2xUa6SPj0HMkBcaL3CGtu1yArg6OjC2NZExFXEtdBOl1W_oexQpSeGUNg5nI6sf6qx3JR-x3td36Z77GiLlBwkheg54jo6aAXi-hTYMHLW8WLI4UozwGc5LQoKR1_6odzD_FF3ulccQZCytrW4lVJANRV4dOHr8c-mpMaC?c=pncafe.new&t=0&p=0
+                  - generic [ref=f48e20]:
+                    - generic [ref=f48e21]:
+                      - strong [ref=f48e22]: 스팸6호
+                      - text: 쿠팡
+                    - text: · 역시 명절엔 CJ 스팸 · 모두가 좋아하는 그 맛
+                - link [ref=f48e24] [cursor=pointer]:
+                  - /url: https://ader.naver.com/v1/cYMX3YXe2-VYWPe063oikabBDOeTZszhB6jxa0unhMugtJWiDq5uCsCMBR376qdE8bCYnk9_chZehOeiidYyAv47zDtUbj7xV3IUoFz_HaLvXHq1963XON05gRA-SbuKt3IgpGzX7SQUwBup0QSGAmgoAeDZ7fsttvq42LdCPypJwfxrB7pC2MBM0IXwAmj35AT5dcmvK3-FqKC5UejO8MGxYpoy-0oPkEIavPELAkmC6PI04kCfn3GyY_ZE62LygfVnvzwCu344Qq4JgUIJQxwlaexxp-ZO4sb7UFJd52P21CdRNcBfgAQFC6NgNnMdRDEphER09hDarXzCpRLMlRfUfA2xUa6SPj0HMkBcaL3CGtu1yArg6OjC2NZExFXEtdBOl1W_oexQpSeGUNg5nI6sf6qx3JR-x3td36Z77GiLlBwkheg54jo6aAXi-hTYMHLW8WLI4UozwGc5LQoKR1_6odzD_FF3ulccQZCytrW4lVJANRV4dOHr8c-mpMaC?c=pncafe.new&t=0
+                  - strong [ref=f48e25]: 스팸 6호
+                  - text: 선물세트, 짜지만 특별한 그 맛! 로켓배송으로 내일 도착! 명절 선물 고민 끝! 쿠팡에서 저렴하게 준비. 지인들이 만족하는 선택!
+                - list [ref=f48e26]:
+                  - listitem [ref=f48e27]:
+                    - link "스팸6호" [ref=f48e28] [cursor=pointer]:
+                      - /url: https://ader.naver.com/v1/119inftljbrw0048qCk8cAwoQW_Zyii5CIIr9DlsnDpNxlOsQSEfr_Qw9noivKoBaFzHthYalVmcYHmK2zxDkktPKE2d3Bpb47X1zzoDfAeaRxzm2JSiyPuQttfcvzUW8mrfn4i9VlC4YlJ-nUVM9NHLIsAZmhtpLLRGJsQaptQGnF6SEZpJXIBrmeaTJGmce1ZZaCl9KY_XslgJqzM14Mrho4g7nJOdZ7Yevn1k3Vk3V3Ocoiyelgy186RYr4tWMcFhYUscT6EXKuT34J1xG63agdTIbfjBEpF8QX1h3WKBqqBRar5sIC8ywtgkjY_TDN1T_Sx8fQoRnj0-ZY-lz0_mA0Vdqerj28Gz3Xd-4rTv5fVj1QUfYPc0MnWyuwPI6HhwfySfQ66c_S-IF9IR-nOgwd4klX3fciw5wTfDOQtT6Wmr7sUiUDzOYDjKnHKLFZpSxnaqSlvkUjrwKcO2oLntA3aUNxA7H_WqEIDrn49IsbMWTv5yM9j7JDX1EMMByKBVLa-4avV-RX_ibuiGtvJbAiApLXd1HZhE3itTaDa_DLQr6hAygUFStNliPjf9?c=pncafe.new&t=0
+                  - listitem [ref=f48e29]:
+                    - link "추석선물세트" [ref=f48e30] [cursor=pointer]:
+                      - /url: https://ader.naver.com/v1/-4yx5V8kOJi7z3Vg6xvgBHs2Xx52UcNd1C80Zz2Dvib4NLuYKKtsfb0aLzh6KvmkTCjBPgfQyYE3nmxf6dU_j_7oDV1OCXZx2DsuSDNSsHt6kBdEqWvDSVOQakPlFM71FyrGDvUTwoYkVtT9Q0mn8btssa5D9VgsIFai0e259VmtCoy2W3nHGvfC4bR6cV_LL5QUw7A7cp5Rh0CFZVNTl7Q0sZ59PIqbyuNNlK39pA09dImgmkJZfGtuaAcLgjU0bVXjoKa4PdflDs8LG5OskSUt5gJJsOoDKGIVc81qhFKMnjHO2TZWRIukI9L1W0Ha8V3SYvuFiDrxktRY2WgGww1a_x6N6xfKYlG5xtkSMXIh9WsZRAm7NBkOWgBOKndPLAbTb8Pp1OIboX2kvUehLRoj-h8iM2wBbVzPiPqTe7C_Jyqfz_RqUmxYHbSqvc4GLU4f2MneqB4TVWmpYvul9_PLTeiNZ4x2lx8MpR98GiqoSmWmteYJJCYcC0XoLvvdOxhk8YzGJ1scl_Sjo1giBwGSEuw8ZNeel8S5UdUKpeaBzrXsJiXgLyRt57Ia9T4iyV8yUScKSDiWAOQvP41xdg==?c=pncafe.new&t=0
+                  - listitem [ref=f48e31]:
+                    - link "스팸선물세트" [ref=f48e32] [cursor=pointer]:
+                      - /url: https://ader.naver.com/v1/ax1nEMx8B6Vt8dKXFhccRzPM2eAWIkZHyaWyFQoaDIlc0Kw2-5Iz6-na9ubqfUwdDHdZiNqufdUXnBRCL1ZKhVobbIInN2Wh1eGkjhYBt4fZBEml7SHd6lVzEME8zAyU_AjS5vVIg9Z7Q-KDD7YoL0kdFIQBLAuokA1jME5ng7Cd5tPSwRJ2M_vCtRH6lPEzyqKJqCOF2IltTufmeJ735paP5E8zDOc0XatZRBO4_uIINWYqvtYLiXCOmA3r1rVNamo9MajAxzuWDvpvgAGS-_2FilzaZf_oJEDa9M4fjMSMfYqBBESXO9nGkQpRL-Fv9Kc9Z26_S1Vx0Ob3H7Yv-3p0YaXhaMnEzL07OvMbuE4-1cWR0C2XokV0aH4SXGUD_qCBNIha35pqR4YmJKyRMqfIo7XY1hH3Pm3tOp7Jdn6gH7I13DQ7Hz_exSSOjd8Q9bddTA0HQMzb2yeoV99HuktsXEMpMSekMrTylOdzPPNPbLdFrVCJxDG5PKenYz3GceX2NldlZaIC8qXb0OvcV3USVgag7wytfcWoLUft1uRa5nUaHE7-PpDf90FqBl0xtej1mbygymrEdNZzF4gw5w==?c=pncafe.new&t=0
+                  - listitem [ref=f48e33]:
+                    - link "로켓배송" [ref=f48e34] [cursor=pointer]:
+                      - /url: https://ader.naver.com/v1/MWB-s86GdNBIiyxjdpTlvkNiha6n24ysSDuu8h3l4b4nDte1AUcS9K3Myzh79M-ZjUZzE_zzcnbJiIDpYtz_2zjwY-zwIN5g3NjZMNyZJ8yoCZkoH_kSimwj09Qt-DQx3BaScriAK1p9mmNYx4W3J_rR5QylS9osTuUq_xbvuA2wAu1eUyC7pnd1D-mAipFwscYvPF5e-GVkyF-4UBukPkendOayIFRBDSLzZXJX3MGwMZq76eezxuN5vDkr-xXW5GGm5dWQ-5aCOAMrgv6gY5xcVr_VZJ4ElFhK_PX-gFVyID-cgGKPUktLuZKEJk00kluibiijkH-qK0XaNrZOTTMYKwV0hyJnYJLDHkVQRE3UeXNEE1jyQiLyyeTu2V3LnZvj8_WE_h3emFInWiJFZ0CYReF99x4kejT5t0eVfEVNzqu9ksE6kEsgMB4ciBUO2mZYQup57bQUQEIUkZgfUP4cA-udC2wm9EiQP8zKCOITi3MYtGJI7vY5R2RCjXGbMP1HNCdCAvO6jdmwKpNjkDx_hT1mmqzxBE1aS87iKmU=?c=pncafe.new&t=0
+            - listitem [ref=f48e35]:
+              - link [ref=f48e36] [cursor=pointer]:
+                - /url: https://ader.naver.com/v1/6-vJ-Zdpnu1Pqdm1JJfq-uzco4Ca4rD-rOC55ZENSv8oM0obuO_FkSn91U9jmW4V6dzn5WDlAae18-smI_rw4AZdxBAw6si-RxLzyY9zAV6NhLZ1cm8p8GorfeRxGvslqt1zNrBjnjfh1yWKtHDgVYG8EwZjyrGRY84VNx4IM6BLiE8YX0cnvdu5HelwwFD-wxlnShD6DWwNJE8PdoehnmqeSMenqg8glpJCjAbqS2eCdZ_qpXhv8GqgryfaNozMco_pDfZeJLf8nDkicILEP21G3tbze3TCTcIRMZ-Exi0F02uFWkL3w4Hk8e76phJZMJkFc2GqnnkNIhbFy-j1agc3sRh8pWEjKDYO0lrl3i38lvwEXbtixsB-8jioFsZm?c=pncafe.new&t=0
+              - generic [ref=f48e37]:
+                - generic [ref=f48e38]:
+                  - link [ref=f48e39] [cursor=pointer]:
+                    - /url: https://ader.naver.com/v1/YUU9SYYxwbYhI2u-CDhA79hoSjoMWkq19iqEKydE_VwhJQuG_A6pVp1bZy_C_lB7jyCTKC-SuRiAm41svTG12kM5o1wmLmhxebJ44k0vnODbp4pOXrp_rv0upxtW0ItuTUMF7rwGW2_PQdqn0hmx-QcgGISE1AbkGTb0ZyKfpA1nKHwjQqEwFWtV0d_ZEYep66sLdCFyp1JHAnfPGrdeQzioI6Xg9BTTuDbGpDETnltQniJpX94wEPPKEPNZA2hBxvnW0D_aksg0UjvCykN7NB60IZ2M56DjqDx8hZxg0X5xSDla_w0ANCFRDmN-JUflD9wrEwoBGv8VoYz0HBYC8tyfELo_GW1gpf9X4V4j__c=?c=pncafe.new&t=0
+                    - img "favicon" [ref=f48e40]
+                  - link "현대홈쇼핑 · hmall.com" [ref=f48e41] [cursor=pointer]:
+                    - /url: https://ader.naver.com/v1/YUU9SYYxwbYhI2u-CDhA79hoSjoMWkq19iqEKydE_VwhJQuG_A6pVp1bZy_C_lB7jyCTKC-SuRiAm41svTG12kM5o1wmLmhxebJ44k0vnODbp4pOXrp_rv0upxtW0ItuTUMF7rwGW2_PQdqn0hmx-QcgGISE1AbkGTb0ZyKfpA1nKHwjQqEwFWtV0d_ZEYep66sLdCFyp1JHAnfPGrdeQzioI6Xg9BTTuDbGpDETnltQniJpX94wEPPKEPNZA2hBxvnW0D_aksg0UjvCykN7NB60IZ2M56DjqDx8hZxg0X5xSDla_w0ANCFRDmN-JUflD9wrEwoBGv8VoYz0HBYC8tyfELo_GW1gpf9X4V4j__c=?c=pncafe.new&t=0&p=1
+                  - button "네이버페이" [ref=f48e44] [cursor=pointer]
+                - link [ref=f48e46] [cursor=pointer]:
+                  - /url: https://ader.naver.com/v1/YUU9SYYxwbYhI2u-CDhA79hoSjoMWkq19iqEKydE_VwhJQuG_A6pVp1bZy_C_lB7jyCTKC-SuRiAm41svTG12kM5o1wmLmhxebJ44k0vnODbp4pOXrp_rv0upxtW0ItuTUMF7rwGW2_PQdqn0hmx-QcgGISE1AbkGTb0ZyKfpA1nKHwjQqEwFWtV0d_ZEYep66sLdCFyp1JHAnfPGrdeQzioI6Xg9BTTuDbGpDETnltQniJpX94wEPPKEPNZA2hBxvnW0D_aksg0UjvCykN7NB60IZ2M56DjqDx8hZxg0X5xSDla_w0ANCFRDmN-JUflD9wrEwoBGv8VoYz0HBYC8tyfELo_GW1gpf9X4V4j__c=?c=pncafe.new&t=0&p=0
+                  - generic [ref=f48e47]:
+                    - generic [ref=f48e48]:
+                      - text: 현대홈쇼핑
+                      - strong [ref=f48e49]: 스팸
+                    - text: · 추석맞이 다드림 감사제 · 오직 13일 구매사은품 행사
+                - link [ref=f48e51] [cursor=pointer]:
+                  - /url: https://ader.naver.com/v1/YUU9SYYxwbYhI2u-CDhA79hoSjoMWkq19iqEKydE_VwhJQuG_A6pVp1bZy_C_lB7jyCTKC-SuRiAm41svTG12kM5o1wmLmhxebJ44k0vnODbp4pOXrp_rv0upxtW0ItuTUMF7rwGW2_PQdqn0hmx-QcgGISE1AbkGTb0ZyKfpA1nKHwjQqEwFWtV0d_ZEYep66sLdCFyp1JHAnfPGrdeQzioI6Xg9BTTuDbGpDETnltQniJpX94wEPPKEPNZA2hBxvnW0D_aksg0UjvCykN7NB60IZ2M56DjqDx8hZxg0X5xSDla_w0ANCFRDmN-JUflD9wrEwoBGv8VoYz0HBYC8tyfELo_GW1gpf9X4V4j__c=?c=pncafe.new&t=0
+                  - text: 쇼핑 급상승 인기 브랜드
+                  - strong [ref=f48e52]: 스팸
+                  - text: 도 H몰에서 카드 즉시할인 최대 7%
+                - list [ref=f48e53]:
+                  - listitem [ref=f48e54]:
+                    - link "LIVE방송" [ref=f48e55] [cursor=pointer]:
+                      - /url: https://ader.naver.com/v1/6-vJ-Zdpnu1Pqdm1JJfq-uSzXE1p1q4SeulvtceSOCh9geWHBPhP6C-T4ksDbsBTJn4H8UxyT7cvfJlTqilAEGuGWPxmadJ_4GPvdcj71dhobCoZmNKGbHw9eBXHdCAjbIKwGDKYGc5fTFTg7pla-Zi4Smwx61JPPcObNbxiMdy3B-G0ZSi29bDUcIHTJWk9La2ZSTewdVBB10cC0bjco_WnJLCDFFyl6DGcoHr6JXUgce-rMvlajTdVHDHk0p2Tm8AN-9GxJ7dNklqkfANV2jjese5mBJy9g2HngcA2Jhzf-hZr2avn4LviXir4TVxPriW7wWM1bb8dszt9jjv7X_MDqEpMfgDz4AaK75ZPiVA=?c=pncafe.new&t=0
+                  - listitem [ref=f48e56]:
+                    - link "백화점" [ref=f48e57] [cursor=pointer]:
+                      - /url: https://ader.naver.com/v1/6-vJ-Zdpnu1Pqdm1JJfq-uSzXE1p1q4SeulvtceSOCh9geWHBPhP6C-T4ksDbsBTJn4H8UxyT7cvfJlTqilAEGuGWPxmadJ_4GPvdcj71dhobCoZmNKGbHw9eBXHdCAjbIKwGDKYGc5fTFTg7pla-Zi4Smwx61JPPcObNbxiMdz53gOQF8R9VEWN-5o4zOj0d-GLE6rMc1E0oMPge9xdJUArLTjY4WbjXXnfnc5OCYdh79qkSNvozemEkVG4_AeNh8B4G7ETdjP6FSX3BGwdMKCPn3PjHJU3p5dajUNcyb0zxZ6rPr8HMTq3L9Lg5V97G4PNVgZaKj3_jGEu9ezxHUSQU_lHQ9JZCKAYA_HrqZM=?c=pncafe.new&t=0
+                  - listitem [ref=f48e58]:
+                    - link "이벤트" [ref=f48e59] [cursor=pointer]:
+                      - /url: https://ader.naver.com/v1/6-vJ-Zdpnu1Pqdm1JJfq-uSzXE1p1q4SeulvtceSOCh9geWHBPhP6C-T4ksDbsBTJn4H8UxyT7cvfJlTqilAEGuGWPxmadJ_4GPvdcj71dhobCoZmNKGbHw9eBXHdCAjbIKwGDKYGc5fTFTg7pla-Zi4Smwx61JPPcObNbxiMdxxnK5G7y8j-YReRy22J0RfLn_LoIWflpgDMKWQ_FKs51qk3-3Ah_-l8G7P_cIFFgpefOWc_0j2_Ab4DWgTu6YcS_yMZNFkK6O5vxqmj91fpI55P9ZNgJuhWaSJ_7AdBWSNQDoYG7_HZzSA-CW1ULx0VjqU4CR2ELbBszkP-lROTBBdOm9F8e4EWKQur4wOzlw=?c=pncafe.new&t=0
+      - generic [ref=f43e149]:
+        - generic [ref=f43e150]:
+          - heading [level=2] [ref=f43e151]:
+            - strong [ref=f43e152]: "' 스팸6호 '"
+            - text: 검색결과
+          - generic [ref=f43e154]:
+            - button "이 카페 글" [pressed] [ref=f43e157] [cursor=pointer]
+            - list [ref=f43e160]:
+              - listitem [ref=f43e161]:
+                - generic [ref=f43e162]:
+                  - link "스팸 클래식 6호 선물세트 4세트 112,000원" [ref=f43e163] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/ArticleRead.nhn?referrerAllArticles=true&query=%EC%8A%A4%ED%8C%B86%ED%98%B8&boardtype=L&inCafeSearch=true&clubid=10050146&articleid=1134893591&art=aW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtc2VhcmNoLWxpc3Q.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjExMzQ4OTM1OTEsImlzc3VlZEF0IjoxNzg5MTE5MzAzNTgwLCJjYWZlSWQiOjEwMDUwMTQ2fQ.zCQrGECidfNWoo5ETJARmzZCTaFkFsqVRsgtaep9ORU
+                  - generic [ref=f43e165]:
+                    - img "사진"
+                    - img "링크"
+                  - img "new"
+                - button "중나인사이드" [ref=f43e167] [cursor=pointer]
+                - generic [ref=f43e168]: 09:26
+              - listitem [ref=f43e169]:
+                - link "스팸 선물세트 6호 (11세트 가능)" [ref=f43e171] [cursor=pointer]:
+                  - /url: https://cafe.naver.com/ArticleRead.nhn?referrerAllArticles=true&query=%EC%8A%A4%ED%8C%B86%ED%98%B8&boardtype=L&inCafeSearch=true&clubid=10050146&articleid=1134485865&art=aW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtc2VhcmNoLWxpc3Q.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjExMzQ0ODU4NjUsImlzc3VlZEF0IjoxNzg5MTE5MzAzNTkwLCJjYWZlSWQiOjEwMDUwMTQ2fQ.NdjQheTHXROJ2pgowpY0HVu6HUb6mC_ZNP8encZ7LrY
+                - button "미니707" [ref=f43e174] [cursor=pointer]
+                - generic [ref=f43e175]: 2026.09.03.
+              - listitem [ref=f43e176]:
+                - link "<미개봉> 스팸선물세트 6호+쇼핑백" [ref=f43e178] [cursor=pointer]:
+                  - /url: https://cafe.naver.com/ArticleRead.nhn?referrerAllArticles=true&query=%EC%8A%A4%ED%8C%B86%ED%98%B8&boardtype=L&inCafeSearch=true&clubid=10050146&articleid=1129027002&art=aW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtc2VhcmNoLWxpc3Q.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjExMjkwMjcwMDIsImlzc3VlZEF0IjoxNzg5MTE5MzAzNTk2LCJjYWZlSWQiOjEwMDUwMTQ2fQ.1dbZEPDXWYtnDBr5M7ydVN7ZOMiERIA92X83yvc98YQ
+                - button "하늘은푸르고" [ref=f43e181] [cursor=pointer]
+                - generic [ref=f43e182]: 2026.05.05.
+              - listitem [ref=f43e183]:
+                - link "스팸6호 선물셋트 팝니다" [ref=f43e185] [cursor=pointer]:
+                  - /url: https://cafe.naver.com/ArticleRead.nhn?referrerAllArticles=true&query=%EC%8A%A4%ED%8C%B86%ED%98%B8&boardtype=L&inCafeSearch=true&clubid=10050146&articleid=1128965626&art=aW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtc2VhcmNoLWxpc3Q.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjExMjg5NjU2MjYsImlzc3VlZEF0IjoxNzg5MTE5MzAzNjAyLCJjYWZlSWQiOjEwMDUwMTQ2fQ.YY6i8hBw2V0Dwu6surb0ftaW_zRGnkRrIPouIxXO2LI
+                - button "MJ해피니스" [ref=f43e188] [cursor=pointer]
+                - generic [ref=f43e189]: 2026.05.03.
+              - listitem [ref=f43e190]:
+                - link "[판매완료] 스팸 6호 클래식 세트 판매합니다." [ref=f43e192] [cursor=pointer]:
+                  - /url: https://cafe.naver.com/ArticleRead.nhn?referrerAllArticles=true&query=%EC%8A%A4%ED%8C%B86%ED%98%B8&boardtype=L&inCafeSearch=true&clubid=10050146&articleid=1127787836&art=aW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtc2VhcmNoLWxpc3Q.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjExMjc3ODc4MzYsImlzc3VlZEF0IjoxNzg5MTE5MzAzNjA1LCJjYWZlSWQiOjEwMDUwMTQ2fQ.tlJFaIpYYlA9DWaQQ4Fhgpcmy3u0mHds4iwdF17lWEE
+                - button "wellbeans" [ref=f43e195] [cursor=pointer]
+                - generic [ref=f43e196]: 2026.04.08.
+          - generic [ref=f43e198]:
+            - strong [ref=f43e199]: 페이징 이동
+            - button "1" [pressed] [ref=f43e200] [cursor=pointer]
+            - button "2" [ref=f43e201] [cursor=pointer]
+            - button "3" [ref=f43e202] [cursor=pointer]
+            - button "4" [ref=f43e203] [cursor=pointer]
+            - button "5" [ref=f43e204] [cursor=pointer]
+        - generic [ref=f43e205]:
+          - generic [ref=f43e207]:
+            - button "전체 카페 글" [pressed] [ref=f43e210] [cursor=pointer]
+            - list [ref=f43e213]:
+              - listitem [ref=f43e214]:
+                - generic [ref=f43e215]:
+                  - link "스팸선물세트 6호 명절 직원선물 직접 준비해보니 대만족이에요" [ref=f43e216] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/bmjmo1/1016?query=%BD%BA%C6%D46%C8%A3&art=aW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtc2VhcmNoLWxpc3Q.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjEwMTYsImlzc3VlZEF0IjoxNzg5MTE5MzAzMTc5LCJjYWZlSWQiOjMxNzE1ODgwfQ.tZTJjndn4c5_xAVUITkYQpmXeT-K5wis4Ql6ZlWdoPs&boardType=L&useCafeId=false&iframeQuery=%BD%BA%C6%D46%C8%A3
+                  - generic [ref=f43e218]:
+                    - img "사진"
+                    - img "링크"
+                - button "찡찡아" [ref=f43e220] [cursor=pointer]
+                - generic [ref=f43e221]: 2026.08.27.
+              - listitem [ref=f43e222]:
+                - generic [ref=f43e223]:
+                  - link "스팸선물세트 6호 명절 앞두고 직원 선물 챙기다 식은땀 흘린 사연" [ref=f43e224] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/bbanga1227/1058?query=%BD%BA%C6%D46%C8%A3&art=aW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtc2VhcmNoLWxpc3Q.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjEwNTgsImlzc3VlZEF0IjoxNzg5MTE5MzAzMTg4LCJjYWZlSWQiOjMxNzE1ODg4fQ.s-wXE1Z1OkF9_UvxNipud2LjTIz4TGVNisGOPRbLtOk&boardType=L&useCafeId=false&iframeQuery=%BD%BA%C6%D46%C8%A3
+                  - generic [ref=f43e226]:
+                    - img "사진"
+                    - img "링크"
+                - button "홍보하는 아기 고양이" [ref=f43e228] [cursor=pointer]
+                - generic [ref=f43e229]: 2026.08.29.
+              - listitem [ref=f43e230]:
+                - generic [ref=f43e231]:
+                  - link "스팸선물세트 6호, 설 명절 추석에 부담 없이 준비하기 좋은 실속 선물이에요" [ref=f43e232] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/miomy/14850?query=%BD%BA%C6%D46%C8%A3&art=aW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtc2VhcmNoLWxpc3Q.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjE0ODUwLCJpc3N1ZWRBdCI6MTc4OTExOTMwMzE5MywiY2FmZUlkIjozMTE1ODU3Nn0.3KCTveDUMyWk-39DGpTxBni2m7f4wKjQRjCiK3cXsdw&boardType=L&useCafeId=false&iframeQuery=%BD%BA%C6%D46%C8%A3
+                  - generic [ref=f43e234]:
+                    - img "사진"
+                    - img "링크"
+                - button "돈방석" [ref=f43e236] [cursor=pointer]
+                - generic [ref=f43e237]: 2026.08.25.
+              - listitem [ref=f43e238]:
+                - generic [ref=f43e239]:
+                  - link "명절 단체선물 배송 일정 당겨서 준비하는 스팸선물세트 6호 클래식 구성 후기" [ref=f43e240] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/bmjmo/1864?query=%BD%BA%C6%D46%C8%A3&art=aW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtc2VhcmNoLWxpc3Q.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjE4NjQsImlzc3VlZEF0IjoxNzg5MTE5MzAzMTk5LCJjYWZlSWQiOjMxNTM4NDUwfQ.QPm393g1CjNtGIKaiXNPkd4ICDf_bPQJ2KS9AwA0Wjw&boardType=L&useCafeId=false&iframeQuery=%BD%BA%C6%D46%C8%A3
+                  - generic [ref=f43e242]:
+                    - img "사진"
+                    - img "링크"
+                - button "bej3035" [ref=f43e244] [cursor=pointer]
+                - generic [ref=f43e245]: 2026.09.04.
+              - listitem [ref=f43e246]:
+                - generic [ref=f43e247]:
+                  - link "[G마켓(꼭)] (대박급) CJ제일제당 T 명절 선물세트 스팸 6호 x2개 (체감가 58,733원)" [ref=f43e248] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/v9850/40901?query=%BD%BA%C6%D46%C8%A3&art=aW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtc2VhcmNoLWxpc3Q.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjQwOTAxLCJpc3N1ZWRBdCI6MTc4OTExOTMwMzIwNywiY2FmZUlkIjoxMjMxODI5Mn0.t5SjFkM3WkSuvjWq_RMFJcehHNDwcwnV1jlXpCQpdqQ&boardType=L&useCafeId=false&iframeQuery=%BD%BA%C6%D46%C8%A3
+                  - generic [ref=f43e250]:
+                    - img "사진"
+                - button "오드리당" [ref=f43e252] [cursor=pointer]
+                - generic [ref=f43e253]: 2026.09.08.
+          - generic [ref=f43e255]:
+            - strong [ref=f43e256]: 페이징 이동
+            - button "1" [pressed] [ref=f43e257] [cursor=pointer]
+            - button "2" [ref=f43e258] [cursor=pointer]
+            - button "3" [ref=f43e259] [cursor=pointer]
+            - button "4" [ref=f43e260] [cursor=pointer]
+            - button "5" [ref=f43e261] [cursor=pointer]
+      - generic [ref=f43e263]:
+        - link [ref=f43e264] [cursor=pointer]:
+          - /url: https://cafe.naver.com/joonggonara
+          - generic [ref=f43e267]:
+            - strong [ref=f43e268]: 중고나라
+            - paragraph [ref=f43e269]: 거래 상품은 앱에서만 등록되며 카페와 사이트에 노출됩니다.
+            - generic [ref=f43e270]:
+              - text: 멤버
+              - emphasis [ref=f43e271]: 19,320,440
+              - text: 명
+        - link "카페 가입하기" [ref=f43e272] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=f43e273]:
+        - list
+        - link [ref=f43e274] [cursor=pointer]:
+          - /url: "#"
+          - img "레이어 닫기" [ref=f43e275]

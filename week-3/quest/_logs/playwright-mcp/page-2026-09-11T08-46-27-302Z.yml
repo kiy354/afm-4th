@@ -1,0 +1,1900 @@
+- generic [active] [ref=f74e1]:
+  - generic [ref=f74e5]:
+    - link [ref=f74e6] [cursor=pointer]:
+      - /url: /np/campaigns/82?adType=DA&eventId=f49BFCNcZN8gGvRY
+    - link [ref=f74e7] [cursor=pointer]:
+      - /url: https://shop.coupang.com/sajodaerim/268667?source=brandstore_display_ads&adType=DA&eventId=bLriReoJ3K95dY8F
+  - generic [ref=f74e8]:
+    - generic [ref=f74e10]:
+      - list [ref=f74e11]:
+        - listitem [ref=f74e12]:
+          - link "판매자 가입" [ref=f74e13] [cursor=pointer]:
+            - /url: https://wing.coupang.com/tenants/vendor-signup/signup?utm_source=button_pc_coupang_top_right_cta&utm_medium=non_paid&utm_campaign=seller_registration
+        - listitem [ref=f74e14]:
+          - link "고객센터" [ref=f74e15] [cursor=pointer]:
+            - /url: https://mc.coupang.com/ssr/desktop/contact/faq
+        - listitem [ref=f74e16]:
+          - link "회원가입" [ref=f74e17] [cursor=pointer]:
+            - /url: https://login.coupang.com/login/memberJoinFrm.pang
+        - listitem [ref=f74e18]:
+          - link "로그인" [ref=f74e19] [cursor=pointer]:
+            - /url: https://login.coupang.com/login/login.pang?rtnUrl=https%3A%2F%2Fwww.coupang.com%2Fnp%2Fpost%2Flogin%3Fr%3Dhttp%253A%252F%252Fwww.coupang.com%252Fnp%252Fsearch%253Fq%253D%2525EB%252594%2525B8%2525EA%2525B8%2525B0%2525EC%25259E%2525BC%2526filterType%253Drocket%2526sorter%253DsalePriceAsc
+      - list [ref=f74e20]:
+        - listitem [ref=f74e21]: 즐겨찾기
+        - listitem [ref=f74e22]:
+          - generic [ref=f74e23] [cursor=pointer]: 입점신청
+    - generic [ref=f74e26]:
+      - generic [ref=f74e27] [cursor=pointer]: 카테고리
+      - generic [ref=f74e33]:
+        - generic [ref=f74e34]:
+          - link [ref=f74e35] [cursor=pointer]:
+            - /url: https://www.coupang.com
+            - img "Coupang" [ref=f74e36]
+          - generic [ref=f74e37]:
+            - generic [ref=f74e38]: 전체
+            - textbox "쿠팡 상품 검색" [ref=f74e42]:
+              - /placeholder: 찾고 싶은 상품을 검색해보세요!
+              - text: 딸기잼
+            - button "검색" [ref=f74e43] [cursor=pointer]
+          - list [ref=f74e44]:
+            - listitem [ref=f74e45]:
+              - link "마이쿠팡" [ref=f74e46] [cursor=pointer]:
+                - /url: https://mc.coupang.com/ssr/desktop/order/list
+            - listitem [ref=f74e48]:
+              - link "장바구니" [ref=f74e49] [cursor=pointer]:
+                - /url: //cart.coupang.com/cartView.pang
+                - emphasis [ref=f74e50]
+        - list [ref=f74e54]:
+          - listitem [ref=f74e55]:
+            - link "쿠팡플레이 쿠팡플레이" [ref=f74e56] [cursor=pointer]:
+              - /url: https://www.coupangplay.com/catalog
+              - img "쿠팡플레이" [ref=f74e57]
+              - generic [ref=f74e58]: 쿠팡플레이
+          - listitem [ref=f74e59]:
+            - link "로켓배송 로켓배송" [ref=f74e60] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/campaigns/82
+              - img "로켓배송" [ref=f74e61]
+              - generic [ref=f74e62]: 로켓배송
+          - listitem [ref=f74e63]:
+            - link "로켓프레시 로켓프레시" [ref=f74e64] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/categories/393760
+              - img "로켓프레시" [ref=f74e65]
+              - generic [ref=f74e66]: 로켓프레시
+          - listitem [ref=f74e67]:
+            - link "2026 추석 2026 추석" [ref=f74e68] [cursor=pointer]:
+              - /url: https://www.coupang.com/mlp/web/mlp-landing-page?landingId=4800
+              - img "2026 추석" [ref=f74e69]
+              - generic [ref=f74e70]: 2026 추석
+          - listitem [ref=f74e72]:
+            - link "다시 구매 다시 구매" [ref=f74e73] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/fbi?sourceType=home_section_fbi
+              - img "다시 구매" [ref=f74e74]
+              - generic [ref=f74e75]: 다시 구매
+          - listitem [ref=f74e77]:
+            - link "쿠팡비즈 쿠팡비즈" [ref=f74e78] [cursor=pointer]:
+              - /url: https://login.coupang.com/corporation/member/landing-page
+              - img "쿠팡비즈" [ref=f74e79]
+              - generic [ref=f74e80]: 쿠팡비즈
+          - listitem [ref=f74e81]:
+            - link "로켓직구 로켓직구" [ref=f74e82] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/coupangglobal
+              - img "로켓직구" [ref=f74e83]
+              - generic [ref=f74e84]: 로켓직구
+          - listitem [ref=f74e85]:
+            - link "골드박스 골드박스" [ref=f74e86] [cursor=pointer]:
+              - /url: https://www.coupang.com/mlp/web/mlp-landing-page?landingId=3712&sourceType=gm_crm_goldbox&subSourceType=gm_crm_gwsrtcut
+              - img "골드박스" [ref=f74e87]
+              - generic [ref=f74e88]: 골드박스
+          - listitem [ref=f74e89]:
+            - link "이달의신상 이달의신상" [ref=f74e90] [cursor=pointer]:
+              - /url: https://pages.coupang.com/p/136938
+              - img "이달의신상" [ref=f74e91]
+              - generic [ref=f74e92]: 이달의신상
+          - listitem [ref=f74e93]:
+            - link "입점신청 입점신청" [ref=f74e94] [cursor=pointer]:
+              - /url: https://wing.coupang.com/tenants/vendor-signup/signup?utm_source=button_pc_coupang_shortcut_1&utm_medium=non_paid&utm_id=onsite_ca&utm_content=202411
+              - img "입점신청" [ref=f74e95]
+              - generic [ref=f74e96]: 입점신청
+          - listitem [ref=f74e97]:
+            - link "판매자특가 판매자특가" [ref=f74e98] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/omp
+              - img "판매자특가" [ref=f74e99]
+              - generic [ref=f74e100]: 판매자특가
+          - listitem [ref=f74e101]:
+            - link "와우회원할인 와우회원할인" [ref=f74e102] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/campaigns/83
+              - img "와우회원할인" [ref=f74e103]
+              - generic [ref=f74e104]: 와우회원할인
+          - listitem [ref=f74e105]:
+            - link "반품마켓 반품마켓" [ref=f74e106] [cursor=pointer]:
+              - /url: https://pages.coupang.com/p/54908
+              - img "반품마켓" [ref=f74e107]
+              - generic [ref=f74e108]: 반품마켓
+          - listitem [ref=f74e109]:
+            - link "착한상점 착한상점" [ref=f74e110] [cursor=pointer]:
+              - /url: https://pages.coupang.com/p/63240
+              - img "착한상점" [ref=f74e111]
+              - generic [ref=f74e112]: 착한상점
+          - listitem [ref=f74e114]:
+            - link "기획전 기획전" [ref=f74e115] [cursor=pointer]:
+              - /url: https://pages.coupang.com/p/bep?sourceType=gm_crm_oms&subSourceType=gm_crm_gwsrtcut
+              - img "기획전" [ref=f74e116]
+              - generic [ref=f74e117]: 기획전
+          - listitem [ref=f74e118]:
+            - link "쿠팡트래블 쿠팡트래블" [ref=f74e119] [cursor=pointer]:
+              - /url: https://trip.coupang.com/?channel=gnb
+              - img "쿠팡트래블" [ref=f74e120]
+              - generic [ref=f74e121]: 쿠팡트래블
+  - generic:
+    - article:
+      - generic:
+        - link "장바구니" [ref=f74e124] [cursor=pointer]:
+          - /url: //cart.coupang.com/cartView.pang
+          - emphasis
+        - generic [ref=f74e126]:
+          - generic [ref=f74e127]: 최근본상품
+          - emphasis
+  - generic [ref=f74e130]:
+    - generic [ref=f74e133]:
+      - list [ref=f74e134]:
+        - listitem [ref=f74e135]:
+          - link "전체" [ref=f74e136] [cursor=pointer]:
+            - /url: /np/search?q=%EB%94%B8%EA%B8%B0%EC%9E%BC&filterType=rocket&sorter=salePriceAsc
+      - strong [ref=f74e140]: "'딸기잼'"
+    - generic [ref=f74e143]:
+      - generic [ref=f74e144]:
+        - generic [ref=f74e147]:
+          - generic [ref=f74e148]:
+            - heading "필터" [level=4] [ref=f74e149]
+            - button "전체해제" [ref=f74e151] [cursor=pointer]
+          - list [ref=f74e154]:
+            - listitem [ref=f74e155]:
+              - img "rocket_luxury,rocket,coupang_global" [ref=f74e159] [cursor=pointer]
+              - list [ref=f74e161]:
+                - listitem [ref=f74e162]:
+                  - generic [ref=f74e163] [cursor=pointer]:
+                    - img "rocket_luxury" [ref=f74e166]
+                    - text: 만 보기
+                - listitem [ref=f74e167]:
+                  - generic [ref=f74e168] [cursor=pointer]:
+                    - img "rocket" [ref=f74e171]
+                    - text: 만 보기
+                - listitem [ref=f74e172]:
+                  - generic [ref=f74e173] [cursor=pointer]:
+                    - img "coupang_global" [ref=f74e176]
+                    - text: 만 보기
+            - listitem [ref=f74e177]:
+              - img "top_brand" [ref=f74e181] [cursor=pointer]
+            - listitem [ref=f74e182]:
+              - generic [ref=f74e183] [cursor=pointer]: 무료배송
+          - separator [ref=f74e185]
+          - generic [ref=f74e186]:
+            - heading "카테고리" [level=5] [ref=f74e187]
+            - generic [ref=f74e188]:
+              - list [ref=f74e189]:
+                - listitem [ref=f74e190]:
+                  - link "전체" [ref=f74e192] [cursor=pointer]:
+                    - /url: https://www.coupang.com
+                - listitem [ref=f74e193]:
+                  - link "식품" [ref=f74e195] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/194276
+                - listitem [ref=f74e196]:
+                  - link "싱글라이프" [ref=f74e198] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/433784
+                - listitem [ref=f74e199]:
+                  - link "로켓직구" [ref=f74e201] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/coupangglobal
+                - listitem [ref=f74e202]:
+                  - link "쿠팡수입" [ref=f74e204] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/510691
+                - listitem:
+                  - link "주방용품" [ref=f74e206] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/185669
+                - listitem:
+                  - link "결혼준비" [ref=f74e208] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/416130
+                - listitem:
+                  - link "뷰티" [ref=f74e210] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/176522
+                - listitem:
+                  - link "완구/취미" [ref=f74e212] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/317779
+                - listitem:
+                  - link "가전디지털" [ref=f74e214] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/178255
+                - listitem:
+                  - link "문구/오피스" [ref=f74e216] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/177295
+                - listitem:
+                  - link "출산/유아동" [ref=f74e218] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/221934
+                - listitem:
+                  - link "R.LUX" [ref=f74e220] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/campaigns/18530
+                - listitem:
+                  - link "아트/공예" [ref=f74e222] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/410273
+                - listitem:
+                  - link "홈카페" [ref=f74e224] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/316168
+                - listitem:
+                  - link "패션의류/잡화" [ref=f74e226] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/564653
+                - listitem:
+                  - link "도서/음반/DVD" [ref=f74e228] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/317777
+                - listitem:
+                  - link "반려동물용품" [ref=f74e230] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/115674
+                - listitem:
+                  - link "미세먼지용품" [ref=f74e232] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/campaigns/17593
+                - listitem:
+                  - link "실버스토어" [ref=f74e234] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/383370
+                - listitem:
+                  - link "자동차용품" [ref=f74e236] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/184060
+                - listitem:
+                  - link "안전전문관" [ref=f74e238] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/568926
+                - listitem:
+                  - link "국내여행" [ref=f74e240] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/396463
+              - generic [ref=f74e241] [cursor=pointer]: + 더보기
+          - separator [ref=f74e242]
+          - generic [ref=f74e243]:
+            - heading "브랜드" [level=5] [ref=f74e244]
+            - generic [ref=f74e245]:
+              - list [ref=f74e246]:
+                - listitem [ref=f74e247]:
+                  - generic [ref=f74e248] [cursor=pointer]: 복음자리
+                - listitem [ref=f74e250]:
+                  - generic [ref=f74e251] [cursor=pointer]: 오뚜기
+                - listitem [ref=f74e253]:
+                  - generic [ref=f74e254] [cursor=pointer]: 초록원
+                - listitem [ref=f74e256]:
+                  - generic [ref=f74e257] [cursor=pointer]: 마이노멀
+                - listitem [ref=f74e259]:
+                  - generic [ref=f74e260] [cursor=pointer]: 본마망
+                - listitem:
+                  - generic [ref=f74e262] [cursor=pointer]: 아빠랑
+                - listitem:
+                  - generic [ref=f74e264] [cursor=pointer]: 스머커즈
+                - listitem:
+                  - generic [ref=f74e266] [cursor=pointer]: 키토선생
+                - listitem:
+                  - generic [ref=f74e268] [cursor=pointer]: 샹달프
+                - listitem:
+                  - generic [ref=f74e270] [cursor=pointer]: 비타민마을
+                - listitem:
+                  - generic [ref=f74e272] [cursor=pointer]: 안단잼
+                - listitem:
+                  - generic [ref=f74e274] [cursor=pointer]: 폰타나
+                - listitem:
+                  - generic [ref=f74e276] [cursor=pointer]: 다보
+                - listitem:
+                  - generic [ref=f74e278] [cursor=pointer]: 프로젝트에이치
+                - listitem:
+                  - generic [ref=f74e280] [cursor=pointer]: gomgom
+                - listitem:
+                  - generic [ref=f74e282] [cursor=pointer]: 농협식품
+                - listitem:
+                  - generic [ref=f74e284] [cursor=pointer]: 리얼마이즈
+                - listitem:
+                  - generic [ref=f74e286] [cursor=pointer]: 청정원
+                - listitem:
+                  - generic [ref=f74e288] [cursor=pointer]: dana
+                - listitem:
+                  - generic [ref=f74e290] [cursor=pointer]: 오트리
+              - generic [ref=f74e292] [cursor=pointer]: + 더보기
+          - separator [ref=f74e293]
+          - generic [ref=f74e294]:
+            - heading "상품 상태" [level=5] [ref=f74e295]
+            - list [ref=f74e297]:
+              - listitem [ref=f74e298]:
+                - generic [ref=f74e299] [cursor=pointer]: 새 상품
+              - listitem [ref=f74e301]:
+                - generic [ref=f74e302] [cursor=pointer]: 박스 훼손
+              - listitem [ref=f74e304]:
+                - generic [ref=f74e305] [cursor=pointer]: 재포장
+              - listitem [ref=f74e307]:
+                - generic [ref=f74e308] [cursor=pointer]: 반품
+              - listitem [ref=f74e310]:
+                - generic [ref=f74e311] [cursor=pointer]: 중고
+          - separator [ref=f74e313]
+          - generic [ref=f74e314]:
+            - heading "낱개상품 여부" [level=5] [ref=f74e315]
+            - list [ref=f74e317]:
+              - listitem [ref=f74e318]:
+                - generic [ref=f74e319] [cursor=pointer]: 낱개상품
+          - separator [ref=f74e321]
+          - generic [ref=f74e322]:
+            - heading "개당 중량" [level=5] [ref=f74e323]
+            - list [ref=f74e325]:
+              - listitem [ref=f74e326]:
+                - generic [ref=f74e327] [cursor=pointer]: 200g 이하
+              - listitem [ref=f74e329]:
+                - generic [ref=f74e330] [cursor=pointer]: 200~600g
+              - listitem [ref=f74e332]:
+                - generic [ref=f74e333] [cursor=pointer]: 600g~1kg
+              - listitem [ref=f74e335]:
+                - generic [ref=f74e336] [cursor=pointer]: 1kg 이상
+          - separator [ref=f74e338]
+          - generic [ref=f74e339]:
+            - heading "주원료함량" [level=5] [ref=f74e340]
+            - list [ref=f74e342]:
+              - listitem [ref=f74e343]:
+                - generic [ref=f74e344] [cursor=pointer]: 50% 이하
+              - listitem [ref=f74e346]:
+                - generic [ref=f74e347] [cursor=pointer]: 50~70%
+              - listitem [ref=f74e349]:
+                - generic [ref=f74e350] [cursor=pointer]: 70% 이상
+          - separator [ref=f74e352]
+          - generic [ref=f74e353]:
+            - heading "총 중량" [level=5] [ref=f74e354]
+            - generic [ref=f74e355]:
+              - list [ref=f74e356]:
+                - listitem [ref=f74e357]:
+                  - generic [ref=f74e358] [cursor=pointer]: 200g 이하
+                - listitem [ref=f74e360]:
+                  - generic [ref=f74e361] [cursor=pointer]: 200~400g
+                - listitem [ref=f74e363]:
+                  - generic [ref=f74e364] [cursor=pointer]: 400~600g
+                - listitem [ref=f74e366]:
+                  - generic [ref=f74e367] [cursor=pointer]: 600~800g
+                - listitem [ref=f74e369]:
+                  - generic [ref=f74e370] [cursor=pointer]: 800g~1kg
+                - listitem:
+                  - generic [ref=f74e372] [cursor=pointer]: 1~2kg
+                - listitem:
+                  - generic [ref=f74e374] [cursor=pointer]: 2~3kg
+                - listitem:
+                  - generic [ref=f74e376] [cursor=pointer]: 3~4kg
+                - listitem:
+                  - generic [ref=f74e378] [cursor=pointer]: 4~5kg
+                - listitem:
+                  - generic [ref=f74e380] [cursor=pointer]: 5kg 이상
+              - generic [ref=f74e382] [cursor=pointer]: + 더보기
+          - separator [ref=f74e383]
+          - generic [ref=f74e384]:
+            - heading "포장형태" [level=5] [ref=f74e385]
+            - list [ref=f74e387]:
+              - listitem [ref=f74e388]:
+                - generic [ref=f74e389] [cursor=pointer]: 용기
+              - listitem [ref=f74e391]:
+                - generic [ref=f74e392] [cursor=pointer]: 병
+              - listitem [ref=f74e394]:
+                - generic [ref=f74e395] [cursor=pointer]: 튜브
+              - listitem [ref=f74e397]:
+                - generic: 리필
+              - listitem [ref=f74e398]:
+                - generic [ref=f74e399] [cursor=pointer]: 일회용
+              - listitem [ref=f74e401]:
+                - generic [ref=f74e402] [cursor=pointer]: 봉지/팩
+          - separator [ref=f74e404]
+          - generic [ref=f74e405]:
+            - heading "종류" [level=5] [ref=f74e406]
+            - generic [ref=f74e407]:
+              - list [ref=f74e408]:
+                - listitem [ref=f74e409]:
+                  - generic [ref=f74e410] [cursor=pointer]: 딸기
+                - listitem [ref=f74e412]:
+                  - generic [ref=f74e413] [cursor=pointer]: 땅콩
+                - listitem [ref=f74e415]:
+                  - generic [ref=f74e416] [cursor=pointer]: 카야
+                - listitem [ref=f74e418]:
+                  - generic [ref=f74e419] [cursor=pointer]: 베리
+                - listitem [ref=f74e421]:
+                  - generic [ref=f74e422] [cursor=pointer]: 초코
+                - listitem:
+                  - generic [ref=f74e424] [cursor=pointer]: 사과
+                - listitem:
+                  - generic [ref=f74e426] [cursor=pointer]: 귤/오렌지
+                - listitem:
+                  - generic [ref=f74e428] [cursor=pointer]: 혼합세트
+                - listitem:
+                  - generic [ref=f74e430] [cursor=pointer]: 스프레드
+                - listitem:
+                  - generic [ref=f74e432] [cursor=pointer]: 기타
+              - generic [ref=f74e434] [cursor=pointer]: + 더보기
+          - separator [ref=f74e435]
+          - generic [ref=f74e436]:
+            - heading "설탕함량" [level=5] [ref=f74e437]
+            - list [ref=f74e439]:
+              - listitem [ref=f74e440]:
+                - generic [ref=f74e441] [cursor=pointer]: 무설탕
+              - listitem [ref=f74e443]:
+                - generic [ref=f74e444] [cursor=pointer]: 저설탕
+              - listitem [ref=f74e446]:
+                - generic [ref=f74e447] [cursor=pointer]: 설탕첨가
+              - listitem [ref=f74e449]:
+                - generic [ref=f74e450] [cursor=pointer]: 당 첨가
+          - separator [ref=f74e452]
+          - generic [ref=f74e453]:
+            - heading "간편식" [level=5] [ref=f74e454]
+            - list [ref=f74e456]:
+              - listitem [ref=f74e457]:
+                - generic [ref=f74e458] [cursor=pointer]: 즉석섭취음료
+              - listitem [ref=f74e460]:
+                - generic [ref=f74e461] [cursor=pointer]: 즉석섭취식품
+              - listitem [ref=f74e463]:
+                - generic [ref=f74e464] [cursor=pointer]: 즉석조리식품
+              - listitem [ref=f74e466]:
+                - generic [ref=f74e467] [cursor=pointer]: 밀키트
+          - separator [ref=f74e469]
+          - generic [ref=f74e470]:
+            - heading "비건 여부" [level=5] [ref=f74e471]
+            - list [ref=f74e473]:
+              - listitem [ref=f74e474]:
+                - generic [ref=f74e475] [cursor=pointer]: 비건
+          - separator [ref=f74e477]
+          - generic [ref=f74e478]:
+            - heading "선물세트 여부" [level=5] [ref=f74e479]
+            - list [ref=f74e481]:
+              - listitem [ref=f74e482]:
+                - generic [ref=f74e483] [cursor=pointer]: 선물세트
+          - separator [ref=f74e485]
+          - generic [ref=f74e486]:
+            - heading "용도" [level=5] [ref=f74e487]
+            - list [ref=f74e489]:
+              - listitem [ref=f74e490]:
+                - generic [ref=f74e491] [cursor=pointer]: 가정용
+              - listitem [ref=f74e493]:
+                - generic [ref=f74e494] [cursor=pointer]: 업소용
+          - separator [ref=f74e496]
+          - generic [ref=f74e497]:
+            - heading "1회 제공량당 열량" [level=5] [ref=f74e498]
+            - generic [ref=f74e499]:
+              - list [ref=f74e500]:
+                - listitem [ref=f74e501]:
+                  - generic: 0Kcal
+                - listitem [ref=f74e502]:
+                  - generic [ref=f74e503] [cursor=pointer]: 1Kcal 이상 ~ 20Kcal 이하
+                - listitem [ref=f74e505]:
+                  - generic [ref=f74e506] [cursor=pointer]: 20Kcal 이상 ~ 40Kcal 이하
+                - listitem [ref=f74e508]:
+                  - generic [ref=f74e509] [cursor=pointer]: 40Kcal 이상 ~ 100Kcal 이하
+                - listitem [ref=f74e511]:
+                  - generic [ref=f74e512] [cursor=pointer]: 100Kcal 이상 ~ 200Kcal 이하
+                - listitem:
+                  - generic [ref=f74e514] [cursor=pointer]: 200Kcal 이상 ~ 300Kcal 이하
+                - listitem:
+                  - generic [ref=f74e516] [cursor=pointer]: 300Kcal 이상
+              - generic [ref=f74e518] [cursor=pointer]: + 더보기
+          - separator [ref=f74e519]
+          - generic [ref=f74e520]:
+            - heading "용기형태" [level=5] [ref=f74e521]
+            - generic [ref=f74e522]:
+              - list [ref=f74e523]:
+                - listitem [ref=f74e524]:
+                  - generic [ref=f74e525] [cursor=pointer]: 플라스틱병
+                - listitem [ref=f74e527]:
+                  - generic [ref=f74e528] [cursor=pointer]: 유리병
+                - listitem [ref=f74e530]:
+                  - generic [ref=f74e531] [cursor=pointer]: 캔
+                - listitem [ref=f74e533]:
+                  - generic [ref=f74e534] [cursor=pointer]: 파우치
+                - listitem [ref=f74e536]:
+                  - generic [ref=f74e537] [cursor=pointer]: 종이팩
+                - listitem:
+                  - generic [ref=f74e539] [cursor=pointer]: 컵
+                - listitem:
+                  - generic [ref=f74e541] [cursor=pointer]: 스틱/포
+                - listitem:
+                  - generic [ref=f74e543] [cursor=pointer]: 튜브
+              - generic [ref=f74e545] [cursor=pointer]: + 더보기
+          - separator [ref=f74e546]
+          - generic [ref=f74e547]:
+            - heading "보관방식" [level=5] [ref=f74e548]
+            - list [ref=f74e550]:
+              - listitem [ref=f74e551]:
+                - generic [ref=f74e552] [cursor=pointer]: 냉장보관
+              - listitem [ref=f74e554]:
+                - generic [ref=f74e555] [cursor=pointer]: 냉동보관
+              - listitem [ref=f74e557]:
+                - generic [ref=f74e558] [cursor=pointer]: 실온보관
+          - separator [ref=f74e560]
+          - generic [ref=f74e561]:
+            - heading "별점" [level=5] [ref=f74e562]
+            - list [ref=f74e564]:
+              - listitem [ref=f74e565]:
+                - generic "전체" [ref=f74e566]: 별점전체
+              - listitem [ref=f74e567]:
+                - generic "4점 이상" [ref=f74e568]:
+                  - generic [ref=f74e569] [cursor=pointer]
+                  - text: 4점 이상
+              - listitem [ref=f74e570]:
+                - generic "3점 이상" [ref=f74e571]:
+                  - generic [ref=f74e572] [cursor=pointer]
+                  - text: 3점 이상
+              - listitem [ref=f74e573]:
+                - generic "2점 이상" [ref=f74e574]:
+                  - generic [ref=f74e575] [cursor=pointer]
+                  - text: 2점 이상
+              - listitem [ref=f74e576]:
+                - generic "1점 이상" [ref=f74e577]:
+                  - generic [ref=f74e578] [cursor=pointer]
+                  - text: 1점 이상
+          - separator [ref=f74e579]
+          - generic [ref=f74e580]:
+            - heading "가격" [level=5] [ref=f74e581]
+            - list [ref=f74e583]:
+              - listitem [ref=f74e584]:
+                - generic "priceFilter" [ref=f74e585]: 가격 전체
+              - listitem [ref=f74e586]:
+                - generic "priceFilter" [ref=f74e587]: 9천원 이하
+              - listitem [ref=f74e588]:
+                - generic "priceFilter" [ref=f74e589]: 9천원~1만 8천원
+              - listitem [ref=f74e590]:
+                - generic "priceFilter" [ref=f74e591]: 1만 8천원~2만 7천원
+              - listitem [ref=f74e592]:
+                - generic "priceFilter" [ref=f74e593]: 2만 7천원~3만 6천원
+              - listitem [ref=f74e594]:
+                - generic "priceFilter" [ref=f74e595]: 3만 6천원 이상
+            - generic [ref=f74e596]:
+              - generic [ref=f74e597]:
+                - textbox "minPrice" [ref=f74e598]
+                - generic [ref=f74e599]: ~
+                - textbox "maxPrice" [ref=f74e600]
+                - text: 원
+              - generic "priceFilter" [ref=f74e601]: 검색
+          - separator [ref=f74e602]
+        - generic [ref=f74e605]:
+          - generic [ref=f74e606]: 현재 검색 결과에 만족하셨나요?
+          - button [ref=f74e607] [cursor=pointer]
+          - button [ref=f74e608] [cursor=pointer]
+          - generic [ref=f74e609]:
+            - paragraph [ref=f74e610]: 어떤 문제가 있었나요?
+            - list [ref=f74e611]:
+              - listitem [ref=f74e612] [cursor=pointer]: 기타 원하는 옵션이 없어요
+      - generic [ref=f74e613]:
+        - generic [ref=f74e614]:
+          - heading [level=1] [ref=f74e615]:
+            - strong [ref=f74e616]: "'딸기잼'"
+            - text: 에 대한 검색결과
+          - generic [ref=f74e617]:
+            - text: "선택한 필터:"
+            - link "로켓배송 삭제" [ref=f74e619] [cursor=pointer]:
+              - /url: "#"
+              - text: 로켓배송
+              - generic [ref=f74e620]: 삭제
+          - generic [ref=f74e621]:
+            - generic [ref=f74e624]:
+              - checkbox "배송비 포함" [ref=f74e625] [cursor=pointer]
+              - generic [ref=f74e628]: 배송비 포함
+            - list [ref=f74e632]:
+              - listitem [ref=f74e633]:
+                - radio "쿠팡 랭킹순" [ref=f74e634]
+                - generic [ref=f74e635] [cursor=pointer]: 쿠팡 랭킹순
+                - generic [ref=f74e636]: 설명
+              - listitem [ref=f74e637]:
+                - radio "낮은가격순" [checked] [ref=f74e638]
+                - generic [ref=f74e639] [cursor=pointer]: 낮은가격순
+              - listitem [ref=f74e640]:
+                - radio "높은가격순" [ref=f74e641]
+                - generic [ref=f74e642] [cursor=pointer]: 높은가격순
+              - listitem [ref=f74e643]:
+                - radio "판매량순" [ref=f74e644]
+                - generic [ref=f74e645] [cursor=pointer]: 판매량순
+              - listitem [ref=f74e646]:
+                - radio "최신순" [ref=f74e647]
+                - generic [ref=f74e648] [cursor=pointer]: 최신순
+        - generic [ref=f74e651]:
+          - list [ref=f74e653]:
+            - listitem [ref=f74e654] [cursor=pointer]:
+              - link "복음자리 바로 짜먹는 딸기잼, 100g, 1개 59,520원 95% 2,480원 (100g당 2,480원) 내일(토) 새벽 도착 보장 5 (685) 최대 124원 적립 최대 124원 적립 1" [ref=f74e655]:
+                - /url: /vp/products/9172266438?itemId=19082540158&vendorItemId=93594909580&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=0&rank=0
+                - figure [ref=f74e656]:
+                  - img "복음자리 바로 짜먹는 딸기잼, 100g, 1개" [ref=f74e657]
+                - generic [ref=f74e658]:
+                  - generic [ref=f74e660]: 복음자리 바로 짜먹는 딸기잼, 100g, 1개
+                  - generic [ref=f74e661]:
+                    - deletion [ref=f74e663]: 59,520원
+                    - generic [ref=f74e665]:
+                      - generic [ref=f74e666]: 95%
+                      - generic [ref=f74e667]: 2,480원
+                      - generic [ref=f74e668]: (100g당 2,480원)
+                  - generic [ref=f74e669]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f74e675]:
+                    - generic "5" [ref=f74e676]
+                    - generic [ref=f74e682]: (685)
+                  - generic [ref=f74e685]:
+                    - img "최대 124원 적립" [ref=f74e686]
+                    - generic [ref=f74e687]: 최대 124원 적립
+                  - generic [ref=f74e688]: "1"
+            - listitem [ref=f74e689] [cursor=pointer]:
+              - link "오뚜기 라이트 앤 조이 당을줄인 논산딸기쨈, 290g, 1개 4,980원 20% 3,980원 (100g당 1,372원) 내일(토) 새벽 도착 보장 5 (15,470) 최대 199원 적립 최대 199원 적립 2" [ref=f74e690]:
+                - /url: /vp/products/8636208020?itemId=25058382309&vendorItemId=92062647683&pickType=COU_PICK&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=1&rank=1
+                - figure [ref=f74e691]:
+                  - img "오뚜기 라이트 앤 조이 당을줄인 논산딸기쨈, 290g, 1개" [ref=f74e692]
+                - generic [ref=f74e693]:
+                  - generic [ref=f74e698]: 오뚜기 라이트 앤 조이 당을줄인 논산딸기쨈, 290g, 1개
+                  - generic [ref=f74e699]:
+                    - deletion [ref=f74e701]: 4,980원
+                    - generic [ref=f74e703]:
+                      - generic [ref=f74e704]: 20%
+                      - generic [ref=f74e705]: 3,980원
+                      - generic [ref=f74e706]: (100g당 1,372원)
+                  - generic [ref=f74e707]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f74e713]:
+                    - generic "5" [ref=f74e714]
+                    - generic [ref=f74e720]: (15,470)
+                  - generic [ref=f74e723]:
+                    - img "최대 199원 적립" [ref=f74e724]
+                    - generic [ref=f74e725]: 최대 199원 적립
+                  - generic [ref=f74e726]: "2"
+            - listitem [ref=f74e727] [cursor=pointer]:
+              - link "복음자리 바로 짜먹는 딸기잼, 100g, 2개 119,040원 95% 4,960원 (100g당 2,480원) 내일(토) 새벽 도착 보장 5 (685) 최대 248원 적립 최대 248원 적립 3" [ref=f74e728]:
+                - /url: /vp/products/9172266438?itemId=27034007336&vendorItemId=94002517781&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=2&rank=2
+                - figure [ref=f74e729]:
+                  - img "복음자리 바로 짜먹는 딸기잼, 100g, 2개" [ref=f74e730]
+                - generic [ref=f74e731]:
+                  - generic [ref=f74e733]: 복음자리 바로 짜먹는 딸기잼, 100g, 2개
+                  - generic [ref=f74e734]:
+                    - deletion [ref=f74e736]: 119,040원
+                    - generic [ref=f74e738]:
+                      - generic [ref=f74e739]: 95%
+                      - generic [ref=f74e740]: 4,960원
+                      - generic [ref=f74e741]: (100g당 2,480원)
+                  - generic [ref=f74e742]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f74e748]:
+                    - generic "5" [ref=f74e749]
+                    - generic [ref=f74e755]: (685)
+                  - generic [ref=f74e758]:
+                    - img "최대 248원 적립" [ref=f74e759]
+                    - generic [ref=f74e760]: 최대 248원 적립
+                  - generic [ref=f74e761]: "3"
+            - listitem [ref=f74e762] [cursor=pointer]:
+              - link "초록원 딸기잼, 560g, 1개 5,400원 4% 5,170원 (100g당 923원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (48,659) 최대 259원 적립 최대 259원 적립 4" [ref=f74e763]:
+                - /url: /vp/products/7573456610?itemId=23696242122&vendorItemId=87721156837&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=3&rank=3
+                - figure [ref=f74e764]:
+                  - img "초록원 딸기잼, 560g, 1개" [ref=f74e765]
+                - generic [ref=f74e766]:
+                  - generic [ref=f74e768]: 초록원 딸기잼, 560g, 1개
+                  - generic [ref=f74e769]:
+                    - deletion [ref=f74e771]: 5,400원
+                    - generic [ref=f74e773]:
+                      - generic [ref=f74e774]: 4%
+                      - generic [ref=f74e775]: 5,170원
+                      - generic [ref=f74e776]: (100g당 923원)
+                  - generic [ref=f74e777]:
+                    - generic [ref=f74e778]: 내일(토) 도착 보장
+                    - generic [ref=f74e782]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f74e784]:
+                    - generic "4.5" [ref=f74e785]
+                    - generic [ref=f74e791]: (48,659)
+                  - generic [ref=f74e794]:
+                    - img "최대 259원 적립" [ref=f74e795]
+                    - generic [ref=f74e796]: 최대 259원 적립
+                  - generic [ref=f74e797]: "4"
+            - listitem [ref=f74e798] [cursor=pointer]:
+              - link "농협식품 딸기잼, 1개, 370g 5,200원 (100g당 1,405원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (264) 최대 260원 적립 최대 260원 적립 5" [ref=f74e799]:
+                - /url: /vp/products/6869584975?itemId=16429038907&vendorItemId=83619850515&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=4&rank=4
+                - figure [ref=f74e800]:
+                  - img "농협식품 딸기잼, 1개, 370g" [ref=f74e801]
+                - generic [ref=f74e802]:
+                  - generic [ref=f74e804]: 농협식품 딸기잼, 1개, 370g
+                  - generic [ref=f74e807]:
+                    - generic [ref=f74e808]: 5,200원
+                    - generic [ref=f74e809]: (100g당 1,405원)
+                  - generic [ref=f74e810]:
+                    - generic [ref=f74e811]: 내일(토) 도착 보장
+                    - generic [ref=f74e815]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f74e817]:
+                    - generic "4.5" [ref=f74e818]
+                    - generic [ref=f74e824]: (264)
+                  - generic [ref=f74e827]:
+                    - img "최대 260원 적립" [ref=f74e828]
+                    - generic [ref=f74e829]: 최대 260원 적립
+                  - generic [ref=f74e830]: "5"
+            - listitem [ref=f74e831] [cursor=pointer]:
+              - link "동원 잼이 된 통딸기, 370g, 1개 5,480원 (100g당 1,481원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (757) 최대 274원 적립 최대 274원 적립 6" [ref=f74e832]:
+                - /url: /vp/products/185324533?itemId=47564&vendorItemId=3000018774&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=5&rank=5
+                - figure [ref=f74e833]:
+                  - img "동원 잼이 된 통딸기, 370g, 1개" [ref=f74e834]
+                - generic [ref=f74e835]:
+                  - generic [ref=f74e837]: 동원 잼이 된 통딸기, 370g, 1개
+                  - generic [ref=f74e840]:
+                    - generic [ref=f74e841]: 5,480원
+                    - generic [ref=f74e842]: (100g당 1,481원)
+                  - generic [ref=f74e843]:
+                    - generic [ref=f74e844]: 내일(토) 도착 보장
+                    - generic [ref=f74e848]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f74e850]:
+                    - generic "4.5" [ref=f74e851]
+                    - generic [ref=f74e857]: (757)
+                  - generic [ref=f74e860]:
+                    - img "최대 274원 적립" [ref=f74e861]
+                    - generic [ref=f74e862]: 최대 274원 적립
+                  - generic [ref=f74e863]: "6"
+            - listitem [ref=f74e864] [cursor=pointer]:
+              - link "dana 딸기잼, 370g, 1개 7,500원 26% 5,480원 (100g당 1,481원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (3,446) 최대 274원 적립 최대 274원 적립 7" [ref=f74e865]:
+                - /url: /vp/products/7490584112?itemId=27389319736&vendorItemId=95155487703&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=6&rank=6
+                - figure [ref=f74e866]:
+                  - img "dana 딸기잼, 370g, 1개" [ref=f74e867]
+                - generic [ref=f74e868]:
+                  - generic [ref=f74e870]: dana 딸기잼, 370g, 1개
+                  - generic [ref=f74e871]:
+                    - deletion [ref=f74e873]: 7,500원
+                    - generic [ref=f74e875]:
+                      - generic [ref=f74e876]: 26%
+                      - generic [ref=f74e877]: 5,480원
+                      - generic [ref=f74e878]: (100g당 1,481원)
+                  - generic [ref=f74e879]:
+                    - generic [ref=f74e880]: 내일(토) 도착 보장
+                    - generic [ref=f74e884]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f74e886]:
+                    - generic "4.5" [ref=f74e887]
+                    - generic [ref=f74e893]: (3,446)
+                  - generic [ref=f74e896]:
+                    - img "최대 274원 적립" [ref=f74e897]
+                    - generic [ref=f74e898]: 최대 274원 적립
+                  - generic [ref=f74e899]: "7"
+            - listitem [ref=f74e900] [cursor=pointer]:
+              - link "복음자리 45도 과일잼 딸기, 350g, 1개 6,900원 16% 5,750원 (100g당 1,643원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (20,148) 최대 288원 적립 최대 288원 적립 8" [ref=f74e901]:
+                - /url: /vp/products/2323369315?itemId=584012614&vendorItemId=4524488828&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=7&rank=7
+                - figure [ref=f74e902]:
+                  - img "복음자리 45도 과일잼 딸기, 350g, 1개" [ref=f74e903]
+                - generic [ref=f74e904]:
+                  - generic [ref=f74e906]: 복음자리 45도 과일잼 딸기, 350g, 1개
+                  - generic [ref=f74e907]:
+                    - deletion [ref=f74e909]: 6,900원
+                    - generic [ref=f74e911]:
+                      - generic [ref=f74e912]: 16%
+                      - generic [ref=f74e913]: 5,750원
+                      - generic [ref=f74e914]: (100g당 1,643원)
+                  - generic [ref=f74e915]:
+                    - generic [ref=f74e916]: 내일(토) 도착 보장
+                    - generic [ref=f74e920]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f74e922]:
+                    - generic "5" [ref=f74e923]
+                    - generic [ref=f74e929]: (20,148)
+                  - generic [ref=f74e932]:
+                    - img "최대 288원 적립" [ref=f74e933]
+                    - generic [ref=f74e934]: 최대 288원 적립
+                  - generic [ref=f74e935]: "8"
+            - listitem [ref=f74e936] [cursor=pointer]:
+              - link "청정원 딸기잼, 1개, 370g 5,780원 (100g당 1,562원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (2,196) 최대 289원 적립 최대 289원 적립 9" [ref=f74e937]:
+                - /url: /vp/products/6608058219?itemId=76903405&vendorItemId=89935377620&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=8&rank=8
+                - figure [ref=f74e938]:
+                  - img "청정원 딸기잼, 1개, 370g" [ref=f74e939]
+                - generic [ref=f74e940]:
+                  - generic [ref=f74e942]: 청정원 딸기잼, 1개, 370g
+                  - generic [ref=f74e945]:
+                    - generic [ref=f74e946]: 5,780원
+                    - generic [ref=f74e947]: (100g당 1,562원)
+                  - generic [ref=f74e948]:
+                    - generic [ref=f74e949]: 내일(토) 도착 보장
+                    - generic [ref=f74e953]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f74e955]:
+                    - generic "4.5" [ref=f74e956]
+                    - generic [ref=f74e962]: (2,196)
+                  - generic [ref=f74e965]:
+                    - img "최대 289원 적립" [ref=f74e966]
+                    - generic [ref=f74e967]: 최대 289원 적립
+                  - generic [ref=f74e968]: "9"
+            - listitem [ref=f74e969] [cursor=pointer]:
+              - link "본마망 딸기잼, 225g, 1개 5,780원 (100g당 2,569원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 5 (7,800) 최대 289원 적립 최대 289원 적립 10" [ref=f74e970]:
+                - /url: /vp/products/6835876320?itemId=21914009575&vendorItemId=82386492712&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=9&rank=9
+                - figure [ref=f74e971]:
+                  - img "본마망 딸기잼, 225g, 1개" [ref=f74e972]
+                - generic [ref=f74e973]:
+                  - generic [ref=f74e975]: 본마망 딸기잼, 225g, 1개
+                  - generic [ref=f74e978]:
+                    - generic [ref=f74e979]: 5,780원
+                    - generic [ref=f74e980]: (100g당 2,569원)
+                  - generic [ref=f74e981]:
+                    - generic [ref=f74e982]: 내일(토) 도착 보장
+                    - generic [ref=f74e986]: 와우는 무료배송 ∙ 무료반품
+                  - generic [ref=f74e988]:
+                    - generic "5" [ref=f74e989]
+                    - generic [ref=f74e995]: (7,800)
+                  - generic [ref=f74e998]:
+                    - img "최대 289원 적립" [ref=f74e999]
+                    - generic [ref=f74e1000]: 최대 289원 적립
+                  - generic [ref=f74e1001]: "10"
+            - listitem [ref=f74e1002] [cursor=pointer]:
+              - link "샹달프 딸기잼, 170g, 1개 5,830원 (100g당 3,429원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 5 (2,043) 최대 291원 적립 최대 291원 적립" [ref=f74e1003]:
+                - /url: /vp/products/7143977227?itemId=6673944729&vendorItemId=73967664006&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=10&rank=10
+                - figure [ref=f74e1004]:
+                  - img "샹달프 딸기잼, 170g, 1개" [ref=f74e1005]
+                - generic [ref=f74e1006]:
+                  - generic [ref=f74e1008]: 샹달프 딸기잼, 170g, 1개
+                  - generic [ref=f74e1011]:
+                    - generic [ref=f74e1012]: 5,830원
+                    - generic [ref=f74e1013]: (100g당 3,429원)
+                  - generic [ref=f74e1014]:
+                    - generic [ref=f74e1015]: 내일(토) 도착 보장
+                    - generic [ref=f74e1019]: 와우는 무료배송 ∙ 무료반품
+                  - generic [ref=f74e1021]:
+                    - generic "5" [ref=f74e1022]
+                    - generic [ref=f74e1028]: (2,043)
+                  - generic [ref=f74e1031]:
+                    - img "최대 291원 적립" [ref=f74e1032]
+                    - generic [ref=f74e1033]: 최대 291원 적립
+            - listitem [ref=f74e1034] [cursor=pointer]:
+              - link "BEST AWARDS 설명 복음자리 딸기잼, 380g, 1개 5,980원 (100g당 1,574원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (152,563) 최대 299원 적립 최대 299원 적립" [ref=f74e1035]:
+                - /url: /vp/products/2453926?itemId=41870&vendorItemId=3000014813&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=11&rank=11
+                - figure [ref=f74e1036]:
+                  - img "복음자리 딸기잼, 380g, 1개" [ref=f74e1037]
+                - generic [ref=f74e1038]:
+                  - generic [ref=f74e1041]:
+                    - paragraph [ref=f74e1042]: BEST AWARDS
+                    - generic [ref=f74e1043]: 설명
+                  - generic [ref=f74e1044]: 복음자리 딸기잼, 380g, 1개
+                  - generic [ref=f74e1047]:
+                    - generic [ref=f74e1048]: 5,980원
+                    - generic [ref=f74e1049]: (100g당 1,574원)
+                  - generic [ref=f74e1050]:
+                    - generic [ref=f74e1051]: 내일(토) 도착 보장
+                    - generic [ref=f74e1055]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f74e1057]:
+                    - generic "5" [ref=f74e1058]
+                    - generic [ref=f74e1064]: (152,563)
+                  - generic [ref=f74e1067]:
+                    - img "최대 299원 적립" [ref=f74e1068]
+                    - generic [ref=f74e1069]: 최대 299원 적립
+            - listitem [ref=f74e1070] [cursor=pointer]:
+              - link "샹따무르 딸기잼, 1개, 275g 8,000원 25% 5,980원 (100g당 2,175원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (24) 최대 299원 적립 최대 299원 적립" [ref=f74e1071]:
+                - /url: /vp/products/9205123722?itemId=27284923615&vendorItemId=94251567793&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=12&rank=12
+                - figure [ref=f74e1072]:
+                  - img "샹따무르 딸기잼, 1개, 275g" [ref=f74e1073]
+                - generic [ref=f74e1074]:
+                  - generic [ref=f74e1076]: 샹따무르 딸기잼, 1개, 275g
+                  - generic [ref=f74e1077]:
+                    - deletion [ref=f74e1079]: 8,000원
+                    - generic [ref=f74e1081]:
+                      - generic [ref=f74e1082]: 25%
+                      - generic [ref=f74e1083]: 5,980원
+                      - generic [ref=f74e1084]: (100g당 2,175원)
+                  - generic [ref=f74e1085]:
+                    - generic [ref=f74e1086]: 내일(토) 도착 보장
+                    - generic [ref=f74e1090]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f74e1092]:
+                    - generic "4.5" [ref=f74e1093]
+                    - generic [ref=f74e1099]: (24)
+                  - generic [ref=f74e1102]:
+                    - img "최대 299원 적립" [ref=f74e1103]
+                    - generic [ref=f74e1104]: 최대 299원 적립
+            - listitem [ref=f74e1105] [cursor=pointer]:
+              - link "스머커즈 딸기 프리저브 잼, 510g, 1개 6,060원 (100g당 1,188원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 4.5 (1,928) 최대 303원 적립 최대 303원 적립" [ref=f74e1106]:
+                - /url: /vp/products/1421929678?itemId=16445366462&vendorItemId=92836005398&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=13&rank=13
+                - figure [ref=f74e1107]:
+                  - img "스머커즈 딸기 프리저브 잼, 510g, 1개" [ref=f74e1108]
+                - generic [ref=f74e1109]:
+                  - generic [ref=f74e1111]: 스머커즈 딸기 프리저브 잼, 510g, 1개
+                  - generic [ref=f74e1114]:
+                    - generic [ref=f74e1115]: 6,060원
+                    - generic [ref=f74e1116]: (100g당 1,188원)
+                  - generic [ref=f74e1117]:
+                    - generic [ref=f74e1118]: 내일(토) 도착 보장
+                    - generic [ref=f74e1122]: 와우는 무료배송 ∙ 무료반품
+                  - generic [ref=f74e1124]:
+                    - generic "4.5" [ref=f74e1125]
+                    - generic [ref=f74e1131]: (1,928)
+                  - generic [ref=f74e1134]:
+                    - img "최대 303원 적립" [ref=f74e1135]
+                    - generic [ref=f74e1136]: 최대 303원 적립
+            - listitem [ref=f74e1137] [cursor=pointer]:
+              - link "초록원 프리미엄 딸기잼, 380g, 1개 6,300원 (100g당 1,658원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (41) 최대 315원 적립 최대 315원 적립" [ref=f74e1138]:
+                - /url: /vp/products/8222617849?itemId=23638985045&vendorItemId=90664422196&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=14&rank=14
+                - figure [ref=f74e1139]:
+                  - img "초록원 프리미엄 딸기잼, 380g, 1개" [ref=f74e1140]
+                - generic [ref=f74e1141]:
+                  - generic [ref=f74e1143]: 초록원 프리미엄 딸기잼, 380g, 1개
+                  - generic [ref=f74e1146]:
+                    - generic [ref=f74e1147]: 6,300원
+                    - generic [ref=f74e1148]: (100g당 1,658원)
+                  - generic [ref=f74e1149]:
+                    - generic [ref=f74e1150]: 내일(토) 도착 보장
+                    - generic [ref=f74e1154]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f74e1156]:
+                    - generic "4.5" [ref=f74e1157]
+                    - generic [ref=f74e1163]: (41)
+                  - generic [ref=f74e1166]:
+                    - img "최대 315원 적립" [ref=f74e1167]
+                    - generic [ref=f74e1168]: 최대 315원 적립
+            - listitem [ref=f74e1169] [cursor=pointer]:
+              - link "초록원 나이스틱 딸기잼 10p, 200g, 2개 7,800원 18% 6,340원 (100g당 1,585원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 4.5 (1,958) 최대 317원 적립 최대 317원 적립" [ref=f74e1170]:
+                - /url: /vp/products/7417914753?itemId=19274864682&vendorItemId=86389964765&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=15&rank=15
+                - figure [ref=f74e1171]:
+                  - img "초록원 나이스틱 딸기잼 10p, 200g, 2개" [ref=f74e1172]
+                - generic [ref=f74e1173]:
+                  - generic [ref=f74e1175]: 초록원 나이스틱 딸기잼 10p, 200g, 2개
+                  - generic [ref=f74e1176]:
+                    - deletion [ref=f74e1178]: 7,800원
+                    - generic [ref=f74e1180]:
+                      - generic [ref=f74e1181]: 18%
+                      - generic [ref=f74e1182]: 6,340원
+                      - generic [ref=f74e1183]: (100g당 1,585원)
+                  - generic [ref=f74e1184]:
+                    - generic [ref=f74e1185]: 내일(토) 도착 보장
+                    - generic [ref=f74e1189]: 와우는 무료배송 ∙ 무료반품
+                  - generic [ref=f74e1191]:
+                    - generic "4.5" [ref=f74e1192]
+                    - generic [ref=f74e1198]: (1,958)
+                  - generic [ref=f74e1201]:
+                    - img "최대 317원 적립" [ref=f74e1202]
+                    - generic [ref=f74e1203]: 최대 317원 적립
+            - listitem [ref=f74e1204] [cursor=pointer]:
+              - link "헬리오스 내츄럴 딸기잼, 330g, 1개 6,360원 (100g당 1,927원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (316) 최대 318원 적립 최대 318원 적립" [ref=f74e1205]:
+                - /url: /vp/products/8244536822?itemId=863873897&vendorItemId=5189684206&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=16&rank=16
+                - figure [ref=f74e1206]:
+                  - img "헬리오스 내츄럴 딸기잼, 330g, 1개" [ref=f74e1207]
+                - generic [ref=f74e1208]:
+                  - generic [ref=f74e1210]: 헬리오스 내츄럴 딸기잼, 330g, 1개
+                  - generic [ref=f74e1213]:
+                    - generic [ref=f74e1214]: 6,360원
+                    - generic [ref=f74e1215]: (100g당 1,927원)
+                  - generic [ref=f74e1216]:
+                    - generic [ref=f74e1217]: 내일(토) 도착 보장
+                    - generic [ref=f74e1221]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f74e1223]:
+                    - generic "5" [ref=f74e1224]
+                    - generic [ref=f74e1230]: (316)
+                  - generic [ref=f74e1233]:
+                    - img "최대 318원 적립" [ref=f74e1234]
+                    - generic [ref=f74e1235]: 최대 318원 적립
+            - listitem [ref=f74e1236] [cursor=pointer]:
+              - link "오뚜기 딸기쨈, 500g, 1개 7,780원 17% 6,380원 (100g당 1,276원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (66,642) 최대 319원 적립 최대 319원 적립" [ref=f74e1237]:
+                - /url: /vp/products/1023003?itemId=10500148&vendorItemId=3000043974&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=17&rank=17
+                - figure [ref=f74e1238]:
+                  - img "오뚜기 딸기쨈, 500g, 1개" [ref=f74e1239]
+                - generic [ref=f74e1240]:
+                  - generic [ref=f74e1242]: 오뚜기 딸기쨈, 500g, 1개
+                  - generic [ref=f74e1243]:
+                    - deletion [ref=f74e1245]: 7,780원
+                    - generic [ref=f74e1247]:
+                      - generic [ref=f74e1248]: 17%
+                      - generic [ref=f74e1249]: 6,380원
+                      - generic [ref=f74e1250]: (100g당 1,276원)
+                  - generic [ref=f74e1251]:
+                    - generic [ref=f74e1252]: 내일(토) 도착 보장
+                    - generic [ref=f74e1256]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f74e1258]:
+                    - generic "5" [ref=f74e1259]
+                    - generic [ref=f74e1265]: (66,642)
+                  - generic [ref=f74e1268]:
+                    - img "최대 319원 적립" [ref=f74e1269]
+                    - generic [ref=f74e1270]: 최대 319원 적립
+            - listitem [ref=f74e1271] [cursor=pointer]:
+              - link "다보 다보딸기잼, 200g, 1개 6,480원 (100g당 3,240원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (1,374) 최대 324원 적립 최대 324원 적립" [ref=f74e1272]:
+                - /url: /vp/products/180970427?itemId=518005309&vendorItemId=4337377587&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=18&rank=18
+                - figure [ref=f74e1273]:
+                  - img "다보 다보딸기잼, 200g, 1개" [ref=f74e1274]
+                - generic [ref=f74e1275]:
+                  - generic [ref=f74e1277]: 다보 다보딸기잼, 200g, 1개
+                  - generic [ref=f74e1280]:
+                    - generic [ref=f74e1281]: 6,480원
+                    - generic [ref=f74e1282]: (100g당 3,240원)
+                  - generic [ref=f74e1283]:
+                    - generic [ref=f74e1284]: 내일(토) 도착 보장
+                    - generic [ref=f74e1288]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f74e1290]:
+                    - generic "5" [ref=f74e1291]
+                    - generic [ref=f74e1297]: (1,374)
+                  - generic [ref=f74e1300]:
+                    - img "최대 324원 적립" [ref=f74e1301]
+                    - generic [ref=f74e1302]: 최대 324원 적립
+            - listitem [ref=f74e1303] [cursor=pointer]:
+              - link "복음자리 짜먹는 잼다운잼 딸기, 100g, 2개 7,960원 17% 6,560원 (100g당 3,280원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 5 (480) 최대 328원 적립 최대 328원 적립" [ref=f74e1304]:
+                - /url: /vp/products/8295602553?itemId=23926730083&vendorItemId=90948908350&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=19&rank=19
+                - figure [ref=f74e1305]:
+                  - img "복음자리 짜먹는 잼다운잼 딸기, 100g, 2개" [ref=f74e1306]
+                - generic [ref=f74e1307]:
+                  - generic [ref=f74e1309]: 복음자리 짜먹는 잼다운잼 딸기, 100g, 2개
+                  - generic [ref=f74e1310]:
+                    - deletion [ref=f74e1312]: 7,960원
+                    - generic [ref=f74e1314]:
+                      - generic [ref=f74e1315]: 17%
+                      - generic [ref=f74e1316]: 6,560원
+                      - generic [ref=f74e1317]: (100g당 3,280원)
+                  - generic [ref=f74e1318]:
+                    - generic [ref=f74e1319]: 내일(토) 도착 보장
+                    - generic [ref=f74e1323]: 와우는 무료배송 ∙ 무료반품
+                  - generic [ref=f74e1325]:
+                    - generic "5" [ref=f74e1326]
+                    - generic [ref=f74e1332]: (480)
+                  - generic [ref=f74e1335]:
+                    - img "최대 328원 적립" [ref=f74e1336]
+                    - generic [ref=f74e1337]: 최대 328원 적립
+            - listitem [ref=f74e1338] [cursor=pointer]:
+              - link "주에그 딸기잼, 320g, 1개 8,900원 23% 6,800원 (100g당 2,125원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 4.5 (262) 최대 340원 적립 최대 340원 적립" [ref=f74e1339]:
+                - /url: /vp/products/22019377?itemId=85795656&vendorItemId=3145949140&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=20&rank=20
+                - figure [ref=f74e1340]:
+                  - img "주에그 딸기잼, 320g, 1개" [ref=f74e1341]
+                - generic [ref=f74e1342]:
+                  - generic [ref=f74e1344]: 주에그 딸기잼, 320g, 1개
+                  - generic [ref=f74e1345]:
+                    - deletion [ref=f74e1347]: 8,900원
+                    - generic [ref=f74e1349]:
+                      - generic [ref=f74e1350]: 23%
+                      - generic [ref=f74e1351]: 6,800원
+                      - generic [ref=f74e1352]: (100g당 2,125원)
+                  - generic [ref=f74e1353]:
+                    - generic [ref=f74e1354]: 내일(토) 도착 보장
+                    - generic [ref=f74e1358]: 와우는 무료배송 ∙ 무료반품
+                  - generic [ref=f74e1360]:
+                    - generic "4.5" [ref=f74e1361]
+                    - generic [ref=f74e1367]: (262)
+                  - generic [ref=f74e1370]:
+                    - img "최대 340원 적립" [ref=f74e1371]
+                    - generic [ref=f74e1372]: 최대 340원 적립
+            - listitem [ref=f74e1373] [cursor=pointer]:
+              - link "스머커즈 딸기 프리저브, 340g, 1개 6,850원 (100g당 2,015원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 4.5 (1,928) 최대 343원 적립 최대 343원 적립" [ref=f74e1374]:
+                - /url: /vp/products/1421929678?itemId=101933395&vendorItemId=3191268006&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=21&rank=21
+                - figure [ref=f74e1375]:
+                  - img "스머커즈 딸기 프리저브, 340g, 1개" [ref=f74e1376]
+                - generic [ref=f74e1377]:
+                  - generic [ref=f74e1379]: 스머커즈 딸기 프리저브, 340g, 1개
+                  - generic [ref=f74e1382]:
+                    - generic [ref=f74e1383]: 6,850원
+                    - generic [ref=f74e1384]: (100g당 2,015원)
+                  - generic [ref=f74e1385]:
+                    - generic [ref=f74e1386]: 내일(토) 도착 보장
+                    - generic [ref=f74e1390]: 와우는 무료배송 ∙ 무료반품
+                  - generic [ref=f74e1392]:
+                    - generic "4.5" [ref=f74e1393]
+                    - generic [ref=f74e1399]: (1,928)
+                  - generic [ref=f74e1402]:
+                    - img "최대 343원 적립" [ref=f74e1403]
+                    - generic [ref=f74e1404]: 최대 343원 적립
+            - listitem [ref=f74e1405] [cursor=pointer]:
+              - link "맥케이 딸기잼, 340g, 1개 6,850원 (100g당 2,015원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (746) 최대 343원 적립 최대 343원 적립" [ref=f74e1406]:
+                - /url: /vp/products/2452584?itemId=127283&vendorItemId=3000068870&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=22&rank=22
+                - figure [ref=f74e1407]:
+                  - img "맥케이 딸기잼, 340g, 1개" [ref=f74e1408]
+                - generic [ref=f74e1409]:
+                  - generic [ref=f74e1411]: 맥케이 딸기잼, 340g, 1개
+                  - generic [ref=f74e1414]:
+                    - generic [ref=f74e1415]: 6,850원
+                    - generic [ref=f74e1416]: (100g당 2,015원)
+                  - generic [ref=f74e1417]:
+                    - generic [ref=f74e1418]: 내일(토) 도착 보장
+                    - generic [ref=f74e1422]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f74e1424]:
+                    - generic "4.5" [ref=f74e1425]
+                    - generic [ref=f74e1431]: (746)
+                  - generic [ref=f74e1434]:
+                    - img "최대 343원 적립" [ref=f74e1435]
+                    - generic [ref=f74e1436]: 최대 343원 적립
+            - listitem [ref=f74e1437] [cursor=pointer]:
+              - link "본마망 딸기잼, 370g, 1개 6,950원 (100g당 1,878원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 5 (7,800) 최대 348원 적립 최대 348원 적립" [ref=f74e1438]:
+                - /url: /vp/products/6835876320?itemId=12586915844&vendorItemId=3000044923&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=23&rank=23
+                - figure [ref=f74e1439]:
+                  - img "본마망 딸기잼, 370g, 1개" [ref=f74e1440]
+                - generic [ref=f74e1441]:
+                  - generic [ref=f74e1443]: 본마망 딸기잼, 370g, 1개
+                  - generic [ref=f74e1446]:
+                    - generic [ref=f74e1447]: 6,950원
+                    - generic [ref=f74e1448]: (100g당 1,878원)
+                  - generic [ref=f74e1449]:
+                    - generic [ref=f74e1450]: 내일(토) 도착 보장
+                    - generic [ref=f74e1454]: 와우는 무료배송 ∙ 무료반품
+                  - generic [ref=f74e1456]:
+                    - generic "5" [ref=f74e1457]
+                    - generic [ref=f74e1463]: (7,800)
+                  - generic [ref=f74e1466]:
+                    - img "최대 348원 적립" [ref=f74e1467]
+                    - generic [ref=f74e1468]: 최대 348원 적립
+            - listitem [ref=f74e1469] [cursor=pointer]:
+              - link "복음자리 바로 짜먹는 딸기잼, 100g, 3개 178,560원 96% 7,000원 (100g당 2,333원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (3,839) 최대 350원 적립 최대 350원 적립" [ref=f74e1470]:
+                - /url: /vp/products/216238812?itemId=19096182383&vendorItemId=86216965421&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=24&rank=24
+                - figure [ref=f74e1471]:
+                  - img "복음자리 바로 짜먹는 딸기잼, 100g, 3개" [ref=f74e1472]
+                - generic [ref=f74e1473]:
+                  - generic [ref=f74e1475]: 복음자리 바로 짜먹는 딸기잼, 100g, 3개
+                  - generic [ref=f74e1476]:
+                    - deletion [ref=f74e1478]: 178,560원
+                    - generic [ref=f74e1480]:
+                      - generic [ref=f74e1481]: 96%
+                      - generic [ref=f74e1482]: 7,000원
+                      - generic [ref=f74e1483]: (100g당 2,333원)
+                  - generic [ref=f74e1484]:
+                    - generic [ref=f74e1485]: 내일(토) 도착 보장
+                    - generic [ref=f74e1489]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f74e1491]:
+                    - generic "5" [ref=f74e1492]
+                    - generic [ref=f74e1498]: (3,839)
+                  - generic [ref=f74e1501]:
+                    - img "최대 350원 적립" [ref=f74e1502]
+                    - generic [ref=f74e1503]: 최대 350원 적립
+            - listitem [ref=f74e1504] [cursor=pointer]:
+              - link "RUDOLFS 유기농 딸기잼, 400g, 1개 7,000원 (100g당 1,750원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 4.5 (282) 최대 350원 적립 최대 350원 적립" [ref=f74e1505]:
+                - /url: /vp/products/7723964358?itemId=20737027195&vendorItemId=78448931307&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=25&rank=25
+                - figure [ref=f74e1506]:
+                  - img "RUDOLFS 유기농 딸기잼, 400g, 1개" [ref=f74e1507]
+                - generic [ref=f74e1508]:
+                  - generic [ref=f74e1510]: RUDOLFS 유기농 딸기잼, 400g, 1개
+                  - generic [ref=f74e1513]:
+                    - generic [ref=f74e1514]: 7,000원
+                    - generic [ref=f74e1515]: (100g당 1,750원)
+                  - generic [ref=f74e1516]:
+                    - generic [ref=f74e1517]: 내일(토) 도착 보장
+                    - generic [ref=f74e1521]: 와우는 무료배송 ∙ 무료반품
+                  - generic [ref=f74e1523]:
+                    - generic "4.5" [ref=f74e1524]
+                    - generic [ref=f74e1530]: (282)
+                  - generic [ref=f74e1533]:
+                    - img "최대 350원 적립" [ref=f74e1534]
+                    - generic [ref=f74e1535]: 최대 350원 적립
+            - listitem [ref=f74e1536] [cursor=pointer]:
+              - link "Hero 딸기 잼, 350g, 1개 할인 8,660원 12% 7,620원 (100g당 2,177원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (2) 최대 381원 적립 최대 381원 적립" [ref=f74e1537]:
+                - /url: /vp/products/9486775573?itemId=28250347481&vendorItemId=95203755014&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=26&rank=26
+                - figure [ref=f74e1538]:
+                  - img "Hero 딸기 잼, 350g, 1개" [ref=f74e1539]
+                - generic [ref=f74e1540]:
+                  - generic [ref=f74e1542]: Hero 딸기 잼, 350g, 1개
+                  - generic [ref=f74e1543]:
+                    - generic [ref=f74e1544]:
+                      - generic [ref=f74e1545]: 할인
+                      - deletion [ref=f74e1546]: 8,660원
+                    - generic [ref=f74e1548]:
+                      - generic [ref=f74e1549]: 12%
+                      - generic [ref=f74e1554]: 7,620원
+                      - generic [ref=f74e1555]: (100g당 2,177원)
+                  - generic [ref=f74e1556]:
+                    - generic [ref=f74e1557]: 내일(토) 도착 보장
+                    - generic [ref=f74e1561]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f74e1563]:
+                    - generic "5" [ref=f74e1564]
+                    - generic [ref=f74e1570]: (2)
+                  - generic [ref=f74e1573]:
+                    - img "최대 381원 적립" [ref=f74e1574]
+                    - generic [ref=f74e1575]: 최대 381원 적립
+            - listitem [ref=f74e1576] [cursor=pointer]:
+              - link "폰타나 스프레드 스트로베리 잼, 330g, 1개 10,400원 31% 7,130원 (100g당 2,161원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (546) 최대 356원 적립 최대 356원 적립" [ref=f74e1577]:
+                - /url: /vp/products/9244155236?itemId=27337568792&vendorItemId=94303868794&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=27&rank=27
+                - figure [ref=f74e1578]:
+                  - img "폰타나 스프레드 스트로베리 잼, 330g, 1개" [ref=f74e1579]
+                - generic [ref=f74e1580]:
+                  - generic [ref=f74e1582]: 폰타나 스프레드 스트로베리 잼, 330g, 1개
+                  - generic [ref=f74e1583]:
+                    - deletion [ref=f74e1585]: 10,400원
+                    - generic [ref=f74e1587]:
+                      - generic [ref=f74e1588]: 31%
+                      - generic [ref=f74e1589]: 7,130원
+                      - generic [ref=f74e1590]: (100g당 2,161원)
+                  - generic [ref=f74e1591]:
+                    - generic [ref=f74e1592]: 내일(토) 도착 보장
+                    - generic [ref=f74e1596]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f74e1598]:
+                    - generic "5" [ref=f74e1599]
+                    - generic [ref=f74e1605]: (546)
+                  - generic [ref=f74e1608]:
+                    - img "최대 356원 적립" [ref=f74e1609]
+                    - generic [ref=f74e1610]: 최대 356원 적립
+            - listitem [ref=f74e1611] [cursor=pointer]:
+              - link "초록원 올가랑 딸기잼, 1kg, 1개 7,330원 (100g당 733원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (4,369) 최대 366원 적립 최대 366원 적립" [ref=f74e1612]:
+                - /url: /vp/products/8466390909?itemId=24496453880&vendorItemId=91642205182&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=28&rank=28
+                - figure [ref=f74e1613]:
+                  - img "초록원 올가랑 딸기잼, 1kg, 1개" [ref=f74e1614]
+                - generic [ref=f74e1615]:
+                  - generic [ref=f74e1617]: 초록원 올가랑 딸기잼, 1kg, 1개
+                  - generic [ref=f74e1620]:
+                    - generic [ref=f74e1621]: 7,330원
+                    - generic [ref=f74e1622]: (100g당 733원)
+                  - generic [ref=f74e1623]:
+                    - generic [ref=f74e1624]: 내일(토) 도착 보장
+                    - generic [ref=f74e1628]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f74e1630]:
+                    - generic "5" [ref=f74e1631]
+                    - generic [ref=f74e1637]: (4,369)
+                  - generic [ref=f74e1640]:
+                    - img "최대 366원 적립" [ref=f74e1641]
+                    - generic [ref=f74e1642]: 최대 366원 적립
+            - listitem [ref=f74e1643] [cursor=pointer]:
+              - link "샹달프 딸기잼, 284g, 1개 7,340원 (100g당 2,585원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 5 (2,043) 최대 367원 적립 최대 367원 적립" [ref=f74e1644]:
+                - /url: /vp/products/7143977227?itemId=17945690480&vendorItemId=71246102919&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=29&rank=29
+                - figure [ref=f74e1645]:
+                  - img "샹달프 딸기잼, 284g, 1개" [ref=f74e1646]
+                - generic [ref=f74e1647]:
+                  - generic [ref=f74e1649]: 샹달프 딸기잼, 284g, 1개
+                  - generic [ref=f74e1652]:
+                    - generic [ref=f74e1653]: 7,340원
+                    - generic [ref=f74e1654]: (100g당 2,585원)
+                  - generic [ref=f74e1655]:
+                    - generic [ref=f74e1656]: 내일(토) 도착 보장
+                    - generic [ref=f74e1660]: 와우는 무료배송 ∙ 무료반품
+                  - generic [ref=f74e1662]:
+                    - generic "5" [ref=f74e1663]
+                    - generic [ref=f74e1669]: (2,043)
+                  - generic [ref=f74e1672]:
+                    - img "최대 367원 적립" [ref=f74e1673]
+                    - generic [ref=f74e1674]: 최대 367원 적립
+            - listitem [ref=f74e1675] [cursor=pointer]:
+              - link "복음자리 딸기잼, 500g, 1개 쿠폰할인 8,980원 23% 6,880원 (100g당 1,376원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (152,563) 최대 344원 적립 최대 344원 적립" [ref=f74e1676]:
+                - /url: /vp/products/2453926?itemId=2141423&vendorItemId=3000187294&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=30&rank=30
+                - figure [ref=f74e1677]:
+                  - img "복음자리 딸기잼, 500g, 1개" [ref=f74e1678]
+                - generic [ref=f74e1679]:
+                  - generic [ref=f74e1681]: 복음자리 딸기잼, 500g, 1개
+                  - generic [ref=f74e1682]:
+                    - generic [ref=f74e1683]:
+                      - generic [ref=f74e1684]: 쿠폰할인
+                      - deletion [ref=f74e1685]: 8,980원
+                    - generic [ref=f74e1687]:
+                      - generic [ref=f74e1688]: 23%
+                      - generic [ref=f74e1693]: 6,880원
+                      - generic [ref=f74e1694]: (100g당 1,376원)
+                  - generic [ref=f74e1695]:
+                    - generic [ref=f74e1696]: 내일(토) 도착 보장
+                    - generic [ref=f74e1700]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f74e1702]:
+                    - generic "5" [ref=f74e1703]
+                    - generic [ref=f74e1709]: (152,563)
+                  - generic [ref=f74e1712]:
+                    - img "최대 344원 적립" [ref=f74e1713]
+                    - generic [ref=f74e1714]: 최대 344원 적립
+            - listitem [ref=f74e1715] [cursor=pointer]:
+              - link "오뚜기 라이트 앤 조이 당을줄인 논산딸기쨈, 290g, 2개 9,960원 20% 7,960원 (100g당 1,372원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 5 (10,386) 최대 398원 적립 최대 398원 적립" [ref=f74e1716]:
+                - /url: /vp/products/8085549328?itemId=22816038302&vendorItemId=89850869786&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=31&rank=31
+                - figure [ref=f74e1717]:
+                  - img "오뚜기 라이트 앤 조이 당을줄인 논산딸기쨈, 290g, 2개" [ref=f74e1718]
+                - generic [ref=f74e1719]:
+                  - generic [ref=f74e1721]: 오뚜기 라이트 앤 조이 당을줄인 논산딸기쨈, 290g, 2개
+                  - generic [ref=f74e1722]:
+                    - deletion [ref=f74e1724]: 9,960원
+                    - generic [ref=f74e1726]:
+                      - generic [ref=f74e1727]: 20%
+                      - generic [ref=f74e1728]: 7,960원
+                      - generic [ref=f74e1729]: (100g당 1,372원)
+                  - generic [ref=f74e1730]:
+                    - generic [ref=f74e1731]: 내일(토) 도착 보장
+                    - generic [ref=f74e1735]: 와우는 무료배송 ∙ 무료반품
+                  - generic [ref=f74e1737]:
+                    - generic "5" [ref=f74e1738]
+                    - generic [ref=f74e1744]: (10,386)
+                  - generic [ref=f74e1747]:
+                    - img "최대 398원 적립" [ref=f74e1748]
+                    - generic [ref=f74e1749]: 최대 398원 적립
+            - listitem [ref=f74e1750] [cursor=pointer]:
+              - link "초록원 딸기잼 파우치형, 1kg, 1개 7,730원 (100g당 773원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 4.5 (949) 최대 386원 적립 최대 386원 적립" [ref=f74e1751]:
+                - /url: /vp/products/7887260028?itemId=21583338028&vendorItemId=88634916319&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=32&rank=32
+                - figure [ref=f74e1752]:
+                  - img "초록원 딸기잼 파우치형, 1kg, 1개" [ref=f74e1753]
+                - generic [ref=f74e1754]:
+                  - generic [ref=f74e1756]: 초록원 딸기잼 파우치형, 1kg, 1개
+                  - generic [ref=f74e1759]:
+                    - generic [ref=f74e1760]: 7,730원
+                    - generic [ref=f74e1761]: (100g당 773원)
+                  - generic [ref=f74e1762]:
+                    - generic [ref=f74e1763]: 내일(토) 도착 보장
+                    - generic [ref=f74e1767]: 와우는 무료배송 ∙ 무료반품
+                  - generic [ref=f74e1769]:
+                    - generic "4.5" [ref=f74e1770]
+                    - generic [ref=f74e1776]: (949)
+                  - generic [ref=f74e1779]:
+                    - img "최대 386원 적립" [ref=f74e1780]
+                    - generic [ref=f74e1781]: 최대 386원 적립
+            - listitem [ref=f74e1782] [cursor=pointer]:
+              - link "몽크슈 저당 딸기잼 with 알룰로스, 260g, 1개 7,900원 (100g당 3,038원) 810원 와우 가입 쿠폰 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (2,676) 최대 355원 적립 최대 355원 적립" [ref=f74e1783]:
+                - /url: /vp/products/8595683135?itemId=24923540415&vendorItemId=91929801494&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=33&rank=33
+                - figure [ref=f74e1784]:
+                  - img "몽크슈 저당 딸기잼 with 알룰로스, 260g, 1개" [ref=f74e1785]
+                - generic [ref=f74e1786]:
+                  - generic [ref=f74e1788]: 몽크슈 저당 딸기잼 with 알룰로스, 260g, 1개
+                  - generic [ref=f74e1790]:
+                    - generic [ref=f74e1791]:
+                      - generic [ref=f74e1792]: 7,900원
+                      - generic [ref=f74e1793]: (100g당 3,038원)
+                    - generic [ref=f74e1794]:
+                      - generic [ref=f74e1795]: 810원
+                      - generic [ref=f74e1800]: 와우 가입 쿠폰
+                  - generic [ref=f74e1801]:
+                    - generic [ref=f74e1802]: 내일(토) 도착 보장
+                    - generic [ref=f74e1806]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f74e1808]:
+                    - generic "4.5" [ref=f74e1809]
+                    - generic [ref=f74e1815]: (2,676)
+                  - generic [ref=f74e1818]:
+                    - img "최대 355원 적립" [ref=f74e1819]
+                    - generic [ref=f74e1820]: 최대 355원 적립
+            - listitem [ref=f74e1821] [cursor=pointer]:
+              - link "데이웰 저당 저칼로리 딸기잼, 1개, 270g 12,900원 38% 7,900원 (100g당 2,926원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 4.5 (212) 최대 395원 적립 최대 395원 적립" [ref=f74e1822]:
+                - /url: /vp/products/9217229678?itemId=27337299320&vendorItemId=94303602158&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=34&rank=34
+                - figure [ref=f74e1823]:
+                  - img "데이웰 저당 저칼로리 딸기잼, 1개, 270g" [ref=f74e1824]
+                - generic [ref=f74e1825]:
+                  - generic [ref=f74e1827]: 데이웰 저당 저칼로리 딸기잼, 1개, 270g
+                  - generic [ref=f74e1828]:
+                    - deletion [ref=f74e1830]: 12,900원
+                    - generic [ref=f74e1832]:
+                      - generic [ref=f74e1833]: 38%
+                      - generic [ref=f74e1834]: 7,900원
+                      - generic [ref=f74e1835]: (100g당 2,926원)
+                  - generic [ref=f74e1836]:
+                    - generic [ref=f74e1837]: 내일(토) 도착 보장
+                    - generic [ref=f74e1841]: 와우는 무료배송 ∙ 무료반품
+                  - generic [ref=f74e1843]:
+                    - generic "4.5" [ref=f74e1844]
+                    - generic [ref=f74e1850]: (212)
+                  - generic [ref=f74e1853]:
+                    - img "최대 395원 적립" [ref=f74e1854]
+                    - generic [ref=f74e1855]: 최대 395원 적립
+            - listitem [ref=f74e1856] [cursor=pointer]:
+              - link "김재식박사의 국내산 딸기 저온 진공 농축 저칼로리 딸기잼, 250g, 1개 7,900원 (100g당 3,160원) 내일(토) 도착 보장 4 (14) 최대 395원 적립 최대 395원 적립" [ref=f74e1857]:
+                - /url: /vp/products/9369182896?itemId=27806102056&vendorItemId=95515012130&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=35&rank=35
+                - figure [ref=f74e1858]:
+                  - img "김재식박사의 국내산 딸기 저온 진공 농축 저칼로리 딸기잼, 250g, 1개" [ref=f74e1859]
+                - generic [ref=f74e1860]:
+                  - generic [ref=f74e1862]: 김재식박사의 국내산 딸기 저온 진공 농축 저칼로리 딸기잼, 250g, 1개
+                  - generic [ref=f74e1865]:
+                    - generic [ref=f74e1866]: 7,900원
+                    - generic [ref=f74e1867]: (100g당 3,160원)
+                  - generic [ref=f74e1868]: 내일(토) 도착 보장
+                  - generic [ref=f74e1874]:
+                    - generic "4" [ref=f74e1875]
+                    - generic [ref=f74e1881]: (14)
+                  - generic [ref=f74e1884]:
+                    - img "최대 395원 적립" [ref=f74e1885]
+                    - generic [ref=f74e1886]: 최대 395원 적립
+            - listitem [ref=f74e1887] [cursor=pointer]:
+              - link "오뚜기 라이트앤조이 당을줄인 스틱딸기잼, 20g, 20개 8,560원 6% 7,970원 (100g당 1,993원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (9,366) 최대 399원 적립 최대 399원 적립" [ref=f74e1888]:
+                - /url: /vp/products/9005937351?itemId=26394673123&vendorItemId=89848285526&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=36&rank=36
+                - figure [ref=f74e1889]:
+                  - img "오뚜기 라이트앤조이 당을줄인 스틱딸기잼, 20g, 20개" [ref=f74e1890]
+                - generic [ref=f74e1891]:
+                  - generic [ref=f74e1893]: 오뚜기 라이트앤조이 당을줄인 스틱딸기잼, 20g, 20개
+                  - generic [ref=f74e1894]:
+                    - deletion [ref=f74e1896]: 8,560원
+                    - generic [ref=f74e1898]:
+                      - generic [ref=f74e1899]: 6%
+                      - generic [ref=f74e1900]: 7,970원
+                      - generic [ref=f74e1901]: (100g당 1,993원)
+                  - generic [ref=f74e1902]:
+                    - generic [ref=f74e1903]: 내일(토) 도착 보장
+                    - generic [ref=f74e1907]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f74e1909]:
+                    - generic "5" [ref=f74e1910]
+                    - generic [ref=f74e1916]: (9,366)
+                  - generic [ref=f74e1919]:
+                    - img "최대 399원 적립" [ref=f74e1920]
+                    - generic [ref=f74e1921]: 최대 399원 적립
+            - listitem [ref=f74e1922] [cursor=pointer]:
+              - link "다보 딸기잼, 450g, 1개 8,500원 6% 7,980원 (100g당 1,773원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (835) 최대 399원 적립 최대 399원 적립" [ref=f74e1923]:
+                - /url: /vp/products/8244065066?itemId=396569452&vendorItemId=3965975430&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=37&rank=37
+                - figure [ref=f74e1924]:
+                  - img "다보 딸기잼, 450g, 1개" [ref=f74e1925]
+                - generic [ref=f74e1926]:
+                  - generic [ref=f74e1928]: 다보 딸기잼, 450g, 1개
+                  - generic [ref=f74e1929]:
+                    - deletion [ref=f74e1931]: 8,500원
+                    - generic [ref=f74e1933]:
+                      - generic [ref=f74e1934]: 6%
+                      - generic [ref=f74e1935]: 7,980원
+                      - generic [ref=f74e1936]: (100g당 1,773원)
+                  - generic [ref=f74e1937]:
+                    - generic [ref=f74e1938]: 내일(토) 도착 보장
+                    - generic [ref=f74e1942]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f74e1944]:
+                    - generic "5" [ref=f74e1945]
+                    - generic [ref=f74e1951]: (835)
+                  - generic [ref=f74e1954]:
+                    - img "최대 399원 적립" [ref=f74e1955]
+                    - generic [ref=f74e1956]: 최대 399원 적립
+            - listitem [ref=f74e1957] [cursor=pointer]:
+              - link "초록원 딸기잼, 1kg, 1개 8,100원 (100g당 810원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 4.5 (48,659) 최대 405원 적립 최대 405원 적립" [ref=f74e1958]:
+                - /url: /vp/products/7573456610?itemId=19977749504&vendorItemId=3000201833&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=38&rank=38
+                - figure [ref=f74e1959]:
+                  - img "초록원 딸기잼, 1kg, 1개" [ref=f74e1960]
+                - generic [ref=f74e1961]:
+                  - generic [ref=f74e1963]: 초록원 딸기잼, 1kg, 1개
+                  - generic [ref=f74e1966]:
+                    - generic [ref=f74e1967]: 8,100원
+                    - generic [ref=f74e1968]: (100g당 810원)
+                  - generic [ref=f74e1969]:
+                    - generic [ref=f74e1970]: 내일(토) 도착 보장
+                    - generic [ref=f74e1974]: 와우는 무료배송 ∙ 무료반품
+                  - generic [ref=f74e1976]:
+                    - generic "4.5" [ref=f74e1977]
+                    - generic [ref=f74e1983]: (48,659)
+                  - generic [ref=f74e1986]:
+                    - img "최대 405원 적립" [ref=f74e1987]
+                    - generic [ref=f74e1988]: 최대 405원 적립
+            - listitem [ref=f74e1989] [cursor=pointer]:
+              - link "농협식품 딸기잼, 1개, 690g 8,200원 (100g당 1,188원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (264) 최대 410원 적립 최대 410원 적립" [ref=f74e1990]:
+                - /url: /vp/products/6869584975?itemId=16420791014&vendorItemId=83611695033&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=39&rank=39
+                - figure [ref=f74e1991]:
+                  - img "농협식품 딸기잼, 1개, 690g" [ref=f74e1992]
+                - generic [ref=f74e1993]:
+                  - generic [ref=f74e1995]: 농협식품 딸기잼, 1개, 690g
+                  - generic [ref=f74e1998]:
+                    - generic [ref=f74e1999]: 8,200원
+                    - generic [ref=f74e2000]: (100g당 1,188원)
+                  - generic [ref=f74e2001]:
+                    - generic [ref=f74e2002]: 내일(토) 도착 보장
+                    - generic [ref=f74e2006]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f74e2008]:
+                    - generic "4.5" [ref=f74e2009]
+                    - generic [ref=f74e2015]: (264)
+                  - generic [ref=f74e2018]:
+                    - img "최대 410원 적립" [ref=f74e2019]
+                    - generic [ref=f74e2020]: 최대 410원 적립
+            - listitem [ref=f74e2021] [cursor=pointer]:
+              - link "리얼마이즈 저당 딸기잼, 280g, 1개 쿠폰할인 17,000원 45% 9,300원 (100g당 3,321원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 4.5 (904) 최대 381원 적립 최대 381원 적립" [ref=f74e2022]:
+                - /url: /vp/products/9101913610?itemId=29019359895&vendorItemId=93728291210&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=40&rank=40
+                - figure [ref=f74e2023]:
+                  - img "리얼마이즈 저당 딸기잼, 280g, 1개" [ref=f74e2024]
+                - generic [ref=f74e2025]:
+                  - generic [ref=f74e2027]: 리얼마이즈 저당 딸기잼, 280g, 1개
+                  - generic [ref=f74e2028]:
+                    - generic [ref=f74e2029]:
+                      - generic [ref=f74e2030]: 쿠폰할인
+                      - deletion [ref=f74e2031]: 17,000원
+                    - generic [ref=f74e2033]:
+                      - generic [ref=f74e2034]: 45%
+                      - generic [ref=f74e2039]: 9,300원
+                      - generic [ref=f74e2040]: (100g당 3,321원)
+                  - generic [ref=f74e2041]:
+                    - generic [ref=f74e2042]: 내일(토) 도착 보장
+                    - generic [ref=f74e2046]: 와우는 무료배송 ∙ 무료반품
+                  - generic [ref=f74e2048]:
+                    - generic "4.5" [ref=f74e2049]
+                    - generic [ref=f74e2055]: (904)
+                  - generic [ref=f74e2058]:
+                    - img "최대 381원 적립" [ref=f74e2059]
+                    - generic [ref=f74e2060]: 최대 381원 적립
+            - listitem [ref=f74e2061] [cursor=pointer]:
+              - link "복음자리 짜먹는 딸기잼, 200g, 2개 8,360원 (100g당 2,090원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 5 (1,222) 최대 418원 적립 최대 418원 적립" [ref=f74e2062]:
+                - /url: /vp/products/7851124231?itemId=21400408454&vendorItemId=88457042188&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=41&rank=41
+                - figure [ref=f74e2063]:
+                  - img "복음자리 짜먹는 딸기잼, 200g, 2개" [ref=f74e2064]
+                - generic [ref=f74e2065]:
+                  - generic [ref=f74e2067]: 복음자리 짜먹는 딸기잼, 200g, 2개
+                  - generic [ref=f74e2070]:
+                    - generic [ref=f74e2071]: 8,360원
+                    - generic [ref=f74e2072]: (100g당 2,090원)
+                  - generic [ref=f74e2073]:
+                    - generic [ref=f74e2074]: 내일(토) 도착 보장
+                    - generic [ref=f74e2078]: 와우는 무료배송 ∙ 무료반품
+                  - generic [ref=f74e2080]:
+                    - generic "5" [ref=f74e2081]
+                    - generic [ref=f74e2087]: (1,222)
+                  - generic [ref=f74e2090]:
+                    - img "최대 418원 적립" [ref=f74e2091]
+                    - generic [ref=f74e2092]: 최대 418원 적립
+            - listitem [ref=f74e2093] [cursor=pointer]:
+              - link "오뚜기 딸기쨈, 300g, 2개 8,400원 (100g당 1,400원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (66,642) 최대 420원 적립 최대 420원 적립" [ref=f74e2094]:
+                - /url: /vp/products/1023003?itemId=18170765726&vendorItemId=85320149642&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=42&rank=42
+                - figure [ref=f74e2095]:
+                  - img "오뚜기 딸기쨈, 300g, 2개" [ref=f74e2096]
+                - generic [ref=f74e2097]:
+                  - generic [ref=f74e2099]: 오뚜기 딸기쨈, 300g, 2개
+                  - generic [ref=f74e2102]:
+                    - generic [ref=f74e2103]: 8,400원
+                    - generic [ref=f74e2104]: (100g당 1,400원)
+                  - generic [ref=f74e2105]:
+                    - generic [ref=f74e2106]: 내일(토) 도착 보장
+                    - generic [ref=f74e2110]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f74e2112]:
+                    - generic "5" [ref=f74e2113]
+                    - generic [ref=f74e2119]: (66,642)
+                  - generic [ref=f74e2122]:
+                    - img "최대 420원 적립" [ref=f74e2123]
+                    - generic [ref=f74e2124]: 최대 420원 적립
+            - listitem [ref=f74e2125] [cursor=pointer]:
+              - link "스머커즈 딸기쨈, 907g, 1개 8,440원 (100g당 931원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 4.5 (1,928) 최대 422원 적립 최대 422원 적립" [ref=f74e2126]:
+                - /url: /vp/products/1421929678?itemId=2460562115&vendorItemId=3000259389&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=43&rank=43
+                - figure [ref=f74e2127]:
+                  - img "스머커즈 딸기쨈, 907g, 1개" [ref=f74e2128]
+                - generic [ref=f74e2129]:
+                  - generic [ref=f74e2131]: 스머커즈 딸기쨈, 907g, 1개
+                  - generic [ref=f74e2134]:
+                    - generic [ref=f74e2135]: 8,440원
+                    - generic [ref=f74e2136]: (100g당 931원)
+                  - generic [ref=f74e2137]:
+                    - generic [ref=f74e2138]: 내일(토) 도착 보장
+                    - generic [ref=f74e2142]: 와우는 무료배송 ∙ 무료반품
+                  - generic [ref=f74e2144]:
+                    - generic "4.5" [ref=f74e2145]
+                    - generic [ref=f74e2151]: (1,928)
+                  - generic [ref=f74e2154]:
+                    - img "최대 422원 적립" [ref=f74e2155]
+                    - generic [ref=f74e2156]: 최대 422원 적립
+            - listitem [ref=f74e2157] [cursor=pointer]:
+              - link "초록원 유기농 딸기잼, 580g, 1개 9,700원 11% 8,600원 (100g당 1,483원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 4.5 (301) 최대 430원 적립 최대 430원 적립" [ref=f74e2158]:
+                - /url: /vp/products/7704444755?itemId=20636377555&vendorItemId=3000201834&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=44&rank=44
+                - figure [ref=f74e2159]:
+                  - img "초록원 유기농 딸기잼, 580g, 1개" [ref=f74e2160]
+                - generic [ref=f74e2161]:
+                  - generic [ref=f74e2163]: 초록원 유기농 딸기잼, 580g, 1개
+                  - generic [ref=f74e2164]:
+                    - deletion [ref=f74e2166]: 9,700원
+                    - generic [ref=f74e2168]:
+                      - generic [ref=f74e2169]: 11%
+                      - generic [ref=f74e2170]: 8,600원
+                      - generic [ref=f74e2171]: (100g당 1,483원)
+                  - generic [ref=f74e2172]:
+                    - generic [ref=f74e2173]: 내일(토) 도착 보장
+                    - generic [ref=f74e2177]: 와우는 무료배송 ∙ 무료반품
+                  - generic [ref=f74e2179]:
+                    - generic "4.5" [ref=f74e2180]
+                    - generic [ref=f74e2186]: (301)
+                  - generic [ref=f74e2189]:
+                    - img "최대 430원 적립" [ref=f74e2190]
+                    - generic [ref=f74e2191]: 최대 430원 적립
+            - listitem [ref=f74e2192] [cursor=pointer]:
+              - link "스머커즈 딸기 프리저브 잼, 510g, 2개 8,650원 (100g당 848원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 4.5 (1,928) 최대 433원 적립 최대 433원 적립" [ref=f74e2193]:
+                - /url: /vp/products/1421929678?itemId=24672529784&vendorItemId=92846307337&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=45&rank=45
+                - figure [ref=f74e2194]:
+                  - img "스머커즈 딸기 프리저브 잼, 510g, 2개" [ref=f74e2195]
+                - generic [ref=f74e2196]:
+                  - generic [ref=f74e2198]: 스머커즈 딸기 프리저브 잼, 510g, 2개
+                  - generic [ref=f74e2201]:
+                    - generic [ref=f74e2202]: 8,650원
+                    - generic [ref=f74e2203]: (100g당 848원)
+                  - generic [ref=f74e2204]:
+                    - generic [ref=f74e2205]: 내일(토) 도착 보장
+                    - generic [ref=f74e2209]: 와우는 무료배송 ∙ 무료반품
+                  - generic [ref=f74e2211]:
+                    - generic "4.5" [ref=f74e2212]
+                    - generic [ref=f74e2218]: (1,928)
+                  - generic [ref=f74e2221]:
+                    - img "최대 433원 적립" [ref=f74e2222]
+                    - generic [ref=f74e2223]: 최대 433원 적립
+            - listitem [ref=f74e2224] [cursor=pointer]:
+              - link "쥬피터 저온농축 딸기잼, 1kg, 1개 8,780원 (100g당 878원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (3,425) 최대 439원 적립 최대 439원 적립" [ref=f74e2225]:
+                - /url: /vp/products/7605436659?itemId=21321427371&vendorItemId=78448591334&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=46&rank=46
+                - figure [ref=f74e2226]:
+                  - img "쥬피터 저온농축 딸기잼, 1kg, 1개" [ref=f74e2227]
+                - generic [ref=f74e2228]:
+                  - generic [ref=f74e2230]: 쥬피터 저온농축 딸기잼, 1kg, 1개
+                  - generic [ref=f74e2233]:
+                    - generic [ref=f74e2234]: 8,780원
+                    - generic [ref=f74e2235]: (100g당 878원)
+                  - generic [ref=f74e2236]:
+                    - generic [ref=f74e2237]: 내일(토) 도착 보장
+                    - generic [ref=f74e2241]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f74e2243]:
+                    - generic "4.5" [ref=f74e2244]
+                    - generic [ref=f74e2250]: (3,425)
+                  - generic [ref=f74e2253]:
+                    - img "최대 439원 적립" [ref=f74e2254]
+                    - generic [ref=f74e2255]: 최대 439원 적립
+            - listitem [ref=f74e2256] [cursor=pointer]:
+              - link "오뚜기 라이트 앤 조이 당을줄인 스틱 딸기잼, 20g, 50개 25,900원 44% 14,260원 (100g당 1,426원) 1,000원 와우 가입 쿠폰 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (9,366) 최대 663원 적립 최대 663원 적립" [ref=f74e2257]:
+                - /url: /vp/products/9005937351?itemId=26394673117&vendorItemId=71037602465&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=47&rank=47
+                - figure [ref=f74e2258]:
+                  - img "오뚜기 라이트 앤 조이 당을줄인 스틱 딸기잼, 20g, 50개" [ref=f74e2259]
+                - generic [ref=f74e2260]:
+                  - generic [ref=f74e2262]: 오뚜기 라이트 앤 조이 당을줄인 스틱 딸기잼, 20g, 50개
+                  - generic [ref=f74e2263]:
+                    - deletion [ref=f74e2265]: 25,900원
+                    - generic [ref=f74e2266]:
+                      - generic [ref=f74e2267]:
+                        - generic [ref=f74e2268]: 44%
+                        - generic [ref=f74e2269]: 14,260원
+                        - generic [ref=f74e2270]: (100g당 1,426원)
+                      - generic [ref=f74e2271]:
+                        - generic [ref=f74e2272]: 1,000원
+                        - generic [ref=f74e2277]: 와우 가입 쿠폰
+                  - generic [ref=f74e2278]:
+                    - generic [ref=f74e2279]: 내일(토) 도착 보장
+                    - generic [ref=f74e2283]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f74e2285]:
+                    - generic "5" [ref=f74e2286]
+                    - generic [ref=f74e2292]: (9,366)
+                  - generic [ref=f74e2295]:
+                    - img "최대 663원 적립" [ref=f74e2296]
+                    - generic [ref=f74e2297]: 최대 663원 적립
+            - listitem [ref=f74e2298] [cursor=pointer]:
+              - link "아빠랑 유기농설탕으로 만든 딸기 아이리풀잼 1kg, 1개 15,000원 40% 8,900원 (100g당 890원) 내일(토) 도착 보장 4.5 (2,169) 최대 445원 적립 최대 445원 적립" [ref=f74e2299]:
+                - /url: /vp/products/9397789142?itemId=20431800406&vendorItemId=88676335674&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=48&rank=48
+                - figure [ref=f74e2300]:
+                  - img "아빠랑 유기농설탕으로 만든 딸기 아이리풀잼 1kg, 1개" [ref=f74e2301]
+                - generic [ref=f74e2302]:
+                  - generic [ref=f74e2304]: 아빠랑 유기농설탕으로 만든 딸기 아이리풀잼 1kg, 1개
+                  - generic [ref=f74e2305]:
+                    - deletion [ref=f74e2307]: 15,000원
+                    - generic [ref=f74e2309]:
+                      - generic [ref=f74e2310]: 40%
+                      - generic [ref=f74e2311]: 8,900원
+                      - generic [ref=f74e2312]: (100g당 890원)
+                  - generic [ref=f74e2313]: 내일(토) 도착 보장
+                  - generic [ref=f74e2319]:
+                    - generic "4.5" [ref=f74e2320]
+                    - generic [ref=f74e2326]: (2,169)
+                  - generic [ref=f74e2329]:
+                    - img "최대 445원 적립" [ref=f74e2330]
+                    - generic [ref=f74e2331]: 최대 445원 적립
+            - listitem [ref=f74e2332] [cursor=pointer]:
+              - link "동화속딸기 간편 파우치 무설탕 저당 저칼로리 알룰로스 딸기잼, 1개, 200g 할인 11,170원 20% 8,900원 (100g당 4,450원) 내일(토) 도착 보장 4.5 (745) 최대 445원 적립 최대 445원 적립" [ref=f74e2333]:
+                - /url: /vp/products/9165841848?itemId=27005426154&vendorItemId=94522352989&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=49&rank=49
+                - figure [ref=f74e2334]:
+                  - img "동화속딸기 간편 파우치 무설탕 저당 저칼로리 알룰로스 딸기잼, 1개, 200g" [ref=f74e2335]
+                - generic [ref=f74e2336]:
+                  - generic [ref=f74e2338]: 동화속딸기 간편 파우치 무설탕 저당 저칼로리 알룰로스 딸기잼, 1개, 200g
+                  - generic [ref=f74e2339]:
+                    - generic [ref=f74e2340]:
+                      - generic [ref=f74e2341]: 할인
+                      - deletion [ref=f74e2342]: 11,170원
+                    - generic [ref=f74e2344]:
+                      - generic [ref=f74e2345]: 20%
+                      - generic [ref=f74e2350]: 8,900원
+                      - generic [ref=f74e2351]: (100g당 4,450원)
+                  - generic [ref=f74e2352]: 내일(토) 도착 보장
+                  - generic [ref=f74e2358]:
+                    - generic "4.5" [ref=f74e2359]
+                    - generic [ref=f74e2365]: (745)
+                  - generic [ref=f74e2368]:
+                    - img "최대 445원 적립" [ref=f74e2369]
+                    - generic [ref=f74e2370]: 최대 445원 적립
+            - listitem [ref=f74e2371] [cursor=pointer]:
+              - link "오트리 딸기 청크잼, 1개, 1kg 8,960원 (100g당 896원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (396) 최대 448원 적립 최대 448원 적립" [ref=f74e2372]:
+                - /url: /vp/products/6927902931?itemId=25515707634&vendorItemId=92507633865&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=50&rank=50
+                - figure [ref=f74e2373]:
+                  - img "오트리 딸기 청크잼, 1개, 1kg" [ref=f74e2374]
+                - generic [ref=f74e2375]:
+                  - generic [ref=f74e2377]: 오트리 딸기 청크잼, 1개, 1kg
+                  - generic [ref=f74e2380]:
+                    - generic [ref=f74e2381]: 8,960원
+                    - generic [ref=f74e2382]: (100g당 896원)
+                  - generic [ref=f74e2383]:
+                    - generic [ref=f74e2384]: 내일(토) 도착 보장
+                    - generic [ref=f74e2388]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f74e2390]:
+                    - generic "5" [ref=f74e2391]
+                    - generic [ref=f74e2397]: (396)
+                  - generic [ref=f74e2400]:
+                    - img "최대 448원 적립" [ref=f74e2401]
+                    - generic [ref=f74e2402]: 최대 448원 적립
+            - listitem [ref=f74e2403] [cursor=pointer]:
+              - link "초록원 나이스틱 딸기잼 10p, 200g, 3개 11,700원 22% 9,010원 (100g당 1,502원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 4.5 (1,958) 최대 450원 적립 최대 450원 적립" [ref=f74e2404]:
+                - /url: /vp/products/7417914753?itemId=19274864806&vendorItemId=86389964815&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=51&rank=51
+                - figure [ref=f74e2405]:
+                  - img "초록원 나이스틱 딸기잼 10p, 200g, 3개" [ref=f74e2406]
+                - generic [ref=f74e2407]:
+                  - generic [ref=f74e2409]: 초록원 나이스틱 딸기잼 10p, 200g, 3개
+                  - generic [ref=f74e2410]:
+                    - deletion [ref=f74e2412]: 11,700원
+                    - generic [ref=f74e2414]:
+                      - generic [ref=f74e2415]: 22%
+                      - generic [ref=f74e2416]: 9,010원
+                      - generic [ref=f74e2417]: (100g당 1,502원)
+                  - generic [ref=f74e2418]:
+                    - generic [ref=f74e2419]: 내일(토) 도착 보장
+                    - generic [ref=f74e2423]: 와우는 무료배송 ∙ 무료반품
+                  - generic [ref=f74e2425]:
+                    - generic "4.5" [ref=f74e2426]
+                    - generic [ref=f74e2432]: (1,958)
+                  - generic [ref=f74e2435]:
+                    - img "최대 450원 적립" [ref=f74e2436]
+                    - generic [ref=f74e2437]: 최대 450원 적립
+            - listitem [ref=f74e2438] [cursor=pointer]:
+              - link "설탕대신 딸기잼, 240g, 1개 9,090원 (100g당 3,788원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (3,366) 최대 455원 적립 최대 455원 적립" [ref=f74e2439]:
+                - /url: /vp/products/8936481256?itemId=26128524066&vendorItemId=83884840029&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=52&rank=52
+                - figure [ref=f74e2440]:
+                  - img "설탕대신 딸기잼, 240g, 1개" [ref=f74e2441]
+                - generic [ref=f74e2442]:
+                  - generic [ref=f74e2444]: 설탕대신 딸기잼, 240g, 1개
+                  - generic [ref=f74e2447]:
+                    - generic [ref=f74e2448]: 9,090원
+                    - generic [ref=f74e2449]: (100g당 3,788원)
+                  - generic [ref=f74e2450]:
+                    - generic [ref=f74e2451]: 내일(토) 도착 보장
+                    - generic [ref=f74e2455]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f74e2457]:
+                    - generic "4.5" [ref=f74e2458]
+                    - generic [ref=f74e2464]: (3,366)
+                  - generic [ref=f74e2467]:
+                    - img "최대 455원 적립" [ref=f74e2468]
+                    - generic [ref=f74e2469]: 최대 455원 적립
+            - listitem [ref=f74e2470] [cursor=pointer]:
+              - link "미세스브릿지 스카티쉬 스트로베리 프리저브, 340g, 1개 9,100원 (100g당 2,676원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (14) 최대 455원 적립 최대 455원 적립" [ref=f74e2471]:
+                - /url: /vp/products/8529153750?itemId=24694768588&vendorItemId=92974220246&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=53&rank=53
+                - figure [ref=f74e2472]:
+                  - img "미세스브릿지 스카티쉬 스트로베리 프리저브, 340g, 1개" [ref=f74e2473]
+                - generic [ref=f74e2474]:
+                  - generic [ref=f74e2476]: 미세스브릿지 스카티쉬 스트로베리 프리저브, 340g, 1개
+                  - generic [ref=f74e2479]:
+                    - generic [ref=f74e2480]: 9,100원
+                    - generic [ref=f74e2481]: (100g당 2,676원)
+                  - generic [ref=f74e2482]:
+                    - generic [ref=f74e2483]: 내일(토) 도착 보장
+                    - generic [ref=f74e2487]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f74e2489]:
+                    - generic "4.5" [ref=f74e2490]
+                    - generic [ref=f74e2496]: (14)
+                  - generic [ref=f74e2499]:
+                    - img "최대 455원 적립" [ref=f74e2500]
+                    - generic [ref=f74e2501]: 최대 455원 적립
+            - listitem [ref=f74e2502] [cursor=pointer]:
+              - link "초록원 나이스틱 딸기잼 50p, 1kg, 1개 9,500원 2% 9,220원 (100g당 922원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 4.5 (1,958) 최대 461원 적립 최대 461원 적립" [ref=f74e2503]:
+                - /url: /vp/products/7417914753?itemId=18953037409&vendorItemId=86079234666&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=54&rank=54
+                - figure [ref=f74e2504]:
+                  - img "초록원 나이스틱 딸기잼 50p, 1kg, 1개" [ref=f74e2505]
+                - generic [ref=f74e2506]:
+                  - generic [ref=f74e2508]: 초록원 나이스틱 딸기잼 50p, 1kg, 1개
+                  - generic [ref=f74e2509]:
+                    - deletion [ref=f74e2511]: 9,500원
+                    - generic [ref=f74e2513]:
+                      - generic [ref=f74e2514]: 2%
+                      - generic [ref=f74e2515]: 9,220원
+                      - generic [ref=f74e2516]: (100g당 922원)
+                  - generic [ref=f74e2517]:
+                    - generic [ref=f74e2518]: 내일(토) 도착 보장
+                    - generic [ref=f74e2522]: 와우는 무료배송 ∙ 무료반품
+                  - generic [ref=f74e2524]:
+                    - generic "4.5" [ref=f74e2525]
+                    - generic [ref=f74e2531]: (1,958)
+                  - generic [ref=f74e2534]:
+                    - img "최대 461원 적립" [ref=f74e2535]
+                    - generic [ref=f74e2536]: 최대 461원 적립
+            - listitem [ref=f74e2537] [cursor=pointer]:
+              - link "곰곰 저칼로리 딸기잼, 320g, 1개 10,900원 15% 9,250원 (100g당 2,891원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 5 (1,304) 최대 463원 적립 최대 463원 적립" [ref=f74e2538]:
+                - /url: /vp/products/8326577515?itemId=24037248948&vendorItemId=91057559098&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=55&rank=55
+                - figure [ref=f74e2539]:
+                  - img "곰곰 저칼로리 딸기잼, 320g, 1개" [ref=f74e2540]
+                - generic [ref=f74e2541]:
+                  - generic [ref=f74e2543]: 곰곰 저칼로리 딸기잼, 320g, 1개
+                  - generic [ref=f74e2544]:
+                    - deletion [ref=f74e2546]: 10,900원
+                    - generic [ref=f74e2548]:
+                      - generic [ref=f74e2549]: 15%
+                      - generic [ref=f74e2550]: 9,250원
+                      - generic [ref=f74e2551]: (100g당 2,891원)
+                  - generic [ref=f74e2552]:
+                    - generic [ref=f74e2553]: 내일(토) 도착 보장
+                    - generic [ref=f74e2557]: 와우는 무료배송 ∙ 무료반품
+                  - generic [ref=f74e2559]:
+                    - generic "5" [ref=f74e2560]
+                    - generic [ref=f74e2566]: (1,304)
+                  - generic [ref=f74e2569]:
+                    - img "최대 463원 적립" [ref=f74e2570]
+                    - generic [ref=f74e2571]: 최대 463원 적립
+            - listitem [ref=f74e2572] [cursor=pointer]:
+              - link "복음자리 딸기잼, 640g, 1개 쿠폰할인 10,880원 17% 8,940원 (100g당 1,397원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (152,563) 최대 447원 적립 최대 447원 적립" [ref=f74e2573]:
+                - /url: /vp/products/2453926?itemId=20343930073&vendorItemId=3000014814&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=56&rank=56
+                - figure [ref=f74e2574]:
+                  - img "복음자리 딸기잼, 640g, 1개" [ref=f74e2575]
+                - generic [ref=f74e2576]:
+                  - generic [ref=f74e2578]: 복음자리 딸기잼, 640g, 1개
+                  - generic [ref=f74e2579]:
+                    - generic [ref=f74e2580]:
+                      - generic [ref=f74e2581]: 쿠폰할인
+                      - deletion [ref=f74e2582]: 10,880원
+                    - generic [ref=f74e2584]:
+                      - generic [ref=f74e2585]: 17%
+                      - generic [ref=f74e2590]: 8,940원
+                      - generic [ref=f74e2591]: (100g당 1,397원)
+                  - generic [ref=f74e2592]:
+                    - generic [ref=f74e2593]: 내일(토) 도착 보장
+                    - generic [ref=f74e2597]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f74e2599]:
+                    - generic "5" [ref=f74e2600]
+                    - generic [ref=f74e2606]: (152,563)
+                  - generic [ref=f74e2609]:
+                    - img "최대 447원 적립" [ref=f74e2610]
+                    - generic [ref=f74e2611]: 최대 447원 적립
+            - listitem [ref=f74e2612] [cursor=pointer]:
+              - link "비타민마을 모노밀 저당 딸기잼 알룰로스, 280g, 1개 할인 20,000원 52% 9,500원 (100g당 3,393원) 내일(토) 도착 보장 5 (1,115) 최대 475원 적립 최대 475원 적립" [ref=f74e2613]:
+                - /url: /vp/products/9480790095?itemId=28219802184&vendorItemId=95173773834&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=57&rank=57
+                - figure [ref=f74e2614]:
+                  - img "비타민마을 모노밀 저당 딸기잼 알룰로스, 280g, 1개" [ref=f74e2615]
+                - generic [ref=f74e2616]:
+                  - generic [ref=f74e2618]: 비타민마을 모노밀 저당 딸기잼 알룰로스, 280g, 1개
+                  - generic [ref=f74e2619]:
+                    - generic [ref=f74e2620]:
+                      - generic [ref=f74e2621]: 할인
+                      - deletion [ref=f74e2622]: 20,000원
+                    - generic [ref=f74e2624]:
+                      - generic [ref=f74e2625]: 52%
+                      - generic [ref=f74e2630]: 9,500원
+                      - generic [ref=f74e2631]: (100g당 3,393원)
+                  - generic [ref=f74e2632]: 내일(토) 도착 보장
+                  - generic [ref=f74e2638]:
+                    - generic "5" [ref=f74e2639]
+                    - generic [ref=f74e2645]: (1,115)
+                  - generic [ref=f74e2648]:
+                    - img "최대 475원 적립" [ref=f74e2649]
+                    - generic [ref=f74e2650]: 최대 475원 적립
+            - listitem [ref=f74e2651] [cursor=pointer]:
+              - link "복음자리 45도 과일잼 딸기, 350g, 2개 13,800원 27% 10,000원 (100g당 1,429원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (20,148) 최대 500원 적립 최대 500원 적립" [ref=f74e2652]:
+                - /url: /vp/products/2323369315?itemId=18172580845&vendorItemId=85321883305&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=58&rank=58
+                - figure [ref=f74e2653]:
+                  - img "복음자리 45도 과일잼 딸기, 350g, 2개" [ref=f74e2654]
+                - generic [ref=f74e2655]:
+                  - generic [ref=f74e2657]: 복음자리 45도 과일잼 딸기, 350g, 2개
+                  - generic [ref=f74e2658]:
+                    - deletion [ref=f74e2660]: 13,800원
+                    - generic [ref=f74e2662]:
+                      - generic [ref=f74e2663]: 27%
+                      - generic [ref=f74e2664]: 10,000원
+                      - generic [ref=f74e2665]: (100g당 1,429원)
+                  - generic [ref=f74e2666]:
+                    - generic [ref=f74e2667]: 내일(토) 도착 보장
+                    - generic [ref=f74e2671]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f74e2673]:
+                    - generic "5" [ref=f74e2674]
+                    - generic [ref=f74e2680]: (20,148)
+                  - generic [ref=f74e2683]:
+                    - img "최대 500원 적립" [ref=f74e2684]
+                    - generic [ref=f74e2685]: 최대 500원 적립
+            - listitem [ref=f74e2686] [cursor=pointer]:
+              - link "초록원 무농약딸기로 만든 딸기잼, 580g, 1개 9,600원 (100g당 1,655원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 4.5 (434) 최대 480원 적립 최대 480원 적립" [ref=f74e2687]:
+                - /url: /vp/products/7460699099?itemId=19445478750&vendorItemId=83885799470&q=딸기잼&searchId=fbb9aa0c13069812&sourceType=search&itemsCount=60&searchRank=59&rank=59
+                - figure [ref=f74e2688]:
+                  - img "초록원 무농약딸기로 만든 딸기잼, 580g, 1개" [ref=f74e2689]
+                - generic [ref=f74e2690]:
+                  - generic [ref=f74e2692]: 초록원 무농약딸기로 만든 딸기잼, 580g, 1개
+                  - generic [ref=f74e2695]:
+                    - generic [ref=f74e2696]: 9,600원
+                    - generic [ref=f74e2697]: (100g당 1,655원)
+                  - generic [ref=f74e2698]:
+                    - generic [ref=f74e2699]: 내일(토) 도착 보장
+                    - generic [ref=f74e2703]: 와우는 무료배송 ∙ 무료반품
+                  - generic [ref=f74e2705]:
+                    - generic "4.5" [ref=f74e2706]
+                    - generic [ref=f74e2712]: (434)
+                  - generic [ref=f74e2715]:
+                    - img "최대 480원 적립" [ref=f74e2716]
+                    - generic [ref=f74e2717]: 최대 480원 적립
+          - region "찾는 상품이 없나요?" [ref=f74e2718]:
+            - generic [ref=f74e2719]:
+              - heading "찾는 상품이 없나요?" [level=2] [ref=f74e2720]
+              - paragraph [ref=f74e2721]: 로그인하고 더 많은 상품을 확인해보세요
+            - button "로그인" [ref=f74e2722] [cursor=pointer]
+  - contentinfo [ref=f74e2724]:
+    - generic [ref=f74e2725]:
+      - generic [ref=f74e2726]:
+        - link "회사소개" [ref=f74e2727] [cursor=pointer]:
+          - /url: https://news.coupang.com/
+        - link "Investor Relations" [ref=f74e2728] [cursor=pointer]:
+          - /url: https://ir.aboutcoupang.com/overview/default.aspx
+        - link "인재채용" [ref=f74e2729] [cursor=pointer]:
+          - /url: https://rocketyourcareer.kr.coupang.com
+        - link "입점/제휴문의" [ref=f74e2730] [cursor=pointer]:
+          - /url: https://marketplace.coupangcorp.com/s/?utm_source=button_pc&utm_medium=non_paid&utm_campaign=onsite_ca&utm_id=coupang_app?inflow=WEB_FOOTER_B
+        - link "공지사항" [ref=f74e2731] [cursor=pointer]:
+          - /url: https://mc.coupang.com/ssr/desktop/contact/notice
+        - link "고객의 소리" [ref=f74e2732] [cursor=pointer]:
+          - /url: https://mc.coupang.com/ssr/desktop/contact/voc
+        - link "이용약관" [ref=f74e2733] [cursor=pointer]:
+          - /url: https://www.coupang.com/np/policies/terms
+        - link [ref=f74e2734] [cursor=pointer]:
+          - /url: https://privacy.coupang.com/ko/center/coupang
+          - strong [ref=f74e2735]: 개인정보 처리방침
+        - link "정보보호/개인정보보호 인증" [ref=f74e2736] [cursor=pointer]:
+          - /url: https://privacy.coupang.com/ko/security/status
+        - link "쿠팡페이 이용약관" [ref=f74e2737] [cursor=pointer]:
+          - /url: https://rocketpay.coupang.com/rocketpay/operationTerms/coupangPcFooter
+        - link "신뢰관리센터" [ref=f74e2738] [cursor=pointer]:
+          - /url: https://www.coupang.com/np/safety
+        - link "제휴마케팅" [ref=f74e2739] [cursor=pointer]:
+          - /url: https://partners.coupang.com/
+        - link "광고안내" [ref=f74e2740] [cursor=pointer]:
+          - /url: https://ads.coupang.com
+      - paragraph [ref=f74e2744] [cursor=pointer]: Global Site
+    - generic [ref=f74e2746]:
+      - generic [ref=f74e2747]:
+        - link "COUPANG" [ref=f74e2748] [cursor=pointer]:
+          - /url: https://www.coupang.com/
+        - generic [ref=f74e2749]:
+          - text: "상호명 및 호스팅 서비스 제공 : 쿠팡(주) 대표이사 : 로저스 해롤드 린(Rogers Harold Lynn) (05050) 서울시 광진구 아차산로 412, 2층 사업자 등록번호 : 120-88-00767 통신판매업신고 : 2026-서울광진-1253"
+          - link "사업자정보 확인 >" [ref=f74e2750] [cursor=pointer]:
+            - /url: http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=1208800767
+      - link [ref=f74e2752] [cursor=pointer]:
+        - /url: https://mc.coupang.com/ssr/desktop/contact/inquiry
+        - strong [ref=f74e2753]: 365고객센터
+        - text: "| 전자금융거래분쟁처리담당"
+        - emphasis [ref=f74e2754]: 1577-7011 (유료)
+        - text: "(05050) 서울시 광진구 아차산로 412, 2층 email : help@coupang.com"
+      - paragraph [ref=f74e2755]:
+        - strong [ref=f74e2756]: 채무지급보증 안내
+        - generic [ref=f74e2757]: 당사는 고객님이 현금 결제한 금액에 대해 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.
+        - link "서비스 가입사실 확인 >" [ref=f74e2758] [cursor=pointer]:
+          - /url: https://www.coupang.com/np/etc/popWooriService
+    - generic [ref=f74e2764]:
+      - paragraph [ref=f74e2765]: 사이버몰 내 판매되는 상품 중에는 쿠팡에 등록한 개별 판매자가 판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다. 마켓플레이스(오픈마켓) 상품의 경우 쿠팡은 통신판매중개자이며 통신판매의 당사자가 아닙니다. 쿠팡은 마켓플레이스(오픈마켓) 상품, 거래정보 및 거래 등에 대하여 책임을 지지 않습니다. 쿠팡은 소비자 보호와 안전거래를 위해 신뢰관리센터(CM112@coupang.com)를 운영하고 있으며, 관련 분쟁이 발생할 경우 별도의 분쟁 처리절차에 의거 분쟁이 처리됩니다. Copyright © Coupang Corp. 2010-2025 All Rights Reserved.
+      - list [ref=f74e2766]:
+        - listitem [ref=f74e2767]:
+          - link [ref=f74e2768] [cursor=pointer]:
+            - /url: https://www.facebook.com/Coupang.korea
+        - listitem [ref=f74e2769]:
+          - link [ref=f74e2770] [cursor=pointer]:
+            - /url: https://news.coupang.com/
+        - listitem [ref=f74e2771]:
+          - link [ref=f74e2772] [cursor=pointer]:
+            - /url: https://www.instagram.com/coupang

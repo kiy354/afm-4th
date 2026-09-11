@@ -1,0 +1,1951 @@
+- generic [active] [ref=f246e1]:
+  - generic [ref=f246e5]:
+    - link [ref=f246e6] [cursor=pointer]:
+      - /url: /np/campaigns/82?adType=DA&eventId=8INN3TPQrsxq7Om6
+    - link [ref=f246e7] [cursor=pointer]:
+      - /url: https://shop.coupang.com/sajodaerim/268667?source=brandstore_display_ads&adType=DA&eventId=09fByCkFvGfY8SHi
+  - generic [ref=f246e8]:
+    - generic [ref=f246e10]:
+      - list [ref=f246e11]:
+        - listitem [ref=f246e12]:
+          - link "판매자 가입" [ref=f246e13] [cursor=pointer]:
+            - /url: https://wing.coupang.com/tenants/vendor-signup/signup?utm_source=button_pc_coupang_top_right_cta&utm_medium=non_paid&utm_campaign=seller_registration
+        - listitem [ref=f246e14]:
+          - link "고객센터" [ref=f246e15] [cursor=pointer]:
+            - /url: https://mc.coupang.com/ssr/desktop/contact/inquiry
+        - listitem [ref=f246e16]:
+          - link "로그아웃" [ref=f246e17] [cursor=pointer]:
+            - /url: https://login.coupang.com/login/logout.pang?rtnUrl=https%3A%2F%2Fwww.coupang.com%2Fnp%2Fpost%2Flogout%3Fr%3Dhttp%253A%252F%252Fwww.coupang.com%252Fnp%252Fsearch%253Fq%253D%2525EB%2525A7%2525A5%2525EB%2525B0%252598%2525EC%252584%25259D%252B%2525EA%2525B5%2525AC%2525EC%25259A%2525B4%2525EA%2525B3%252584%2525EB%25259E%252580%252B30%2525EA%2525B5%2525AC
+        - listitem [ref=f246e18]:
+          - link [ref=f246e19] [cursor=pointer]:
+            - /url: https://mc.coupang.com/ssr/desktop/order/list
+            - strong [ref=f246e20]: 김*임
+            - text: 님
+      - list [ref=f246e21]:
+        - listitem [ref=f246e22]: 즐겨찾기
+        - listitem [ref=f246e23]:
+          - generic [ref=f246e24] [cursor=pointer]: 입점신청
+    - generic [ref=f246e27]:
+      - generic [ref=f246e28] [cursor=pointer]: 카테고리
+      - generic [ref=f246e34]:
+        - generic [ref=f246e35]:
+          - link [ref=f246e36] [cursor=pointer]:
+            - /url: https://www.coupang.com
+            - img "Coupang" [ref=f246e37]
+          - generic [ref=f246e38]:
+            - link "전체" [ref=f246e41] [cursor=pointer]:
+              - /url: "#"
+            - textbox "쿠팡 상품 검색" [ref=f246e43]:
+              - /placeholder: 찾고 싶은 상품을 검색해보세요!
+              - text: 맥반석 구운계란 30구
+            - generic [ref=f246e44] [cursor=pointer]
+            - button "검색" [ref=f246e45] [cursor=pointer]
+          - list [ref=f246e46]:
+            - listitem [ref=f246e47]:
+              - link "마이쿠팡" [ref=f246e48] [cursor=pointer]:
+                - /url: https://mc.coupang.com/ssr/desktop/order/list
+            - listitem [ref=f246e50]:
+              - link "1 장바구니" [ref=f246e51] [cursor=pointer]:
+                - /url: //cart.coupang.com/cartView.pang
+                - emphasis [ref=f246e52]: "1"
+                - generic [ref=f246e53]: 장바구니
+        - generic [ref=f246e55]:
+          - list [ref=f246e58]:
+            - listitem [ref=f246e59]:
+              - link "쿠팡플레이 쿠팡플레이" [ref=f246e60] [cursor=pointer]:
+                - /url: https://www.coupangplay.com/catalog
+                - img "쿠팡플레이" [ref=f246e61]
+                - generic [ref=f246e62]: 쿠팡플레이
+            - listitem [ref=f246e63]:
+              - link "로켓배송 로켓배송" [ref=f246e64] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/campaigns/82
+                - img "로켓배송" [ref=f246e65]
+                - generic [ref=f246e66]: 로켓배송
+            - listitem [ref=f246e67]:
+              - link "로켓프레시 로켓프레시" [ref=f246e68] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/categories/393760
+                - img "로켓프레시" [ref=f246e69]
+                - generic [ref=f246e70]: 로켓프레시
+            - listitem [ref=f246e71]:
+              - link "2026 추석 2026 추석" [ref=f246e72] [cursor=pointer]:
+                - /url: https://www.coupang.com/mlp/web/mlp-landing-page?landingId=4800
+                - img "2026 추석" [ref=f246e73]
+                - generic [ref=f246e74]: 2026 추석
+            - listitem [ref=f246e76]:
+              - link "다시 구매 다시 구매" [ref=f246e77] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/fbi?sourceType=home_section_fbi
+                - img "다시 구매" [ref=f246e78]
+                - generic [ref=f246e79]: 다시 구매
+            - listitem [ref=f246e81]:
+              - link "쿠팡비즈 쿠팡비즈" [ref=f246e82] [cursor=pointer]:
+                - /url: https://login.coupang.com/corporation/member/landing-page
+                - img "쿠팡비즈" [ref=f246e83]
+                - generic [ref=f246e84]: 쿠팡비즈
+            - listitem [ref=f246e85]:
+              - link "로켓직구 로켓직구" [ref=f246e86] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/coupangglobal
+                - img "로켓직구" [ref=f246e87]
+                - generic [ref=f246e88]: 로켓직구
+            - listitem [ref=f246e89]:
+              - link "골드박스 골드박스" [ref=f246e90] [cursor=pointer]:
+                - /url: https://www.coupang.com/mlp/web/mlp-landing-page?landingId=3712&sourceType=gm_crm_goldbox&subSourceType=gm_crm_gwsrtcut
+                - img "골드박스" [ref=f246e91]
+                - generic [ref=f246e92]: 골드박스
+            - listitem [ref=f246e93]:
+              - link "이달의신상 이달의신상" [ref=f246e94] [cursor=pointer]:
+                - /url: https://pages.coupang.com/p/136938
+                - img "이달의신상" [ref=f246e95]
+                - generic [ref=f246e96]: 이달의신상
+            - listitem [ref=f246e97]:
+              - link "입점신청 입점신청" [ref=f246e98] [cursor=pointer]:
+                - /url: https://wing.coupang.com/tenants/vendor-signup/signup?utm_source=button_pc_coupang_shortcut_1&utm_medium=non_paid&utm_id=onsite_ca&utm_content=202411
+                - img "입점신청" [ref=f246e99]
+                - generic [ref=f246e100]: 입점신청
+            - listitem [ref=f246e101]:
+              - link "판매자특가 판매자특가" [ref=f246e102] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/omp
+                - img "판매자특가" [ref=f246e103]
+                - generic [ref=f246e104]: 판매자특가
+            - listitem [ref=f246e105]:
+              - link "와우회원할인 와우회원할인" [ref=f246e106] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/campaigns/83
+                - img "와우회원할인" [ref=f246e107]
+                - generic [ref=f246e108]: 와우회원할인
+            - listitem [ref=f246e109]:
+              - link "반품마켓 반품마켓" [ref=f246e110] [cursor=pointer]:
+                - /url: https://pages.coupang.com/p/54908
+                - img "반품마켓" [ref=f246e111]
+                - generic [ref=f246e112]: 반품마켓
+            - listitem [ref=f246e113]:
+              - link "착한상점 착한상점" [ref=f246e114] [cursor=pointer]:
+                - /url: https://pages.coupang.com/p/63240
+                - img "착한상점" [ref=f246e115]
+                - generic [ref=f246e116]: 착한상점
+            - listitem [ref=f246e118]:
+              - link "기획전 기획전" [ref=f246e119] [cursor=pointer]:
+                - /url: https://pages.coupang.com/p/bep?sourceType=gm_crm_oms&subSourceType=gm_crm_gwsrtcut
+                - img "기획전" [ref=f246e120]
+                - generic [ref=f246e121]: 기획전
+            - listitem [ref=f246e122]:
+              - link "쿠팡트래블 쿠팡트래블" [ref=f246e123] [cursor=pointer]:
+                - /url: https://trip.coupang.com/?channel=gnb
+                - img "쿠팡트래블" [ref=f246e124]
+                - generic [ref=f246e125]: 쿠팡트래블
+          - generic [ref=f246e127] [cursor=pointer]
+  - article [ref=f246e129]:
+    - generic [ref=f246e130]:
+      - link "장바구니 1" [ref=f246e132] [cursor=pointer]:
+        - /url: //cart.coupang.com/cartView.pang
+        - generic [ref=f246e133]: 장바구니
+        - emphasis [ref=f246e134]: "1"
+      - generic [ref=f246e135]:
+        - generic [ref=f246e136]: 최근본상품
+        - emphasis [ref=f246e137]: "20"
+      - generic [ref=f246e138]:
+        - list [ref=f246e139]:
+          - listitem [ref=f246e140]:
+            - link [ref=f246e141] [cursor=pointer]:
+              - /url: https://www.coupang.com/vp/products/6990522639?sourceType=recently_viewed_widget
+          - listitem [ref=f246e142]:
+            - link [ref=f246e143] [cursor=pointer]:
+              - /url: https://www.coupang.com/vp/products/8876285543?sourceType=recently_viewed_widget
+          - listitem [ref=f246e144]:
+            - link [ref=f246e145] [cursor=pointer]:
+              - /url: https://www.coupang.com/vp/products/5619788220?sourceType=recently_viewed_widget
+          - listitem [ref=f246e146]:
+            - link [ref=f246e147] [cursor=pointer]:
+              - /url: https://www.coupang.com/vp/products/9145554031?sourceType=recently_viewed_widget
+        - paragraph [ref=f246e148]:
+          - generic [ref=f246e149]:
+            - strong [ref=f246e150]: "1"
+            - text: /
+            - emphasis [ref=f246e151]: "5"
+          - generic [ref=f246e152]:
+            - link "prev" [ref=f246e153] [cursor=pointer]:
+              - /url: 이전 페이지 보기
+            - link "next" [ref=f246e154] [cursor=pointer]:
+              - /url: 다음 페이지 보기
+  - generic [ref=f246e156]:
+    - generic [ref=f246e159]:
+      - list [ref=f246e160]:
+        - listitem [ref=f246e161]:
+          - link "전체" [ref=f246e162] [cursor=pointer]:
+            - /url: /np/search?q=%EB%A7%A5%EB%B0%98%EC%84%9D+%EA%B5%AC%EC%9A%B4%EA%B3%84%EB%9E%80+30%EA%B5%AC
+      - strong [ref=f246e166]: "'맥반석 구운계란 30구'"
+    - generic [ref=f246e168]:
+      - generic [ref=f246e169]:
+        - generic [ref=f246e170]:
+          - generic [ref=f246e173]:
+            - heading "필터" [level=4] [ref=f246e175]
+            - list [ref=f246e178]:
+              - listitem [ref=f246e179]:
+                - img "rocket_luxury,rocket_wow,coupang_global" [ref=f246e183] [cursor=pointer]
+                - list [ref=f246e185]:
+                  - listitem [ref=f246e186]:
+                    - generic:
+                      - generic:
+                        - img "rocket_luxury"
+                      - text: 만 보기
+                  - listitem [ref=f246e187]:
+                    - generic [ref=f246e188] [cursor=pointer]:
+                      - img "rocket_wow" [ref=f246e191]
+                      - text: 만 보기
+                  - listitem [ref=f246e192]:
+                    - generic:
+                      - generic:
+                        - img "coupang_global"
+                      - text: 만 보기
+              - listitem [ref=f246e193]:
+                - generic:
+                  - generic:
+                    - img "top_brand"
+              - listitem [ref=f246e194]:
+                - generic [ref=f246e195] [cursor=pointer]: 무료배송
+            - separator [ref=f246e197]
+            - generic [ref=f246e198]:
+              - heading "카테고리" [level=5] [ref=f246e199]
+              - list [ref=f246e201]:
+                - listitem [ref=f246e202]:
+                  - link "전체" [ref=f246e204] [cursor=pointer]:
+                    - /url: https://www.coupang.com
+                - listitem [ref=f246e205]:
+                  - link "식품" [ref=f246e207] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/194276
+                - listitem [ref=f246e208]:
+                  - link "헬스/건강식품" [ref=f246e210] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/305798
+                - listitem [ref=f246e211]:
+                  - link "싱글라이프" [ref=f246e213] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/433784
+                - listitem [ref=f246e214]:
+                  - link "반려동물용품" [ref=f246e216] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/115674
+            - separator [ref=f246e217]
+            - generic [ref=f246e218]:
+              - heading "브랜드" [level=5] [ref=f246e219]
+              - generic [ref=f246e220]:
+                - list [ref=f246e221]:
+                  - listitem [ref=f246e222]:
+                    - generic [ref=f246e223] [cursor=pointer]: 맛군
+                  - listitem [ref=f246e225]:
+                    - generic [ref=f246e226] [cursor=pointer]: 딜리조이
+                  - listitem [ref=f246e228]:
+                    - generic [ref=f246e229] [cursor=pointer]: 양지뜨레
+                  - listitem [ref=f246e231]:
+                    - generic [ref=f246e232] [cursor=pointer]: 가농
+                  - listitem [ref=f246e234]:
+                    - generic [ref=f246e235] [cursor=pointer]: 더싱싱
+                  - listitem:
+                    - generic [ref=f246e237] [cursor=pointer]: 마이산
+                  - listitem:
+                    - generic [ref=f246e239] [cursor=pointer]: 조인
+                  - listitem:
+                    - generic [ref=f246e241] [cursor=pointer]: gomgom
+                  - listitem:
+                    - generic [ref=f246e243] [cursor=pointer]: 리모나다
+                  - listitem:
+                    - generic [ref=f246e245] [cursor=pointer]: 농협
+                  - listitem:
+                    - generic [ref=f246e247] [cursor=pointer]: 자연애찬
+                  - listitem:
+                    - generic [ref=f246e249] [cursor=pointer]: 슈테른
+                  - listitem:
+                    - generic [ref=f246e251] [cursor=pointer]: 벧엘서원
+                  - listitem:
+                    - generic [ref=f246e253] [cursor=pointer]: 장보남
+                  - listitem:
+                    - generic [ref=f246e255] [cursor=pointer]: 샛별뜨락
+                  - listitem:
+                    - generic [ref=f246e257] [cursor=pointer]: 대한식품
+                - generic [ref=f246e259] [cursor=pointer]: + 더보기
+            - separator [ref=f246e260]
+            - generic [ref=f246e261]:
+              - heading "상품 상태" [level=5] [ref=f246e262]
+              - list [ref=f246e264]:
+                - listitem [ref=f246e265]:
+                  - generic [ref=f246e266] [cursor=pointer]: 새 상품
+                - listitem [ref=f246e268]:
+                  - generic [ref=f246e269] [cursor=pointer]: 박스 훼손
+                - listitem [ref=f246e271]:
+                  - generic [ref=f246e272] [cursor=pointer]: 반품
+            - separator [ref=f246e274]
+            - generic [ref=f246e275]:
+              - heading "낱개상품 여부" [level=5] [ref=f246e276]
+              - list [ref=f246e278]:
+                - listitem [ref=f246e279]:
+                  - generic [ref=f246e280] [cursor=pointer]: 낱개상품
+            - separator [ref=f246e282]
+            - generic [ref=f246e283]:
+              - heading "개당 중량" [level=5] [ref=f246e284]
+              - list [ref=f246e286]:
+                - listitem [ref=f246e287]:
+                  - generic [ref=f246e288] [cursor=pointer]: 300g 이하
+                - listitem [ref=f246e290]:
+                  - generic: 300~500g
+                - listitem [ref=f246e291]:
+                  - generic [ref=f246e292] [cursor=pointer]: 500g~1kg
+                - listitem [ref=f246e294]:
+                  - generic [ref=f246e295] [cursor=pointer]: 1kg 이상
+            - separator [ref=f246e297]
+            - generic [ref=f246e298]:
+              - heading "종류" [level=5] [ref=f246e299]
+              - list [ref=f246e301]:
+                - listitem [ref=f246e302]:
+                  - generic [ref=f246e303] [cursor=pointer]: 구운/훈제
+                - listitem [ref=f246e305]:
+                  - generic [ref=f246e306] [cursor=pointer]: 날계란
+                - listitem [ref=f246e308]:
+                  - generic [ref=f246e309] [cursor=pointer]: 반숙란
+            - separator [ref=f246e311]
+            - generic [ref=f246e312]:
+              - heading "총 개수" [level=5] [ref=f246e313]
+              - list [ref=f246e315]:
+                - listitem [ref=f246e316]:
+                  - generic: 6구 이하
+                - listitem [ref=f246e317]:
+                  - generic: 6~10구
+                - listitem [ref=f246e318]:
+                  - generic: 10~20구
+                - listitem [ref=f246e319]:
+                  - generic [ref=f246e320] [cursor=pointer]: 20~30구
+                - listitem [ref=f246e322]:
+                  - generic [ref=f246e323] [cursor=pointer]: 30구 이상
+            - separator [ref=f246e325]
+            - generic [ref=f246e326]:
+              - heading "규격" [level=5] [ref=f246e327]
+              - list [ref=f246e329]:
+                - listitem [ref=f246e330]:
+                  - generic [ref=f246e331] [cursor=pointer]: 왕란(2XL)
+                - listitem [ref=f246e333]:
+                  - generic [ref=f246e334] [cursor=pointer]: 특란(XL)
+                - listitem [ref=f246e336]:
+                  - generic [ref=f246e337] [cursor=pointer]: 대란(L)
+                - listitem [ref=f246e339]:
+                  - generic [ref=f246e340] [cursor=pointer]: 중란(M)
+                - listitem [ref=f246e342]:
+                  - generic [ref=f246e343] [cursor=pointer]: 소란(S)
+            - separator [ref=f246e345]
+            - generic [ref=f246e346]:
+              - heading "간편식" [level=5] [ref=f246e347]
+              - list [ref=f246e349]:
+                - listitem [ref=f246e350]:
+                  - generic [ref=f246e351] [cursor=pointer]: 즉석섭취음료
+                - listitem [ref=f246e353]:
+                  - generic [ref=f246e354] [cursor=pointer]: 즉석섭취식품
+                - listitem [ref=f246e356]:
+                  - generic [ref=f246e357] [cursor=pointer]: 즉석조리식품
+                - listitem [ref=f246e359]:
+                  - generic [ref=f246e360] [cursor=pointer]: 밀키트
+            - separator [ref=f246e362]
+            - generic [ref=f246e363]:
+              - heading "색상" [level=5] [ref=f246e364]
+              - list [ref=f246e366]:
+                - listitem [ref=f246e367]:
+                  - generic [ref=f246e368] [cursor=pointer]: 갈색란
+                - listitem [ref=f246e370]:
+                  - generic [ref=f246e371] [cursor=pointer]: 백색란
+                - listitem [ref=f246e373]:
+                  - generic: 청색란
+            - separator [ref=f246e374]
+            - generic [ref=f246e375]:
+              - heading "특징" [level=5] [ref=f246e376]
+              - list [ref=f246e378]:
+                - listitem [ref=f246e379]:
+                  - generic [ref=f246e380] [cursor=pointer]: 동물복지
+                - listitem [ref=f246e382]:
+                  - generic [ref=f246e383] [cursor=pointer]: 무항생제
+                - listitem [ref=f246e385]:
+                  - generic: 유정란
+                - listitem [ref=f246e386]:
+                  - generic: 초란
+            - separator [ref=f246e387]
+            - generic [ref=f246e388]:
+              - heading "유기농/친환경 등" [level=5] [ref=f246e389]
+              - list [ref=f246e391]:
+                - listitem [ref=f246e392]:
+                  - generic [ref=f246e393] [cursor=pointer]: 인증 있음
+            - separator [ref=f246e395]
+            - generic [ref=f246e396]:
+              - heading "보관방식" [level=5] [ref=f246e397]
+              - list [ref=f246e399]:
+                - listitem [ref=f246e400]:
+                  - generic [ref=f246e401] [cursor=pointer]: 냉장보관
+                - listitem [ref=f246e403]:
+                  - generic [ref=f246e404] [cursor=pointer]: 실온보관
+            - separator [ref=f246e406]
+            - generic [ref=f246e407]:
+              - heading "계란 등급" [level=5] [ref=f246e408]
+              - list [ref=f246e410]:
+                - listitem [ref=f246e411]:
+                  - generic [ref=f246e412] [cursor=pointer]: 1+등급
+                - listitem [ref=f246e414]:
+                  - generic [ref=f246e415] [cursor=pointer]: 1등급
+            - separator [ref=f246e417]
+            - generic [ref=f246e418]:
+              - heading "비건 여부" [level=5] [ref=f246e419]
+              - list [ref=f246e421]:
+                - listitem [ref=f246e422]:
+                  - generic [ref=f246e423] [cursor=pointer]: 비건
+            - separator [ref=f246e425]
+            - generic [ref=f246e426]:
+              - heading "별점" [level=5] [ref=f246e427]
+              - list [ref=f246e429]:
+                - listitem [ref=f246e430]:
+                  - generic "전체" [ref=f246e431]: 별점전체
+                - listitem [ref=f246e432]:
+                  - generic "4점 이상" [ref=f246e433]:
+                    - generic [ref=f246e434] [cursor=pointer]
+                    - text: 4점 이상
+                - listitem [ref=f246e435]:
+                  - generic "3점 이상" [ref=f246e436]:
+                    - generic [ref=f246e437] [cursor=pointer]
+                    - text: 3점 이상
+                - listitem [ref=f246e438]:
+                  - generic "2점 이상" [ref=f246e439]:
+                    - generic [ref=f246e440] [cursor=pointer]
+                    - text: 2점 이상
+                - listitem [ref=f246e441]:
+                  - generic "1점 이상" [ref=f246e442]:
+                    - generic [ref=f246e443] [cursor=pointer]
+                    - text: 1점 이상
+            - separator [ref=f246e444]
+            - generic [ref=f246e445]:
+              - heading "가격" [level=5] [ref=f246e446]
+              - list [ref=f246e448]:
+                - listitem [ref=f246e449]:
+                  - generic "priceFilter" [ref=f246e450]: 가격 전체
+                - listitem [ref=f246e451]:
+                  - generic "priceFilter" [ref=f246e452]: 1만원 이하
+                - listitem [ref=f246e453]:
+                  - generic "priceFilter" [ref=f246e454]: 1만원~2만원
+                - listitem [ref=f246e455]:
+                  - generic "priceFilter" [ref=f246e456]: 2만원~3만원
+                - listitem [ref=f246e457]:
+                  - generic "priceFilter" [ref=f246e458]: 3만원~4만원
+                - listitem [ref=f246e459]:
+                  - generic "priceFilter" [ref=f246e460]: 4만원 이상
+              - generic [ref=f246e461]:
+                - generic [ref=f246e462]:
+                  - textbox "minPrice" [ref=f246e463]
+                  - generic [ref=f246e464]: ~
+                  - textbox "maxPrice" [ref=f246e465]
+                  - text: 원
+                - generic "priceFilter" [ref=f246e466]: 검색
+            - separator [ref=f246e467]
+          - generic [ref=f246e470]:
+            - generic [ref=f246e471]: 현재 검색 결과에 만족하셨나요?
+            - button [ref=f246e472] [cursor=pointer]
+            - button [ref=f246e473] [cursor=pointer]
+            - generic [ref=f246e474]:
+              - paragraph [ref=f246e475]: 어떤 문제가 있었나요?
+              - list [ref=f246e476]:
+                - listitem [ref=f246e477] [cursor=pointer]: 이미지나 정보가 부정확해요
+                - listitem [ref=f246e478] [cursor=pointer]: 필터가 도움이 안 돼요
+                - listitem [ref=f246e479] [cursor=pointer]: 관련 없는 상품이 있어요
+                - listitem [ref=f246e480] [cursor=pointer]: 추천해준 검색어가 도움이 안 돼요
+                - listitem [ref=f246e481] [cursor=pointer]: 기타 원하는 옵션이 없어요
+        - generic [ref=f246e482]:
+          - generic [ref=f246e483]:
+            - heading [level=1] [ref=f246e484]:
+              - strong [ref=f246e485]: "'맥반석 구운계란 30구'"
+              - text: 에 대한 검색결과
+            - generic [ref=f246e486]:
+              - generic [ref=f246e487]: "연관검색어:"
+              - link "맥반석구운계란30구왕란" [ref=f246e488] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/search?q=%EB%A7%A5%EB%B0%98%EC%84%9D%EA%B5%AC%EC%9A%B4%EA%B3%84%EB%9E%8030%EA%B5%AC%EC%99%95%EB%9E%80&channel=relate
+              - link "구운계란30구" [ref=f246e489] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/search?q=%EA%B5%AC%EC%9A%B4%EA%B3%84%EB%9E%8030%EA%B5%AC&channel=relate
+              - link "계란30구" [ref=f246e490] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/search?q=%EA%B3%84%EB%9E%8030%EA%B5%AC&channel=relate
+              - link "구운계란" [ref=f246e491] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/search?q=%EA%B5%AC%EC%9A%B4%EA%B3%84%EB%9E%80&channel=relate
+              - link "맥반석구운계란" [ref=f246e492] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/search?q=%EB%A7%A5%EB%B0%98%EC%84%9D%EA%B5%AC%EC%9A%B4%EA%B3%84%EB%9E%80&channel=relate
+              - link "구운계란20구" [ref=f246e493] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/search?q=%EA%B5%AC%EC%9A%B4%EA%B3%84%EB%9E%8020%EA%B5%AC&channel=relate
+              - link "계란" [ref=f246e494] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/search?q=%EA%B3%84%EB%9E%80&channel=relate
+              - link "우유" [ref=f246e495] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/search?q=%EC%9A%B0%EC%9C%A0&channel=relate
+              - link "바나나" [ref=f246e496] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/search?q=%EB%B0%94%EB%82%98%EB%82%98&channel=relate
+              - link "맥반석구운란15구" [ref=f246e497] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/search?q=%EB%A7%A5%EB%B0%98%EC%84%9D%EA%B5%AC%EC%9A%B4%EB%9E%8015%EA%B5%AC&channel=relate
+            - generic [ref=f246e498]:
+              - generic [ref=f246e501]:
+                - checkbox "배송비 포함" [ref=f246e502] [cursor=pointer]
+                - generic [ref=f246e505]: 배송비 포함
+              - list [ref=f246e509]:
+                - listitem [ref=f246e510]:
+                  - radio "쿠팡 랭킹순" [checked] [ref=f246e511]
+                  - generic [ref=f246e512] [cursor=pointer]: 쿠팡 랭킹순
+                  - generic [ref=f246e513]: 설명
+                - listitem [ref=f246e514]:
+                  - radio "낮은가격순" [ref=f246e515]
+                  - generic [ref=f246e516] [cursor=pointer]: 낮은가격순
+                - listitem [ref=f246e517]:
+                  - radio "높은가격순" [ref=f246e518]
+                  - generic [ref=f246e519] [cursor=pointer]: 높은가격순
+                - listitem [ref=f246e520]:
+                  - radio "판매량순" [ref=f246e521]
+                  - generic [ref=f246e522] [cursor=pointer]: 판매량순
+                - listitem [ref=f246e523]:
+                  - radio "최신순" [ref=f246e524]
+                  - generic [ref=f246e525] [cursor=pointer]: 최신순
+              - list [ref=f246e530]:
+                - listitem [ref=f246e531] [cursor=pointer]:
+                  - radio "36개씩 보기" [checked] [ref=f246e532]
+                  - generic [ref=f246e533]: 36개씩 보기
+          - generic [ref=f246e535]:
+            - list [ref=f246e537]:
+              - listitem [ref=f246e538] [cursor=pointer]:
+                - link "본에그 무항생제 맥반석 구운계란 30구(1판), 1개, 30구 쿠폰할인 18,400원 2% 17,900원 (1구당 597원) 9/15(화) 도착 예정 무료배송 ∙ 오늘출발 4.5 (209) 최대 895원 적립 최대 895원 적립 광고 Ad information" [ref=f246e539]:
+                  - /url: /vp/products/8898379855?itemId=25981938755&vendorItemId=92964461604&sourceType=srp_product_ads&clickEventId=289227c0-adbc-11f1-ba69-398a65d4a9d7&korePlacement=15&koreSubPlacement=1&clickEventId=289227c0-adbc-11f1-ba69-398a65d4a9d7&korePlacement=15&koreSubPlacement=1
+                  - figure [ref=f246e540]:
+                    - img "본에그 무항생제 맥반석 구운계란 30구(1판), 1개, 30구" [ref=f246e541]
+                  - generic [ref=f246e542]:
+                    - generic [ref=f246e545]:
+                      - text: 본에그 무항생제
+                      - mark [ref=f246e546]: 맥반석
+                      - mark [ref=f246e547]: 구운계란
+                      - mark [ref=f246e548]: 30구
+                      - text: (1판), 1개,
+                      - mark [ref=f246e549]: 30구
+                    - generic [ref=f246e550]:
+                      - generic [ref=f246e551]:
+                        - generic [ref=f246e552]: 쿠폰할인
+                        - deletion [ref=f246e553]: 18,400원
+                      - generic [ref=f246e555]:
+                        - generic [ref=f246e556]: 2%
+                        - generic [ref=f246e561]: 17,900원
+                        - generic [ref=f246e562]: (1구당 597원)
+                    - generic [ref=f246e563]:
+                      - generic [ref=f246e564]: 9/15(화) 도착 예정
+                      - generic [ref=f246e566]: 무료배송 ∙ 오늘출발
+                    - generic [ref=f246e568]:
+                      - generic "4.5" [ref=f246e569]
+                      - generic [ref=f246e575]: (209)
+                    - generic [ref=f246e578]:
+                      - img "최대 895원 적립" [ref=f246e579]
+                      - generic [ref=f246e580]: 최대 895원 적립
+                    - generic [ref=f246e582]:
+                      - generic [ref=f246e583]: 광고
+                      - button "Ad information" [ref=f246e584]
+              - listitem [ref=f246e587] [cursor=pointer]:
+                - link "[에그조아] 구운란 30구 하루한알 건강챙기기 중란 단백질 간식 파손보상 안전배송, 1세트 18,900원 37% 11,900원 (1구당 397원) 9/15(화) 도착 예정 무료배송 ∙ 오늘출발 4.5 (230) 최대 595원 적립 최대 595원 적립 광고 Ad information" [ref=f246e588]:
+                  - /url: /vp/products/6973537564?itemId=16954456758&vendorItemId=84131753470&sourceType=srp_product_ads&clickEventId=28924ed0-adbc-11f1-9446-2fc7b90e545a&korePlacement=15&koreSubPlacement=5&clickEventId=28924ed0-adbc-11f1-9446-2fc7b90e545a&korePlacement=15&koreSubPlacement=5
+                  - figure [ref=f246e589]:
+                    - img "[에그조아] 구운란 30구 하루한알 건강챙기기 중란 단백질 간식 파손보상 안전배송, 1세트" [ref=f246e590]
+                  - generic [ref=f246e591]:
+                    - generic [ref=f246e593]: "[에그조아] 구운란 30구 하루한알 건강챙기기 중란 단백질 간식 파손보상 안전배송, 1세트"
+                    - generic [ref=f246e594]:
+                      - deletion [ref=f246e596]: 18,900원
+                      - generic [ref=f246e598]:
+                        - generic [ref=f246e599]: 37%
+                        - generic [ref=f246e600]: 11,900원
+                        - generic [ref=f246e601]: (1구당 397원)
+                    - generic [ref=f246e602]:
+                      - generic [ref=f246e603]: 9/15(화) 도착 예정
+                      - generic [ref=f246e605]: 무료배송 ∙ 오늘출발
+                    - generic [ref=f246e607]:
+                      - generic "4.5" [ref=f246e608]
+                      - generic [ref=f246e614]: (230)
+                    - generic [ref=f246e617]:
+                      - img "최대 595원 적립" [ref=f246e618]
+                      - generic [ref=f246e619]: 최대 595원 적립
+                    - generic [ref=f246e621]:
+                      - generic [ref=f246e622]: 광고
+                      - button "Ad information" [ref=f246e623]
+              - listitem [ref=f246e626] [cursor=pointer]:
+                - link "맛꾼 파손보상 촉촉쫄깃 맥반석 구운계란 찜질방, 30구, 1개 할인 35,000원 64% 12,510원 (1구당 417원) 9/15(화) 도착 예정 무료배송 4.5 (17,796) 최대 619원 적립 최대 619원 적립 1" [ref=f246e627]:
+                  - /url: /vp/products/8529746863?itemId=24695447808&vendorItemId=72440198666&pickType=COU_PICK&q=맥반석 구운계란 30구&searchId=0d58ffdb11411331&sourceType=search&itemsCount=36&searchRank=2&rank=2
+                  - figure [ref=f246e628]:
+                    - img "맛꾼 파손보상 촉촉쫄깃 맥반석 구운계란 찜질방, 30구, 1개" [ref=f246e629]
+                  - generic [ref=f246e630]:
+                    - generic [ref=f246e636]:
+                      - text: 맛꾼 파손보상 촉촉쫄깃
+                      - mark [ref=f246e637]: 맥반석
+                      - mark [ref=f246e638]: 구운계란
+                      - text: 찜질방,
+                      - mark [ref=f246e639]: 30구
+                      - text: ", 1개"
+                    - generic [ref=f246e640]:
+                      - generic [ref=f246e641]:
+                        - generic [ref=f246e642]: 할인
+                        - deletion [ref=f246e643]: 35,000원
+                      - generic [ref=f246e645]:
+                        - generic [ref=f246e646]: 64%
+                        - generic [ref=f246e651]: 12,510원
+                        - generic [ref=f246e652]: (1구당 417원)
+                    - generic [ref=f246e653]:
+                      - generic [ref=f246e654]: 9/15(화) 도착 예정
+                      - generic [ref=f246e656]: 무료배송
+                    - generic [ref=f246e658]:
+                      - generic "4.5" [ref=f246e659]
+                      - generic [ref=f246e665]: (17,796)
+                    - generic [ref=f246e668]:
+                      - img "최대 619원 적립" [ref=f246e669]
+                      - generic [ref=f246e670]: 최대 619원 적립
+                    - generic [ref=f246e671]: "1"
+              - listitem [ref=f246e672] [cursor=pointer]:
+                - link "해썹인증 파손보장 맥반석 찜질방 구운계란 대란 훈제란, 1개, 30구 할인 17,900원 30% 12,410원 (1구당 414원) 9/15(화) 도착 예정 무료배송 ∙ 오늘출발 4.5 (1,832) 최대 620원 적립 최대 620원 적립 2" [ref=f246e673]:
+                  - /url: /vp/products/9288246057?itemId=27506518528&vendorItemId=94471523737&q=맥반석 구운계란 30구&searchId=0d58ffdb11411331&sourceType=search&itemsCount=36&searchRank=3&rank=3
+                  - figure [ref=f246e674]:
+                    - img "해썹인증 파손보장 맥반석 찜질방 구운계란 대란 훈제란, 1개, 30구" [ref=f246e675]
+                  - generic [ref=f246e676]:
+                    - generic [ref=f246e679]:
+                      - text: 해썹인증 파손보장
+                      - mark [ref=f246e680]: 맥반석
+                      - text: 찜질방
+                      - mark [ref=f246e681]: 구운계란
+                      - text: 대란 훈제란, 1개,
+                      - mark [ref=f246e682]: 30구
+                    - generic [ref=f246e683]:
+                      - generic [ref=f246e684]:
+                        - generic [ref=f246e685]: 할인
+                        - deletion [ref=f246e686]: 17,900원
+                      - generic [ref=f246e688]:
+                        - generic [ref=f246e689]: 30%
+                        - generic [ref=f246e694]: 12,410원
+                        - generic [ref=f246e695]: (1구당 414원)
+                    - generic [ref=f246e696]:
+                      - generic [ref=f246e697]: 9/15(화) 도착 예정
+                      - generic [ref=f246e699]: 무료배송 ∙ 오늘출발
+                    - generic [ref=f246e701]:
+                      - generic "4.5" [ref=f246e702]
+                      - generic [ref=f246e708]: (1,832)
+                    - generic [ref=f246e711]:
+                      - img "최대 620원 적립" [ref=f246e712]
+                      - generic [ref=f246e713]: 최대 620원 적립
+                    - generic [ref=f246e714]: "2"
+              - listitem [ref=f246e715] [cursor=pointer]:
+                - link "해썹인증 파손보장 촉촉하고 탱글한 맥반석 구운계란 30구 60구 찜질방 훈제란, 1개 할인 16,400원 28% 11,800원 (1구당 393원) 9/15(화) 도착 예정 무료배송 ∙ 오늘출발 4 (422) 최대 590원 적립 최대 590원 적립 3" [ref=f246e716]:
+                  - /url: /vp/products/9461391240?itemId=28153617071&vendorItemId=95108900576&q=맥반석 구운계란 30구&searchId=0d58ffdb11411331&sourceType=search&itemsCount=36&searchRank=4&rank=4
+                  - figure [ref=f246e717]:
+                    - img "해썹인증 파손보장 촉촉하고 탱글한 맥반석 구운계란 30구 60구 찜질방 훈제란, 1개" [ref=f246e718]
+                  - generic [ref=f246e719]:
+                    - generic [ref=f246e722]:
+                      - text: 해썹인증 파손보장 촉촉하고 탱글한
+                      - mark [ref=f246e723]: 맥반석
+                      - mark [ref=f246e724]: 구운계란
+                      - mark [ref=f246e725]: 30구
+                      - text: 60구 찜질방 훈제란, 1개
+                    - generic [ref=f246e726]:
+                      - generic [ref=f246e727]:
+                        - generic [ref=f246e728]: 할인
+                        - deletion [ref=f246e729]: 16,400원
+                      - generic [ref=f246e731]:
+                        - generic [ref=f246e732]: 28%
+                        - generic [ref=f246e737]: 11,800원
+                        - generic [ref=f246e738]: (1구당 393원)
+                    - generic [ref=f246e739]:
+                      - generic [ref=f246e740]: 9/15(화) 도착 예정
+                      - generic [ref=f246e742]: 무료배송 ∙ 오늘출발
+                    - generic [ref=f246e744]:
+                      - generic "4" [ref=f246e745]
+                      - generic [ref=f246e751]: (422)
+                    - generic [ref=f246e754]:
+                      - img "최대 590원 적립" [ref=f246e755]
+                      - generic [ref=f246e756]: 최대 590원 적립
+                    - generic [ref=f246e757]: "3"
+              - listitem [ref=f246e758] [cursor=pointer]:
+                - link "수미애 파손보상 맥반석 무항생제 훈제 구운계란 대란 1개, 30구 37,900원 58% 15,900원 (1구당 530원) 9/15(화) 도착 예정 무료배송 4.5 (375) 최대 795원 적립 최대 795원 적립 광고 Ad information" [ref=f246e759]:
+                  - /url: /vp/products/8982486926?itemId=26300242511&vendorItemId=93278014762&sourceType=srp_product_ads&clickEventId=28924ed0-adbc-11f1-bdd9-c104a616b07e&korePlacement=15&koreSubPlacement=6&clickEventId=28924ed0-adbc-11f1-bdd9-c104a616b07e&korePlacement=15&koreSubPlacement=6
+                  - figure [ref=f246e760]:
+                    - img "수미애 파손보상 맥반석 무항생제 훈제 구운계란 대란 1개, 30구" [ref=f246e761]
+                  - generic [ref=f246e762]:
+                    - generic [ref=f246e765]:
+                      - text: 수미애 파손보상
+                      - mark [ref=f246e766]: 맥반석
+                      - text: 무항생제 훈제
+                      - mark [ref=f246e767]: 구운계란
+                      - text: 대란 1개,
+                      - mark [ref=f246e768]: 30구
+                    - generic [ref=f246e769]:
+                      - deletion [ref=f246e771]: 37,900원
+                      - generic [ref=f246e773]:
+                        - generic [ref=f246e774]: 58%
+                        - generic [ref=f246e775]: 15,900원
+                        - generic [ref=f246e776]: (1구당 530원)
+                    - generic [ref=f246e777]:
+                      - generic [ref=f246e778]: 9/15(화) 도착 예정
+                      - generic [ref=f246e780]: 무료배송
+                    - generic [ref=f246e782]:
+                      - generic "4.5" [ref=f246e783]
+                      - generic [ref=f246e789]: (375)
+                    - generic [ref=f246e792]:
+                      - img "최대 795원 적립" [ref=f246e793]
+                      - generic [ref=f246e794]: 최대 795원 적립
+                    - generic [ref=f246e796]:
+                      - generic [ref=f246e797]: 광고
+                      - button "Ad information" [ref=f246e798]
+              - listitem [ref=f246e801] [cursor=pointer]:
+                - link "시골아빠 파손보상 난각번호1번 안심 방사 유정란 구운계란 초란, 1개, 30구 18,900원 15% 15,900원 (1구당 530원) 9/15(화) 도착 예정 무료배송 ∙ 오늘출발 4.5 (193) 최대 795원 적립 최대 795원 적립 광고 Ad information" [ref=f246e802]:
+                  - /url: /vp/products/9394119541?itemId=27898568864&vendorItemId=94416711325&sourceType=srp_product_ads&clickEventId=28924ed0-adbc-11f1-b1ba-59d507fc0991&korePlacement=15&koreSubPlacement=9&clickEventId=28924ed0-adbc-11f1-b1ba-59d507fc0991&korePlacement=15&koreSubPlacement=9
+                  - figure [ref=f246e803]:
+                    - img "시골아빠 파손보상 난각번호1번 안심 방사 유정란 구운계란 초란, 1개, 30구" [ref=f246e804]
+                  - generic [ref=f246e805]:
+                    - generic [ref=f246e807]: 시골아빠 파손보상 난각번호1번 안심 방사 유정란 구운계란 초란, 1개, 30구
+                    - generic [ref=f246e808]:
+                      - deletion [ref=f246e810]: 18,900원
+                      - generic [ref=f246e812]:
+                        - generic [ref=f246e813]: 15%
+                        - generic [ref=f246e814]: 15,900원
+                        - generic [ref=f246e815]: (1구당 530원)
+                    - generic [ref=f246e816]:
+                      - generic [ref=f246e817]: 9/15(화) 도착 예정
+                      - generic [ref=f246e819]: 무료배송 ∙ 오늘출발
+                    - generic [ref=f246e821]:
+                      - generic "4.5" [ref=f246e822]
+                      - generic [ref=f246e828]: (193)
+                    - generic [ref=f246e831]:
+                      - img "최대 795원 적립" [ref=f246e832]
+                      - generic [ref=f246e833]: 최대 795원 적립
+                    - generic [ref=f246e835]:
+                      - generic [ref=f246e836]: 광고
+                      - button "Ad information" [ref=f246e837]
+              - listitem [ref=f246e840] [cursor=pointer]:
+                - link "본연채 쫀득한 맥반석 구운계란 30구, 대란, 1개 할인 24,000원 42% 13,920원 (1구당 464원) 9/15(화) 도착 예정 무료배송 ∙ 오늘출발 4.5 (246) 최대 696원 적립 최대 696원 적립 4" [ref=f246e841]:
+                  - /url: /vp/products/9521378347?itemId=28384405451&vendorItemId=95336037251&q=맥반석 구운계란 30구&searchId=0d58ffdb11411331&sourceType=search&itemsCount=36&searchRank=7&rank=7
+                  - figure [ref=f246e842]:
+                    - img "본연채 쫀득한 맥반석 구운계란 30구, 대란, 1개" [ref=f246e843]
+                  - generic [ref=f246e844]:
+                    - generic [ref=f246e847]:
+                      - text: 본연채 쫀득한
+                      - mark [ref=f246e848]: 맥반석
+                      - mark [ref=f246e849]: 구운계란
+                      - mark [ref=f246e850]: 30구
+                      - text: ", 대란, 1개"
+                    - generic [ref=f246e851]:
+                      - generic [ref=f246e852]:
+                        - generic [ref=f246e853]: 할인
+                        - deletion [ref=f246e854]: 24,000원
+                      - generic [ref=f246e856]:
+                        - generic [ref=f246e857]: 42%
+                        - generic [ref=f246e858]: 13,920원
+                        - generic [ref=f246e859]: (1구당 464원)
+                    - generic [ref=f246e860]:
+                      - generic [ref=f246e861]: 9/15(화) 도착 예정
+                      - generic [ref=f246e863]: 무료배송 ∙ 오늘출발
+                    - generic [ref=f246e865]:
+                      - generic "4.5" [ref=f246e866]
+                      - generic [ref=f246e872]: (246)
+                    - generic [ref=f246e875]:
+                      - img "최대 696원 적립" [ref=f246e876]
+                      - generic [ref=f246e877]: 최대 696원 적립
+                    - generic [ref=f246e878]: "4"
+              - listitem [ref=f246e879] [cursor=pointer]:
+                - link "오복관 맥반석 구운계란 HACCP, 1개, 30구 할인 28,000원 28% 19,900원 (1구당 663원) 9/15(화) 도착 예정 무료배송 ∙ 오늘출발 4.5 (283) 최대 995원 적립 최대 995원 적립 5" [ref=f246e880]:
+                  - /url: /vp/products/9530210069?itemId=28420021577&vendorItemId=95371077140&q=맥반석 구운계란 30구&searchId=0d58ffdb11411331&sourceType=search&itemsCount=36&searchRank=8&rank=8
+                  - figure [ref=f246e881]:
+                    - img "오복관 맥반석 구운계란 HACCP, 1개, 30구" [ref=f246e882]
+                  - generic [ref=f246e883]:
+                    - generic [ref=f246e886]:
+                      - text: 오복관
+                      - mark [ref=f246e887]: 맥반석
+                      - mark [ref=f246e888]: 구운계란
+                      - text: HACCP, 1개,
+                      - mark [ref=f246e889]: 30구
+                    - generic [ref=f246e890]:
+                      - generic [ref=f246e891]:
+                        - generic [ref=f246e892]: 할인
+                        - deletion [ref=f246e893]: 28,000원
+                      - generic [ref=f246e895]:
+                        - generic [ref=f246e896]: 28%
+                        - generic [ref=f246e901]: 19,900원
+                        - generic [ref=f246e902]: (1구당 663원)
+                    - generic [ref=f246e903]:
+                      - generic [ref=f246e904]: 9/15(화) 도착 예정
+                      - generic [ref=f246e906]: 무료배송 ∙ 오늘출발
+                    - generic [ref=f246e908]:
+                      - generic "4.5" [ref=f246e909]
+                      - generic [ref=f246e915]: (283)
+                    - generic [ref=f246e918]:
+                      - img "최대 995원 적립" [ref=f246e919]
+                      - generic [ref=f246e920]: 최대 995원 적립
+                    - generic [ref=f246e921]: "5"
+              - listitem [ref=f246e922] [cursor=pointer]:
+                - link "[에그조아] 구운란 15구 중란 쫄깃 건강한 간식 파손보상 안전배송, 2세트 14,900원 (1구당 497원) 9/15(화) 도착 예정 무료배송 ∙ 오늘출발 4 (72) 최대 745원 적립 최대 745원 적립 광고 Ad information" [ref=f246e923]:
+                  - /url: /vp/products/8411004754?itemId=24319518921&vendorItemId=91335282631&sourceType=srp_product_ads&clickEventId=28924ed0-adbc-11f1-87cf-c5ff5d42ee57&korePlacement=15&koreSubPlacement=11&clickEventId=28924ed0-adbc-11f1-87cf-c5ff5d42ee57&korePlacement=15&koreSubPlacement=11
+                  - figure [ref=f246e924]:
+                    - img "[에그조아] 구운란 15구 중란 쫄깃 건강한 간식 파손보상 안전배송, 2세트" [ref=f246e925]
+                  - generic [ref=f246e926]:
+                    - generic [ref=f246e928]: "[에그조아] 구운란 15구 중란 쫄깃 건강한 간식 파손보상 안전배송, 2세트"
+                    - generic [ref=f246e931]:
+                      - generic [ref=f246e932]: 14,900원
+                      - generic [ref=f246e933]: (1구당 497원)
+                    - generic [ref=f246e934]:
+                      - generic [ref=f246e935]: 9/15(화) 도착 예정
+                      - generic [ref=f246e937]: 무료배송 ∙ 오늘출발
+                    - generic [ref=f246e939]:
+                      - generic "4" [ref=f246e940]
+                      - generic [ref=f246e946]: (72)
+                    - generic [ref=f246e949]:
+                      - img "최대 745원 적립" [ref=f246e950]
+                      - generic [ref=f246e951]: 최대 745원 적립
+                    - generic [ref=f246e953]:
+                      - generic [ref=f246e954]: 광고
+                      - button "Ad information" [ref=f246e955]
+              - listitem [ref=f246e958] [cursor=pointer]:
+                - link "[파손보상] HACCP인증 무염 구운란 대란 30구, 1세트 할인 · 17:31:52 12,900원 5% 12,200원 (1구당 407원) 9/15(화) 도착 예정 무료배송 ∙ 오늘출발 4.5 (3,256) 최대 610원 적립 최대 610원 적립 6" [ref=f246e959]:
+                  - /url: /vp/products/8647553094?itemId=28730317993&vendorItemId=91966676466&q=맥반석 구운계란 30구&searchId=0d58ffdb11411331&sourceType=search&itemsCount=36&searchRank=10&rank=10
+                  - figure [ref=f246e960]:
+                    - img "[파손보상] HACCP인증 무염 구운란 대란 30구, 1세트" [ref=f246e961]
+                  - generic [ref=f246e962]:
+                    - generic [ref=f246e964]: "[파손보상] HACCP인증 무염 구운란 대란 30구, 1세트"
+                    - generic [ref=f246e965]:
+                      - generic [ref=f246e966]:
+                        - generic [ref=f246e967]: 할인
+                        - generic [ref=f246e968]: · 17:31:52
+                        - deletion [ref=f246e969]: 12,900원
+                      - generic [ref=f246e971]:
+                        - generic [ref=f246e972]: 5%
+                        - generic [ref=f246e977]: 12,200원
+                        - generic [ref=f246e978]: (1구당 407원)
+                    - generic [ref=f246e979]:
+                      - generic [ref=f246e980]: 9/15(화) 도착 예정
+                      - generic [ref=f246e982]: 무료배송 ∙ 오늘출발
+                    - generic [ref=f246e984]:
+                      - generic "4.5" [ref=f246e985]
+                      - generic [ref=f246e991]: (3,256)
+                    - generic [ref=f246e994]:
+                      - img "최대 610원 적립" [ref=f246e995]
+                      - generic [ref=f246e996]: 최대 610원 적립
+                    - generic [ref=f246e997]: "6"
+              - listitem [ref=f246e998] [cursor=pointer]:
+                - link "시골아빠 파손보상 구운계란 대란 저온숙성 촉촉쫄깃 구운란, 1개, 60구 할인 29,900원 36% 18,900원 (1구당 315원) 9/15(화) 도착 예정 무료배송 ∙ 오늘출발 최대 945원 적립 최대 945원 적립 광고 Ad information" [ref=f246e999]:
+                  - /url: /vp/products/9728375598?itemId=29112190004&vendorItemId=96036855448&sourceType=srp_product_ads&clickEventId=28924ed0-adbc-11f1-9d2a-cdbc4fdb192c&korePlacement=15&koreSubPlacement=12&clickEventId=28924ed0-adbc-11f1-9d2a-cdbc4fdb192c&korePlacement=15&koreSubPlacement=12
+                  - figure [ref=f246e1000]:
+                    - img "시골아빠 파손보상 구운계란 대란 저온숙성 촉촉쫄깃 구운란, 1개, 60구" [ref=f246e1001]
+                  - generic [ref=f246e1002]:
+                    - generic [ref=f246e1004]: 시골아빠 파손보상 구운계란 대란 저온숙성 촉촉쫄깃 구운란, 1개, 60구
+                    - generic [ref=f246e1005]:
+                      - generic [ref=f246e1006]:
+                        - generic [ref=f246e1007]: 할인
+                        - deletion [ref=f246e1008]: 29,900원
+                      - generic [ref=f246e1010]:
+                        - generic [ref=f246e1011]: 36%
+                        - generic [ref=f246e1016]: 18,900원
+                        - generic [ref=f246e1017]: (1구당 315원)
+                    - generic [ref=f246e1018]:
+                      - generic [ref=f246e1019]: 9/15(화) 도착 예정
+                      - generic [ref=f246e1021]: 무료배송 ∙ 오늘출발
+                    - generic [ref=f246e1023]:
+                      - img "최대 945원 적립" [ref=f246e1024]
+                      - generic [ref=f246e1025]: 최대 945원 적립
+                    - generic [ref=f246e1027]:
+                      - generic [ref=f246e1028]: 광고
+                      - button "Ad information" [ref=f246e1029]
+              - listitem [ref=f246e1032]:
+                - heading "최근 다른 고객이 많이 구매한 상품" [level=2] [ref=f246e1033]
+                - generic [ref=f246e1035]:
+                  - list [ref=f246e1037]:
+                    - listitem [ref=f246e1038]:
+                      - link "곰곰 맥반석 구운란, 30구, 1개 12,800원 (1구당 427원) 내일(토) 새벽 도착 보장 4.5 (161,323) 최대 640원 적립 최대 640원 적립" [ref=f246e1039] [cursor=pointer]:
+                        - /url: /vp/products/1354181605?itemId=2382768229&vendorItemId=70378249265&sourceType=SDW_TOP_SELLING_WIDGET_V2&searchId=0d58ffdb11411331&q=맥반석 구운계란 30구
+                        - figure [ref=f246e1040]:
+                          - img "곰곰 맥반석 구운란, 30구, 1개" [ref=f246e1041]
+                        - generic [ref=f246e1042]:
+                          - generic [ref=f246e1044]: 곰곰 맥반석 구운란, 30구, 1개
+                          - generic [ref=f246e1046]:
+                            - strong [ref=f246e1048]: 12,800원
+                            - generic [ref=f246e1049]: (1구당 427원)
+                          - generic [ref=f246e1050]: 내일(토) 새벽 도착 보장
+                          - generic [ref=f246e1053]:
+                            - generic "4.5" [ref=f246e1054]
+                            - generic [ref=f246e1060]: (161,323)
+                          - generic [ref=f246e1064]:
+                            - img "최대 640원 적립" [ref=f246e1065]
+                            - generic [ref=f246e1066]: 최대 640원 적립
+                    - listitem [ref=f246e1067]:
+                      - link "마이산 맥반석 구운란, 30구, 1개 34%15,900원 10,380원 (1구당 346원) 내일(토) 새벽 도착 보장 4.5 (91,788) 최대 519원 적립 최대 519원 적립" [ref=f246e1068] [cursor=pointer]:
+                        - /url: /vp/products/250855310?itemId=791998178&vendorItemId=5009820068&sourceType=SDW_TOP_SELLING_WIDGET_V2&searchId=0d58ffdb11411331&q=맥반석 구운계란 30구
+                        - figure [ref=f246e1069]:
+                          - img "마이산 맥반석 구운란, 30구, 1개" [ref=f246e1070]
+                        - generic [ref=f246e1071]:
+                          - generic [ref=f246e1073]: 마이산 맥반석 구운란, 30구, 1개
+                          - generic [ref=f246e1074]:
+                            - generic [ref=f246e1075]:
+                              - generic [ref=f246e1076]: 34%
+                              - deletion [ref=f246e1077]: 15,900원
+                            - generic [ref=f246e1078]:
+                              - strong [ref=f246e1080]: 10,380원
+                              - generic [ref=f246e1081]: (1구당 346원)
+                          - generic [ref=f246e1082]: 내일(토) 새벽 도착 보장
+                          - generic [ref=f246e1085]:
+                            - generic "4.5" [ref=f246e1086]
+                            - generic [ref=f246e1092]: (91,788)
+                          - generic [ref=f246e1096]:
+                            - img "최대 519원 적립" [ref=f246e1097]
+                            - generic [ref=f246e1098]: 최대 519원 적립
+                    - listitem [ref=f246e1099]:
+                      - link "가농 1+ 등급란으로 만든 비타민 구운란 30구, 1개 5%17,900원 16,930원 (1구당 564원) 내일(토) 새벽 도착 보장 4.5 (42,695) 최대 846원 적립 최대 846원 적립" [ref=f246e1100] [cursor=pointer]:
+                        - /url: /vp/products/4947691572?itemId=6530171407&vendorItemId=73824958701&sourceType=SDW_TOP_SELLING_WIDGET_V2&searchId=0d58ffdb11411331&q=맥반석 구운계란 30구
+                        - figure [ref=f246e1101]:
+                          - img "가농 1+ 등급란으로 만든 비타민 구운란 30구, 1개" [ref=f246e1102]
+                        - generic [ref=f246e1103]:
+                          - generic [ref=f246e1105]: 가농 1+ 등급란으로 만든 비타민 구운란 30구, 1개
+                          - generic [ref=f246e1106]:
+                            - generic [ref=f246e1107]:
+                              - generic [ref=f246e1108]: 5%
+                              - deletion [ref=f246e1109]: 17,900원
+                            - generic [ref=f246e1110]:
+                              - strong [ref=f246e1112]: 16,930원
+                              - generic [ref=f246e1113]: (1구당 564원)
+                          - generic [ref=f246e1114]: 내일(토) 새벽 도착 보장
+                          - generic [ref=f246e1117]:
+                            - generic "4.5" [ref=f246e1118]
+                            - generic [ref=f246e1124]: (42,695)
+                          - generic [ref=f246e1128]:
+                            - img "최대 846원 적립" [ref=f246e1129]
+                            - generic [ref=f246e1130]: 최대 846원 적립
+                    - listitem [ref=f246e1131]:
+                      - link "가농 1+등급란으로 만든 오메가 구운란, 20구, 1개 12,900원 (1구당 645원) 내일(토) 새벽 도착 보장 5 (76,201) 최대 645원 적립 최대 645원 적립" [ref=f246e1132] [cursor=pointer]:
+                        - /url: /vp/products/1445352046?itemId=2490591497&vendorItemId=70483793573&sourceType=SDW_TOP_SELLING_WIDGET_V2&searchId=0d58ffdb11411331&q=맥반석 구운계란 30구
+                        - figure [ref=f246e1133]:
+                          - img "가농 1+등급란으로 만든 오메가 구운란, 20구, 1개" [ref=f246e1134]
+                        - generic [ref=f246e1135]:
+                          - generic [ref=f246e1137]: 가농 1+등급란으로 만든 오메가 구운란, 20구, 1개
+                          - generic [ref=f246e1139]:
+                            - strong [ref=f246e1141]: 12,900원
+                            - generic [ref=f246e1142]: (1구당 645원)
+                          - generic [ref=f246e1143]: 내일(토) 새벽 도착 보장
+                          - generic [ref=f246e1146]:
+                            - generic "5" [ref=f246e1147]
+                            - generic [ref=f246e1153]: (76,201)
+                          - generic [ref=f246e1157]:
+                            - img "최대 645원 적립" [ref=f246e1158]
+                            - generic [ref=f246e1159]: 최대 645원 적립
+                    - listitem [ref=f246e1160]:
+                      - link "곰곰 무항생제 신선한 대란, 30구, 1개 8,390원 (1구당 280원) 내일(토) 새벽 도착 보장 5 (527,840) 최대 420원 적립 최대 420원 적립" [ref=f246e1161] [cursor=pointer]:
+                        - /url: /vp/products/1271064981?itemId=2275730724&vendorItemId=70272921582&sourceType=SDW_TOP_SELLING_WIDGET_V2&searchId=0d58ffdb11411331&q=맥반석 구운계란 30구
+                        - figure [ref=f246e1162]:
+                          - img "곰곰 무항생제 신선한 대란, 30구, 1개" [ref=f246e1163]
+                        - generic [ref=f246e1164]:
+                          - generic [ref=f246e1166]: 곰곰 무항생제 신선한 대란, 30구, 1개
+                          - generic [ref=f246e1168]:
+                            - strong [ref=f246e1170]: 8,390원
+                            - generic [ref=f246e1171]: (1구당 280원)
+                          - generic [ref=f246e1172]: 내일(토) 새벽 도착 보장
+                          - generic [ref=f246e1175]:
+                            - generic "5" [ref=f246e1176]
+                            - generic [ref=f246e1182]: (527,840)
+                          - generic [ref=f246e1186]:
+                            - img "최대 420원 적립" [ref=f246e1187]
+                            - generic [ref=f246e1188]: 최대 420원 적립
+                    - listitem [ref=f246e1189]:
+                      - link "곰곰 무항생제 신선한 특란, 30구, 1개 8,990원 (1구당 300원) 내일(토) 새벽 도착 보장 5 (379,257) 최대 450원 적립 최대 450원 적립" [ref=f246e1190] [cursor=pointer]:
+                        - /url: /vp/products/1271113288?itemId=2275793934&vendorItemId=70272921457&sourceType=SDW_TOP_SELLING_WIDGET_V2&searchId=0d58ffdb11411331&q=맥반석 구운계란 30구
+                        - figure [ref=f246e1191]:
+                          - img "곰곰 무항생제 신선한 특란, 30구, 1개" [ref=f246e1192]
+                        - generic [ref=f246e1193]:
+                          - generic [ref=f246e1195]: 곰곰 무항생제 신선한 특란, 30구, 1개
+                          - generic [ref=f246e1197]:
+                            - strong [ref=f246e1199]: 8,990원
+                            - generic [ref=f246e1200]: (1구당 300원)
+                          - generic [ref=f246e1201]: 내일(토) 새벽 도착 보장
+                          - generic [ref=f246e1204]:
+                            - generic "5" [ref=f246e1205]
+                            - generic [ref=f246e1211]: (379,257)
+                          - generic [ref=f246e1215]:
+                            - img "최대 450원 적립" [ref=f246e1216]
+                            - generic [ref=f246e1217]: 최대 450원 적립
+                  - button "다음 상품 보기" [ref=f246e1218] [cursor=pointer]
+              - listitem [ref=f246e1219] [cursor=pointer]:
+                - link "굽계 스모크온 훈제 촉촉한 구운란 햅썹인증 간식, 1개, 30구 18,000원 26% 13,300원 (1구당 443원) 9/15(화) 도착 예정 무료배송 4.5 (105) 최대 665원 적립 최대 665원 적립 광고 Ad information" [ref=f246e1220]:
+                  - /url: /vp/products/9574245847?itemId=28577967124&vendorItemId=95522128258&sourceType=srp_product_ads&clickEventId=28924ed0-adbc-11f1-a7be-447259056ef2&korePlacement=15&koreSubPlacement=21&clickEventId=28924ed0-adbc-11f1-a7be-447259056ef2&korePlacement=15&koreSubPlacement=21
+                  - figure [ref=f246e1221]:
+                    - img "굽계 스모크온 훈제 촉촉한 구운란 햅썹인증 간식, 1개, 30구" [ref=f246e1222]
+                  - generic [ref=f246e1223]:
+                    - generic [ref=f246e1225]: 굽계 스모크온 훈제 촉촉한 구운란 햅썹인증 간식, 1개, 30구
+                    - generic [ref=f246e1226]:
+                      - deletion [ref=f246e1228]: 18,000원
+                      - generic [ref=f246e1230]:
+                        - generic [ref=f246e1231]: 26%
+                        - generic [ref=f246e1232]: 13,300원
+                        - generic [ref=f246e1233]: (1구당 443원)
+                    - generic [ref=f246e1234]:
+                      - generic [ref=f246e1235]: 9/15(화) 도착 예정
+                      - generic [ref=f246e1237]: 무료배송
+                    - generic [ref=f246e1239]:
+                      - generic "4.5" [ref=f246e1240]
+                      - generic [ref=f246e1246]: (105)
+                    - generic [ref=f246e1249]:
+                      - img "최대 665원 적립" [ref=f246e1250]
+                      - generic [ref=f246e1251]: 최대 665원 적립
+                    - generic [ref=f246e1253]:
+                      - generic [ref=f246e1254]: 광고
+                      - button "Ad information" [ref=f246e1255]
+              - listitem [ref=f246e1258] [cursor=pointer]:
+                - link "맥반석 구운란 국내산 구운계란 HACCP 인증 디아머스 [대란], 1개, 30구 22,000원 27% 15,900원 (1구당 530원) 9/17(목) 도착 예정 무료배송 5 (491) 최대 795원 적립 최대 795원 적립 7" [ref=f246e1259]:
+                  - /url: /vp/products/9348626001?itemId=27731929313&vendorItemId=94692190997&q=맥반석 구운계란 30구&searchId=0d58ffdb11411331&sourceType=search&itemsCount=36&searchRank=13&rank=13
+                  - figure [ref=f246e1260]:
+                    - img "맥반석 구운란 국내산 구운계란 HACCP 인증 디아머스 [대란], 1개, 30구" [ref=f246e1261]
+                  - generic [ref=f246e1262]:
+                    - generic [ref=f246e1265]:
+                      - mark [ref=f246e1266]: 맥반석
+                      - mark [ref=f246e1267]: 구운란
+                      - text: 국내산 구운계란 HACCP 인증 디아머스 [대란], 1개,
+                      - mark [ref=f246e1268]: 30구
+                    - generic [ref=f246e1269]:
+                      - deletion [ref=f246e1271]: 22,000원
+                      - generic [ref=f246e1273]:
+                        - generic [ref=f246e1274]: 27%
+                        - generic [ref=f246e1275]: 15,900원
+                        - generic [ref=f246e1276]: (1구당 530원)
+                    - generic [ref=f246e1277]:
+                      - generic [ref=f246e1278]: 9/17(목) 도착 예정
+                      - generic [ref=f246e1280]: 무료배송
+                    - generic [ref=f246e1282]:
+                      - generic "5" [ref=f246e1283]
+                      - generic [ref=f246e1289]: (491)
+                    - generic [ref=f246e1292]:
+                      - img "최대 795원 적립" [ref=f246e1293]
+                      - generic [ref=f246e1294]: 최대 795원 적립
+                    - generic [ref=f246e1295]: "7"
+              - listitem [ref=f246e1296] [cursor=pointer]:
+                - link "계란의정원 킹단백 파손보장 구운계란 중란, 60구, 1개 할인 28,900원 39% 17,510원 (1구당 292원) 9/15(화) 도착 예정 무료배송 ∙ 오늘출발 4.5 (3,455) 최대 845원 적립 최대 845원 적립 8" [ref=f246e1297]:
+                  - /url: /vp/products/8214826370?itemId=23593672823&vendorItemId=90896476066&q=맥반석 구운계란 30구&searchId=0d58ffdb11411331&sourceType=search&itemsCount=36&searchRank=14&rank=14
+                  - figure [ref=f246e1298]:
+                    - img "계란의정원 킹단백 파손보장 구운계란 중란, 60구, 1개" [ref=f246e1299]
+                  - generic [ref=f246e1300]:
+                    - generic [ref=f246e1302]: 계란의정원 킹단백 파손보장 구운계란 중란, 60구, 1개
+                    - generic [ref=f246e1303]:
+                      - generic [ref=f246e1304]:
+                        - generic [ref=f246e1305]: 할인
+                        - deletion [ref=f246e1306]: 28,900원
+                      - generic [ref=f246e1308]:
+                        - generic [ref=f246e1309]: 39%
+                        - generic [ref=f246e1314]: 17,510원
+                        - generic [ref=f246e1315]: (1구당 292원)
+                    - generic [ref=f246e1316]:
+                      - generic [ref=f246e1317]: 9/15(화) 도착 예정
+                      - generic [ref=f246e1319]: 무료배송 ∙ 오늘출발
+                    - generic [ref=f246e1321]:
+                      - generic "4.5" [ref=f246e1322]
+                      - generic [ref=f246e1328]: (3,455)
+                    - generic [ref=f246e1331]:
+                      - img "최대 845원 적립" [ref=f246e1332]
+                      - generic [ref=f246e1333]: 최대 845원 적립
+                    - generic [ref=f246e1334]: "8"
+              - listitem [ref=f246e1335] [cursor=pointer]:
+                - link "미림이네 구운계란 맥반석 훈제 단백질 중란, 1개, 30구 할인 21,900원 45% 11,900원 (1구당 397원) 9/15(화) 도착 예정 무료배송 ∙ 오늘출발 4.5 (164) 최대 595원 적립 최대 595원 적립 9" [ref=f246e1336]:
+                  - /url: /vp/products/9615096048?itemId=28708971230&vendorItemId=95649823867&q=맥반석 구운계란 30구&searchId=0d58ffdb11411331&sourceType=search&itemsCount=36&searchRank=15&rank=15
+                  - figure [ref=f246e1337]:
+                    - img "미림이네 구운계란 맥반석 훈제 단백질 중란, 1개, 30구" [ref=f246e1338]
+                  - generic [ref=f246e1339]:
+                    - generic [ref=f246e1342]:
+                      - text: 미림이네
+                      - mark [ref=f246e1343]: 구운계란
+                      - mark [ref=f246e1344]: 맥반석
+                      - text: 훈제 단백질 중란, 1개,
+                      - mark [ref=f246e1345]: 30구
+                    - generic [ref=f246e1346]:
+                      - generic [ref=f246e1347]:
+                        - generic [ref=f246e1348]: 할인
+                        - deletion [ref=f246e1349]: 21,900원
+                      - generic [ref=f246e1351]:
+                        - generic [ref=f246e1352]: 45%
+                        - generic [ref=f246e1353]: 11,900원
+                        - generic [ref=f246e1354]: (1구당 397원)
+                    - generic [ref=f246e1355]:
+                      - generic [ref=f246e1356]: 9/15(화) 도착 예정
+                      - generic [ref=f246e1358]: 무료배송 ∙ 오늘출발
+                    - generic [ref=f246e1360]:
+                      - generic "4.5" [ref=f246e1361]
+                      - generic [ref=f246e1367]: (164)
+                    - generic [ref=f246e1370]:
+                      - img "최대 595원 적립" [ref=f246e1371]
+                      - generic [ref=f246e1372]: 최대 595원 적립
+                    - generic [ref=f246e1373]: "9"
+              - listitem [ref=f246e1374] [cursor=pointer]:
+                - link "[명품구운란] 구운계란 HACCP 인증 맥반석 대란, 1개, 30구 할인 22,150원 35% 14,390원 (1구당 480원) 9/15(화) 도착 예정 무료배송 ∙ 오늘출발 5 (225) 최대 720원 적립 최대 720원 적립 10" [ref=f246e1375]:
+                  - /url: /vp/products/9710613860?itemId=29053744986&vendorItemId=95980394760&q=맥반석 구운계란 30구&searchId=0d58ffdb11411331&sourceType=search&itemsCount=36&searchRank=16&rank=16
+                  - figure [ref=f246e1376]:
+                    - img "[명품구운란] 구운계란 HACCP 인증 맥반석 대란, 1개, 30구" [ref=f246e1377]
+                  - generic [ref=f246e1378]:
+                    - generic [ref=f246e1381]:
+                      - text: "[명품"
+                      - mark [ref=f246e1382]: 구운란
+                      - text: "] 구운계란 HACCP 인증"
+                      - mark [ref=f246e1383]: 맥반석
+                      - text: 대란, 1개,
+                      - mark [ref=f246e1384]: 30구
+                    - generic [ref=f246e1385]:
+                      - generic [ref=f246e1386]:
+                        - generic [ref=f246e1387]: 할인
+                        - deletion [ref=f246e1388]: 22,150원
+                      - generic [ref=f246e1390]:
+                        - generic [ref=f246e1391]: 35%
+                        - generic [ref=f246e1396]: 14,390원
+                        - generic [ref=f246e1397]: (1구당 480원)
+                    - generic [ref=f246e1398]:
+                      - generic [ref=f246e1399]: 9/15(화) 도착 예정
+                      - generic [ref=f246e1401]: 무료배송 ∙ 오늘출발
+                    - generic [ref=f246e1403]:
+                      - generic "5" [ref=f246e1404]
+                      - generic [ref=f246e1410]: (225)
+                    - generic [ref=f246e1413]:
+                      - img "최대 720원 적립" [ref=f246e1414]
+                      - generic [ref=f246e1415]: 최대 720원 적립
+                    - generic [ref=f246e1416]: "10"
+              - listitem [ref=f246e1417] [cursor=pointer]:
+                - link "맛꾼 파손보상 촉촉쫄깃 맥반석 구운계란 찜질방, 60구, 1개 할인 45,000원 48% 23,180원 (1구당 386원) 9/15(화) 도착 예정 무료배송 4.5 (17,796) 최대 1,147원 적립 최대 1,147원 적립" [ref=f246e1418]:
+                  - /url: /vp/products/8529746863?itemId=24695447809&vendorItemId=72440198685&q=맥반석 구운계란 30구&searchId=0d58ffdb11411331&sourceType=search&itemsCount=36&searchRank=17&rank=17
+                  - figure [ref=f246e1419]:
+                    - img "맛꾼 파손보상 촉촉쫄깃 맥반석 구운계란 찜질방, 60구, 1개" [ref=f246e1420]
+                  - generic [ref=f246e1421]:
+                    - generic [ref=f246e1423]: 맛꾼 파손보상 촉촉쫄깃 맥반석 구운계란 찜질방, 60구, 1개
+                    - generic [ref=f246e1424]:
+                      - generic [ref=f246e1425]:
+                        - generic [ref=f246e1426]: 할인
+                        - deletion [ref=f246e1427]: 45,000원
+                      - generic [ref=f246e1429]:
+                        - generic [ref=f246e1430]: 48%
+                        - generic [ref=f246e1431]: 23,180원
+                        - generic [ref=f246e1432]: (1구당 386원)
+                    - generic [ref=f246e1433]:
+                      - generic [ref=f246e1434]: 9/15(화) 도착 예정
+                      - generic [ref=f246e1436]: 무료배송
+                    - generic [ref=f246e1438]:
+                      - generic "4.5" [ref=f246e1439]
+                      - generic [ref=f246e1445]: (17,796)
+                    - generic [ref=f246e1448]:
+                      - img "최대 1,147원 적립" [ref=f246e1449]
+                      - generic [ref=f246e1450]: 최대 1,147원 적립
+              - listitem [ref=f246e1451] [cursor=pointer]:
+                - link "HACCP인증 맥반석 구운계란 탱글탱글 맛있는 구운란 맥반석계란 대란, 30구, 1개 14,360원 20% 11,370원 (1구당 379원) 9/17(목) 도착 예정 무료배송 4.5 (11) 최대 569원 적립 최대 569원 적립" [ref=f246e1452]:
+                  - /url: /vp/products/8466769464?itemId=24497672035&vendorItemId=95932169419&q=맥반석 구운계란 30구&searchId=0d58ffdb11411331&sourceType=search&itemsCount=36&searchRank=18&rank=18
+                  - figure [ref=f246e1453]:
+                    - img "HACCP인증 맥반석 구운계란 탱글탱글 맛있는 구운란 맥반석계란 대란, 30구, 1개" [ref=f246e1454]
+                  - generic [ref=f246e1455]:
+                    - generic [ref=f246e1458]:
+                      - text: HACCP인증
+                      - mark [ref=f246e1459]: 맥반석
+                      - mark [ref=f246e1460]: 구운계란
+                      - text: 탱글탱글 맛있는 구운란
+                      - mark [ref=f246e1461]: 맥반석
+                      - text: 계란 대란,
+                      - mark [ref=f246e1462]: 30구
+                      - text: ", 1개"
+                    - generic [ref=f246e1463]:
+                      - deletion [ref=f246e1465]: 14,360원
+                      - generic [ref=f246e1467]:
+                        - generic [ref=f246e1468]: 20%
+                        - generic [ref=f246e1469]: 11,370원
+                        - generic [ref=f246e1470]: (1구당 379원)
+                    - generic [ref=f246e1471]:
+                      - generic [ref=f246e1472]: 9/17(목) 도착 예정
+                      - generic [ref=f246e1474]: 무료배송
+                    - generic [ref=f246e1476]:
+                      - generic "4.5" [ref=f246e1477]
+                      - generic [ref=f246e1483]: (11)
+                    - generic [ref=f246e1486]:
+                      - img "최대 569원 적립" [ref=f246e1487]
+                      - generic [ref=f246e1488]: 최대 569원 적립
+              - listitem [ref=f246e1489] [cursor=pointer]:
+                - link "[참나무촌] HACCP인증 무염훈제란 60구, 30구, 2개 32,000원 4% 30,500원 (1구당 508원) 9/15(화) 도착 예정 무료배송 ∙ 오늘출발 4.5 (5,140) 최대 1,525원 적립 최대 1,525원 적립" [ref=f246e1490]:
+                  - /url: /vp/products/6204237529?itemId=585322717&vendorItemId=4531942479&q=맥반석 구운계란 30구&searchId=0d58ffdb11411331&sourceType=search&itemsCount=36&searchRank=19&rank=19
+                  - figure [ref=f246e1491]:
+                    - img "[참나무촌] HACCP인증 무염훈제란 60구, 30구, 2개" [ref=f246e1492]
+                  - generic [ref=f246e1493]:
+                    - generic [ref=f246e1495]: "[참나무촌] HACCP인증 무염훈제란 60구, 30구, 2개"
+                    - generic [ref=f246e1496]:
+                      - deletion [ref=f246e1498]: 32,000원
+                      - generic [ref=f246e1500]:
+                        - generic [ref=f246e1501]: 4%
+                        - generic [ref=f246e1502]: 30,500원
+                        - generic [ref=f246e1503]: (1구당 508원)
+                    - generic [ref=f246e1504]:
+                      - generic [ref=f246e1505]: 9/15(화) 도착 예정
+                      - generic [ref=f246e1507]: 무료배송 ∙ 오늘출발
+                    - generic [ref=f246e1509]:
+                      - generic "4.5" [ref=f246e1510]
+                      - generic [ref=f246e1516]: (5,140)
+                    - generic [ref=f246e1519]:
+                      - img "최대 1,525원 적립" [ref=f246e1520]
+                      - generic [ref=f246e1521]: 최대 1,525원 적립
+              - listitem [ref=f246e1522] [cursor=pointer]:
+                - link "미림이네 구운계란 맥반석 해썹인증 훈제 대란, 1개, 30구 할인 21,900원 48% 11,350원 (1구당 378원) 9/15(화) 도착 예정 무료배송 ∙ 오늘출발 4.5 (232) 최대 561원 적립 최대 561원 적립" [ref=f246e1523]:
+                  - /url: /vp/products/9591780838?itemId=28633052115&vendorItemId=95576052297&q=맥반석 구운계란 30구&searchId=0d58ffdb11411331&sourceType=search&itemsCount=36&searchRank=20&rank=20
+                  - figure [ref=f246e1524]:
+                    - img "미림이네 구운계란 맥반석 해썹인증 훈제 대란, 1개, 30구" [ref=f246e1525]
+                  - generic [ref=f246e1526]:
+                    - generic [ref=f246e1529]:
+                      - text: 미림이네
+                      - mark [ref=f246e1530]: 구운계란
+                      - mark [ref=f246e1531]: 맥반석
+                      - text: 해썹인증 훈제 대란, 1개,
+                      - mark [ref=f246e1532]: 30구
+                    - generic [ref=f246e1533]:
+                      - generic [ref=f246e1534]:
+                        - generic [ref=f246e1535]: 할인
+                        - deletion [ref=f246e1536]: 21,900원
+                      - generic [ref=f246e1538]:
+                        - generic [ref=f246e1539]: 48%
+                        - generic [ref=f246e1544]: 11,350원
+                        - generic [ref=f246e1545]: (1구당 378원)
+                    - generic [ref=f246e1546]:
+                      - generic [ref=f246e1547]: 9/15(화) 도착 예정
+                      - generic [ref=f246e1549]: 무료배송 ∙ 오늘출발
+                    - generic [ref=f246e1551]:
+                      - generic "4.5" [ref=f246e1552]
+                      - generic [ref=f246e1558]: (232)
+                    - generic [ref=f246e1561]:
+                      - img "최대 561원 적립" [ref=f246e1562]
+                      - generic [ref=f246e1563]: 최대 561원 적립
+              - listitem [ref=f246e1564] [cursor=pointer]:
+                - link "[파손보상] HACCP인증 무염 구운란 대란 30구, 1세트 할인 · 17:31:52 12,900원 5% 12,200원 (1구당 407원) 9/15(화) 도착 예정 무료배송 ∙ 오늘출발 4.5 (3,256) 최대 610원 적립 최대 610원 적립 광고 Ad information" [ref=f246e1565]:
+                  - /url: /vp/products/8647553094?itemId=28730317993&vendorItemId=91966676466&sourceType=srp_product_ads&clickEventId=28924ed0-adbc-11f1-91b7-40e0cd3cce47&korePlacement=15&koreSubPlacement=22&clickEventId=28924ed0-adbc-11f1-91b7-40e0cd3cce47&korePlacement=15&koreSubPlacement=22
+                  - figure [ref=f246e1566]:
+                    - img "[파손보상] HACCP인증 무염 구운란 대란 30구, 1세트" [ref=f246e1567]
+                  - generic [ref=f246e1568]:
+                    - generic [ref=f246e1570]: "[파손보상] HACCP인증 무염 구운란 대란 30구, 1세트"
+                    - generic [ref=f246e1571]:
+                      - generic [ref=f246e1572]:
+                        - generic [ref=f246e1573]: 할인
+                        - generic [ref=f246e1574]: · 17:31:52
+                        - deletion [ref=f246e1575]: 12,900원
+                      - generic [ref=f246e1577]:
+                        - generic [ref=f246e1578]: 5%
+                        - generic [ref=f246e1583]: 12,200원
+                        - generic [ref=f246e1584]: (1구당 407원)
+                    - generic [ref=f246e1585]:
+                      - generic [ref=f246e1586]: 9/15(화) 도착 예정
+                      - generic [ref=f246e1588]: 무료배송 ∙ 오늘출발
+                    - generic [ref=f246e1590]:
+                      - generic "4.5" [ref=f246e1591]
+                      - generic [ref=f246e1597]: (3,256)
+                    - generic [ref=f246e1600]:
+                      - img "최대 610원 적립" [ref=f246e1601]
+                      - generic [ref=f246e1602]: 최대 610원 적립
+                    - generic [ref=f246e1604]:
+                      - generic [ref=f246e1605]: 광고
+                      - button "Ad information" [ref=f246e1606]
+              - listitem [ref=f246e1609] [cursor=pointer]:
+                - link "[더싱싱] HACCP 구운계란 구운란 대란, 60구, 1개 할인 30,000원 26% 21,910원 (1구당 365원) 9/17(목) 도착 예정 무료배송 4.5 (2,469) 최대 1,085원 적립 최대 1,085원 적립 광고 Ad information" [ref=f246e1610]:
+                  - /url: /vp/products/7517977262?itemId=19712390109&vendorItemId=85656288303&sourceType=srp_product_ads&clickEventId=28924ed0-adbc-11f1-93f1-6cfbe41ad72c&korePlacement=15&koreSubPlacement=24&clickEventId=28924ed0-adbc-11f1-93f1-6cfbe41ad72c&korePlacement=15&koreSubPlacement=24
+                  - figure [ref=f246e1611]:
+                    - img "[더싱싱] HACCP 구운계란 구운란 대란, 60구, 1개" [ref=f246e1612]
+                  - generic [ref=f246e1613]:
+                    - generic [ref=f246e1615]: "[더싱싱] HACCP 구운계란 구운란 대란, 60구, 1개"
+                    - generic [ref=f246e1616]:
+                      - generic [ref=f246e1617]:
+                        - generic [ref=f246e1618]: 할인
+                        - deletion [ref=f246e1619]: 30,000원
+                      - generic [ref=f246e1621]:
+                        - generic [ref=f246e1622]: 26%
+                        - generic [ref=f246e1627]: 21,910원
+                        - generic [ref=f246e1628]: (1구당 365원)
+                    - generic [ref=f246e1629]:
+                      - generic [ref=f246e1630]: 9/17(목) 도착 예정
+                      - generic [ref=f246e1632]: 무료배송
+                    - generic [ref=f246e1634]:
+                      - generic "4.5" [ref=f246e1635]
+                      - generic [ref=f246e1641]: (2,469)
+                    - generic [ref=f246e1644]:
+                      - img "최대 1,085원 적립" [ref=f246e1645]
+                      - generic [ref=f246e1646]: 최대 1,085원 적립
+                    - generic [ref=f246e1648]:
+                      - generic [ref=f246e1649]: 광고
+                      - button "Ad information" [ref=f246e1650]
+              - listitem [ref=f246e1653] [cursor=pointer]:
+                - link "품질보증 구운계란 맥반석 훈제란 대란 우리농부, 1개, 30구 13,900원 14% 11,900원 (1구당 397원) 9/15(화) 도착 예정 무료배송 ∙ 오늘출발 4 (5) 최대 595원 적립 최대 595원 적립" [ref=f246e1654]:
+                  - /url: /vp/products/9705760805?itemId=29036678522&vendorItemId=95964012556&q=맥반석 구운계란 30구&searchId=0d58ffdb11411331&sourceType=search&itemsCount=36&searchRank=23&rank=23
+                  - figure [ref=f246e1655]:
+                    - img "품질보증 구운계란 맥반석 훈제란 대란 우리농부, 1개, 30구" [ref=f246e1656]
+                  - generic [ref=f246e1657]:
+                    - generic [ref=f246e1660]:
+                      - text: 품질보증
+                      - mark [ref=f246e1661]: 구운계란
+                      - mark [ref=f246e1662]: 맥반석
+                      - text: 훈제란 대란 우리농부, 1개,
+                      - mark [ref=f246e1663]: 30구
+                    - generic [ref=f246e1664]:
+                      - deletion [ref=f246e1666]: 13,900원
+                      - generic [ref=f246e1668]:
+                        - generic [ref=f246e1669]: 14%
+                        - generic [ref=f246e1670]: 11,900원
+                        - generic [ref=f246e1671]: (1구당 397원)
+                    - generic [ref=f246e1672]:
+                      - generic [ref=f246e1673]: 9/15(화) 도착 예정
+                      - generic [ref=f246e1675]: 무료배송 ∙ 오늘출발
+                    - generic [ref=f246e1677]:
+                      - generic "4" [ref=f246e1678]
+                      - generic [ref=f246e1684]: (5)
+                    - generic [ref=f246e1687]:
+                      - img "최대 595원 적립" [ref=f246e1688]
+                      - generic [ref=f246e1689]: 최대 595원 적립
+              - listitem [ref=f246e1690] [cursor=pointer]:
+                - link "계란의정원 킹단백 구운계란 대란 무항생제 햅썹인증, 60구, 1개 할인 53,900원 57% 22,900원 (1구당 382원) 9/15(화) 도착 예정 무료배송 ∙ 오늘출발 4.5 (6,690) 최대 1,145원 적립 최대 1,145원 적립" [ref=f246e1691]:
+                  - /url: /vp/products/7867931216?itemId=21485830230&vendorItemId=88539928127&q=맥반석 구운계란 30구&searchId=0d58ffdb11411331&sourceType=search&itemsCount=36&searchRank=24&rank=24
+                  - figure [ref=f246e1692]:
+                    - img "계란의정원 킹단백 구운계란 대란 무항생제 햅썹인증, 60구, 1개" [ref=f246e1693]
+                  - generic [ref=f246e1694]:
+                    - generic [ref=f246e1696]: 계란의정원 킹단백 구운계란 대란 무항생제 햅썹인증, 60구, 1개
+                    - generic [ref=f246e1697]:
+                      - generic [ref=f246e1698]:
+                        - generic [ref=f246e1699]: 할인
+                        - deletion [ref=f246e1700]: 53,900원
+                      - generic [ref=f246e1702]:
+                        - generic [ref=f246e1703]: 57%
+                        - generic [ref=f246e1708]: 22,900원
+                        - generic [ref=f246e1709]: (1구당 382원)
+                    - generic [ref=f246e1710]:
+                      - generic [ref=f246e1711]: 9/15(화) 도착 예정
+                      - generic [ref=f246e1713]: 무료배송 ∙ 오늘출발
+                    - generic [ref=f246e1715]:
+                      - generic "4.5" [ref=f246e1716]
+                      - generic [ref=f246e1722]: (6,690)
+                    - generic [ref=f246e1725]:
+                      - img "최대 1,145원 적립" [ref=f246e1726]
+                      - generic [ref=f246e1727]: 최대 1,145원 적립
+              - listitem [ref=f246e1728] [cursor=pointer]:
+                - link "큼직한 대란 맥반석 구운계란 30구 60구 90구 훈제달걀 구운달걀 (1판/2판/3판), 2개 29,500원 18% 23,900원 (1구당 398원) 9/15(화) 도착 예정 무료배송 ∙ 오늘출발 4.5 (129) 최대 1,195원 적립 최대 1,195원 적립" [ref=f246e1729]:
+                  - /url: /vp/products/9621152461?itemId=28730458541&vendorItemId=94677659634&q=맥반석 구운계란 30구&searchId=0d58ffdb11411331&sourceType=search&itemsCount=36&searchRank=25&rank=25
+                  - figure [ref=f246e1730]:
+                    - img "큼직한 대란 맥반석 구운계란 30구 60구 90구 훈제달걀 구운달걀 (1판/2판/3판), 2개" [ref=f246e1731]
+                  - generic [ref=f246e1732]:
+                    - generic [ref=f246e1735]:
+                      - text: 큼직한 대란
+                      - mark [ref=f246e1736]: 맥반석
+                      - mark [ref=f246e1737]: 구운계란
+                      - mark [ref=f246e1738]: 30구
+                      - text: 60구 90구 훈제달걀 구운달걀 (1판/2판/3판), 2개
+                    - generic [ref=f246e1739]:
+                      - deletion [ref=f246e1741]: 29,500원
+                      - generic [ref=f246e1743]:
+                        - generic [ref=f246e1744]: 18%
+                        - generic [ref=f246e1745]: 23,900원
+                        - generic [ref=f246e1746]: (1구당 398원)
+                    - generic [ref=f246e1747]:
+                      - generic [ref=f246e1748]: 9/15(화) 도착 예정
+                      - generic [ref=f246e1750]: 무료배송 ∙ 오늘출발
+                    - generic [ref=f246e1752]:
+                      - generic "4.5" [ref=f246e1753]
+                      - generic [ref=f246e1759]: (129)
+                    - generic [ref=f246e1762]:
+                      - img "최대 1,195원 적립" [ref=f246e1763]
+                      - generic [ref=f246e1764]: 최대 1,195원 적립
+              - listitem [ref=f246e1765] [cursor=pointer]:
+                - link "국내산 쫄깃 맥반석 구운계란 찜질방 대란, 1박스, 30구 19,900원 45% 10,900원 (1구당 363원) 9/15(화) 도착 예정 무료배송 3.5 (18) 최대 545원 적립 최대 545원 적립" [ref=f246e1766]:
+                  - /url: /vp/products/9647677317?itemId=28833363121&vendorItemId=95767790796&q=맥반석 구운계란 30구&searchId=0d58ffdb11411331&sourceType=search&itemsCount=36&searchRank=26&rank=26
+                  - figure [ref=f246e1767]:
+                    - img "국내산 쫄깃 맥반석 구운계란 찜질방 대란, 1박스, 30구" [ref=f246e1768]
+                  - generic [ref=f246e1769]:
+                    - generic [ref=f246e1772]:
+                      - text: 국내산 쫄깃
+                      - mark [ref=f246e1773]: 맥반석
+                      - mark [ref=f246e1774]: 구운계란
+                      - text: 찜질방 대란, 1박스,
+                      - mark [ref=f246e1775]: 30구
+                    - generic [ref=f246e1776]:
+                      - deletion [ref=f246e1778]: 19,900원
+                      - generic [ref=f246e1780]:
+                        - generic [ref=f246e1781]: 45%
+                        - generic [ref=f246e1782]: 10,900원
+                        - generic [ref=f246e1783]: (1구당 363원)
+                    - generic [ref=f246e1784]:
+                      - generic [ref=f246e1785]: 9/15(화) 도착 예정
+                      - generic [ref=f246e1787]: 무료배송
+                    - generic [ref=f246e1789]:
+                      - generic "3.5" [ref=f246e1790]
+                      - generic [ref=f246e1796]: (18)
+                    - generic [ref=f246e1799]:
+                      - img "최대 545원 적립" [ref=f246e1800]
+                      - generic [ref=f246e1801]: 최대 545원 적립
+              - listitem [ref=f246e1802] [cursor=pointer]:
+                - link "HACCP인증. 찬란 중란 구운계란 구운란, 1개, 60구 25,300원 30% 17,500원 (1구당 292원) 9/15(화) 도착 예정 무료배송 4.5 (309) 최대 875원 적립 최대 875원 적립" [ref=f246e1803]:
+                  - /url: /vp/products/9323241544?itemId=27634586126&vendorItemId=91184579562&q=맥반석 구운계란 30구&searchId=0d58ffdb11411331&sourceType=search&itemsCount=36&searchRank=27&rank=27
+                  - figure [ref=f246e1804]:
+                    - img "HACCP인증. 찬란 중란 구운계란 구운란, 1개, 60구" [ref=f246e1805]
+                  - generic [ref=f246e1806]:
+                    - generic [ref=f246e1808]: HACCP인증. 찬란 중란 구운계란 구운란, 1개, 60구
+                    - generic [ref=f246e1809]:
+                      - deletion [ref=f246e1811]: 25,300원
+                      - generic [ref=f246e1813]:
+                        - generic [ref=f246e1814]: 30%
+                        - generic [ref=f246e1815]: 17,500원
+                        - generic [ref=f246e1816]: (1구당 292원)
+                    - generic [ref=f246e1817]:
+                      - generic [ref=f246e1818]: 9/15(화) 도착 예정
+                      - generic [ref=f246e1820]: 무료배송
+                    - generic [ref=f246e1822]:
+                      - generic "4.5" [ref=f246e1823]
+                      - generic [ref=f246e1829]: (309)
+                    - generic [ref=f246e1832]:
+                      - img "최대 875원 적립" [ref=f246e1833]
+                      - generic [ref=f246e1834]: 최대 875원 적립
+              - listitem [ref=f246e1835] [cursor=pointer]:
+                - link "큼직한 대란 맥반석 구운계란 30구 60구 90구 훈제달걀 구운달걀 (1판/2판/3판), 1개 18,900원 28% 13,500원 (1구당 450원) 9/15(화) 도착 예정 무료배송 ∙ 오늘출발 4.5 (129) 최대 675원 적립 최대 675원 적립" [ref=f246e1836]:
+                  - /url: /vp/products/9621152461?itemId=28730458539&vendorItemId=94677659637&q=맥반석 구운계란 30구&searchId=0d58ffdb11411331&sourceType=search&itemsCount=36&searchRank=28&rank=28
+                  - figure [ref=f246e1837]:
+                    - img "큼직한 대란 맥반석 구운계란 30구 60구 90구 훈제달걀 구운달걀 (1판/2판/3판), 1개" [ref=f246e1838]
+                  - generic [ref=f246e1839]:
+                    - generic [ref=f246e1842]:
+                      - text: 큼직한 대란
+                      - mark [ref=f246e1843]: 맥반석
+                      - mark [ref=f246e1844]: 구운계란
+                      - mark [ref=f246e1845]: 30구
+                      - text: 60구 90구 훈제달걀 구운달걀 (1판/2판/3판), 1개
+                    - generic [ref=f246e1846]:
+                      - deletion [ref=f246e1848]: 18,900원
+                      - generic [ref=f246e1850]:
+                        - generic [ref=f246e1851]: 28%
+                        - generic [ref=f246e1852]: 13,500원
+                        - generic [ref=f246e1853]: (1구당 450원)
+                    - generic [ref=f246e1854]:
+                      - generic [ref=f246e1855]: 9/15(화) 도착 예정
+                      - generic [ref=f246e1857]: 무료배송 ∙ 오늘출발
+                    - generic [ref=f246e1859]:
+                      - generic "4.5" [ref=f246e1860]
+                      - generic [ref=f246e1866]: (129)
+                    - generic [ref=f246e1869]:
+                      - img "최대 675원 적립" [ref=f246e1870]
+                      - generic [ref=f246e1871]: 최대 675원 적립
+              - listitem [ref=f246e1872] [cursor=pointer]:
+                - link "맥반석 구운란 국내산 구운계란 HACCP 인증 큐제드 [중란], 1박스, 30구 22,000원 37% 13,700원 (1구당 457원) 9/16(수) 도착 예정 무료배송 5 (132) 최대 685원 적립 최대 685원 적립" [ref=f246e1873]:
+                  - /url: /vp/products/9528816248?itemId=28414617834&vendorItemId=95365735330&q=맥반석 구운계란 30구&searchId=0d58ffdb11411331&sourceType=search&itemsCount=36&searchRank=29&rank=29
+                  - figure [ref=f246e1874]:
+                    - img "맥반석 구운란 국내산 구운계란 HACCP 인증 큐제드 [중란], 1박스, 30구" [ref=f246e1875]
+                  - generic [ref=f246e1876]:
+                    - generic [ref=f246e1879]:
+                      - mark [ref=f246e1880]: 맥반석
+                      - mark [ref=f246e1881]: 구운란
+                      - text: 국내산 구운계란 HACCP 인증 큐제드 [중란], 1박스,
+                      - mark [ref=f246e1882]: 30구
+                    - generic [ref=f246e1883]:
+                      - deletion [ref=f246e1885]: 22,000원
+                      - generic [ref=f246e1887]:
+                        - generic [ref=f246e1888]: 37%
+                        - generic [ref=f246e1889]: 13,700원
+                        - generic [ref=f246e1890]: (1구당 457원)
+                    - generic [ref=f246e1891]:
+                      - generic [ref=f246e1892]: 9/16(수) 도착 예정
+                      - generic [ref=f246e1894]: 무료배송
+                    - generic [ref=f246e1896]:
+                      - generic "5" [ref=f246e1897]
+                      - generic [ref=f246e1903]: (132)
+                    - generic [ref=f246e1906]:
+                      - img "최대 685원 적립" [ref=f246e1907]
+                      - generic [ref=f246e1908]: 최대 685원 적립
+              - listitem [ref=f246e1909] [cursor=pointer]:
+                - link "제이피농장 구운계란 대란 HACCP 구운란, 1개, 30구 할인 14,900원 19% 12,060원 (1구당 402원) 9/15(화) 도착 예정 무료배송 ∙ 오늘출발 4.5 (412) 최대 596원 적립 최대 596원 적립" [ref=f246e1910]:
+                  - /url: /vp/products/9620768697?itemId=28729028556&vendorItemId=95264405212&q=맥반석 구운계란 30구&searchId=0d58ffdb11411331&sourceType=search&itemsCount=36&searchRank=30&rank=30
+                  - figure [ref=f246e1911]:
+                    - img "제이피농장 구운계란 대란 HACCP 구운란, 1개, 30구" [ref=f246e1912]
+                  - generic [ref=f246e1913]:
+                    - generic [ref=f246e1915]: 제이피농장 구운계란 대란 HACCP 구운란, 1개, 30구
+                    - generic [ref=f246e1916]:
+                      - generic [ref=f246e1917]:
+                        - generic [ref=f246e1918]: 할인
+                        - deletion [ref=f246e1919]: 14,900원
+                      - generic [ref=f246e1921]:
+                        - generic [ref=f246e1922]: 19%
+                        - generic [ref=f246e1923]: 12,060원
+                        - generic [ref=f246e1924]: (1구당 402원)
+                    - generic [ref=f246e1925]:
+                      - generic [ref=f246e1926]: 9/15(화) 도착 예정
+                      - generic [ref=f246e1928]: 무료배송 ∙ 오늘출발
+                    - generic [ref=f246e1930]:
+                      - generic "4.5" [ref=f246e1931]
+                      - generic [ref=f246e1937]: (412)
+                    - generic [ref=f246e1940]:
+                      - img "최대 596원 적립" [ref=f246e1941]
+                      - generic [ref=f246e1942]: 최대 596원 적립
+              - listitem [ref=f246e1943] [cursor=pointer]:
+                - link "셰프의계란 HACCP인증 살충제불검출 구운란 파손보상, 1개, 30구 할인 31,900원 62% 11,980원 (1구당 399원) 9/15(화) 도착 예정 무료배송 ∙ 오늘출발 4.5 (167) 최대 593원 적립 최대 593원 적립" [ref=f246e1944]:
+                  - /url: /vp/products/9678872299?itemId=28941949954&vendorItemId=95872815356&q=맥반석 구운계란 30구&searchId=0d58ffdb11411331&sourceType=search&itemsCount=36&searchRank=31&rank=31
+                  - figure [ref=f246e1945]:
+                    - img "셰프의계란 HACCP인증 살충제불검출 구운란 파손보상, 1개, 30구" [ref=f246e1946]
+                  - generic [ref=f246e1947]:
+                    - generic [ref=f246e1949]: 셰프의계란 HACCP인증 살충제불검출 구운란 파손보상, 1개, 30구
+                    - generic [ref=f246e1950]:
+                      - generic [ref=f246e1951]:
+                        - generic [ref=f246e1952]: 할인
+                        - deletion [ref=f246e1953]: 31,900원
+                      - generic [ref=f246e1955]:
+                        - generic [ref=f246e1956]: 62%
+                        - generic [ref=f246e1961]: 11,980원
+                        - generic [ref=f246e1962]: (1구당 399원)
+                    - generic [ref=f246e1963]:
+                      - generic [ref=f246e1964]: 9/15(화) 도착 예정
+                      - generic [ref=f246e1966]: 무료배송 ∙ 오늘출발
+                    - generic [ref=f246e1968]:
+                      - generic "4.5" [ref=f246e1969]
+                      - generic [ref=f246e1975]: (167)
+                    - generic [ref=f246e1978]:
+                      - img "최대 593원 적립" [ref=f246e1979]
+                      - generic [ref=f246e1980]: 최대 593원 적립
+              - listitem [ref=f246e1981] [cursor=pointer]:
+                - link "햅푸드 맥반석 구운계란 대란 1판, 30구, 1개 할인 35,000원 65% 12,100원 (1구당 403원) 9/15(화) 도착 예정 무료배송 ∙ 오늘출발 4.5 (25,103) 최대 605원 적립 최대 605원 적립" [ref=f246e1982]:
+                  - /url: /vp/products/7465415871?itemId=19468229147&vendorItemId=93546404649&q=맥반석 구운계란 30구&searchId=0d58ffdb11411331&sourceType=search&itemsCount=36&searchRank=32&rank=32
+                  - figure [ref=f246e1983]:
+                    - img "햅푸드 맥반석 구운계란 대란 1판, 30구, 1개" [ref=f246e1984]
+                  - generic [ref=f246e1985]:
+                    - generic [ref=f246e1988]:
+                      - text: 햅푸드
+                      - mark [ref=f246e1989]: 맥반석
+                      - mark [ref=f246e1990]: 구운계란
+                      - text: 대란 1판,
+                      - mark [ref=f246e1991]: 30구
+                      - text: ", 1개"
+                    - generic [ref=f246e1992]:
+                      - generic [ref=f246e1993]:
+                        - generic [ref=f246e1994]: 할인
+                        - deletion [ref=f246e1995]: 35,000원
+                      - generic [ref=f246e1997]:
+                        - generic [ref=f246e1998]: 65%
+                        - generic [ref=f246e1999]: 12,100원
+                        - generic [ref=f246e2000]: (1구당 403원)
+                    - generic [ref=f246e2001]:
+                      - generic [ref=f246e2002]: 9/15(화) 도착 예정
+                      - generic [ref=f246e2004]: 무료배송 ∙ 오늘출발
+                    - generic [ref=f246e2006]:
+                      - generic "4.5" [ref=f246e2007]
+                      - generic [ref=f246e2013]: (25,103)
+                    - generic [ref=f246e2016]:
+                      - img "최대 605원 적립" [ref=f246e2017]
+                      - generic [ref=f246e2018]: 최대 605원 적립
+              - listitem [ref=f246e2019] [cursor=pointer]:
+                - link "어린닭이 낳아 더욱 신선한 안심 구운란 30구, 1개, 중란 (판포장) 14,900원 33% 9,900원 (1구당 330원) 9/15(화) 도착 예정 무료배송 4.5 (110) 최대 495원 적립 최대 495원 적립" [ref=f246e2020]:
+                  - /url: /vp/products/9716430171?itemId=29074676264&vendorItemId=83724613395&q=맥반석 구운계란 30구&searchId=0d58ffdb11411331&sourceType=search&itemsCount=36&searchRank=33&rank=33
+                  - figure [ref=f246e2021]:
+                    - img "어린닭이 낳아 더욱 신선한 안심 구운란 30구, 1개, 중란 (판포장)" [ref=f246e2022]
+                  - generic [ref=f246e2023]:
+                    - generic [ref=f246e2025]: 어린닭이 낳아 더욱 신선한 안심 구운란 30구, 1개, 중란 (판포장)
+                    - generic [ref=f246e2026]:
+                      - deletion [ref=f246e2028]: 14,900원
+                      - generic [ref=f246e2030]:
+                        - generic [ref=f246e2031]: 33%
+                        - generic [ref=f246e2032]: 9,900원
+                        - generic [ref=f246e2033]: (1구당 330원)
+                    - generic [ref=f246e2034]:
+                      - generic [ref=f246e2035]: 9/15(화) 도착 예정
+                      - generic [ref=f246e2037]: 무료배송
+                    - generic [ref=f246e2039]:
+                      - generic "4.5" [ref=f246e2040]
+                      - generic [ref=f246e2046]: (110)
+                    - generic [ref=f246e2049]:
+                      - img "최대 495원 적립" [ref=f246e2050]
+                      - generic [ref=f246e2051]: 최대 495원 적립
+              - listitem [ref=f246e2052] [cursor=pointer]:
+                - link "미림이네 구운계란 맥반석 훈제 단백질 중란, 2개, 30구 할인 · 18:21:52 32,000원 37% 19,900원 (1구당 332원) 9/15(화) 도착 예정 무료배송 ∙ 오늘출발 4.5 (164) 최대 985원 적립 최대 985원 적립" [ref=f246e2053]:
+                  - /url: /vp/products/9615096048?itemId=28708971228&vendorItemId=95649823868&q=맥반석 구운계란 30구&searchId=0d58ffdb11411331&sourceType=search&itemsCount=36&searchRank=34&rank=34
+                  - figure [ref=f246e2054]:
+                    - img "미림이네 구운계란 맥반석 훈제 단백질 중란, 2개, 30구" [ref=f246e2055]
+                  - generic [ref=f246e2056]:
+                    - generic [ref=f246e2059]:
+                      - text: 미림이네
+                      - mark [ref=f246e2060]: 구운계란
+                      - mark [ref=f246e2061]: 맥반석
+                      - text: 훈제 단백질 중란, 2개,
+                      - mark [ref=f246e2062]: 30구
+                    - generic [ref=f246e2063]:
+                      - generic [ref=f246e2064]:
+                        - generic [ref=f246e2065]: 할인
+                        - generic [ref=f246e2066]: · 18:21:52
+                        - deletion [ref=f246e2067]: 32,000원
+                      - generic [ref=f246e2069]:
+                        - generic [ref=f246e2070]: 37%
+                        - generic [ref=f246e2075]: 19,900원
+                        - generic [ref=f246e2076]: (1구당 332원)
+                    - generic [ref=f246e2077]:
+                      - generic [ref=f246e2078]: 9/15(화) 도착 예정
+                      - generic [ref=f246e2080]: 무료배송 ∙ 오늘출발
+                    - generic [ref=f246e2082]:
+                      - generic "4.5" [ref=f246e2083]
+                      - generic [ref=f246e2089]: (164)
+                    - generic [ref=f246e2092]:
+                      - img "최대 985원 적립" [ref=f246e2093]
+                      - generic [ref=f246e2094]: 최대 985원 적립
+              - listitem [ref=f246e2095] [cursor=pointer]:
+                - link "오복관 난각1번 초란 구운계란 유정란 무항생제, 1개, 30구 할인 33,500원 28% 23,800원 (1구당 793원) 9/15(화) 도착 예정 무료배송 ∙ 오늘출발 4.5 (14) 최대 1,190원 적립 최대 1,190원 적립 광고 Ad information" [ref=f246e2096]:
+                  - /url: /vp/products/9715343333?itemId=29070461694&vendorItemId=95996652887&sourceType=srp_product_ads&clickEventId=28924ed0-adbc-11f1-9725-a0734d0062e5&korePlacement=15&koreSubPlacement=25&clickEventId=28924ed0-adbc-11f1-9725-a0734d0062e5&korePlacement=15&koreSubPlacement=25
+                  - figure [ref=f246e2097]:
+                    - img "오복관 난각1번 초란 구운계란 유정란 무항생제, 1개, 30구" [ref=f246e2098]
+                  - generic [ref=f246e2099]:
+                    - generic [ref=f246e2101]: 오복관 난각1번 초란 구운계란 유정란 무항생제, 1개, 30구
+                    - generic [ref=f246e2102]:
+                      - generic [ref=f246e2103]:
+                        - generic [ref=f246e2104]: 할인
+                        - deletion [ref=f246e2105]: 33,500원
+                      - generic [ref=f246e2107]:
+                        - generic [ref=f246e2108]: 28%
+                        - generic [ref=f246e2113]: 23,800원
+                        - generic [ref=f246e2114]: (1구당 793원)
+                    - generic [ref=f246e2115]:
+                      - generic [ref=f246e2116]: 9/15(화) 도착 예정
+                      - generic [ref=f246e2118]: 무료배송 ∙ 오늘출발
+                    - generic [ref=f246e2120]:
+                      - generic "4.5" [ref=f246e2121]
+                      - generic [ref=f246e2127]: (14)
+                    - generic [ref=f246e2130]:
+                      - img "최대 1,190원 적립" [ref=f246e2131]
+                      - generic [ref=f246e2132]: 최대 1,190원 적립
+                    - generic [ref=f246e2134]:
+                      - generic [ref=f246e2135]: 광고
+                      - button "Ad information" [ref=f246e2136]
+            - generic [ref=f246e2140]:
+              - button "next" [ref=f246e2141] [cursor=pointer]
+              - generic [ref=f246e2144]:
+                - generic [ref=f246e2145]:
+                  - generic [ref=f246e2146]: 같이 보면 좋은 상품
+                  - generic [ref=f246e2147]: 광고
+                - generic [ref=f246e2151]:
+                  - generic [ref=f246e2153] [cursor=pointer]:
+                    - generic [ref=f246e2157]: 시골아빠 난각번호1번 안심 방사 유정란 구운계란 대란 파손보상, 1개, 30구
+                    - generic [ref=f246e2158]:
+                      - generic [ref=f246e2159]:
+                        - generic [ref=f246e2160]: 할인
+                        - generic [ref=f246e2162]: 25,000원
+                      - generic [ref=f246e2163]:
+                        - generic [ref=f246e2166]:
+                          - generic [ref=f246e2167]: 22%
+                          - generic [ref=f246e2168]: H
+                        - generic [ref=f246e2169]: 19,500원
+                    - generic [ref=f246e2171]: 무료배송
+                    - generic [ref=f246e2174]: 9/15(화) 도착 예정
+                    - generic [ref=f246e2175]:
+                      - emphasis [ref=f246e2178]
+                      - generic [ref=f246e2179]: (1,667)
+                  - generic [ref=f246e2181] [cursor=pointer]:
+                    - generic [ref=f246e2185]: 오복관 난각1번 초란 구운계란 유정란 무항생제, 1개, 30구
+                    - generic [ref=f246e2186]:
+                      - generic [ref=f246e2187]:
+                        - generic [ref=f246e2188]: 할인
+                        - generic [ref=f246e2190]: 33,500원
+                      - generic [ref=f246e2191]:
+                        - generic [ref=f246e2194]:
+                          - generic [ref=f246e2195]: 28%
+                          - generic [ref=f246e2196]: H
+                        - generic [ref=f246e2197]: 23,800원
+                    - generic [ref=f246e2199]: 무료배송
+                    - generic [ref=f246e2202]: 9/15(화) 도착 예정
+                    - generic [ref=f246e2203]:
+                      - emphasis [ref=f246e2206]
+                      - generic [ref=f246e2207]: (14)
+                  - generic [ref=f246e2209] [cursor=pointer]:
+                    - generic [ref=f246e2213]: 오복관 맥반석 구운계란 HACCP, 1개, 30구
+                    - generic [ref=f246e2214]:
+                      - generic [ref=f246e2215]:
+                        - generic [ref=f246e2216]: 할인
+                        - generic [ref=f246e2218]: 28,000원
+                      - generic [ref=f246e2219]:
+                        - generic [ref=f246e2222]:
+                          - generic [ref=f246e2223]: 28%
+                          - generic [ref=f246e2224]: H
+                        - generic [ref=f246e2225]: 19,900원
+                    - generic [ref=f246e2227]: 무료배송
+                    - generic [ref=f246e2230]: 9/15(화) 도착 예정
+                    - generic [ref=f246e2231]:
+                      - emphasis [ref=f246e2234]
+                      - generic [ref=f246e2235]: (283)
+                  - generic [ref=f246e2237] [cursor=pointer]:
+                    - generic [ref=f246e2241]: 시골아빠 파손보상 난각번호1번 안심 방사 유정란 구운계란 초란, 1개, 30구
+                    - generic [ref=f246e2242]:
+                      - generic [ref=f246e2243]: 18,900원
+                      - generic [ref=f246e2245]:
+                        - generic [ref=f246e2246]: 15%
+                        - generic [ref=f246e2248]: 15,900원
+                    - generic [ref=f246e2250]: 무료배송
+                    - generic [ref=f246e2253]: 9/15(화) 도착 예정
+                    - generic [ref=f246e2254]:
+                      - emphasis [ref=f246e2257]
+                      - generic [ref=f246e2258]: (193)
+                  - generic [ref=f246e2260] [cursor=pointer]:
+                    - generic [ref=f246e2264]: 수미애 파손보상 맥반석 무항생제 훈제 구운계란 대란 1개, 30구
+                    - generic [ref=f246e2265]:
+                      - generic [ref=f246e2266]: 37,900원
+                      - generic [ref=f246e2268]:
+                        - generic [ref=f246e2269]: 58%
+                        - generic [ref=f246e2271]: 15,900원
+                    - generic [ref=f246e2273]: 무료배송
+                    - generic [ref=f246e2276]: 9/15(화) 도착 예정
+                    - generic [ref=f246e2277]:
+                      - emphasis [ref=f246e2280]
+                      - generic [ref=f246e2281]: (375)
+                  - generic [ref=f246e2283] [cursor=pointer]:
+                    - generic [ref=f246e2287]: "[에그조아] 구운란 30구 하루한알 건강챙기기 중란 단백질 간식 파손보상 안전배송, 1세트"
+                    - generic [ref=f246e2288]:
+                      - generic [ref=f246e2289]: 18,900원
+                      - generic [ref=f246e2291]:
+                        - generic [ref=f246e2292]: 37%
+                        - generic [ref=f246e2294]: 11,900원
+                    - generic [ref=f246e2296]: 무료배송
+                    - generic [ref=f246e2299]: 9/15(화) 도착 예정
+                    - generic [ref=f246e2300]:
+                      - emphasis [ref=f246e2303]
+                      - generic [ref=f246e2304]: (230)
+                  - generic [ref=f246e2306] [cursor=pointer]:
+                    - generic [ref=f246e2310]: 오복관 난각1번 구운계란 유정란 무항생제 자연방사 저온숙성, 1개, 30구
+                    - generic [ref=f246e2311]:
+                      - generic [ref=f246e2312]:
+                        - generic [ref=f246e2313]: 할인
+                        - generic [ref=f246e2315]: 38,000원
+                      - generic [ref=f246e2316]:
+                        - generic [ref=f246e2317]: 35%
+                        - generic [ref=f246e2319]: 24,640원
+                    - generic [ref=f246e2321]: 무료배송
+                    - generic [ref=f246e2324]: 9/15(화) 도착 예정
+                    - generic [ref=f246e2325]:
+                      - emphasis [ref=f246e2328]
+                      - generic [ref=f246e2329]: (284)
+                  - generic [ref=f246e2331] [cursor=pointer]:
+                    - generic [ref=f246e2335]: 굽계 스모크온 훈제 촉촉한 구운란 햅썹인증 간식, 1개, 30구
+                    - generic [ref=f246e2336]:
+                      - generic [ref=f246e2337]: 18,000원
+                      - generic [ref=f246e2339]:
+                        - generic [ref=f246e2340]: 26%
+                        - generic [ref=f246e2342]: 13,300원
+                    - generic [ref=f246e2344]: 무료배송
+                    - generic [ref=f246e2347]: 9/15(화) 도착 예정
+                    - generic [ref=f246e2348]:
+                      - emphasis [ref=f246e2351]
+                      - generic [ref=f246e2352]: (105)
+            - generic [ref=f246e2355]:
+              - generic "이전" [ref=f246e2356]
+              - link "1" [ref=f246e2357] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/search?q=%EB%A7%A5%EB%B0%98%EC%84%9D+%EA%B5%AC%EC%9A%B4%EA%B3%84%EB%9E%80+30%EA%B5%AC&page=1
+              - link "2" [ref=f246e2358] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/search?q=%EB%A7%A5%EB%B0%98%EC%84%9D+%EA%B5%AC%EC%9A%B4%EA%B3%84%EB%9E%80+30%EA%B5%AC&page=2
+              - link "3" [ref=f246e2359] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/search?q=%EB%A7%A5%EB%B0%98%EC%84%9D+%EA%B5%AC%EC%9A%B4%EA%B3%84%EB%9E%80+30%EA%B5%AC&page=3
+              - link "4" [ref=f246e2360] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/search?q=%EB%A7%A5%EB%B0%98%EC%84%9D+%EA%B5%AC%EC%9A%B4%EA%B3%84%EB%9E%80+30%EA%B5%AC&page=4
+              - link "5" [ref=f246e2361] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/search?q=%EB%A7%A5%EB%B0%98%EC%84%9D+%EA%B5%AC%EC%9A%B4%EA%B3%84%EB%9E%80+30%EA%B5%AC&page=5
+              - link "6" [ref=f246e2362] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/search?q=%EB%A7%A5%EB%B0%98%EC%84%9D+%EA%B5%AC%EC%9A%B4%EA%B3%84%EB%9E%80+30%EA%B5%AC&page=6
+              - link "7" [ref=f246e2363] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/search?q=%EB%A7%A5%EB%B0%98%EC%84%9D+%EA%B5%AC%EC%9A%B4%EA%B3%84%EB%9E%80+30%EA%B5%AC&page=7
+              - link "8" [ref=f246e2364] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/search?q=%EB%A7%A5%EB%B0%98%EC%84%9D+%EA%B5%AC%EC%9A%B4%EA%B3%84%EB%9E%80+30%EA%B5%AC&page=8
+              - link "9" [ref=f246e2365] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/search?q=%EB%A7%A5%EB%B0%98%EC%84%9D+%EA%B5%AC%EC%9A%B4%EA%B3%84%EB%9E%80+30%EA%B5%AC&page=9
+              - link "10" [ref=f246e2366] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/search?q=%EB%A7%A5%EB%B0%98%EC%84%9D+%EA%B5%AC%EC%9A%B4%EA%B3%84%EB%9E%80+30%EA%B5%AC&page=10
+              - link "다음" [ref=f246e2367] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/search?q=%EB%A7%A5%EB%B0%98%EC%84%9D+%EA%B5%AC%EC%9A%B4%EA%B3%84%EB%9E%80+30%EA%B5%AC&page=2
+      - generic [ref=f246e2369]:
+        - heading "이 상품을 검색한 다른 분들이 함께 본 상품" [level=2] [ref=f246e2370]
+        - generic [ref=f246e2372]:
+          - list [ref=f246e2374]:
+            - listitem [ref=f246e2375]:
+              - link "가농 1+ 등급란으로 만든 비타민 구운란 30구, 1개 가농 1+ 등급란으로 만든 비타민 구운란 30구, 1개 16,930원 (1구당 564원) 4.5 (42,695)" [ref=f246e2376] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/4947691572?vendorItemId=73824958701&sourceType=srp_also_viewed_item&rmdId=c46868f563ae4a9a9a61eabfc4d48bd3&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_B&rmdValue=p8898379855:vt-1.0.0:p4947691572
+                - img "가농 1+ 등급란으로 만든 비타민 구운란 30구, 1개"
+                - generic [ref=f246e2378]: 가농 1+ 등급란으로 만든 비타민 구운란 30구, 1개
+                - generic [ref=f246e2379]:
+                  - strong [ref=f246e2381]: 16,930원
+                  - generic [ref=f246e2382]: (1구당 564원)
+                - generic [ref=f246e2386]:
+                  - generic "4.5" [ref=f246e2387]
+                  - generic [ref=f246e2393]: (42,695)
+            - listitem [ref=f246e2395]:
+              - link "햅푸드 맥반석 구운계란 대란 1판, 30구, 1개 햅푸드 맥반석 구운계란 대란 1판, 30구, 1개 12,100원 (1구당 403원) 4.5 (25,103)" [ref=f246e2396] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/7465415871?vendorItemId=93546404649&sourceType=srp_also_viewed_item&rmdId=c46868f563ae4a9a9a61eabfc4d48bd3&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_B&rmdValue=p8898379855:vt-1.0.0:p7465415871
+                - img "햅푸드 맥반석 구운계란 대란 1판, 30구, 1개"
+                - generic [ref=f246e2398]: 햅푸드 맥반석 구운계란 대란 1판, 30구, 1개
+                - generic [ref=f246e2399]:
+                  - strong [ref=f246e2401]: 12,100원
+                  - generic [ref=f246e2402]: (1구당 403원)
+                - generic [ref=f246e2405]:
+                  - generic "4.5" [ref=f246e2406]
+                  - generic [ref=f246e2412]: (25,103)
+            - listitem [ref=f246e2414]:
+              - link "맛꾼 파손보상 촉촉쫄깃 구운계란 대란 훈제란, 1개, 01. 촉촉쫄깃 구운란 30알, 30구 맛꾼 파손보상 촉촉쫄깃 구운계란 대란 훈제란, 1개, 01. 촉촉쫄깃 구운란 30알, 30구 13,200원 (1구당 440원) 4.5 (21,744)" [ref=f246e2415] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/7322032372?vendorItemId=3341364706&sourceType=srp_also_viewed_item&rmdId=c46868f563ae4a9a9a61eabfc4d48bd3&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_B&rmdValue=p8898379855:vt-1.0.0:p7322032372
+                - img "맛꾼 파손보상 촉촉쫄깃 구운계란 대란 훈제란, 1개, 01. 촉촉쫄깃 구운란 30알, 30구"
+                - generic [ref=f246e2417]: 맛꾼 파손보상 촉촉쫄깃 구운계란 대란 훈제란, 1개, 01. 촉촉쫄깃 구운란 30알, 30구
+                - generic [ref=f246e2418]:
+                  - strong [ref=f246e2420]: 13,200원
+                  - generic [ref=f246e2421]: (1구당 440원)
+                - generic [ref=f246e2424]:
+                  - generic "4.5" [ref=f246e2425]
+                  - generic [ref=f246e2431]: (21,744)
+            - listitem [ref=f246e2433]:
+              - link "[파손보상] HACCP인증 무염 구운란 대란 30구, 1세트 [파손보상] HACCP인증 무염 구운란 대란 30구, 1세트 12,200원 (1구당 407원) 4.5 (3,256)" [ref=f246e2434] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/8647553094?vendorItemId=91966676466&sourceType=srp_also_viewed_item&rmdId=c46868f563ae4a9a9a61eabfc4d48bd3&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_B&rmdValue=p8898379855:vt-1.0.0:p8647553094
+                - img "[파손보상] HACCP인증 무염 구운란 대란 30구, 1세트"
+                - generic [ref=f246e2436]: "[파손보상] HACCP인증 무염 구운란 대란 30구, 1세트"
+                - generic [ref=f246e2437]:
+                  - strong [ref=f246e2439]: 12,200원
+                  - generic [ref=f246e2440]: (1구당 407원)
+                - generic [ref=f246e2443]:
+                  - generic "4.5" [ref=f246e2444]
+                  - generic [ref=f246e2450]: (3,256)
+            - listitem [ref=f246e2452]:
+              - link "계란의정원 킹단백 구운계란 대란 무항생제 햅썹인증, 30구, 1개 계란의정원 킹단백 구운계란 대란 무항생제 햅썹인증, 30구, 1개 12,900원 (1구당 430원) 4.5 (6,690)" [ref=f246e2453] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/7867931216?vendorItemId=88539928112&sourceType=srp_also_viewed_item&rmdId=c46868f563ae4a9a9a61eabfc4d48bd3&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_B&rmdValue=p8898379855:vt-1.0.0:p7867931216
+                - img "계란의정원 킹단백 구운계란 대란 무항생제 햅썹인증, 30구, 1개"
+                - generic [ref=f246e2455]: 계란의정원 킹단백 구운계란 대란 무항생제 햅썹인증, 30구, 1개
+                - generic [ref=f246e2456]:
+                  - strong [ref=f246e2458]: 12,900원
+                  - generic [ref=f246e2459]: (1구당 430원)
+                - generic [ref=f246e2462]:
+                  - generic "4.5" [ref=f246e2463]
+                  - generic [ref=f246e2469]: (6,690)
+            - listitem [ref=f246e2471]:
+              - link "시골아빠 난각번호1번 안심 방사 유정란 구운계란 대란 파손보상, 1개, 30구 시골아빠 난각번호1번 안심 방사 유정란 구운계란 대란 파손보상, 1개, 30구 19,500원 (1구당 650원) 4.5 (1,667)" [ref=f246e2472] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/9179098402?vendorItemId=94416593190&sourceType=srp_also_viewed_item&rmdId=c46868f563ae4a9a9a61eabfc4d48bd3&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_B&rmdValue=p8898379855:vt-1.0.0:p9179098402
+                - img "시골아빠 난각번호1번 안심 방사 유정란 구운계란 대란 파손보상, 1개, 30구"
+                - generic [ref=f246e2474]: 시골아빠 난각번호1번 안심 방사 유정란 구운계란 대란 파손보상, 1개, 30구
+                - generic [ref=f246e2475]:
+                  - strong [ref=f246e2477]: 19,500원
+                  - generic [ref=f246e2478]: (1구당 650원)
+                - generic [ref=f246e2481]:
+                  - generic "4.5" [ref=f246e2482]
+                  - generic [ref=f246e2488]: (1,667)
+            - listitem [ref=f246e2490]:
+              - link "계란의정원 킹단백 파손보장 구운계란 중란, 60구, 1개 계란의정원 킹단백 파손보장 구운계란 중란, 60구, 1개 17,510원 (1구당 292원) 4.5 (3,455)" [ref=f246e2491] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/8214826370?vendorItemId=90896476066&sourceType=srp_also_viewed_item&rmdId=c46868f563ae4a9a9a61eabfc4d48bd3&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_B&rmdValue=p8898379855:vt-1.0.0:p8214826370
+                - img "계란의정원 킹단백 파손보장 구운계란 중란, 60구, 1개"
+                - generic [ref=f246e2493]: 계란의정원 킹단백 파손보장 구운계란 중란, 60구, 1개
+                - generic [ref=f246e2494]:
+                  - strong [ref=f246e2496]: 17,510원
+                  - generic [ref=f246e2497]: (1구당 292원)
+                - generic [ref=f246e2500]:
+                  - generic "4.5" [ref=f246e2501]
+                  - generic [ref=f246e2507]: (3,455)
+            - listitem [ref=f246e2509]:
+              - link "제이피농장 구운계란 대란 HACCP 구운란, 1개, 30구 제이피농장 구운계란 대란 HACCP 구운란, 1개, 30구 12,060원 (1구당 402원) 4.5 (412)" [ref=f246e2510] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/9620768697?vendorItemId=95264405212&sourceType=srp_also_viewed_item&rmdId=c46868f563ae4a9a9a61eabfc4d48bd3&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_B&rmdValue=p8898379855:vt-1.0.0:p9620768697
+                - img "제이피농장 구운계란 대란 HACCP 구운란, 1개, 30구"
+                - generic [ref=f246e2512]: 제이피농장 구운계란 대란 HACCP 구운란, 1개, 30구
+                - generic [ref=f246e2513]:
+                  - strong [ref=f246e2515]: 12,060원
+                  - generic [ref=f246e2516]: (1구당 402원)
+                - generic [ref=f246e2519]:
+                  - generic "4.5" [ref=f246e2520]
+                  - generic [ref=f246e2526]: (412)
+            - listitem [ref=f246e2528]:
+              - link "구운계란 구운란 대란 단백질 간식 훈제란, 1개, 30구 구운계란 구운란 대란 단백질 간식 훈제란, 1개, 30구 12,700원 (1구당 423원) 4.5 (1,583)" [ref=f246e2529] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/9447646272?vendorItemId=95059880476&sourceType=srp_also_viewed_item&rmdId=c46868f563ae4a9a9a61eabfc4d48bd3&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_B&rmdValue=p8898379855:vt-1.0.0:p9447646272
+                - img "구운계란 구운란 대란 단백질 간식 훈제란, 1개, 30구"
+                - generic [ref=f246e2531]: 구운계란 구운란 대란 단백질 간식 훈제란, 1개, 30구
+                - generic [ref=f246e2532]:
+                  - strong [ref=f246e2534]: 12,700원
+                  - generic [ref=f246e2535]: (1구당 423원)
+                - generic [ref=f246e2538]:
+                  - generic "4.5" [ref=f246e2539]
+                  - generic [ref=f246e2545]: (1,583)
+            - listitem [ref=f246e2547]:
+              - link "가농 1+등급란으로 만든 오메가 구운란, 20구, 1개 가농 1+등급란으로 만든 오메가 구운란, 20구, 1개 12,900원 (1구당 645원) 5 (76,201)" [ref=f246e2548] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/1445352046?vendorItemId=70483793573&sourceType=srp_also_viewed_item&rmdId=c46868f563ae4a9a9a61eabfc4d48bd3&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_B&rmdValue=p8898379855:vt-1.0.0:p1445352046
+                - img "가농 1+등급란으로 만든 오메가 구운란, 20구, 1개"
+                - generic [ref=f246e2550]: 가농 1+등급란으로 만든 오메가 구운란, 20구, 1개
+                - generic [ref=f246e2551]:
+                  - strong [ref=f246e2553]: 12,900원
+                  - generic [ref=f246e2554]: (1구당 645원)
+                - generic [ref=f246e2558]:
+                  - generic "5" [ref=f246e2559]
+                  - generic [ref=f246e2565]: (76,201)
+            - listitem [ref=f246e2567]:
+              - link "맥반석 구운란 국내산 구운계란 HACCP 인증 큐제드 [중란], 1박스, 30구 맥반석 구운란 국내산 구운계란 HACCP 인증 큐제드 [중란], 1박스, 30구 13,700원 (1구당 457원) 5 (132)" [ref=f246e2568] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/9528816248?vendorItemId=95365735330&sourceType=srp_also_viewed_item&rmdId=c46868f563ae4a9a9a61eabfc4d48bd3&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_B&rmdValue=p8898379855:vt-1.0.0:p9528816248
+                - img "맥반석 구운란 국내산 구운계란 HACCP 인증 큐제드 [중란], 1박스, 30구"
+                - generic [ref=f246e2570]: 맥반석 구운란 국내산 구운계란 HACCP 인증 큐제드 [중란], 1박스, 30구
+                - generic [ref=f246e2571]:
+                  - strong [ref=f246e2573]: 13,700원
+                  - generic [ref=f246e2574]: (1구당 457원)
+                - generic [ref=f246e2577]:
+                  - generic "5" [ref=f246e2578]
+                  - generic [ref=f246e2584]: (132)
+            - listitem [ref=f246e2586]:
+              - link "곰곰 맥반석 구운란, 15구, 1개 곰곰 맥반석 구운란, 15구, 1개 8,970원 (1구당 598원) 4.5 (161,323)" [ref=f246e2587] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/1354181605?vendorItemId=80340874439&sourceType=srp_also_viewed_item&rmdId=c46868f563ae4a9a9a61eabfc4d48bd3&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_B&rmdValue=p8898379855:vt-1.0.0:p1354181605
+                - img "곰곰 맥반석 구운란, 15구, 1개"
+                - generic [ref=f246e2589]: 곰곰 맥반석 구운란, 15구, 1개
+                - generic [ref=f246e2590]:
+                  - strong [ref=f246e2592]: 8,970원
+                  - generic [ref=f246e2593]: (1구당 598원)
+                - generic [ref=f246e2597]:
+                  - generic "4.5" [ref=f246e2598]
+                  - generic [ref=f246e2604]: (161,323)
+            - listitem [ref=f246e2606]:
+              - link "본연채 쫀득한 맥반석 구운계란 30구, 대란, 1개 본연채 쫀득한 맥반석 구운계란 30구, 대란, 1개 13,920원 (1구당 464원) 4.5 (246)" [ref=f246e2607] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/9521378347?vendorItemId=95336037251&sourceType=srp_also_viewed_item&rmdId=c46868f563ae4a9a9a61eabfc4d48bd3&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_B&rmdValue=p8898379855:vt-1.0.0:p9521378347
+                - img "본연채 쫀득한 맥반석 구운계란 30구, 대란, 1개"
+                - generic [ref=f246e2609]: 본연채 쫀득한 맥반석 구운계란 30구, 대란, 1개
+                - generic [ref=f246e2610]:
+                  - strong [ref=f246e2612]: 13,920원
+                  - generic [ref=f246e2613]: (1구당 464원)
+                - generic [ref=f246e2616]:
+                  - generic "4.5" [ref=f246e2617]
+                  - generic [ref=f246e2623]: (246)
+            - listitem [ref=f246e2625]:
+              - link "동물복지 새하얀 유정 구운란 15구, 1개 동물복지 새하얀 유정 구운란 15구, 1개 9,990원 (1구당 666원) 5 (3,280)" [ref=f246e2626] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/7039080765?vendorItemId=84570977059&sourceType=srp_also_viewed_item&rmdId=c46868f563ae4a9a9a61eabfc4d48bd3&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_B&rmdValue=p8898379855:vt-1.0.0:p7039080765
+                - img "동물복지 새하얀 유정 구운란 15구, 1개"
+                - generic [ref=f246e2628]: 동물복지 새하얀 유정 구운란 15구, 1개
+                - generic [ref=f246e2629]:
+                  - strong [ref=f246e2631]: 9,990원
+                  - generic [ref=f246e2632]: (1구당 666원)
+                - generic [ref=f246e2636]:
+                  - generic "5" [ref=f246e2637]
+                  - generic [ref=f246e2643]: (3,280)
+          - button "다음 상품 보기" [ref=f246e2645] [cursor=pointer]
+  - contentinfo [ref=f246e2646]:
+    - generic [ref=f246e2647]:
+      - generic [ref=f246e2648]:
+        - link "회사소개" [ref=f246e2649] [cursor=pointer]:
+          - /url: https://news.coupang.com/
+        - link "Investor Relations" [ref=f246e2650] [cursor=pointer]:
+          - /url: https://ir.aboutcoupang.com/overview/default.aspx
+        - link "인재채용" [ref=f246e2651] [cursor=pointer]:
+          - /url: https://rocketyourcareer.kr.coupang.com
+        - link "입점/제휴문의" [ref=f246e2652] [cursor=pointer]:
+          - /url: https://marketplace.coupangcorp.com/s/?utm_source=button_pc&utm_medium=non_paid&utm_campaign=onsite_ca&utm_id=coupang_app?inflow=WEB_FOOTER_B
+        - link "공지사항" [ref=f246e2653] [cursor=pointer]:
+          - /url: https://mc.coupang.com/ssr/desktop/contact/notice
+        - link "고객의 소리" [ref=f246e2654] [cursor=pointer]:
+          - /url: https://mc.coupang.com/ssr/desktop/contact/voc
+        - link "이용약관" [ref=f246e2655] [cursor=pointer]:
+          - /url: https://www.coupang.com/np/policies/terms
+        - link [ref=f246e2656] [cursor=pointer]:
+          - /url: https://privacy.coupang.com/ko/center/coupang
+          - strong [ref=f246e2657]: 개인정보 처리방침
+        - link "정보보호/개인정보보호 인증" [ref=f246e2658] [cursor=pointer]:
+          - /url: https://privacy.coupang.com/ko/security/status
+        - link "쿠팡페이 이용약관" [ref=f246e2659] [cursor=pointer]:
+          - /url: https://rocketpay.coupang.com/rocketpay/operationTerms/coupangPcFooter
+        - link "신뢰관리센터" [ref=f246e2660] [cursor=pointer]:
+          - /url: https://www.coupang.com/np/safety
+        - link "제휴마케팅" [ref=f246e2661] [cursor=pointer]:
+          - /url: https://partners.coupang.com/
+        - link "광고안내" [ref=f246e2662] [cursor=pointer]:
+          - /url: https://ads.coupang.com
+      - paragraph [ref=f246e2666] [cursor=pointer]: Global Site
+    - generic [ref=f246e2668]:
+      - generic [ref=f246e2669]:
+        - link "COUPANG" [ref=f246e2670] [cursor=pointer]:
+          - /url: https://www.coupang.com/
+        - generic [ref=f246e2671]:
+          - text: "상호명 및 호스팅 서비스 제공 : 쿠팡(주) 대표이사 : 로저스 해롤드 린(Rogers Harold Lynn) (05050) 서울시 광진구 아차산로 412, 2층 사업자 등록번호 : 120-88-00767 통신판매업신고 : 2026-서울광진-1253"
+          - link "사업자정보 확인 >" [ref=f246e2672] [cursor=pointer]:
+            - /url: http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=1208800767
+      - link [ref=f246e2674] [cursor=pointer]:
+        - /url: https://mc.coupang.com/ssr/desktop/contact/inquiry
+        - strong [ref=f246e2675]: 365고객센터
+        - text: "| 전자금융거래분쟁처리담당"
+        - emphasis [ref=f246e2676]: 1577-7011 (유료)
+        - text: "(05050) 서울시 광진구 아차산로 412, 2층 email : help@coupang.com"
+      - paragraph [ref=f246e2677]:
+        - strong [ref=f246e2678]: 채무지급보증 안내
+        - generic [ref=f246e2679]: 당사는 고객님이 현금 결제한 금액에 대해 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.
+        - link "서비스 가입사실 확인 >" [ref=f246e2680] [cursor=pointer]:
+          - /url: https://www.coupang.com/np/etc/popWooriService
+    - generic [ref=f246e2686]:
+      - paragraph [ref=f246e2687]: 사이버몰 내 판매되는 상품 중에는 쿠팡에 등록한 개별 판매자가 판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다. 마켓플레이스(오픈마켓) 상품의 경우 쿠팡은 통신판매중개자이며 통신판매의 당사자가 아닙니다. 쿠팡은 마켓플레이스(오픈마켓) 상품, 거래정보 및 거래 등에 대하여 책임을 지지 않습니다. 쿠팡은 소비자 보호와 안전거래를 위해 신뢰관리센터(CM112@coupang.com)를 운영하고 있으며, 관련 분쟁이 발생할 경우 별도의 분쟁 처리절차에 의거 분쟁이 처리됩니다. Copyright © Coupang Corp. 2010-2025 All Rights Reserved.
+      - list [ref=f246e2688]:
+        - listitem [ref=f246e2689]:
+          - link [ref=f246e2690] [cursor=pointer]:
+            - /url: https://www.facebook.com/Coupang.korea
+        - listitem [ref=f246e2691]:
+          - link [ref=f246e2692] [cursor=pointer]:
+            - /url: https://news.coupang.com/
+        - listitem [ref=f246e2693]:
+          - link [ref=f246e2694] [cursor=pointer]:
+            - /url: https://www.instagram.com/coupang
+  - alert [ref=f246e2695]

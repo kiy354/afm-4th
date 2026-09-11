@@ -1,0 +1,288 @@
+- generic [ref=f15e686]:
+  - generic [ref=f15e688]:
+    - button "전체기간" [ref=f15e691] [cursor=pointer]
+    - button "전체 게시판" [ref=f15e694] [cursor=pointer]
+    - button "제목만" [ref=f15e697] [cursor=pointer]
+    - generic [ref=f15e698]:
+      - textbox "검색어를 입력해주세요" [ref=f15e699]: 스팸6호
+      - button "검색" [ref=f15e700] [cursor=pointer]
+    - button "상세검색 내용 닫기" [ref=f15e701] [cursor=pointer]:
+      - text: 상세검색
+      - generic [ref=f15e702]: 내용 닫기
+  - generic [ref=f15e703]:
+    - button "전체 게시글" [ref=f15e706] [cursor=pointer]
+    - generic [ref=f15e707]:
+      - button "최신순" [ref=f15e710] [cursor=pointer]
+      - button "15개씩" [ref=f15e713] [cursor=pointer]
+  - table "게시글 목록" [ref=f15e727]:
+    - caption:
+      - generic [ref=f15e728]: 게시글 목록
+    - rowgroup [ref=f15e735]:
+      - row [ref=f15e736]:
+        - columnheader "제목" [ref=f15e737]
+        - columnheader "작성자" [ref=f15e738]
+        - columnheader "작성일" [ref=f15e739]
+        - columnheader "조회수" [ref=f15e740]
+    - rowgroup [ref=f15e741]:
+      - row [ref=f15e742]:
+        - cell "1134893591" [ref=f15e743]
+        - cell "스팸 클래식 6호 선물세트 4세트 112,000원사진사진 새 게시글 있음" [ref=f15e744]:
+          - generic [ref=f15e746]:
+            - link [ref=f15e747] [cursor=pointer]:
+              - /url: https://cafe.naver.com/f-e/cafes/10050146/articles/1134893591?boardtype=L&referrerAllArticles=true&inCafeSearch=true&query=%EC%8A%A4%ED%8C%B86%ED%98%B8&art=aW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtaW5DYWZlLXNlYXJjaC1saXN0.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjExMzQ4OTM1OTEsImlzc3VlZEF0IjoxNzg5MTE5MTg0MzIwLCJjYWZlSWQiOjEwMDUwMTQ2fQ.gj85sAaLxPQGHW_QzFlAdLFOoRL5hpmkEZCLht9Q2wM&page=1
+              - emphasis
+              - emphasis [ref=f15e748]: 스팸
+              - text: 클래식
+              - emphasis [ref=f15e749]: 6호
+              - text: 선물세트 4세트 112,000원
+            - img "사진"
+            - img "사진"
+            - emphasis [ref=f15e750]:
+              - generic [ref=f15e751]: 새 게시글 있음
+        - cell [ref=f15e752]:
+          - 'button "중나인사이드 멤버등급 : 카페 스탭" [ref=f15e754] [cursor=pointer]':
+            - text: 중나인사이드
+            - generic [ref=f15e755]: "멤버등급 : 카페 스탭"
+        - cell "09:26" [ref=f15e757]
+        - cell "2" [ref=f15e758]
+      - row [ref=f15e759]:
+        - cell "1134485865" [ref=f15e760]
+        - cell [ref=f15e761]:
+          - link [ref=f15e764] [cursor=pointer]:
+            - /url: https://cafe.naver.com/f-e/cafes/10050146/articles/1134485865?boardtype=L&referrerAllArticles=true&inCafeSearch=true&query=%EC%8A%A4%ED%8C%B86%ED%98%B8&art=aW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtaW5DYWZlLXNlYXJjaC1saXN0.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjExMzQ0ODU4NjUsImlzc3VlZEF0IjoxNzg5MTE5MTg0MzIwLCJjYWZlSWQiOjEwMDUwMTQ2fQ.X3NrKXMlPAbG9cpejpGy3D9ebpWKTRCTEXCrIcwA1V0&page=1
+            - emphasis
+            - emphasis [ref=f15e765]: 스팸
+            - text: 선물세트
+            - emphasis [ref=f15e766]: 6호
+            - text: (11세트 가능)
+        - cell [ref=f15e767]:
+          - 'button "미니707 멤버등급 : 인증+안심결제 회원" [ref=f15e769] [cursor=pointer]':
+            - text: 미니707
+            - generic [ref=f15e770]: "멤버등급 : 인증+안심결제 회원"
+        - cell "2026.09.03." [ref=f15e772]
+        - cell "9" [ref=f15e773]
+      - row [ref=f15e774]:
+        - cell "1129027002" [ref=f15e775]
+        - cell [ref=f15e776]:
+          - link [ref=f15e779] [cursor=pointer]:
+            - /url: https://cafe.naver.com/f-e/cafes/10050146/articles/1129027002?boardtype=L&referrerAllArticles=true&inCafeSearch=true&query=%EC%8A%A4%ED%8C%B86%ED%98%B8&art=aW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtaW5DYWZlLXNlYXJjaC1saXN0.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjExMjkwMjcwMDIsImlzc3VlZEF0IjoxNzg5MTE5MTg0MzIwLCJjYWZlSWQiOjEwMDUwMTQ2fQ.zGvj2-eRahpR9nKsIUFZPV95JZVRCdikPavp4K9pPrg&page=1
+            - text: <미개봉>
+            - emphasis [ref=f15e780]: 스팸
+            - text: 선물세트
+            - emphasis [ref=f15e781]: 6호
+            - text: +쇼핑백
+        - cell [ref=f15e782]:
+          - 'button "하늘은푸르고 멤버등급 : 본인인증 회원" [ref=f15e784] [cursor=pointer]':
+            - text: 하늘은푸르고
+            - generic [ref=f15e785]: "멤버등급 : 본인인증 회원"
+        - cell "2026.05.05." [ref=f15e787]
+        - cell "13" [ref=f15e788]
+      - row [ref=f15e789]:
+        - cell "1128965626" [ref=f15e790]
+        - cell [ref=f15e791]:
+          - link [ref=f15e794] [cursor=pointer]:
+            - /url: https://cafe.naver.com/f-e/cafes/10050146/articles/1128965626?boardtype=L&referrerAllArticles=true&inCafeSearch=true&query=%EC%8A%A4%ED%8C%B86%ED%98%B8&art=aW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtaW5DYWZlLXNlYXJjaC1saXN0.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjExMjg5NjU2MjYsImlzc3VlZEF0IjoxNzg5MTE5MTg0MzIwLCJjYWZlSWQiOjEwMDUwMTQ2fQ.mINFtTtfuRjAMpxCdyWR9NrOhWP_IdcKb4Eoj1JgAqc&page=1
+            - emphasis
+            - emphasis [ref=f15e795]: 스팸6호
+            - text: 선물셋트 팝니다
+        - cell [ref=f15e796]:
+          - 'button "MJ해피니스 멤버등급 : 중고나라 회원" [ref=f15e798] [cursor=pointer]':
+            - text: MJ해피니스
+            - generic [ref=f15e799]: "멤버등급 : 중고나라 회원"
+        - cell "2026.05.03." [ref=f15e801]
+        - cell "7" [ref=f15e802]
+      - row [ref=f15e803]:
+        - cell "1127787836" [ref=f15e804]
+        - cell [ref=f15e805]:
+          - link [ref=f15e808] [cursor=pointer]:
+            - /url: https://cafe.naver.com/f-e/cafes/10050146/articles/1127787836?boardtype=L&referrerAllArticles=true&inCafeSearch=true&query=%EC%8A%A4%ED%8C%B86%ED%98%B8&art=aW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtaW5DYWZlLXNlYXJjaC1saXN0.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjExMjc3ODc4MzYsImlzc3VlZEF0IjoxNzg5MTE5MTg0MzIwLCJjYWZlSWQiOjEwMDUwMTQ2fQ.jsRn8TEsQyddMEJQk7pCC9jjAcqcfeG-Z1JapvETloM&page=1
+            - text: "[판매완료]"
+            - emphasis [ref=f15e809]: 스팸 6호
+            - text: 클래식 세트 판매합니다.
+        - cell [ref=f15e810]:
+          - 'button "wellbeans 멤버등급 : 본인인증 회원" [ref=f15e812] [cursor=pointer]':
+            - text: wellbeans
+            - generic [ref=f15e813]: "멤버등급 : 본인인증 회원"
+        - cell "2026.04.08." [ref=f15e815]
+        - cell "14" [ref=f15e816]
+      - row [ref=f15e817]:
+        - cell "1126158941" [ref=f15e818]
+        - cell [ref=f15e819]:
+          - link [ref=f15e822] [cursor=pointer]:
+            - /url: https://cafe.naver.com/f-e/cafes/10050146/articles/1126158941?boardtype=L&referrerAllArticles=true&inCafeSearch=true&query=%EC%8A%A4%ED%8C%B86%ED%98%B8&art=aW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtaW5DYWZlLXNlYXJjaC1saXN0.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjExMjYxNTg5NDEsImlzc3VlZEF0IjoxNzg5MTE5MTg0MzIwLCJjYWZlSWQiOjEwMDUwMTQ2fQ.DplJXD2xMZbXuQjO2gdWE6XqGl9kuiw5aN3k2KB5uxw&page=1
+            - emphasis
+            - emphasis [ref=f15e823]: 스팸
+            - text: c
+            - emphasis [ref=f15e824]: 6호
+            - emphasis
+        - cell [ref=f15e825]:
+          - 'button "leduk74 멤버등급 : 본인인증 회원" [ref=f15e827] [cursor=pointer]':
+            - text: leduk74
+            - generic [ref=f15e828]: "멤버등급 : 본인인증 회원"
+        - cell "2026.03.06." [ref=f15e830]
+        - cell "9" [ref=f15e831]
+      - row [ref=f15e832]:
+        - cell "1125915919" [ref=f15e833]
+        - cell [ref=f15e834]:
+          - link [ref=f15e837] [cursor=pointer]:
+            - /url: https://cafe.naver.com/f-e/cafes/10050146/articles/1125915919?boardtype=L&referrerAllArticles=true&inCafeSearch=true&query=%EC%8A%A4%ED%8C%B86%ED%98%B8&art=aW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtaW5DYWZlLXNlYXJjaC1saXN0.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjExMjU5MTU5MTksImlzc3VlZEF0IjoxNzg5MTE5MTg0MzIwLCJjYWZlSWQiOjEwMDUwMTQ2fQ.AjM-66bSkPN9kuiPlL70o11tzCCeJy1qzC3A6BByYmQ&page=1
+            - emphasis
+            - emphasis [ref=f15e838]: 스팸6호
+            - text: 세트
+        - cell [ref=f15e839]:
+          - 'button "우미장 멤버등급 : 중고나라 회원" [ref=f15e841] [cursor=pointer]':
+            - text: 우미장
+            - generic [ref=f15e842]: "멤버등급 : 중고나라 회원"
+        - cell "2026.03.01." [ref=f15e844]
+        - cell "9" [ref=f15e845]
+      - row [ref=f15e846]:
+        - cell "1125871897" [ref=f15e847]
+        - cell [ref=f15e848]:
+          - link [ref=f15e851] [cursor=pointer]:
+            - /url: https://cafe.naver.com/f-e/cafes/10050146/articles/1125871897?boardtype=L&referrerAllArticles=true&inCafeSearch=true&query=%EC%8A%A4%ED%8C%B86%ED%98%B8&art=aW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtaW5DYWZlLXNlYXJjaC1saXN0.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjExMjU4NzE4OTcsImlzc3VlZEF0IjoxNzg5MTE5MTg0MzIwLCJjYWZlSWQiOjEwMDUwMTQ2fQ.Y2R8kXjRAdFIv9r669IYJ4887LsZT3t2l6LPEFZPlqg&page=1
+            - emphasis
+            - emphasis [ref=f15e852]: 스팸6호
+            - text: 세트
+        - cell [ref=f15e853]:
+          - 'button "우미장 멤버등급 : 중고나라 회원" [ref=f15e855] [cursor=pointer]':
+            - text: 우미장
+            - generic [ref=f15e856]: "멤버등급 : 중고나라 회원"
+        - cell "2026.02.28." [ref=f15e858]
+        - cell "3" [ref=f15e859]
+      - row [ref=f15e860]:
+        - cell "1125869446" [ref=f15e861]
+        - cell [ref=f15e862]:
+          - link [ref=f15e865] [cursor=pointer]:
+            - /url: https://cafe.naver.com/f-e/cafes/10050146/articles/1125869446?boardtype=L&referrerAllArticles=true&inCafeSearch=true&query=%EC%8A%A4%ED%8C%B86%ED%98%B8&art=aW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtaW5DYWZlLXNlYXJjaC1saXN0.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjExMjU4Njk0NDYsImlzc3VlZEF0IjoxNzg5MTE5MTg0MzIwLCJjYWZlSWQiOjEwMDUwMTQ2fQ.Dm1CoApAAcHjRZO5YPL1VNDQckiYJyneW_EiuIFxASg&page=1
+            - emphasis
+            - emphasis [ref=f15e866]: 스팸6호
+            - text: 세트
+        - cell [ref=f15e867]:
+          - 'button "우미장 멤버등급 : 중고나라 회원" [ref=f15e869] [cursor=pointer]':
+            - text: 우미장
+            - generic [ref=f15e870]: "멤버등급 : 중고나라 회원"
+        - cell "2026.02.28." [ref=f15e872]
+        - cell "3" [ref=f15e873]
+      - row [ref=f15e874]:
+        - cell "1125658814" [ref=f15e875]
+        - cell [ref=f15e876]:
+          - link [ref=f15e879] [cursor=pointer]:
+            - /url: https://cafe.naver.com/f-e/cafes/10050146/articles/1125658814?boardtype=L&referrerAllArticles=true&inCafeSearch=true&query=%EC%8A%A4%ED%8C%B86%ED%98%B8&art=aW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtaW5DYWZlLXNlYXJjaC1saXN0.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjExMjU2NTg4MTQsImlzc3VlZEF0IjoxNzg5MTE5MTg0MzIwLCJjYWZlSWQiOjEwMDUwMTQ2fQ._snHBjgAiU2wXYRPyFMi4n4fV-izDp0TVNN9viAxXk0&page=1
+            - emphasis
+            - emphasis [ref=f15e880]: 스팸
+            - text: 네이버
+            - emphasis [ref=f15e881]: 6호
+            - text: 에디션 팝니다.
+        - cell [ref=f15e882]:
+          - 'button "유기놋 멤버등급 : 중고나라 회원" [ref=f15e884] [cursor=pointer]':
+            - text: 유기놋
+            - generic [ref=f15e885]: "멤버등급 : 중고나라 회원"
+        - cell "2026.02.23." [ref=f15e887]
+        - cell "32" [ref=f15e888]
+      - row [ref=f15e889]:
+        - cell "1125256034" [ref=f15e890]
+        - cell [ref=f15e891]:
+          - link [ref=f15e894] [cursor=pointer]:
+            - /url: https://cafe.naver.com/f-e/cafes/10050146/articles/1125256034?boardtype=L&referrerAllArticles=true&inCafeSearch=true&query=%EC%8A%A4%ED%8C%B86%ED%98%B8&art=aW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtaW5DYWZlLXNlYXJjaC1saXN0.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjExMjUyNTYwMzQsImlzc3VlZEF0IjoxNzg5MTE5MTg0MzIwLCJjYWZlSWQiOjEwMDUwMTQ2fQ.RHRYOJErpoIwGbZUTRkeDv6A2vv1Z_8FBMfDLMFFkfE&page=1
+            - emphasis
+            - emphasis [ref=f15e895]: 스팸
+            - text: 선물세트
+            - emphasis [ref=f15e896]: 6호
+            - text: 20박스
+        - cell [ref=f15e897]:
+          - button "vqly" [ref=f15e899] [cursor=pointer]
+        - cell "2026.02.14." [ref=f15e900]
+        - cell "14" [ref=f15e901]
+      - row [ref=f15e902]:
+        - cell "1125144680" [ref=f15e903]
+        - cell [ref=f15e904]:
+          - link [ref=f15e907] [cursor=pointer]:
+            - /url: https://cafe.naver.com/f-e/cafes/10050146/articles/1125144680?boardtype=L&referrerAllArticles=true&inCafeSearch=true&query=%EC%8A%A4%ED%8C%B86%ED%98%B8&art=aW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtaW5DYWZlLXNlYXJjaC1saXN0.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjExMjUxNDQ2ODAsImlzc3VlZEF0IjoxNzg5MTE5MTg0MzIwLCJjYWZlSWQiOjEwMDUwMTQ2fQ.Fm9xrHimuaYvP6sM0se85UYOcAkMqXNCWluDl8U2rPQ&page=1
+            - emphasis
+            - emphasis [ref=f15e908]: 스팸6호
+            - text: + 동원18호
+        - cell [ref=f15e909]:
+          - 'button "apjk**** 멤버등급 : 본인인증 회원" [ref=f15e911] [cursor=pointer]':
+            - text: apjk****
+            - generic [ref=f15e912]: "멤버등급 : 본인인증 회원"
+        - cell "2026.02.12." [ref=f15e914]
+        - cell "17" [ref=f15e915]
+      - row [ref=f15e916]:
+        - cell "1125081817" [ref=f15e917]
+        - cell [ref=f15e918]:
+          - link [ref=f15e921] [cursor=pointer]:
+            - /url: https://cafe.naver.com/f-e/cafes/10050146/articles/1125081817?boardtype=L&referrerAllArticles=true&inCafeSearch=true&query=%EC%8A%A4%ED%8C%B86%ED%98%B8&art=aW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtaW5DYWZlLXNlYXJjaC1saXN0.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjExMjUwODE4MTcsImlzc3VlZEF0IjoxNzg5MTE5MTg0MzIwLCJjYWZlSWQiOjEwMDUwMTQ2fQ._6gE26mkyN0YmoCVEPk4AX1PU7K-0UMFi4RWG0r8cVI&page=1
+            - emphasis
+            - emphasis [ref=f15e922]: 스팸
+            - text: x 네이버
+            - emphasis [ref=f15e923]: 6호
+            - text: 에디션 2개
+        - cell [ref=f15e924]:
+          - 'button "smartnate 멤버등급 : 본인인증 회원" [ref=f15e926] [cursor=pointer]':
+            - text: smartnate
+            - generic [ref=f15e927]: "멤버등급 : 본인인증 회원"
+        - cell "2026.02.10." [ref=f15e929]
+        - cell "13" [ref=f15e930]
+      - row [ref=f15e931]:
+        - cell "1125044514" [ref=f15e932]
+        - cell [ref=f15e933]:
+          - link [ref=f15e936] [cursor=pointer]:
+            - /url: https://cafe.naver.com/f-e/cafes/10050146/articles/1125044514?boardtype=L&referrerAllArticles=true&inCafeSearch=true&query=%EC%8A%A4%ED%8C%B86%ED%98%B8&art=aW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtaW5DYWZlLXNlYXJjaC1saXN0.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjExMjUwNDQ1MTQsImlzc3VlZEF0IjoxNzg5MTE5MTg0MzIwLCJjYWZlSWQiOjEwMDUwMTQ2fQ.Q0hllOGrriOWzrm3l0uhqURE7toskvsG-OB_Wg4k4yg&page=1
+            - emphasis
+            - emphasis [ref=f15e937]: 스팸6호
+            - text: + 동원18호
+        - cell [ref=f15e938]:
+          - 'button "apjk**** 멤버등급 : 본인인증 회원" [ref=f15e940] [cursor=pointer]':
+            - text: apjk****
+            - generic [ref=f15e941]: "멤버등급 : 본인인증 회원"
+        - cell "2026.02.10." [ref=f15e943]
+        - cell "7" [ref=f15e944]
+      - row [ref=f15e945]:
+        - cell "1124689794" [ref=f15e946]
+        - cell [ref=f15e947]:
+          - link [ref=f15e950] [cursor=pointer]:
+            - /url: https://cafe.naver.com/f-e/cafes/10050146/articles/1124689794?boardtype=L&referrerAllArticles=true&inCafeSearch=true&query=%EC%8A%A4%ED%8C%B86%ED%98%B8&art=aW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtaW5DYWZlLXNlYXJjaC1saXN0.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjExMjQ2ODk3OTQsImlzc3VlZEF0IjoxNzg5MTE5MTg0MzIwLCJjYWZlSWQiOjEwMDUwMTQ2fQ.tglshjK2iLTFejLG1HsuzftA1jkbkUStcTQDVjfleW0&page=1
+            - emphasis
+            - emphasis [ref=f15e951]: 스팸6호
+            - text: 선물세트 ~ 4세트
+        - cell [ref=f15e952]:
+          - 'button "진이윤이 맘 멤버등급 : 인증+안심결제 회원" [ref=f15e954] [cursor=pointer]':
+            - text: 진이윤이 맘
+            - generic [ref=f15e955]: "멤버등급 : 인증+안심결제 회원"
+        - cell "2026.02.03." [ref=f15e957]
+        - cell "60" [ref=f15e958]
+  - generic [ref=f15e960]:
+    - generic [ref=f15e961]:
+      - strong [ref=f15e962]: 페이징 이동
+      - button "1" [pressed] [ref=f15e963] [cursor=pointer]
+      - button "2" [ref=f15e964] [cursor=pointer]
+      - button "3" [ref=f15e965] [cursor=pointer]
+      - button "4" [ref=f15e966] [cursor=pointer]
+      - button "5" [ref=f15e967] [cursor=pointer]
+      - button "6" [ref=f15e968] [cursor=pointer]
+      - button "7" [ref=f15e969] [cursor=pointer]
+      - button "8" [ref=f15e970] [cursor=pointer]
+      - button "9" [ref=f15e971] [cursor=pointer]
+      - button "10" [ref=f15e972] [cursor=pointer]
+      - button "다음" [ref=f15e973] [cursor=pointer]
+    - generic [ref=f15e974]:
+      - button "전체기간" [ref=f15e977] [cursor=pointer]
+      - button "제목만" [ref=f15e980] [cursor=pointer]
+      - generic [ref=f15e981]:
+        - textbox "검색어를 입력해주세요" [ref=f15e982]: 스팸6호
+        - button "검색" [ref=f15e983] [cursor=pointer]
+  - iframe [ref=f15e988]:
+    - generic [ref=f20e3]:
+      - link "광고 이미지 국내 이산가족 위로 캠페인 \"살아온 흔적 하나만이라도 남기고 싶어...\" 이산가족들이 눈물 속에서 세상을 떠나지 않도록 광고 이미지 대한적십자사 더 알아보기" [ref=f20e4] [cursor=pointer]:
+        - /url: https://g.tivan.naver.com/gfa/a8Is3Ty4reUTcfbOLkMnmvz66Hj9zmnh0ZIPWte7KdfM26Za5bXzkz4VCyl5bV58XwlgbqGAT32B4DNxHcO18C2w4vAA6ebv31z2Zsfh9ZTbFLzFbvxs6Y6TNAI1WcUmZGBwBQl3inby_ns6YFZlRTlvqG29-YdpJHWwnpjRdZi8Unpe_7cVGYvNwDCdsL55E_-gpSb54xTnd-U12vK--N2vExXs8eXzVFqYeF3VQkTA_m_p0FRkONB1ndzJxHsTVwNO5E9EzJOtkTDIztjCeOE3GQVnLwgDoIwPFM_d1kvmEbD6yMTZGF9WQNAFqxk7tJkVJ2eh1sV2xIqA7r8tzhA0MpnWUkeWwXzUcLK6jmpv3vAJINcVuDGA2boKGI2L0y0xP-lSo3Cgzbu_HOLbfxOfbLtGVXOpkvg5sN6NXVIT3FHDzcqreqYrrlrPWUDE2Dzt8UScBsmUQfpO9rRMMJOJzA1dKpcTAe_nHrDr1Juy_M61By7nJTjxA7zo11ZaKw0tBXvDBYyBwZ_Dvg5vnieImb7K5gdflISpR8XmkGWH28HvIghetH1x4NRQk4eC2XK3PfAMHpTr7bwoi-rkq0Y1-ddFDY6-1C8LA4vHEZ6zFHA8-LoVw73ptiVcX83YzMoCwt8HOj4sVMoKTKR-5dg79RZhfoaJ_qK8npHhnI6hKEmS_GvZujBIX3gUsH7fhp14fRy_q1RKQtrqY-DiE2syQ6HXX4PLEAOGh90UJPv60_h1qUjkkHXqJfbYngZKgArhObgfqtY5DmBgzlheSznKrQ595xStKgvCK8Poj92w5qFfD7i4z4G1Gc8N-R1T84CIAsdj0xujdF0KZEuve4H_2mv4mPFHLJCLm16lAN2Line_z-A8N2LBKA86Ekoh8scsh8WjtSmXV5xIQX-Y0TpDold-SIXrHg8NgG3vJ-Z3Wua8DkKc1DL31gmggM1pLNxhWgh0zqn_X8vjdkNK2xl3oENNUKZHBObW0WUGBCRlSZJr4SZe6SKq9PIzAL2Py3Q85c8em2yqqTJhUMGG5_eq05pBAYjgoY1wmf-REeXObfytHDy5WpL46iBHrAqSITvgqnB4UdhVcBEJ6SFIdXflEs1kW6d3xcUTc9WhBAk7llIGs0_a_8e7N7Nx2u2T6-py5a2q9pKdJAZkn1i_knBzEcAkpeSyK1Ct6DKjuyzh83Zcmz7stHKLmIDx6dHKM4cWfzJKhaFEyiI3epqdfd85Fqk1L46OCQvvDBjr24kURYCnhwz6yHCtXYuGWT_R0KnVs_y9yWnISJjCp6MF7aKwCaQFcutIxlgKInHEpmjK4oJXjJ6wW_1zfpUjQBREGz1I8-tB2G6XR1h8DzkZzPN_PWshnmwfWPZIKsJ1yOrWoIxRr5IovgMb6AEN84SPYm8ZLdn8NBF_54Xvuf8pzIlOOsYUn0veU0X2zIQ19QzD9lzQW40hYSRgxKS7dIs8HmZ0dqD0eBN5qoOA6rycj3wPd9p8_p71oFDyuCKkdEK5BCRpPMOFOCvyzeAgTKwsw3fR6yMNP1pBpm7mprpjN_5ab0RARp2xsUyFZnV0z_5q0OVTnxvkelyK2cdWJ4PFdRuyvTjnCBh9TPtDt08jGmePhi_E_RuZP5skKlu7nffBnTIwdlNHUE0Y3w02be-wDdwhCdcPXmn9IXoCX5SCJezGW3E75EkKehNcWOTa2ad8VUCsm9wjm5mUgKUQP1aOckKyf0hO4_tVdlstHigf0kID5kNbW7_oUjiYSFG-2Lc=/
+        - generic [ref=f20e5]:
+          - img "광고 이미지" [ref=f20e7]
+          - generic [ref=f20e11]:
+            - strong [ref=f20e13]: 국내 이산가족 위로 캠페인
+            - paragraph [ref=f20e14]: "\"살아온 흔적 하나만이라도 남기고 싶어...\""
+            - paragraph [ref=f20e15]: 이산가족들이 눈물 속에서 세상을 떠나지 않도록
+            - generic [ref=f20e16]:
+              - img "광고 이미지" [ref=f20e18]
+              - generic [ref=f20e19]: 대한적십자사
+              - generic [ref=f20e20]: 더 알아보기
+      - button "AD" [ref=f20e22] [cursor=pointer]

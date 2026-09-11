@@ -1,0 +1,282 @@
+- generic [active] [ref=f57e1]:
+  - generic [ref=f57e4]:
+    - link "Coupang" [ref=f57e6] [cursor=pointer]:
+      - /url: //www.coupang.com
+    - generic [ref=f57e8]:
+      - generic [ref=f57e9]:
+        - generic [ref=f57e10]:
+          - generic [ref=f57e11] [cursor=pointer]
+          - generic [ref=f57e12]: 장바구니(2)
+        - generic [ref=f57e13]:
+          - generic [ref=f57e14]:
+            - generic [ref=f57e15]: "01"
+            - generic [ref=f57e16]: 옵션선택
+          - generic [ref=f57e18]:
+            - generic [ref=f57e19]: "02"
+            - generic [ref=f57e20]: 장바구니
+          - generic [ref=f57e22]:
+            - generic [ref=f57e23]: "03"
+            - generic [ref=f57e24]: 주문/결제
+          - generic [ref=f57e26]:
+            - generic [ref=f57e27]: "04"
+            - generic [ref=f57e28]: 주문완료
+      - generic [ref=f57e29]:
+        - generic [ref=f57e30]:
+          - generic [ref=f57e32]:
+            - generic [ref=f57e35]:
+              - generic [ref=f57e36]: 로켓배송 상품
+              - generic [ref=f57e37]: 무료배송 · 19,800원 이상 주문 가능
+            - generic [ref=f57e40]:
+              - generic [ref=f57e41]:
+                - checkbox [checked] [ref=f57e43]
+                - link [ref=f57e44] [cursor=pointer]:
+                  - /url: https://www.coupang.com/vp/products/293968217?vendorItemId=88038503920&sourceType=CART
+              - generic [ref=f57e45]:
+                - generic [ref=f57e46]:
+                  - 'link "프로메스 멸균 우유 옵션: 1L, 1개" [ref=f57e48] [cursor=pointer]':
+                    - /url: https://www.coupang.com/vp/products/293968217?vendorItemId=88038503920&sourceType=CART
+                    - text: 프로메스 멸균 우유
+                    - generic [ref=f57e49]: "옵션: 1L, 1개"
+                  - generic [ref=f57e50]: 삭제
+                - generic [ref=f57e51]:
+                  - generic [ref=f57e52]: 한달구매 200+
+                  - generic [ref=f57e254]:
+                    - generic [ref=f57e255]: 내일(토) 도착
+                    - generic [ref=f57e414]: (서울경기 기준)
+                  - generic [ref=f57e54]:
+                    - generic [ref=f57e56]:
+                      - generic [ref=f57e57]: 4,090
+                      - generic [ref=f57e58]: 원
+                    - paragraph [ref=f57e415]: (100ml당 409원)
+                  - textbox [ref=f57e65]: "1"
+            - generic [ref=f57e69]:
+              - generic [ref=f57e70]:
+                - checkbox [checked] [ref=f57e72]
+                - link [ref=f57e73] [cursor=pointer]:
+                  - /url: https://www.coupang.com/vp/products/9643636922?vendorItemId=95752946190&sourceType=CART
+              - generic [ref=f57e74]:
+                - generic [ref=f57e75]:
+                  - 'link "부드럽고 촉촉한 한입 카스테라 옵션: 30개, 20g" [ref=f57e77] [cursor=pointer]':
+                    - /url: https://www.coupang.com/vp/products/9643636922?vendorItemId=95752946190&sourceType=CART
+                    - text: 부드럽고 촉촉한 한입 카스테라
+                    - generic [ref=f57e78]: "옵션: 30개, 20g"
+                  - generic [ref=f57e79]: 삭제
+                - generic [ref=f57e80]:
+                  - generic [ref=f57e81]: 한달구매 2천+
+                  - generic [ref=f57e260]:
+                    - generic [ref=f57e261]: 내일(토) 도착
+                    - generic [ref=f57e416]: (서울경기 기준)
+                  - generic [ref=f57e83]:
+                    - generic [ref=f57e85]:
+                      - generic [ref=f57e86]: 12,900
+                      - generic [ref=f57e87]: 원
+                    - paragraph [ref=f57e417]: (10g당 215원)
+                  - textbox [ref=f57e94]: "1"
+            - generic [ref=f57e96]:
+              - generic [ref=f57e97]:
+                - text: 로켓배송 상품
+                - generic [ref=f57e98]:
+                  - strong [ref=f57e99]: 2,810원
+                  - text: 추가 시 주문가능
+              - link "로켓배송 상품 추가하기" [ref=f57e419] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/rocketdelivery
+          - generic [ref=f57e159]:
+            - generic [ref=f57e160]:
+              - checkbox "전체 선택 (2 / 2)" [checked] [ref=f57e421]
+              - generic [ref=f57e162]: 전체 선택
+              - generic [ref=f57e163]: (2 / 2)
+            - generic [ref=f57e164]:
+              - generic [ref=f57e165]: 선택삭제
+              - generic [ref=f57e166]: 품절/판매종료상품 전체삭제
+        - generic [ref=f57e167]:
+          - generic [ref=f57e168]:
+            - generic [ref=f57e169]:
+              - generic [ref=f57e170]: 주문 예상 금액
+              - generic [ref=f57e171]:
+                - generic [ref=f57e172]:
+                  - generic [ref=f57e173]: 총 상품 가격
+                  - generic [ref=f57e175]:
+                    - emphasis [ref=f57e176]: 16,990
+                    - generic [ref=f57e177]: 원
+                - generic [ref=f57e185]:
+                  - generic [ref=f57e186]: 총 배송비
+                  - generic [ref=f57e188]:
+                    - emphasis [ref=f57e189]: +
+                    - emphasis [ref=f57e190]: "0"
+                    - generic [ref=f57e191]: 원
+            - generic [ref=f57e194]:
+              - emphasis [ref=f57e195]: 16,990
+              - generic [ref=f57e196]: 원
+          - button "총 2개 상품 구매하기" [ref=f57e422] [cursor=pointer]
+    - generic [ref=f57e282]:
+      - generic [ref=f57e284]:
+        - heading "같이 보면 좋은 상품" [level=2] [ref=f57e285]
+        - generic [ref=f57e287]:
+          - generic [ref=f57e288]: 광고
+          - button "Ad information" [ref=f57e289] [cursor=pointer]
+      - generic [ref=f57e292]:
+        - list [ref=f57e293]:
+          - listitem [ref=f57e294]:
+            - link "저지데어리 A2 저지 우유, 6개, 1L 저지데어리 A2 저지 우유, 6개, 1L 30,490원 (100ml당 508원)" [ref=f57e295] [cursor=pointer]:
+              - /url: //www.coupang.com/vp/products/9260140532?sourceType=CART_ADS&vendorItemId=94372742467
+              - img "저지데어리 A2 저지 우유, 6개, 1L" [ref=f57e296]
+              - generic [ref=f57e297]:
+                - strong [ref=f57e298]: 저지데어리 A2 저지 우유, 6개, 1L
+                - generic [ref=f57e300]:
+                  - strong [ref=f57e302]:
+                    - emphasis [ref=f57e303]: 30,490원
+                  - generic [ref=f57e304]: (100ml당 508원)
+          - listitem [ref=f57e306]:
+            - link "오스트렐리아스 A2 풀크림 멸균우유, 1L, 6개 오스트렐리아스 A2 풀크림 멸균우유, 1L, 6개 19,900원 (100ml당 332원)" [ref=f57e307] [cursor=pointer]:
+              - /url: //www.coupang.com/vp/products/7187860291?sourceType=CART_ADS&vendorItemId=95241118530
+              - img "오스트렐리아스 A2 풀크림 멸균우유, 1L, 6개" [ref=f57e308]
+              - generic [ref=f57e309]:
+                - strong [ref=f57e310]: 오스트렐리아스 A2 풀크림 멸균우유, 1L, 6개
+                - generic [ref=f57e312]:
+                  - strong [ref=f57e314]:
+                    - emphasis [ref=f57e315]: 19,900원
+                  - generic [ref=f57e316]: (100ml당 332원)
+          - listitem [ref=f57e317]:
+            - link "에이투밀크 단백질 우유, 200ml, 24개 에이투밀크 단백질 우유, 200ml, 24개 41,000원 (100ml당 854원)" [ref=f57e318] [cursor=pointer]:
+              - /url: //www.coupang.com/vp/products/7685466256?sourceType=CART_ADS&vendorItemId=90621348493
+              - img "에이투밀크 단백질 우유, 200ml, 24개" [ref=f57e319]
+              - generic [ref=f57e320]:
+                - strong [ref=f57e321]: 에이투밀크 단백질 우유, 200ml, 24개
+                - generic [ref=f57e323]:
+                  - strong [ref=f57e325]:
+                    - emphasis [ref=f57e326]: 41,000원
+                  - generic [ref=f57e327]: (100ml당 854원)
+          - listitem [ref=f57e329]:
+            - link "누티푸드 크리머 스위텐드 연유 시럽, 385g, 24개 누티푸드 크리머 스위텐드 연유 시럽, 385g, 24개 49,000원 (100g당 530원)" [ref=f57e330] [cursor=pointer]:
+              - /url: //www.coupang.com/vp/products/7243710171?sourceType=CART_ADS&vendorItemId=84734652331
+              - img "누티푸드 크리머 스위텐드 연유 시럽, 385g, 24개" [ref=f57e331]
+              - generic [ref=f57e332]:
+                - strong [ref=f57e333]: 누티푸드 크리머 스위텐드 연유 시럽, 385g, 24개
+                - generic [ref=f57e335]:
+                  - strong [ref=f57e337]:
+                    - emphasis [ref=f57e338]: 49,000원
+                  - generic [ref=f57e339]: (100g당 530원)
+        - generic [ref=f57e341] [cursor=pointer]
+    - generic [ref=f57e343]:
+      - generic [ref=f57e344]:
+        - generic [ref=f57e345]: 위 상품을 구매한 고객이 함께 구매한 상품
+        - generic [ref=f57e349]:
+          - button [disabled] [ref=f57e350]
+          - generic [ref=f57e353]: 1/5
+          - button [ref=f57e354] [cursor=pointer]
+      - list [ref=f57e358]:
+        - listitem [ref=f57e424]:
+          - link "폴스 팜하우스 골드 밀크, 1L, 2개 폴스 팜하우스 골드 밀크, 1L, 2개 10,150원 (100ml당 508원)" [ref=f57e425] [cursor=pointer]:
+            - /url: //www.coupang.com/vp/products/6780326673?vendorItemId=86569242094&sourceType=cart_also_bought&rmdId=b2803bb45db04dcd879103f55681a458&eventLabel=recommendation_widget_pc_cart_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B&rmdValue=p293968217:btg-1.0.0:p6780326673
+            - img "폴스 팜하우스 골드 밀크, 1L, 2개" [ref=f57e426]
+            - generic [ref=f57e427]:
+              - strong [ref=f57e428]: 폴스 팜하우스 골드 밀크, 1L, 2개
+              - generic [ref=f57e430]:
+                - strong [ref=f57e432]:
+                  - emphasis [ref=f57e433]: 10,150
+                  - text: 원
+                - generic [ref=f57e434]: (100ml당 508원)
+        - listitem [ref=f57e436]:
+          - link "혼쯔유 코이다시, 500ml, 1개 혼쯔유 코이다시, 500ml, 1개 6,400원 (100ml당 1,280원)" [ref=f57e437] [cursor=pointer]:
+            - /url: //www.coupang.com/vp/products/193942663?vendorItemId=3000937174&sourceType=cart_also_bought&rmdId=b2803bb45db04dcd879103f55681a458&eventLabel=recommendation_widget_pc_cart_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B&rmdValue=p293968217:btg-1.0.0:p193942663
+            - img "혼쯔유 코이다시, 500ml, 1개" [ref=f57e438]
+            - generic [ref=f57e439]:
+              - strong [ref=f57e440]: 혼쯔유 코이다시, 500ml, 1개
+              - generic [ref=f57e442]:
+                - strong [ref=f57e444]:
+                  - emphasis [ref=f57e445]: 6,400
+                  - text: 원
+                - generic [ref=f57e446]: (100ml당 1,280원)
+        - listitem [ref=f57e448]:
+          - link "타야스 엑스원 타르트, 480g, 1박스 타야스 엑스원 타르트, 480g, 1박스 27% 5,240원 (10g당 109원)" [ref=f57e449] [cursor=pointer]:
+            - /url: //www.coupang.com/vp/products/203093723?vendorItemId=3955585793&sourceType=cart_also_bought&rmdId=b2803bb45db04dcd879103f55681a458&eventLabel=recommendation_widget_pc_cart_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B&rmdValue=p293968217:btg-1.0.0:p203093723
+            - img "타야스 엑스원 타르트, 480g, 1박스" [ref=f57e450]
+            - generic [ref=f57e451]:
+              - strong [ref=f57e452]: 타야스 엑스원 타르트, 480g, 1박스
+              - generic [ref=f57e453]:
+                - strong [ref=f57e455]:
+                  - emphasis [ref=f57e456]: "27"
+                  - text: "%"
+                - generic [ref=f57e457]:
+                  - strong [ref=f57e459]:
+                    - emphasis [ref=f57e460]: 5,240
+                    - text: 원
+                  - generic [ref=f57e461]: (10g당 109원)
+        - listitem [ref=f57e463]:
+          - link "오리온초코파이 정, 468g, 1개 오리온초코파이 정, 468g, 1개 11% 4,240원 (10g당 91원)" [ref=f57e464] [cursor=pointer]:
+            - /url: //www.coupang.com/vp/products/9073375?vendorItemId=3000239081&sourceType=cart_also_bought&rmdId=b2803bb45db04dcd879103f55681a458&eventLabel=recommendation_widget_pc_cart_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B&rmdValue=p293968217:btg-1.0.0:p9073375
+            - img "오리온초코파이 정, 468g, 1개" [ref=f57e465]
+            - generic [ref=f57e466]:
+              - strong [ref=f57e467]: 오리온초코파이 정, 468g, 1개
+              - generic [ref=f57e468]:
+                - strong [ref=f57e470]:
+                  - emphasis [ref=f57e471]: "11"
+                  - text: "%"
+                - generic [ref=f57e472]:
+                  - strong [ref=f57e474]:
+                    - emphasis [ref=f57e475]: 4,240
+                    - text: 원
+                  - generic [ref=f57e476]: (10g당 91원)
+  - contentinfo [ref=f57e203]:
+    - generic [ref=f57e204]:
+      - generic [ref=f57e205]:
+        - link "회사소개" [ref=f57e206] [cursor=pointer]:
+          - /url: https://news.coupang.com/
+        - link "Investor Relations" [ref=f57e207] [cursor=pointer]:
+          - /url: https://ir.aboutcoupang.com/overview/default.aspx
+        - link "인재채용" [ref=f57e208] [cursor=pointer]:
+          - /url: https://rocketyourcareer.kr.coupang.com
+        - link "입점/제휴문의" [ref=f57e209] [cursor=pointer]:
+          - /url: https://marketplace.coupangcorp.com/s/?utm_source=button_pc&utm_medium=non_paid&utm_campaign=onsite_ca&utm_id=coupang_app?inflow=WEB_FOOTER_B
+        - link "공지사항" [ref=f57e210] [cursor=pointer]:
+          - /url: https://mc.coupang.com/ssr/desktop/contact/notice
+        - link "고객의 소리" [ref=f57e211] [cursor=pointer]:
+          - /url: https://mc.coupang.com/ssr/desktop/contact/voc
+        - link "이용약관" [ref=f57e212] [cursor=pointer]:
+          - /url: https://www.coupang.com/np/policies/terms
+        - link [ref=f57e213] [cursor=pointer]:
+          - /url: https://privacy.coupang.com/ko/center/coupang
+          - strong [ref=f57e214]: 개인정보 처리방침
+        - link "정보보호/개인정보보호 인증" [ref=f57e215] [cursor=pointer]:
+          - /url: https://privacy.coupang.com/ko/security/status
+        - link "쿠팡페이 이용약관" [ref=f57e216] [cursor=pointer]:
+          - /url: https://rocketpay.coupang.com/rocketpay/operationTerms/coupangPcFooter
+        - link "신뢰관리센터" [ref=f57e217] [cursor=pointer]:
+          - /url: https://www.coupang.com/np/safety
+        - link "제휴마케팅" [ref=f57e218] [cursor=pointer]:
+          - /url: https://partners.coupang.com/
+        - link "광고안내" [ref=f57e219] [cursor=pointer]:
+          - /url: https://ads.coupang.com
+      - paragraph [ref=f57e223] [cursor=pointer]: Global Site
+    - generic [ref=f57e225]:
+      - generic [ref=f57e226]:
+        - link "COUPANG" [ref=f57e227] [cursor=pointer]:
+          - /url: https://www.coupang.com/
+        - generic [ref=f57e228]:
+          - text: "상호명 및 호스팅 서비스 제공 : 쿠팡(주) 대표이사 : 로저스 해롤드 린(Rogers Harold Lynn) (05050) 서울시 광진구 아차산로 412, 2층 사업자 등록번호 : 120-88-00767 통신판매업신고 : 2026-서울광진-1253"
+          - link "사업자정보 확인 >" [ref=f57e229] [cursor=pointer]:
+            - /url: http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=1208800767
+      - link [ref=f57e231] [cursor=pointer]:
+        - /url: https://mc.coupang.com/ssr/desktop/contact/inquiry
+        - strong [ref=f57e232]: 365고객센터
+        - text: "| 전자금융거래분쟁처리담당"
+        - emphasis [ref=f57e233]: 1577-7011 (유료)
+        - text: "(05050) 서울시 광진구 아차산로 412, 2층 email : help@coupang.com"
+      - paragraph [ref=f57e234]:
+        - strong [ref=f57e235]: 채무지급보증 안내
+        - generic [ref=f57e236]: 당사는 고객님이 현금 결제한 금액에 대해 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.
+        - link "서비스 가입사실 확인 >" [ref=f57e237] [cursor=pointer]:
+          - /url: https://www.coupang.com/np/etc/popWooriService
+    - generic [ref=f57e243]:
+      - paragraph [ref=f57e244]: 사이버몰 내 판매되는 상품 중에는 쿠팡에 등록한 개별 판매자가 판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다. 마켓플레이스(오픈마켓) 상품의 경우 쿠팡은 통신판매중개자이며 통신판매의 당사자가 아닙니다. 쿠팡은 마켓플레이스(오픈마켓) 상품, 거래정보 및 거래 등에 대하여 책임을 지지 않습니다. 쿠팡은 소비자 보호와 안전거래를 위해 신뢰관리센터(CM112@coupang.com)를 운영하고 있으며, 관련 분쟁이 발생할 경우 별도의 분쟁 처리절차에 의거 분쟁이 처리됩니다. Copyright © Coupang Corp. 2010-2025 All Rights Reserved.
+      - list [ref=f57e245]:
+        - listitem [ref=f57e246]:
+          - link [ref=f57e247] [cursor=pointer]:
+            - /url: https://www.facebook.com/Coupang.korea
+        - listitem [ref=f57e248]:
+          - link [ref=f57e249] [cursor=pointer]:
+            - /url: https://news.coupang.com/
+        - listitem [ref=f57e250]:
+          - link [ref=f57e251] [cursor=pointer]:
+            - /url: https://www.instagram.com/coupang
+  - alert [ref=f57e413]

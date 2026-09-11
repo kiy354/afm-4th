@@ -1,0 +1,2330 @@
+- generic [active] [ref=f33e1]:
+  - generic:
+    - link "메뉴 영역으로 바로가기" [ref=f33e2] [cursor=pointer]:
+      - /url: "#lnb"
+    - link "본문 영역으로 바로가기" [ref=f33e4] [cursor=pointer]:
+      - /url: "#content"
+  - generic [ref=f33e6]:
+    - generic [ref=f33e8]:
+      - generic [ref=f33e10]:
+        - generic [ref=f33e11]:
+          - text: 현재 PC에 최적화된 브라우저
+          - strong [ref=f33e13]: 웨일을 설치하세요
+          - link "다운로드" [ref=f33e14] [cursor=pointer]:
+            - /url: https://whale.naver.com/ko/?wpid=search_theme1
+        - button "닫기" [ref=f33e16] [cursor=pointer]
+      - generic [ref=f33e20]:
+        - heading [level=1] [ref=f33e21]:
+          - link "NAVER" [ref=f33e22] [cursor=pointer]:
+            - /url: https://www.naver.com
+        - search [ref=f33e24]:
+          - group "검색" [ref=f33e25]:
+            - combobox "검색어를 입력해 주세요." [ref=f33e27]: 환율
+            - button "한글 입력기" [ref=f33e29] [cursor=pointer]
+            - button "검색" [ref=f33e31] [cursor=pointer]
+      - generic [ref=f33e33]:
+        - generic [ref=f33e35]:
+          - generic [ref=f33e36]:
+            - tab "AI new" [ref=f33e38] [cursor=pointer]:
+              - text: AI
+              - generic [ref=f33e39]: new
+            - tab "블로그" [ref=f33e42] [cursor=pointer]
+            - tab "카페" [ref=f33e44] [cursor=pointer]
+            - tab "클립" [ref=f33e46] [cursor=pointer]
+            - tab "이미지" [ref=f33e48] [cursor=pointer]
+            - tab "지식iN" [ref=f33e50] [cursor=pointer]
+            - tab "동영상" [ref=f33e52] [cursor=pointer]
+            - tab "쇼핑 새 창 열림" [ref=f33e54] [cursor=pointer]:
+              - text: 쇼핑
+              - generic [ref=f33e55]: 새 창 열림
+            - tab "뉴스" [ref=f33e57] [cursor=pointer]
+            - tab "어학사전 새 창 열림" [ref=f33e59] [cursor=pointer]:
+              - text: 어학사전
+              - generic [ref=f33e60]: 새 창 열림
+          - button "더보기" [ref=f33e62] [cursor=pointer]
+        - list [ref=f33e65]:
+          - listitem [ref=f33e66]:
+            - button "공유" [ref=f33e67] [cursor=pointer]
+    - main [ref=f33e68]:
+      - generic [ref=f33e69]:
+        - heading "환율 검색 결과" [level=1] [ref=f33e70]
+        - generic [ref=f33e71]:
+          - generic [ref=f33e72]:
+            - generic [ref=f33e73]:
+              - heading "환율계산" [level=2] [ref=f33e75]
+              - generic [ref=f33e77]:
+                - list [ref=f33e81]:
+                  - listitem [ref=f33e82]:
+                    - generic [ref=f33e83]:
+                      - combobox [ref=f33e84]:
+                        - option "하나은행" [selected]
+                        - option "신한은행"
+                      - generic [ref=f33e85]: 하나은행
+                  - listitem [ref=f33e86]:
+                    - generic [ref=f33e87]:
+                      - combobox [ref=f33e88]:
+                        - option "현찰 살때"
+                        - option "현찰 팔때"
+                        - option "송금 보낼때"
+                        - option "송금 받을때"
+                        - option "매매기준율" [selected]
+                      - generic [ref=f33e89]: 매매기준율
+                  - listitem [ref=f33e90]:
+                    - generic [ref=f33e91]:
+                      - combobox [ref=f33e92]:
+                        - option "환율우대없음" [selected]
+                        - option "환율우대 90%"
+                        - option "환율우대 80%"
+                        - option "환율우대 70%"
+                        - option "환율우대 60%"
+                        - option "환율우대 50%"
+                        - option "환율우대 40%"
+                        - option "환율우대 30%"
+                        - option "환율우대 20%"
+                        - option "환율우대 10%"
+                      - generic [ref=f33e93]: 환율우대없음
+                - generic [ref=f33e94]:
+                  - generic [ref=f33e95]:
+                    - generic [ref=f33e96]:
+                      - generic [ref=f33e98]: 환율을 계산할 국가를 선택
+                      - combobox [ref=f33e99]:
+                        - option "대한민국"
+                        - option "남아프리카"
+                        - option "네팔"
+                        - option "노르웨이"
+                        - option "뉴질랜드"
+                        - option "대만"
+                        - option "덴마크"
+                        - option "러시아"
+                        - option "마카오"
+                        - option "말레이시아"
+                        - option "멕시코"
+                        - option "몽골"
+                        - option "미국" [selected]
+                        - option "바레인"
+                        - option "방글라데시"
+                        - option "베트남"
+                        - option "브라질"
+                        - option "브루나이"
+                        - option "사우디"
+                        - option "스웨덴"
+                        - option "스위스"
+                        - option "싱가포르"
+                        - option "아랍에미리트"
+                        - option "영국"
+                        - option "오만"
+                        - option "요르단"
+                        - option "유럽"
+                        - option "이스라엘"
+                        - option "이집트"
+                        - option "인도"
+                        - option "인도네시아"
+                        - option "일본"
+                        - option "중국"
+                        - option "체코"
+                        - option "칠레"
+                        - option "카자흐스탄"
+                        - option "카타르"
+                        - option "캐나다"
+                        - option "쿠웨이트"
+                        - option "태국"
+                        - option "튀르키예"
+                        - option "파키스탄"
+                        - option "폴란드"
+                        - option "필리핀"
+                        - option "헝가리"
+                        - option "호주"
+                        - option "홍콩"
+                      - generic [ref=f33e100]: USD
+                    - generic [ref=f33e101]:
+                      - generic [ref=f33e102]: 환율을 변환하는 국가를 선택
+                      - textbox "환율을 변환하는 국가를 선택 환율을 변환하는 국가를 선택" [ref=f33e103]: "1"
+                      - generic [ref=f33e104]: 1 달러
+                  - generic [ref=f33e106]: 전환
+                  - generic [ref=f33e108]:
+                    - generic [ref=f33e109]:
+                      - generic [ref=f33e111]: 환율을 계산할 국가를 선택
+                      - combobox [ref=f33e112]:
+                        - option "대한민국" [selected]
+                        - option "남아프리카"
+                        - option "네팔"
+                        - option "노르웨이"
+                        - option "뉴질랜드"
+                        - option "대만"
+                        - option "덴마크"
+                        - option "러시아"
+                        - option "마카오"
+                        - option "말레이시아"
+                        - option "멕시코"
+                        - option "몽골"
+                        - option "미국"
+                        - option "바레인"
+                        - option "방글라데시"
+                        - option "베트남"
+                        - option "브라질"
+                        - option "브루나이"
+                        - option "사우디"
+                        - option "스웨덴"
+                        - option "스위스"
+                        - option "싱가포르"
+                        - option "아랍에미리트"
+                        - option "영국"
+                        - option "오만"
+                        - option "요르단"
+                        - option "유럽"
+                        - option "이스라엘"
+                        - option "이집트"
+                        - option "인도"
+                        - option "인도네시아"
+                        - option "일본"
+                        - option "중국"
+                        - option "체코"
+                        - option "칠레"
+                        - option "카자흐스탄"
+                        - option "카타르"
+                        - option "캐나다"
+                        - option "쿠웨이트"
+                        - option "태국"
+                        - option "튀르키예"
+                        - option "파키스탄"
+                        - option "폴란드"
+                        - option "필리핀"
+                        - option "헝가리"
+                        - option "호주"
+                        - option "홍콩"
+                      - generic [ref=f33e113]: KRW
+                    - generic [ref=f33e114]:
+                      - generic [ref=f33e115]: 환율을 변환하는 국가를 선택
+                      - textbox [ref=f33e116]: 1,346.20
+                      - generic [ref=f33e117]: 1,346.20 원
+            - generic [ref=f33e119]:
+              - generic [ref=f33e120]:
+                - heading "은행 고시환율" [level=2] [ref=f33e121]
+                - generic [ref=f33e122]:
+                  - option "하나은행" [selected] [ref=f33e123] [cursor=pointer]
+                  - option "신한은행" [ref=f33e124] [cursor=pointer]
+              - generic [ref=f33e125]:
+                - list [ref=f33e128]:
+                  - listitem [ref=f33e129]:
+                    - link "미국 USD 1,346.20 전일대비 하락 4.80 -0.36% 미국" [ref=f33e130] [cursor=pointer]:
+                      - /url: "?sm=mtb_drt&where=m&query=%EB%AF%B8%EA%B5%AD%ED%99%98%EC%9C%A8"
+                      - generic [ref=f33e131]:
+                        - term [ref=f33e132]:
+                          - generic [ref=f33e133]: 미국
+                          - emphasis [ref=f33e134]: USD
+                        - definition [ref=f33e135]:
+                          - generic [ref=f33e136]:
+                            - strong [ref=f33e137]: 1,346.20
+                            - generic [ref=f33e138]:
+                              - generic [ref=f33e139]: 전일대비
+                              - generic: 하락
+                              - emphasis [ref=f33e140]: "4.80"
+                              - emphasis [ref=f33e141]: "-0.36%"
+                          - img "미국" [ref=f33e143]
+                  - listitem [ref=f33e144]:
+                    - link "일본 JPY 100 871.69 전일대비 하락 3.40 -0.39% 일본" [ref=f33e145] [cursor=pointer]:
+                      - /url: "?sm=mtb_drt&where=m&query=%EC%9D%BC%EB%B3%B8%ED%99%98%EC%9C%A8"
+                      - generic [ref=f33e146]:
+                        - term [ref=f33e147]:
+                          - generic [ref=f33e148]: 일본
+                          - emphasis [ref=f33e149]: JPY 100
+                        - definition [ref=f33e150]:
+                          - generic [ref=f33e151]:
+                            - strong [ref=f33e152]: "871.69"
+                            - generic [ref=f33e153]:
+                              - generic [ref=f33e154]: 전일대비
+                              - generic: 하락
+                              - emphasis [ref=f33e155]: "3.40"
+                              - emphasis [ref=f33e156]: "-0.39%"
+                          - img "일본" [ref=f33e158]
+                  - listitem [ref=f33e159]:
+                    - link "유럽 EUR 1,562.67 전일대비 하락 5.98 -0.38% 유럽" [ref=f33e160] [cursor=pointer]:
+                      - /url: "?sm=mtb_drt&where=m&query=%EC%9C%A0%EB%9F%BD%ED%99%98%EC%9C%A8"
+                      - generic [ref=f33e161]:
+                        - term [ref=f33e162]:
+                          - generic [ref=f33e163]: 유럽
+                          - emphasis [ref=f33e164]: EUR
+                        - definition [ref=f33e165]:
+                          - generic [ref=f33e166]:
+                            - strong [ref=f33e167]: 1,562.67
+                            - generic [ref=f33e168]:
+                              - generic [ref=f33e169]: 전일대비
+                              - generic: 하락
+                              - emphasis [ref=f33e170]: "5.98"
+                              - emphasis [ref=f33e171]: "-0.38%"
+                          - img "유럽" [ref=f33e173]
+                  - listitem [ref=f33e174]:
+                    - link "중국 CNY 200.58 전일대비 하락 0.64 -0.32% 중국" [ref=f33e175] [cursor=pointer]:
+                      - /url: "?sm=mtb_drt&where=m&query=%EC%A4%91%EA%B5%AD%ED%99%98%EC%9C%A8"
+                      - generic [ref=f33e176]:
+                        - term [ref=f33e177]:
+                          - generic [ref=f33e178]: 중국
+                          - emphasis [ref=f33e179]: CNY
+                        - definition [ref=f33e180]:
+                          - generic [ref=f33e181]:
+                            - strong [ref=f33e182]: "200.58"
+                            - generic [ref=f33e183]:
+                              - generic [ref=f33e184]: 전일대비
+                              - generic: 하락
+                              - emphasis [ref=f33e185]: "0.64"
+                              - emphasis [ref=f33e186]: "-0.32%"
+                          - img "중국" [ref=f33e188]
+                  - listitem [ref=f33e189]:
+                    - link "영국 GBP 1,817.98 전일대비 하락 7.49 -0.41% 영국" [ref=f33e190] [cursor=pointer]:
+                      - /url: "?sm=mtb_drt&where=m&query=%EC%98%81%EA%B5%AD%ED%99%98%EC%9C%A8"
+                      - generic [ref=f33e191]:
+                        - term [ref=f33e192]:
+                          - generic [ref=f33e193]: 영국
+                          - emphasis [ref=f33e194]: GBP
+                        - definition [ref=f33e195]:
+                          - generic [ref=f33e196]:
+                            - strong [ref=f33e197]: 1,817.98
+                            - generic [ref=f33e198]:
+                              - generic [ref=f33e199]: 전일대비
+                              - generic: 하락
+                              - emphasis [ref=f33e200]: "7.49"
+                              - emphasis [ref=f33e201]: "-0.41%"
+                          - img "영국" [ref=f33e203]
+                  - listitem [ref=f33e204]:
+                    - link "호주 AUD 963.34 전일대비 하락 3.98 -0.41% 호주" [ref=f33e205] [cursor=pointer]:
+                      - /url: "?sm=mtb_drt&where=m&query=%ED%98%B8%EC%A3%BC%ED%99%98%EC%9C%A8"
+                      - generic [ref=f33e206]:
+                        - term [ref=f33e207]:
+                          - generic [ref=f33e208]: 호주
+                          - emphasis [ref=f33e209]: AUD
+                        - definition [ref=f33e210]:
+                          - generic [ref=f33e211]:
+                            - strong [ref=f33e212]: "963.34"
+                            - generic [ref=f33e213]:
+                              - generic [ref=f33e214]: 전일대비
+                              - generic: 하락
+                              - emphasis [ref=f33e215]: "3.98"
+                              - emphasis [ref=f33e216]: "-0.41%"
+                          - img "호주" [ref=f33e218]
+                - generic [ref=f33e219]:
+                  - link "이전" [disabled] [ref=f33e220]:
+                    - /url: "#"
+                  - generic [ref=f33e222]:
+                    - generic [ref=f33e223]: 현재
+                    - strong [ref=f33e224]: "1"
+                    - generic [ref=f33e225]: 전체
+                    - text: "2"
+                  - link "다음" [ref=f33e226]:
+                    - /url: "#"
+                - generic [ref=f33e228]: 2026.09.11. 11:52 3개월 차트
+                - link "환율 더보기" [ref=f33e230] [cursor=pointer]:
+                  - /url: https://stock.naver.com/market/marketindex/exchangeRate/exchange
+          - generic [ref=f33e234]:
+            - generic [ref=f33e235]: 하락하는 원·달러 환율, 달러 살 때인가?
+            - link "AI탭 바로가기" [ref=f33e236] [cursor=pointer]:
+              - /url: "?dtm_detail=kb&dtm_medium=fuq_banner&dtm_source=search&query=%EB%8B%AC%EB%9F%AC+%EB%A7%A4%EC%88%98%ED%95%98%EA%B8%B0%EC%97%90+%EC%A7%80%EA%B8%88%EC%9D%B4+%EC%A2%8B%EC%9D%80+%EC%8B%9C%EC%A0%90%EC%9D%BC%EA%B9%8C%3F&sm=tab_clk.aitfuq&ssc=tab.ait.all"
+            - link "AI탭 바로가기" [ref=f33e249] [cursor=pointer]:
+              - /url: "?dtm_detail=kb&dtm_medium=fuq_banner&dtm_source=search&query=%EB%8B%AC%EB%9F%AC+%EB%A7%A4%EC%88%98%ED%95%98%EA%B8%B0%EC%97%90+%EC%A7%80%EA%B8%88%EC%9D%B4+%EC%A2%8B%EC%9D%80+%EC%8B%9C%EC%A0%90%EC%9D%BC%EA%B9%8C%3F&sm=tab_clk.aitfuq&ssc=tab.ait.all"
+          - generic [ref=f33e253]:
+            - generic [ref=f33e255]:
+              - heading "뉴스" [level=2] [ref=f33e257]
+              - generic [ref=f33e259]:
+                - link "관련도순" [ref=f33e260] [cursor=pointer]:
+                  - /url: "?nso=so%3Ar%2Cp%3Aall%2Ca%3Aall&qdt=0&query=%ED%99%98%EC%9C%A8&sm=tab_smr&sort=0&ssc=tab.news.all"
+                - link "최신순" [ref=f33e265] [cursor=pointer]:
+                  - /url: "?nso=so%3Add%2Cp%3Aall%2Ca%3Aall&qdt=0&query=%ED%99%98%EC%9C%A8&sm=tab_smr&sort=1&ssc=tab.news.all"
+                - link "모바일 메인 언론사" [ref=f33e270] [cursor=pointer]:
+                  - /url: "?nso=so%3Ar%2Cp%3Aall%2Ca%3Aall&qdt=0&query=%ED%99%98%EC%9C%A8&service_area=1&sm=tab_smr&sort=0&ssc=tab.news.all"
+                  - switch "모바일 메인 언론사"
+            - generic [ref=f33e271]:
+              - generic [ref=f33e272]:
+                - generic [ref=f33e273]:
+                  - generic [ref=f33e274]:
+                    - link "뉴스1의 프로필 이미지 새 창 열림" [ref=f33e276] [cursor=pointer]:
+                      - /url: https://media.naver.com/press/421
+                      - img "뉴스1의 프로필 이미지" [ref=f33e279]
+                      - generic [ref=f33e280]: 새 창 열림
+                    - link "뉴스1 새 창 열림" [ref=f33e283] [cursor=pointer]:
+                      - /url: https://media.naver.com/press/421
+                      - generic [ref=f33e284]: 뉴스1
+                      - generic [ref=f33e285]: 새 창 열림
+                    - generic [ref=f33e288]:
+                      - generic [ref=f33e290]: 5시간 전
+                      - link "네이버뉴스 새 창 열림" [ref=f33e295] [cursor=pointer]:
+                        - /url: https://n.news.naver.com/mnews/article/421/0009164086?sid=105
+                        - generic [ref=f33e296]: 네이버뉴스
+                        - generic [ref=f33e297]: 새 창 열림
+                  - button "옵션 메뉴 열기" [ref=f33e299] [cursor=pointer]
+                - generic [ref=f33e304]:
+                  - generic [ref=f33e305]:
+                    - link "\"삼전닉스 보복?\"…'애플식 환율'에 韓 아이폰 듀오 美보다 10% 비싸 새 창 열림" [ref=f33e306] [cursor=pointer]:
+                      - /url: https://www.news1.kr/it-science/mobile/6286661
+                      - generic [ref=f33e307]:
+                        - text: "\"삼전닉스 보복?\"…'애플식"
+                        - mark [ref=f33e308]: 환율
+                        - text: "'에 韓 아이폰 듀오 美보다 10% 비싸"
+                      - generic [ref=f33e309]: 새 창 열림
+                    - link "'칩플레이션'과 '폴더블 폼팩터'로 이미 가격대가 높아진 가운데 '애플식 환율'에 국내 소비자 부담이 더 클 전망이다. 11일 애플에 따르면 한국은... 전날 기준 1341.10원인 달러·원 환율을 고려하면 268만 원, 295만 원, 349만 원, 429만 원이다. 여기에 미국 가격에 빠진 부가가치세 10%를 고려해도 294만 원... 새 창 열림" [ref=f33e310] [cursor=pointer]:
+                      - /url: https://www.news1.kr/it-science/mobile/6286661
+                      - generic [ref=f33e311]:
+                        - text: "'칩플레이션'과 '폴더블 폼팩터'로 이미 가격대가 높아진 가운데 '애플식"
+                        - mark [ref=f33e312]: 환율
+                        - text: "'에 국내 소비자 부담이 더 클 전망이다. 11일 애플에 따르면 한국은... 전날 기준 1341.10원인 달러·원"
+                        - mark [ref=f33e313]: 환율
+                        - text: 을 고려하면 268만 원, 295만 원, 349만 원, 429만 원이다. 여기에 미국 가격에 빠진 부가가치세 10%를 고려해도 294만 원...
+                      - generic [ref=f33e314]: 새 창 열림
+                  - link "&quot;삼전닉스 보복?&quot;…'애플식 <mark>환율</mark>'에 韓 아이폰 듀오 美보다 10% 비싸의 이미지 새 창 열림" [ref=f33e315] [cursor=pointer]:
+                    - /url: https://www.news1.kr/it-science/mobile/6286661
+                    - img "&quot;삼전닉스 보복?&quot;…'애플식 <mark>환율</mark>'에 韓 아이폰 듀오 美보다 10% 비싸의 이미지" [ref=f33e317]
+                    - generic [ref=f33e319]: 새 창 열림
+              - generic [ref=f33e321]:
+                - generic [ref=f33e322]:
+                  - generic [ref=f33e323]:
+                    - link "국민일보의 프로필 이미지 새 창 열림" [ref=f33e325] [cursor=pointer]:
+                      - /url: https://media.naver.com/press/005
+                      - img "국민일보의 프로필 이미지" [ref=f33e328]
+                      - generic [ref=f33e329]: 새 창 열림
+                    - link "국민일보 새 창 열림" [ref=f33e332] [cursor=pointer]:
+                      - /url: https://media.naver.com/press/005
+                      - generic [ref=f33e333]: 국민일보
+                      - generic [ref=f33e334]: 새 창 열림
+                    - generic [ref=f33e337]:
+                      - generic [ref=f33e339]: 1일 전
+                      - link "네이버뉴스 새 창 열림" [ref=f33e344] [cursor=pointer]:
+                        - /url: https://n.news.naver.com/mnews/article/005/0001872084?sid=105
+                        - generic [ref=f33e345]: 네이버뉴스
+                        - generic [ref=f33e346]: 새 창 열림
+                  - button "옵션 메뉴 열기" [ref=f33e348] [cursor=pointer]
+                - generic [ref=f33e353]:
+                  - generic [ref=f33e354]:
+                    - link "‘애플식 환율’ 1500원? 한국서 80만원 더 비싼 ‘접는 아이폰’ 새 창 열림" [ref=f33e355] [cursor=pointer]:
+                      - /url: https://www.kmib.co.kr/article/view.asp?arcid=9000010794&cp=nv
+                      - generic [ref=f33e356]:
+                        - text: ‘애플식
+                        - mark [ref=f33e357]: 환율
+                        - text: ’ 1500원? 한국서 80만원 더 비싼 ‘접는 아이폰’
+                      - generic [ref=f33e358]: 새 창 열림
+                    - link "세금을 제외하고 비교해도 국내 가격에는 실제 원·달러 환율보다 100원 이상 높은 달러당 1450~1500원 수준의 이른바 ‘애플식 환율’이 적용됐다는 분석이 나온다. 10일(한국시간) 애플이 공개한 아이폰 듀오의 국내 출고가는 256GB 329만원, 512GB 359만원, 1TB 419만원, 2TB 509만원이다. 미국에서는... 새 창 열림" [ref=f33e359] [cursor=pointer]:
+                      - /url: https://www.kmib.co.kr/article/view.asp?arcid=9000010794&cp=nv
+                      - generic [ref=f33e360]:
+                        - text: 세금을 제외하고 비교해도 국내 가격에는 실제 원·달러
+                        - mark [ref=f33e361]: 환율
+                        - text: 보다 100원 이상 높은 달러당 1450~1500원 수준의 이른바 ‘애플식
+                        - mark [ref=f33e362]: 환율
+                        - text: ’이 적용됐다는 분석이 나온다. 10일(한국시간) 애플이 공개한 아이폰 듀오의 국내 출고가는 256GB 329만원, 512GB 359만원, 1TB 419만원, 2TB 509만원이다. 미국에서는...
+                      - generic [ref=f33e363]: 새 창 열림
+                  - link "‘애플식 <mark>환율</mark>’ 1500원? 한국서 80만원 더 비싼 ‘접는 아이폰’의 이미지 새 창 열림" [ref=f33e364] [cursor=pointer]:
+                    - /url: https://www.kmib.co.kr/article/view.asp?arcid=9000010794&cp=nv
+                    - img "‘애플식 <mark>환율</mark>’ 1500원? 한국서 80만원 더 비싼 ‘접는 아이폰’의 이미지" [ref=f33e366]
+                    - generic [ref=f33e368]: 새 창 열림
+                - generic [ref=f33e372]:
+                  - link "아이폰 듀오, 韓서 사면 61만원 비싸다...'애플식 환율' 적용 탓? 새 창 열림" [ref=f33e373] [cursor=pointer]:
+                    - /url: https://www.dailian.co.kr/news/view/1688716/?sc=Naver
+                    - generic [ref=f33e374]:
+                      - text: 아이폰 듀오, 韓서 사면 61만원 비싸다...'애플식
+                      - mark [ref=f33e375]: 환율
+                      - text: "' 적용 탓?"
+                    - generic [ref=f33e376]: 새 창 열림
+                  - generic [ref=f33e378]:
+                    - generic [ref=f33e379]: 데일리안
+                    - generic [ref=f33e383]:
+                      - generic [ref=f33e385]: 1일 전
+                      - link "네이버뉴스 새 창 열림" [ref=f33e390] [cursor=pointer]:
+                        - /url: https://n.news.naver.com/mnews/article/119/0003131184?sid=105
+                        - generic [ref=f33e391]: 네이버뉴스
+                        - generic [ref=f33e392]: 새 창 열림
+              - generic [ref=f33e394]:
+                - generic [ref=f33e395]:
+                  - generic [ref=f33e396]:
+                    - link "뉴시스의 프로필 이미지 새 창 열림" [ref=f33e398] [cursor=pointer]:
+                      - /url: https://media.naver.com/press/003
+                      - img "뉴시스의 프로필 이미지" [ref=f33e401]
+                      - generic [ref=f33e402]: 새 창 열림
+                    - link "뉴시스 새 창 열림" [ref=f33e405] [cursor=pointer]:
+                      - /url: https://media.naver.com/press/003
+                      - generic [ref=f33e406]: 뉴시스
+                      - generic [ref=f33e407]: 새 창 열림
+                    - generic [ref=f33e410]:
+                      - generic [ref=f33e412]: 19시간 전
+                      - link "네이버뉴스 새 창 열림" [ref=f33e417] [cursor=pointer]:
+                        - /url: https://n.news.naver.com/mnews/article/003/0014183105?sid=101
+                        - generic [ref=f33e418]: 네이버뉴스
+                        - generic [ref=f33e419]: 새 창 열림
+                  - button "옵션 메뉴 열기" [ref=f33e421] [cursor=pointer]
+                - generic [ref=f33e426]:
+                  - generic [ref=f33e427]:
+                    - link "원·달러 환율, 3.1원 오른 1339.2원 마감 새 창 열림" [ref=f33e428] [cursor=pointer]:
+                      - /url: https://www.newsis.com/view/NISX20260910_0003784770
+                      - generic [ref=f33e429]:
+                        - text: 원·달러
+                        - mark [ref=f33e430]: 환율
+                        - text: ", 3.1원 오른 1339.2원 마감"
+                      - generic [ref=f33e431]: 새 창 열림
+                    - link "국제 유가가 배럴당 100달러를 다시 돌파한 가운데 원·달러 환율이 상승 마감했다. 10일 서울 외환시장에 따르면 이날 원·달러 환율은 3.1원 오른 1339.2원으로 거래를 마무리했다. 주요 6개국 통화 대비 달러 가치를 나타내는 달러인덱스는 오후 4시30분 98.73으로 전날(98.82)보다 하락했다. 중동 불안에 국제... 새 창 열림" [ref=f33e432] [cursor=pointer]:
+                      - /url: https://www.newsis.com/view/NISX20260910_0003784770
+                      - generic [ref=f33e433]:
+                        - text: 국제 유가가 배럴당 100달러를 다시 돌파한 가운데 원·달러
+                        - mark [ref=f33e434]: 환율
+                        - text: 이 상승 마감했다. 10일 서울 외환시장에 따르면 이날 원·달러
+                        - mark [ref=f33e435]: 환율
+                        - text: 은 3.1원 오른 1339.2원으로 거래를 마무리했다. 주요 6개국 통화 대비 달러 가치를 나타내는 달러인덱스는 오후 4시30분 98.73으로 전날(98.82)보다 하락했다. 중동 불안에 국제...
+                      - generic [ref=f33e436]: 새 창 열림
+                  - link "원·달러 <mark>환율</mark>, 3.1원 오른 1339.2원 마감의 이미지 새 창 열림" [ref=f33e437] [cursor=pointer]:
+                    - /url: https://www.newsis.com/view/NISX20260910_0003784770
+                    - img "원·달러 <mark>환율</mark>, 3.1원 오른 1339.2원 마감의 이미지" [ref=f33e439]
+                    - generic [ref=f33e441]: 새 창 열림
+                - generic [ref=f33e444]:
+                  - generic [ref=f33e445]:
+                    - link "[달러·원] 환율 3.1원 오른 1339.2원 (15:30 기준) 새 창 열림" [ref=f33e446] [cursor=pointer]:
+                      - /url: https://www.news1.kr/finance/market-exr/6286575
+                      - generic [ref=f33e447]:
+                        - text: "[달러·원]"
+                        - mark [ref=f33e448]: 환율
+                        - text: 3.1원 오른 1339.2원 (15:30 기준)
+                      - generic [ref=f33e449]: 새 창 열림
+                    - generic [ref=f33e451]:
+                      - generic [ref=f33e452]: 뉴스1
+                      - generic [ref=f33e454]:
+                        - generic [ref=f33e456]: 20시간 전
+                        - link "네이버뉴스 새 창 열림" [ref=f33e461] [cursor=pointer]:
+                          - /url: https://n.news.naver.com/mnews/article/421/0009163391?sid=101
+                          - generic [ref=f33e462]: 네이버뉴스
+                          - generic [ref=f33e463]: 새 창 열림
+                  - generic [ref=f33e464]:
+                    - link "원·달러 환율, 3.1원 오른 1339.2원 새 창 열림" [ref=f33e465] [cursor=pointer]:
+                      - /url: https://biz.chosun.com/policy/policy_sub/2026/09/10/W3SO7NVSI5FCHGHPEQG3ULD6IU/?utm_source=naver&utm_medium=original&utm_campaign=biz
+                      - generic [ref=f33e466]:
+                        - text: 원·달러
+                        - mark [ref=f33e467]: 환율
+                        - text: ", 3.1원 오른 1339.2원"
+                      - generic [ref=f33e468]: 새 창 열림
+                    - generic [ref=f33e470]:
+                      - generic [ref=f33e471]: 조선비즈
+                      - generic [ref=f33e473]:
+                        - generic [ref=f33e475]: 20시간 전
+                        - link "네이버뉴스 새 창 열림" [ref=f33e480] [cursor=pointer]:
+                          - /url: https://n.news.naver.com/mnews/article/366/0001191594?sid=101
+                          - generic [ref=f33e481]: 네이버뉴스
+                          - generic [ref=f33e482]: 새 창 열림
+                - link "관련뉴스 전체보기" [ref=f33e485] [cursor=pointer]:
+                  - /url: "?de=&docid=0030014183105&ds=&field=0&mynews=0&news_office_checked=&nso=so%3Ar%2Cp%3Aall%2Ca%3Aall&office_section_code=0&office_type=0&pd=-1&photo=0&qdt=0&query=%ED%99%98%EC%9C%A8&related=1&sm=tab_tnw&sort=0&ssc=tab.news.all"
+              - generic [ref=f33e487]:
+                - generic [ref=f33e488]:
+                  - generic [ref=f33e489]:
+                    - link "MBC의 프로필 이미지 새 창 열림" [ref=f33e491] [cursor=pointer]:
+                      - /url: https://media.naver.com/press/214
+                      - img "MBC의 프로필 이미지" [ref=f33e494]
+                      - generic [ref=f33e495]: 새 창 열림
+                    - link "MBC 새 창 열림" [ref=f33e498] [cursor=pointer]:
+                      - /url: https://media.naver.com/press/214
+                      - generic [ref=f33e499]: MBC
+                      - generic [ref=f33e500]: 새 창 열림
+                    - generic [ref=f33e503]:
+                      - generic [ref=f33e505]: 15시간 전
+                      - link "네이버뉴스 새 창 열림" [ref=f33e510] [cursor=pointer]:
+                        - /url: https://n.news.naver.com/mnews/article/214/0001523260?sid=101
+                        - generic [ref=f33e511]: 네이버뉴스
+                        - generic [ref=f33e512]: 새 창 열림
+                  - button "옵션 메뉴 열기" [ref=f33e514] [cursor=pointer]
+                - generic [ref=f33e519]:
+                  - generic [ref=f33e520]:
+                    - link "두 달 만에 2백 원 떨어진 환율‥물가 숨통 트일까 새 창 열림" [ref=f33e521] [cursor=pointer]:
+                      - /url: https://imnews.imbc.com/replay/2026/nwdesk/article/6851023_37004.html
+                      - generic [ref=f33e522]:
+                        - text: 두 달 만에 2백 원 떨어진
+                        - mark [ref=f33e523]: 환율
+                        - text: ‥물가 숨통 트일까
+                      - generic [ref=f33e524]: 새 창 열림
+                    - link "◀ 앵커 ▶ 원달러 환율이 최근 두 달 사이에 2백 원 넘게 떨어졌습니다. 1천5백 원을 넘어 고공행진하던 환율이 빠르게 안정되면서, 물가 안정과 내수 경기 회복에도 도움이 될 것으로 보이는데요. 김민형 기자가 보도합니다. ◀ 리포트 ▶ 서울 남대문시장 수입상가입니다. 수입 커피 한 봉지 값이 1만 원... 새 창 열림" [ref=f33e525] [cursor=pointer]:
+                      - /url: https://imnews.imbc.com/replay/2026/nwdesk/article/6851023_37004.html
+                      - generic [ref=f33e526]:
+                        - text: ◀ 앵커 ▶ 원달러
+                        - mark [ref=f33e527]: 환율
+                        - text: 이 최근 두 달 사이에 2백 원 넘게 떨어졌습니다. 1천5백 원을 넘어 고공행진하던
+                        - mark [ref=f33e528]: 환율
+                        - text: 이 빠르게 안정되면서, 물가 안정과 내수 경기 회복에도 도움이 될 것으로 보이는데요. 김민형 기자가 보도합니다. ◀ 리포트 ▶ 서울 남대문시장 수입상가입니다. 수입 커피 한 봉지 값이 1만 원...
+                      - generic [ref=f33e529]: 새 창 열림
+                  - link "두 달 만에 2백 원 떨어진 <mark>환율</mark>‥물가 숨통 트일까의 이미지 새 창 열림" [ref=f33e530] [cursor=pointer]:
+                    - /url: https://imnews.imbc.com/replay/2026/nwdesk/article/6851023_37004.html
+                    - img "두 달 만에 2백 원 떨어진 <mark>환율</mark>‥물가 숨통 트일까의 이미지" [ref=f33e532]
+                    - generic [ref=f33e536]: 새 창 열림
+              - link "언론사가 선정한 주요기사 혹은 심층기획 기사입니다. 새 창 열림" [ref=f33e539] [cursor=pointer]:
+                - /url: https://news.naver.com/main/static/channelPromotion.html
+                - generic [ref=f33e540]: 언론사가 선정한 주요기사 혹은 심층기획 기사입니다.
+                - generic [ref=f33e544]: 새 창 열림
+            - link "뉴스 더보기" [ref=f33e546] [cursor=pointer]:
+              - /url: "?nso=so%3Ar%2Cp%3Aall%2Ca%3Aall&qdt=0&query=%ED%99%98%EC%9C%A8&sm=tab_smr&sort=0&ssc=tab.news.all"
+              - generic [ref=f33e551]:
+                - generic [ref=f33e552]: 뉴스
+                - generic [ref=f33e553]: 더보기
+          - generic [ref=f33e560]:
+            - generic [ref=f33e561]:
+              - generic [ref=f33e562]:
+                - heading "환율 관련 광고" [level=2] [ref=f33e563]:
+                  - generic [ref=f33e564]: 환율
+                  - generic [ref=f33e565]: 관련 광고
+                - button "이 광고가 표시된 이유" [ref=f33e566] [cursor=pointer]
+              - link "등록 안내" [ref=f33e569] [cursor=pointer]:
+                - /url: //saedu.naver.com/adbiz/searchad/clickChoice.naver
+            - generic [ref=f33e570]:
+              - list [ref=f33e571]:
+                - listitem [ref=f33e572]:
+                  - link [ref=f33e573] [cursor=pointer]:
+                    - /url: https://ader.naver.com/v1/RGbXxzE1WsYjqAtdE58pj3oxhT73pwRTkCffIqO1YaZAx1GA3z6TwvBY3Jy0FFcDWX9MkVhYNsIyNdO43OYUoSyLsrF22LS7Nij0POH06e4z1l7Lht6xC0b-Hk_th-k4DiNFRODbWdtOxXRcTNkQQlyqxkMkFBUvqw0q45n09rb7mwru170p9YaBxo51TQZNiN99VXMgeWD4yOAnFJLLDQzVJ3fgq8Uf0CTEgTkzZ5av-4R5ySRRVV1L0U6RMWYrUFfxJwJ_MjkiwZ5Ls1kD2UON9CTT44LT9eyw1OP204kBRnM31sI9lU9hoU2XUsBqvT7arsz4jVq2iyDLSgeGvhpLxfMX3dIo8lFX1LI2dNE=?c=naver.search.pc.plsearch&t=0
+                    - img "링크이미지" [ref=f33e574]
+                  - generic [ref=f33e575]:
+                    - generic [ref=f33e576]:
+                      - generic [ref=f33e577]:
+                        - link [ref=f33e578] [cursor=pointer]:
+                          - /url: https://ader.naver.com/v1/RGbXxzE1WsYjqAtdE58pj3oxhT73pwRTkCffIqO1YaZAx1GA3z6TwvBY3Jy0FFcDWX9MkVhYNsIyNdO43OYUoSyLsrF22LS7Nij0POH06e4z1l7Lht6xC0b-Hk_th-k4FC55ppTC1YLJ-1mladEnbxCWNuiJ2wGX2qWMy-i1xEstaIjTUUjmtq2p_X_iZ5k5ng6bnYKQ7fzQ_ghMZSkHhdVWOv6IVeHM84m9jtrd0QDufnRSFe7FNmxpdtd4O68J-pRX8SKpTkcR6kHdOpsa5UvzLETPblA0_u2SUJrTc4e9k6nj8ZbzVhgJ7iX2Ycz5jmAgki6O-oVWbBKOm1APnA==?c=naver.search.pc.plsearch&t=0
+                          - img "favicon" [ref=f33e579]
+                        - img "광고" [ref=f33e580]
+                        - link "e-moneybox.co.kr/" [ref=f33e585] [cursor=pointer]:
+                          - /url: https://ader.naver.com/v1/RGbXxzE1WsYjqAtdE58pj3oxhT73pwRTkCffIqO1YaZAx1GA3z6TwvBY3Jy0FFcDWX9MkVhYNsIyNdO43OYUoSyLsrF22LS7Nij0POH06e4z1l7Lht6xC0b-Hk_th-k4FC55ppTC1YLJ-1mladEnbxCWNuiJ2wGX2qWMy-i1xEstaIjTUUjmtq2p_X_iZ5k5ng6bnYKQ7fzQ_ghMZSkHhdVWOv6IVeHM84m9jtrd0QDufnRSFe7FNmxpdtd4O68J-pRX8SKpTkcR6kHdOpsa5UvzLETPblA0_u2SUJrTc4e9k6nj8ZbzVhgJ7iX2Ycz5jmAgki6O-oVWbBKOm1APnA==?c=naver.search.pc.plsearch&t=0
+                      - link "머니박스 해운대 환전소" [ref=f33e586] [cursor=pointer]:
+                        - /url: https://ader.naver.com/v1/RGbXxzE1WsYjqAtdE58pj3oxhT73pwRTkCffIqO1YaZAx1GA3z6TwvBY3Jy0FFcDWX9MkVhYNsIyNdO43OYUoSyLsrF22LS7Nij0POH06e4z1l7Lht6xC0b-Hk_th-k4FC55ppTC1YLJ-1mladEnbxCWNuiJ2wGX2qWMy-i1xEstaIjTUUjmtq2p_X_iZ5k5ng6bnYKQ7fzQ_ghMZSkHhdVWOv6IVeHM84m9jtrd0QDufnRSFe7FNmxpdtd4O68J-pRX8SKpTkcR6kHdOpsa5UvzLETPblA0_u2SUJrTc4e9k6nj8ZbzVhgJ7iX2Ycz5jmAgki6O-oVWbBKOm1APnA==?c=naver.search.pc.plsearch&t=0
+                    - link [ref=f33e589] [cursor=pointer]:
+                      - /url: https://ader.naver.com/v1/RGbXxzE1WsYjqAtdE58pj3oxhT73pwRTkCffIqO1YaZAx1GA3z6TwvBY3Jy0FFcDWX9MkVhYNsIyNdO43OYUoSyLsrF22LS7Nij0POH06e4z1l7Lht6xC0b-Hk_th-k4FC55ppTC1YLJ-1mladEnbxCWNuiJ2wGX2qWMy-i1xEstaIjTUUjmtq2p_X_iZ5k5ng6bnYKQ7fzQ_ghMZSkHhdVWOv6IVeHM84m9jtrd0QDufnRSFe7FNmxpdtd4O68J-pRX8SKpTkcR6kHdOpsa5UvzLETPblA0_u2SUJrTc4e9k6nj8ZbzVhgJ7iX2Ycz5jmAgki6O-oVWbBKOm1APnA==?c=naver.search.pc.plsearch&t=0
+                      - text: 세계화폐 환전, 안심 신속 정확 시스템
+                      - strong [ref=f33e590]: 환율
+                      - text: 정보제공, 예약서비스, 여행,사설환전소
+                - listitem [ref=f33e591]:
+                  - link [ref=f33e592] [cursor=pointer]:
+                    - /url: https://ader.naver.com/v1/AddUi7BM470oGvw75Z4t4RFUcFSQLBMmJxUsYV8gXQOq6azs9oyQrc80fhBeeHqu5z4uoXlWbiMAAFKTdlJ9dzsh8T21hJc54l8gplztNdtZCNMeonUUV-u9-UoCoNMH9PssQLi3gFtcEJV3vlOKbWa_PGn-Xx-utlMfYkkv0Mii1CKErBk20gMxMXBZHAG2yU_eUaoFJw5j6gYN5fwwTtsERSzFV24gBYY2GL7rQB17Ucb2a5Ft5K-f3Au6kEG09zq3vhtZdTHiunrsS0UV5Aro0vFCxf2SpJuQEftFQEq9E0zyyIvu8e6yrdzDjPzYAPQdRWPcbcshofr4NXYpbPPEO7H6wxPxHoYqhVBcPrBrsLDjIW5R554HXFOquwWbmLW3CgHbfsE_CR41TBoIDpZkAt-gnXmEA5jzdzDX5nI=?c=naver.search.pc.plsearch&t=0
+                    - img "링크이미지" [ref=f33e593]
+                  - generic [ref=f33e594]:
+                    - generic [ref=f33e595]:
+                      - generic [ref=f33e596]:
+                        - link [ref=f33e597] [cursor=pointer]:
+                          - /url: https://ader.naver.com/v1/SjtvIr2mTuzZuhwwbaapMtVMc1qv4glJUzjoTdsdyEEB98hqaf18TEqSf14hJHT7tKtl5_pl_XyXDedSvRIv_1slt0wWTszEkBluv05LDNnTxcoGcBtIEL9XZXFAZI02gAQJV41igaOCSmg9VgfuxvxaEfIx5fSrK_MFJtjQ97KHTPoZ-HkHrM5gfFwgiiZetY51ImswvKINb6QsA7sVQaPN2S_2asTPQZYbCtVeR37LEHpPnPxa90Gyn9AVdYLAO-CL_K8D5QbWas_TC16spKxT6oRGZD6dF3ZEe0V1TXjL8M7wZYi4RM2wLeqKyTECMzqDzJxuXYazZdPR_v6WBkTs2mkvyqEsSIHo6-n1l7BiAMWR2nOOnWfNSscRntnvaFgq-7dHt9e7zg42yYVs4kaE4NhvG6jCa4YyOkTKwn8=?c=naver.search.pc.plsearch&t=0
+                          - img "favicon" [ref=f33e598]
+                        - img "광고" [ref=f33e599]
+                        - link "바이블" [ref=f33e603] [cursor=pointer]:
+                          - /url: https://ader.naver.com/v1/SjtvIr2mTuzZuhwwbaapMtVMc1qv4glJUzjoTdsdyEEB98hqaf18TEqSf14hJHT7tKtl5_pl_XyXDedSvRIv_1slt0wWTszEkBluv05LDNnTxcoGcBtIEL9XZXFAZI02gAQJV41igaOCSmg9VgfuxvxaEfIx5fSrK_MFJtjQ97KHTPoZ-HkHrM5gfFwgiiZetY51ImswvKINb6QsA7sVQaPN2S_2asTPQZYbCtVeR37LEHpPnPxa90Gyn9AVdYLAO-CL_K8D5QbWas_TC16spKxT6oRGZD6dF3ZEe0V1TXjL8M7wZYi4RM2wLeqKyTECMzqDzJxuXYazZdPR_v6WBkTs2mkvyqEsSIHo6-n1l7BiAMWR2nOOnWfNSscRntnvaFgq-7dHt9e7zg42yYVs4kaE4NhvG6jCa4YyOkTKwn8=?c=naver.search.pc.plsearch&t=0
+                        - link "buyble.ai" [ref=f33e605] [cursor=pointer]:
+                          - /url: https://ader.naver.com/v1/SjtvIr2mTuzZuhwwbaapMtVMc1qv4glJUzjoTdsdyEEB98hqaf18TEqSf14hJHT7tKtl5_pl_XyXDedSvRIv_1slt0wWTszEkBluv05LDNnTxcoGcBtIEL9XZXFAZI02gAQJV41igaOCSmg9VgfuxvxaEfIx5fSrK_MFJtjQ97KHTPoZ-HkHrM5gfFwgiiZetY51ImswvKINb6QsA7sVQaPN2S_2asTPQZYbCtVeR37LEHpPnPxa90Gyn9AVdYLAO-CL_K8D5QbWas_TC16spKxT6oRGZD6dF3ZEe0V1TXjL8M7wZYi4RM2wLeqKyTECMzqDzJxuXYazZdPR_v6WBkTs2mkvyqEsSIHo6-n1l7BiAMWR2nOOnWfNSscRntnvaFgq-7dHt9e7zg42yYVs4kaE4NhvG6jCa4YyOkTKwn8=?c=naver.search.pc.plsearch&t=0
+                      - link "바이블,구매업무의 모든 정보 구매업무를 더 가능하게" [ref=f33e606] [cursor=pointer]:
+                        - /url: https://ader.naver.com/v1/SjtvIr2mTuzZuhwwbaapMtVMc1qv4glJUzjoTdsdyEEB98hqaf18TEqSf14hJHT7tKtl5_pl_XyXDedSvRIv_1slt0wWTszEkBluv05LDNnTxcoGcBtIEL9XZXFAZI02gAQJV41igaOCSmg9VgfuxvxaEfIx5fSrK_MFJtjQ97KHTPoZ-HkHrM5gfFwgiiZetY51ImswvKINb6QsA7sVQaPN2S_2asTPQZYbCtVeR37LEHpPnPxa90Gyn9AVdYLAO-CL_K8D5QbWas_TC16spKxT6oRGZD6dF3ZEe0V1TXjL8M7wZYi4RM2wLeqKyTECMzqDzJxuXYazZdPR_v6WBkTs2mkvyqEsSIHo6-n1l7BiAMWR2nOOnWfNSscRntnvaFgq-7dHt9e7zg42yYVs4kaE4NhvG6jCa4YyOkTKwn8=?c=naver.search.pc.plsearch&t=0
+                    - link [ref=f33e609] [cursor=pointer]:
+                      - /url: https://ader.naver.com/v1/SjtvIr2mTuzZuhwwbaapMtVMc1qv4glJUzjoTdsdyEEB98hqaf18TEqSf14hJHT7tKtl5_pl_XyXDedSvRIv_1slt0wWTszEkBluv05LDNnTxcoGcBtIEL9XZXFAZI02gAQJV41igaOCSmg9VgfuxvxaEfIx5fSrK_MFJtjQ97KHTPoZ-HkHrM5gfFwgiiZetY51ImswvKINb6QsA7sVQaPN2S_2asTPQZYbCtVeR37LEHpPnPxa90Gyn9AVdYLAO-CL_K8D5QbWas_TC16spKxT6oRGZD6dF3ZEe0V1TXjL8M7wZYi4RM2wLeqKyTECMzqDzJxuXYazZdPR_v6WBkTs2mkvyqEsSIHo6-n1l7BiAMWR2nOOnWfNSscRntnvaFgq-7dHt9e7zg42yYVs4kaE4NhvG6jCa4YyOkTKwn8=?c=naver.search.pc.plsearch&t=0
+                      - text: 더나은 구매업무를 위한 당신의 직무 교과서,
+                      - strong [ref=f33e610]: 환율
+                      - text: /원자재/CPSM/현직자 세미나
+                    - list [ref=f33e611]:
+                      - listitem [ref=f33e612]:
+                        - link "세미나/밋업" [ref=f33e613] [cursor=pointer]:
+                          - /url: https://ader.naver.com/v1/RGbXxzE1WsYjqAtdE58pj3oxhT73pwRTkCffIqO1YabMlBg9G0r-tuWhe5HxMyKOiNb0XmGMMqGotCHHWjQbupeSY8_c4VAgNl8ZuEw8w3pK762l3lMlkk4DwmiPVgBw9K5uG-vvVPSzFAmRbYBCP_8TPvxjHO3BrBClgoviqrSA73bAK05573jBth6DmxKdFiFlVLKLKlOPUQXMQOmmBnUwjDtZ6r-JdeEaFGMFff6GY93EI71_MRUnkC1QbxSvQYfhURVw-NzvzGyM_p2NDSZ0f538n0uI5SYZwfigo-CAmnmPxYVp_ulkG6bspWSrtMsrIdyz19ENrMGFnowPEFlhDUSht33Ckz45qAE1TeU=?c=naver.search.pc.plsearch&t=0
+                      - listitem [ref=f33e614]:
+                        - link "라운지" [ref=f33e615] [cursor=pointer]:
+                          - /url: https://ader.naver.com/v1/RGbXxzE1WsYjqAtdE58pj3oxhT73pwRTkCffIqO1YaZAx1GA3z6TwvBY3Jy0FFcDIvJChonOEKDDQg9YKhj1CtftyYOW2vsZGP21iVx2zLX6vs2ivT0HCDUY24GLi0ZYIFanrO3ulHFc38wNU6NnCHYKz3Nwc8hkRiTbKCToYuW-S8sLWl0VYVvnv-1P99fw1me8u99ANKvCUiNoS7mV6AJECu9xkQBNJGidDk7RpfSed0F-osf4qqOVTUEkRBLoIeTD2BvFIIddVDLFsIplcGmpV-NObDWeFPZ2QNJ8AzyqOXGnDEIiJWqdaQUfo5M7uCLxsQ1xNYdrcUsTZRZtKe0n4mY3Gpbztx1kVNaoQmA=?c=naver.search.pc.plsearch&t=0
+                      - listitem [ref=f33e616]:
+                        - link "칼럼/교육" [ref=f33e617] [cursor=pointer]:
+                          - /url: https://ader.naver.com/v1/RGbXxzE1WsYjqAtdE58pj3oxhT73pwRTkCffIqO1YaZbnNP1bD0-iqMxipoHVPJ-IAPgb_CdOsrDgYIZjHUSM7M7pe05JsBb-gI4XP2FruktrN8PWiTkUDzUyuWoOVSW0SKzyPtYkDgSum6gWwHD7lLpaJXKJfKMpLQNdmMKKIhG733Ss_m_tCSmSXmJY0VsVnhWmRwnfWiqyQYlyG9ogVQHr3PDU3LCSnsGp9yVA-DrbrCyLt-3MVHixzgrDdo24xZa8oKvjiSEITT4CuGuh0yqy-aZDNNOFBtI3p_wKF7yiMUO90o8wH0WaU29XGFU_qILCDoN8CXKUae-IlpMJYd_cLRvCo0nuBe33h_6MzE=?c=naver.search.pc.plsearch&t=0
+                      - listitem [ref=f33e618]:
+                        - link "서비스소개" [ref=f33e619] [cursor=pointer]:
+                          - /url: https://ader.naver.com/v1/RGbXxzE1WsYjqAtdE58pj3oxhT73pwRTkCffIqO1YabMlBg9G0r-tuWhe5HxMyKOiNb0XmGMMqGotCHHWjQbujONWPumenij3S1o_ODJQcbpfEXQRFb1VHHDFcJHXEhVu2GmJOkX0y7A48dStFGO24Dbn38VkPsgx7-6W0yJ9yyjfGmPLXW-nxryYt42rqxD7r-sGAFdPAHBI_LbORRLXEyivdBaBOoa811cAbpCnX9kgrCg9XP7gEFHy_9pJzf6_f6oavoJMaJOh_z2oK1tUgzBy8e7xGk0gZNe3cS2al7ZlmJfOcCJ1g9QCIg_b51JKfQ-Bl6Fox1rPNY6tAw5eVkFrZUyH6KCWCIg1tyFvfA=?c=naver.search.pc.plsearch&t=0
+                - listitem [ref=f33e620]:
+                  - link [ref=f33e621] [cursor=pointer]:
+                    - /url: https://ader.naver.com/v1/RGbXxzE1WsYjqAtdE58pj3oxhT73pwRTkCffIqO1YabGnXd4S2ZwVy9lciWMhVLrMVPN8Y9Sbr3E1pFsCguSLBKya1DoVNGGgySoVHL3M-VtYaGn0JIouykrdXCZ0JUkNL3gUYPrXB91ryrv8nnUEEToYBOTam3fnn4felL1ZlX1FooR-gspKdtQGVWVW3g0oAgka6ayvEDpNZAgGHZJNuN8D1bJrt939sDhfvT5IKViDs6AxX8PZj26n8VG3_p1v2tewyMHG2UD4oXIRZpQSiBxw7dcbmXa4CbVclOzeCVOxCcPnTmcSWjgS01LaR5tOn8ATY9psyUTEIfRU7sKxfiCRmBGjjD-G5ZTv4yYUUCd3K3_CT62MfVNtVqzomwf?c=naver.search.pc.plsearch&t=0
+                    - img "링크이미지" [ref=f33e622]
+                  - generic [ref=f33e623]:
+                    - generic [ref=f33e624]:
+                      - generic [ref=f33e625]:
+                        - link [ref=f33e626] [cursor=pointer]:
+                          - /url: https://ader.naver.com/v1/RGbXxzE1WsYjqAtdE58pj3oxhT73pwRTkCffIqO1YabGnXd4S2ZwVy9lciWMhVLrMVPN8Y9Sbr3E1pFsCguSLBKya1DoVNGGgySoVHL3M-VtYaGn0JIouykrdXCZ0JUkNL3gUYPrXB91ryrv8nnUEOn4ZWCCW2dEn5lEt5Du7HCifHTshhP-99jT8OGh_3Feo2jNZFGQp90nLttOdw6hmSpnIjmw5cbWvDZ9NU4o3ccGupU4uyB8FGqiHGgphwnOUmIJyAhEE1kniynJRuWfLVIrVktHuQcUmTBPpynTtPyWA-4CNfswlVKFMqmYz3Kr2Erz9d77P7_AZBiPUhvHWPVGXiup0HooT8Ge4lSYcgE=?c=naver.search.pc.plsearch&t=0
+                          - img "favicon" [ref=f33e627]
+                        - img "광고" [ref=f33e628]
+                        - link "고투엔젯" [ref=f33e632] [cursor=pointer]:
+                          - /url: https://ader.naver.com/v1/RGbXxzE1WsYjqAtdE58pj3oxhT73pwRTkCffIqO1YabGnXd4S2ZwVy9lciWMhVLrMVPN8Y9Sbr3E1pFsCguSLBKya1DoVNGGgySoVHL3M-VtYaGn0JIouykrdXCZ0JUkNL3gUYPrXB91ryrv8nnUEOn4ZWCCW2dEn5lEt5Du7HCifHTshhP-99jT8OGh_3Feo2jNZFGQp90nLttOdw6hmSpnIjmw5cbWvDZ9NU4o3ccGupU4uyB8FGqiHGgphwnOUmIJyAhEE1kniynJRuWfLVIrVktHuQcUmTBPpynTtPyWA-4CNfswlVKFMqmYz3Kr2Erz9d77P7_AZBiPUhvHWPVGXiup0HooT8Ge4lSYcgE=?c=naver.search.pc.plsearch&t=0
+                        - link "go2nz.com" [ref=f33e634] [cursor=pointer]:
+                          - /url: https://ader.naver.com/v1/RGbXxzE1WsYjqAtdE58pj3oxhT73pwRTkCffIqO1YabGnXd4S2ZwVy9lciWMhVLrMVPN8Y9Sbr3E1pFsCguSLBKya1DoVNGGgySoVHL3M-VtYaGn0JIouykrdXCZ0JUkNL3gUYPrXB91ryrv8nnUEOn4ZWCCW2dEn5lEt5Du7HCifHTshhP-99jT8OGh_3Feo2jNZFGQp90nLttOdw6hmSpnIjmw5cbWvDZ9NU4o3ccGupU4uyB8FGqiHGgphwnOUmIJyAhEE1kniynJRuWfLVIrVktHuQcUmTBPpynTtPyWA-4CNfswlVKFMqmYz3Kr2Erz9d77P7_AZBiPUhvHWPVGXiup0HooT8Ge4lSYcgE=?c=naver.search.pc.plsearch&t=0
+                      - link "뉴질랜드 대학진학 고투엔젯 뉴질랜드 모든 대학수속 무료 뉴질랜드유학진흥청 인증유학원" [ref=f33e635] [cursor=pointer]:
+                        - /url: https://ader.naver.com/v1/RGbXxzE1WsYjqAtdE58pj3oxhT73pwRTkCffIqO1YabGnXd4S2ZwVy9lciWMhVLrMVPN8Y9Sbr3E1pFsCguSLBKya1DoVNGGgySoVHL3M-VtYaGn0JIouykrdXCZ0JUkNL3gUYPrXB91ryrv8nnUEOn4ZWCCW2dEn5lEt5Du7HCifHTshhP-99jT8OGh_3Feo2jNZFGQp90nLttOdw6hmSpnIjmw5cbWvDZ9NU4o3ccGupU4uyB8FGqiHGgphwnOUmIJyAhEE1kniynJRuWfLVIrVktHuQcUmTBPpynTtPyWA-4CNfswlVKFMqmYz3Kr2Erz9d77P7_AZBiPUhvHWPVGXiup0HooT8Ge4lSYcgE=?c=naver.search.pc.plsearch&t=0
+                    - link "뉴질랜드 대학교 무료수속, 전문대, 학사, 대학원전문, 졸업까지 1:1 관리 뉴질랜드 현지에서 1:1 케어하는 현지유학원" [ref=f33e638] [cursor=pointer]:
+                      - /url: https://ader.naver.com/v1/RGbXxzE1WsYjqAtdE58pj3oxhT73pwRTkCffIqO1YabGnXd4S2ZwVy9lciWMhVLrMVPN8Y9Sbr3E1pFsCguSLBKya1DoVNGGgySoVHL3M-VtYaGn0JIouykrdXCZ0JUkNL3gUYPrXB91ryrv8nnUEOn4ZWCCW2dEn5lEt5Du7HCifHTshhP-99jT8OGh_3Feo2jNZFGQp90nLttOdw6hmSpnIjmw5cbWvDZ9NU4o3ccGupU4uyB8FGqiHGgphwnOUmIJyAhEE1kniynJRuWfLVIrVktHuQcUmTBPpynTtPyWA-4CNfswlVKFMqmYz3Kr2Erz9d77P7_AZBiPUhvHWPVGXiup0HooT8Ge4lSYcgE=?c=naver.search.pc.plsearch&t=0
+                - listitem [ref=f33e639]:
+                  - link [ref=f33e640] [cursor=pointer]:
+                    - /url: https://ader.naver.com/v1/_x0-wXUcp31ZqWtsaLNXmpvAXHjUQcmbtq9IMw5ILzuwDTzmVttrgIO3PYZA6DMPZ1OIFq26MVs1V-tUQWffais9LE7WpxV4pj6Zvoxs7oLfMq_gm0v_8dlbfWiMJLYg7C9LioGGLsqzGdB4v-fOi8NQDXRdxWEMYKLYXecE-b3Yd0GiIACqf2u0EWWlxDN5TbHPT_YPozBAFdnrBmm9A7THPJvovVkXPqyA8TXRzz5Y73zS8N5-brJrbep5LI7gqaIOqM31MzL9sURxAAMNC6aTjzDOQCN3uAm9G3oc_J6c6OO5lKbAejdrzHy_AUIXsVX-o5B9sfEv6_iW-P6v2zBsHfYcVrLRAaw6t4ENXnF7GphvTCHrijZ3NJHXfoMMTtWmEWlB2OStr2WsiEDJ7-dBFUoZKky1-c73FbrSsSpUh-oO5iP-2l7xtBlzXn4VL1NDHAJa-_qmXKeHfZlS8nxf28f3xN6dNaNDAakGkRDdEE6mRxh9LS91b20i70bRS4SGDik7jHJycMqaXzdOb_yF-pNJ2ExUIsELVBaHjOqEHmlDUfyIBqgXJVtCIlK8?c=naver.search.pc.plsearch&t=0
+                    - img "링크이미지" [ref=f33e641]
+                  - generic [ref=f33e642]:
+                    - generic [ref=f33e643]:
+                      - generic [ref=f33e644]:
+                        - link [ref=f33e645] [cursor=pointer]:
+                          - /url: https://ader.naver.com/v1/0mEbbrhtP8BhIL9b_IInrCzv1OMnEiXavRWM4T8FyDRn_ImU9N-jBztAWqMXQidSZTA7-CI1rWkvZ2S6nvgqi-CkbY-fLsU9KY3Xb-gRqD5A8b6HcVoiXa7u9cc45z9Ia_WIhrjBKpcqxssihBE6Quc7D9nRZvW_8CivgcmDHcaTSvOKOfbCL_bHaWwIPX4X9dxY47NPV8iCCvbawvwFJoogCZ8-Z9mqneUq4ojfKQpDZJG2TalQumS0GTmkYXq_glOwNGW-LbWdBstsusUlLbJIp2EmwPgcEGoM8TCYHKrc4AdjWqte_pmbD3TSUTOGFalCnDfD0qBqrOSTN62SY_K_5BZAWM0D6twFYfJxmXWOIZShi6dL5wNyKreq5p0fx92KNKJnP32N3maC7mE9Y1OImcLSrVe3fx898sF-O2W1DSKv8v1499dxF5gLGe9Q5LcYb8pwlLdMQHOmGdoXNGFHt2SiDUT8Sy-21c_6P98W169uKtWChlZEt6UoQtLe69Ns6wbA64vg7mU8Qc_WtpQCbmDVx7YIGYjRIzFlOjE=?c=naver.search.pc.plsearch&t=0
+                          - img "favicon" [ref=f33e646]
+                        - img "광고" [ref=f33e647]
+                        - link "모햇" [ref=f33e651] [cursor=pointer]:
+                          - /url: https://ader.naver.com/v1/0mEbbrhtP8BhIL9b_IInrCzv1OMnEiXavRWM4T8FyDRn_ImU9N-jBztAWqMXQidSZTA7-CI1rWkvZ2S6nvgqi-CkbY-fLsU9KY3Xb-gRqD5A8b6HcVoiXa7u9cc45z9Ia_WIhrjBKpcqxssihBE6Quc7D9nRZvW_8CivgcmDHcaTSvOKOfbCL_bHaWwIPX4X9dxY47NPV8iCCvbawvwFJoogCZ8-Z9mqneUq4ojfKQpDZJG2TalQumS0GTmkYXq_glOwNGW-LbWdBstsusUlLbJIp2EmwPgcEGoM8TCYHKrc4AdjWqte_pmbD3TSUTOGFalCnDfD0qBqrOSTN62SY_K_5BZAWM0D6twFYfJxmXWOIZShi6dL5wNyKreq5p0fx92KNKJnP32N3maC7mE9Y1OImcLSrVe3fx898sF-O2W1DSKv8v1499dxF5gLGe9Q5LcYb8pwlLdMQHOmGdoXNGFHt2SiDUT8Sy-21c_6P98W169uKtWChlZEt6UoQtLe69Ns6wbA64vg7mU8Qc_WtpQCbmDVx7YIGYjRIzFlOjE=?c=naver.search.pc.plsearch&t=0
+                        - link "mohaet.com/" [ref=f33e653] [cursor=pointer]:
+                          - /url: https://ader.naver.com/v1/0mEbbrhtP8BhIL9b_IInrCzv1OMnEiXavRWM4T8FyDRn_ImU9N-jBztAWqMXQidSZTA7-CI1rWkvZ2S6nvgqi-CkbY-fLsU9KY3Xb-gRqD5A8b6HcVoiXa7u9cc45z9Ia_WIhrjBKpcqxssihBE6Quc7D9nRZvW_8CivgcmDHcaTSvOKOfbCL_bHaWwIPX4X9dxY47NPV8iCCvbawvwFJoogCZ8-Z9mqneUq4ojfKQpDZJG2TalQumS0GTmkYXq_glOwNGW-LbWdBstsusUlLbJIp2EmwPgcEGoM8TCYHKrc4AdjWqte_pmbD3TSUTOGFalCnDfD0qBqrOSTN62SY_K_5BZAWM0D6twFYfJxmXWOIZShi6dL5wNyKreq5p0fx92KNKJnP32N3maC7mE9Y1OImcLSrVe3fx898sF-O2W1DSKv8v1499dxF5gLGe9Q5LcYb8pwlLdMQHOmGdoXNGFHt2SiDUT8Sy-21c_6P98W169uKtWChlZEt6UoQtLe69Ns6wbA64vg7mU8Qc_WtpQCbmDVx7YIGYjRIzFlOjE=?c=naver.search.pc.plsearch&t=0
+                      - link "에너지 투자 플랫폼 모햇" [ref=f33e654] [cursor=pointer]:
+                        - /url: https://ader.naver.com/v1/0mEbbrhtP8BhIL9b_IInrCzv1OMnEiXavRWM4T8FyDRn_ImU9N-jBztAWqMXQidSZTA7-CI1rWkvZ2S6nvgqi-CkbY-fLsU9KY3Xb-gRqD5A8b6HcVoiXa7u9cc45z9Ia_WIhrjBKpcqxssihBE6Quc7D9nRZvW_8CivgcmDHcaTSvOKOfbCL_bHaWwIPX4X9dxY47NPV8iCCvbawvwFJoogCZ8-Z9mqneUq4ojfKQpDZJG2TalQumS0GTmkYXq_glOwNGW-LbWdBstsusUlLbJIp2EmwPgcEGoM8TCYHKrc4AdjWqte_pmbD3TSUTOGFalCnDfD0qBqrOSTN62SY_K_5BZAWM0D6twFYfJxmXWOIZShi6dL5wNyKreq5p0fx92KNKJnP32N3maC7mE9Y1OImcLSrVe3fx898sF-O2W1DSKv8v1499dxF5gLGe9Q5LcYb8pwlLdMQHOmGdoXNGFHt2SiDUT8Sy-21c_6P98W169uKtWChlZEt6UoQtLe69Ns6wbA64vg7mU8Qc_WtpQCbmDVx7YIGYjRIzFlOjE=?c=naver.search.pc.plsearch&t=0
+                    - link "지진희와 함께하는 모햇, 연 11%+4.9%의 이자를 매달 드려요 목돈 투자 고민된다면 모햇 태양광 에너지 투자로 매달 수익 받기" [ref=f33e657] [cursor=pointer]:
+                      - /url: https://ader.naver.com/v1/0mEbbrhtP8BhIL9b_IInrCzv1OMnEiXavRWM4T8FyDRn_ImU9N-jBztAWqMXQidSZTA7-CI1rWkvZ2S6nvgqi-CkbY-fLsU9KY3Xb-gRqD5A8b6HcVoiXa7u9cc45z9Ia_WIhrjBKpcqxssihBE6Quc7D9nRZvW_8CivgcmDHcaTSvOKOfbCL_bHaWwIPX4X9dxY47NPV8iCCvbawvwFJoogCZ8-Z9mqneUq4ojfKQpDZJG2TalQumS0GTmkYXq_glOwNGW-LbWdBstsusUlLbJIp2EmwPgcEGoM8TCYHKrc4AdjWqte_pmbD3TSUTOGFalCnDfD0qBqrOSTN62SY_K_5BZAWM0D6twFYfJxmXWOIZShi6dL5wNyKreq5p0fx92KNKJnP32N3maC7mE9Y1OImcLSrVe3fx898sF-O2W1DSKv8v1499dxF5gLGe9Q5LcYb8pwlLdMQHOmGdoXNGFHt2SiDUT8Sy-21c_6P98W169uKtWChlZEt6UoQtLe69Ns6wbA64vg7mU8Qc_WtpQCbmDVx7YIGYjRIzFlOjE=?c=naver.search.pc.plsearch&t=0
+                    - list [ref=f33e658]:
+                      - listitem [ref=f33e659]:
+                        - link "모햇소개" [ref=f33e660] [cursor=pointer]:
+                          - /url: https://ader.naver.com/v1/u0YNZYoFxP8A0TV0IWDSYA0Us1rWQulVk3evr-S0jY6CmviY14TPEkpwRtSCpKEotiFy3xW0WwUoqZymprHBh39jsIfbMgj8YMqqaMJj1wosyfDn85b_sPySI54f74xUI5QtiVcJ5XAGnbmhHFR-LMJlBDYOBunLM9-fKHTXZlfFgKrBHf0Yna9pvHkibU_UG7rnz2KrFMCWK2Lf1FfYyh90A5knNARghU-eQ__YY9zrf2n9vxpsDh2rBIUO68gv7DKO7juXXqye5ThUYt5nRWvFrmwREJPz6NLkysiKYZFCBUiLcFxdBytnP2bNO_y7hAsDKlWvXcwPG0qgAXpUPM1kC7qZein2gFZBTkTcY9hpmwKwYin-G3DTwYXsUg9VLCY2_ZG5-TXv_tVdjyJj7qSxz46jC7HAahP7NUl6mh7GG23xBn9tGbb_REP5jcTRDGCFccHgeXLoGd8WIbXqSVsymsh0KdCR8z4jivbbWsJIwgKtGvkM3P1H5jSheX2djcO9rtuV96qU_Fe9zBNuvqb_LkhvtaqjB4PCd-c9Oe-tSUQMYlVF02kN-Y2f0utE?c=naver.search.pc.plsearch&t=0
+                      - listitem [ref=f33e661]:
+                        - link "이벤트" [ref=f33e662] [cursor=pointer]:
+                          - /url: https://ader.naver.com/v1/idokb3MMrasbi5mjUqoxVcigvFoFdHdqifpbylOtTPJ3msirqMDrreRuse9R9pjcP10rGRJ3k2oKdb1ibyc7Pgoj506IyPrhKxlse-croBGKqf15GKM8qlL36RHj4AukPZKw3P-8PJE08ls727rgoEs113GAwmACSiWed9ZcYS5LttlQCQenPJB9bN6v6VmUaWOhrog9coAX-lMJbUsIWm0W-P77v_ghP5L77l3hLa-tNNp0evgbNiztKkKG2G6vXpOS8ejIXAQH0mh2dZbATbIq_zPG0TYMwdua6O8igklEXG5xRufPwrNw9lf0F6-nYMf2U6iRxjVZvz5uLoIRm-OV0R8cY6NGVsHiKr0afdj6YsF0ZvpRRPVKcuMlq_aSpLcATOF_jjGKbErg092d768dugxEpgAH57eMOT6zwzeoSUgVNPpIAiBQKRUK3kQRG6iVsPA3YITeR5LYgW0AJkFosKBwfrfZ4swUB5B0O78BisJwBhCpl6uOC13G9JyAkjp0HiY9og0B05cOOR3yAfos5kUigT8tbtfx4uVEIhS-NNBXud7KDwHmNffeoDLA?c=naver.search.pc.plsearch&t=0
+                      - listitem [ref=f33e663]:
+                        - link "투자자후기" [ref=f33e664] [cursor=pointer]:
+                          - /url: https://ader.naver.com/v1/94eeDgdGR2kjChKKhitQ13ftcsynxzb5YpOSsP64RORpmTWd_2LG0A3L0ciC-npZkX6_tWot1ZpDakcbJbATLkvUtP6e0poqQSJDlMXnvuB4XurCgcYDiwc--3IG3dzIbRjxMqDGy3D9SUk42X0MquBOT6G0AcV6MGiPTQowDfxtr9DHNSL9ZCKH4EyJxpZ0iw6Ri7kC9jk9XoeBqjnBM6t6riI96erB2k4ChSZjTvvU42MBcyemexBbIpew44bRtAA-Lyxn02XLFNsX4txGsulVXIumv-N8BJ7F_zFJZ3unmMORBJTsNVUt9cjI62gBgUgQ9QpvrmX0Sqaje6oaQKDdFdX1VtPGsUS-JmF86ZWVWwasatuwLYdJeJzHbsIp8bleMmbgGP4gncsu8x-AJXpYdOsuaxilw2iWGxdivTglZrGHxRCRWtLg3FiiVmkXg1fr-OuhK5xlyqCV3-OKbeQYCJMpAYHblEMNAPO9YSit_-S8kCWgJnxcD3AUc6_b2tc8Usx3w_wGMTmlxsPEqgRUtBCjsg0SrNqFAWLW6Y6RoTiq0e55AeobcqOfX-RvdS4AtbHqL-PYLuH0s1lc_g==?c=naver.search.pc.plsearch&t=0
+                      - listitem [ref=f33e665]:
+                        - link "자주묻는질문" [ref=f33e666] [cursor=pointer]:
+                          - /url: https://ader.naver.com/v1/idokb3MMrasbi5mjUqoxVcigvFoFdHdqifpbylOtTPL73RVsdLEoZj4H_LAtYGcdvRy0Aczvethdhx2kdfzJUu1xFQAQvxG1jFhxWuyxEGDA42587Buc8oG-8EmmC_KpUQqWcGWf2M26pibVMDd1dXByqj_lob2DP-HzEeb6doXGFtIJcBPxZRmN0VdU6SwVsU8W1kCz1dc9AL18eZsAYlzoe0Kfux37e--uNSneyKfxowKmCYmmK3Jpih-P4NU3s9yz72kVy-9E8RVnUsR8xZq6i5suuUi_n20tSMJ5EtiTM2sLwfsSuSPbqIO-50BjcLIpdpuwVPjQS8ycLJOsbKUWrOgzqGIXIfFNaXStZ34Q3XSIcFfvSX1aiSs35QWsoYiHZ2CCtmOCsIViE-DM9SiSL6eHV4jbKczh6ghk90lMoKIS7_RgC6yj2I03Xx8PxgW3RcUrhdFiJ_aTZICq3UpIk2HACElYIBvJpQ8fv3gn731oUwt9gUU70Z_M4w_kGLrMFEWNzrDK8dA8ZNWvf8JfpArU_l5DU5FEhxwRSqb6seQ44QnC_jxjhYFip5mV2JuJ1q7Toh1XMjpqjho2Zg==?c=naver.search.pc.plsearch&t=0
+                - listitem [ref=f33e667]:
+                  - link [ref=f33e668] [cursor=pointer]:
+                    - /url: https://ader.naver.com/v1/4b2IbZKpXhzBXMBcBiOSWnAkaCEjLs_bvMJ6uRF3PxcPw0doHSWiPhhPzmHHQ3VwIRyQ7ymEjsqMXmZMrUNl7Vvb99KHW3atS7_ZFxzZFWEAKM1-acVmEspeQ17lER-upBtnbOv9rwZxAPxSx4TAXBokfZYEbmasLbwXdXbFD8gw7L8EFIvkDcy2ZXpp9Lfkpre_oAOddYZ42iSu1THjbYO7GkU1JxXVz4ksvkCO_szWxlpLGb169_JhhMF-mXoeo277Mbo1rf3TmIDb4yHw4XgnZqP86mic6xNTXuZmNTnIKE66umF3aNgml8LjjcqzyB4Qf8uAMWU5gpuPKNPdefhTXSLoYVtfs6-MT7A3bng1zRT8pJsZDGd3rhU3V5I6rTu9r_PgJmO5NUBQ5IEw50er7okvf2cy7mlEQ0YhKZrG1TL_VpKKUOsDuzVLovjtMl6dNfp7H-SLhGIxvl-X5g==?c=naver.search.pc.plsearch&t=0
+                    - img "링크이미지" [ref=f33e669]
+                  - generic [ref=f33e670]:
+                    - generic [ref=f33e671]:
+                      - generic [ref=f33e672]:
+                        - link [ref=f33e673] [cursor=pointer]:
+                          - /url: https://ader.naver.com/v1/FHe9ngMhJvt62QlaBOqZUnac3oRfITz0G16HKSAxdwWQcb7qNCBvnFs2LJD7rcgxjHMPr1K2iPI2g6HfqtZ30yf1HMb5ARmcKC-NNVi25Ux8VgmXNpYQfE2BUbLwLkfek7ke9xb2eypELsStiSC-XA3QE3wIQ5sVE3euezL5ie_cAi3iouFLhM9f9q_7QTHij0UO8-O986n8o7c0lsXTRPeq2_mJlyx54FWBk52BQOcenqZUBWYnMGsBpXBdb7gN4ZMVTSkLZ-DN5Cyrrz1r_BneRlxLNG04Dm7iOUTex7GKvSjwvpkKrLvr7QLWBVe0hRW_fFtuA_ctxGuvVNrz81vELbdWapSCfm9KZlUGjjsgo0EfkShlddHMgwnuz3zKGcSrssYD6do3VToDZrqdoYjrV6I0aY7rmyvtJotX5QM_4PIglP1PGoiFaUtjr_-D?c=naver.search.pc.plsearch&t=0
+                          - img "favicon" [ref=f33e674]
+                        - img "광고" [ref=f33e675]
+                        - link "더즌익스체인지" [ref=f33e679] [cursor=pointer]:
+                          - /url: https://ader.naver.com/v1/FHe9ngMhJvt62QlaBOqZUnac3oRfITz0G16HKSAxdwWQcb7qNCBvnFs2LJD7rcgxjHMPr1K2iPI2g6HfqtZ30yf1HMb5ARmcKC-NNVi25Ux8VgmXNpYQfE2BUbLwLkfek7ke9xb2eypELsStiSC-XA3QE3wIQ5sVE3euezL5ie_cAi3iouFLhM9f9q_7QTHij0UO8-O986n8o7c0lsXTRPeq2_mJlyx54FWBk52BQOcenqZUBWYnMGsBpXBdb7gN4ZMVTSkLZ-DN5Cyrrz1r_BneRlxLNG04Dm7iOUTex7GKvSjwvpkKrLvr7QLWBVe0hRW_fFtuA_ctxGuvVNrz81vELbdWapSCfm9KZlUGjjsgo0EfkShlddHMgwnuz3zKGcSrssYD6do3VToDZrqdoYjrV6I0aY7rmyvtJotX5QM_4PIglP1PGoiFaUtjr_-D?c=naver.search.pc.plsearch&t=0
+                        - link "mx-dozn.co.kr/" [ref=f33e681] [cursor=pointer]:
+                          - /url: https://ader.naver.com/v1/FHe9ngMhJvt62QlaBOqZUnac3oRfITz0G16HKSAxdwWQcb7qNCBvnFs2LJD7rcgxjHMPr1K2iPI2g6HfqtZ30yf1HMb5ARmcKC-NNVi25Ux8VgmXNpYQfE2BUbLwLkfek7ke9xb2eypELsStiSC-XA3QE3wIQ5sVE3euezL5ie_cAi3iouFLhM9f9q_7QTHij0UO8-O986n8o7c0lsXTRPeq2_mJlyx54FWBk52BQOcenqZUBWYnMGsBpXBdb7gN4ZMVTSkLZ-DN5Cyrrz1r_BneRlxLNG04Dm7iOUTex7GKvSjwvpkKrLvr7QLWBVe0hRW_fFtuA_ctxGuvVNrz81vELbdWapSCfm9KZlUGjjsgo0EfkShlddHMgwnuz3zKGcSrssYD6do3VToDZrqdoYjrV6I0aY7rmyvtJotX5QM_4PIglP1PGoiFaUtjr_-D?c=naver.search.pc.plsearch&t=0
+                      - link "무인 환전키오스크 더즌익스체인지" [ref=f33e682] [cursor=pointer]:
+                        - /url: https://ader.naver.com/v1/FHe9ngMhJvt62QlaBOqZUnac3oRfITz0G16HKSAxdwWQcb7qNCBvnFs2LJD7rcgxjHMPr1K2iPI2g6HfqtZ30yf1HMb5ARmcKC-NNVi25Ux8VgmXNpYQfE2BUbLwLkfek7ke9xb2eypELsStiSC-XA3QE3wIQ5sVE3euezL5ie_cAi3iouFLhM9f9q_7QTHij0UO8-O986n8o7c0lsXTRPeq2_mJlyx54FWBk52BQOcenqZUBWYnMGsBpXBdb7gN4ZMVTSkLZ-DN5Cyrrz1r_BneRlxLNG04Dm7iOUTex7GKvSjwvpkKrLvr7QLWBVe0hRW_fFtuA_ctxGuvVNrz81vELbdWapSCfm9KZlUGjjsgo0EfkShlddHMgwnuz3zKGcSrssYD6do3VToDZrqdoYjrV6I0aY7rmyvtJotX5QM_4PIglP1PGoiFaUtjr_-D?c=naver.search.pc.plsearch&t=0
+                    - link [ref=f33e685] [cursor=pointer]:
+                      - /url: https://ader.naver.com/v1/FHe9ngMhJvt62QlaBOqZUnac3oRfITz0G16HKSAxdwWQcb7qNCBvnFs2LJD7rcgxjHMPr1K2iPI2g6HfqtZ30yf1HMb5ARmcKC-NNVi25Ux8VgmXNpYQfE2BUbLwLkfek7ke9xb2eypELsStiSC-XA3QE3wIQ5sVE3euezL5ie_cAi3iouFLhM9f9q_7QTHij0UO8-O986n8o7c0lsXTRPeq2_mJlyx54FWBk52BQOcenqZUBWYnMGsBpXBdb7gN4ZMVTSkLZ-DN5Cyrrz1r_BneRlxLNG04Dm7iOUTex7GKvSjwvpkKrLvr7QLWBVe0hRW_fFtuA_ctxGuvVNrz81vELbdWapSCfm9KZlUGjjsgo0EfkShlddHMgwnuz3zKGcSrssYD6do3VToDZrqdoYjrV6I0aY7rmyvtJotX5QM_4PIglP1PGoiFaUtjr_-D?c=naver.search.pc.plsearch&t=0
+                      - text: 대만달러, 엔화 등 100% 우대
+                      - strong [ref=f33e686]: 환율
+                      - text: / 365일, 24시간 환전,
+                - listitem [ref=f33e687]:
+                  - link [ref=f33e688] [cursor=pointer]:
+                    - /url: https://ader.naver.com/v1/RGbXxzE1WsYjqAtdE58pj3oxhT73pwRTkCffIqO1YaaW2D6jGiMe5ameFNnk274SX6BrMc672bvWjbhWR6tcclNZ7k_qrkavUowE3jyFwuZqMOjkTPVACCOl_4iBlnMskcnZOP0hxnfcblPgkuyzKIYiBCNBzaf3jlGdSfznkrTG55Yz3lltEbML4RvDPbu8YkFH9Ak6tNNhy9q5HIvdsTGNyMc5ZlLVlkT2qCJuVr6C0HUzyvYHFI_a4wUylPBD3EcQfeeeSRUOaLEdxDOPbn3_SMaF9brW7SzIW0qIvbOTHsEJDbHhnniqeHR-pzOQuVaszYttmd5SN6TmEFXQyA==?c=naver.search.pc.plsearch&t=0
+                    - img "링크이미지" [ref=f33e689]
+                  - generic [ref=f33e690]:
+                    - generic [ref=f33e691]:
+                      - generic [ref=f33e692]:
+                        - link [ref=f33e693] [cursor=pointer]:
+                          - /url: https://ader.naver.com/v1/RGbXxzE1WsYjqAtdE58pj3oxhT73pwRTkCffIqO1YaaW2D6jGiMe5ameFNnk274SX6BrMc672bvWjbhWR6tcclNZ7k_qrkavUowE3jyFwuYU_yeVMOpP4DLuHisin3I80SqPupepLu_nvtIada4CumXITzRJYjtbnQdWTx3KPbvmHGu01bocSttBHwNvH48Rbtcy355VD10ejTkqtULoNNpjhXc2F842UrrhfLy_arNZKhBV1DwfZLwV50y1jFgiHcgY0n3zAK3RCGxLdCsZEJjggPultxpo3oXxVwjLG4e27bs2hDL61dRJG-W9_kAD?c=naver.search.pc.plsearch&t=0
+                          - img "favicon" [ref=f33e694]
+                        - img "광고" [ref=f33e695]
+                        - link "선성환전서비스" [ref=f33e699] [cursor=pointer]:
+                          - /url: https://ader.naver.com/v1/RGbXxzE1WsYjqAtdE58pj3oxhT73pwRTkCffIqO1YaaW2D6jGiMe5ameFNnk274SX6BrMc672bvWjbhWR6tcclNZ7k_qrkavUowE3jyFwuYU_yeVMOpP4DLuHisin3I80SqPupepLu_nvtIada4CumXITzRJYjtbnQdWTx3KPbvmHGu01bocSttBHwNvH48Rbtcy355VD10ejTkqtULoNNpjhXc2F842UrrhfLy_arNZKhBV1DwfZLwV50y1jFgiHcgY0n3zAK3RCGxLdCsZEJjggPultxpo3oXxVwjLG4e27bs2hDL61dRJG-W9_kAD?c=naver.search.pc.plsearch&t=0
+                        - link "sunsung.kr" [ref=f33e701] [cursor=pointer]:
+                          - /url: https://ader.naver.com/v1/RGbXxzE1WsYjqAtdE58pj3oxhT73pwRTkCffIqO1YaaW2D6jGiMe5ameFNnk274SX6BrMc672bvWjbhWR6tcclNZ7k_qrkavUowE3jyFwuYU_yeVMOpP4DLuHisin3I80SqPupepLu_nvtIada4CumXITzRJYjtbnQdWTx3KPbvmHGu01bocSttBHwNvH48Rbtcy355VD10ejTkqtULoNNpjhXc2F842UrrhfLy_arNZKhBV1DwfZLwV50y1jFgiHcgY0n3zAK3RCGxLdCsZEJjggPultxpo3oXxVwjLG4e27bs2hDL61dRJG-W9_kAD?c=naver.search.pc.plsearch&t=0
+                      - link "중국에서 한국으로 송금서비스" [ref=f33e702] [cursor=pointer]:
+                        - /url: https://ader.naver.com/v1/RGbXxzE1WsYjqAtdE58pj3oxhT73pwRTkCffIqO1YaaW2D6jGiMe5ameFNnk274SX6BrMc672bvWjbhWR6tcclNZ7k_qrkavUowE3jyFwuYU_yeVMOpP4DLuHisin3I80SqPupepLu_nvtIada4CumXITzRJYjtbnQdWTx3KPbvmHGu01bocSttBHwNvH48Rbtcy355VD10ejTkqtULoNNpjhXc2F842UrrhfLy_arNZKhBV1DwfZLwV50y1jFgiHcgY0n3zAK3RCGxLdCsZEJjggPultxpo3oXxVwjLG4e27bs2hDL61dRJG-W9_kAD?c=naver.search.pc.plsearch&t=0
+                    - link "20년된 신용과 믿음으로 안전하고 신속하게 실시간 환전을 도와드립니다." [ref=f33e705] [cursor=pointer]:
+                      - /url: https://ader.naver.com/v1/RGbXxzE1WsYjqAtdE58pj3oxhT73pwRTkCffIqO1YaaW2D6jGiMe5ameFNnk274SX6BrMc672bvWjbhWR6tcclNZ7k_qrkavUowE3jyFwuYU_yeVMOpP4DLuHisin3I80SqPupepLu_nvtIada4CumXITzRJYjtbnQdWTx3KPbvmHGu01bocSttBHwNvH48Rbtcy355VD10ejTkqtULoNNpjhXc2F842UrrhfLy_arNZKhBV1DwfZLwV50y1jFgiHcgY0n3zAK3RCGxLdCsZEJjggPultxpo3oXxVwjLG4e27bs2hDL61dRJG-W9_kAD?c=naver.search.pc.plsearch&t=0
+                - listitem [ref=f33e706]:
+                  - link [ref=f33e707] [cursor=pointer]:
+                    - /url: https://ader.naver.com/v1/RGbXxzE1WsYjqAtdE58pj3oxhT73pwRTkCffIqO1YaaW2D6jGiMe5ameFNnk274S7zcdCh6VQ4-CEn1h1svWWaKPR0KkHkcN-isGnU_xg9_MJfGxWYznmU65vAdtpot3AX_YtMqAzCKg_xBE8r2JvvKwnopo1CL42aYae8JDkmszjc0djmt4xkmcnTi1XPddWaiOf8M7zMsAXLSjWhhjn81gcpwEcYPWh4OawI4ppVMaTTqqzaoG7unWj2Gfo0Quv9H2CWZ-jwZga5c2GzreXokM0fCrG_MvCPA3yiXFrK4C1yQC_0-VGidzCQUrf_dt8y-At4Wh_GOdeFbBgdbXqw==?c=naver.search.pc.plsearch&t=0
+                    - img "링크이미지" [ref=f33e708]
+                  - generic [ref=f33e709]:
+                    - generic [ref=f33e710]:
+                      - generic [ref=f33e711]:
+                        - link [ref=f33e712] [cursor=pointer]:
+                          - /url: https://ader.naver.com/v1/RGbXxzE1WsYjqAtdE58pj3oxhT73pwRTkCffIqO1YaaW2D6jGiMe5ameFNnk274S7zcdCh6VQ4-CEn1h1svWWaKPR0KkHkcN-isGnU_xg98FpszIdDH26_Kjy3OEZqAj8pj38O9EPZt_XCdqJqyBuZYXQP2JhuJkcpB8XajopZWtsbtOoPHSiHaqU4WTkNRgW2vIP71zW1p9ZwQJbfZ8lYioaT5M2Ku-3UA2rD5uJbYx9mAfA4XiUbuKfpvOEiId3HtXWynNp6ZP9XUdw34aq62L4pFIkmbaOT9xuuW-grQwW_On5ZIM_o1G0mw4MsNZ?c=naver.search.pc.plsearch&t=0
+                          - img "favicon" [ref=f33e713]
+                        - img "광고" [ref=f33e714]
+                        - link "불개미홍인기주식" [ref=f33e718] [cursor=pointer]:
+                          - /url: https://ader.naver.com/v1/RGbXxzE1WsYjqAtdE58pj3oxhT73pwRTkCffIqO1YaaW2D6jGiMe5ameFNnk274S7zcdCh6VQ4-CEn1h1svWWaKPR0KkHkcN-isGnU_xg98FpszIdDH26_Kjy3OEZqAj8pj38O9EPZt_XCdqJqyBuZYXQP2JhuJkcpB8XajopZWtsbtOoPHSiHaqU4WTkNRgW2vIP71zW1p9ZwQJbfZ8lYioaT5M2Ku-3UA2rD5uJbYx9mAfA4XiUbuKfpvOEiId3HtXWynNp6ZP9XUdw34aq62L4pFIkmbaOT9xuuW-grQwW_On5ZIM_o1G0mw4MsNZ?c=naver.search.pc.plsearch&t=0
+                        - link "no1stock.co.kr/" [ref=f33e720] [cursor=pointer]:
+                          - /url: https://ader.naver.com/v1/RGbXxzE1WsYjqAtdE58pj3oxhT73pwRTkCffIqO1YaaW2D6jGiMe5ameFNnk274S7zcdCh6VQ4-CEn1h1svWWaKPR0KkHkcN-isGnU_xg98FpszIdDH26_Kjy3OEZqAj8pj38O9EPZt_XCdqJqyBuZYXQP2JhuJkcpB8XajopZWtsbtOoPHSiHaqU4WTkNRgW2vIP71zW1p9ZwQJbfZ8lYioaT5M2Ku-3UA2rD5uJbYx9mAfA4XiUbuKfpvOEiId3HtXWynNp6ZP9XUdw34aq62L4pFIkmbaOT9xuuW-grQwW_On5ZIM_o1G0mw4MsNZ?c=naver.search.pc.plsearch&t=0
+                      - link "키움증권 1억리그 역대신기록 주식단타 종합베스트셀러 불개미&홍인기 주식넘버원" [ref=f33e721] [cursor=pointer]:
+                        - /url: https://ader.naver.com/v1/RGbXxzE1WsYjqAtdE58pj3oxhT73pwRTkCffIqO1YaaW2D6jGiMe5ameFNnk274S7zcdCh6VQ4-CEn1h1svWWaKPR0KkHkcN-isGnU_xg98FpszIdDH26_Kjy3OEZqAj8pj38O9EPZt_XCdqJqyBuZYXQP2JhuJkcpB8XajopZWtsbtOoPHSiHaqU4WTkNRgW2vIP71zW1p9ZwQJbfZ8lYioaT5M2Ku-3UA2rD5uJbYx9mAfA4XiUbuKfpvOEiId3HtXWynNp6ZP9XUdw34aq62L4pFIkmbaOT9xuuW-grQwW_On5ZIM_o1G0mw4MsNZ?c=naver.search.pc.plsearch&t=0
+                    - link "키움증권 실전투자대회 1위 816% 국내신기록 보유자 불개미에게 배우는 주식단타! 대왕개미 홍인기와 주식단타 기초부터 실전까지 마스터하기" [ref=f33e724] [cursor=pointer]:
+                      - /url: https://ader.naver.com/v1/RGbXxzE1WsYjqAtdE58pj3oxhT73pwRTkCffIqO1YaaW2D6jGiMe5ameFNnk274S7zcdCh6VQ4-CEn1h1svWWaKPR0KkHkcN-isGnU_xg98FpszIdDH26_Kjy3OEZqAj8pj38O9EPZt_XCdqJqyBuZYXQP2JhuJkcpB8XajopZWtsbtOoPHSiHaqU4WTkNRgW2vIP71zW1p9ZwQJbfZ8lYioaT5M2Ku-3UA2rD5uJbYx9mAfA4XiUbuKfpvOEiId3HtXWynNp6ZP9XUdw34aq62L4pFIkmbaOT9xuuW-grQwW_On5ZIM_o1G0mw4MsNZ?c=naver.search.pc.plsearch&t=0
+                - listitem [ref=f33e725]:
+                  - generic [ref=f33e726]:
+                    - generic [ref=f33e727]:
+                      - generic [ref=f33e728]:
+                        - link [ref=f33e729] [cursor=pointer]:
+                          - /url: https://ader.naver.com/v1/GZR81Dg0zdcRZ43F0BShJ8ypT4JV1C_OlJgO2iSxsg6XCzIzDnD78M5tSry6FUc_K3d3cXlgU7xt5PhIzxRbqn3x4eudRVO7DhoJwyHyfTLCMzzyi5rgcudyHkFFZpK9aBMx4rMGQitx2Qp-u1BQVzKVkCuxtiymnxdm-tMiE6uBse6B3ZH-RlvKUNPWlPmI5kMqU6ut3_4oD_yFJzqbIpRdTFX47obk2aMDHPfgw1X25SZn86hBW8FfqYjNqCjNWQpY3KPOHG0zx6yq9Zi6qPWEZ1B0L_qnxhSEZDNdbmVQoDjfslYIEjFPvuaED17IeQuJ_Fgz-UlV0TZaBK9e9WICljr1Ap057fwP07OHuYaemSuwH0qvUOvAT7Mwq1NvTOFfpqEkY_YUgPCjjViO1Ynt17zGLuNe_XvhBZgLAmWP4hMGhnKfzdr6cHftPKlyG7FEok6zw1po3k_2HcI5XGtUZFfCZWaLNapOYXwzK5U=?c=naver.search.pc.plsearch&t=0
+                          - img "favicon" [ref=f33e730]
+                        - img "광고" [ref=f33e731]
+                        - link "에이주식연구소" [ref=f33e735] [cursor=pointer]:
+                          - /url: https://ader.naver.com/v1/GZR81Dg0zdcRZ43F0BShJ8ypT4JV1C_OlJgO2iSxsg6XCzIzDnD78M5tSry6FUc_K3d3cXlgU7xt5PhIzxRbqn3x4eudRVO7DhoJwyHyfTLCMzzyi5rgcudyHkFFZpK9aBMx4rMGQitx2Qp-u1BQVzKVkCuxtiymnxdm-tMiE6uBse6B3ZH-RlvKUNPWlPmI5kMqU6ut3_4oD_yFJzqbIpRdTFX47obk2aMDHPfgw1X25SZn86hBW8FfqYjNqCjNWQpY3KPOHG0zx6yq9Zi6qPWEZ1B0L_qnxhSEZDNdbmVQoDjfslYIEjFPvuaED17IeQuJ_Fgz-UlV0TZaBK9e9WICljr1Ap057fwP07OHuYaemSuwH0qvUOvAT7Mwq1NvTOFfpqEkY_YUgPCjjViO1Ynt17zGLuNe_XvhBZgLAmWP4hMGhnKfzdr6cHftPKlyG7FEok6zw1po3k_2HcI5XGtUZFfCZWaLNapOYXwzK5U=?c=naver.search.pc.plsearch&t=0
+                        - link "theareport.com/" [ref=f33e737] [cursor=pointer]:
+                          - /url: https://ader.naver.com/v1/GZR81Dg0zdcRZ43F0BShJ8ypT4JV1C_OlJgO2iSxsg6XCzIzDnD78M5tSry6FUc_K3d3cXlgU7xt5PhIzxRbqn3x4eudRVO7DhoJwyHyfTLCMzzyi5rgcudyHkFFZpK9aBMx4rMGQitx2Qp-u1BQVzKVkCuxtiymnxdm-tMiE6uBse6B3ZH-RlvKUNPWlPmI5kMqU6ut3_4oD_yFJzqbIpRdTFX47obk2aMDHPfgw1X25SZn86hBW8FfqYjNqCjNWQpY3KPOHG0zx6yq9Zi6qPWEZ1B0L_qnxhSEZDNdbmVQoDjfslYIEjFPvuaED17IeQuJ_Fgz-UlV0TZaBK9e9WICljr1Ap057fwP07OHuYaemSuwH0qvUOvAT7Mwq1NvTOFfpqEkY_YUgPCjjViO1Ynt17zGLuNe_XvhBZgLAmWP4hMGhnKfzdr6cHftPKlyG7FEok6zw1po3k_2HcI5XGtUZFfCZWaLNapOYXwzK5U=?c=naver.search.pc.plsearch&t=0
+                      - link [ref=f33e738] [cursor=pointer]:
+                        - /url: https://ader.naver.com/v1/GZR81Dg0zdcRZ43F0BShJ8ypT4JV1C_OlJgO2iSxsg6XCzIzDnD78M5tSry6FUc_K3d3cXlgU7xt5PhIzxRbqn3x4eudRVO7DhoJwyHyfTLCMzzyi5rgcudyHkFFZpK9aBMx4rMGQitx2Qp-u1BQVzKVkCuxtiymnxdm-tMiE6uBse6B3ZH-RlvKUNPWlPmI5kMqU6ut3_4oD_yFJzqbIpRdTFX47obk2aMDHPfgw1X25SZn86hBW8FfqYjNqCjNWQpY3KPOHG0zx6yq9Zi6qPWEZ1B0L_qnxhSEZDNdbmVQoDjfslYIEjFPvuaED17IeQuJ_Fgz-UlV0TZaBK9e9WICljr1Ap057fwP07OHuYaemSuwH0qvUOvAT7Mwq1NvTOFfpqEkY_YUgPCjjViO1Ynt17zGLuNe_XvhBZgLAmWP4hMGhnKfzdr6cHftPKlyG7FEok6zw1po3k_2HcI5XGtUZFfCZWaLNapOYXwzK5U=?c=naver.search.pc.plsearch&t=0
+                        - generic [ref=f33e739]:
+                          - strong [ref=f33e740]: 환율
+                          - text: 사기 전 필독
+                        - text: 365일 무료리포트 발송 초보자도 알기 쉬운 분석
+                    - link [ref=f33e743] [cursor=pointer]:
+                      - /url: https://ader.naver.com/v1/GZR81Dg0zdcRZ43F0BShJ8ypT4JV1C_OlJgO2iSxsg6XCzIzDnD78M5tSry6FUc_K3d3cXlgU7xt5PhIzxRbqn3x4eudRVO7DhoJwyHyfTLCMzzyi5rgcudyHkFFZpK9aBMx4rMGQitx2Qp-u1BQVzKVkCuxtiymnxdm-tMiE6uBse6B3ZH-RlvKUNPWlPmI5kMqU6ut3_4oD_yFJzqbIpRdTFX47obk2aMDHPfgw1X25SZn86hBW8FfqYjNqCjNWQpY3KPOHG0zx6yq9Zi6qPWEZ1B0L_qnxhSEZDNdbmVQoDjfslYIEjFPvuaED17IeQuJ_Fgz-UlV0TZaBK9e9WICljr1Ap057fwP07OHuYaemSuwH0qvUOvAT7Mwq1NvTOFfpqEkY_YUgPCjjViO1Ynt17zGLuNe_XvhBZgLAmWP4hMGhnKfzdr6cHftPKlyG7FEok6zw1po3k_2HcI5XGtUZFfCZWaLNapOYXwzK5U=?c=naver.search.pc.plsearch&t=0
+                      - strong [ref=f33e744]: 환율
+                      - text: 무료 분석 리포트 아직도 모르시나요?
+                - listitem [ref=f33e745]:
+                  - generic [ref=f33e746]:
+                    - generic [ref=f33e747]:
+                      - generic [ref=f33e748]:
+                        - link [ref=f33e749] [cursor=pointer]:
+                          - /url: https://ader.naver.com/v1/GZR81Dg0zdcRZ43F0BShJ8CGnLS4DdX9d94rX0v_SsRQI7KxZVIyOC3wnjBtB9EIv7wrK44wdckjSD1sB1q0GlSPVslALhlmUaDgfxSpwGZ7ViEmgRzRS6YY3Eu14Lj-QsyITnrMoA-fidZYDbVklnuJzZyhjryAwKekeE7NAzQX4C9qA3zK2ipGK232PRMjRQAECrkVe8gWco3sS-Bdrb4DtiNHGLhK93aZz43qz1U9tUhh6yahI2aIIea1gxPZ3V7MlYN7iKV2j0VPgNorlwwAdaeaIYEANtHj5Vt2ZRvd4bBznnRphe5EcSssB3jY8uTnsxKHoz2SJi9mYHPRIiy8qZdWcDPsUleVozInpiEBECrjz51iAbKaw4S6S2YIMFqg4DxDxQsdbK8tgYYvvgGNuOTjb1prHr7HPVe70S4sTM23JC2LAB_uDFurvjg_zosMY7s4sXm8PICHioVUJsaVzAZ3HL-ZzSK4O4UhPjn-7oVLt7EWqnsC-z3IU7kQ?c=naver.search.pc.plsearch&t=0
+                          - img "favicon" [ref=f33e750]
+                        - img "광고" [ref=f33e751]
+                        - link "마이뱅크" [ref=f33e755] [cursor=pointer]:
+                          - /url: https://ader.naver.com/v1/GZR81Dg0zdcRZ43F0BShJ8CGnLS4DdX9d94rX0v_SsRQI7KxZVIyOC3wnjBtB9EIv7wrK44wdckjSD1sB1q0GlSPVslALhlmUaDgfxSpwGZ7ViEmgRzRS6YY3Eu14Lj-QsyITnrMoA-fidZYDbVklnuJzZyhjryAwKekeE7NAzQX4C9qA3zK2ipGK232PRMjRQAECrkVe8gWco3sS-Bdrb4DtiNHGLhK93aZz43qz1U9tUhh6yahI2aIIea1gxPZ3V7MlYN7iKV2j0VPgNorlwwAdaeaIYEANtHj5Vt2ZRvd4bBznnRphe5EcSssB3jY8uTnsxKHoz2SJi9mYHPRIiy8qZdWcDPsUleVozInpiEBECrjz51iAbKaw4S6S2YIMFqg4DxDxQsdbK8tgYYvvgGNuOTjb1prHr7HPVe70S4sTM23JC2LAB_uDFurvjg_zosMY7s4sXm8PICHioVUJsaVzAZ3HL-ZzSK4O4UhPjn-7oVLt7EWqnsC-z3IU7kQ?c=naver.search.pc.plsearch&t=0
+                        - link "mibank.me" [ref=f33e757] [cursor=pointer]:
+                          - /url: https://ader.naver.com/v1/GZR81Dg0zdcRZ43F0BShJ8CGnLS4DdX9d94rX0v_SsRQI7KxZVIyOC3wnjBtB9EIv7wrK44wdckjSD1sB1q0GlSPVslALhlmUaDgfxSpwGZ7ViEmgRzRS6YY3Eu14Lj-QsyITnrMoA-fidZYDbVklnuJzZyhjryAwKekeE7NAzQX4C9qA3zK2ipGK232PRMjRQAECrkVe8gWco3sS-Bdrb4DtiNHGLhK93aZz43qz1U9tUhh6yahI2aIIea1gxPZ3V7MlYN7iKV2j0VPgNorlwwAdaeaIYEANtHj5Vt2ZRvd4bBznnRphe5EcSssB3jY8uTnsxKHoz2SJi9mYHPRIiy8qZdWcDPsUleVozInpiEBECrjz51iAbKaw4S6S2YIMFqg4DxDxQsdbK8tgYYvvgGNuOTjb1prHr7HPVe70S4sTM23JC2LAB_uDFurvjg_zosMY7s4sXm8PICHioVUJsaVzAZ3HL-ZzSK4O4UhPjn-7oVLt7EWqnsC-z3IU7kQ?c=naver.search.pc.plsearch&t=0
+                      - link [ref=f33e758] [cursor=pointer]:
+                        - /url: https://ader.naver.com/v1/GZR81Dg0zdcRZ43F0BShJ8CGnLS4DdX9d94rX0v_SsRQI7KxZVIyOC3wnjBtB9EIv7wrK44wdckjSD1sB1q0GlSPVslALhlmUaDgfxSpwGZ7ViEmgRzRS6YY3Eu14Lj-QsyITnrMoA-fidZYDbVklnuJzZyhjryAwKekeE7NAzQX4C9qA3zK2ipGK232PRMjRQAECrkVe8gWco3sS-Bdrb4DtiNHGLhK93aZz43qz1U9tUhh6yahI2aIIea1gxPZ3V7MlYN7iKV2j0VPgNorlwwAdaeaIYEANtHj5Vt2ZRvd4bBznnRphe5EcSssB3jY8uTnsxKHoz2SJi9mYHPRIiy8qZdWcDPsUleVozInpiEBECrjz51iAbKaw4S6S2YIMFqg4DxDxQsdbK8tgYYvvgGNuOTjb1prHr7HPVe70S4sTM23JC2LAB_uDFurvjg_zosMY7s4sXm8PICHioVUJsaVzAZ3HL-ZzSK4O4UhPjn-7oVLt7EWqnsC-z3IU7kQ?c=naver.search.pc.plsearch&t=0
+                        - generic [ref=f33e759]:
+                          - strong [ref=f33e760]: 환율
+                          - text: 비교 끝판왕 마이뱅크
+                    - link [ref=f33e763] [cursor=pointer]:
+                      - /url: https://ader.naver.com/v1/GZR81Dg0zdcRZ43F0BShJ8CGnLS4DdX9d94rX0v_SsRQI7KxZVIyOC3wnjBtB9EIv7wrK44wdckjSD1sB1q0GlSPVslALhlmUaDgfxSpwGZ7ViEmgRzRS6YY3Eu14Lj-QsyITnrMoA-fidZYDbVklnuJzZyhjryAwKekeE7NAzQX4C9qA3zK2ipGK232PRMjRQAECrkVe8gWco3sS-Bdrb4DtiNHGLhK93aZz43qz1U9tUhh6yahI2aIIea1gxPZ3V7MlYN7iKV2j0VPgNorlwwAdaeaIYEANtHj5Vt2ZRvd4bBznnRphe5EcSssB3jY8uTnsxKHoz2SJi9mYHPRIiy8qZdWcDPsUleVozInpiEBECrjz51iAbKaw4S6S2YIMFqg4DxDxQsdbK8tgYYvvgGNuOTjb1prHr7HPVe70S4sTM23JC2LAB_uDFurvjg_zosMY7s4sXm8PICHioVUJsaVzAZ3HL-ZzSK4O4UhPjn-7oVLt7EWqnsC-z3IU7kQ?c=naver.search.pc.plsearch&t=0
+                      - text: 1초전에 바뀐 44개국의
+                      - strong [ref=f33e764]: 환율
+                      - text: 을 실시간으로 비교해 드립니다.
+                      - strong [ref=f33e765]: 환율
+                - listitem [ref=f33e766]:
+                  - generic [ref=f33e767]:
+                    - generic [ref=f33e768]:
+                      - generic [ref=f33e769]:
+                        - link [ref=f33e770] [cursor=pointer]:
+                          - /url: https://ader.naver.com/v1/xdSRQ_jAW118AjnPjy9I-WZLGQ-kNiItyFmQCejyZXnhknnRYKUlh_9PXR--D_WnQETdaen68Oc4xphpw-MC9wru_QLurjjpgyPBA_FYdUMWghXoHjnwTPc2A6ZIaqcdiw2kqaNO6CuhCLTJBkKgU7wI8HjkpJhU8fcm0Pm13NwxG3sTIyBa7vHs5bNHSZkDojEDpobraGjnamWQiqd0WnfGWTkHwEBf02UE4tlsFNveXuRD3mjUsNvD4rcIc2aemL6-41uBjsnJSK3QHYAlQ4lnFMuqOT0ez2OtVEqxtzrTiYowud3Owm3AQRzD4vDH8awIZRitDEORGkTS7MPUMsOmheRGPy_OelhJktlHO-9d0vUIKC_R_Di-IeYLWJXUUdyef0F0KPiF96WhZr49kSmn-aF6-dg9S1IyM88RIEfPyTKUWAGqt1TRwPhiatTr6w4bBnVoHy1gN9PrjEnX5_K4SEMfgOHWGspI6HFj6X0=?c=naver.search.pc.plsearch&t=0
+                          - img "favicon" [ref=f33e771]
+                        - img "광고" [ref=f33e772]
+                        - link "seoulpaper.com" [ref=f33e777] [cursor=pointer]:
+                          - /url: https://ader.naver.com/v1/xdSRQ_jAW118AjnPjy9I-WZLGQ-kNiItyFmQCejyZXnhknnRYKUlh_9PXR--D_WnQETdaen68Oc4xphpw-MC9wru_QLurjjpgyPBA_FYdUMWghXoHjnwTPc2A6ZIaqcdiw2kqaNO6CuhCLTJBkKgU7wI8HjkpJhU8fcm0Pm13NwxG3sTIyBa7vHs5bNHSZkDojEDpobraGjnamWQiqd0WnfGWTkHwEBf02UE4tlsFNveXuRD3mjUsNvD4rcIc2aemL6-41uBjsnJSK3QHYAlQ4lnFMuqOT0ez2OtVEqxtzrTiYowud3Owm3AQRzD4vDH8awIZRitDEORGkTS7MPUMsOmheRGPy_OelhJktlHO-9d0vUIKC_R_Di-IeYLWJXUUdyef0F0KPiF96WhZr49kSmn-aF6-dg9S1IyM88RIEfPyTKUWAGqt1TRwPhiatTr6w4bBnVoHy1gN9PrjEnX5_K4SEMfgOHWGspI6HFj6X0=?c=naver.search.pc.plsearch&t=0
+                      - link "서울대박사그룹,서울논문컨설팅" [ref=f33e778] [cursor=pointer]:
+                        - /url: https://ader.naver.com/v1/xdSRQ_jAW118AjnPjy9I-WZLGQ-kNiItyFmQCejyZXnhknnRYKUlh_9PXR--D_WnQETdaen68Oc4xphpw-MC9wru_QLurjjpgyPBA_FYdUMWghXoHjnwTPc2A6ZIaqcdiw2kqaNO6CuhCLTJBkKgU7wI8HjkpJhU8fcm0Pm13NwxG3sTIyBa7vHs5bNHSZkDojEDpobraGjnamWQiqd0WnfGWTkHwEBf02UE4tlsFNveXuRD3mjUsNvD4rcIc2aemL6-41uBjsnJSK3QHYAlQ4lnFMuqOT0ez2OtVEqxtzrTiYowud3Owm3AQRzD4vDH8awIZRitDEORGkTS7MPUMsOmheRGPy_OelhJktlHO-9d0vUIKC_R_Di-IeYLWJXUUdyef0F0KPiF96WhZr49kSmn-aF6-dg9S1IyM88RIEfPyTKUWAGqt1TRwPhiatTr6w4bBnVoHy1gN9PrjEnX5_K4SEMfgOHWGspI6HFj6X0=?c=naver.search.pc.plsearch&t=0
+                    - link "석박사,학술지,SCI논문,연구설계,교정,통계분석,신뢰할수 있는 서울대박사그룹" [ref=f33e781] [cursor=pointer]:
+                      - /url: https://ader.naver.com/v1/xdSRQ_jAW118AjnPjy9I-WZLGQ-kNiItyFmQCejyZXnhknnRYKUlh_9PXR--D_WnQETdaen68Oc4xphpw-MC9wru_QLurjjpgyPBA_FYdUMWghXoHjnwTPc2A6ZIaqcdiw2kqaNO6CuhCLTJBkKgU7wI8HjkpJhU8fcm0Pm13NwxG3sTIyBa7vHs5bNHSZkDojEDpobraGjnamWQiqd0WnfGWTkHwEBf02UE4tlsFNveXuRD3mjUsNvD4rcIc2aemL6-41uBjsnJSK3QHYAlQ4lnFMuqOT0ez2OtVEqxtzrTiYowud3Owm3AQRzD4vDH8awIZRitDEORGkTS7MPUMsOmheRGPy_OelhJktlHO-9d0vUIKC_R_Di-IeYLWJXUUdyef0F0KPiF96WhZr49kSmn-aF6-dg9S1IyM88RIEfPyTKUWAGqt1TRwPhiatTr6w4bBnVoHy1gN9PrjEnX5_K4SEMfgOHWGspI6HFj6X0=?c=naver.search.pc.plsearch&t=0
+              - link "더보기" [ref=f33e783] [cursor=pointer]:
+                - /url: https://ad.search.naver.com/search.naver?where=ad&query=%ED%99%98%EC%9C%A8&referenceId=jqLWesqXKZ0ssd%2BEeUo-266606&buckets=N-PWL-UI-26%5E4%2CN-QRA-COV-26%5E3%2CNS-PND-RANK-26%5E1%2Cimpression-neo-SA_SERVING-1119%5E0
+          - generic [ref=f33e788]:
+            - generic [ref=f33e791]:
+              - heading "네이버 클립" [level=2] [ref=f33e792]
+              - button "정보 확인 도움말" [ref=f33e793] [cursor=pointer]
+            - generic [ref=f33e798]:
+              - generic [ref=f33e799]:
+                - generic [ref=f33e800]:
+                  - generic [ref=f33e802]:
+                    - link "클립 이미지 새 창 열림" [ref=f33e803] [cursor=pointer]:
+                      - /url: https://m.naver.com/shorts/?mediaType=VOD&recId=%7B%22query%22%3A%22%ED%99%98%EC%9C%A8%22%2C%22seedIndex%22%3A%221%22%2C%22type%22%3A%22ALL%22%2C%22order%22%3A%22RELATED%22%2C%22filter%22%3A%22LOW_QUALITY_LEVEL_3%22%2C%22theme%22%3A%22currency%22%2C%22now%22%3A%220%22%7D&recType=CLIP_SEARCH&seedMediaId=157440BAE29AFF940FCB6BA7DF6D0C60AF36&serviceType=CLIP
+                      - img "클립 이미지" [ref=f33e805]
+                      - generic [ref=f33e807]: 새 창 열림
+                    - link "환율 1350원에 달러 사는 진짜 이유 새 창 열림" [ref=f33e808] [cursor=pointer]:
+                      - /url: https://m.naver.com/shorts/?mediaType=VOD&recId=%7B%22query%22%3A%22%ED%99%98%EC%9C%A8%22%2C%22seedIndex%22%3A%221%22%2C%22type%22%3A%22ALL%22%2C%22order%22%3A%22RELATED%22%2C%22filter%22%3A%22LOW_QUALITY_LEVEL_3%22%2C%22theme%22%3A%22currency%22%2C%22now%22%3A%220%22%7D&recType=CLIP_SEARCH&seedMediaId=157440BAE29AFF940FCB6BA7DF6D0C60AF36&serviceType=CLIP
+                      - generic [ref=f33e810]:
+                        - mark [ref=f33e811]: 환율
+                        - text: 1350원에 달러 사는 진짜 이유
+                      - generic [ref=f33e812]: 새 창 열림
+                  - link "프로필 이미지 신사임당 1일 전 조회 1.1만 새 창 열림" [ref=f33e813] [cursor=pointer]:
+                    - /url: https://clip.naver.com/@ssid_official
+                    - generic [ref=f33e814]:
+                      - img "프로필 이미지" [ref=f33e816]
+                      - generic [ref=f33e817]:
+                        - generic [ref=f33e818]: 신사임당
+                        - generic [ref=f33e824]:
+                          - generic [ref=f33e825]: 1일 전
+                          - generic [ref=f33e827]: 조회 1.1만
+                    - generic [ref=f33e828]: 새 창 열림
+                - generic [ref=f33e829]:
+                  - generic [ref=f33e831]:
+                    - link "클립 이미지 새 창 열림" [ref=f33e832] [cursor=pointer]:
+                      - /url: https://m.naver.com/shorts/?mediaType=VOD&recId=%7B%22query%22%3A%22%ED%99%98%EC%9C%A8%22%2C%22seedIndex%22%3A%222%22%2C%22type%22%3A%22ALL%22%2C%22order%22%3A%22RELATED%22%2C%22filter%22%3A%22LOW_QUALITY_LEVEL_3%22%2C%22theme%22%3A%22currency%22%2C%22now%22%3A%220%22%7D&recType=CLIP_SEARCH&seedMediaId=E9D09C689CFD9C2F6822539917A6A68D3809&serviceType=CLIP
+                      - img "클립 이미지" [ref=f33e834]
+                      - generic [ref=f33e836]: 새 창 열림
+                    - link "외국인 169조 팔아도 환율 내린 진짜 이유 새 창 열림" [ref=f33e837] [cursor=pointer]:
+                      - /url: https://m.naver.com/shorts/?mediaType=VOD&recId=%7B%22query%22%3A%22%ED%99%98%EC%9C%A8%22%2C%22seedIndex%22%3A%222%22%2C%22type%22%3A%22ALL%22%2C%22order%22%3A%22RELATED%22%2C%22filter%22%3A%22LOW_QUALITY_LEVEL_3%22%2C%22theme%22%3A%22currency%22%2C%22now%22%3A%220%22%7D&recType=CLIP_SEARCH&seedMediaId=E9D09C689CFD9C2F6822539917A6A68D3809&serviceType=CLIP
+                      - generic [ref=f33e839]:
+                        - text: 외국인 169조 팔아도
+                        - mark [ref=f33e840]: 환율
+                        - text: 내린 진짜 이유
+                      - generic [ref=f33e841]: 새 창 열림
+                  - link "프로필 이미지 신사임당 23시간 전 조회 1.8천 새 창 열림" [ref=f33e842] [cursor=pointer]:
+                    - /url: https://clip.naver.com/@ssid_official
+                    - generic [ref=f33e843]:
+                      - img "프로필 이미지" [ref=f33e845]
+                      - generic [ref=f33e846]:
+                        - generic [ref=f33e847]: 신사임당
+                        - generic [ref=f33e853]:
+                          - generic [ref=f33e854]: 23시간 전
+                          - generic [ref=f33e856]: 조회 1.8천
+                    - generic [ref=f33e857]: 새 창 열림
+                - generic [ref=f33e858]:
+                  - generic [ref=f33e860]:
+                    - link "클립 이미지 새 창 열림" [ref=f33e861] [cursor=pointer]:
+                      - /url: https://m.naver.com/shorts/?mediaType=VOD&recId=%7B%22query%22%3A%22%ED%99%98%EC%9C%A8%22%2C%22seedIndex%22%3A%223%22%2C%22type%22%3A%22ALL%22%2C%22order%22%3A%22RELATED%22%2C%22filter%22%3A%22LOW_QUALITY_LEVEL_3%22%2C%22theme%22%3A%22currency%22%2C%22now%22%3A%220%22%7D&recType=CLIP_SEARCH&seedMediaId=8CFB10CE622F223380900DFA6DEBDBCA80B1&serviceType=CLIP
+                      - img "클립 이미지" [ref=f33e863]
+                      - generic [ref=f33e865]: 새 창 열림
+                    - link "앞으로 3개월 한국 환율 '이렇게' 됩니다 새 창 열림" [ref=f33e866] [cursor=pointer]:
+                      - /url: https://m.naver.com/shorts/?mediaType=VOD&recId=%7B%22query%22%3A%22%ED%99%98%EC%9C%A8%22%2C%22seedIndex%22%3A%223%22%2C%22type%22%3A%22ALL%22%2C%22order%22%3A%22RELATED%22%2C%22filter%22%3A%22LOW_QUALITY_LEVEL_3%22%2C%22theme%22%3A%22currency%22%2C%22now%22%3A%220%22%7D&recType=CLIP_SEARCH&seedMediaId=8CFB10CE622F223380900DFA6DEBDBCA80B1&serviceType=CLIP
+                      - generic [ref=f33e868]:
+                        - text: 앞으로 3개월 한국
+                        - mark [ref=f33e869]: 환율
+                        - text: "'이렇게' 됩니다"
+                      - generic [ref=f33e870]: 새 창 열림
+                  - link "프로필 이미지 머니인사이드 2일 전 조회 1.8만 새 창 열림" [ref=f33e871] [cursor=pointer]:
+                    - /url: https://clip.naver.com/@moneyinsideclip
+                    - generic [ref=f33e872]:
+                      - img "프로필 이미지" [ref=f33e874]
+                      - generic [ref=f33e875]:
+                        - generic [ref=f33e876]: 머니인사이드
+                        - generic [ref=f33e882]:
+                          - generic [ref=f33e883]: 2일 전
+                          - generic [ref=f33e885]: 조회 1.8만
+                    - generic [ref=f33e886]: 새 창 열림
+                - generic [ref=f33e887]:
+                  - generic [ref=f33e889]:
+                    - link "클립 이미지 새 창 열림" [ref=f33e890] [cursor=pointer]:
+                      - /url: https://m.naver.com/shorts/?mediaType=VOD&recId=%7B%22query%22%3A%22%ED%99%98%EC%9C%A8%22%2C%22seedIndex%22%3A%224%22%2C%22type%22%3A%22ALL%22%2C%22order%22%3A%22RELATED%22%2C%22filter%22%3A%22LOW_QUALITY_LEVEL_3%22%2C%22theme%22%3A%22currency%22%2C%22now%22%3A%220%22%7D&recType=CLIP_SEARCH&seedMediaId=DE7D7ED2FD8F305FED890FC3B833223888E9&serviceType=CLIP
+                      - img "클립 이미지" [ref=f33e892]
+                      - generic [ref=f33e894]: 새 창 열림
+                    - 'link "원화 환율 1100원대 다시 볼 수... 미국 #환율 #달러 #금리 #경제 #나스닥... 새 창 열림" [ref=f33e895] [cursor=pointer]':
+                      - /url: https://m.naver.com/shorts/?mediaType=VOD&recId=%7B%22query%22%3A%22%ED%99%98%EC%9C%A8%22%2C%22seedIndex%22%3A%224%22%2C%22type%22%3A%22ALL%22%2C%22order%22%3A%22RELATED%22%2C%22filter%22%3A%22LOW_QUALITY_LEVEL_3%22%2C%22theme%22%3A%22currency%22%2C%22now%22%3A%220%22%7D&recType=CLIP_SEARCH&seedMediaId=DE7D7ED2FD8F305FED890FC3B833223888E9&serviceType=CLIP
+                      - generic [ref=f33e897]:
+                        - text: 원화
+                        - mark [ref=f33e898]: 환율
+                        - text: "1100원대 다시 볼 수... 미국 #"
+                        - mark [ref=f33e899]: 환율
+                        - text: "#달러 #금리 #경제 #나스닥..."
+                      - generic [ref=f33e900]: 새 창 열림
+                  - link "프로필 이미지 전인구경제연구소 2일 전 조회 2.0만 새 창 열림" [ref=f33e901] [cursor=pointer]:
+                    - /url: https://clip.naver.com/@moneydo100
+                    - generic [ref=f33e902]:
+                      - img "프로필 이미지" [ref=f33e904]
+                      - generic [ref=f33e905]:
+                        - generic [ref=f33e906]: 전인구경제연구소
+                        - generic [ref=f33e912]:
+                          - generic [ref=f33e913]: 2일 전
+                          - generic [ref=f33e915]: 조회 2.0만
+                    - generic [ref=f33e916]: 새 창 열림
+                - generic [ref=f33e917]:
+                  - generic [ref=f33e919]:
+                    - link "클립 이미지 새 창 열림" [ref=f33e920] [cursor=pointer]:
+                      - /url: https://m.naver.com/shorts/?mediaType=VOD&recId=%7B%22query%22%3A%22%ED%99%98%EC%9C%A8%22%2C%22seedIndex%22%3A%225%22%2C%22type%22%3A%22ALL%22%2C%22order%22%3A%22RELATED%22%2C%22filter%22%3A%22LOW_QUALITY_LEVEL_3%22%2C%22theme%22%3A%22currency%22%2C%22now%22%3A%220%22%7D&recType=CLIP_SEARCH&seedMediaId=39DFAB381AF3296BFCBE9B5051667AA86F18&serviceType=CLIP
+                      - img "클립 이미지" [ref=f33e922]
+                      - generic [ref=f33e924]: 새 창 열림
+                    - 'link "미국 #환율 #달러 #금리 #경제 #나스닥 #미국주식 #코스피 #실적 #주식... 새 창 열림" [ref=f33e925] [cursor=pointer]':
+                      - /url: https://m.naver.com/shorts/?mediaType=VOD&recId=%7B%22query%22%3A%22%ED%99%98%EC%9C%A8%22%2C%22seedIndex%22%3A%225%22%2C%22type%22%3A%22ALL%22%2C%22order%22%3A%22RELATED%22%2C%22filter%22%3A%22LOW_QUALITY_LEVEL_3%22%2C%22theme%22%3A%22currency%22%2C%22now%22%3A%220%22%7D&recType=CLIP_SEARCH&seedMediaId=39DFAB381AF3296BFCBE9B5051667AA86F18&serviceType=CLIP
+                      - generic [ref=f33e927]:
+                        - text: "미국 #"
+                        - mark [ref=f33e928]: 환율
+                        - text: "#달러 #금리 #경제 #나스닥 #미국주식 #코스피 #실적 #주식..."
+                      - generic [ref=f33e929]: 새 창 열림
+                  - link "프로필 이미지 전인구경제연구소 2일 전 조회 6.5천 새 창 열림" [ref=f33e930] [cursor=pointer]:
+                    - /url: https://clip.naver.com/@moneydo100
+                    - generic [ref=f33e931]:
+                      - img "프로필 이미지" [ref=f33e933]
+                      - generic [ref=f33e934]:
+                        - generic [ref=f33e935]: 전인구경제연구소
+                        - generic [ref=f33e941]:
+                          - generic [ref=f33e942]: 2일 전
+                          - generic [ref=f33e944]: 조회 6.5천
+                    - generic [ref=f33e945]: 새 창 열림
+                - generic [ref=f33e946]:
+                  - generic [ref=f33e948]:
+                    - link "클립 이미지 새 창 열림" [ref=f33e949] [cursor=pointer]:
+                      - /url: https://m.naver.com/shorts/?mediaType=VOD&recId=%7B%22query%22%3A%22%ED%99%98%EC%9C%A8%22%2C%22seedIndex%22%3A%226%22%2C%22type%22%3A%22ALL%22%2C%22order%22%3A%22RELATED%22%2C%22filter%22%3A%22LOW_QUALITY_LEVEL_3%22%2C%22theme%22%3A%22currency%22%2C%22now%22%3A%220%22%7D&recType=CLIP_SEARCH&seedMediaId=BA3C366BBF496F85F0866AC265F0176E6ECC&serviceType=CLIP
+                      - img "클립 이미지" [ref=f33e951]
+                      - generic [ref=f33e953]: 새 창 열림
+                    - link "한국 원화 변동성이 유독 심해진 이유 새 창 열림" [ref=f33e954] [cursor=pointer]:
+                      - /url: https://m.naver.com/shorts/?mediaType=VOD&recId=%7B%22query%22%3A%22%ED%99%98%EC%9C%A8%22%2C%22seedIndex%22%3A%226%22%2C%22type%22%3A%22ALL%22%2C%22order%22%3A%22RELATED%22%2C%22filter%22%3A%22LOW_QUALITY_LEVEL_3%22%2C%22theme%22%3A%22currency%22%2C%22now%22%3A%220%22%7D&recType=CLIP_SEARCH&seedMediaId=BA3C366BBF496F85F0866AC265F0176E6ECC&serviceType=CLIP
+                      - generic [ref=f33e955]: 한국 원화 변동성이 유독 심해진 이유
+                      - generic [ref=f33e957]: 새 창 열림
+                  - link "프로필 이미지 머니인사이드 2일 전 조회 7.7천 새 창 열림" [ref=f33e958] [cursor=pointer]:
+                    - /url: https://clip.naver.com/@moneyinsideclip
+                    - generic [ref=f33e959]:
+                      - img "프로필 이미지" [ref=f33e961]
+                      - generic [ref=f33e962]:
+                        - generic [ref=f33e963]: 머니인사이드
+                        - generic [ref=f33e969]:
+                          - generic [ref=f33e970]: 2일 전
+                          - generic [ref=f33e972]: 조회 7.7천
+                    - generic [ref=f33e973]: 새 창 열림
+                - generic [ref=f33e974]:
+                  - generic [ref=f33e976]:
+                    - link "클립 이미지 새 창 열림" [ref=f33e977] [cursor=pointer]:
+                      - /url: https://m.naver.com/shorts/?mediaType=VOD&recId=%7B%22query%22%3A%22%ED%99%98%EC%9C%A8%22%2C%22seedIndex%22%3A%227%22%2C%22type%22%3A%22ALL%22%2C%22order%22%3A%22RELATED%22%2C%22filter%22%3A%22LOW_QUALITY_LEVEL_3%22%2C%22theme%22%3A%22currency%22%2C%22now%22%3A%220%22%7D&recType=CLIP_SEARCH&seedMediaId=E07470D82D66217F3ECB045D5904D66F704F&serviceType=CLIP
+                      - img "클립 이미지" [ref=f33e979]
+                      - generic [ref=f33e981]: 새 창 열림
+                    - link "진짜 상황 심각합니다 이란 중동 충격적인 실제 상황 (박현도 교수) 새 창 열림" [ref=f33e982] [cursor=pointer]:
+                      - /url: https://m.naver.com/shorts/?mediaType=VOD&recId=%7B%22query%22%3A%22%ED%99%98%EC%9C%A8%22%2C%22seedIndex%22%3A%227%22%2C%22type%22%3A%22ALL%22%2C%22order%22%3A%22RELATED%22%2C%22filter%22%3A%22LOW_QUALITY_LEVEL_3%22%2C%22theme%22%3A%22currency%22%2C%22now%22%3A%220%22%7D&recType=CLIP_SEARCH&seedMediaId=E07470D82D66217F3ECB045D5904D66F704F&serviceType=CLIP
+                      - generic [ref=f33e983]: 진짜 상황 심각합니다 이란 중동 충격적인 실제 상황 (박현도 교수)
+                      - generic [ref=f33e985]: 새 창 열림
+                  - link "프로필 이미지 웅달책방 3일 전 조회 5.2만 새 창 열림" [ref=f33e986] [cursor=pointer]:
+                    - /url: https://clip.naver.com/@woong-dal
+                    - generic [ref=f33e987]:
+                      - img "프로필 이미지" [ref=f33e989]
+                      - generic [ref=f33e990]:
+                        - generic [ref=f33e991]: 웅달책방
+                        - generic [ref=f33e997]:
+                          - generic [ref=f33e998]: 3일 전
+                          - generic [ref=f33e1000]: 조회 5.2만
+                    - generic [ref=f33e1001]: 새 창 열림
+                - generic [ref=f33e1002]:
+                  - generic [ref=f33e1004]:
+                    - link "클립 이미지 새 창 열림" [ref=f33e1005] [cursor=pointer]:
+                      - /url: https://m.naver.com/shorts/?mediaType=VOD&recId=%7B%22query%22%3A%22%ED%99%98%EC%9C%A8%22%2C%22seedIndex%22%3A%228%22%2C%22type%22%3A%22ALL%22%2C%22order%22%3A%22RELATED%22%2C%22filter%22%3A%22LOW_QUALITY_LEVEL_3%22%2C%22theme%22%3A%22currency%22%2C%22now%22%3A%220%22%7D&recType=CLIP_SEARCH&seedMediaId=F8C47039FEFF32519EB192B3E8799DCE9E7A&serviceType=CLIP
+                      - img "클립 이미지" [ref=f33e1007]
+                      - generic [ref=f33e1009]: 새 창 열림
+                    - link "한국 상온 초전도체 1년후 새 창 열림" [ref=f33e1010] [cursor=pointer]:
+                      - /url: https://m.naver.com/shorts/?mediaType=VOD&recId=%7B%22query%22%3A%22%ED%99%98%EC%9C%A8%22%2C%22seedIndex%22%3A%228%22%2C%22type%22%3A%22ALL%22%2C%22order%22%3A%22RELATED%22%2C%22filter%22%3A%22LOW_QUALITY_LEVEL_3%22%2C%22theme%22%3A%22currency%22%2C%22now%22%3A%220%22%7D&recType=CLIP_SEARCH&seedMediaId=F8C47039FEFF32519EB192B3E8799DCE9E7A&serviceType=CLIP
+                      - generic [ref=f33e1011]: 한국 상온 초전도체 1년후
+                      - generic [ref=f33e1013]: 새 창 열림
+                  - link "프로필 이미지 낭만박상환 1일 전 조회 5.2만 새 창 열림" [ref=f33e1014] [cursor=pointer]:
+                    - /url: https://clip.naver.com/@nangman_park
+                    - generic [ref=f33e1015]:
+                      - img "프로필 이미지" [ref=f33e1017]
+                      - generic [ref=f33e1018]:
+                        - generic [ref=f33e1019]: 낭만박상환
+                        - generic [ref=f33e1025]:
+                          - generic [ref=f33e1026]: 1일 전
+                          - generic [ref=f33e1028]: 조회 5.2만
+                    - generic [ref=f33e1029]: 새 창 열림
+                - generic [ref=f33e1030]:
+                  - generic [ref=f33e1032]:
+                    - link "클립 이미지 새 창 열림" [ref=f33e1033] [cursor=pointer]:
+                      - /url: https://m.naver.com/shorts/?mediaType=VOD&recId=%7B%22query%22%3A%22%ED%99%98%EC%9C%A8%22%2C%22seedIndex%22%3A%229%22%2C%22type%22%3A%22ALL%22%2C%22order%22%3A%22RELATED%22%2C%22filter%22%3A%22LOW_QUALITY_LEVEL_3%22%2C%22theme%22%3A%22currency%22%2C%22now%22%3A%220%22%7D&recType=CLIP_SEARCH&seedMediaId=4779AF9EC2939E6916F00911B1A8BFA391D4&serviceType=CLIP
+                      - img "클립 이미지" [ref=f33e1035]
+                      - generic [ref=f33e1037]: 새 창 열림
+                    - link "환율 1355원까지 빠진 진짜 이유 새 창 열림" [ref=f33e1038] [cursor=pointer]:
+                      - /url: https://m.naver.com/shorts/?mediaType=VOD&recId=%7B%22query%22%3A%22%ED%99%98%EC%9C%A8%22%2C%22seedIndex%22%3A%229%22%2C%22type%22%3A%22ALL%22%2C%22order%22%3A%22RELATED%22%2C%22filter%22%3A%22LOW_QUALITY_LEVEL_3%22%2C%22theme%22%3A%22currency%22%2C%22now%22%3A%220%22%7D&recType=CLIP_SEARCH&seedMediaId=4779AF9EC2939E6916F00911B1A8BFA391D4&serviceType=CLIP
+                      - generic [ref=f33e1040]:
+                        - mark [ref=f33e1041]: 환율
+                        - text: 1355원까지 빠진 진짜 이유
+                      - generic [ref=f33e1042]: 새 창 열림
+                  - link "프로필 이미지 신사임당 1일 전 조회 4.5천 새 창 열림" [ref=f33e1043] [cursor=pointer]:
+                    - /url: https://clip.naver.com/@ssid_official
+                    - generic [ref=f33e1044]:
+                      - img "프로필 이미지" [ref=f33e1046]
+                      - generic [ref=f33e1047]:
+                        - generic [ref=f33e1048]: 신사임당
+                        - generic [ref=f33e1054]:
+                          - generic [ref=f33e1055]: 1일 전
+                          - generic [ref=f33e1057]: 조회 4.5천
+                    - generic [ref=f33e1058]: 새 창 열림
+                - generic [ref=f33e1059]:
+                  - generic [ref=f33e1061]:
+                    - link "클립 이미지 새 창 열림" [ref=f33e1062] [cursor=pointer]:
+                      - /url: https://m.naver.com/shorts/?mediaType=VOD&recId=%7B%22query%22%3A%22%ED%99%98%EC%9C%A8%22%2C%22seedIndex%22%3A%2210%22%2C%22type%22%3A%22ALL%22%2C%22order%22%3A%22RELATED%22%2C%22filter%22%3A%22LOW_QUALITY_LEVEL_3%22%2C%22theme%22%3A%22currency%22%2C%22now%22%3A%220%22%7D&recType=CLIP_SEARCH&seedMediaId=E37605C3102B22902BB1D5A45440AC758B96&serviceType=NTV
+                      - img "클립 이미지" [ref=f33e1064]
+                      - generic [ref=f33e1066]: 새 창 열림
+                    - link "달러·원 환율 2년 만의 최저…원화 강세 새 창 열림" [ref=f33e1067] [cursor=pointer]:
+                      - /url: https://m.naver.com/shorts/?mediaType=VOD&recId=%7B%22query%22%3A%22%ED%99%98%EC%9C%A8%22%2C%22seedIndex%22%3A%2210%22%2C%22type%22%3A%22ALL%22%2C%22order%22%3A%22RELATED%22%2C%22filter%22%3A%22LOW_QUALITY_LEVEL_3%22%2C%22theme%22%3A%22currency%22%2C%22now%22%3A%220%22%7D&recType=CLIP_SEARCH&seedMediaId=E37605C3102B22902BB1D5A45440AC758B96&serviceType=NTV
+                      - generic [ref=f33e1069]:
+                        - text: 달러·원
+                        - mark [ref=f33e1070]: 환율
+                        - text: 2년 만의 최저…원화 강세
+                      - generic [ref=f33e1071]: 새 창 열림
+                  - link "프로필 이미지 연합인포맥스 1일 전 조회 255 새 창 열림" [ref=f33e1072] [cursor=pointer]:
+                    - /url: https://tv.naver.com/yonhapainews
+                    - generic [ref=f33e1073]:
+                      - img "프로필 이미지" [ref=f33e1075]
+                      - generic [ref=f33e1076]:
+                        - generic [ref=f33e1077]: 연합인포맥스
+                        - generic [ref=f33e1079]:
+                          - generic [ref=f33e1080]: 1일 전
+                          - generic [ref=f33e1082]: 조회 255
+                    - generic [ref=f33e1083]: 새 창 열림
+                - generic [ref=f33e1084]:
+                  - generic [ref=f33e1086]:
+                    - link "클립 이미지 새 창 열림" [ref=f33e1087] [cursor=pointer]:
+                      - /url: https://m.naver.com/shorts/?mediaType=VOD&recId=%7B%22query%22%3A%22%ED%99%98%EC%9C%A8%22%2C%22seedIndex%22%3A%2211%22%2C%22type%22%3A%22ALL%22%2C%22order%22%3A%22RELATED%22%2C%22filter%22%3A%22LOW_QUALITY_LEVEL_3%22%2C%22theme%22%3A%22currency%22%2C%22now%22%3A%220%22%7D&recType=CLIP_SEARCH&seedMediaId=8B45B4EBBB8AC47C572A9186109314C73012&serviceType=NTV
+                      - img "클립 이미지" [ref=f33e1089]
+                      - generic [ref=f33e1091]: 새 창 열림
+                    - link "달러-원, 런던서 연저점 경신 — 원화 강세 새 창 열림" [ref=f33e1092] [cursor=pointer]:
+                      - /url: https://m.naver.com/shorts/?mediaType=VOD&recId=%7B%22query%22%3A%22%ED%99%98%EC%9C%A8%22%2C%22seedIndex%22%3A%2211%22%2C%22type%22%3A%22ALL%22%2C%22order%22%3A%22RELATED%22%2C%22filter%22%3A%22LOW_QUALITY_LEVEL_3%22%2C%22theme%22%3A%22currency%22%2C%22now%22%3A%220%22%7D&recType=CLIP_SEARCH&seedMediaId=8B45B4EBBB8AC47C572A9186109314C73012&serviceType=NTV
+                      - generic [ref=f33e1093]: 달러-원, 런던서 연저점 경신 — 원화 강세
+                      - generic [ref=f33e1095]: 새 창 열림
+                  - link "프로필 이미지 연합인포맥스 1일 전 조회 289 새 창 열림" [ref=f33e1096] [cursor=pointer]:
+                    - /url: https://tv.naver.com/yonhapainews
+                    - generic [ref=f33e1097]:
+                      - img "프로필 이미지" [ref=f33e1099]
+                      - generic [ref=f33e1100]:
+                        - generic [ref=f33e1101]: 연합인포맥스
+                        - generic [ref=f33e1103]:
+                          - generic [ref=f33e1104]: 1일 전
+                          - generic [ref=f33e1106]: 조회 289
+                    - generic [ref=f33e1107]: 새 창 열림
+                - generic [ref=f33e1108]:
+                  - generic [ref=f33e1110]:
+                    - link "클립 이미지 새 창 열림" [ref=f33e1111] [cursor=pointer]:
+                      - /url: https://m.naver.com/shorts/?mediaType=VOD&recId=%7B%22query%22%3A%22%ED%99%98%EC%9C%A8%22%2C%22seedIndex%22%3A%2212%22%2C%22type%22%3A%22ALL%22%2C%22order%22%3A%22RELATED%22%2C%22filter%22%3A%22LOW_QUALITY_LEVEL_3%22%2C%22theme%22%3A%22currency%22%2C%22now%22%3A%220%22%7D&recType=CLIP_SEARCH&seedMediaId=79C38342309B992AFDB13AE05720039BFC4E&serviceType=CLIP
+                      - img "클립 이미지" [ref=f33e1113]
+                      - generic [ref=f33e1115]: 새 창 열림
+                    - 'link "환율 지금이 저점일까요? . . . #환율 #오늘환율 #환차익 #달러시세... 새 창 열림" [ref=f33e1116] [cursor=pointer]':
+                      - /url: https://m.naver.com/shorts/?mediaType=VOD&recId=%7B%22query%22%3A%22%ED%99%98%EC%9C%A8%22%2C%22seedIndex%22%3A%2212%22%2C%22type%22%3A%22ALL%22%2C%22order%22%3A%22RELATED%22%2C%22filter%22%3A%22LOW_QUALITY_LEVEL_3%22%2C%22theme%22%3A%22currency%22%2C%22now%22%3A%220%22%7D&recType=CLIP_SEARCH&seedMediaId=79C38342309B992AFDB13AE05720039BFC4E&serviceType=CLIP
+                      - generic [ref=f33e1118]:
+                        - mark [ref=f33e1119]: 환율
+                        - text: "지금이 저점일까요? . . . #"
+                        - mark [ref=f33e1120]: 환율
+                        - text: "#오늘"
+                        - mark [ref=f33e1121]: 환율
+                        - text: "#환차익 #달러시세..."
+                      - generic [ref=f33e1122]: 새 창 열림
+                  - link "프로필 이미지 경제가 보이는 1분 1일 전 조회 313 새 창 열림" [ref=f33e1123] [cursor=pointer]:
+                    - /url: https://clip.naver.com/@dreamcompanyy
+                    - generic [ref=f33e1124]:
+                      - img "프로필 이미지" [ref=f33e1126]
+                      - generic [ref=f33e1127]:
+                        - generic [ref=f33e1128]: 경제가 보이는 1분
+                        - generic [ref=f33e1130]:
+                          - generic [ref=f33e1131]: 1일 전
+                          - generic [ref=f33e1133]: 조회 313
+                    - generic [ref=f33e1134]: 새 창 열림
+                - generic [ref=f33e1135]:
+                  - generic [ref=f33e1137]:
+                    - link "클립 이미지 새 창 열림" [ref=f33e1138] [cursor=pointer]:
+                      - /url: https://m.naver.com/shorts/?mediaType=VOD&recId=%7B%22query%22%3A%22%ED%99%98%EC%9C%A8%22%2C%22seedIndex%22%3A%2213%22%2C%22type%22%3A%22ALL%22%2C%22order%22%3A%22RELATED%22%2C%22filter%22%3A%22LOW_QUALITY_LEVEL_3%22%2C%22theme%22%3A%22currency%22%2C%22now%22%3A%220%22%7D&recType=CLIP_SEARCH&seedMediaId=697FA46887A583EB89DFD46EAB2349F3272E&serviceType=CLIP
+                      - img "클립 이미지" [ref=f33e1140]
+                      - generic [ref=f33e1142]: 새 창 열림
+                    - 'link "환율이 내려가는 이... 진짜 이유 #환율 #달러예금 #원달러환율 #환테크 새 창 열림" [ref=f33e1143] [cursor=pointer]':
+                      - /url: https://m.naver.com/shorts/?mediaType=VOD&recId=%7B%22query%22%3A%22%ED%99%98%EC%9C%A8%22%2C%22seedIndex%22%3A%2213%22%2C%22type%22%3A%22ALL%22%2C%22order%22%3A%22RELATED%22%2C%22filter%22%3A%22LOW_QUALITY_LEVEL_3%22%2C%22theme%22%3A%22currency%22%2C%22now%22%3A%220%22%7D&recType=CLIP_SEARCH&seedMediaId=697FA46887A583EB89DFD46EAB2349F3272E&serviceType=CLIP
+                      - generic [ref=f33e1145]:
+                        - mark [ref=f33e1146]: 환율
+                        - text: "이 내려가는 이... 진짜 이유 #"
+                        - mark [ref=f33e1147]: 환율
+                        - text: "#달러예금 #원달러"
+                        - mark [ref=f33e1148]: 환율
+                        - text: "#환테크"
+                      - generic [ref=f33e1149]: 새 창 열림
+                  - link "프로필 이미지 클립아재 11시간 전 조회 59 새 창 열림" [ref=f33e1150] [cursor=pointer]:
+                    - /url: https://clip.naver.com/@clip_uncle
+                    - generic [ref=f33e1151]:
+                      - img "프로필 이미지" [ref=f33e1153]
+                      - generic [ref=f33e1154]:
+                        - generic [ref=f33e1155]: 클립아재
+                        - generic [ref=f33e1157]:
+                          - generic [ref=f33e1158]: 11시간 전
+                          - generic [ref=f33e1160]: 조회 59
+                    - generic [ref=f33e1161]: 새 창 열림
+                - generic [ref=f33e1162]:
+                  - generic [ref=f33e1164]:
+                    - link "클립 이미지 새 창 열림" [ref=f33e1165] [cursor=pointer]:
+                      - /url: https://m.naver.com/shorts/?mediaType=VOD&recId=%7B%22query%22%3A%22%ED%99%98%EC%9C%A8%22%2C%22seedIndex%22%3A%2214%22%2C%22type%22%3A%22ALL%22%2C%22order%22%3A%22RELATED%22%2C%22filter%22%3A%22LOW_QUALITY_LEVEL_3%22%2C%22theme%22%3A%22currency%22%2C%22now%22%3A%220%22%7D&recType=CLIP_SEARCH&seedMediaId=FCFE853E7E1B908B1D203A2FE6289B3324E5&serviceType=CLIP
+                      - img "클립 이미지" [ref=f33e1167]
+                      - generic [ref=f33e1169]: 새 창 열림
+                    - 'link "범인은 환율입니다... 원·달러 환율은 1,549.... #환율 #지수 #투자... 새 창 열림" [ref=f33e1170] [cursor=pointer]':
+                      - /url: https://m.naver.com/shorts/?mediaType=VOD&recId=%7B%22query%22%3A%22%ED%99%98%EC%9C%A8%22%2C%22seedIndex%22%3A%2214%22%2C%22type%22%3A%22ALL%22%2C%22order%22%3A%22RELATED%22%2C%22filter%22%3A%22LOW_QUALITY_LEVEL_3%22%2C%22theme%22%3A%22currency%22%2C%22now%22%3A%220%22%7D&recType=CLIP_SEARCH&seedMediaId=FCFE853E7E1B908B1D203A2FE6289B3324E5&serviceType=CLIP
+                      - generic [ref=f33e1172]:
+                        - text: 범인은
+                        - mark [ref=f33e1173]: 환율
+                        - text: 입니다... 원·달러
+                        - mark [ref=f33e1174]: 환율
+                        - text: "은 1,549.... #"
+                        - mark [ref=f33e1175]: 환율
+                        - text: "#지수 #투자..."
+                      - generic [ref=f33e1176]: 새 창 열림
+                  - link "프로필 이미지 록코노미 13시간 전 조회 113 새 창 열림" [ref=f33e1177] [cursor=pointer]:
+                    - /url: https://clip.naver.com/@rokonomy
+                    - generic [ref=f33e1178]:
+                      - img "프로필 이미지" [ref=f33e1180]
+                      - generic [ref=f33e1181]:
+                        - generic [ref=f33e1182]: 록코노미
+                        - generic [ref=f33e1184]:
+                          - generic [ref=f33e1185]: 13시간 전
+                          - generic [ref=f33e1187]: 조회 113
+                    - generic [ref=f33e1188]: 새 창 열림
+                - generic [ref=f33e1189]:
+                  - generic [ref=f33e1191]:
+                    - link "클립 이미지 새 창 열림" [ref=f33e1192] [cursor=pointer]:
+                      - /url: https://m.naver.com/shorts/?mediaType=VOD&recId=%7B%22query%22%3A%22%ED%99%98%EC%9C%A8%22%2C%22seedIndex%22%3A%2215%22%2C%22type%22%3A%22ALL%22%2C%22order%22%3A%22RELATED%22%2C%22filter%22%3A%22LOW_QUALITY_LEVEL_3%22%2C%22theme%22%3A%22currency%22%2C%22now%22%3A%220%22%7D&recType=CLIP_SEARCH&seedMediaId=62FEDDCDCC631B48985C42B28D5D314D108B&serviceType=CLIP
+                      - img "클립 이미지" [ref=f33e1194]
+                      - generic [ref=f33e1196]: 새 창 열림
+                    - 'link "환율 급락으로 삼성 등... 환율 흐름과 반도체 가격을 주목하세요! #환율... 새 창 열림" [ref=f33e1197] [cursor=pointer]':
+                      - /url: https://m.naver.com/shorts/?mediaType=VOD&recId=%7B%22query%22%3A%22%ED%99%98%EC%9C%A8%22%2C%22seedIndex%22%3A%2215%22%2C%22type%22%3A%22ALL%22%2C%22order%22%3A%22RELATED%22%2C%22filter%22%3A%22LOW_QUALITY_LEVEL_3%22%2C%22theme%22%3A%22currency%22%2C%22now%22%3A%220%22%7D&recType=CLIP_SEARCH&seedMediaId=62FEDDCDCC631B48985C42B28D5D314D108B&serviceType=CLIP
+                      - generic [ref=f33e1199]:
+                        - mark [ref=f33e1200]: 환율
+                        - text: 급락으로 삼성 등...
+                        - mark [ref=f33e1201]: 환율
+                        - text: "흐름과 반도체 가격을 주목하세요! #"
+                        - mark [ref=f33e1202]: 환율
+                        - text: ...
+                      - generic [ref=f33e1203]: 새 창 열림
+                  - link "프로필 이미지 그냥은 없다 1일 전 조회 96 새 창 열림" [ref=f33e1204] [cursor=pointer]:
+                    - /url: https://clip.naver.com/@_whyzip
+                    - generic [ref=f33e1205]:
+                      - img "프로필 이미지" [ref=f33e1207]
+                      - generic [ref=f33e1208]:
+                        - generic [ref=f33e1209]: 그냥은 없다
+                        - generic [ref=f33e1211]:
+                          - generic [ref=f33e1212]: 1일 전
+                          - generic [ref=f33e1214]: 조회 96
+                    - generic [ref=f33e1215]: 새 창 열림
+                - generic [ref=f33e1216]:
+                  - generic [ref=f33e1218]:
+                    - link "클립 이미지 새 창 열림" [ref=f33e1219] [cursor=pointer]:
+                      - /url: https://m.naver.com/shorts/?mediaType=VOD&recId=%7B%22query%22%3A%22%ED%99%98%EC%9C%A8%22%2C%22seedIndex%22%3A%2216%22%2C%22type%22%3A%22ALL%22%2C%22order%22%3A%22RELATED%22%2C%22filter%22%3A%22LOW_QUALITY_LEVEL_3%22%2C%22theme%22%3A%22currency%22%2C%22now%22%3A%220%22%7D&recType=CLIP_SEARCH&seedMediaId=EDAB2EAF3874BF8A089A40C6704EE9B4248E&serviceType=CLIP
+                      - img "클립 이미지" [ref=f33e1221]
+                      - generic [ref=f33e1223]: 새 창 열림
+                    - 'link "예측하시나요? . . . #미국물가 #미국금리 #환율 #미국국채 새 창 열림" [ref=f33e1224] [cursor=pointer]':
+                      - /url: https://m.naver.com/shorts/?mediaType=VOD&recId=%7B%22query%22%3A%22%ED%99%98%EC%9C%A8%22%2C%22seedIndex%22%3A%2216%22%2C%22type%22%3A%22ALL%22%2C%22order%22%3A%22RELATED%22%2C%22filter%22%3A%22LOW_QUALITY_LEVEL_3%22%2C%22theme%22%3A%22currency%22%2C%22now%22%3A%220%22%7D&recType=CLIP_SEARCH&seedMediaId=EDAB2EAF3874BF8A089A40C6704EE9B4248E&serviceType=CLIP
+                      - generic [ref=f33e1226]:
+                        - text: "예측하시나요? . . . #미국물가 #미국금리 #"
+                        - mark [ref=f33e1227]: 환율
+                        - text: "#미국국채"
+                      - generic [ref=f33e1228]: 새 창 열림
+                  - link "프로필 이미지 경제가 보이는 1분 1일 전 조회 220 새 창 열림" [ref=f33e1229] [cursor=pointer]:
+                    - /url: https://clip.naver.com/@dreamcompanyy
+                    - generic [ref=f33e1230]:
+                      - img "프로필 이미지" [ref=f33e1232]
+                      - generic [ref=f33e1233]:
+                        - generic [ref=f33e1234]: 경제가 보이는 1분
+                        - generic [ref=f33e1236]:
+                          - generic [ref=f33e1237]: 1일 전
+                          - generic [ref=f33e1239]: 조회 220
+                    - generic [ref=f33e1240]: 새 창 열림
+                - generic [ref=f33e1241]:
+                  - generic [ref=f33e1243]:
+                    - link "클립 이미지 새 창 열림" [ref=f33e1244] [cursor=pointer]:
+                      - /url: https://m.naver.com/shorts/?mediaType=VOD&recId=%7B%22query%22%3A%22%ED%99%98%EC%9C%A8%22%2C%22seedIndex%22%3A%2217%22%2C%22type%22%3A%22ALL%22%2C%22order%22%3A%22RELATED%22%2C%22filter%22%3A%22LOW_QUALITY_LEVEL_3%22%2C%22theme%22%3A%22currency%22%2C%22now%22%3A%220%22%7D&recType=CLIP_SEARCH&seedMediaId=63831A388C4B33E8A20C26AE0E820EF3DC32&serviceType=NTV
+                      - img "클립 이미지" [ref=f33e1246]
+                      - generic [ref=f33e1248]: 새 창 열림
+                    - link "160엔 넘던 엔화가 갑자기 급등…무슨 일? 새 창 열림" [ref=f33e1249] [cursor=pointer]:
+                      - /url: https://m.naver.com/shorts/?mediaType=VOD&recId=%7B%22query%22%3A%22%ED%99%98%EC%9C%A8%22%2C%22seedIndex%22%3A%2217%22%2C%22type%22%3A%22ALL%22%2C%22order%22%3A%22RELATED%22%2C%22filter%22%3A%22LOW_QUALITY_LEVEL_3%22%2C%22theme%22%3A%22currency%22%2C%22now%22%3A%220%22%7D&recType=CLIP_SEARCH&seedMediaId=63831A388C4B33E8A20C26AE0E820EF3DC32&serviceType=NTV
+                      - generic [ref=f33e1250]: 160엔 넘던 엔화가 갑자기 급등…무슨 일?
+                      - generic [ref=f33e1252]: 새 창 열림
+                  - link "프로필 이미지 메트로경제tv 1일 전 조회 1.4천 새 창 열림" [ref=f33e1253] [cursor=pointer]:
+                    - /url: https://tv.naver.com/metrotv
+                    - generic [ref=f33e1254]:
+                      - img "프로필 이미지" [ref=f33e1256]
+                      - generic [ref=f33e1257]:
+                        - generic [ref=f33e1258]: 메트로경제tv
+                        - generic [ref=f33e1260]:
+                          - generic [ref=f33e1261]: 1일 전
+                          - generic [ref=f33e1263]: 조회 1.4천
+                    - generic [ref=f33e1264]: 새 창 열림
+                - generic [ref=f33e1265]:
+                  - generic [ref=f33e1267]:
+                    - link "클립 이미지 새 창 열림" [ref=f33e1268] [cursor=pointer]:
+                      - /url: https://m.naver.com/shorts/?mediaType=VOD&recId=%7B%22query%22%3A%22%ED%99%98%EC%9C%A8%22%2C%22seedIndex%22%3A%2218%22%2C%22type%22%3A%22ALL%22%2C%22order%22%3A%22RELATED%22%2C%22filter%22%3A%22LOW_QUALITY_LEVEL_3%22%2C%22theme%22%3A%22currency%22%2C%22now%22%3A%220%22%7D&recType=CLIP_SEARCH&seedMediaId=871F519FD9AF1FAF7D561AEC7FC67DCED3E8&serviceType=NTV
+                      - img "클립 이미지" [ref=f33e1270]
+                      - generic [ref=f33e1272]: 새 창 열림
+                    - link "화장품 수출 사상 최대에도 주가 급락…환율 새 창 열림" [ref=f33e1273] [cursor=pointer]:
+                      - /url: https://m.naver.com/shorts/?mediaType=VOD&recId=%7B%22query%22%3A%22%ED%99%98%EC%9C%A8%22%2C%22seedIndex%22%3A%2218%22%2C%22type%22%3A%22ALL%22%2C%22order%22%3A%22RELATED%22%2C%22filter%22%3A%22LOW_QUALITY_LEVEL_3%22%2C%22theme%22%3A%22currency%22%2C%22now%22%3A%220%22%7D&recType=CLIP_SEARCH&seedMediaId=871F519FD9AF1FAF7D561AEC7FC67DCED3E8&serviceType=NTV
+                      - generic [ref=f33e1275]:
+                        - text: 화장품 수출 사상 최대에도 주가 급락…
+                        - mark [ref=f33e1276]: 환율
+                      - generic [ref=f33e1277]: 새 창 열림
+                  - link "프로필 이미지 연합인포맥스 2일 전 조회 350 새 창 열림" [ref=f33e1278] [cursor=pointer]:
+                    - /url: https://tv.naver.com/yonhapainews
+                    - generic [ref=f33e1279]:
+                      - img "프로필 이미지" [ref=f33e1281]
+                      - generic [ref=f33e1282]:
+                        - generic [ref=f33e1283]: 연합인포맥스
+                        - generic [ref=f33e1285]:
+                          - generic [ref=f33e1286]: 2일 전
+                          - generic [ref=f33e1288]: 조회 350
+                    - generic [ref=f33e1289]: 새 창 열림
+                - generic [ref=f33e1290]:
+                  - generic [ref=f33e1292]:
+                    - link "클립 이미지 새 창 열림" [ref=f33e1293] [cursor=pointer]:
+                      - /url: https://m.naver.com/shorts/?mediaType=VOD&recId=%7B%22query%22%3A%22%ED%99%98%EC%9C%A8%22%2C%22seedIndex%22%3A%2219%22%2C%22type%22%3A%22ALL%22%2C%22order%22%3A%22RELATED%22%2C%22filter%22%3A%22LOW_QUALITY_LEVEL_3%22%2C%22theme%22%3A%22currency%22%2C%22now%22%3A%220%22%7D&recType=CLIP_SEARCH&seedMediaId=C060653843A834E84B8AE6ADD52DF4F32981&serviceType=CLIP
+                      - img "클립 이미지" [ref=f33e1295]
+                      - generic [ref=f33e1297]: 새 창 열림
+                    - 'link "환율 고점에 달러를... 최고 환율 대비 13... #경제 #환율 #달러투자... 새 창 열림" [ref=f33e1298] [cursor=pointer]':
+                      - /url: https://m.naver.com/shorts/?mediaType=VOD&recId=%7B%22query%22%3A%22%ED%99%98%EC%9C%A8%22%2C%22seedIndex%22%3A%2219%22%2C%22type%22%3A%22ALL%22%2C%22order%22%3A%22RELATED%22%2C%22filter%22%3A%22LOW_QUALITY_LEVEL_3%22%2C%22theme%22%3A%22currency%22%2C%22now%22%3A%220%22%7D&recType=CLIP_SEARCH&seedMediaId=C060653843A834E84B8AE6ADD52DF4F32981&serviceType=CLIP
+                      - generic [ref=f33e1300]:
+                        - mark [ref=f33e1301]: 환율
+                        - text: 고점에 달러를... 최고
+                        - mark [ref=f33e1302]: 환율
+                        - text: "대비 13... #경제 #"
+                        - mark [ref=f33e1303]: 환율
+                        - text: "#달러투자..."
+                      - generic [ref=f33e1304]: 새 창 열림
+                  - link "프로필 이미지 여운봉 부자사관학교 1일 전 조회 218 새 창 열림" [ref=f33e1305] [cursor=pointer]:
+                    - /url: https://clip.naver.com/@wbyeo
+                    - generic [ref=f33e1306]:
+                      - img "프로필 이미지" [ref=f33e1308]
+                      - generic [ref=f33e1309]:
+                        - generic [ref=f33e1310]: 여운봉 부자사관학교
+                        - generic [ref=f33e1312]:
+                          - generic [ref=f33e1313]: 1일 전
+                          - generic [ref=f33e1315]: 조회 218
+                    - generic [ref=f33e1316]: 새 창 열림
+                - generic [ref=f33e1317]:
+                  - generic [ref=f33e1319]:
+                    - link "클립 이미지 새 창 열림" [ref=f33e1320] [cursor=pointer]:
+                      - /url: https://m.naver.com/shorts/?mediaType=VOD&recId=%7B%22query%22%3A%22%ED%99%98%EC%9C%A8%22%2C%22seedIndex%22%3A%2220%22%2C%22type%22%3A%22ALL%22%2C%22order%22%3A%22RELATED%22%2C%22filter%22%3A%22LOW_QUALITY_LEVEL_3%22%2C%22theme%22%3A%22currency%22%2C%22now%22%3A%220%22%7D&recType=CLIP_SEARCH&seedMediaId=F8B0B0DC8B13B2FDAEC0818D096F674A92F1&serviceType=CLIP
+                      - img "클립 이미지" [ref=f33e1322]
+                      - generic [ref=f33e1324]: 새 창 열림
+                    - 'link "코스피·환율로 곧장... 성장주↓·환율... 👉 #미국CPI #금리 #환율 새 창 열림" [ref=f33e1325] [cursor=pointer]':
+                      - /url: https://m.naver.com/shorts/?mediaType=VOD&recId=%7B%22query%22%3A%22%ED%99%98%EC%9C%A8%22%2C%22seedIndex%22%3A%2220%22%2C%22type%22%3A%22ALL%22%2C%22order%22%3A%22RELATED%22%2C%22filter%22%3A%22LOW_QUALITY_LEVEL_3%22%2C%22theme%22%3A%22currency%22%2C%22now%22%3A%220%22%7D&recType=CLIP_SEARCH&seedMediaId=F8B0B0DC8B13B2FDAEC0818D096F674A92F1&serviceType=CLIP
+                      - generic [ref=f33e1327]:
+                        - text: 코스피·
+                        - mark [ref=f33e1328]: 환율
+                        - text: 로 곧장... 성장주↓·
+                        - mark [ref=f33e1329]: 환율
+                        - text: "... 👉 #미국CPI #금리 #"
+                        - mark [ref=f33e1330]: 환율
+                      - generic [ref=f33e1331]: 새 창 열림
+                  - link "프로필 이미지 달천드림 15시간 전 조회 124 새 창 열림" [ref=f33e1332] [cursor=pointer]:
+                    - /url: https://clip.naver.com/@dalcheon_dream
+                    - generic [ref=f33e1333]:
+                      - img "프로필 이미지" [ref=f33e1335]
+                      - generic [ref=f33e1336]:
+                        - generic [ref=f33e1337]: 달천드림
+                        - generic [ref=f33e1339]:
+                          - generic [ref=f33e1340]: 15시간 전
+                          - generic [ref=f33e1342]: 조회 124
+                    - generic [ref=f33e1343]: 새 창 열림
+              - button "다음" [ref=f33e1344] [cursor=pointer]
+            - link "클립 더보기" [ref=f33e1349] [cursor=pointer]:
+              - /url: "?nso=&query=%ED%99%98%EC%9C%A8&sm=tab_smr&sort=rel&ssc=tab.clip.all"
+              - generic [ref=f33e1354]:
+                - generic [ref=f33e1355]: 클립
+                - generic [ref=f33e1356]: 더보기
+          - generic [ref=f33e1360]:
+            - generic [ref=f33e1366]:
+              - generic [ref=f33e1367]:
+                - link "Npay 증권 finance.naver.com›marketindex 새 창 열림" [ref=f33e1368] [cursor=pointer]:
+                  - /url: https://finance.naver.com/marketindex/
+                  - generic [ref=f33e1370]:
+                    - generic [ref=f33e1374]: Npay 증권
+                    - generic [ref=f33e1376]: finance.naver.com›marketindex
+                  - generic [ref=f33e1380]: 새 창 열림
+                - button "옵션 메뉴 열기" [ref=f33e1382] [cursor=pointer]
+              - generic [ref=f33e1387]:
+                - link "환율 - 네이버 금융 새 창 열림" [ref=f33e1389] [cursor=pointer]:
+                  - /url: https://finance.naver.com/marketindex/
+                  - generic [ref=f33e1390]:
+                    - mark [ref=f33e1391]: 환율
+                    - text: "- 네이버 금융"
+                  - generic [ref=f33e1392]: 새 창 열림
+                - generic [ref=f33e1393]:
+                  - link "국내증시 새 창 열림" [ref=f33e1394] [cursor=pointer]:
+                    - /url: https://finance.naver.com/sise/
+                    - generic [ref=f33e1395]: 국내증시
+                    - generic [ref=f33e1396]: 새 창 열림
+                  - link "해외증시 새 창 열림" [ref=f33e1397] [cursor=pointer]:
+                    - /url: https://finance.naver.com/world/
+                    - generic [ref=f33e1398]: 해외증시
+                    - generic [ref=f33e1399]: 새 창 열림
+                  - link "뉴스 새 창 열림" [ref=f33e1400] [cursor=pointer]:
+                    - /url: https://finance.naver.com/news/
+                    - generic [ref=f33e1401]: 뉴스
+                    - generic [ref=f33e1402]: 새 창 열림
+                  - link "리서치 새 창 열림" [ref=f33e1403] [cursor=pointer]:
+                    - /url: https://finance.naver.com/research/
+                    - generic [ref=f33e1404]: 리서치
+                    - generic [ref=f33e1405]: 새 창 열림
+                  - link "환전고시 환율 새 창 열림" [ref=f33e1406] [cursor=pointer]:
+                    - /url: https://finance.naver.com/marketindex/?tabSel=exchange
+                    - generic [ref=f33e1407]: 환전고시 환율
+                    - generic [ref=f33e1408]: 새 창 열림
+                  - link "유가 금시세 새 창 열림" [ref=f33e1409] [cursor=pointer]:
+                    - /url: https://finance.naver.com/marketindex/?tabSel=gold
+                    - generic [ref=f33e1410]: 유가 금시세
+                    - generic [ref=f33e1411]: 새 창 열림
+                - link "관심종목의 실시간 주가를 가장 빠르게 확인하는 곳 새 창 열림" [ref=f33e1413] [cursor=pointer]:
+                  - /url: https://finance.naver.com/marketindex/
+                  - generic [ref=f33e1414]: 관심종목의 실시간 주가를 가장 빠르게 확인하는 곳
+                  - generic [ref=f33e1415]: 새 창 열림
+            - generic [ref=f33e1420]:
+              - generic [ref=f33e1421]:
+                - generic [ref=f33e1422]:
+                  - link "나무위키 namu.wiki›대한민국 원›환율 새 창 열림" [ref=f33e1423] [cursor=pointer]:
+                    - /url: https://namu.wiki/w/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%20%EC%9B%90/%ED%99%98%EC%9C%A8
+                    - generic [ref=f33e1425]:
+                      - generic [ref=f33e1429]: 나무위키
+                      - generic [ref=f33e1431]: namu.wiki›대한민국 원›환율
+                    - generic [ref=f33e1435]: 새 창 열림
+                  - button "옵션 메뉴 열기" [ref=f33e1437] [cursor=pointer]
+                - generic [ref=f33e1442]:
+                  - link "대한민국 원/환율 새 창 열림" [ref=f33e1444] [cursor=pointer]:
+                    - /url: https://namu.wiki/w/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%20%EC%9B%90/%ED%99%98%EC%9C%A8
+                    - generic [ref=f33e1445]:
+                      - text: 대한민국 원/
+                      - mark [ref=f33e1446]: 환율
+                    - generic [ref=f33e1447]: 새 창 열림
+                  - link "대한민국 원의 기간별 환율 추이에 관한 문서 미군정 당시에 1달러를 15원 정도로 책정했던 것이 최초의 환율 책정이었다. 그러나 미군정의 경제정책이 개판으로 진행되어 혼란이 극심했던 탓에 고정환율은 무용지물이 되고 말았으며 1948년에 1달러를 450원으로 고정함과 동시에 시장환율을 따로 신설하는 이중환율제도를 채택했다. 그러다가 1950년 4월 10일 외국환의 경매에 의해.... 새 창 열림" [ref=f33e1449] [cursor=pointer]:
+                    - /url: https://namu.wiki/w/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%20%EC%9B%90/%ED%99%98%EC%9C%A8
+                    - generic [ref=f33e1450]:
+                      - text: 대한민국 원의 기간별
+                      - mark [ref=f33e1451]: 환율
+                      - text: 추이에 관한 문서 미군정 당시에 1달러를 15원 정도로 책정했던 것이 최초의
+                      - mark [ref=f33e1452]: 환율
+                      - text: 책정이었다. 그러나 미군정의 경제정책이 개판으로 진행되어 혼란이 극심했던 탓에 고정
+                      - mark [ref=f33e1453]: 환율
+                      - text: 은 무용지물이 되고 말았으며 1948년에 1달러를 450원으로 고정함과 동시에 시장
+                      - mark [ref=f33e1454]: 환율
+                      - text: 을 따로 신설하는 이중
+                      - mark [ref=f33e1455]: 환율
+                      - text: 제도를 채택했다. 그러다가 1950년 4월 10일 외국환의 경매에 의해....
+                    - generic [ref=f33e1456]: 새 창 열림
+              - generic [ref=f33e1457]:
+                - link "개요 새 창 열림" [ref=f33e1458] [cursor=pointer]:
+                  - /url: https://namu.wiki/w/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%20%EC%9B%90/%ED%99%98%EC%9C%A8#s-1
+                  - generic [ref=f33e1459]: 개요
+                  - generic [ref=f33e1460]: 새 창 열림
+                - link "상세 새 창 열림" [ref=f33e1461] [cursor=pointer]:
+                  - /url: https://namu.wiki/w/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%20%EC%9B%90/%ED%99%98%EC%9C%A8#s-2
+                  - generic [ref=f33e1462]: 상세
+                  - generic [ref=f33e1463]: 새 창 열림
+                - link "기간별 미국 달러화의 대원화 환율 통계 새 창 열림" [ref=f33e1464] [cursor=pointer]:
+                  - /url: https://namu.wiki/w/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%20%EC%9B%90/%ED%99%98%EC%9C%A8#s-3
+                  - generic [ref=f33e1465]: 기간별 미국 달러화의 대원화 환율 통계
+                  - generic [ref=f33e1466]: 새 창 열림
+                - link "관련 문서 새 창 열림" [ref=f33e1467] [cursor=pointer]:
+                  - /url: https://namu.wiki/w/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%20%EC%9B%90/%ED%99%98%EC%9C%A8#s-4
+                  - generic [ref=f33e1468]: 관련 문서
+                  - generic [ref=f33e1469]: 새 창 열림
+                - link "월별 원달러 환율 통계 새 창 열림" [ref=f33e1470] [cursor=pointer]:
+                  - /url: https://namu.wiki/w/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%20%EC%9B%90/%ED%99%98%EC%9C%A8#s-3.1
+                  - generic [ref=f33e1471]: 월별 원달러 환율 통계
+                  - generic [ref=f33e1472]: 새 창 열림
+                - link "다른 외국 통화별 원화 환율 흐름 새 창 열림" [ref=f33e1473] [cursor=pointer]:
+                  - /url: https://namu.wiki/w/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%20%EC%9B%90/%ED%99%98%EC%9C%A8#s-3.2
+                  - generic [ref=f33e1474]: 다른 외국 통화별 원화 환율 흐름
+                  - generic [ref=f33e1475]: 새 창 열림
+                - link "2004년 ~ 2014년 새 창 열림" [ref=f33e1476] [cursor=pointer]:
+                  - /url: https://namu.wiki/w/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%20%EC%9B%90/%ED%99%98%EC%9C%A8#s-3.1.1
+                  - generic [ref=f33e1477]: 2004년 ~ 2014년
+                  - generic [ref=f33e1478]: 새 창 열림
+                - link "2015년 ~ 2021년 새 창 열림" [ref=f33e1479] [cursor=pointer]:
+                  - /url: https://namu.wiki/w/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%20%EC%9B%90/%ED%99%98%EC%9C%A8#s-3.1.2
+                  - generic [ref=f33e1480]: 2015년 ~ 2021년
+                  - generic [ref=f33e1481]: 새 창 열림
+                - link "2022년 ~ 2024년 새 창 열림" [ref=f33e1482] [cursor=pointer]:
+                  - /url: https://namu.wiki/w/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%20%EC%9B%90/%ED%99%98%EC%9C%A8#s-3.1.3
+                  - generic [ref=f33e1483]: 2022년 ~ 2024년
+                  - generic [ref=f33e1484]: 새 창 열림
+                - link "2025년 새 창 열림" [ref=f33e1485] [cursor=pointer]:
+                  - /url: https://namu.wiki/w/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%20%EC%9B%90/%ED%99%98%EC%9C%A8#s-3.1.4
+                  - generic [ref=f33e1486]: 2025년
+                  - generic [ref=f33e1487]: 새 창 열림
+              - generic [ref=f33e1488]:
+                - generic [ref=f33e1490]:
+                  - link "환율 - 나무위키 새 창 열림" [ref=f33e1491] [cursor=pointer]:
+                    - /url: https://namu.wiki/w/%ED%99%98%EC%9C%A8
+                    - generic [ref=f33e1492]:
+                      - mark [ref=f33e1493]: 환율
+                      - text: "- 나무위키"
+                    - generic [ref=f33e1494]: 새 창 열림
+                  - generic [ref=f33e1496]:
+                    - mark [ref=f33e1497]: 환율
+                    - text: (換率, exchange rate)은 한 통화와 다른 통화의 교환 비율로, 대개 기준 국가의 관점에서 자국 통화와 타국 통화의 교환 비율인 외
+                    - mark [ref=f33e1498]: 환율
+                    - text: (外換率, foreign exchange rate)을 가리킨다. '환시세', '외환시세', '외국환시세'라고도 한다.
+                - link "관련문서 더보기" [ref=f33e1500] [cursor=pointer]:
+                  - /url: "?page=2&qdt=0&query=%ED%99%98%EC%9C%A8+site%3Anamu.wiki&qvt=0&ssc=tab.ur.all"
+            - generic [ref=f33e1508]:
+              - generic [ref=f33e1509]:
+                - generic [ref=f33e1510]:
+                  - link "위키백과 한국어 ko.wikipedia.org›환율 새 창 열림" [ref=f33e1511] [cursor=pointer]:
+                    - /url: https://ko.wikipedia.org/wiki/%ED%99%98%EC%9C%A8
+                    - generic [ref=f33e1513]:
+                      - generic [ref=f33e1517]: 위키백과 한국어
+                      - generic [ref=f33e1519]: ko.wikipedia.org›환율
+                    - generic [ref=f33e1523]: 새 창 열림
+                  - button "옵션 메뉴 열기" [ref=f33e1525] [cursor=pointer]
+                - generic [ref=f33e1530]:
+                  - link "환율 - 위키백과 한국어 새 창 열림" [ref=f33e1532] [cursor=pointer]:
+                    - /url: https://ko.wikipedia.org/wiki/%ED%99%98%EC%9C%A8
+                    - generic [ref=f33e1533]:
+                      - mark [ref=f33e1534]: 환율
+                      - text: "- 위키백과 한국어"
+                    - generic [ref=f33e1535]: 새 창 열림
+                  - 'link "환율 (換率, 문화어: 환률, 영어: exchange rate )은 서로 다른 통화의 교환 비율이다. 고정 환율제와 변동 환율제가 있다. 종류와 의미 명목환율 명목환율이란 한 나라의 화폐가 외국의 화폐와 교환되는 비율을 말한다. 즉, 자국 화폐로 표시한 외국 화폐의 상대적인 가치라고 말할 수 있다. 명목환율이 상승한다는 것은 자국 화폐의 가치가 외국 화폐 보다 상대적으로 떨어지는 것을 ..... 새 창 열림" [ref=f33e1537] [cursor=pointer]':
+                    - /url: https://ko.wikipedia.org/wiki/%ED%99%98%EC%9C%A8
+                    - generic [ref=f33e1538]:
+                      - mark [ref=f33e1539]: 환율
+                      - text: "(換率, 문화어: 환률, 영어: exchange rate )은 서로 다른 통화의 교환 비율이다. 고정"
+                      - mark [ref=f33e1540]: 환율
+                      - text: 제와 변동
+                      - mark [ref=f33e1541]: 환율
+                      - text: 제가 있다. 종류와 의미 명목
+                      - mark [ref=f33e1542]: 환율
+                      - text: 명목
+                      - mark [ref=f33e1543]: 환율
+                      - text: 이란 한 나라의 화폐가 외국의 화폐와 교환되는 비율을 말한다. 즉, 자국 화폐로 표시한 외국 화폐의 상대적인 가치라고 말할 수 있다. 명목
+                      - mark [ref=f33e1544]: 환율
+                      - text: 이 상승한다는 것은 자국 화폐의 가치가 외국 화폐 보다 상대적으로 떨어지는 것을 .....
+                    - generic [ref=f33e1545]: 새 창 열림
+              - generic [ref=f33e1546]:
+                - link "종류와 의미 새 창 열림" [ref=f33e1547] [cursor=pointer]:
+                  - /url: https://ko.wikipedia.org/wiki/%ED%99%98%EC%9C%A8#%EC%A2%85%EB%A5%98%EC%99%80_%EC%9D%98%EB%AF%B8
+                  - generic [ref=f33e1548]: 종류와 의미
+                  - generic [ref=f33e1549]: 새 창 열림
+                - link "환율의 표기법 새 창 열림" [ref=f33e1550] [cursor=pointer]:
+                  - /url: https://ko.wikipedia.org/wiki/%ED%99%98%EC%9C%A8#%ED%99%98%EC%9C%A8%EC%9D%98_%ED%91%9C%EA%B8%B0%EB%B2%95
+                  - generic [ref=f33e1551]: 환율의 표기법
+                  - generic [ref=f33e1552]: 새 창 열림
+                - link "환율의 결정 이론 새 창 열림" [ref=f33e1553] [cursor=pointer]:
+                  - /url: https://ko.wikipedia.org/wiki/%ED%99%98%EC%9C%A8#%ED%99%98%EC%9C%A8%EC%9D%98_%EA%B2%B0%EC%A0%95_%EC%9D%B4%EB%A1%A0
+                  - generic [ref=f33e1554]: 환율의 결정 이론
+                  - generic [ref=f33e1555]: 새 창 열림
+                - link "환율 제도 새 창 열림" [ref=f33e1556] [cursor=pointer]:
+                  - /url: https://ko.wikipedia.org/wiki/%ED%99%98%EC%9C%A8#%ED%99%98%EC%9C%A8_%EC%A0%9C%EB%8F%84
+                  - generic [ref=f33e1557]: 환율 제도
+                  - generic [ref=f33e1558]: 새 창 열림
+                - link "영향 새 창 열림" [ref=f33e1559] [cursor=pointer]:
+                  - /url: https://ko.wikipedia.org/wiki/%ED%99%98%EC%9C%A8#%EC%98%81%ED%96%A5
+                  - generic [ref=f33e1560]: 영향
+                  - generic [ref=f33e1561]: 새 창 열림
+                - link "같이 보기 새 창 열림" [ref=f33e1562] [cursor=pointer]:
+                  - /url: https://ko.wikipedia.org/wiki/%ED%99%98%EC%9C%A8#%EA%B0%99%EC%9D%B4_%EB%B3%B4%EA%B8%B0
+                  - generic [ref=f33e1563]: 같이 보기
+                  - generic [ref=f33e1564]: 새 창 열림
+                - link "각주 새 창 열림" [ref=f33e1565] [cursor=pointer]:
+                  - /url: https://ko.wikipedia.org/wiki/%ED%99%98%EC%9C%A8#%EA%B0%81%EC%A3%BC
+                  - generic [ref=f33e1566]: 각주
+                  - generic [ref=f33e1567]: 새 창 열림
+                - link "외부 링크 새 창 열림" [ref=f33e1568] [cursor=pointer]:
+                  - /url: https://ko.wikipedia.org/wiki/%ED%99%98%EC%9C%A8#%EC%99%B8%EB%B6%80_%EB%A7%81%ED%81%AC
+                  - generic [ref=f33e1569]: 외부 링크
+                  - generic [ref=f33e1570]: 새 창 열림
+            - generic [ref=f33e1576]:
+              - generic [ref=f33e1577]:
+                - link "네이버 지식백과 terms.naver.com 새 창 열림" [ref=f33e1578] [cursor=pointer]:
+                  - /url: https://terms.naver.com/entry.naver?docId=3569713&cid=58780&categoryId=58780
+                  - generic [ref=f33e1580]:
+                    - generic [ref=f33e1584]: 네이버 지식백과
+                    - generic [ref=f33e1586]: terms.naver.com
+                  - generic [ref=f33e1590]: 새 창 열림
+                - button "옵션 메뉴 열기" [ref=f33e1592] [cursor=pointer]
+              - generic [ref=f33e1597]:
+                - link "환율의 개념 - 경제학 주요개념 새 창 열림" [ref=f33e1599] [cursor=pointer]:
+                  - /url: https://terms.naver.com/entry.naver?docId=3569713&cid=58780&categoryId=58780
+                  - generic [ref=f33e1600]:
+                    - mark [ref=f33e1601]: 환율
+                    - text: 의 개념 - 경제학 주요개념
+                  - generic [ref=f33e1602]: 새 창 열림
+                - link "환율은 우리 생활에 영향을 주는 중요한 경제변수이다. 삼성, 현대-기아와 같은 대기업들에게 환율은 날개 달린 천사도 되지만 머리에 뿔 달린 악마가 되기도 한다. 새 창 열림" [ref=f33e1604] [cursor=pointer]:
+                  - /url: https://terms.naver.com/entry.naver?docId=3569713&cid=58780&categoryId=58780
+                  - generic [ref=f33e1605]:
+                    - mark [ref=f33e1606]: 환율
+                    - text: 은 우리 생활에 영향을 주는 중요한 경제변수이다. 삼성, 현대-기아와 같은 대기업들에게
+                    - mark [ref=f33e1607]: 환율
+                    - text: 은 날개 달린 천사도 되지만 머리에 뿔 달린 악마가 되기도 한다.
+                  - generic [ref=f33e1608]: 새 창 열림
+            - generic [ref=f33e1614]:
+              - generic [ref=f33e1615]:
+                - generic [ref=f33e1616]:
+                  - link "난그르타 | 경제·정책·재테크 새 창 열림" [ref=f33e1618] [cursor=pointer]:
+                    - /url: https://blog.naver.com/hye8431
+                    - img "난그르타 | 경제·정책·재테크" [ref=f33e1621]
+                    - generic [ref=f33e1622]: 새 창 열림
+                  - link "난그르타 | 경제·정책·재테크 새 창 열림" [ref=f33e1625] [cursor=pointer]:
+                    - /url: https://blog.naver.com/hye8431
+                    - generic [ref=f33e1626]: 난그르타 | 경제·정책·재테크
+                    - generic [ref=f33e1627]: 새 창 열림
+                  - generic [ref=f33e1630]:
+                    - link "네이버 블로그 새 창 열림" [ref=f33e1633] [cursor=pointer]:
+                      - /url: https://blog.naver.com
+                      - generic [ref=f33e1634]: 네이버 블로그
+                      - generic [ref=f33e1635]: 새 창 열림
+                    - generic [ref=f33e1637]: 15시간 전
+                - button "옵션 메뉴 열기" [ref=f33e1640] [cursor=pointer]
+              - generic [ref=f33e1645]:
+                - generic [ref=f33e1646]:
+                  - link "엔화 환율 870원대 반등, 지금 환전해도 될까? 새 창 열림" [ref=f33e1647] [cursor=pointer]:
+                    - /url: https://blog.naver.com/hye8431/224407530467?rvid=E3EDB01B8A992995CAEBD447A733995B29CF
+                    - generic [ref=f33e1648]:
+                      - text: 엔화
+                      - mark [ref=f33e1649]: 환율
+                      - text: 870원대 반등, 지금 환전해도 될까?
+                    - generic [ref=f33e1650]: 새 창 열림
+                  - link "9월 초 100엔당 850원대까지 내려갔던 엔화 환율이 다시 870원대로 반등했습니다.BOJ 9월 금융정책결정회의를 앞두고 금리 인상 전망도 커진 상황인데요.지금 일본여행 환전을 해도 될지, 97% 전망의 정확한 의미와 앞으로 봐야 할 환율 변수를 짧게 정리했습니다. 새 창 열림" [ref=f33e1651] [cursor=pointer]:
+                    - /url: https://blog.naver.com/hye8431/224407530467?rvid=E3EDB01B8A992995CAEBD447A733995B29CF
+                    - generic [ref=f33e1652]:
+                      - text: 9월 초 100엔당 850원대까지 내려갔던 엔화
+                      - mark [ref=f33e1653]: 환율
+                      - text: 이 다시 870원대로 반등했습니다.BOJ 9월 금융정책결정회의를 앞두고 금리 인상 전망도 커진 상황인데요.지금 일본여행 환전을 해도 될지, 97% 전망의 정확한 의미와 앞으로 봐야 할
+                      - mark [ref=f33e1654]: 환율
+                      - text: 변수를 짧게 정리했습니다.
+                    - generic [ref=f33e1655]: 새 창 열림
+                - link "엔화 환율 870원대 반등, 지금 환전해도 될까? 00:47" [ref=f33e1658] [cursor=pointer]:
+                  - /url: https://blog.naver.com/hye8431/224407530467?rvid=E3EDB01B8A992995CAEBD447A733995B29CF
+                  - img "엔화 환율 870원대 반등, 지금 환전해도 될까?" [ref=f33e1659]
+                  - generic [ref=f33e1660]: 00:47
+            - generic [ref=f33e1671]:
+              - generic [ref=f33e1672]:
+                - generic [ref=f33e1673]:
+                  - link "새 창 열림" [ref=f33e1675] [cursor=pointer]:
+                    - /url: https://in.naver.com/woofam
+                  - link "우팸 새 창 열림" [ref=f33e1681] [cursor=pointer]:
+                    - /url: https://in.naver.com/woofam
+                    - generic [ref=f33e1682]: 우팸
+                    - generic [ref=f33e1683]: 새 창 열림
+                  - generic [ref=f33e1684]: 3일 전
+                - button "옵션 메뉴 열기" [ref=f33e1688] [cursor=pointer]
+              - generic [ref=f33e1694]:
+                - generic [ref=f33e1695]:
+                  - link "환율 1330원대까지 급락…달러 지금 사도 될까? 새 창 열림" [ref=f33e1696] [cursor=pointer]:
+                    - /url: https://blog.naver.com/bizzo21/224405137777
+                    - generic [ref=f33e1697]:
+                      - mark [ref=f33e1698]: 환율
+                      - text: 1330원대까지 급락…달러 지금 사도 될까?
+                    - generic [ref=f33e1699]: 새 창 열림
+                  - link "환율 1330원대까지 떨어졌다, 달러 지금 사도 될까? 얼마 전까지만 해도 원·달러 환율이 1,500원을 넘어가면서 “이러다 1,600원 가는 것 아니냐”는 이야기가 많았습니다. 그런데 분위기가 완전히 달라졌습니다. 9월 7일 원·달러 환율은 장중 1,334.7원까지 떨어졌습니다. 2024년 10월 이후 약 1년 11개월 만에 다시 1,330원대를 본 겁니다. 7월 1일 장중 1,559.2원까지 올라갔던... 새 창 열림" [ref=f33e1701] [cursor=pointer]:
+                    - /url: https://blog.naver.com/bizzo21/224405137777
+                    - generic [ref=f33e1702]:
+                      - mark [ref=f33e1703]: 환율
+                      - text: 1330원대까지 떨어졌다, 달러 지금 사도 될까? 얼마 전까지만 해도 원·달러
+                      - mark [ref=f33e1704]: 환율
+                      - text: 이 1,500원을 넘어가면서 “이러다 1,600원 가는 것 아니냐”는 이야기가 많았습니다. 그런데 분위기가 완전히 달라졌습니다. 9월 7일 원·달러
+                      - mark [ref=f33e1705]: 환율
+                      - text: 은 장중 1,334.7원까지 떨어졌습니다. 2024년 10월 이후 약 1년 11개월 만에 다시 1,330원대를 본 겁니다. 7월 1일 장중 1,559.2원까지 올라갔던...
+                    - generic [ref=f33e1706]: 새 창 열림
+                - link "4 새 창 열림" [ref=f33e1707] [cursor=pointer]:
+                  - /url: https://blog.naver.com/bizzo21/224405137777
+                  - generic [ref=f33e1708]: "4"
+                  - generic [ref=f33e1715]: 새 창 열림
+              - link "환율 1330원대까지 떨어졌다…이제 1200원대 갈까? 새 창 열림" [ref=f33e1719] [cursor=pointer]:
+                - /url: https://blog.naver.com/bizzo21/224407189463
+                - generic [ref=f33e1720]:
+                  - mark [ref=f33e1721]: 환율
+                  - text: 1330원대까지 떨어졌다…이제 1200원대 갈까?
+                - generic [ref=f33e1722]: 새 창 열림
+            - generic [ref=f33e1728]:
+              - generic [ref=f33e1729]:
+                - generic [ref=f33e1730]:
+                  - link "새 창 열림" [ref=f33e1732] [cursor=pointer]:
+                    - /url: https://in.naver.com/minhee5896
+                  - link "경제소문 새 창 열림" [ref=f33e1738] [cursor=pointer]:
+                    - /url: https://in.naver.com/minhee5896
+                    - generic [ref=f33e1739]: 경제소문
+                    - generic [ref=f33e1740]: 새 창 열림
+                  - generic [ref=f33e1741]: 2일 전
+                - button "옵션 메뉴 열기" [ref=f33e1745] [cursor=pointer]
+              - generic [ref=f33e1751]:
+                - generic [ref=f33e1752]:
+                  - link "엔화환율(엔달러) ‘심상치 않다...’한국에 조만간 ‘상상 못한 일’ 터진다는데? 새 창 열림" [ref=f33e1753] [cursor=pointer]:
+                    - /url: https://blog.naver.com/minhee5896/224406192594
+                    - generic [ref=f33e1754]:
+                      - text: 엔화
+                      - mark [ref=f33e1755]: 환율
+                      - text: (엔달러) ‘심상치 않다...’한국에 조만간 ‘상상 못한 일’ 터진다는데?
+                    - generic [ref=f33e1756]: 새 창 열림
+                  - link "엔화환율(엔달러) ‘심상치 않다...’한국에 조만간 ‘상상 못한 일’ 터진다는데? 엔화 움직임이 심상치 않아요. 달러·엔 환율이 불과 한 달 반 만에 164엔대에서 장중 152엔대까지 내려왔어요. 달러·엔 환율이 하락했다는 것은 그만큼 달러 대비 엔화 가치가 강해졌다는 뜻이에요. 9월 9일에는 달러당 153엔대로 소폭 되돌림이 나왔지만, 시장의 관심은 하루 등락보다... 새 창 열림" [ref=f33e1758] [cursor=pointer]:
+                    - /url: https://blog.naver.com/minhee5896/224406192594
+                    - generic [ref=f33e1759]:
+                      - text: 엔화
+                      - mark [ref=f33e1760]: 환율
+                      - text: (엔달러) ‘심상치 않다...’한국에 조만간 ‘상상 못한 일’ 터진다는데? 엔화 움직임이 심상치 않아요. 달러·엔
+                      - mark [ref=f33e1761]: 환율
+                      - text: 이 불과 한 달 반 만에 164엔대에서 장중 152엔대까지 내려왔어요. 달러·엔
+                      - mark [ref=f33e1762]: 환율
+                      - text: 이 하락했다는 것은 그만큼 달러 대비 엔화 가치가 강해졌다는 뜻이에요. 9월 9일에는 달러당 153엔대로 소폭 되돌림이 나왔지만, 시장의 관심은 하루 등락보다...
+                    - generic [ref=f33e1763]: 새 창 열림
+                - link "6 새 창 열림" [ref=f33e1764] [cursor=pointer]:
+                  - /url: https://blog.naver.com/minhee5896/224406192594
+                  - generic [ref=f33e1765]: "6"
+                  - generic [ref=f33e1772]: 새 창 열림
+              - link "원달러환율 1,330원대 아직 팔지마라, 다음주 ‘여기서’ 운명 갈린다는데? 새 창 열림" [ref=f33e1776] [cursor=pointer]:
+                - /url: https://blog.naver.com/minhee5896/224407454067
+                - generic [ref=f33e1777]:
+                  - text: 원달러
+                  - mark [ref=f33e1778]: 환율
+                  - text: 1,330원대 아직 팔지마라, 다음주 ‘여기서’ 운명 갈린다는데?
+                - generic [ref=f33e1779]: 새 창 열림
+            - generic [ref=f33e1785]:
+              - generic [ref=f33e1786]:
+                - generic [ref=f33e1787]:
+                  - link "새 창 열림" [ref=f33e1789] [cursor=pointer]:
+                    - /url: https://in.naver.com/rbalswldud
+                  - link "돈뚜기 새 창 열림" [ref=f33e1795] [cursor=pointer]:
+                    - /url: https://in.naver.com/rbalswldud
+                    - generic [ref=f33e1796]: 돈뚜기
+                    - generic [ref=f33e1797]: 새 창 열림
+                  - generic [ref=f33e1798]: 1일 전
+                - button "옵션 메뉴 열기" [ref=f33e1802] [cursor=pointer]
+              - generic [ref=f33e1808]:
+                - generic [ref=f33e1809]:
+                  - link "엔화 환율 870원대 급반등! 일본 여행 환전 지금 다 해야 할까? 새 창 열림" [ref=f33e1810] [cursor=pointer]:
+                    - /url: https://blog.naver.com/jaso_/224406925580
+                    - generic [ref=f33e1811]:
+                      - text: 엔화
+                      - mark [ref=f33e1812]: 환율
+                      - text: 870원대 급반등! 일본 여행 환전 지금 다 해야 할까?
+                    - generic [ref=f33e1813]: 새 창 열림
+                  - link "엔화 환율이 최근 870원대 위로 올라서며 뚜렷한 반등 흐름을 보이고 있습니다. 여행 경비를 아끼려는 분들부터 엔화... 불과 두 달 전 달러당 164엔 부근까지 치솟았던 엔화 환율은 외환시장 개입을 거쳐 순식간에 152엔에서 153엔 선까지... 엔화 환율이 150엔 밑으로 떨어지는 쪽에 뭉칫돈이 몰리고 있습니다. 11월 만기인 142.86엔 풋옵션 거래가 급증하며 엔화 추가 강세에... 새 창 열림" [ref=f33e1815] [cursor=pointer]:
+                    - /url: https://blog.naver.com/jaso_/224406925580
+                    - generic [ref=f33e1816]:
+                      - text: 엔화
+                      - mark [ref=f33e1817]: 환율
+                      - text: 이 최근 870원대 위로 올라서며 뚜렷한 반등 흐름을 보이고 있습니다. 여행 경비를 아끼려는 분들부터 엔화... 불과 두 달 전 달러당 164엔 부근까지 치솟았던 엔화
+                      - mark [ref=f33e1818]: 환율
+                      - text: 은 외환시장 개입을 거쳐 순식간에 152엔에서 153엔 선까지... 엔화
+                      - mark [ref=f33e1819]: 환율
+                      - text: 이 150엔 밑으로 떨어지는 쪽에 뭉칫돈이 몰리고 있습니다. 11월 만기인 142.86엔 풋옵션 거래가 급증하며 엔화 추가 강세에...
+                    - generic [ref=f33e1820]: 새 창 열림
+                - link "10 새 창 열림" [ref=f33e1821] [cursor=pointer]:
+                  - /url: https://blog.naver.com/jaso_/224406925580
+                  - generic [ref=f33e1822]: "10"
+                  - generic [ref=f33e1829]: 새 창 열림
+            - generic [ref=f33e1835]:
+              - generic [ref=f33e1836]:
+                - generic [ref=f33e1837]:
+                  - link "새 창 열림" [ref=f33e1839] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/divclub
+                  - generic [ref=f33e1843]:
+                    - link "배당 투자자 모임 [미국주식,ETF,장기투자,은퇴,파이어족] 새 창 열림" [ref=f33e1845] [cursor=pointer]:
+                      - /url: https://cafe.naver.com/divclub
+                      - generic [ref=f33e1846]: 배당 투자자 모임 [미국주식,ETF,장기투자,은퇴,파이어족]
+                      - generic [ref=f33e1847]: 새 창 열림
+                    - generic [ref=f33e1851]: 1,163만 인용
+                  - generic [ref=f33e1856]: 3일 전
+                - button "옵션 메뉴 열기" [ref=f33e1860] [cursor=pointer]
+              - generic [ref=f33e1867]:
+                - link "환율 우대율에 따라 차이가 많이 날까요? 새 창 열림" [ref=f33e1868] [cursor=pointer]:
+                  - /url: https://cafe.naver.com/divclub/62754?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImRpdmNsdWIiLCJhcnRpY2xlSWQiOjYyNzU0LCJpc3N1ZWRBdCI6MTc4OTA5NTA4OTkzM30.k8ZRRQQpXg5bJskxaw4y3X92MeZMMmGp5XogKuQxgps
+                  - generic [ref=f33e1869]:
+                    - mark [ref=f33e1870]: 환율
+                    - text: 우대율에 따라 차이가 많이 날까요?
+                  - generic [ref=f33e1871]: 새 창 열림
+                - link "SCHD를 매달 적립식으로 남편도 모으려고 하는데요. 저는 키움증권 환율우대 95% 적용되는데, 남편 계좌를 보니 0%이더라고요. 이대로 모아가면 차이가 많이 날까요? 다른 글 보니 카카오, 토스, 메리츠는 아직 우대 이벤트가 있다고 하는데 그 계좌로 옮겨서 모아가는걸 추천하시나요? 모아갈만한 괜찮은 증권사 추천 부탁드립니다ㅠ.ㅠ 새 창 열림" [ref=f33e1873] [cursor=pointer]:
+                  - /url: https://cafe.naver.com/divclub/62754?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImRpdmNsdWIiLCJhcnRpY2xlSWQiOjYyNzU0LCJpc3N1ZWRBdCI6MTc4OTA5NTA4OTkzM30.k8ZRRQQpXg5bJskxaw4y3X92MeZMMmGp5XogKuQxgps
+                  - generic [ref=f33e1874]:
+                    - text: SCHD를 매달 적립식으로 남편도 모으려고 하는데요. 저는 키움증권
+                    - mark [ref=f33e1875]: 환율
+                    - text: 우대 95% 적용되는데, 남편 계좌를 보니 0%이더라고요. 이대로 모아가면 차이가 많이 날까요? 다른 글 보니 카카오, 토스, 메리츠는 아직 우대 이벤트가 있다고 하는데 그 계좌로 옮겨서 모아가는걸 추천하시나요? 모아갈만한 괜찮은 증권사 추천 부탁드립니다ㅠ.ㅠ
+                  - generic [ref=f33e1876]: 새 창 열림
+              - generic [ref=f33e1877]:
+                - generic [ref=f33e1879]:
+                  - link "RE 미거래 나무증권이 환전우대 95%네요 저도 키움 미거래라 확인해조니 어느세 0% 예수금 넣으면 변겨왜줄수도 있으니 전화해서 문의해보세 새 창 열림" [ref=f33e1880] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/divclub/62754?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImRpdmNsdWIiLCJhcnRpY2xlSWQiOjYyNzU0LCJpc3N1ZWRBdCI6MTc4OTA5NTA4OTkzM30.k8ZRRQQpXg5bJskxaw4y3X92MeZMMmGp5XogKuQxgps
+                    - generic [ref=f33e1883]:
+                      - generic [ref=f33e1884]: RE
+                      - text: 미거래 나무증권이 환전우대 95%네요 저도 키움 미거래라 확인해조니 어느세 0% 예수금 넣으면 변겨왜줄수도 있으니 전화해서 문의해보세
+                    - generic [ref=f33e1885]: 새 창 열림
+                  - link "RE 제 계좌 95% 우대 1,340.54 0% 우대 1,352.5 약 12원 차이니까 거의 1% 차이납니다. 새 창 열림" [ref=f33e1886] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/divclub/62754?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImRpdmNsdWIiLCJhcnRpY2xlSWQiOjYyNzU0LCJpc3N1ZWRBdCI6MTc4OTA5NTA4OTkzM30.k8ZRRQQpXg5bJskxaw4y3X92MeZMMmGp5XogKuQxgps
+                    - generic [ref=f33e1889]:
+                      - generic [ref=f33e1890]: RE
+                      - text: 제 계좌 95% 우대 1,340.54 0% 우대 1,352.5 약 12원 차이니까 거의 1% 차이납니다.
+                    - generic [ref=f33e1891]: 새 창 열림
+                  - link "RE 당장은 엄청난 차이는 아닌데 하루 이틀 할 것도 아니고 평생 투자 할 건데 1% 차이만 나도 어마어마 해지지요. 새 창 열림" [ref=f33e1892] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/divclub/62754?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImRpdmNsdWIiLCJhcnRpY2xlSWQiOjYyNzU0LCJpc3N1ZWRBdCI6MTc4OTA5NTA4OTkzM30.k8ZRRQQpXg5bJskxaw4y3X92MeZMMmGp5XogKuQxgps
+                    - generic [ref=f33e1895]:
+                      - generic [ref=f33e1896]: RE
+                      - text: 당장은 엄청난 차이는 아닌데 하루 이틀 할 것도 아니고 평생 투자 할 건데 1% 차이만 나도 어마어마 해지지요.
+                    - generic [ref=f33e1897]: 새 창 열림
+                  - link "RE 환율 스프레드가 보통 1%인데 우대율 95%면 이게 0.05%로 줄어듭니다. 수수료 20배 차이고, 환전액 기준 0.95% 손해 보고 시작하는 것과 같다고 새 창 열림" [ref=f33e1898] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/divclub/62754?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImRpdmNsdWIiLCJhcnRpY2xlSWQiOjYyNzU0LCJpc3N1ZWRBdCI6MTc4OTA5NTA4OTkzM30.k8ZRRQQpXg5bJskxaw4y3X92MeZMMmGp5XogKuQxgps
+                    - generic [ref=f33e1901]:
+                      - generic [ref=f33e1902]: RE
+                      - generic [ref=f33e1903]:
+                        - mark [ref=f33e1904]: 환율
+                        - text: 스프레드가 보통 1%인데 우대율 95%면 이게 0.05%로 줄어듭니다. 수수료 20배 차이고, 환전액 기준 0.95% 손해 보고 시작하는 것과 같다고
+                    - generic [ref=f33e1905]: 새 창 열림
+                - button "다음" [ref=f33e1906] [cursor=pointer]
+            - generic [ref=f33e1915]:
+              - generic [ref=f33e1916]:
+                - generic [ref=f33e1917]:
+                  - link "새 창 열림" [ref=f33e1919] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/onepieceholicplus
+                  - link "월급쟁이 재테크 연구 (예금,적금,절약,보험,주식,ETF,부동산) 새 창 열림" [ref=f33e1925] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/onepieceholicplus
+                    - generic [ref=f33e1926]: 월급쟁이 재테크 연구 (예금,적금,절약,보험,주식,ETF,부동산)
+                    - generic [ref=f33e1927]: 새 창 열림
+                  - generic [ref=f33e1931]: 3일 전
+                - button "옵션 메뉴 열기" [ref=f33e1935] [cursor=pointer]
+              - generic [ref=f33e1941]:
+                - generic [ref=f33e1942]:
+                  - link "[돈모으기] 9월8일 환테크, 달러환율 1343원 새 창 열림" [ref=f33e1943] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/onepieceholicplus/6165484?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6Im9uZXBpZWNlaG9saWNwbHVzIiwiYXJ0aWNsZUlkIjo2MTY1NDg0LCJpc3N1ZWRBdCI6MTc4OTA5NTA4OTkzM30.uhGaBZKQ4ZsJwjB1nyFgeaLETiohAtCWMr-U3XNuBQ4
+                    - generic [ref=f33e1944]:
+                      - text: "[돈모으기] 9월8일 환테크, 달러"
+                      - mark [ref=f33e1945]: 환율
+                      - text: 1343원
+                    - generic [ref=f33e1946]: 새 창 열림
+                  - link "달러 1343원이네요. 오늘 달러 1336원에 알림 받았었는데... 늦게봐서 1340원에 환전해야되더라구요ㅎㅎ 그래서 일단 오늘은 패스했어요 내일 상황보면서 환전해야겠네요^^ 환테크 응원드리며, 편안한 밤되셔요 새 창 열림" [ref=f33e1948] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/onepieceholicplus/6165484?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6Im9uZXBpZWNlaG9saWNwbHVzIiwiYXJ0aWNsZUlkIjo2MTY1NDg0LCJpc3N1ZWRBdCI6MTc4OTA5NTA4OTkzM30.uhGaBZKQ4ZsJwjB1nyFgeaLETiohAtCWMr-U3XNuBQ4
+                    - text: 달러 1343원이네요. 오늘 달러 1336원에 알림 받았었는데... 늦게봐서 1340원에 환전해야되더라구요ㅎㅎ 그래서 일단 오늘은 패스했어요 내일 상황보면서 환전해야겠네요^^ 환테크 응원드리며, 편안한 밤되셔요
+                    - generic [ref=f33e1949]: 새 창 열림
+                - link "2 새 창 열림" [ref=f33e1950] [cursor=pointer]:
+                  - /url: https://cafe.naver.com/onepieceholicplus/6165484?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6Im9uZXBpZWNlaG9saWNwbHVzIiwiYXJ0aWNsZUlkIjo2MTY1NDg0LCJpc3N1ZWRBdCI6MTc4OTA5NTA4OTkzM30.uhGaBZKQ4ZsJwjB1nyFgeaLETiohAtCWMr-U3XNuBQ4
+                  - generic [ref=f33e1951]: "2"
+                  - generic [ref=f33e1958]: 새 창 열림
+              - generic [ref=f33e1959]:
+                - generic [ref=f33e1961]:
+                  - link "RE 환테크와의 의리! 의리~ 오늘 하루 환테크 하느라 수고하셨어요!! 오늘의 달러 및 엔화 환율 환테크 도전하기 응원합니다!!! 오늘처럼 내 새 창 열림" [ref=f33e1962] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/onepieceholicplus/6165484?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6Im9uZXBpZWNlaG9saWNwbHVzIiwiYXJ0aWNsZUlkIjo2MTY1NDg0LCJpc3N1ZWRBdCI6MTc4OTA5NTA4OTkzM30.uhGaBZKQ4ZsJwjB1nyFgeaLETiohAtCWMr-U3XNuBQ4
+                    - generic [ref=f33e1965]:
+                      - generic [ref=f33e1966]: RE
+                      - generic [ref=f33e1967]:
+                        - text: 환테크와의 의리! 의리~ 오늘 하루 환테크 하느라 수고하셨어요!! 오늘의 달러 및 엔화
+                        - mark [ref=f33e1968]: 환율
+                        - text: 환테크 도전하기 응원합니다!!! 오늘처럼 내
+                    - generic [ref=f33e1969]: 새 창 열림
+                  - link "RE 한주의 딱중간 수요일, 달러 & 엔화 환율 환테크 응원합니다~ 성공적인 환테크 응원합니다^^ 새 창 열림" [ref=f33e1970] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/onepieceholicplus/6165484?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6Im9uZXBpZWNlaG9saWNwbHVzIiwiYXJ0aWNsZUlkIjo2MTY1NDg0LCJpc3N1ZWRBdCI6MTc4OTA5NTA4OTkzM30.uhGaBZKQ4ZsJwjB1nyFgeaLETiohAtCWMr-U3XNuBQ4
+                    - generic [ref=f33e1973]:
+                      - generic [ref=f33e1974]: RE
+                      - generic [ref=f33e1975]:
+                        - text: 한주의 딱중간 수요일, 달러 & 엔화
+                        - mark [ref=f33e1976]: 환율
+                        - text: 환테크 응원합니다~ 성공적인 환테크 응원합니다^^
+                    - generic [ref=f33e1977]: 새 창 열림
+                - button "다음" [ref=f33e1978] [cursor=pointer]
+            - generic [ref=f33e1987]:
+              - generic [ref=f33e1988]:
+                - generic [ref=f33e1989]:
+                  - link "새 창 열림" [ref=f33e1991] [cursor=pointer]:
+                    - /url: https://in.naver.com/oh_koon
+                  - link "오쿤 새 창 열림" [ref=f33e1997] [cursor=pointer]:
+                    - /url: https://in.naver.com/oh_koon
+                    - generic [ref=f33e1998]: 오쿤
+                    - generic [ref=f33e1999]: 새 창 열림
+                  - generic [ref=f33e2000]: 2일 전
+                - button "옵션 메뉴 열기" [ref=f33e2004] [cursor=pointer]
+              - generic [ref=f33e2010]:
+                - generic [ref=f33e2011]:
+                  - link "달러 환율 \"어디까지 떨어질까?\" 1300원대 초반 진입 가능성과 변수 총정리 새 창 열림" [ref=f33e2012] [cursor=pointer]:
+                    - /url: https://blog.naver.com/cs1487/224406149026
+                    - generic [ref=f33e2013]:
+                      - text: 달러
+                      - mark [ref=f33e2014]: 환율
+                      - text: "\"어디까지 떨어질까?\" 1300원대 초반 진입 가능성과 변수 총정리"
+                    - generic [ref=f33e2015]: 새 창 열림
+                  - link "달러 환율 \"어디까지 떨어질까?\" 1300원대 초반 진입 가능성과 변수 총정리 지난 7월 1550원대를 웃돌던 원달러환율 수치가 불과 두 달 남짓한 사이에 1330원대까지 빠르게 내려앉은 모습이 보입니다. 이번 환율 하락은 단기적으로 1300원대 초반 진입 가능성이 열려 있으나, 1200원대 안착보다는 1300원대 초반을 하단으로 지지력을 확인한 뒤 4분기 1380원 안팎으로... 새 창 열림" [ref=f33e2017] [cursor=pointer]:
+                    - /url: https://blog.naver.com/cs1487/224406149026
+                    - generic [ref=f33e2018]:
+                      - text: 달러
+                      - mark [ref=f33e2019]: 환율
+                      - text: "\"어디까지 떨어질까?\" 1300원대 초반 진입 가능성과 변수 총정리 지난 7월 1550원대를 웃돌던 원달러"
+                      - mark [ref=f33e2020]: 환율
+                      - text: 수치가 불과 두 달 남짓한 사이에 1330원대까지 빠르게 내려앉은 모습이 보입니다. 이번
+                      - mark [ref=f33e2021]: 환율
+                      - text: 하락은 단기적으로 1300원대 초반 진입 가능성이 열려 있으나, 1200원대 안착보다는 1300원대 초반을 하단으로 지지력을 확인한 뒤 4분기 1380원 안팎으로...
+                    - generic [ref=f33e2022]: 새 창 열림
+                - link "4 새 창 열림" [ref=f33e2023] [cursor=pointer]:
+                  - /url: https://blog.naver.com/cs1487/224406149026
+                  - generic [ref=f33e2024]: "4"
+                  - generic [ref=f33e2031]: 새 창 열림
+            - generic [ref=f33e2037]:
+              - generic [ref=f33e2038]:
+                - generic [ref=f33e2039]:
+                  - link "새 창 열림" [ref=f33e2041] [cursor=pointer]:
+                    - /url: https://in.naver.com/eatsight
+                  - link "잇사이트 새 창 열림" [ref=f33e2047] [cursor=pointer]:
+                    - /url: https://in.naver.com/eatsight
+                    - generic [ref=f33e2048]: 잇사이트
+                    - generic [ref=f33e2049]: 새 창 열림
+                  - generic [ref=f33e2050]: 3일 전
+                - button "옵션 메뉴 열기" [ref=f33e2054] [cursor=pointer]
+              - generic [ref=f33e2060]:
+                - generic [ref=f33e2061]:
+                  - link "엔화 환율 전망 일본은행 금리인상 영향과 실전 환전 투자 전략 새 창 열림" [ref=f33e2062] [cursor=pointer]:
+                    - /url: https://blog.naver.com/eatsight/224404608852
+                    - generic [ref=f33e2063]:
+                      - text: 엔화
+                      - mark [ref=f33e2064]: 환율
+                      - text: 전망 일본은행 금리인상 영향과 실전 환전 투자 전략
+                    - generic [ref=f33e2065]: 새 창 열림
+                  - link "현재 100엔당 870원대 박스권에 머물고 있는 원엔 환율은 추가 하락에 대한 불안과 역사적 저점이라는 반등 기대감이... 단순히 환율이 싸다는 이유만으로 성급하게 한 번에 매수하는 방식은 예상치 못한 환차손을 부를 수 있어 치밀한 계산이 필수적입니다. 오늘 잇사이트에서는 외환시장 핵심 팩트와 거시경제 흐름을 종합하여 엔화 환율의 향방과 현명한 자산... 새 창 열림" [ref=f33e2067] [cursor=pointer]:
+                    - /url: https://blog.naver.com/eatsight/224404608852
+                    - generic [ref=f33e2068]:
+                      - text: 현재 100엔당 870원대 박스권에 머물고 있는 원엔
+                      - mark [ref=f33e2069]: 환율
+                      - text: 은 추가 하락에 대한 불안과 역사적 저점이라는 반등 기대감이... 단순히
+                      - mark [ref=f33e2070]: 환율
+                      - text: 이 싸다는 이유만으로 성급하게 한 번에 매수하는 방식은 예상치 못한 환차손을 부를 수 있어 치밀한 계산이 필수적입니다. 오늘 잇사이트에서는 외환시장 핵심 팩트와 거시경제 흐름을 종합하여 엔화
+                      - mark [ref=f33e2071]: 환율
+                      - text: 의 향방과 현명한 자산...
+                    - generic [ref=f33e2072]: 새 창 열림
+                - link "7 새 창 열림" [ref=f33e2073] [cursor=pointer]:
+                  - /url: https://blog.naver.com/eatsight/224404608852
+                  - generic [ref=f33e2074]: "7"
+                  - generic [ref=f33e2081]: 새 창 열림
+            - generic [ref=f33e2087]:
+              - generic [ref=f33e2088]:
+                - link "한국씨티은행 www.citibank.co.kr 새 창 열림" [ref=f33e2089] [cursor=pointer]:
+                  - /url: https://www.citibank.co.kr/FxdExrt0100.act
+                  - generic [ref=f33e2091]:
+                    - generic [ref=f33e2109]: 한국씨티은행
+                    - generic [ref=f33e2111]: www.citibank.co.kr
+                  - generic [ref=f33e2115]: 새 창 열림
+                - button "옵션 메뉴 열기" [ref=f33e2117] [cursor=pointer]
+              - generic [ref=f33e2122]:
+                - link "환율[12] - 한국씨티은행 새 창 열림" [ref=f33e2124] [cursor=pointer]:
+                  - /url: https://www.citibank.co.kr/FxdExrt0100.act
+                  - generic [ref=f33e2125]:
+                    - mark [ref=f33e2126]: 환율
+                    - text: "[12] - 한국씨티은행"
+                  - generic [ref=f33e2127]: 새 창 열림
+                - 'link "현찰 살 때 : 1,371.79, 현찰 팔 때 : 1,321.96, 송금 보낼 때 : 1,361.50, 송금 받을 때 : 1,332.20 새 창 열림" [ref=f33e2129] [cursor=pointer]':
+                  - /url: https://www.citibank.co.kr/FxdExrt0100.act
+                  - generic [ref=f33e2130]: "현찰 살 때 : 1,371.79, 현찰 팔 때 : 1,321.96, 송금 보낼 때 : 1,361.50, 송금 받을 때 : 1,332.20"
+                  - generic [ref=f33e2131]: 새 창 열림
+            - generic [ref=f33e2137]:
+              - generic [ref=f33e2138]:
+                - link "지표누리 www.index.go.kr›unity 새 창 열림" [ref=f33e2139] [cursor=pointer]:
+                  - /url: https://www.index.go.kr/unity/potal/main/EachDtlPageDetail.do?idx_cd=1068
+                  - generic [ref=f33e2141]:
+                    - generic [ref=f33e2145]: 지표누리
+                    - generic [ref=f33e2147]: www.index.go.kr›unity
+                  - generic [ref=f33e2151]: 새 창 열림
+                - button "옵션 메뉴 열기" [ref=f33e2153] [cursor=pointer]
+              - generic [ref=f33e2158]:
+                - link "환율 - 지표누리 새 창 열림" [ref=f33e2160] [cursor=pointer]:
+                  - /url: https://www.index.go.kr/unity/potal/main/EachDtlPageDetail.do?idx_cd=1068
+                  - generic [ref=f33e2161]:
+                    - mark [ref=f33e2162]: 환율
+                    - text: "- 지표누리"
+                  - generic [ref=f33e2163]: 새 창 열림
+                - generic [ref=f33e2164]:
+                  - link "2023 2024 원/달러 환율 1,288.0 1,472.5 원/달러 절상율(%) -1.8 -12.5 엔/달러 환율 141.2 157.9 새 창 열림" [ref=f33e2165] [cursor=pointer]:
+                    - /url: https://www.index.go.kr/unity/potal/main/EachDtlPageDetail.do?idx_cd=1068
+                    - table [ref=f33e2166]:
+                      - rowgroup [ref=f33e2172]:
+                        - row [ref=f33e2173]:
+                          - columnheader [ref=f33e2174]
+                          - columnheader "2023" [ref=f33e2175]
+                          - columnheader "2024" [ref=f33e2177]
+                      - rowgroup [ref=f33e2179]:
+                        - row [ref=f33e2180]:
+                          - columnheader "원/달러" [ref=f33e2181]
+                          - rowheader "환율" [ref=f33e2183]
+                          - cell "1,288.0" [ref=f33e2185]
+                          - cell "1,472.5" [ref=f33e2187]
+                        - row [ref=f33e2189]:
+                          - columnheader "원/달러" [ref=f33e2190]
+                          - rowheader "절상율(%)" [ref=f33e2192]
+                          - cell "-1.8" [ref=f33e2194]
+                          - cell "-12.5" [ref=f33e2196]
+                        - row [ref=f33e2198]:
+                          - columnheader "엔/달러" [ref=f33e2199]
+                          - rowheader "환율" [ref=f33e2201]
+                          - cell "141.2" [ref=f33e2203]
+                          - cell "157.9" [ref=f33e2205]
+                    - generic [ref=f33e2207]: 새 창 열림
+                  - link "3행 더보기 새 창 열림" [ref=f33e2208] [cursor=pointer]:
+                    - /url: https://www.index.go.kr/unity/potal/main/EachDtlPageDetail.do?idx_cd=1068
+                    - generic [ref=f33e2209]: 3행 더보기
+                    - generic [ref=f33e2210]: 새 창 열림
+            - generic [ref=f33e2216]:
+              - generic [ref=f33e2217]:
+                - link "다음금융 finance.daum.net›exchanges 새 창 열림" [ref=f33e2218] [cursor=pointer]:
+                  - /url: https://finance.daum.net/exchanges
+                  - generic [ref=f33e2220]:
+                    - generic [ref=f33e2224]: 다음금융
+                    - generic [ref=f33e2226]: finance.daum.net›exchanges
+                  - generic [ref=f33e2230]: 새 창 열림
+                - button "옵션 메뉴 열기" [ref=f33e2232] [cursor=pointer]
+              - generic [ref=f33e2237]:
+                - link "환율 - 다음금융 새 창 열림" [ref=f33e2239] [cursor=pointer]:
+                  - /url: https://finance.daum.net/exchanges
+                  - generic [ref=f33e2240]:
+                    - mark [ref=f33e2241]: 환율
+                    - text: "- 다음금융"
+                  - generic [ref=f33e2242]: 새 창 열림
+                - generic [ref=f33e2243]:
+                  - link "국가명 통화 매매기준율 전일비 미국 (USD/KRW) 달러 1,350.60 10.10 일본 (JPY100/KRW) 엔 874.49 0.32 중국 (CNY/KRW) 위안 201.14 1.21 새 창 열림" [ref=f33e2244] [cursor=pointer]:
+                    - /url: https://finance.daum.net/exchanges
+                    - table [ref=f33e2245]:
+                      - rowgroup [ref=f33e2251]:
+                        - row [ref=f33e2252]:
+                          - columnheader "국가명" [ref=f33e2253]
+                          - columnheader "통화" [ref=f33e2255]
+                          - columnheader "매매기준율" [ref=f33e2257]
+                          - columnheader "전일비" [ref=f33e2259]
+                      - rowgroup [ref=f33e2261]:
+                        - row [ref=f33e2262]:
+                          - cell "미국 (USD/KRW)" [ref=f33e2263]
+                          - cell "달러" [ref=f33e2265]
+                          - cell "1,350.60" [ref=f33e2267]
+                          - cell "10.10" [ref=f33e2269]
+                        - row [ref=f33e2271]:
+                          - cell "일본 (JPY100/KRW)" [ref=f33e2272]
+                          - cell "엔" [ref=f33e2274]
+                          - cell "874.49" [ref=f33e2276]
+                          - cell "0.32" [ref=f33e2278]
+                        - row [ref=f33e2280]:
+                          - cell "중국 (CNY/KRW)" [ref=f33e2281]
+                          - cell "위안" [ref=f33e2283]
+                          - cell "201.14" [ref=f33e2285]
+                          - cell "1.21" [ref=f33e2287]
+                    - generic [ref=f33e2289]: 새 창 열림
+                  - link "40행 더보기 새 창 열림" [ref=f33e2290] [cursor=pointer]:
+                    - /url: https://finance.daum.net/exchanges
+                    - generic [ref=f33e2291]: 40행 더보기
+                    - generic [ref=f33e2292]: 새 창 열림
+            - generic [ref=f33e2298]:
+              - generic [ref=f33e2299]:
+                - link "인베스팅닷컴 kr.investing.com›usd-krw 새 창 열림" [ref=f33e2300] [cursor=pointer]:
+                  - /url: https://kr.investing.com/currencies/usd-krw
+                  - generic [ref=f33e2302]:
+                    - generic [ref=f33e2306]: 인베스팅닷컴
+                    - generic [ref=f33e2308]: kr.investing.com›usd-krw
+                  - generic [ref=f33e2312]: 새 창 열림
+                - button "옵션 메뉴 열기" [ref=f33e2314] [cursor=pointer]
+              - generic [ref=f33e2319]:
+                - link "USD KRW | 미달러 원 환율 새 창 열림" [ref=f33e2321] [cursor=pointer]:
+                  - /url: https://kr.investing.com/currencies/usd-krw
+                  - generic [ref=f33e2322]:
+                    - text: USD KRW | 미달러 원
+                    - mark [ref=f33e2323]: 환율
+                  - generic [ref=f33e2324]: 새 창 열림
+                - link "USD/KRW 미달러 원 환율 실시간 스트리밍 차트, 변환기와 기술 분석 새 창 열림" [ref=f33e2326] [cursor=pointer]:
+                  - /url: https://kr.investing.com/currencies/usd-krw
+                  - generic [ref=f33e2327]:
+                    - text: USD/KRW 미달러 원
+                    - mark [ref=f33e2328]: 환율
+                    - text: 실시간 스트리밍 차트, 변환기와 기술 분석
+                  - generic [ref=f33e2329]: 새 창 열림
+            - generic [ref=f33e2335]:
+              - generic [ref=f33e2336]:
+                - generic [ref=f33e2337]:
+                  - link "새 창 열림" [ref=f33e2339] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/cebu100x
+                  - link "[세부100배즐기기] 필리핀 여행카페 1위 새 창 열림" [ref=f33e2345] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/cebu100x
+                    - generic [ref=f33e2346]: "[세부100배즐기기] 필리핀 여행카페 1위"
+                    - generic [ref=f33e2347]: 새 창 열림
+                  - generic [ref=f33e2351]: 3일 전
+                - button "옵션 메뉴 열기" [ref=f33e2355] [cursor=pointer]
+              - generic [ref=f33e2362]:
+                - link "세부 아얄라몰 백화점쪽 환율입니다! 새 창 열림" [ref=f33e2363] [cursor=pointer]:
+                  - /url: https://cafe.naver.com/cebu100x/1769680?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImNlYnUxMDB4IiwiYXJ0aWNsZUlkIjoxNzY5NjgwLCJpc3N1ZWRBdCI6MTc4OTA5NTA4OTkzM30.q-UvVmQw1ygxG9EZrpsxYnoJnNAmihVKUrnqepweNpU
+                  - generic [ref=f33e2364]:
+                    - text: 세부 아얄라몰 백화점쪽
+                    - mark [ref=f33e2365]: 환율
+                    - text: 입니다!
+                  - generic [ref=f33e2366]: 새 창 열림
+                - link "제가 어제환전했는데 1달러당 62.4페소로 환전 해주더라구요~ 다른곳은 어떤지 모르겠는데...일단 이렇습니다~! 새 창 열림" [ref=f33e2368] [cursor=pointer]:
+                  - /url: https://cafe.naver.com/cebu100x/1769680?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImNlYnUxMDB4IiwiYXJ0aWNsZUlkIjoxNzY5NjgwLCJpc3N1ZWRBdCI6MTc4OTA5NTA4OTkzM30.q-UvVmQw1ygxG9EZrpsxYnoJnNAmihVKUrnqepweNpU
+                  - text: 제가 어제환전했는데 1달러당 62.4페소로 환전 해주더라구요~ 다른곳은 어떤지 모르겠는데...일단 이렇습니다~!
+                  - generic [ref=f33e2369]: 새 창 열림
+            - generic [ref=f33e2375]:
+              - generic [ref=f33e2376]:
+                - link "우리은행 spot.wooribank.com›pot 새 창 열림" [ref=f33e2377] [cursor=pointer]:
+                  - /url: https://spot.wooribank.com/pot/Dream?withyou=FXXRT0016
+                  - generic [ref=f33e2379]:
+                    - generic [ref=f33e2383]: 우리은행
+                    - generic [ref=f33e2385]: spot.wooribank.com›pot
+                  - generic [ref=f33e2389]: 새 창 열림
+                - button "옵션 메뉴 열기" [ref=f33e2391] [cursor=pointer]
+              - generic [ref=f33e2396]:
+                - link "기간별평균환율조회 새 창 열림" [ref=f33e2398] [cursor=pointer]:
+                  - /url: https://spot.wooribank.com/pot/Dream?withyou=FXXRT0016
+                  - generic [ref=f33e2399]:
+                    - text: 기간별평균
+                    - mark [ref=f33e2400]: 환율
+                    - text: 조회
+                  - generic [ref=f33e2401]: 새 창 열림
+                - generic [ref=f33e2402]:
+                  - link "통화표시 통화명 보내실때 받으실때 USD 미국 달러 1,365.66 1,339.52 JPY 일본 100엔 877.38 860.53 EUR 유럽연합 유로 1,587.04 1,555.63 새 창 열림" [ref=f33e2403] [cursor=pointer]:
+                    - /url: https://spot.wooribank.com/pot/Dream?withyou=FXXRT0016
+                    - table [ref=f33e2404]:
+                      - rowgroup [ref=f33e2410]:
+                        - row [ref=f33e2411]:
+                          - columnheader "통화표시" [ref=f33e2412]
+                          - columnheader "통화명" [ref=f33e2414]
+                          - columnheader "보내실때" [ref=f33e2416]
+                          - columnheader "받으실때" [ref=f33e2418]
+                      - rowgroup [ref=f33e2420]:
+                        - row [ref=f33e2421]:
+                          - cell "USD" [ref=f33e2422]
+                          - cell "미국 달러" [ref=f33e2424]
+                          - cell "1,365.66" [ref=f33e2426]
+                          - cell "1,339.52" [ref=f33e2428]
+                        - row [ref=f33e2430]:
+                          - cell "JPY" [ref=f33e2431]
+                          - cell "일본 100엔" [ref=f33e2433]
+                          - cell "877.38" [ref=f33e2435]
+                          - cell "860.53" [ref=f33e2437]
+                        - row [ref=f33e2439]:
+                          - cell "EUR" [ref=f33e2440]
+                          - cell "유럽연합 유로" [ref=f33e2442]
+                          - cell "1,587.04" [ref=f33e2444]
+                          - cell "1,555.63" [ref=f33e2446]
+                    - generic [ref=f33e2448]: 새 창 열림
+                  - link "45행 더보기 새 창 열림" [ref=f33e2449] [cursor=pointer]:
+                    - /url: https://spot.wooribank.com/pot/Dream?withyou=FXXRT0016
+                    - generic [ref=f33e2450]: 45행 더보기
+                    - generic [ref=f33e2451]: 새 창 열림
+            - generic [ref=f33e2457]:
+              - generic [ref=f33e2458]:
+                - generic [ref=f33e2459]:
+                  - link "새 창 열림" [ref=f33e2461] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/hotellife
+                  - link "[스사사] 스마트컨슈머들의 호텔/항공/VIP카드/여행 이야기 새 창 열림" [ref=f33e2467] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/hotellife
+                    - generic [ref=f33e2468]: "[스사사] 스마트컨슈머들의 호텔/항공/VIP카드/여행 이야기"
+                    - generic [ref=f33e2469]: 새 창 열림
+                  - generic [ref=f33e2473]: 3일 전
+                - button "옵션 메뉴 열기" [ref=f33e2477] [cursor=pointer]
+              - generic [ref=f33e2484]:
+                - link "<면세환율> 2026.09.08 새 창 열림" [ref=f33e2485] [cursor=pointer]:
+                  - /url: https://cafe.naver.com/hotellife/1970440?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImhvdGVsbGlmZSIsImFydGljbGVJZCI6MTk3MDQ0MCwiaXNzdWVkQXQiOjE3ODkwOTUwODk5MzN9.Xq1XOT2IYPls5s_ZzsdTXJiO8wHdYZZz9quKC5hD3xo
+                  - generic [ref=f33e2486]:
+                    - text: <면세
+                    - mark [ref=f33e2487]: 환율
+                    - text: "> 2026.09.08"
+                  - generic [ref=f33e2488]: 새 창 열림
+                - 'link "오늘: 1355.2 내일: 1342.6 면세 결제하려다 오랜만에 공유합니다^^ 새 창 열림" [ref=f33e2490] [cursor=pointer]':
+                  - /url: https://cafe.naver.com/hotellife/1970440?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImhvdGVsbGlmZSIsImFydGljbGVJZCI6MTk3MDQ0MCwiaXNzdWVkQXQiOjE3ODkwOTUwODk5MzN9.Xq1XOT2IYPls5s_ZzsdTXJiO8wHdYZZz9quKC5hD3xo
+                  - text: "오늘: 1355.2 내일: 1342.6 면세 결제하려다 오랜만에 공유합니다^^"
+                  - generic [ref=f33e2491]: 새 창 열림
+            - generic [ref=f33e2497]:
+              - generic [ref=f33e2498]:
+                - link "해외경제정보드림 dream.kotra.or.kr›dream 새 창 열림" [ref=f33e2499] [cursor=pointer]:
+                  - /url: https://dream.kotra.or.kr/dream/cms/com/index.do?MENU_ID=5010
+                  - generic [ref=f33e2501]:
+                    - generic [ref=f33e2505]: 해외경제정보드림
+                    - generic [ref=f33e2507]: dream.kotra.or.kr›dream
+                  - generic [ref=f33e2511]: 새 창 열림
+                - button "옵션 메뉴 열기" [ref=f33e2513] [cursor=pointer]
+              - generic [ref=f33e2518]:
+                - link "환율계산기 - 해외경제정보드림 새 창 열림" [ref=f33e2520] [cursor=pointer]:
+                  - /url: https://dream.kotra.or.kr/dream/cms/com/index.do?MENU_ID=5010
+                  - generic [ref=f33e2521]:
+                    - mark [ref=f33e2522]: 환율
+                    - text: 계산기 - 해외경제정보드림
+                  - generic [ref=f33e2523]: 새 창 열림
+                - generic [ref=f33e2524]:
+                  - link "구분 통화표시 매매기준율 받으실 때 미국 달러 USD 1350.80 1337.90 일본 100엔 JPY 875.15 866.75 유럽 유로 EUR 1568.27 1552.91 새 창 열림" [ref=f33e2525] [cursor=pointer]:
+                    - /url: https://dream.kotra.or.kr/dream/cms/com/index.do?MENU_ID=5010
+                    - table [ref=f33e2526]:
+                      - rowgroup [ref=f33e2532]:
+                        - row [ref=f33e2533]:
+                          - columnheader "구분" [ref=f33e2534]
+                          - columnheader "통화표시" [ref=f33e2536]
+                          - columnheader "매매기준율" [ref=f33e2538]
+                          - columnheader "받으실 때" [ref=f33e2540]
+                      - rowgroup [ref=f33e2542]:
+                        - row [ref=f33e2543]:
+                          - rowheader "미국 달러" [ref=f33e2544]
+                          - cell "USD" [ref=f33e2546]
+                          - cell "1350.80" [ref=f33e2548]
+                          - cell "1337.90" [ref=f33e2550]
+                        - row [ref=f33e2552]:
+                          - rowheader "일본 100엔" [ref=f33e2553]
+                          - cell "JPY" [ref=f33e2555]
+                          - cell "875.15" [ref=f33e2557]
+                          - cell "866.75" [ref=f33e2559]
+                        - row [ref=f33e2561]:
+                          - rowheader "유럽 유로" [ref=f33e2562]
+                          - cell "EUR" [ref=f33e2564]
+                          - cell "1568.27" [ref=f33e2566]
+                          - cell "1552.91" [ref=f33e2568]
+                    - generic [ref=f33e2570]: 새 창 열림
+                  - link "41행 더보기 새 창 열림" [ref=f33e2571] [cursor=pointer]:
+                    - /url: https://dream.kotra.or.kr/dream/cms/com/index.do?MENU_ID=5010
+                    - generic [ref=f33e2572]: 41행 더보기
+                    - generic [ref=f33e2573]: 새 창 열림
+            - link "검색결과 더보기" [ref=f33e2575] [cursor=pointer]:
+              - /url: "?nso=&page=2&qdt=0&query=%ED%99%98%EC%9C%A8&sm=tab_pge&ssc=tab.ur.all&start=1"
+              - generic [ref=f33e2576]: 검색결과
+              - generic [ref=f33e2577]: 더보기
+          - generic [ref=f33e2582]:
+            - generic [ref=f33e2584]:
+              - heading "이미지" [level=2] [ref=f33e2586]
+              - button "이미지 신고하기" [ref=f33e2589] [cursor=pointer]
+            - generic [ref=f33e2591]:
+              - generic [ref=f33e2592]:
+                - generic [ref=f33e2593]:
+                  - link "미국" [ref=f33e2594] [cursor=pointer]:
+                    - /url: "?pq=%ED%99%98%EC%9C%A8&qdt=0&query=%EB%AF%B8%EA%B5%AD+%ED%99%98%EC%9C%A8&sm=tab_imt&where=image"
+                  - link "일본" [ref=f33e2601] [cursor=pointer]:
+                    - /url: "?pq=%ED%99%98%EC%9C%A8&qdt=0&query=%EC%9D%BC%EB%B3%B8+%ED%99%98%EC%9C%A8&sm=tab_imt&where=image"
+                  - link "중국" [ref=f33e2608] [cursor=pointer]:
+                    - /url: "?pq=%ED%99%98%EC%9C%A8&qdt=0&query=%EC%A4%91%EA%B5%AD+%ED%99%98%EC%9C%A8&sm=tab_imt&where=image"
+                  - link "베트남" [ref=f33e2615] [cursor=pointer]:
+                    - /url: "?pq=%ED%99%98%EC%9C%A8&qdt=0&query=%EB%B2%A0%ED%8A%B8%EB%82%A8+%ED%99%98%EC%9C%A8&sm=tab_imt&where=image"
+                  - link "그래프" [ref=f33e2622] [cursor=pointer]:
+                    - /url: "?pq=%ED%99%98%EC%9C%A8&qdt=0&query=%ED%99%98%EC%9C%A8+%EA%B7%B8%EB%9E%98%ED%94%84&sm=tab_imt&where=image"
+                  - link "대만" [ref=f33e2629] [cursor=pointer]:
+                    - /url: "?pq=%ED%99%98%EC%9C%A8&qdt=0&query=%EB%8C%80%EB%A7%8C+%ED%99%98%EC%9C%A8&sm=tab_imt&where=image"
+                  - link "호주" [ref=f33e2636] [cursor=pointer]:
+                    - /url: "?pq=%ED%99%98%EC%9C%A8&qdt=0&query=%ED%98%B8%EC%A3%BC+%ED%99%98%EC%9C%A8&sm=tab_imt&where=image"
+                  - link "파운드" [ref=f33e2643] [cursor=pointer]:
+                    - /url: "?pq=%ED%99%98%EC%9C%A8&qdt=0&query=%ED%8C%8C%EC%9A%B4%EB%93%9C+%ED%99%98%EC%9C%A8&sm=tab_imt&where=image"
+                  - link "캐나다" [ref=f33e2650] [cursor=pointer]:
+                    - /url: "?pq=%ED%99%98%EC%9C%A8&qdt=0&query=%EC%BA%90%EB%82%98%EB%8B%A4+%ED%99%98%EC%9C%A8&sm=tab_imt&where=image"
+                  - link "바트" [ref=f33e2657] [cursor=pointer]:
+                    - /url: "?pq=%ED%99%98%EC%9C%A8&qdt=0&query=%EB%B0%94%ED%8A%B8+%ED%99%98%EC%9C%A8&sm=tab_imt&where=image"
+                  - link "홍콩" [ref=f33e2664] [cursor=pointer]:
+                    - /url: "?pq=%ED%99%98%EC%9C%A8&qdt=0&query=%ED%99%8D%EC%BD%A9+%ED%99%98%EC%9C%A8&sm=tab_imt&where=image"
+                  - link "엔" [ref=f33e2671] [cursor=pointer]:
+                    - /url: "?pq=%ED%99%98%EC%9C%A8&qdt=0&query=%EC%97%94+%ED%99%98%EC%9C%A8&sm=tab_imt&where=image"
+                  - link "페소" [ref=f33e2678] [cursor=pointer]:
+                    - /url: "?pq=%ED%99%98%EC%9C%A8&qdt=0&query=%ED%8E%98%EC%86%8C+%ED%99%98%EC%9C%A8&sm=tab_imt&where=image"
+                  - link "오늘" [ref=f33e2685] [cursor=pointer]:
+                    - /url: "?pq=%ED%99%98%EC%9C%A8&qdt=0&query=%EC%98%A4%EB%8A%98+%ED%99%98%EC%9C%A8&sm=tab_imt&where=image"
+                  - link "필리핀" [ref=f33e2692] [cursor=pointer]:
+                    - /url: "?pq=%ED%99%98%EC%9C%A8&qdt=0&query=%ED%95%84%EB%A6%AC%ED%95%80+%ED%99%98%EC%9C%A8&sm=tab_imt&where=image"
+                  - link "원화" [ref=f33e2699] [cursor=pointer]:
+                    - /url: "?pq=%ED%99%98%EC%9C%A8&qdt=0&query=%EC%9B%90%ED%99%94+%ED%99%98%EC%9C%A8&sm=tab_imt&where=image"
+                  - link "전망" [ref=f33e2706] [cursor=pointer]:
+                    - /url: "?pq=%ED%99%98%EC%9C%A8&qdt=0&query=%ED%99%98%EC%9C%A8+%EC%A0%84%EB%A7%9D&sm=tab_imt&where=image"
+                  - link "싱가포르" [ref=f33e2713] [cursor=pointer]:
+                    - /url: "?pq=%ED%99%98%EC%9C%A8&qdt=0&query=%EC%8B%B1%EA%B0%80%ED%8F%AC%EB%A5%B4+%ED%99%98%EC%9C%A8&sm=tab_imt&where=image"
+                  - link "동" [ref=f33e2720] [cursor=pointer]:
+                    - /url: "?pq=%ED%99%98%EC%9C%A8&qdt=0&query=%EB%8F%99+%ED%99%98%EC%9C%A8&sm=tab_imt&where=image"
+                  - link "달라" [ref=f33e2727] [cursor=pointer]:
+                    - /url: "?pq=%ED%99%98%EC%9C%A8&qdt=0&query=%EB%8B%AC%EB%9D%BC+%ED%99%98%EC%9C%A8&sm=tab_imt&where=image"
+                  - link "조회" [ref=f33e2734] [cursor=pointer]:
+                    - /url: "?pq=%ED%99%98%EC%9C%A8&qdt=0&query=%ED%99%98%EC%9C%A8+%EC%A1%B0%ED%9A%8C&sm=tab_imt&where=image"
+                  - link "앤화" [ref=f33e2741] [cursor=pointer]:
+                    - /url: "?pq=%ED%99%98%EC%9C%A8&qdt=0&query=%EC%95%A4%ED%99%94+%ED%99%98%EC%9C%A8&sm=tab_imt&where=image"
+                  - link "위엔화" [ref=f33e2748] [cursor=pointer]:
+                    - /url: "?pq=%ED%99%98%EC%9C%A8&qdt=0&query=%EC%9C%84%EC%97%94%ED%99%94+%ED%99%98%EC%9C%A8&sm=tab_imt&where=image"
+                - button [ref=f33e2755] [cursor=pointer]
+              - generic [ref=f33e2758]:
+                - generic:
+                  - button "달러 대비 원화 환율, 1.2원 오른 1543원에 개장":
+                    - img "달러 대비 원화 환율, 1.2원 오른 1543원에 개장"
+                - generic:
+                  - button "[2026.01.26] 장마감 경제뉴스 | 코스닥 기관 폭풍 매수에 천스닥, 환율 급락":
+                    - img "[2026.01.26] 장마감 경제뉴스 | 코스닥 기관 폭풍 매수에 천스닥, 환율 급락"
+                - generic:
+                  - button "환율 개입했는데 달러예금 11.5% 폭증… 정부개입이 만든 역설":
+                    - img "환율 개입했는데 달러예금 11.5% 폭증… 정부개입이 만든 역설"
+                - generic:
+                  - button "뉴노멀 된 '원·달러 환율 1400원'… 산업계는 희비":
+                    - img "뉴노멀 된 '원·달러 환율 1400원'… 산업계는 희비"
+                - generic:
+                  - button "원달러 환율 향방 변수, 금리와 환율 관계 공부":
+                    - img "원달러 환율 향방 변수, 금리와 환율 관계 공부"
+                - generic:
+                  - button "원·달러 환율 평균이 1,470원 상승":
+                    - img "원·달러 환율 평균이 1,470원 상승"
+                - generic:
+                  - button "원달러 환율 1400원대 물가와 기업 실적에 미치는 영향":
+                    - img "원달러 환율 1400원대 물가와 기업 실적에 미치는 영향"
+                - generic:
+                  - button "[경제신문 읽기 26.07.09] 피크아웃/주담대/경상수지/환율/애플":
+                    - img "[경제신문 읽기 26.07.09] 피크아웃/주담대/경상수지/환율/애플"
+                - generic:
+                  - button "원달러 환율 1530원 돌파 원인과 개인 투자자 전망 가이드":
+                    - img "원달러 환율 1530원 돌파 원인과 개인 투자자 전망 가이드"
+                - generic:
+                  - button "원화가 왜 이렇게 약해졌을까? 환율 1470원 돌파한 이유를 정리해봅니다":
+                    - img "원화가 왜 이렇게 약해졌을까? 환율 1470원 돌파한 이유를 정리해봅니다"
+            - link "이미지 더보기" [ref=f33e2760] [cursor=pointer]:
+              - /url: "?nso=so%3Ar%2Cp%3Aall&qdt=0&query=%ED%99%98%EC%9C%A8&sm=tab_nmr&ssc=tab.image.all&where=image"
+              - generic [ref=f33e2765]:
+                - generic [ref=f33e2766]: 이미지
+                - generic [ref=f33e2767]: 더보기
+          - complementary "웨일 브라우저 설치 안내" [ref=f33e2771]:
+            - generic [ref=f33e2772]:
+              - img "웨일 브라우저" [ref=f33e2774]
+              - generic [ref=f33e2775]: 브라우저를 업데이트하세요
+              - generic [ref=f33e2776]: 최신 기술을 품은 네이버 웨일에서 빠른 인터넷을 만나보세요
+            - link "웨일 다운로드" [ref=f33e2778] [cursor=pointer]:
+              - /url: https://whale.naver.com/ko/?wpid=searchpopup_theme1
+            - button "배너 닫기" [ref=f33e2779] [cursor=pointer]
+          - generic [ref=f33e2782]:
+            - generic [ref=f33e2783]: 이전
+            - generic "페이지 탐색" [ref=f33e2785]:
+              - link "1 페이지" [ref=f33e2786] [cursor=pointer]:
+                - /url: "?nso=&qdt=0&query=%ED%99%98%EC%9C%A8&sm=tab_pge&ssc=tab.nx.all"
+                - text: "1"
+                - generic [ref=f33e2787]: 페이지
+              - link "2 페이지" [ref=f33e2788] [cursor=pointer]:
+                - /url: "?nso=&page=2&qdt=0&query=%ED%99%98%EC%9C%A8&sm=tab_pge&ssc=tab.ur.all&start=1"
+                - text: "2"
+                - generic [ref=f33e2789]: 페이지
+              - link "3 페이지" [ref=f33e2790] [cursor=pointer]:
+                - /url: "?nso=&page=3&qdt=0&query=%ED%99%98%EC%9C%A8&sm=tab_pge&ssc=tab.ur.all&start=21"
+                - text: "3"
+                - generic [ref=f33e2791]: 페이지
+              - link "4 페이지" [ref=f33e2792] [cursor=pointer]:
+                - /url: "?nso=&page=4&qdt=0&query=%ED%99%98%EC%9C%A8&sm=tab_pge&ssc=tab.ur.all&start=41"
+                - text: "4"
+                - generic [ref=f33e2793]: 페이지
+              - link "5 페이지" [ref=f33e2794] [cursor=pointer]:
+                - /url: "?nso=&page=5&qdt=0&query=%ED%99%98%EC%9C%A8&sm=tab_pge&ssc=tab.ur.all&start=61"
+                - text: "5"
+                - generic [ref=f33e2795]: 페이지
+              - link "6 페이지" [ref=f33e2796] [cursor=pointer]:
+                - /url: "?nso=&page=6&qdt=0&query=%ED%99%98%EC%9C%A8&sm=tab_pge&ssc=tab.ur.all&start=81"
+                - text: "6"
+                - generic [ref=f33e2797]: 페이지
+              - link "7 페이지" [ref=f33e2798] [cursor=pointer]:
+                - /url: "?nso=&page=7&qdt=0&query=%ED%99%98%EC%9C%A8&sm=tab_pge&ssc=tab.ur.all&start=101"
+                - text: "7"
+                - generic [ref=f33e2799]: 페이지
+              - link "8 페이지" [ref=f33e2800] [cursor=pointer]:
+                - /url: "?nso=&page=8&qdt=0&query=%ED%99%98%EC%9C%A8&sm=tab_pge&ssc=tab.ur.all&start=121"
+                - text: "8"
+                - generic [ref=f33e2801]: 페이지
+              - link "9 페이지" [ref=f33e2802] [cursor=pointer]:
+                - /url: "?nso=&page=9&qdt=0&query=%ED%99%98%EC%9C%A8&sm=tab_pge&ssc=tab.ur.all&start=141"
+                - text: "9"
+                - generic [ref=f33e2803]: 페이지
+              - link "10 페이지" [ref=f33e2804] [cursor=pointer]:
+                - /url: "?nso=&page=10&qdt=0&query=%ED%99%98%EC%9C%A8&sm=tab_pge&ssc=tab.ur.all&start=161"
+                - text: "10"
+                - generic [ref=f33e2805]: 페이지
+            - link "다음" [ref=f33e2806] [cursor=pointer]:
+              - /url: "?nso=&page=2&qdt=0&query=%ED%99%98%EC%9C%A8&sm=tab_pge&ssc=tab.ur.all&start=1"
+        - generic [ref=f33e2808]:
+          - generic [ref=f33e2811]:
+            - generic [ref=f33e2814]:
+              - heading "숏텐츠 증권" [level=2] [ref=f33e2815]:
+                - generic [ref=f33e2816]:
+                  - generic [ref=f33e2817]: 숏텐츠
+                  - generic [ref=f33e2818]: 증권
+              - button "정보 확인 도움말" [ref=f33e2819] [cursor=pointer]
+            - generic [ref=f33e2824]:
+              - link "환율 1330원대, 7천피 방어 성공 중동발 충격에도 '7천피' 방어…환율 이틀째 1330원대 17시간 전" [ref=f33e2825] [cursor=pointer]:
+                - /url: "?mra=QkRS%5EU2JUX0NQbQ%3D%3D%5ETEdO%5EU3hUX0NQdA%3D%3D&mra2=U0RC%5EU3hUX0NQdA%3D%3D&query=%ED%99%98%EC%9C%A8+1330%EC%9B%90%EB%8C%80%2C+7%EC%B2%9C%ED%94%BC+%EB%B0%A9%EC%96%B4+%EC%84%B1%EA%B3%B5&qvt=0&sm=tab_sht.best&where=nexearch&x_shortents=%7B%22category%22%3A%22%EC%A6%9D%EA%B6%8C%22%2C%22gdid%22%3A%228811AD97_000000000000000000532304%22%7D"
+                - generic [ref=f33e2826]: 환율 1330원대, 7천피 방어 성공
+                - generic [ref=f33e2840]:
+                  - text: 중동발 충격에도 '7천피' 방어…환율 이틀째 1330원대
+                  - generic [ref=f33e2841]: 17시간 전
+              - link "13% 급등, 주가 치솟은 회사 이러다 일 내겠네…'13% 급등' 주가 무섭게 치솟은 회사 17시간 전" [ref=f33e2844] [cursor=pointer]:
+                - /url: "?mra=QkRS%5EU2JUX0NQbQ%3D%3D%5ETEdO%5EU3hUX0NQdA%3D%3D&mra2=U0RC%5EU3hUX0NQdA%3D%3D&query=13%25+%EA%B8%89%EB%93%B1%2C+%EC%A3%BC%EA%B0%80+%EC%B9%98%EC%86%9F%EC%9D%80+%ED%9A%8C%EC%82%AC&qvt=0&sm=tab_sht.best&where=nexearch&x_shortents=%7B%22category%22%3A%22%EC%A6%9D%EA%B6%8C%22%2C%22gdid%22%3A%2288000107_000000000000000005331063%22%7D"
+                - generic [ref=f33e2845]: 13% 급등, 주가 치솟은 회사
+                - generic [ref=f33e2864]:
+                  - text: 이러다 일 내겠네…'13% 급등' 주가 무섭게 치솟은 회사
+                  - generic [ref=f33e2865]: 17시간 전
+              - link "챗지피티 아스트라 AGI 뜻과 관련주 챗지피티 (GPT) 아스트라 AGI 뜻, 관련주와 수혜주는? 2일 전" [ref=f33e2868] [cursor=pointer]:
+                - /url: "?mra=QkRS%5EU2JUX0NQbQ%3D%3D%5ETEdO%5EU3hUX0NQdA%3D%3D&mra2=U0RC%5EU3hUX0NQdA%3D%3D&query=%EC%B1%97%EC%A7%80%ED%94%BC%ED%8B%B0+%EC%95%84%EC%8A%A4%ED%8A%B8%EB%9D%BC+AGI+%EB%9C%BB%EA%B3%BC+%EA%B4%80%EB%A0%A8%EC%A3%BC&qvt=0&sm=tab_sht.best&where=nexearch&x_shortents=%7B%22category%22%3A%22%EC%A6%9D%EA%B6%8C%22%2C%22gdid%22%3A%2290000003_00000000000000343FA6BAF1%22%7D"
+                - generic [ref=f33e2869]: 챗지피티 아스트라 AGI 뜻과 관련주
+                - generic [ref=f33e2888]:
+                  - text: 챗지피티 (GPT) 아스트라 AGI 뜻, 관련주와 수혜주는?
+                  - generic [ref=f33e2889]: 2일 전
+              - link "월세까지 주식 투자한 사람의 최후, 현금비중의 중요성 [프리미엄 콘텐츠] 월세 낼 돈까지 주식에 넣은 사람의 최후, 투자에서 현금비중이 중요한 이유 14시간 전" [ref=f33e2892] [cursor=pointer]:
+                - /url: "?mra=QkRS%5EU2JUX0NQbQ%3D%3D%5ETEdO%5EU3hUX0NQdA%3D%3D&mra2=U0RC%5EU3hUX0NQdA%3D%3D&query=%EC%9B%94%EC%84%B8%EA%B9%8C%EC%A7%80+%EC%A3%BC%EC%8B%9D+%ED%88%AC%EC%9E%90%ED%95%9C+%EC%82%AC%EB%9E%8C%EC%9D%98+%EC%B5%9C%ED%9B%84%2C+%ED%98%84%EA%B8%88%EB%B9%84%EC%A4%91%EC%9D%98+%EC%A4%91%EC%9A%94%EC%84%B1&qvt=0&sm=tab_sht.best&where=nexearch&x_shortents=%7B%22category%22%3A%22%EC%A6%9D%EA%B6%8C%22%2C%22gdid%22%3A%2290000003_00000000000000343FBBA0A2%22%7D"
+                - generic [ref=f33e2893]: 월세까지 주식 투자한 사람의 최후, 현금비중의 중요성
+                - generic [ref=f33e2912]:
+                  - text: "[프리미엄 콘텐츠] 월세 낼 돈까지 주식에 넣은 사람의 최후, 투자에서 현금비중이 중요한 이유"
+                  - generic [ref=f33e2913]: 14시간 전
+              - link "미 8월 고용 깜짝 증가 美 8월 고용 ‘깜짝 증가’… 금리 인상 우려에 뉴욕증시 하락 6일 전" [ref=f33e2916] [cursor=pointer]:
+                - /url: "?mra=QkRS%5EU2JUX0NQbQ%3D%3D%5ETEdO%5EU3hUX0NQdA%3D%3D&mra2=U0RC%5EU3hUX0NQdA%3D%3D&query=%EB%AF%B8+8%EC%9B%94+%EA%B3%A0%EC%9A%A9+%EA%B9%9C%EC%A7%9D+%EC%A6%9D%EA%B0%80&qvt=0&sm=tab_sht.best&where=nexearch&x_shortents=%7B%22category%22%3A%22%EC%A6%9D%EA%B6%8C%22%2C%22gdid%22%3A%2290000003_00000000000000343F63E299%22%7D"
+                - generic [ref=f33e2917]: 미 8월 고용 깜짝 증가
+                - generic [ref=f33e2936]:
+                  - text: 美 8월 고용 ‘깜짝 증가’… 금리 인상 우려에 뉴욕증시 하락
+                  - generic [ref=f33e2937]: 6일 전
+          - generic [ref=f33e2942]:
+            - link [ref=f33e2943] [cursor=pointer]:
+              - /url: https://mkt.naver.com/p1/atrb?channel_id=naver_pcsearchmktbanner&campaign_id=2603-naverclip-001&target=https%3A%2F%2Fclipcreators.naver.com%2Fpromotion%2Ftoday%3Fdtm_source%3Dnaver_pcsearchmktbanner%26dtm_medium%3Dmktatrb_etc%26dtm_campaign%3D2603-naverclip-001
+              - generic [ref=f33e2945]:
+                - strong [ref=f33e2946]: 태그 하나로, 기록은 더 멀리
+                - paragraph [ref=f33e2947]: 오늘의 경험을 기록하고 포인트 적립
+            - link [ref=f33e2948] [cursor=pointer]:
+              - /url: https://mkt.naver.com/p1/atrb?channel_id=naver_pcsearchmktbanner&campaign_id=2609-shopping-002&target=https%3A%2F%2Fshopping.naver.com%2Ffesta%2Fgift%2F6a4f0fb8e73d32500f261a71%3FlayerId%3DL_260811143826330%26dtm_source%3Dnaver_pcsearchmktbanner%26dtm_medium%3Dmktatrb_etc%26dtm_campaign%3D2609-shopping-002
+              - generic [ref=f33e2950]:
+                - strong [ref=f33e2951]: 추석+세일
+                - paragraph [ref=f33e2952]: 선물핫딜부터 선착순 쿠폰까지!
+            - link [ref=f33e2953] [cursor=pointer]:
+              - /url: https://mkt.naver.com/naverhyundaicard3?eventCode=NAVHJ&dtm_source=naver_pcsearchmktbanner&dtm_medium=display&dtm_campaign=hyundaicard3mkt
+              - generic [ref=f33e2955]:
+                - strong [ref=f33e2956]: 적립적인 멤버십 전용카드
+                - paragraph [ref=f33e2957]: 네이버 현대카드 Ed.3
+            - link [ref=f33e2958] [cursor=pointer]:
+              - /url: https://mkt.naver.com/p1/atrb?channel_id=naver_pcsearchmktbanner&campaign_id=2607-naverAI-001&target=https%3A%2F%2Fmkt.naver.com%2Faitab%3Fdtm_source%3Dnaver_pcsearchmktbanner%26dtm_medium%3Dmktatrb_etc%26dtm_campaign%3D2607-naverAI-001
+              - generic [ref=f33e2960]:
+                - strong [ref=f33e2961]: 끝까지 끝내주는 AI, 네이버 AI탭
+                - paragraph [ref=f33e2962]: 검색이 대화가 되다
+    - generic [ref=f33e2963]:
+      - link "맨위로" [ref=f33e2965] [cursor=pointer]:
+        - /url: "#"
+      - generic [ref=f33e2968]:
+        - link "전체서비스 새 창 열림" [ref=f33e2970] [cursor=pointer]:
+          - /url: https://www.naver.com/more.html
+          - text: 전체서비스
+          - generic [ref=f33e2971]: 새 창 열림
+        - link "이용약관 새 창 열림" [ref=f33e2973] [cursor=pointer]:
+          - /url: https://policy.naver.com/policy/service.html
+          - text: 이용약관
+          - generic [ref=f33e2974]: 새 창 열림
+        - link "개인정보처리방침 새 창 열림" [ref=f33e2976] [cursor=pointer]:
+          - /url: https://policy.naver.com/policy/privacy.html
+          - strong [ref=f33e2977]: 개인정보처리방침
+          - generic [ref=f33e2978]: 새 창 열림
+        - link "검색 고객센터 새 창 열림" [ref=f33e2980] [cursor=pointer]:
+          - /url: https://help.naver.com/alias/search/integration/main.naver
+          - text: 검색 고객센터
+          - generic [ref=f33e2981]: 새 창 열림
+        - link "© NAVER Corp. 새 창 열림" [ref=f33e2983] [cursor=pointer]:
+          - /url: https://www.navercorp.com/
+          - text: © NAVER Corp.
+          - generic [ref=f33e2984]: 새 창 열림

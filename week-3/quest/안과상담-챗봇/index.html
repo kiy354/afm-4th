@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>눈이 선생님 · AI 안과 상담</title>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <!-- ⚠️ 모든 CDN 버전 고정. Babel 은 반드시 7.x (8.x 는 인라인 text/babel 미지원) -->
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone@7.25.9/babel.min.js"></script>
+  <style>
+    /* Tailwind 유틸리티로 표현 불가한 것만 커스텀 CSS 로 처리 */
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+    @keyframes blink  { 0%, 80%, 100% { opacity: .25; transform: translateY(0); } 40% { opacity: 1; transform: translateY(-3px); } }
+    @keyframes halo   { 0%, 100% { transform: scale(1); opacity: .5; } 50% { transform: scale(1.14); opacity: .8; } }
+    .anim-up   { animation: fadeUp .3s cubic-bezier(.2,.8,.3,1) both; }
+    .anim-dot  { animation: blink 1.2s infinite; }
+    .anim-halo { animation: halo 5s ease-in-out infinite; }
+    .caret::after { content: '▍'; margin-left: 1px; opacity: .5; }
+    /* 스크롤바 정돈 */
+    .scroll-soft::-webkit-scrollbar { width: 8px; }
+    .scroll-soft::-webkit-scrollbar-thumb { background: rgba(100,116,139,.28); border-radius: 9999px; }
+    .scroll-soft::-webkit-scrollbar-track { background: transparent; }
+  </style>
+</head>
+<body class="bg-slate-100">
+  <div id="root"></div>
+
+  <script type="text/babel">
+    // ========================================
+    // React Hooks
+    // ========================================
+    const { useState, useEffect, useRef, useCallback, useMemo } = React;
+
+    // ========================================
+    // ⚙️ Config & Constants
+    // ========================================
+
+    // OpenAI 엔드포인트 (브라우저에서 직접 호출 — CORS 허용됨)
+    const OPENAI_URL = 'https://api.openai.com/v1/chat/completions';
+
+    const STORAGE = { key: 'eyecare.apiKey', model: 'eyecare.model', topic: 'eyecare.topic', chat: 'eyecare.messages' };
+
+    // 같은 브라우저에서 week-3/counseling 실습을 먼저 했다면 그때 저장한 키를 물려받는다.
+    const LEGACY_KEY = 'counsel.apiKey';
+
+    const MODELS = [
+      { id: 'gpt-4o-mini',  label: 'gpt-4o-mini · 빠르고 저렴' },
+      { id: 'gpt-4o',       label: 'gpt-4o · 가장 섬세함' },
+      { id: 'gpt-4.1-mini', label: 'gpt-4.1-mini · 균형형' },
+    ];
+
+    // ========================================
+    // 🧠 페르소나 — 부드럽고 자상한 안과 상담 도우미
+    // ========================================
+
+    const BASE_PROMPT = [
+      '당신은 한국어로 대화하는 안과 상담 도우미 "눈이 선생님"입니다.',
+      '성격은 부드럽고 자상합니다. 서두르지 않고, 상대의 불편함을 먼저 살피는 다정한 말투를 씁니다.',
+      '',
+      '말투 원칙:',
+      '- 항상 따뜻한 존댓말을 씁니다. "~하시겠어요?", "~해 보셨을까요?" 처럼 부드럽게 권합니다.',
+      '- 먼저 한 문장으로 불편함에 공감한 뒤 설명을 시작합니다.',
+      '- 한 번에 3~6문장으로 간결하게 답합니다. 항목이 여럿이면 짧은 목록으로 정리합니다.',
+      '- 의학 용어는 쉬운 말로 풀어 주고, 겁을 주는 표현("실명할 수도", "큰일 납니다")은 쓰지 않습니다.',
+      '- 답변 끝에는 다음 단계를 돕는 질문 하나 또는 짧은 격려 한 문장을 덧붙입니다.',
+      '',
+      '상담 원칙:',
+      '- 당신은 의사가 아닙니다. 확정 진단, 처방, 특정 약 이름 추천, 용량 안내는 하지 않습니다.',
+      '- 대신 "이런 가능성을 함께 살펴볼 수 있어요" 처럼 일반적인 정보를 안내하고, 정확한 확인은 안과 진료를 권합니다.',
+      '- 증상을 파악할 때는 한 번에 하나씩만 묻습니다. (언제부터 / 한쪽인지 양쪽인지 / 통증 유무 /',
+      '  시력 변화 / 눈곱·충혈 / 콘택트렌즈 착용 여부 / 기저질환·복용약)',
+      '- 확실하지 않은 것은 솔직하게 모른다고 말합니다. 추측을 사실처럼 말하지 않습니다.',
+      '- 눈과 무관한 주제를 물으면 부드럽게 사양하고, 눈 건강 이야기로 자연스럽게 돌아옵니다.',
+      '',
+      '응급 신호(하나라도 해당되면 설명보다 먼저, 침착하게 즉시 안과 응급실 방문을 안내합니다):',
+      '- 갑작스러운 시력 저하나 시야가 커튼처럼 가려지는 느낌',
+      '- 심한 눈 통증과 두통, 구역질이 함께 오는 경우',
+      '- 눈에 화학물질이 들어갔거나 찔리는 외상을 입은 경우 (화학물질은 즉시 흐르는 물로 15분 이상 세척)',
+      '- 번쩍이는 빛과 날파리 같은 부유물이 갑자기 많아진 경우',
+      '- 눈 주위가 심하게 붓고 붉어지며 열이 나는 경우',
+      '',
+      '모든 판단의 최종 책임은 안과 전문의에게 있다는 점을 필요할 때 자연스럽게 밝힙니다.',
+    ].join('\n');
+
+    // 상담 주제 — 선택에 따라 시스템 프롬프트가 덧붙는다
+    const TOPICS = {
+      symptom: {
+        label: '증상 살펴보기',
+        emoji: '👁️',
+        desc: '불편한 곳을 하나씩 여쭤볼게요',
+        prompt: '이번 대화는 증상 문진에 집중합니다. 공감한 뒤 한 번에 하나씩 질문해 증상을 좁혀 가고, 충분히 들은 다음에야 가능한 원인을 부드럽게 설명합니다. 응급 신호가 보이면 설명보다 먼저 안내합니다.',
+      },
+      lens: {
+        label: '렌즈 · 안경',
+        emoji: '🕶️',
+        desc: '착용 습관과 관리법을 함께 봐요',
+        prompt: '이번 대화는 콘택트렌즈와 안경 사용을 돕습니다. 착용 시간, 세척·보관 습관, 도수와 난시, 드림렌즈·다초점 등을 일반 정보 수준에서 안내합니다. 렌즈 착용 중의 통증·충혈은 각막 손상 가능성이 있으니 착용을 멈추고 안과에 가시도록 권합니다.',
+      },
+      surgery: {
+        label: '수술 · 검사',
+        emoji: '🔬',
+        desc: '무엇을 준비하면 좋을지 알려드려요',
+        prompt: '이번 대화는 안과 수술과 검사에 대한 일반 정보를 안내합니다. 라식·라섹·스마일, 백내장, 노안 교정, 안압·시야·안저 검사의 과정과 회복 기간, 진료 때 여쭤보면 좋을 질문을 정리해 드립니다. 특정 병원이나 비용을 단정해 추천하지 않고, 적합 여부는 정밀 검사로 결정된다고 안내합니다.',
+      },
+      care: {
+        label: '생활 눈관리',
+        emoji: '🌿',
+        desc: '오늘부터 할 수 있는 습관이에요',
+        prompt: '이번 대화는 일상 눈 관리에 집중합니다. 안구건조, 디지털 눈 피로, 20-20-20 규칙, 온찜질, 습도와 조명, 자외선 차단, 수면과 영양처럼 오늘 바로 해 볼 수 있는 습관을 한두 가지씩 부드럽게 제안합니다.',
+      },
+    };
+
+    // 대화 시작을 돕는 예시 문장
+    const STARTERS = [
+      '눈이 뻑뻑하고 모래알이 굴러가는 느낌이에요',
+      '모니터를 오래 보면 눈이 시리고 두통이 와요',
+      '눈앞에 날파리 같은 게 떠다녀요',
+      '라식이랑 라섹은 뭐가 다른가요?',
+    ];
+
+    // 응급 신호 키워드 (감지 시 안내 배너 노출)
+    const URGENT_WORDS = [
+      '안 보여', '안보여', '시력이 갑자기', '갑자기 안', '시야가 가려', '커튼',
+      '눈이 너무 아프', '눈 통증', '심한 통증', '찔렸', '찔림', '박혔', '외상', '부딪',
+      '화학', '락스', '세제', '약품이 들어', '번쩍', '섬광', '날파리가 갑자기',
+    ];
+    const hasUrgentSignal = (text) => URGENT_WORDS.some((w) => text.includes(w));
+
+    const EMERGENCY_CONTACTS = [
+      { name: '응급의료 상담', tel: '119', note: '24시간 · 이송 문의' },
+      { name: '응급의료정보센터', tel: '1339', note: '가까운 응급실 안내' },
+    ];
+
+    // ========================================
+    // 🛠️ Utils & Storage
+    // ========================================
+
+    const load = (key, fallback) => {
+      try {
+        const raw = localStorage.getItem(key);
+        return raw === null ? fallback : JSON.parse(raw);
+      } catch (e) { return fallback; }
+    };
+
+    const save = (key, value) => {
+      try { localStorage.setItem(key, JSON.stringify(value)); } catch (e) { /* 저장 불가 환경은 무시 */ }
+    };
+
+    const uid = () => Math.random().toString(36).slice(2) + Date.now().toString(36);
+
+    const timeLabel = (ts) =>
+      new Date(ts).toLocaleTimeString('ko-KR', { hour: '2-digit', minute: '2-digit' });
+
+    // 진료 때 보여줄 수 있도록 대화를 평문 메모로 변환
+    const toClinicNote = (messages) => {
+      const head = `[눈이 선생님 상담 메모] ${new Date().toLocaleString('ko-KR')}\n` +
+                   '※ AI 상담 기록이며 진단이 아닙니다.\n';
+      const body = messages
+        .filter((m) => m.content.trim())
+        .map((m) => `${m.role === 'user' ? '● 나' : '○ 눈이'}: ${m.content.trim()}`)
+        .join('\n\n');
+      return `${head}\n${body}\n`;
+    };
+
+    // ========================================
+    // 🎨 Design System Components
+    // ========================================
+
+    function Button({ variant = 'primary', size = 'md', disabled = false, onClick, type = 'button', className = '', children, ...rest }) {
+      const base = 'inline-flex items-center justify-center gap-1.5 rounded-xl font-semibold transition ' +
+                   'focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-sky-500 ' +
+                   'disabled:opacity-40 disabled:cursor-not-allowed';
+      const variants = {
+        primary:   'bg-sky-600 text-white shadow-sm hover:bg-sky-700 active:bg-sky-800',
+        secondary: 'bg-white text-slate-700 border border-slate-200 shadow-sm hover:bg-slate-50',
+        danger:    'bg-white text-rose-600 border border-rose-200 hover:bg-rose-50',
+        ghost:     'bg-transparent text-slate-600 hover:bg-slate-200/70',
+      };
+      const sizes = { sm: 'px-2.5 py-1.5 text-xs', md: 'px-4 py-2 text-sm', lg: 'px-5 py-3 text-base' };
+      return (
+        <button type={type} onClick={onClick} disabled={disabled}
+          className={`${base} ${variants[variant]} ${sizes[size]} ${className}`} {...rest}>
+          {children}
+        </button>
+      );
+    }
+
+    function Input({ type = 'text', label, value, onChange, placeholder, error, disabled = false, className = '', ...rest }) {
+      const id = useMemo(uid, []);
+      return (
+        <div className={className}>
+          {label && <label htmlFor={id} className="block mb-1.5 text-sm font-medium text-slate-700">{label}</label>}
+          <input
+            id={id} type={type} value={value} onChange={onChange} placeholder={placeholder} disabled={disabled}
+            aria-invalid={!!error}
+            className={`w-full rounded-xl border px-3 py-2 text-sm text-slate-800 placeholder-slate-400 transition
+              focus:outline-none focus:ring-2 disabled:bg-slate-100
+              ${error ? 'border-rose-300 focus:ring-rose-300' : 'border-slate-200 focus:ring-sky-400'}`}
+            {...rest} />
+          {error && <p className="mt-1 text-xs text-rose-600">{error}</p>}
+        </div>
+      );
+    }
+
+    function Select({ label, value, onChange, options, className = '' }) {
+      const id = useMemo(uid, []);
+      return (
+        <div className={className}>
+          {label && <label htmlFor={id} className="block mb-1.5 text-sm font-medium text-slate-700">{label}</label>}
+          <select id={id} value={value} onChange={onChange}
+            className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-800
+                       focus:outline-none focus:ring-2 focus:ring-sky-400">
+            {options.map((o) => <option key={o.id} value={o.id}>{o.label}</option>)}
+          </select>
+        </div>
+      );
+    }
+
+    function Modal({ isOpen, onClose, title, size = 'md', children }) {
+      useEffect(() => {
+        if (!isOpen) return;
+        const onKey = (e) => { if (e.key === 'Escape') onClose(); };
+        window.addEventListener('keydown', onKey);
+        document.body.style.overflow = 'hidden';
+        return () => { window.removeEventListener('keydown', onKey); document.body.style.overflow = ''; };
+      }, [isOpen, onClose]);
+
+      if (!isOpen) return null;
+      const sizes = { sm: 'max-w-sm', md: 'max-w-md', lg: 'max-w-2xl' };
+
+      return (
+        <div className="fixed inset-0 z-50 flex items-end justify-center p-0 sm:items-center sm:p-4">
+          <div className="absolute inset-0 bg-slate-900/40 backdrop-blur-sm" onClick={onClose} aria-hidden="true" />
+          <div role="dialog" aria-modal="true" aria-label={title}
+            className={`anim-up relative w-full ${sizes[size]} rounded-t-3xl bg-white p-5 shadow-xl sm:rounded-2xl`}>
+            <div className="mb-4 flex items-center justify-between">
+              <h2 className="text-base font-bold text-slate-900">{title}</h2>
+              <Button variant="ghost" size="sm" onClick={onClose} aria-label="닫기">✕</Button>
+            </div>
+            {children}
+          </div>
+        </div>
+      );
+    }
+
+    // ========================================
+    // 📡 OpenAI API Client
+    // ========================================
+
+    /**
+     * Chat Completions 스트리밍 호출.
+     * onDelta(text) 로 토큰이 도착할 때마다 콜백하고, 최종 전체 문자열을 반환한다.
+     */
+    async function streamChat({ apiKey, model, messages, signal, onDelta }) {
+      const res = await fetch(OPENAI_URL, {
+        method: 'POST',
+        signal,
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${apiKey}`,
+        },
+        body: JSON.stringify({
+          model,
+          messages,
+          stream: true,
+          temperature: 0.7,   // 자상하되 정보는 흔들리지 않도록 약간 낮게
+          max_tokens: 700,
+        }),
+      });
+
+      if (!res.ok) {
+        let detail = '';
+        try {
+          const err = await res.json();
+          detail = (err.error && err.error.message) || '';
+        } catch (e) { /* 본문 파싱 실패 시 상태 코드만 사용 */ }
+        if (res.status === 401) throw new Error('API 키가 올바르지 않습니다. 설정에서 키를 확인해 주세요.');
+        if (res.status === 429) throw new Error('요청이 너무 많거나 크레딧이 부족합니다. 잠시 후 다시 시도해 주세요.');
+        throw new Error(detail || `요청에 실패했습니다 (HTTP ${res.status})`);
+      }
+
+      const reader = res.body.getReader();
+      const decoder = new TextDecoder();
+      let buffer = '';
+      let full = '';
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        buffer += decoder.decode(value, { stream: true });
+
+        const lines = buffer.split('\n');
+        buffer = lines.pop(); // 마지막 조각은 다음 청크와 이어 붙인다
+
+        for (const line of lines) {
+          const trimmed = line.trim();
+          if (!trimmed.startsWith('data:')) continue;
+          const payload = trimmed.slice(5).trim();
+          if (payload === '[DONE]') continue;
+          try {
+            const json = JSON.parse(payload);
+            const delta = json.choices && json.choices[0] && json.choices[0].delta;
+            if (delta && delta.content) {
+              full += delta.content;
+              onDelta(delta.content);
+            }
+          } catch (e) { /* 부분 JSON 조각은 건너뛴다 */ }
+        }
+      }
+      return full;
+    }
+
+    // ========================================
+    // 🧩 Common / Layout Components
+    // ========================================
+
+    function Header({ topic, onOpenSettings, onReset, onCopyNote, canReset }) {
+      return (
+        <header className="sticky top-0 z-20 border-b border-slate-200/80 bg-white/80 backdrop-blur">
+          <div className="mx-auto flex max-w-3xl items-center gap-2 px-4 py-3">
+            <div className="relative grid h-10 w-10 shrink-0 place-items-center">
+              <span className="anim-halo absolute inset-0 rounded-full bg-sky-300/50" />
+              <span className="relative text-lg" aria-hidden="true">👁️</span>
+            </div>
+            <div className="min-w-0 flex-1">
+              <h1 className="truncate text-base font-bold text-slate-900">눈이 선생님</h1>
+              <p className="truncate text-xs text-slate-500">{TOPICS[topic].emoji} {TOPICS[topic].label} 모드</p>
+            </div>
+            <Button variant="ghost" size="sm" onClick={onCopyNote} disabled={!canReset} aria-label="진료 메모 복사">
+              📋 <span className="hidden sm:inline">메모 복사</span>
+            </Button>
+            <Button variant="ghost" size="sm" onClick={onReset} disabled={!canReset} aria-label="상담 새로 시작">
+              ↺ <span className="hidden sm:inline">새 상담</span>
+            </Button>
+            <Button variant="secondary" size="sm" onClick={onOpenSettings} aria-label="설정 열기">
+              ⚙ <span className="hidden sm:inline">설정</span>
+            </Button>
+          </div>
+        </header>
+      );
+    }
+
+    function TopicSwitcher({ topic, onChange }) {
+      return (
+        <div className="flex gap-2 overflow-x-auto px-4 py-3" role="radiogroup" aria-label="상담 주제 선택">
+          {Object.entries(TOPICS).map(([key, t]) => {
+            const active = key === topic;
+            return (
+              <button key={key} role="radio" aria-checked={active} onClick={() => onChange(key)}
+                className={`shrink-0 rounded-xl border px-3 py-2 text-left transition
+                  focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500
+                  ${active ? 'border-sky-500 bg-sky-50 shadow-sm' : 'border-slate-200 bg-white hover:bg-slate-50'}`}>
+                <span className={`block text-sm font-semibold ${active ? 'text-sky-800' : 'text-slate-700'}`}>
+                  {t.emoji} {t.label}
+                </span>
+                <span className="block text-[11px] text-slate-500">{t.desc}</span>
+              </button>
+            );
+          })}
+        </div>
+      );
+    }
+
+    function UrgentBanner({ onDismiss }) {
+      return (
+        <div role="alert" className="anim-up mx-4 mb-3 rounded-2xl border border-rose-200 bg-rose-50 p-4">
+          <div className="flex items-start gap-3">
+            <span className="text-lg" aria-hidden="true">🚨</span>
+            <div className="min-w-0 flex-1">
+              <p className="text-sm font-bold text-rose-900">놀라셨겠어요. 이런 증상은 오늘 바로 진료를 받으시는 게 좋아요.</p>
+              <p className="mt-1 text-xs leading-relaxed text-rose-800">
+                갑작스러운 시력 저하, 심한 눈 통증, 외상이나 화학물질 노출, 갑자기 늘어난 번쩍임은
+                시간을 다투는 경우가 있습니다. 가까운 안과나 응급실로 가 주세요.
+                화학물질이 들어갔다면 가는 동안에도 흐르는 물로 15분 이상 씻어 주세요.
+              </p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {EMERGENCY_CONTACTS.map((c) => (
+                  <a key={c.tel} href={`tel:${c.tel}`}
+                    className="rounded-xl border border-rose-200 bg-white px-3 py-2 text-xs shadow-sm transition hover:bg-rose-100">
+                    <span className="block font-bold text-rose-700">{c.tel}</span>
+                    <span className="block text-[11px] text-slate-500">{c.name} · {c.note}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+            <Button variant="ghost" size="sm" onClick={onDismiss} aria-label="안내 닫기">✕</Button>
+          </div>
+        </div>
+      );
+    }
+
+    function TypingDots() {
+      return (
+        <span className="inline-flex items-center gap-1 py-1" aria-label="답변 작성 중">
+          {[0, 1, 2].map((i) => (
+            <span key={i} className="anim-dot h-1.5 w-1.5 rounded-full bg-slate-400"
+              style={{ animationDelay: `${i * 0.15}s` }} />
+          ))}
+        </span>
+      );
+    }
+
+    function MessageBubble({ message, streaming }) {
+      const isUser = message.role === 'user';
+      return (
+        <div className={`anim-up flex gap-2.5 ${isUser ? 'justify-end' : 'justify-start'}`}>
+          {!isUser && (
+            <div className="mt-1 grid h-8 w-8 shrink-0 place-items-center rounded-full bg-sky-100 text-sm" aria-hidden="true">👁️</div>
+          )}
+          <div className={`flex max-w-[82%] flex-col sm:max-w-[70%] ${isUser ? 'items-end' : 'items-start'}`}>
+            <div className={`whitespace-pre-wrap break-words rounded-2xl px-4 py-2.5 text-sm leading-relaxed shadow-sm
+              ${isUser
+                ? 'rounded-br-md bg-sky-600 text-white'
+                : 'rounded-bl-md bg-white text-slate-800 ring-1 ring-slate-900/5'}`}>
+              {message.content
+                ? <span className={streaming ? 'caret' : ''}>{message.content}</span>
+                : <TypingDots />}
+            </div>
+            <span className="mt-1 px-1 text-[11px] text-slate-400">{timeLabel(message.ts)}</span>
+          </div>
+        </div>
+      );
+    }
+
+    function EmptyState({ onPick }) {
+      return (
+        <div className="anim-up flex flex-col items-center px-6 py-10 text-center">
+          <div className="relative mb-4 grid h-20 w-20 place-items-center">
+            <span className="anim-halo absolute inset-0 rounded-full bg-sky-200/60" />
+            <span className="relative text-3xl" aria-hidden="true">👁️</span>
+          </div>
+          <h2 className="text-lg font-bold text-slate-900">눈이 요즘 어떠신가요?</h2>
+          <p className="mt-2 max-w-md text-sm leading-relaxed text-slate-500">
+            천천히 말씀해 주세요. 하나씩 여쭤보면서 함께 살펴볼게요.
+            진단은 안과 선생님의 몫이지만, 무엇을 준비해 가면 좋을지는 제가 도와드릴 수 있어요.
+          </p>
+          <div className="mt-6 grid w-full max-w-md gap-2">
+            {STARTERS.map((s) => (
+              <button key={s} onClick={() => onPick(s)}
+                className="rounded-xl border border-slate-200 bg-white px-4 py-3 text-left text-sm text-slate-700 shadow-sm
+                           transition hover:border-sky-300 hover:bg-sky-50
+                           focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500">
+                💬 {s}
+              </button>
+            ))}
+          </div>
+        </div>
+      );
+    }
+
+    function Composer({ value, onChange, onSend, onStop, busy, disabled }) {
+      const ref = useRef(null);
+
+      // 입력 길이에 맞춰 textarea 높이 자동 조절
+      useEffect(() => {
+        const el = ref.current;
+        if (!el) return;
+        el.style.height = 'auto';
+        el.style.height = Math.min(el.scrollHeight, 160) + 'px';
+      }, [value]);
+
+      const onKeyDown = (e) => {
+        // 한글 조합 중 Enter 는 무시 (IME 확정용 Enter)
+        if (e.key === 'Enter' && !e.shiftKey && !e.nativeEvent.isComposing) {
+          e.preventDefault();
+          onSend();
+        }
+      };
+
+      return (
+        <div className="sticky bottom-0 border-t border-slate-200/80 bg-white/90 px-4 py-3 backdrop-blur">
+          <div className="mx-auto flex max-w-3xl items-end gap-2">
+            <textarea
+              ref={ref} rows={1} value={value} disabled={disabled}
+              onChange={(e) => onChange(e.target.value)} onKeyDown={onKeyDown}
+              placeholder={disabled ? 'API 키를 먼저 설정해 주세요' : '눈의 불편한 점을 편하게 적어 주세요 (Enter 전송 · Shift+Enter 줄바꿈)'}
+              aria-label="메시지 입력"
+              className="max-h-40 min-h-[44px] flex-1 resize-none rounded-2xl border border-slate-200 bg-white px-4 py-3
+                         text-sm leading-relaxed text-slate-800 placeholder-slate-400 shadow-sm
+                         focus:outline-none focus:ring-2 focus:ring-sky-400 disabled:bg-slate-100" />
+            {busy
+              ? <Button variant="danger" size="lg" onClick={onStop} className="h-[44px]">■ 중지</Button>
+              : <Button size="lg" onClick={onSend} disabled={disabled || !value.trim()} className="h-[44px]">보내기</Button>}
+          </div>
+          <p className="mx-auto mt-2 max-w-3xl text-center text-[11px] leading-relaxed text-slate-400">
+            이 상담은 안과 진료를 대체하지 않으며 진단·처방을 하지 않습니다.
+            급한 증상은 <b className="font-semibold text-slate-500">119</b> 또는 가까운 안과 응급실로 연락해 주세요.
+          </p>
+        </div>
+      );
+    }
+
+    function SettingsModal({ isOpen, onClose, apiKey, model, onSave, onClearAll }) {
+      const [draftKey, setDraftKey] = useState(apiKey);
+      const [draftModel, setDraftModel] = useState(model);
+      const [error, setError] = useState('');
+
+      // 모달을 열 때마다 현재 값으로 초기화
+      useEffect(() => {
+        if (isOpen) { setDraftKey(apiKey); setDraftModel(model); setError(''); }
+      }, [isOpen, apiKey, model]);
+
+      const submit = () => {
+        const key = draftKey.trim();
+        if (!key.startsWith('sk-')) { setError('OpenAI API 키는 sk- 로 시작합니다.'); return; }
+        onSave({ apiKey: key, model: draftModel });
+        onClose();
+      };
+
+      return (
+        <Modal isOpen={isOpen} onClose={onClose} title="설정">
+          <div className="space-y-4">
+            <Input label="OpenAI API 키" type="password" value={draftKey} error={error}
+              placeholder="sk-..." onChange={(e) => setDraftKey(e.target.value)} />
+            <p className="-mt-2 text-[11px] leading-relaxed text-slate-500">
+              키는 이 브라우저의 localStorage 에만 저장되며, 요청은 브라우저에서 OpenAI 로 직접 전송됩니다.
+              공용 PC 에서는 사용 후 아래 초기화를 눌러 주세요.
+            </p>
+            <Select label="모델" value={draftModel} options={MODELS}
+              onChange={(e) => setDraftModel(e.target.value)} />
+            <div className="flex items-center justify-between gap-2 border-t border-slate-100 pt-4">
+              <Button variant="danger" size="sm" onClick={onClearAll}>상담 · 키 전체 삭제</Button>
+              <div className="flex gap-2">
+                <Button variant="secondary" onClick={onClose}>취소</Button>
+                <Button onClick={submit}>저장</Button>
+              </div>
+            </div>
+          </div>
+        </Modal>
+      );
+    }
+
+    // ========================================
+    // 📄 Page Component — 안과 상담 채팅
+    // ========================================
+
+    function EyeCareChat() {
+      const [apiKey, setApiKey] = useState(() => load(STORAGE.key, load(LEGACY_KEY, '')));
+      const [model, setModel] = useState(() => load(STORAGE.model, MODELS[0].id));
+      const [topic, setTopic] = useState(() => load(STORAGE.topic, 'symptom'));
+      const [messages, setMessages] = useState(() => load(STORAGE.chat, []));
+      const [draft, setDraft] = useState('');
+      const [busy, setBusy] = useState(false);
+      const [error, setError] = useState('');
+      const [urgent, setUrgent] = useState(false);
+      const [toast, setToast] = useState('');
+      const [settingsOpen, setSettingsOpen] = useState(false);
+
+      const abortRef = useRef(null);
+      const bottomRef = useRef(null);
+
+      // 상태 영속화
+      useEffect(() => { save(STORAGE.key, apiKey); }, [apiKey]);
+      useEffect(() => { save(STORAGE.model, model); }, [model]);
+      useEffect(() => { save(STORAGE.topic, topic); }, [topic]);
+      useEffect(() => { save(STORAGE.chat, messages); }, [messages]);
+
+      // 새 메시지가 오면 항상 아래로 스크롤
+      useEffect(() => {
+        if (bottomRef.current) bottomRef.current.scrollIntoView({ behavior: 'smooth', block: 'end' });
+      }, [messages, busy]);
+
+      // 토스트 자동 소멸
+      useEffect(() => {
+        if (!toast) return;
+        const t = setTimeout(() => setToast(''), 2400);
+        return () => clearTimeout(t);
+      }, [toast]);
+
+      // 언마운트 시 진행 중인 요청 정리
+      useEffect(() => () => { if (abortRef.current) abortRef.current.abort(); }, []);
+
+      const systemPrompt = useMemo(
+        () => `${BASE_PROMPT}\n\n${TOPICS[topic].prompt}`,
+        [topic]
+      );
+
+      const stop = useCallback(() => {
+        if (abortRef.current) abortRef.current.abort();
+      }, []);
+
+      const send = useCallback(async (rawText) => {
+        const text = (rawText !== undefined ? rawText : draft).trim();
+        if (!text || busy) return;
+        if (!apiKey.trim()) { setSettingsOpen(true); return; }
+
+        setError('');
+        if (hasUrgentSignal(text)) setUrgent(true);
+
+        const userMsg = { id: uid(), role: 'user', content: text, ts: Date.now() };
+        const botMsg = { id: uid(), role: 'assistant', content: '', ts: Date.now() };
+
+        // 최근 20턴까지만 전송해 토큰 사용을 제한한다
+        const history = [...messages, userMsg].slice(-20)
+          .map((m) => ({ role: m.role, content: m.content }));
+
+        setMessages((prev) => [...prev, userMsg, botMsg]);
+        setDraft('');
+        setBusy(true);
+
+        const controller = new AbortController();
+        abortRef.current = controller;
+
+        try {
+          await streamChat({
+            apiKey: apiKey.trim(),
+            model,
+            signal: controller.signal,
+            messages: [{ role: 'system', content: systemPrompt }, ...history],
+            onDelta: (chunk) => {
+              setMessages((prev) => prev.map((m) =>
+                m.id === botMsg.id ? { ...m, content: m.content + chunk } : m));
+            },
+          });
+        } catch (err) {
+          if (err.name === 'AbortError') {
+            // 사용자가 중지 — 내용이 없는 답변 말풍선은 제거
+            setMessages((prev) => prev.filter((m) => !(m.id === botMsg.id && !m.content)));
+          } else {
+            setError(err.message || '알 수 없는 오류가 발생했습니다.');
+            setMessages((prev) => prev.filter((m) => m.id !== botMsg.id));
+          }
+        } finally {
+          abortRef.current = null;
+          setBusy(false);
+        }
+      }, [draft, busy, apiKey, model, messages, systemPrompt]);
+
+      const resetChat = () => {
+        if (busy) stop();
+        if (messages.length && !window.confirm('지금까지의 상담 내용을 모두 지우고 새로 시작할까요?')) return;
+        setMessages([]);
+        setError('');
+        setUrgent(false);
+      };
+
+      const copyNote = async () => {
+        try {
+          await navigator.clipboard.writeText(toClinicNote(messages));
+          setToast('진료 메모를 복사했어요. 병원에서 보여 주세요.');
+        } catch (e) {
+          setToast('복사에 실패했어요. 대화를 직접 선택해 복사해 주세요.');
+        }
+      };
+
+      const clearAll = () => {
+        if (!window.confirm('저장된 상담 내용과 API 키를 모두 삭제할까요?')) return;
+        if (busy) stop();
+        setMessages([]);
+        setApiKey('');
+        setUrgent(false);
+        setSettingsOpen(false);
+      };
+
+      // 스트리밍 중인 말풍선(항상 마지막 assistant 메시지)에 커서 표시
+      const streamingId = busy && messages.length ? messages[messages.length - 1].id : null;
+
+      return (
+        <div className="flex min-h-screen flex-col bg-gradient-to-b from-sky-50 via-slate-50 to-slate-100">
+          <Header topic={topic} canReset={messages.length > 0}
+            onReset={resetChat} onCopyNote={copyNote} onOpenSettings={() => setSettingsOpen(true)} />
+
+          <div className="mx-auto w-full max-w-3xl">
+            <TopicSwitcher topic={topic} onChange={setTopic} />
+            {urgent && <UrgentBanner onDismiss={() => setUrgent(false)} />}
+          </div>
+
+          <main className="scroll-soft mx-auto w-full max-w-3xl flex-1 space-y-4 overflow-y-auto px-4 pb-6">
+            {messages.length === 0
+              ? <EmptyState onPick={(s) => send(s)} />
+              : messages.map((m) => (
+                  <MessageBubble key={m.id} message={m} streaming={m.id === streamingId} />
+                ))}
+
+            {error && (
+              <div role="alert" className="anim-up flex items-start gap-2 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
+                <span aria-hidden="true">⚠️</span>
+                <div className="flex-1">
+                  <p>{error}</p>
+                  <button onClick={() => setSettingsOpen(true)} className="mt-1 text-xs font-semibold underline">설정 열기</button>
+                </div>
+              </div>
+            )}
+
+            <div ref={bottomRef} />
+          </main>
+
+          <Composer value={draft} onChange={setDraft} onSend={() => send()} onStop={stop}
+            busy={busy} disabled={!apiKey.trim()} />
+
+          {toast && (
+            <div role="status"
+              className="anim-up pointer-events-none fixed bottom-28 left-1/2 z-40 -translate-x-1/2 rounded-full
+                         bg-slate-900/90 px-4 py-2 text-xs font-medium text-white shadow-lg">
+              {toast}
+            </div>
+          )}
+
+          <SettingsModal isOpen={settingsOpen} onClose={() => setSettingsOpen(false)}
+            apiKey={apiKey} model={model} onClearAll={clearAll}
+            onSave={({ apiKey: k, model: m }) => { setApiKey(k); setModel(m); setError(''); }} />
+        </div>
+      );
+    }
+
+    // ========================================
+    // 🚀 App Component
+    // ========================================
+
+    function App() {
+      return <EyeCareChat />;
+    }
+
+    // ========================================
+    // Rendering
+    // ========================================
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>

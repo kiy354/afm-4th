@@ -1,0 +1,612 @@
+- generic [active] [ref=f29e1]:
+  - generic [ref=f29e3]:
+    - generic [ref=f29e5]:
+      - button [ref=f29e6] [cursor=pointer]:
+        - img "이전으로" [ref=f29e7]
+      - generic [ref=f29e11]:
+        - searchbox "어떤 상품을 찾고 계세요?" [ref=f29e15]: 원피스
+        - button "삭제하기" [ref=f29e30] [cursor=pointer]
+    - generic [ref=f29e16]:
+      - generic [ref=f29e35]:
+        - button "안전거래 상품" [ref=f29e36] [cursor=pointer]
+        - button "N+스토어 상품" [ref=f29e38] [cursor=pointer]
+      - generic [ref=f29e40]:
+        - generic [ref=f29e42]:
+          - button "필터" [ref=f29e43] [cursor=pointer]
+          - button "네이버 구매인증" [ref=f29e47] [cursor=pointer]
+          - button "배송 방법" [ref=f29e49] [cursor=pointer]
+          - button "지역" [ref=f29e53] [cursor=pointer]
+          - button "가격" [ref=f29e57] [cursor=pointer]
+          - button "카테고리" [ref=f29e61] [cursor=pointer]
+          - button "상품 상태" [ref=f29e65] [cursor=pointer]
+          - button "판매완료 포함" [ref=f29e69] [cursor=pointer]
+        - button "다음 필터" [ref=f29e71] [cursor=pointer]
+      - generic [ref=f29e74]:
+        - generic [ref=f29e75]:
+          - button "구매자 보호 수수료 2.2% 별도 · 안전거래 등 안내" [ref=f29e77] [cursor=pointer]
+          - button "관련도순" [ref=f29e80] [cursor=pointer]
+        - generic [ref=f29e84]:
+          - list [ref=f29e87]:
+            - listitem [ref=f29e88]:
+              - generic [ref=f29e89]:
+                - generic [ref=f29e90]:
+                  - img "상품이미지" [ref=f29e92]
+                  - button "찜" [ref=f29e93] [cursor=pointer]
+                  - link "상세화면으로 이동" [ref=f29e96] [cursor=pointer]:
+                    - /url: /market-products/01M27EEV5A5CQF2T60ZRWEXTDN?q=%EC%9B%90%ED%94%BC%EC%8A%A4&tc=nflea_search
+                - generic [ref=f29e98]:
+                  - link "상세화면으로 이동 럭키마르쉐 데님 원피스 60,000원" [ref=f29e99] [cursor=pointer]:
+                    - /url: /market-products/01M27EEV5A5CQF2T60ZRWEXTDN?q=%EC%9B%90%ED%94%BC%EC%8A%A4&tc=nflea_search
+                    - generic [ref=f29e100]: 상세화면으로 이동
+                    - generic [ref=f29e101]:
+                      - text: 럭키마르쉐 데님
+                      - strong [ref=f29e102]: 원피스
+                    - generic [ref=f29e103]:
+                      - strong [ref=f29e104]: 60,000
+                      - text: 원
+                  - generic [ref=f29e105]:
+                    - generic [ref=f29e106]: 무료배송
+                    - generic [ref=f29e107]:
+                      - generic [ref=f29e108]: 날짜
+                      - text: 3시간 전
+            - listitem [ref=f29e109]:
+              - generic [ref=f29e110]:
+                - generic [ref=f29e111]:
+                  - img "상품이미지" [ref=f29e113]
+                  - button "찜" [ref=f29e114] [cursor=pointer]
+                  - link "상세화면으로 이동" [ref=f29e117] [cursor=pointer]:
+                    - /url: /market-products/01M26PE3PJ1G7SYX86R5Z61RDX?q=%EC%9B%90%ED%94%BC%EC%8A%A4&tc=nflea_search
+                - generic [ref=f29e119]:
+                  - link "상세화면으로 이동 55-66 새옷상태 가을 린넨100 원피스 23,000원" [ref=f29e120] [cursor=pointer]:
+                    - /url: /market-products/01M26PE3PJ1G7SYX86R5Z61RDX?q=%EC%9B%90%ED%94%BC%EC%8A%A4&tc=nflea_search
+                    - generic [ref=f29e121]: 상세화면으로 이동
+                    - generic [ref=f29e122]:
+                      - text: 55-66 새옷상태 가을 린넨100
+                      - strong [ref=f29e123]: 원피스
+                    - generic [ref=f29e124]:
+                      - strong [ref=f29e125]: 23,000
+                      - text: 원
+                  - generic [ref=f29e126]:
+                    - generic [ref=f29e127]: 배송비 3,000원
+                    - generic [ref=f29e128]:
+                      - generic [ref=f29e129]: 날짜
+                      - text: 10시간 전
+            - listitem [ref=f29e130]:
+              - generic [ref=f29e131]:
+                - generic [ref=f29e132]:
+                  - img "상품이미지" [ref=f29e134]
+                  - button "찜" [ref=f29e135] [cursor=pointer]
+                  - link "상세화면으로 이동" [ref=f29e138] [cursor=pointer]:
+                    - /url: /market-products/01M26P7NVCHXHRMJ19RKQ0H3G9?q=%EC%9B%90%ED%94%BC%EC%8A%A4&tc=nflea_search
+                - generic [ref=f29e140]:
+                  - link "상세화면으로 이동 66 새제품 초가을까지 바스락 여성스런 원피스 20,000원" [ref=f29e141] [cursor=pointer]:
+                    - /url: /market-products/01M26P7NVCHXHRMJ19RKQ0H3G9?q=%EC%9B%90%ED%94%BC%EC%8A%A4&tc=nflea_search
+                    - generic [ref=f29e142]: 상세화면으로 이동
+                    - generic [ref=f29e143]:
+                      - text: 66 새제품 초가을까지 바스락 여성스런
+                      - strong [ref=f29e144]: 원피스
+                    - generic [ref=f29e145]:
+                      - strong [ref=f29e146]: 20,000
+                      - text: 원
+                  - generic [ref=f29e147]:
+                    - generic [ref=f29e148]: 배송비 3,000원
+                    - generic [ref=f29e149]:
+                      - generic [ref=f29e150]: 날짜
+                      - text: 10시간 전
+            - listitem [ref=f29e151]:
+              - generic [ref=f29e152]:
+                - generic [ref=f29e153]:
+                  - img "상품이미지" [ref=f29e155]
+                  - button "찜" [ref=f29e156] [cursor=pointer]
+                  - link "상세화면으로 이동" [ref=f29e159] [cursor=pointer]:
+                    - /url: /market-products/01M26NP2PXYAETTXSK0Z5JKC1T?q=%EC%9B%90%ED%94%BC%EC%8A%A4&tc=nflea_search
+                - generic [ref=f29e161]:
+                  - link "상세화면으로 이동 44-66)sj 한섬 따뜻 가을 여성스런 원피스 29,000원" [ref=f29e162] [cursor=pointer]:
+                    - /url: /market-products/01M26NP2PXYAETTXSK0Z5JKC1T?q=%EC%9B%90%ED%94%BC%EC%8A%A4&tc=nflea_search
+                    - generic [ref=f29e163]: 상세화면으로 이동
+                    - generic [ref=f29e164]:
+                      - text: 44-66)sj 한섬 따뜻 가을 여성스런
+                      - strong [ref=f29e165]: 원피스
+                    - generic [ref=f29e166]:
+                      - strong [ref=f29e167]: 29,000
+                      - text: 원
+                  - generic [ref=f29e168]:
+                    - generic [ref=f29e169]: 배송비 3,000원
+                    - generic [ref=f29e170]:
+                      - generic [ref=f29e171]: 날짜
+                      - text: 10시간 전
+            - listitem [ref=f29e172]:
+              - generic [ref=f29e173]:
+                - generic [ref=f29e174]:
+                  - img "상품이미지" [ref=f29e176]
+                  - button "찜" [ref=f29e177] [cursor=pointer]
+                  - link "상세화면으로 이동" [ref=f29e180] [cursor=pointer]:
+                    - /url: /market-products/01M26M6VPHCCQCZA2Z4H2CFE3R?q=%EC%9B%90%ED%94%BC%EC%8A%A4&tc=nflea_search
+                - generic [ref=f29e182]:
+                  - link "상세화면으로 이동 MICHAA 원피스 50,000원" [ref=f29e183] [cursor=pointer]:
+                    - /url: /market-products/01M26M6VPHCCQCZA2Z4H2CFE3R?q=%EC%9B%90%ED%94%BC%EC%8A%A4&tc=nflea_search
+                    - generic [ref=f29e184]: 상세화면으로 이동
+                    - generic [ref=f29e185]:
+                      - text: MICHAA
+                      - strong [ref=f29e186]: 원피스
+                    - generic [ref=f29e187]:
+                      - strong [ref=f29e188]: 50,000
+                      - text: 원
+                  - generic [ref=f29e189]:
+                    - generic [ref=f29e190]: 무료배송
+                    - generic [ref=f29e191]:
+                      - generic [ref=f29e192]: 날짜
+                      - text: 10시간 전
+            - listitem [ref=f29e193]:
+              - generic [ref=f29e194]:
+                - generic [ref=f29e195]:
+                  - img "상품이미지" [ref=f29e197]
+                  - button "찜" [ref=f29e198] [cursor=pointer]
+                  - link "상세화면으로 이동" [ref=f29e201] [cursor=pointer]:
+                    - /url: /market-products/01M25XQW1YMHJP42WMJX15Y8A8?q=%EC%9B%90%ED%94%BC%EC%8A%A4&tc=nflea_search
+                - generic [ref=f29e203]:
+                  - link "상세화면으로 이동 새상품) 플리츠플리즈 9월 원피스 블랙 2사이즈 545,000원" [ref=f29e204] [cursor=pointer]:
+                    - /url: /market-products/01M25XQW1YMHJP42WMJX15Y8A8?q=%EC%9B%90%ED%94%BC%EC%8A%A4&tc=nflea_search
+                    - generic [ref=f29e205]: 상세화면으로 이동
+                    - generic [ref=f29e206]:
+                      - text: 새상품) 플리츠플리즈 9월
+                      - strong [ref=f29e207]: 원피스
+                      - text: 블랙 2사이즈
+                    - generic [ref=f29e208]:
+                      - strong [ref=f29e209]: 545,000
+                      - text: 원
+                  - generic [ref=f29e210]:
+                    - generic [ref=f29e211]: 배송비 3,600원
+                    - generic [ref=f29e212]:
+                      - generic [ref=f29e213]: 날짜
+                      - text: 17시간 전
+          - region "N+스토어 맞춤 상품" [ref=f29e214]:
+            - generic [ref=f29e215]:
+              - heading "N+스토어 맞춤 상품" [level=2] [ref=f29e216]
+              - button "안내" [ref=f29e217] [cursor=pointer]
+            - list [ref=f29e222]:
+              - listitem [ref=f29e223]:
+                - generic [ref=f29e224]:
+                  - generic [ref=f29e225]:
+                    - img "상품이미지" [ref=f29e227]
+                    - link "상세화면으로 이동" [ref=f29e228] [cursor=pointer]:
+                      - /url: https://m.smartstore.naver.com/main/products/13640578445
+                  - generic [ref=f29e230]:
+                    - link "앤처스 N+ 쇼핑 상세화면으로 이동 앤디앤뎁 긴팔 원피스 [M] 734,000원 93,420 원 최대할인가" [ref=f29e231] [cursor=pointer]:
+                      - /url: https://m.smartstore.naver.com/main/products/13640578445
+                      - generic [ref=f29e232]:
+                        - generic [ref=f29e233]: 앤처스
+                        - img "N+ 쇼핑" [ref=f29e234]
+                      - generic [ref=f29e235]: 상세화면으로 이동
+                      - generic [ref=f29e236]: 앤디앤뎁 긴팔 원피스 [M]
+                      - generic [ref=f29e237]:
+                        - generic [ref=f29e238]: 734,000원
+                        - generic [ref=f29e239]:
+                          - generic [ref=f29e240]:
+                            - strong [ref=f29e241]: 93,420
+                            - generic [ref=f29e242]: 원
+                          - generic [ref=f29e243]: 최대할인가
+                    - generic [ref=f29e244]: 무료배송
+              - listitem [ref=f29e246]:
+                - generic [ref=f29e247]:
+                  - generic [ref=f29e248]:
+                    - img "상품이미지" [ref=f29e250]
+                    - link "상세화면으로 이동" [ref=f29e251] [cursor=pointer]:
+                      - /url: https://m.smartstore.naver.com/main/products/13640459689
+                  - generic [ref=f29e253]:
+                    - link "앤처스 N+ 쇼핑 상세화면으로 이동 더일마 민소매 원피스 [ONE SIZE] 277,000원 97,720 원 최대할인가" [ref=f29e254] [cursor=pointer]:
+                      - /url: https://m.smartstore.naver.com/main/products/13640459689
+                      - generic [ref=f29e255]:
+                        - generic [ref=f29e256]: 앤처스
+                        - img "N+ 쇼핑" [ref=f29e257]
+                      - generic [ref=f29e258]: 상세화면으로 이동
+                      - generic [ref=f29e259]: 더일마 민소매 원피스 [ONE SIZE]
+                      - generic [ref=f29e260]:
+                        - generic [ref=f29e261]: 277,000원
+                        - generic [ref=f29e262]:
+                          - generic [ref=f29e263]:
+                            - strong [ref=f29e264]: 97,720
+                            - generic [ref=f29e265]: 원
+                          - generic [ref=f29e266]: 최대할인가
+                    - generic [ref=f29e267]: 무료배송
+              - listitem [ref=f29e269]:
+                - generic [ref=f29e270]:
+                  - generic [ref=f29e271]:
+                    - img "상품이미지" [ref=f29e273]
+                    - link "상세화면으로 이동" [ref=f29e274] [cursor=pointer]:
+                      - /url: https://m.smartstore.naver.com/main/products/13640553718
+                  - generic [ref=f29e276]:
+                    - link "앤처스 N+ 쇼핑 상세화면으로 이동 쁘렝땅 긴팔 원피스 [85-100-155] 1,261,000원 124,100 원 최대할인가" [ref=f29e277] [cursor=pointer]:
+                      - /url: https://m.smartstore.naver.com/main/products/13640553718
+                      - generic [ref=f29e278]:
+                        - generic [ref=f29e279]: 앤처스
+                        - img "N+ 쇼핑" [ref=f29e280]
+                      - generic [ref=f29e281]: 상세화면으로 이동
+                      - generic [ref=f29e282]: 쁘렝땅 긴팔 원피스 [85-100-155]
+                      - generic [ref=f29e283]:
+                        - generic [ref=f29e284]: 1,261,000원
+                        - generic [ref=f29e285]:
+                          - generic [ref=f29e286]:
+                            - strong [ref=f29e287]: 124,100
+                            - generic [ref=f29e288]: 원
+                          - generic [ref=f29e289]: 최대할인가
+                    - generic [ref=f29e290]: 무료배송
+              - listitem [ref=f29e292]:
+                - generic [ref=f29e293]:
+                  - generic [ref=f29e294]:
+                    - img "상품이미지" [ref=f29e296]
+                    - link "상세화면으로 이동" [ref=f29e297] [cursor=pointer]:
+                      - /url: https://m.smartstore.naver.com/main/products/13640508490
+                  - generic [ref=f29e299]:
+                    - link "앤처스 N+ 쇼핑 상세화면으로 이동 더일마 민소매 원피스 [OS SIZE] 277,000원 97,720 원 최대할인가" [ref=f29e300] [cursor=pointer]:
+                      - /url: https://m.smartstore.naver.com/main/products/13640508490
+                      - generic [ref=f29e301]:
+                        - generic [ref=f29e302]: 앤처스
+                        - img "N+ 쇼핑" [ref=f29e303]
+                      - generic [ref=f29e304]: 상세화면으로 이동
+                      - generic [ref=f29e305]: 더일마 민소매 원피스 [OS SIZE]
+                      - generic [ref=f29e306]:
+                        - generic [ref=f29e307]: 277,000원
+                        - generic [ref=f29e308]:
+                          - generic [ref=f29e309]:
+                            - strong [ref=f29e310]: 97,720
+                            - generic [ref=f29e311]: 원
+                          - generic [ref=f29e312]: 최대할인가
+                    - generic [ref=f29e313]: 무료배송
+              - listitem [ref=f29e315]:
+                - generic [ref=f29e316]:
+                  - generic [ref=f29e317]:
+                    - img "상품이미지" [ref=f29e319]
+                    - link "상세화면으로 이동" [ref=f29e320] [cursor=pointer]:
+                      - /url: https://m.smartstore.naver.com/main/products/13660688151
+                  - generic [ref=f29e322]:
+                    - link "뉴오프 N+ 쇼핑 상세화면으로 이동 (새상품) 칼 라거펠트 22SS 아일렛 자수 펀칭 티어드 롱 원피스 블랙(2074) 26,000 원" [ref=f29e323] [cursor=pointer]:
+                      - /url: https://m.smartstore.naver.com/main/products/13660688151
+                      - generic [ref=f29e324]:
+                        - generic [ref=f29e325]: 뉴오프
+                        - img "N+ 쇼핑" [ref=f29e326]
+                      - generic [ref=f29e327]: 상세화면으로 이동
+                      - generic [ref=f29e328]: (새상품) 칼 라거펠트 22SS 아일렛 자수 펀칭 티어드 롱 원피스 블랙(2074)
+                      - generic [ref=f29e331]:
+                        - strong [ref=f29e332]: 26,000
+                        - generic [ref=f29e333]: 원
+                    - generic [ref=f29e334]: 배송비 3,000원
+              - listitem [ref=f29e336]:
+                - generic [ref=f29e337]:
+                  - generic [ref=f29e338]:
+                    - img "상품이미지" [ref=f29e340]
+                    - link "상세화면으로 이동" [ref=f29e341] [cursor=pointer]:
+                      - /url: https://m.smartstore.naver.com/main/products/13643979802
+                  - generic [ref=f29e343]:
+                    - link "구템즈 N+ 쇼핑 상세화면으로 이동 국내배송 셀프포트레이트 코드 레이스 보우 미디 원피스 PF23035SC CREAM 415,000원 330,460 원 최대할인가" [ref=f29e344] [cursor=pointer]:
+                      - /url: https://m.smartstore.naver.com/main/products/13643979802
+                      - generic [ref=f29e345]:
+                        - generic [ref=f29e346]: 구템즈
+                        - img "N+ 쇼핑" [ref=f29e347]
+                      - generic [ref=f29e348]: 상세화면으로 이동
+                      - generic [ref=f29e349]: 국내배송 셀프포트레이트 코드 레이스 보우 미디 원피스 PF23035SC CREAM
+                      - generic [ref=f29e350]:
+                        - generic [ref=f29e351]: 415,000원
+                        - generic [ref=f29e352]:
+                          - generic [ref=f29e353]:
+                            - strong [ref=f29e354]: 330,460
+                            - generic [ref=f29e355]: 원
+                          - generic [ref=f29e356]: 최대할인가
+                    - generic [ref=f29e357]: 무료배송
+            - button "N+스토어 상품 더보기" [ref=f29e360] [cursor=pointer]
+          - list [ref=f29e366]:
+            - listitem [ref=f29e367]:
+              - generic [ref=f29e368]:
+                - generic [ref=f29e369]:
+                  - img "상품이미지" [ref=f29e371]
+                  - button "찜" [ref=f29e372] [cursor=pointer]
+                  - link "상세화면으로 이동" [ref=f29e375] [cursor=pointer]:
+                    - /url: /market-products/01M25QXAZ6J5KZN3JTVJM07NCD?q=%EC%9B%90%ED%94%BC%EC%8A%A4&tc=nflea_search
+                - generic [ref=f29e377]:
+                  - link "상세화면으로 이동 오브제 신상 ★ 504 블랙 55 ★ 슬리브리스 골지 플리츠 원피스 ★ 250,000원" [ref=f29e378] [cursor=pointer]:
+                    - /url: /market-products/01M25QXAZ6J5KZN3JTVJM07NCD?q=%EC%9B%90%ED%94%BC%EC%8A%A4&tc=nflea_search
+                    - generic [ref=f29e379]: 상세화면으로 이동
+                    - generic [ref=f29e380]:
+                      - text: 오브제 신상 ★ 504 블랙 55 ★ 슬리브리스 골지 플리츠
+                      - strong [ref=f29e381]: 원피스
+                      - text: ★
+                    - generic [ref=f29e382]:
+                      - strong [ref=f29e383]: 250,000
+                      - text: 원
+                  - generic [ref=f29e384]:
+                    - generic [ref=f29e385]: 무료배송
+                    - generic [ref=f29e386]:
+                      - generic [ref=f29e387]: 날짜
+                      - text: 18시간 전
+            - listitem [ref=f29e388]:
+              - generic [ref=f29e389]:
+                - generic [ref=f29e390]:
+                  - img "상품이미지" [ref=f29e392]
+                  - button "찜" [ref=f29e393] [cursor=pointer]
+                  - link "상세화면으로 이동" [ref=f29e396] [cursor=pointer]:
+                    - /url: /market-products/01M25NTA5EWV3HXAKE4VSSBJT5?q=%EC%9B%90%ED%94%BC%EC%8A%A4&tc=nflea_search
+                - generic [ref=f29e398]:
+                  - link "상세화면으로 이동 플라워오픈숄더롱블랙원피스 일본빈티지브랜드 110,000원" [ref=f29e399] [cursor=pointer]:
+                    - /url: /market-products/01M25NTA5EWV3HXAKE4VSSBJT5?q=%EC%9B%90%ED%94%BC%EC%8A%A4&tc=nflea_search
+                    - generic [ref=f29e400]: 상세화면으로 이동
+                    - generic [ref=f29e401]:
+                      - text: 플라워오픈숄더롱블랙
+                      - strong [ref=f29e402]: 원피스
+                      - text: 일본빈티지브랜드
+                    - generic [ref=f29e403]:
+                      - strong [ref=f29e404]: 110,000
+                      - text: 원
+                  - generic [ref=f29e405]:
+                    - generic [ref=f29e406]: 배송비 3,600원
+                    - generic [ref=f29e407]:
+                      - generic [ref=f29e408]: 날짜
+                      - text: 19시간 전
+            - listitem [ref=f29e409]:
+              - generic [ref=f29e410]:
+                - generic [ref=f29e411]:
+                  - img "상품이미지" [ref=f29e413]
+                  - button "찜" [ref=f29e414] [cursor=pointer]
+                  - link "상세화면으로 이동" [ref=f29e417] [cursor=pointer]:
+                    - /url: /market-products/01M25H47M0MXQ4C9JX3J396N0N?q=%EC%9B%90%ED%94%BC%EC%8A%A4&tc=nflea_search
+                - generic [ref=f29e419]:
+                  - link "상세화면으로 이동 스튜디오 니콜슨 2025 시모스 롱 원피스 2사이즈 200,000원" [ref=f29e420] [cursor=pointer]:
+                    - /url: /market-products/01M25H47M0MXQ4C9JX3J396N0N?q=%EC%9B%90%ED%94%BC%EC%8A%A4&tc=nflea_search
+                    - generic [ref=f29e421]: 상세화면으로 이동
+                    - generic [ref=f29e422]:
+                      - text: 스튜디오 니콜슨 2025 시모스 롱
+                      - strong [ref=f29e423]: 원피스
+                      - text: 2사이즈
+                    - generic [ref=f29e424]:
+                      - strong [ref=f29e425]: 200,000
+                      - text: 원
+                  - generic [ref=f29e426]:
+                    - generic [ref=f29e427]: 배송비 3,000원
+                    - generic [ref=f29e428]:
+                      - generic [ref=f29e429]: 날짜
+                      - text: 20시간 전
+            - listitem [ref=f29e430]:
+              - generic [ref=f29e431]:
+                - generic [ref=f29e432]:
+                  - img "상품이미지" [ref=f29e434]
+                  - button "찜" [ref=f29e435] [cursor=pointer]
+                  - link "상세화면으로 이동" [ref=f29e438] [cursor=pointer]:
+                    - /url: /market-products/01M25FQJYJWS7A4QBX4NXFD8SM?q=%EC%9B%90%ED%94%BC%EC%8A%A4&tc=nflea_search
+                - generic [ref=f29e440]:
+                  - link "상세화면으로 이동 모조에스핀 핀턱 플리츠 원피스 60,000원" [ref=f29e441] [cursor=pointer]:
+                    - /url: /market-products/01M25FQJYJWS7A4QBX4NXFD8SM?q=%EC%9B%90%ED%94%BC%EC%8A%A4&tc=nflea_search
+                    - generic [ref=f29e442]: 상세화면으로 이동
+                    - generic [ref=f29e443]:
+                      - text: 모조에스핀 핀턱 플리츠
+                      - strong [ref=f29e444]: 원피스
+                    - generic [ref=f29e445]:
+                      - strong [ref=f29e446]: 60,000
+                      - text: 원
+                  - generic [ref=f29e447]:
+                    - generic [ref=f29e448]: 배송비 3,200원
+                    - generic [ref=f29e449]:
+                      - generic [ref=f29e450]: 날짜
+                      - text: 21시간 전
+            - listitem [ref=f29e451]:
+              - generic [ref=f29e452]:
+                - generic [ref=f29e453]:
+                  - img "상품이미지" [ref=f29e455]
+                  - button "찜" [ref=f29e456] [cursor=pointer]
+                  - link "상세화면으로 이동" [ref=f29e459] [cursor=pointer]:
+                    - /url: /market-products/01M255CXBD6DRZ3273724TZ5JE?q=%EC%9B%90%ED%94%BC%EC%8A%A4&tc=nflea_search
+                - generic [ref=f29e461]:
+                  - link "상세화면으로 이동 꼼뜨와데꼬또니에/여성민소매원피스(새상품)사이즈44반~마른55 33,000원" [ref=f29e462] [cursor=pointer]:
+                    - /url: /market-products/01M255CXBD6DRZ3273724TZ5JE?q=%EC%9B%90%ED%94%BC%EC%8A%A4&tc=nflea_search
+                    - generic [ref=f29e463]: 상세화면으로 이동
+                    - generic [ref=f29e464]:
+                      - text: 꼼뜨와데꼬또니에/여성민소매
+                      - strong [ref=f29e465]: 원피스
+                      - text: (새상품)사이즈44반~마른55
+                    - generic [ref=f29e466]:
+                      - strong [ref=f29e467]: 33,000
+                      - text: 원
+                  - generic [ref=f29e468]:
+                    - generic [ref=f29e469]: 배송비 3,000원
+                    - generic [ref=f29e470]:
+                      - generic [ref=f29e471]: 날짜
+                      - text: 1일 전
+            - listitem [ref=f29e472]:
+              - generic [ref=f29e473]:
+                - generic [ref=f29e474]:
+                  - img "상품이미지" [ref=f29e476]
+                  - button "찜" [ref=f29e477] [cursor=pointer]
+                  - link "상세화면으로 이동" [ref=f29e480] [cursor=pointer]:
+                    - /url: /market-products/01M251GKFRRDD5NG86EV5T4CCV?q=%EC%9B%90%ED%94%BC%EC%8A%A4&tc=nflea_search
+                - generic [ref=f29e482]:
+                  - link "상세화면으로 이동 lululemon 플리츠 원피스 60,000원" [ref=f29e483] [cursor=pointer]:
+                    - /url: /market-products/01M251GKFRRDD5NG86EV5T4CCV?q=%EC%9B%90%ED%94%BC%EC%8A%A4&tc=nflea_search
+                    - generic [ref=f29e484]: 상세화면으로 이동
+                    - generic [ref=f29e485]:
+                      - text: lululemon 플리츠
+                      - strong [ref=f29e486]: 원피스
+                    - generic [ref=f29e487]:
+                      - strong [ref=f29e488]: 60,000
+                      - text: 원
+                  - generic [ref=f29e489]:
+                    - generic [ref=f29e490]: 배송비 4,000원
+                    - generic [ref=f29e491]:
+                      - generic [ref=f29e492]: 날짜
+                      - text: 1일 전
+            - listitem [ref=f29e493]:
+              - generic [ref=f29e494]:
+                - generic [ref=f29e495]:
+                  - img "상품이미지" [ref=f29e497]
+                  - button "찜" [ref=f29e498] [cursor=pointer]
+                  - link "상세화면으로 이동" [ref=f29e501] [cursor=pointer]:
+                    - /url: /market-products/01M24YV4EJN45304ZEAGWK4GEG?q=%EC%9B%90%ED%94%BC%EC%8A%A4&tc=nflea_search
+                - generic [ref=f29e503]:
+                  - link "상세화면으로 이동 새상품 자라 ZARA 백리스 컷아웃 골지 미디 섹시 원피스 44 55 S 30,000원" [ref=f29e504] [cursor=pointer]:
+                    - /url: /market-products/01M24YV4EJN45304ZEAGWK4GEG?q=%EC%9B%90%ED%94%BC%EC%8A%A4&tc=nflea_search
+                    - generic [ref=f29e505]: 상세화면으로 이동
+                    - generic [ref=f29e506]:
+                      - text: 새상품 자라 ZARA 백리스 컷아웃 골지 미디 섹시
+                      - strong [ref=f29e507]: 원피스
+                      - text: 44 55 S
+                    - generic [ref=f29e508]:
+                      - strong [ref=f29e509]: 30,000
+                      - text: 원
+                  - generic [ref=f29e510]:
+                    - generic [ref=f29e511]: 배송비 3,600원
+                    - generic [ref=f29e512]:
+                      - generic [ref=f29e513]: 날짜
+                      - text: 1일 전
+            - listitem [ref=f29e514]:
+              - generic [ref=f29e515]:
+                - generic [ref=f29e516]:
+                  - img "상품이미지" [ref=f29e518]
+                  - button "찜" [ref=f29e519] [cursor=pointer]
+                  - link "상세화면으로 이동" [ref=f29e522] [cursor=pointer]:
+                    - /url: /market-products/01M24PX0J5ZB82HJV76CVNK3KZ?q=%EC%9B%90%ED%94%BC%EC%8A%A4&tc=nflea_search
+                - generic [ref=f29e524]:
+                  - link "상세화면으로 이동 새상품)써스데이아일랜드 플로럴 원피스 S 70,000원" [ref=f29e525] [cursor=pointer]:
+                    - /url: /market-products/01M24PX0J5ZB82HJV76CVNK3KZ?q=%EC%9B%90%ED%94%BC%EC%8A%A4&tc=nflea_search
+                    - generic [ref=f29e526]: 상세화면으로 이동
+                    - generic [ref=f29e527]:
+                      - text: 새상품)써스데이아일랜드 플로럴
+                      - strong [ref=f29e528]: 원피스
+                      - text: S
+                    - generic [ref=f29e529]:
+                      - strong [ref=f29e530]: 70,000
+                      - text: 원
+                  - generic [ref=f29e531]:
+                    - generic [ref=f29e532]: 배송비 2,000원
+                    - generic [ref=f29e533]:
+                      - generic [ref=f29e534]: 날짜
+                      - text: 1일 전
+            - listitem [ref=f29e535]:
+              - generic [ref=f29e536]:
+                - generic [ref=f29e537]:
+                  - img "상품이미지" [ref=f29e539]
+                  - button "찜" [ref=f29e540] [cursor=pointer]
+                  - link "상세화면으로 이동" [ref=f29e543] [cursor=pointer]:
+                    - /url: /market-products/01M24MHTFBPRCEKGP4BZEPT68Z?q=%EC%9B%90%ED%94%BC%EC%8A%A4&tc=nflea_search
+                - generic [ref=f29e545]:
+                  - link "상세화면으로 이동 넥 프릴 화이트 슬리브리스 원피스 5,207,447원" [ref=f29e546] [cursor=pointer]:
+                    - /url: /market-products/01M24MHTFBPRCEKGP4BZEPT68Z?q=%EC%9B%90%ED%94%BC%EC%8A%A4&tc=nflea_search
+                    - generic [ref=f29e547]: 상세화면으로 이동
+                    - generic [ref=f29e548]:
+                      - text: 넥 프릴 화이트 슬리브리스
+                      - strong [ref=f29e549]: 원피스
+                    - generic [ref=f29e550]:
+                      - strong [ref=f29e551]: 5,207,447
+                      - text: 원
+                  - generic [ref=f29e553]:
+                    - generic [ref=f29e554]: 날짜
+                    - text: 1일 전
+            - listitem [ref=f29e555]:
+              - generic [ref=f29e556]:
+                - generic [ref=f29e557]:
+                  - img "상품이미지" [ref=f29e559]
+                  - button "찜" [ref=f29e560] [cursor=pointer]
+                  - link "상세화면으로 이동" [ref=f29e563] [cursor=pointer]:
+                    - /url: /market-products/01M24JX02VF9CXZXH3J7JYSFAZ?q=%EC%9B%90%ED%94%BC%EC%8A%A4&tc=nflea_search
+                - generic [ref=f29e565]:
+                  - link "상세화면으로 이동 [미샤균일가] 미샤 ♡ 대박 균일가 ♡ 귀한 후드 사파리 920 집업 원피스 130,000원" [ref=f29e566] [cursor=pointer]:
+                    - /url: /market-products/01M24JX02VF9CXZXH3J7JYSFAZ?q=%EC%9B%90%ED%94%BC%EC%8A%A4&tc=nflea_search
+                    - generic [ref=f29e567]: 상세화면으로 이동
+                    - generic [ref=f29e568]:
+                      - text: "[미샤균일가] 미샤 ♡ 대박 균일가 ♡ 귀한 후드 사파리 920 집업"
+                      - strong [ref=f29e569]: 원피스
+                    - generic [ref=f29e570]:
+                      - strong [ref=f29e571]: 130,000
+                      - text: 원
+                  - generic [ref=f29e572]:
+                    - generic [ref=f29e573]: 무료배송
+                    - generic [ref=f29e574]:
+                      - generic [ref=f29e575]: 날짜
+                      - text: 1일 전
+            - listitem [ref=f29e576]:
+              - generic [ref=f29e577]:
+                - generic [ref=f29e578]:
+                  - img "상품이미지" [ref=f29e580]
+                  - button "찜" [ref=f29e581] [cursor=pointer]
+                  - link "상세화면으로 이동" [ref=f29e584] [cursor=pointer]:
+                    - /url: /market-products/01M246KVMCYKSY4YCC7GG7NWTY?q=%EC%9B%90%ED%94%BC%EC%8A%A4&tc=nflea_search
+                - generic [ref=f29e586]:
+                  - link "상세화면으로 이동 55)잇미샤 초가을까지 백설공주롱 원피스 25,000원" [ref=f29e587] [cursor=pointer]:
+                    - /url: /market-products/01M246KVMCYKSY4YCC7GG7NWTY?q=%EC%9B%90%ED%94%BC%EC%8A%A4&tc=nflea_search
+                    - generic [ref=f29e588]: 상세화면으로 이동
+                    - generic [ref=f29e589]:
+                      - text: 55)잇미샤 초가을까지 백설공주롱
+                      - strong [ref=f29e590]: 원피스
+                    - generic [ref=f29e591]:
+                      - strong [ref=f29e592]: 25,000
+                      - text: 원
+                  - generic [ref=f29e593]:
+                    - generic [ref=f29e594]: 배송비 3,000원
+                    - generic [ref=f29e595]:
+                      - generic [ref=f29e596]: 날짜
+                      - text: 1일 전
+            - listitem [ref=f29e597]:
+              - generic [ref=f29e598]:
+                - generic [ref=f29e599]:
+                  - img "상품이미지" [ref=f29e601]
+                  - button "찜" [ref=f29e602] [cursor=pointer]
+                  - link "상세화면으로 이동" [ref=f29e605] [cursor=pointer]:
+                    - /url: /market-products/01M2467YG509YC1154G15BM1PS?q=%EC%9B%90%ED%94%BC%EC%8A%A4&tc=nflea_search
+                - generic [ref=f29e607]:
+                  - link "상세화면으로 이동 55)텍 새 제평 디자이너 오간자 원피스 25,000원" [ref=f29e608] [cursor=pointer]:
+                    - /url: /market-products/01M2467YG509YC1154G15BM1PS?q=%EC%9B%90%ED%94%BC%EC%8A%A4&tc=nflea_search
+                    - generic [ref=f29e609]: 상세화면으로 이동
+                    - generic [ref=f29e610]:
+                      - text: 55)텍 새 제평 디자이너 오간자
+                      - strong [ref=f29e611]: 원피스
+                    - generic [ref=f29e612]:
+                      - strong [ref=f29e613]: 25,000
+                      - text: 원
+                  - generic [ref=f29e614]:
+                    - generic [ref=f29e615]: 배송비 3,000원
+                    - generic [ref=f29e616]:
+                      - generic [ref=f29e617]: 날짜
+                      - text: 1일 전
+            - listitem [ref=f29e618]:
+              - generic [ref=f29e619]:
+                - generic [ref=f29e620]:
+                  - img "상품이미지" [ref=f29e622]
+                  - button "찜" [ref=f29e623] [cursor=pointer]
+                  - link "상세화면으로 이동" [ref=f29e626] [cursor=pointer]:
+                    - /url: /market-products/01M238B9VTD1AKP37WMPYY4YXB?q=%EC%9B%90%ED%94%BC%EC%8A%A4&tc=nflea_search
+                - generic [ref=f29e628]:
+                  - link "상세화면으로 이동 55-66)새옷들 soup 바스락 셔츠 롱 원피스세트 30,000원" [ref=f29e629] [cursor=pointer]:
+                    - /url: /market-products/01M238B9VTD1AKP37WMPYY4YXB?q=%EC%9B%90%ED%94%BC%EC%8A%A4&tc=nflea_search
+                    - generic [ref=f29e630]: 상세화면으로 이동
+                    - generic [ref=f29e631]:
+                      - text: 55-66)새옷들 soup 바스락 셔츠 롱
+                      - strong [ref=f29e632]: 원피스
+                      - text: 세트
+                    - generic [ref=f29e633]:
+                      - strong [ref=f29e634]: 30,000
+                      - text: 원
+                  - generic [ref=f29e635]:
+                    - generic [ref=f29e636]: 배송비 3,000원
+                    - generic [ref=f29e637]:
+                      - generic [ref=f29e638]: 날짜
+                      - text: 1일 전
+            - listitem [ref=f29e639]:
+              - generic [ref=f29e640]:
+                - generic [ref=f29e641]:
+                  - img "상품이미지" [ref=f29e643]
+                  - button "찜" [ref=f29e644] [cursor=pointer]
+                  - link "상세화면으로 이동" [ref=f29e647] [cursor=pointer]:
+                    - /url: /market-products/01M2382PSW1VDX015MY37PMZQW?q=%EC%9B%90%ED%94%BC%EC%8A%A4&tc=nflea_search
+                - generic [ref=f29e649]:
+                  - link "상세화면으로 이동 55)새제품 고가 으네드레스 인기 가을 원피스 40,000원" [ref=f29e650] [cursor=pointer]:
+                    - /url: /market-products/01M2382PSW1VDX015MY37PMZQW?q=%EC%9B%90%ED%94%BC%EC%8A%A4&tc=nflea_search
+                    - generic [ref=f29e651]: 상세화면으로 이동
+                    - generic [ref=f29e652]:
+                      - text: 55)새제품 고가 으네드레스 인기 가을
+                      - strong [ref=f29e653]: 원피스
+                    - generic [ref=f29e654]:
+                      - strong [ref=f29e655]: 40,000
+                      - text: 원
+                  - generic [ref=f29e656]:
+                    - generic [ref=f29e657]: 배송비 3,000원
+                    - generic [ref=f29e658]:
+                      - generic [ref=f29e659]: 날짜
+                      - text: 1일 전
+      - generic [ref=f29e660]: 로딩중...
+  - alert [ref=f29e29]: "원피스 검색 : N플리마켓"

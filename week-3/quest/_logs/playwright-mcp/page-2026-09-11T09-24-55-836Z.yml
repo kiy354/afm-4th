@@ -1,0 +1,215 @@
+- generic [active] [ref=f8e1]:
+  - generic [ref=f8e4]:
+    - complementary [ref=f8e5]:
+      - navigation [ref=f8e7]:
+        - generic [ref=f8e8]:
+          - link [ref=f8e10] [cursor=pointer]:
+            - /url: /
+            - img "TextLogo" [ref=f8e11]
+          - link [ref=f8e12] [cursor=pointer]:
+            - /url: /search
+            - button "검색" [ref=f8e13]
+        - generic [ref=f8e17]:
+          - generic [ref=f8e18]:
+            - button "비대면 진료" [ref=f8e20] [cursor=pointer]
+            - button "병원 찾기" [ref=f8e30] [cursor=pointer]
+            - button "약국 찾기" [ref=f8e40] [cursor=pointer]
+            - button "실시간 의료 상담" [ref=f8e51] [cursor=pointer]
+            - button "건강 정보" [ref=f8e60] [cursor=pointer]
+          - generic [ref=f8e69]:
+            - link [ref=f8e70] [cursor=pointer]:
+              - /url: https://abr.ge/@doctornow/web_organic?channel=web_organic&campaign=web_service&content=web_lnb_btn_service&term=%EC%95%B1+%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C&ad_group=WEB&og_tag_id=138187085&routing_short_id=d816rm&tracking_template_id=2b94e9766fea0e112f2b11b7410088c4&ad_type=click
+              - button "앱 다운로드" [ref=f8e71]
+            - button "로그인/가입" [ref=f8e72] [cursor=pointer]
+    - generic [ref=f8e74]:
+      - generic [ref=f8e75]:
+        - generic [ref=f8e77]:
+          - generic [ref=f8e78]: 안과
+          - heading "밝은이안과의원" [level=1] [ref=f8e80]
+          - button "0.0 0개 후기" [ref=f8e82] [cursor=pointer]:
+            - generic [ref=f8e83]:
+              - generic [aria-hidden] [ref=f8e85]: star
+              - generic [ref=f8e86]: "0.0"
+            - generic [ref=f8e88]:
+              - generic [ref=f8e89]: 0개 후기
+              - generic [aria-hidden] [ref=f8e91]: keyboard_arrow_right
+          - generic [ref=f8e92]:
+            - generic [ref=f8e93]: 야간진료
+            - generic [ref=f8e95]: 안과 전문의 1명
+          - generic [ref=f8e98]:
+            - generic [ref=f8e99]: 진료중
+            - button "18:30에 마감" [ref=f8e102] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f8e105]: keyboard_arrow_right
+        - generic [ref=f8e107]:
+          - button "병원 정보" [ref=f8e108] [cursor=pointer]
+          - button "진료 정보" [ref=f8e111] [cursor=pointer]
+          - button "진료 후기" [ref=f8e113] [cursor=pointer]
+        - generic [ref=f8e115]:
+          - generic [ref=f8e117]:
+            - generic [ref=f8e118]:
+              - generic [ref=f8e119]:
+                - heading "병원 위치" [level=2] [ref=f8e121]
+                - generic [ref=f8e123]:
+                  - generic [ref=f8e124]:
+                    - paragraph [ref=f8e125]: 밝은이안과의원
+                    - heading "서울특별시 구로구 경인로 193 상임빌딩 4층 (오류동)" [level=3] [ref=f8e126]
+                  - button "복사" [ref=f8e127] [cursor=pointer]
+                - generic [ref=f8e129]:
+                  - generic [ref=f8e145] [cursor=pointer]
+                  - generic:
+                    - generic: 100m
+                    - link [ref=f8e149] [cursor=pointer]:
+                      - /url: https://ssl.pstatic.net/static/maps/mantle/notice/legal.html
+                      - img "NAVER" [ref=f8e150]
+                  - generic: © NAVER Corp.
+                - generic [ref=f8e153]:
+                  - generic [aria-hidden] [ref=f8e155]: distance
+                  - paragraph [ref=f8e156]: 리안헤어, 정금당 건물 4층
+              - generic [ref=f8e157]:
+                - heading "병원 운영 시간" [level=2] [ref=f8e159]
+                - generic [ref=f8e160]:
+                  - generic [ref=f8e162]:
+                    - generic [ref=f8e163]:
+                      - generic [ref=f8e164]: 월요일
+                      - generic [ref=f8e165]: 09:30 ~ 18:30
+                    - generic [ref=f8e167]:
+                      - generic [ref=f8e168]: 화요일
+                      - generic [ref=f8e169]: 09:30 ~ 18:30
+                    - generic [ref=f8e171]:
+                      - generic [ref=f8e172]: 수요일
+                      - generic [ref=f8e173]: 09:30 ~ 18:30
+                    - generic [ref=f8e175]:
+                      - generic [ref=f8e176]: 목요일
+                      - generic [ref=f8e177]: 09:30 ~ 18:30
+                    - generic [ref=f8e179]:
+                      - generic [ref=f8e180]: 금요일
+                      - generic [ref=f8e181]: 09:30 ~ 18:30
+                    - generic [ref=f8e183]:
+                      - generic [ref=f8e184]: 토요일
+                      - generic [ref=f8e185]: 09:30 ~ 13:00
+                    - generic [ref=f8e187]:
+                      - generic [ref=f8e188]: 일요일
+                      - generic [ref=f8e189]: 확인 필요
+                    - generic [ref=f8e191]:
+                      - generic [ref=f8e192]: 공휴일
+                      - generic [ref=f8e193]: 휴무
+                  - generic [ref=f8e196]:
+                    - generic [ref=f8e197]: 휴게시간
+                    - generic [ref=f8e198]: 확인 필요
+              - generic [ref=f8e200]:
+                - heading "병원 전화번호" [level=2] [ref=f8e201]
+                - generic [ref=f8e202]:
+                  - generic [ref=f8e203]: 02-2615-0075
+                  - button "전화" [ref=f8e205] [cursor=pointer]
+            - generic [ref=f8e207]:
+              - heading "진료 과목" [level=2] [ref=f8e208]
+              - generic [ref=f8e209]: 안과
+            - generic [ref=f8e212]:
+              - generic [ref=f8e214]:
+                - heading "진료 후기" [level=2] [ref=f8e215]
+                - generic [ref=f8e216]: "0"
+              - generic [ref=f8e217]:
+                - generic [ref=f8e219]:
+                  - generic [aria-hidden] [ref=f8e222]: star
+                  - heading "0.0" [level=3] [ref=f8e223]
+                - generic [ref=f8e227]:
+                  - generic [aria-hidden] [ref=f8e230]: upcoming
+                  - paragraph [ref=f8e231]: 아직 남겨진 후기가 없어요
+          - generic [ref=f8e235]:
+            - img "종" [ref=f8e236]
+            - paragraph [ref=f8e237]: 더 많은 정보가 추가되면 알려드릴게요
+            - button "알림 신청" [ref=f8e238] [cursor=pointer]
+          - button "전화하기" [ref=f8e244] [cursor=pointer]
+      - contentinfo [ref=f8e245]:
+        - generic [ref=f8e246]:
+          - generic [ref=f8e248]:
+            - list [ref=f8e249]:
+              - listitem [ref=f8e250]: 닥터나우
+              - listitem [ref=f8e251]:
+                - link "회사 소개" [ref=f8e252] [cursor=pointer]:
+                  - /url: https://company.doctornow.co.kr/company
+              - listitem [ref=f8e253]:
+                - link "팀 문화" [ref=f8e254] [cursor=pointer]:
+                  - /url: https://company.doctornow.co.kr/culture
+              - listitem [ref=f8e255]:
+                - link "서비스 소개" [ref=f8e256] [cursor=pointer]:
+                  - /url: https://company.doctornow.co.kr/service
+              - listitem [ref=f8e257]:
+                - link "제휴 안내" [ref=f8e258] [cursor=pointer]:
+                  - /url: https://company.doctornow.co.kr/partnership
+              - listitem [ref=f8e259]:
+                - link "소식 · 공지" [ref=f8e260] [cursor=pointer]:
+                  - /url: https://company.doctornow.co.kr/notice
+              - listitem [ref=f8e261]:
+                - link "채용 공고" [ref=f8e262] [cursor=pointer]:
+                  - /url: https://recruit.doctornow.co.kr/
+            - generic [ref=f8e263]:
+              - list [ref=f8e264]:
+                - listitem [ref=f8e265]: 서비스
+                - listitem [ref=f8e266]:
+                  - link "비대면 진료" [ref=f8e267] [cursor=pointer]:
+                    - /url: /telemedicine/doctors
+                - listitem [ref=f8e268]:
+                  - link "병원 찾기" [ref=f8e269] [cursor=pointer]:
+                    - /url: /hospitals
+                - listitem [ref=f8e270]:
+                  - link "탈모 진료비" [ref=f8e271] [cursor=pointer]:
+                    - /url: /non-benefit/%ED%83%88%EB%AA%A8/%ED%94%84%EB%A1%9C%ED%8E%98%EC%8B%9C%EC%95%84
+                - listitem [ref=f8e272]:
+                  - link "다이어트 진료비" [ref=f8e273] [cursor=pointer]:
+                    - /url: /non-benefit/%EB%B9%84%EB%A7%8C/%EB%A7%88%EC%9A%B4%EC%9E%90%EB%A1%9C
+                - listitem [ref=f8e274]:
+                  - link "여드름 진료비" [ref=f8e275] [cursor=pointer]:
+                    - /url: /non-benefit/%EC%97%AC%EB%93%9C%EB%A6%84/%EC%9D%B4%EC%86%8C%ED%8B%B0%EB%85%BC
+                - listitem [ref=f8e276]:
+                  - link "약국 찾기" [ref=f8e277] [cursor=pointer]:
+                    - /url: /non-benefit/map
+                - listitem [ref=f8e278]:
+                  - link "건강 매거진" [ref=f8e279] [cursor=pointer]:
+                    - /url: /content/magazine/list/INTERNAL
+                - listitem [ref=f8e280]:
+                  - link "1분 FAQ" [ref=f8e281] [cursor=pointer]:
+                    - /url: /content/faq
+                - listitem [ref=f8e282]:
+                  - link "실시간 의료상담" [ref=f8e283] [cursor=pointer]:
+                    - /url: /content/qna/realtime
+                - listitem [ref=f8e284]:
+                  - link "의약품 사전" [ref=f8e285] [cursor=pointer]:
+                    - /url: /medicine-dictionary
+                - listitem [ref=f8e286]:
+                  - link "질환백과" [ref=f8e287] [cursor=pointer]:
+                    - /url: /disease-encyclopedia
+              - list [ref=f8e288]:
+                - listitem [ref=f8e289]: 고객센터
+                - listitem [ref=f8e290]:
+                  - text: "채팅 문의 :"
+                  - link "채널톡" [ref=f8e291] [cursor=pointer]:
+                    - /url: https://doctornow.channel.io/home
+                - listitem [ref=f8e292]:
+                  - link "메일로 문의하기" [ref=f8e293] [cursor=pointer]:
+                    - /url: mailto:contact@doctornow.co.kr
+          - generic [ref=f8e294]:
+            - generic [ref=f8e295]:
+              - generic [ref=f8e296]:
+                - link "개인정보 처리 방침" [ref=f8e297] [cursor=pointer]:
+                  - /url: https://company.doctornow.co.kr/board/?action=readpost&post_id=1029&bbspaged=2
+                - link "서비스 이용약관" [ref=f8e298] [cursor=pointer]:
+                  - /url: https://company.doctornow.co.kr/board/?action=readpost&post_id=1028&bbspaged=2
+              - generic [ref=f8e299]:
+                - paragraph [ref=f8e300]: (주) 닥터나우
+                - paragraph [ref=f8e301]: "대표 정진웅 | 사업자 등록 번호 : 279-88-01452 | 통신판매업 신고번호 : 2024-서울강남-00439"
+                - paragraph [ref=f8e302]:
+                  - text: "주소 : 서울 강남구 테헤란로 625, 16층 |"
+                  - link "사업자 정보 확인" [ref=f8e303] [cursor=pointer]:
+                    - /url: https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2798801452
+              - generic [ref=f8e304]: Copyright 2026. 닥터나우 Inc. All rights reserved.
+            - generic [ref=f8e305]:
+              - link [ref=f8e306] [cursor=pointer]:
+                - /url: https://www.instagram.com/doctornow_official/
+              - link [ref=f8e309] [cursor=pointer]:
+                - /url: https://pf.kakao.com/_whSxnK
+              - link [ref=f8e312] [cursor=pointer]:
+                - /url: https://m.post.naver.com/doctornow
+              - link [ref=f8e315] [cursor=pointer]:
+                - /url: https://www.youtube.com/channel/UCdDJbE9dUH6YSYttHyZKWGQ
+  - alert [ref=f8e318]

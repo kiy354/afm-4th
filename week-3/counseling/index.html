@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>마음쉼표 · AI 심리상담</title>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <!-- ⚠️ 모든 CDN 버전 고정. Babel 은 반드시 7.x (8.x 는 인라인 text/babel 미지원) -->
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone@7.25.9/babel.min.js"></script>
+  <style>
+    /* Tailwind 유틸리티로 표현 불가한 것만 커스텀 CSS 로 처리 */
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+    @keyframes blink  { 0%, 80%, 100% { opacity: .25; transform: translateY(0); } 40% { opacity: 1; transform: translateY(-3px); } }
+    @keyframes breathe { 0%, 100% { transform: scale(1); opacity: .55; } 50% { transform: scale(1.12); opacity: .85; } }
+    .anim-up   { animation: fadeUp .3s cubic-bezier(.2,.8,.3,1) both; }
+    .anim-dot  { animation: blink 1.2s infinite; }
+    .anim-breathe { animation: breathe 6s ease-in-out infinite; }
+    .caret::after { content: '▍'; margin-left: 1px; opacity: .5; }
+    /* 스크롤바 정돈 */
+    .scroll-soft::-webkit-scrollbar { width: 8px; }
+    .scroll-soft::-webkit-scrollbar-thumb { background: rgba(100,116,139,.28); border-radius: 9999px; }
+    .scroll-soft::-webkit-scrollbar-track { background: transparent; }
+  </style>
+</head>
+<body class="bg-slate-100">
+  <div id="root"></div>
+
+  <script type="text/babel">
+    // ========================================
+    // React Hooks
+    // ========================================
+    const { useState, useEffect, useRef, useCallback, useMemo } = React;
+
+    // ========================================
+    // ⚙️ Config & Constants
+    // ========================================
+
+    // OpenAI 엔드포인트 (브라우저에서 직접 호출 — CORS 허용됨)
+    const OPENAI_URL = 'https://api.openai.com/v1/chat/completions';
+
+    // ⚠️ 보안 주의: 클라이언트 코드에 담긴 키는 브라우저에서 그대로 노출됩니다.
+    //    개인 학습·로컬 실습 용도로만 사용하고, 공개 저장소·배포 서버에는 올리지 마세요.
+    // 공개 저장소이므로 키는 비워 둔다. 우측 상단 설정에서 넣으면 브라우저에 저장된다.
+    const DEFAULT_API_KEY = '';
+
+    const STORAGE = { key: 'counsel.apiKey', model: 'counsel.model', style: 'counsel.style', chat: 'counsel.messages' };
+
+    const MODELS = [
+      { id: 'gpt-4o-mini',  label: 'gpt-4o-mini · 빠르고 저렴' },
+      { id: 'gpt-4o',       label: 'gpt-4o · 가장 섬세함' },
+      { id: 'gpt-4.1-mini', label: 'gpt-4.1-mini · 균형형' },
+    ];
+
+    // 상담 스타일 공통 시스템 프롬프트
+    const BASE_PROMPT = [
+      '당신은 한국어로 대화하는 따뜻하고 신뢰감 있는 심리상담 도우미 "마음쉼표"입니다.',
+      '',
+      '대화 원칙:',
+      '- 먼저 감정을 있는 그대로 반영하고 인정합니다. 조언보다 경청이 우선입니다.',
+      '- 한 번에 2~4문장으로 짧게, 부드러운 존댓말로 말합니다. 장황한 나열을 피합니다.',
+      '- 한 번에 하나의 열린 질문만 던져 대화를 이어갑니다.',
+      '- 섣부른 위로("괜찮아질 거예요")나 훈계, 평가는 하지 않습니다.',
+      '- 의학적 진단이나 약물 처방은 절대 하지 않습니다. 필요하면 전문가 상담을 권합니다.',
+      '- 사용자가 자해나 자살을 언급하면 즉시 안전을 확인하고, 자살예방상담전화 109 와',
+      '  정신건강위기상담전화 1577-0199 를 안내하며 혼자 있지 말 것을 권합니다.',
+      '- 당신은 전문 치료를 대체하지 않는 대화 상대임을 필요할 때 솔직히 밝힙니다.',
+    ].join('\n');
+
+    const STYLES = {
+      empathy: {
+        label: '공감 경청',
+        emoji: '🌿',
+        desc: '충분히 듣고 감정을 함께 정리해요',
+        prompt: '이번 대화에서는 인간중심 상담 방식을 사용합니다. 반영적 경청과 감정 명료화에 집중하고, 해결책 제시는 사용자가 요청할 때만 합니다.',
+      },
+      cbt: {
+        label: '생각 정리 (CBT)',
+        emoji: '🧩',
+        desc: '상황 · 생각 · 감정을 나눠 살펴봐요',
+        prompt: '이번 대화에서는 인지행동치료(CBT) 접근을 사용합니다. 상황, 자동적 사고, 감정, 근거를 부드럽게 구분해 물어보고, 흑백논리나 파국화 같은 인지 왜곡을 비난 없이 짚어 대안적 생각을 함께 찾습니다.',
+      },
+      mindful: {
+        label: '마음챙김',
+        emoji: '🫧',
+        desc: '지금 이 순간 몸과 호흡에 머물러요',
+        prompt: '이번 대화에서는 마음챙김과 그라운딩을 안내합니다. 지금 이 순간의 몸 감각과 호흡으로 주의를 돌리는 짧은 실습(호흡 세기, 5-4-3-2-1 감각 찾기 등)을 한 번에 하나씩 제안합니다.',
+      },
+    };
+
+    // 대화 시작을 돕는 예시 문장
+    const STARTERS = [
+      '요즘 잠들기가 너무 어려워요',
+      '일이 많은데 아무것도 하기 싫어요',
+      '사람들 앞에 서면 늘 긴장돼요',
+      '이유 없이 자꾸 눈물이 나요',
+    ];
+
+    // 위기 신호 키워드 (감지 시 안내 배너 노출)
+    const CRISIS_WORDS = ['자살', '죽고 싶', '죽고싶', '자해', '살기 싫', '살기싫', '사라지고 싶', '목숨을 끊'];
+    const hasCrisisSignal = (text) => CRISIS_WORDS.some((w) => text.includes(w));
+
+    const HELPLINES = [
+      { name: '자살예방 상담전화', tel: '109', note: '24시간 · 무료' },
+      { name: '정신건강 위기상담', tel: '1577-0199', note: '24시간 · 전국' },
+      { name: '청소년 상담', tel: '1388', note: '24시간 · 청소년' },
+    ];
+
+    // ========================================
+    // 🛠️ Utils & Storage
+    // ========================================
+
+    const load = (key, fallback) => {
+      try {
+        const raw = localStorage.getItem(key);
+        return raw === null ? fallback : JSON.parse(raw);
+      } catch (e) { return fallback; }
+    };
+
+    const save = (key, value) => {
+      try { localStorage.setItem(key, JSON.stringify(value)); } catch (e) { /* 저장 불가 환경은 무시 */ }
+    };
+
+    const uid = () => Math.random().toString(36).slice(2) + Date.now().toString(36);
+
+    const timeLabel = (ts) =>
+      new Date(ts).toLocaleTimeString('ko-KR', { hour: '2-digit', minute: '2-digit' });
+
+    // ========================================
+    // 🎨 Design System Components
+    // ========================================
+
+    function Button({ variant = 'primary', size = 'md', disabled = false, onClick, type = 'button', className = '', children, ...rest }) {
+      const base = 'inline-flex items-center justify-center gap-1.5 rounded-xl font-semibold transition ' +
+                   'focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-teal-500 ' +
+                   'disabled:opacity-40 disabled:cursor-not-allowed';
+      const variants = {
+        primary:   'bg-teal-600 text-white shadow-sm hover:bg-teal-700 active:bg-teal-800',
+        secondary: 'bg-white text-slate-700 border border-slate-200 shadow-sm hover:bg-slate-50',
+        danger:    'bg-white text-rose-600 border border-rose-200 hover:bg-rose-50',
+        ghost:     'bg-transparent text-slate-600 hover:bg-slate-200/70',
+      };
+      const sizes = { sm: 'px-2.5 py-1.5 text-xs', md: 'px-4 py-2 text-sm', lg: 'px-5 py-3 text-base' };
+      return (
+        <button type={type} onClick={onClick} disabled={disabled}
+          className={`${base} ${variants[variant]} ${sizes[size]} ${className}`} {...rest}>
+          {children}
+        </button>
+      );
+    }
+
+    function Input({ type = 'text', label, value, onChange, placeholder, error, disabled = false, className = '', ...rest }) {
+      const id = useMemo(uid, []);
+      return (
+        <div className={className}>
+          {label && <label htmlFor={id} className="block mb-1.5 text-sm font-medium text-slate-700">{label}</label>}
+          <input
+            id={id} type={type} value={value} onChange={onChange} placeholder={placeholder} disabled={disabled}
+            aria-invalid={!!error}
+            className={`w-full rounded-xl border px-3 py-2 text-sm text-slate-800 placeholder-slate-400 transition
+              focus:outline-none focus:ring-2 disabled:bg-slate-100
+              ${error ? 'border-rose-300 focus:ring-rose-300' : 'border-slate-200 focus:ring-teal-400'}`}
+            {...rest} />
+          {error && <p className="mt-1 text-xs text-rose-600">{error}</p>}
+        </div>
+      );
+    }
+
+    function Select({ label, value, onChange, options, className = '' }) {
+      const id = useMemo(uid, []);
+      return (
+        <div className={className}>
+          {label && <label htmlFor={id} className="block mb-1.5 text-sm font-medium text-slate-700">{label}</label>}
+          <select id={id} value={value} onChange={onChange}
+            className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-800
+                       focus:outline-none focus:ring-2 focus:ring-teal-400">
+            {options.map((o) => <option key={o.id} value={o.id}>{o.label}</option>)}
+          </select>
+        </div>
+      );
+    }
+
+    function Modal({ isOpen, onClose, title, size = 'md', children }) {
+      useEffect(() => {
+        if (!isOpen) return;
+        const onKey = (e) => { if (e.key === 'Escape') onClose(); };
+        window.addEventListener('keydown', onKey);
+        document.body.style.overflow = 'hidden';
+        return () => { window.removeEventListener('keydown', onKey); document.body.style.overflow = ''; };
+      }, [isOpen, onClose]);
+
+      if (!isOpen) return null;
+      const sizes = { sm: 'max-w-sm', md: 'max-w-md', lg: 'max-w-2xl' };
+
+      return (
+        <div className="fixed inset-0 z-50 flex items-end justify-center p-0 sm:items-center sm:p-4">
+          <div className="absolute inset-0 bg-slate-900/40 backdrop-blur-sm" onClick={onClose} aria-hidden="true" />
+          <div role="dialog" aria-modal="true" aria-label={title}
+            className={`anim-up relative w-full ${sizes[size]} rounded-t-3xl bg-white p-5 shadow-xl sm:rounded-2xl`}>
+            <div className="mb-4 flex items-center justify-between">
+              <h2 className="text-base font-bold text-slate-900">{title}</h2>
+              <Button variant="ghost" size="sm" onClick={onClose} aria-label="닫기">✕</Button>
+            </div>
+            {children}
+          </div>
+        </div>
+      );
+    }
+
+    // ========================================
+    // 📡 OpenAI API Client
+    // ========================================
+
+    /**
+     * Chat Completions 스트리밍 호출.
+     * onDelta(text) 로 토큰이 도착할 때마다 콜백하고, 최종 전체 문자열을 반환한다.
+     */
+    async function streamChat({ apiKey, model, messages, signal, onDelta }) {
+      const res = await fetch(OPENAI_URL, {
+        method: 'POST',
+        signal,
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${apiKey}`,
+        },
+        body: JSON.stringify({
+          model,
+          messages,
+          stream: true,
+          temperature: 0.8,
+          max_tokens: 700,
+        }),
+      });
+
+      if (!res.ok) {
+        let detail = '';
+        try {
+          const err = await res.json();
+          detail = (err.error && err.error.message) || '';
+        } catch (e) { /* 본문 파싱 실패 시 상태 코드만 사용 */ }
+        if (res.status === 401) throw new Error('API 키가 올바르지 않습니다. 설정에서 키를 확인해 주세요.');
+        if (res.status === 429) throw new Error('요청이 너무 많거나 크레딧이 부족합니다. 잠시 후 다시 시도해 주세요.');
+        throw new Error(detail || `요청에 실패했습니다 (HTTP ${res.status})`);
+      }
+
+      const reader = res.body.getReader();
+      const decoder = new TextDecoder();
+      let buffer = '';
+      let full = '';
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        buffer += decoder.decode(value, { stream: true });
+
+        const lines = buffer.split('\n');
+        buffer = lines.pop(); // 마지막 조각은 다음 청크와 이어 붙인다
+
+        for (const line of lines) {
+          const trimmed = line.trim();
+          if (!trimmed.startsWith('data:')) continue;
+          const payload = trimmed.slice(5).trim();
+          if (payload === '[DONE]') continue;
+          try {
+            const json = JSON.parse(payload);
+            const delta = json.choices && json.choices[0] && json.choices[0].delta;
+            if (delta && delta.content) {
+              full += delta.content;
+              onDelta(delta.content);
+            }
+          } catch (e) { /* 부분 JSON 조각은 건너뛴다 */ }
+        }
+      }
+      return full;
+    }
+
+    // ========================================
+    // 🧩 Common / Layout Components
+    // ========================================
+
+    function Header({ style, onOpenSettings, onReset, canReset }) {
+      return (
+        <header className="sticky top-0 z-20 border-b border-slate-200/80 bg-white/80 backdrop-blur">
+          <div className="mx-auto flex max-w-3xl items-center gap-3 px-4 py-3">
+            <div className="relative grid h-10 w-10 shrink-0 place-items-center">
+              <span className="anim-breathe absolute inset-0 rounded-full bg-teal-300/50" />
+              <span className="relative text-lg" aria-hidden="true">🌱</span>
+            </div>
+            <div className="min-w-0 flex-1">
+              <h1 className="truncate text-base font-bold text-slate-900">마음쉼표</h1>
+              <p className="truncate text-xs text-slate-500">{STYLES[style].emoji} {STYLES[style].label} 모드</p>
+            </div>
+            <Button variant="ghost" size="sm" onClick={onReset} disabled={!canReset} aria-label="대화 새로 시작">
+              ↺ <span className="hidden sm:inline">새 대화</span>
+            </Button>
+            <Button variant="secondary" size="sm" onClick={onOpenSettings} aria-label="설정 열기">
+              ⚙ <span className="hidden sm:inline">설정</span>
+            </Button>
+          </div>
+        </header>
+      );
+    }
+
+    function StyleSwitcher({ style, onChange }) {
+      return (
+        <div className="flex gap-2 overflow-x-auto px-4 py-3" role="radiogroup" aria-label="상담 스타일 선택">
+          {Object.entries(STYLES).map(([key, s]) => {
+            const active = key === style;
+            return (
+              <button key={key} role="radio" aria-checked={active} onClick={() => onChange(key)}
+                className={`shrink-0 rounded-xl border px-3 py-2 text-left transition
+                  focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500
+                  ${active ? 'border-teal-500 bg-teal-50 shadow-sm' : 'border-slate-200 bg-white hover:bg-slate-50'}`}>
+                <span className={`block text-sm font-semibold ${active ? 'text-teal-800' : 'text-slate-700'}`}>
+                  {s.emoji} {s.label}
+                </span>
+                <span className="block text-[11px] text-slate-500">{s.desc}</span>
+              </button>
+            );
+          })}
+        </div>
+      );
+    }
+
+    function CrisisBanner({ onDismiss }) {
+      return (
+        <div role="alert" className="anim-up mx-4 mb-3 rounded-2xl border border-rose-200 bg-rose-50 p-4">
+          <div className="flex items-start gap-3">
+            <span className="text-lg" aria-hidden="true">🆘</span>
+            <div className="min-w-0 flex-1">
+              <p className="text-sm font-bold text-rose-900">지금 많이 힘드시군요. 혼자 견디지 않으셨으면 해요.</p>
+              <p className="mt-1 text-xs leading-relaxed text-rose-800">
+                아래 번호는 24시간 무료로 전문 상담사와 바로 연결됩니다. 위급한 상황이라면 119에 연락해 주세요.
+              </p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {HELPLINES.map((h) => (
+                  <a key={h.tel} href={`tel:${h.tel}`}
+                    className="rounded-xl border border-rose-200 bg-white px-3 py-2 text-xs shadow-sm transition hover:bg-rose-100">
+                    <span className="block font-bold text-rose-700">{h.tel}</span>
+                    <span className="block text-[11px] text-slate-500">{h.name} · {h.note}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+            <Button variant="ghost" size="sm" onClick={onDismiss} aria-label="안내 닫기">✕</Button>
+          </div>
+        </div>
+      );
+    }
+
+    function TypingDots() {
+      return (
+        <span className="inline-flex items-center gap-1 py-1" aria-label="답변 작성 중">
+          {[0, 1, 2].map((i) => (
+            <span key={i} className="anim-dot h-1.5 w-1.5 rounded-full bg-slate-400"
+              style={{ animationDelay: `${i * 0.15}s` }} />
+          ))}
+        </span>
+      );
+    }
+
+    function MessageBubble({ message, streaming }) {
+      const isUser = message.role === 'user';
+      return (
+        <div className={`anim-up flex gap-2.5 ${isUser ? 'justify-end' : 'justify-start'}`}>
+          {!isUser && (
+            <div className="mt-1 grid h-8 w-8 shrink-0 place-items-center rounded-full bg-teal-100 text-sm" aria-hidden="true">🌱</div>
+          )}
+          <div className={`flex max-w-[82%] flex-col sm:max-w-[70%] ${isUser ? 'items-end' : 'items-start'}`}>
+            <div className={`whitespace-pre-wrap break-words rounded-2xl px-4 py-2.5 text-sm leading-relaxed shadow-sm
+              ${isUser
+                ? 'rounded-br-md bg-teal-600 text-white'
+                : 'rounded-bl-md bg-white text-slate-800 ring-1 ring-slate-900/5'}`}>
+              {message.content
+                ? <span className={streaming ? 'caret' : ''}>{message.content}</span>
+                : <TypingDots />}
+            </div>
+            <span className="mt-1 px-1 text-[11px] text-slate-400">{timeLabel(message.ts)}</span>
+          </div>
+        </div>
+      );
+    }
+
+    function EmptyState({ onPick }) {
+      return (
+        <div className="anim-up flex flex-col items-center px-6 py-10 text-center">
+          <div className="relative mb-4 grid h-20 w-20 place-items-center">
+            <span className="anim-breathe absolute inset-0 rounded-full bg-teal-200/60" />
+            <span className="relative text-3xl" aria-hidden="true">🌱</span>
+          </div>
+          <h2 className="text-lg font-bold text-slate-900">어떤 마음이 오늘 가장 무거우신가요?</h2>
+          <p className="mt-2 max-w-md text-sm leading-relaxed text-slate-500">
+            판단하지 않고 끝까지 들을게요. 정리되지 않은 말이어도 괜찮으니 편하게 시작해 보세요.
+          </p>
+          <div className="mt-6 grid w-full max-w-md gap-2">
+            {STARTERS.map((s) => (
+              <button key={s} onClick={() => onPick(s)}
+                className="rounded-xl border border-slate-200 bg-white px-4 py-3 text-left text-sm text-slate-700 shadow-sm
+                           transition hover:border-teal-300 hover:bg-teal-50
+                           focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500">
+                💬 {s}
+              </button>
+            ))}
+          </div>
+        </div>
+      );
+    }
+
+    function Composer({ value, onChange, onSend, onStop, busy, disabled }) {
+      const ref = useRef(null);
+
+      // 입력 길이에 맞춰 textarea 높이 자동 조절
+      useEffect(() => {
+        const el = ref.current;
+        if (!el) return;
+        el.style.height = 'auto';
+        el.style.height = Math.min(el.scrollHeight, 160) + 'px';
+      }, [value]);
+
+      const onKeyDown = (e) => {
+        // 한글 조합 중 Enter 는 무시 (IME 확정용 Enter)
+        if (e.key === 'Enter' && !e.shiftKey && !e.nativeEvent.isComposing) {
+          e.preventDefault();
+          onSend();
+        }
+      };
+
+      return (
+        <div className="sticky bottom-0 border-t border-slate-200/80 bg-white/90 px-4 py-3 backdrop-blur">
+          <div className="mx-auto flex max-w-3xl items-end gap-2">
+            <textarea
+              ref={ref} rows={1} value={value} disabled={disabled}
+              onChange={(e) => onChange(e.target.value)} onKeyDown={onKeyDown}
+              placeholder={disabled ? 'API 키를 먼저 설정해 주세요' : '지금 드는 생각이나 감정을 적어 보세요 (Enter 전송 · Shift+Enter 줄바꿈)'}
+              aria-label="메시지 입력"
+              className="max-h-40 min-h-[44px] flex-1 resize-none rounded-2xl border border-slate-200 bg-white px-4 py-3
+                         text-sm leading-relaxed text-slate-800 placeholder-slate-400 shadow-sm
+                         focus:outline-none focus:ring-2 focus:ring-teal-400 disabled:bg-slate-100" />
+            {busy
+              ? <Button variant="danger" size="lg" onClick={onStop} className="h-[44px]">■ 중지</Button>
+              : <Button size="lg" onClick={onSend} disabled={disabled || !value.trim()} className="h-[44px]">보내기</Button>}
+          </div>
+          <p className="mx-auto mt-2 max-w-3xl text-center text-[11px] leading-relaxed text-slate-400">
+            이 대화는 전문 의료·심리 치료를 대체하지 않습니다. 위급할 때는 <b className="font-semibold text-slate-500">109</b> 또는 119로 연락해 주세요.
+          </p>
+        </div>
+      );
+    }
+
+    function SettingsModal({ isOpen, onClose, apiKey, model, onSave, onClearAll }) {
+      const [draftKey, setDraftKey] = useState(apiKey);
+      const [draftModel, setDraftModel] = useState(model);
+      const [error, setError] = useState('');
+
+      // 모달을 열 때마다 현재 값으로 초기화
+      useEffect(() => {
+        if (isOpen) { setDraftKey(apiKey); setDraftModel(model); setError(''); }
+      }, [isOpen, apiKey, model]);
+
+      const submit = () => {
+        const key = draftKey.trim();
+        if (!key.startsWith('sk-')) { setError('OpenAI API 키는 sk- 로 시작합니다.'); return; }
+        onSave({ apiKey: key, model: draftModel });
+        onClose();
+      };
+
+      return (
+        <Modal isOpen={isOpen} onClose={onClose} title="설정">
+          <div className="space-y-4">
+            <Input label="OpenAI API 키" type="password" value={draftKey} error={error}
+              placeholder="sk-..." onChange={(e) => setDraftKey(e.target.value)} />
+            <p className="-mt-2 text-[11px] leading-relaxed text-slate-500">
+              키는 이 브라우저의 localStorage 에만 저장되며, 요청은 브라우저에서 OpenAI 로 직접 전송됩니다.
+              공용 PC 에서는 사용 후 아래 초기화를 눌러 주세요.
+            </p>
+            <Select label="모델" value={draftModel} options={MODELS}
+              onChange={(e) => setDraftModel(e.target.value)} />
+            <div className="flex items-center justify-between gap-2 border-t border-slate-100 pt-4">
+              <Button variant="danger" size="sm" onClick={onClearAll}>대화 · 키 전체 삭제</Button>
+              <div className="flex gap-2">
+                <Button variant="secondary" onClick={onClose}>취소</Button>
+                <Button onClick={submit}>저장</Button>
+              </div>
+            </div>
+          </div>
+        </Modal>
+      );
+    }
+
+    // ========================================
+    // 📄 Page Component — 상담 채팅
+    // ========================================
+
+    function CounselingChat() {
+      const [apiKey, setApiKey] = useState(() => load(STORAGE.key, DEFAULT_API_KEY));
+      const [model, setModel] = useState(() => load(STORAGE.model, MODELS[0].id));
+      const [style, setStyle] = useState(() => load(STORAGE.style, 'empathy'));
+      const [messages, setMessages] = useState(() => load(STORAGE.chat, []));
+      const [draft, setDraft] = useState('');
+      const [busy, setBusy] = useState(false);
+      const [error, setError] = useState('');
+      const [crisis, setCrisis] = useState(false);
+      const [settingsOpen, setSettingsOpen] = useState(false);
+
+      const abortRef = useRef(null);
+      const bottomRef = useRef(null);
+
+      // 상태 영속화
+      useEffect(() => { save(STORAGE.key, apiKey); }, [apiKey]);
+      useEffect(() => { save(STORAGE.model, model); }, [model]);
+      useEffect(() => { save(STORAGE.style, style); }, [style]);
+      useEffect(() => { save(STORAGE.chat, messages); }, [messages]);
+
+      // 새 메시지가 오면 항상 아래로 스크롤
+      useEffect(() => {
+        if (bottomRef.current) bottomRef.current.scrollIntoView({ behavior: 'smooth', block: 'end' });
+      }, [messages, busy]);
+
+      // 언마운트 시 진행 중인 요청 정리
+      useEffect(() => () => { if (abortRef.current) abortRef.current.abort(); }, []);
+
+      const systemPrompt = useMemo(
+        () => `${BASE_PROMPT}\n\n${STYLES[style].prompt}`,
+        [style]
+      );
+
+      const stop = useCallback(() => {
+        if (abortRef.current) abortRef.current.abort();
+      }, []);
+
+      const send = useCallback(async (rawText) => {
+        const text = (rawText !== undefined ? rawText : draft).trim();
+        if (!text || busy) return;
+        if (!apiKey.trim()) { setSettingsOpen(true); return; }
+
+        setError('');
+        if (hasCrisisSignal(text)) setCrisis(true);
+
+        const userMsg = { id: uid(), role: 'user', content: text, ts: Date.now() };
+        const botMsg = { id: uid(), role: 'assistant', content: '', ts: Date.now() };
+
+        // 최근 20턴까지만 전송해 토큰 사용을 제한한다
+        const history = [...messages, userMsg].slice(-20)
+          .map((m) => ({ role: m.role, content: m.content }));
+
+        setMessages((prev) => [...prev, userMsg, botMsg]);
+        setDraft('');
+        setBusy(true);
+
+        const controller = new AbortController();
+        abortRef.current = controller;
+
+        try {
+          await streamChat({
+            apiKey: apiKey.trim(),
+            model,
+            signal: controller.signal,
+            messages: [{ role: 'system', content: systemPrompt }, ...history],
+            onDelta: (chunk) => {
+              setMessages((prev) => prev.map((m) =>
+                m.id === botMsg.id ? { ...m, content: m.content + chunk } : m));
+            },
+          });
+        } catch (err) {
+          if (err.name === 'AbortError') {
+            // 사용자가 중지 — 내용이 없는 답변 말풍선은 제거
+            setMessages((prev) => prev.filter((m) => !(m.id === botMsg.id && !m.content)));
+          } else {
+            setError(err.message || '알 수 없는 오류가 발생했습니다.');
+            setMessages((prev) => prev.filter((m) => m.id !== botMsg.id));
+          }
+        } finally {
+          abortRef.current = null;
+          setBusy(false);
+        }
+      }, [draft, busy, apiKey, model, messages, systemPrompt]);
+
+      const resetChat = () => {
+        if (busy) stop();
+        if (messages.length && !window.confirm('지금까지의 대화를 모두 지우고 새로 시작할까요?')) return;
+        setMessages([]);
+        setError('');
+        setCrisis(false);
+      };
+
+      const clearAll = () => {
+        if (!window.confirm('저장된 대화와 API 키를 모두 삭제할까요?')) return;
+        if (busy) stop();
+        setMessages([]);
+        setApiKey('');
+        setCrisis(false);
+        setSettingsOpen(false);
+      };
+
+      // 스트리밍 중인 말풍선(항상 마지막 assistant 메시지)에 커서 표시
+      const streamingId = busy && messages.length ? messages[messages.length - 1].id : null;
+
+      return (
+        <div className="flex min-h-screen flex-col bg-gradient-to-b from-teal-50 via-slate-50 to-slate-100">
+          <Header style={style} canReset={messages.length > 0}
+            onReset={resetChat} onOpenSettings={() => setSettingsOpen(true)} />
+
+          <div className="mx-auto w-full max-w-3xl">
+            <StyleSwitcher style={style} onChange={setStyle} />
+            {crisis && <CrisisBanner onDismiss={() => setCrisis(false)} />}
+          </div>
+
+          <main className="scroll-soft mx-auto w-full max-w-3xl flex-1 space-y-4 overflow-y-auto px-4 pb-6">
+            {messages.length === 0
+              ? <EmptyState onPick={(s) => send(s)} />
+              : messages.map((m) => (
+                  <MessageBubble key={m.id} message={m} streaming={m.id === streamingId} />
+                ))}
+
+            {error && (
+              <div role="alert" className="anim-up flex items-start gap-2 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
+                <span aria-hidden="true">⚠️</span>
+                <div className="flex-1">
+                  <p>{error}</p>
+                  <button onClick={() => setSettingsOpen(true)} className="mt-1 text-xs font-semibold underline">설정 열기</button>
+                </div>
+              </div>
+            )}
+
+            <div ref={bottomRef} />
+          </main>
+
+          <Composer value={draft} onChange={setDraft} onSend={() => send()} onStop={stop}
+            busy={busy} disabled={!apiKey.trim()} />
+
+          <SettingsModal isOpen={settingsOpen} onClose={() => setSettingsOpen(false)}
+            apiKey={apiKey} model={model} onClearAll={clearAll}
+            onSave={({ apiKey: k, model: m }) => { setApiKey(k); setModel(m); setError(''); }} />
+        </div>
+      );
+    }
+
+    // ========================================
+    // 🚀 App Component
+    // ========================================
+
+    function App() {
+      return <CounselingChat />;
+    }
+
+    // ========================================
+    // Rendering
+    // ========================================
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>

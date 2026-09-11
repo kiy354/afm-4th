@@ -1,0 +1,397 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - heading [level=1] [ref=e4]:
+      - img "HARA 건강지도" [ref=e5]
+    - list [ref=e6]:
+      - listitem [ref=e7]:
+        - link "건강지도 홈" [ref=e8] [cursor=pointer]:
+          - /url: "#a"
+      - listitem [ref=e9]:
+        - link [ref=e10] [cursor=pointer]:
+          - /url: "#a"
+          - strong [ref=e11]: 병원·약국
+          - text: 종류별 찾기
+      - listitem [ref=e12]:
+        - link [ref=e13] [cursor=pointer]:
+          - /url: "#a"
+          - text: 우리지역 좋은병원
+          - strong [ref=e14]: 찾기
+      - listitem [ref=e15]:
+        - link [ref=e16] [cursor=pointer]:
+          - /url: "#a"
+          - text: 전문병원
+          - strong [ref=e17]: 찾기
+      - listitem:
+        - link "임시지도":
+          - /url: "#a"
+  - generic [ref=e18]:
+    - generic:
+      - generic:
+        - generic [ref=e19]:
+          - heading "건강지도 홈" [level=2] [ref=e20]
+          - generic [ref=e21]:
+            - textbox "병원명 또는 약국명 입력" [ref=e22]: 이안과의원
+            - link "검색" [active] [ref=e23] [cursor=pointer]:
+              - /url: "#none"
+          - generic [ref=e25]:
+            - text: 검색결과 (20건)
+            - paragraph [ref=e26]: ※ 내 위치와 가까운 병원 또는 약국의 검색결과입니다.
+          - list [ref=e28]:
+            - listitem [ref=e354]:
+              - link "드림아이안과의원" [ref=e355] [cursor=pointer]:
+                - /url: "#"
+              - link "길찾기" [ref=e356] [cursor=pointer]:
+                - /url: http://map.naver.com/index.nhn?elng=127.7201749&elat=37.8679122&etext=%EB%93%9C%EB%A6%BC%EC%95%84%EC%9D%B4%EC%95%88%EA%B3%BC%EC%9D%98%EC%9B%90&menu=route&pathType=1
+              - paragraph [ref=e357]:
+                - text: 64.8km의원033-241-0025
+                - generic [ref=e360] [cursor=pointer]:
+                  - generic [ref=e361]: 주소
+                  - text: 강원특별자치도 춘천시 방송길 98, 3층 (온의동)
+              - list [ref=e362]:
+                - listitem [ref=e363]:
+                  - generic [ref=e365]: 약품목수
+                - listitem [ref=e366]:
+                  - generic [ref=e368]: 주사제처방률
+            - listitem [ref=e369]:
+              - link "이안과의원" [ref=e370] [cursor=pointer]:
+                - /url: "#"
+              - link "길찾기" [ref=e371] [cursor=pointer]:
+                - /url: http://map.naver.com/index.nhn?elng=127.1888202&elat=37.5568749&etext=%EC%9D%B4%EC%95%88%EA%B3%BC%EC%9D%98%EC%9B%90&menu=route&pathType=1
+              - paragraph [ref=e372]:
+                - text: 74.6km의원031-792-2207
+                - generic [ref=e375] [cursor=pointer]:
+                  - generic [ref=e376]: 주소
+                  - text: 경기도 하남시 미사강변대로54번길 91, 센타프라자 3층 306호 (풍산동)
+              - list [ref=e377]:
+                - listitem [ref=e378]:
+                  - generic [ref=e380]: 주사제처방률
+                - listitem [ref=e381]:
+                  - generic [ref=e383]: 약품목수
+            - listitem [ref=e384]:
+              - link "성남이안과의원" [ref=e385] [cursor=pointer]:
+                - /url: "#"
+              - link "길찾기" [ref=e386] [cursor=pointer]:
+                - /url: http://map.naver.com/index.nhn?elng=127.1295201&elat=37.4322806&etext=%EC%84%B1%EB%82%A8%EC%9D%B4%EC%95%88%EA%B3%BC%EC%9D%98%EC%9B%90&menu=route&pathType=1
+              - paragraph [ref=e387]:
+                - text: 76.2km의원031-722-3388
+                - generic [ref=e390] [cursor=pointer]:
+                  - generic [ref=e391]: 주소
+                  - text: 경기도 성남시 중원구 성남대로1148번길 2, 소평빌딩 2층 (성남동)
+              - list [ref=e392]:
+                - listitem [ref=e393]:
+                  - generic [ref=e395]: 주사제처방률
+                - listitem [ref=e396]:
+                  - generic [ref=e398]: 약품목수
+            - listitem [ref=e399]:
+              - link "연세이안과의원" [ref=e400] [cursor=pointer]:
+                - /url: "#"
+              - link "길찾기" [ref=e401] [cursor=pointer]:
+                - /url: http://map.naver.com/index.nhn?elng=127.1309261&elat=37.4960804&etext=%EC%97%B0%EC%84%B8%EC%9D%B4%EC%95%88%EA%B3%BC%EC%9D%98%EC%9B%90&menu=route&pathType=1
+              - paragraph [ref=e402]:
+                - text: 77.5km의원02-408-7416
+                - generic [ref=e405] [cursor=pointer]:
+                  - generic [ref=e406]: 주소
+                  - text: 서울특별시 송파구 동남로 207, (가락동, 유성빌딩 3층)
+              - list [ref=e407]:
+                - listitem [ref=e408]:
+                  - generic [ref=e410]: 약품목수
+                - listitem [ref=e411]:
+                  - generic [ref=e413]: 주사제처방률
+            - listitem [ref=e414]:
+              - link "해피아이안과의원" [ref=e415] [cursor=pointer]:
+                - /url: "#"
+              - link "길찾기" [ref=e416] [cursor=pointer]:
+                - /url: http://map.naver.com/index.nhn?elng=127.1059365&elat=37.2712840&etext=%ED%95%B4%ED%94%BC%EC%95%84%EC%9D%B4%EC%95%88%EA%B3%BC%EC%9D%98%EC%9B%90&menu=route&pathType=1
+              - paragraph [ref=e417]:
+                - text: 77.6km의원031-281-5757
+                - generic [ref=e420] [cursor=pointer]:
+                  - generic [ref=e421]: 주소
+                  - text: 경기도 용인시 기흥구 신갈로 52, 901호 (신갈동, 외환은행)
+              - list [ref=e422]:
+                - listitem [ref=e423]:
+                  - generic [ref=e425]: 약품목수
+                - listitem [ref=e426]:
+                  - generic [ref=e428]: 주사제처방률
+            - listitem [ref=e429]:
+              - link "송파이안과의원" [ref=e430] [cursor=pointer]:
+                - /url: "#"
+              - link "길찾기" [ref=e431] [cursor=pointer]:
+                - /url: http://map.naver.com/index.nhn?elng=127.1110759&elat=37.5014623&etext=%EC%86%A1%ED%8C%8C%EC%9D%B4%EC%95%88%EA%B3%BC%EC%9D%98%EC%9B%90&menu=route&pathType=1
+              - paragraph [ref=e432]:
+                - text: 79.3km의원02-416-2369
+                - generic [ref=e435] [cursor=pointer]:
+                  - generic [ref=e436]: 주소
+                  - text: 서울특별시 송파구 송파대로 376, 정우빌딩 2층 (송파동)
+              - list [ref=e437]:
+                - listitem [ref=e438]:
+                  - generic [ref=e440]: 주사제처방률
+                - listitem [ref=e441]:
+                  - generic [ref=e443]: 약품목수
+            - listitem [ref=e444]:
+              - link "서울이안과의원" [ref=e445] [cursor=pointer]:
+                - /url: "#"
+              - link "길찾기" [ref=e446] [cursor=pointer]:
+                - /url: http://map.naver.com/index.nhn?elng=127.1407261&elat=37.6011493&etext=%EC%84%9C%EC%9A%B8%EC%9D%B4%EC%95%88%EA%B3%BC%EC%9D%98%EC%9B%90&menu=route&pathType=1
+              - paragraph [ref=e447]:
+                - text: 80.3km의원031-550-6660
+                - generic [ref=e450] [cursor=pointer]:
+                  - generic [ref=e451]: 주소
+                  - text: 경기도 구리시 경춘로 229, 402호 (인창동, 쌍용센스타워플리티넘)
+              - list [ref=e452]:
+                - listitem [ref=e453]:
+                  - generic [ref=e455]: 주사제처방률
+                - listitem [ref=e456]:
+                  - generic [ref=e458]: 약품목수
+            - listitem [ref=e459]:
+              - link "휴아이안과의원" [ref=e460] [cursor=pointer]:
+                - /url: "#"
+              - link "길찾기" [ref=e461] [cursor=pointer]:
+                - /url: http://map.naver.com/index.nhn?elng=127.0710165&elat=37.2520638&etext=%ED%9C%B4%EC%95%84%EC%9D%B4%EC%95%88%EA%B3%BC%EC%9D%98%EC%9B%90&menu=route&pathType=1
+              - paragraph [ref=e462]:
+                - text: 80.8km의원031-273-1779
+                - generic [ref=e465] [cursor=pointer]:
+                  - generic [ref=e466]: 주소
+                  - text: 경기도 수원시 영통구 봉영로 1569, (영통동, 뉴월드프라자 303호)
+              - list [ref=e467]:
+                - listitem [ref=e468]:
+                  - generic [ref=e470]: 주사제처방률
+                - listitem [ref=e471]:
+                  - generic [ref=e473]: 약품목수
+            - listitem [ref=e474]:
+              - link "굿아이동탄이안과의원" [ref=e475] [cursor=pointer]:
+                - /url: "#"
+              - link "길찾기" [ref=e476] [cursor=pointer]:
+                - /url: http://map.naver.com/index.nhn?elng=127.0729529&elat=37.1928999&etext=%EA%B5%BF%EC%95%84%EC%9D%B4%EB%8F%99%ED%83%84%EC%9D%B4%EC%95%88%EA%B3%BC%EC%9D%98%EC%9B%90&menu=route&pathType=1
+              - paragraph [ref=e477]:
+                - text: 81.6km의원031-258-0100
+                - generic [ref=e480] [cursor=pointer]:
+                  - generic [ref=e481]: 주소
+                  - text: 경기도 화성시 동탄구 동탄솔빛로 44, 6층 (반송동, 신성프라자)
+              - list [ref=e482]:
+                - listitem [ref=e483]:
+                  - generic [ref=e485]: 약품목수
+                - listitem [ref=e486]:
+                  - generic [ref=e488]: 주사제처방률
+            - listitem [ref=e489]:
+              - link "성모드림아이안과의원" [ref=e490] [cursor=pointer]:
+                - /url: "#"
+              - link "길찾기" [ref=e491] [cursor=pointer]:
+                - /url: http://map.naver.com/index.nhn?elng=127.0716058&elat=37.4851086&etext=%EC%84%B1%EB%AA%A8%EB%93%9C%EB%A6%BC%EC%95%84%EC%9D%B4%EC%95%88%EA%B3%BC%EC%9D%98%EC%9B%90&menu=route&pathType=1
+              - paragraph [ref=e492]:
+                - text: 82.3km의원02-2226-9668
+                - generic [ref=e495] [cursor=pointer]:
+                  - generic [ref=e496]: 주소
+                  - text: 서울특별시 강남구 삼성로 14, 408~409호 (개포동, 개포자이 프레지던스)
+              - list [ref=e497]:
+                - listitem [ref=e498]:
+                  - generic [ref=e500]: 약품목수
+                - listitem [ref=e501]:
+                  - generic [ref=e503]: 주사제처방률
+            - listitem [ref=e504]:
+              - link "신내이안과의원" [ref=e505] [cursor=pointer]:
+                - /url: "#"
+              - link "길찾기" [ref=e506] [cursor=pointer]:
+                - /url: http://map.naver.com/index.nhn?elng=127.0955682&elat=37.6066852&etext=%EC%8B%A0%EB%82%B4%EC%9D%B4%EC%95%88%EA%B3%BC%EC%9D%98%EC%9B%90&menu=route&pathType=1
+              - paragraph [ref=e507]:
+                - text: 84.3km의원02-3423-2888
+                - generic [ref=e510] [cursor=pointer]:
+                  - generic [ref=e511]: 주소
+                  - text: 서울특별시 중랑구 신내로 82, 302호 (신내동, 금강프라자)
+              - list [ref=e512]:
+                - listitem [ref=e513]:
+                  - generic [ref=e515]: 약품목수
+                - listitem [ref=e516]:
+                  - generic [ref=e518]: 주사제처방률
+            - listitem [ref=e519]:
+              - link "서울아이안과의원" [ref=e520] [cursor=pointer]:
+                - /url: "#"
+              - link "길찾기" [ref=e521] [cursor=pointer]:
+                - /url: http://map.naver.com/index.nhn?elng=127.0516276&elat=37.4983739&etext=%EC%84%9C%EC%9A%B8%EC%95%84%EC%9D%B4%EC%95%88%EA%B3%BC%EC%9D%98%EC%9B%90&menu=route&pathType=1
+              - paragraph [ref=e522]:
+                - text: 84.3km의원02-2135-5646
+                - generic [ref=e525] [cursor=pointer]:
+                  - generic [ref=e526]: 주소
+                  - text: 서울특별시 강남구 선릉로 323, 2층 6층 (역삼동)
+              - list [ref=e527]:
+                - listitem [ref=e528]:
+                  - generic [ref=e530]: 주사제처방률
+                - listitem [ref=e531]:
+                  - generic [ref=e533]: 약품목수
+            - listitem [ref=e534]:
+              - link "카이안과의원" [ref=e535] [cursor=pointer]:
+                - /url: "#"
+              - link "길찾기" [ref=e536] [cursor=pointer]:
+                - /url: http://map.naver.com/index.nhn?elng=127.0470436&elat=37.5035425&etext=%EC%B9%B4%EC%9D%B4%EC%95%88%EA%B3%BC%EC%9D%98%EC%9B%90&menu=route&pathType=1
+              - paragraph [ref=e537]:
+                - text: 84.9km의원02-6207-1236
+                - generic [ref=e540] [cursor=pointer]:
+                  - generic [ref=e541]: 주소
+                  - text: 서울특별시 강남구 테헤란로 326, 태보 역삼 아이타워 2,12층 (역삼동)
+              - list [ref=e542]:
+                - listitem [ref=e543]:
+                  - generic [ref=e545]: 주사제처방률
+                - listitem [ref=e546]:
+                  - generic [ref=e548]: 약품목수
+            - listitem [ref=e549]:
+              - link "삼성굿아이안과의원" [ref=e550] [cursor=pointer]:
+                - /url: "#"
+              - link "길찾기" [ref=e551] [cursor=pointer]:
+                - /url: http://map.naver.com/index.nhn?elng=127.0216897&elat=37.2750165&etext=%EC%82%BC%EC%84%B1%EA%B5%BF%EC%95%84%EC%9D%B4%EC%95%88%EA%B3%BC%EC%9D%98%EC%9B%90&menu=route&pathType=1
+              - paragraph [ref=e552]:
+                - text: 85.0km의원031-548-2824
+                - generic [ref=e555] [cursor=pointer]:
+                  - generic [ref=e556]: 주소
+                  - text: 경기도 수원시 팔달구 중부대로 44, 건우 까사미 타워 601~605호 (인계동)
+              - list [ref=e557]:
+                - listitem [ref=e558]:
+                  - generic [ref=e560]: 약품목수
+                - listitem [ref=e561]:
+                  - generic [ref=e563]: 주사제처방률
+            - listitem [ref=e564]:
+              - link "수원이안과의원" [ref=e565] [cursor=pointer]:
+                - /url: "#"
+              - link "길찾기" [ref=e566] [cursor=pointer]:
+                - /url: http://map.naver.com/index.nhn?elng=127.0169726&elat=37.2799929&etext=%EC%88%98%EC%9B%90%EC%9D%B4%EC%95%88%EA%B3%BC%EC%9D%98%EC%9B%90&menu=route&pathType=1
+              - paragraph [ref=e567]:
+                - text: 85.4km의원031-243-1100
+                - generic [ref=e570] [cursor=pointer]:
+                  - generic [ref=e571]: 주소
+                  - text: 경기도 수원시 팔달구 정조로 806, (팔달로1가)
+              - list [ref=e572]:
+                - listitem [ref=e573]:
+                  - generic [ref=e575]: 약품목수
+                - listitem [ref=e576]:
+                  - generic [ref=e578]: 주사제처방률
+            - listitem [ref=e579]:
+              - link "성모아이안과의원" [ref=e580] [cursor=pointer]:
+                - /url: "#"
+              - link "길찾기" [ref=e581] [cursor=pointer]:
+                - /url: http://map.naver.com/index.nhn?elng=127.0293410&elat=37.4976709&etext=%EC%84%B1%EB%AA%A8%EC%95%84%EC%9D%B4%EC%95%88%EA%B3%BC%EC%9D%98%EC%9B%90&menu=route&pathType=1
+              - paragraph [ref=e582]:
+                - text: 86.2km의원02-536-6500
+                - generic [ref=e585] [cursor=pointer]:
+                  - generic [ref=e586]: 주소
+                  - text: 서울특별시 강남구 테헤란로4길 6, 314호 (역삼동, 센트럴애비뉴)
+              - list [ref=e587]:
+                - listitem [ref=e588]:
+                  - generic [ref=e590]: 약품목수
+                - listitem [ref=e591]:
+                  - generic [ref=e593]: 주사제처방률
+            - listitem [ref=e594]:
+              - link "삼성아이안과의원" [ref=e595] [cursor=pointer]:
+                - /url: "#"
+              - link "길찾기" [ref=e596] [cursor=pointer]:
+                - /url: http://map.naver.com/index.nhn?elng=127.0285428&elat=37.4986460&etext=%EC%82%BC%EC%84%B1%EC%95%84%EC%9D%B4%EC%95%88%EA%B3%BC%EC%9D%98%EC%9B%90&menu=route&pathType=1
+              - paragraph [ref=e597]:
+                - text: 86.3km의원02-535-0075
+                - generic [ref=e600] [cursor=pointer]:
+                  - generic [ref=e601]: 주소
+                  - text: 서울특별시 강남구 테헤란로 105, 5층 (역삼동, 에이타워)
+              - list [ref=e602]:
+                - listitem [ref=e603]:
+                  - generic [ref=e605]: 약품목수
+                - listitem [ref=e606]:
+                  - generic [ref=e608]: 주사제처방률
+            - listitem [ref=e609]:
+              - link "강남아이오케이안과의원" [ref=e610] [cursor=pointer]:
+                - /url: "#"
+              - link "길찾기" [ref=e611] [cursor=pointer]:
+                - /url: http://map.naver.com/index.nhn?elng=127.0232950&elat=37.5060474&etext=%EA%B0%95%EB%82%A8%EC%95%84%EC%9D%B4%EC%98%A4%EC%BC%80%EC%9D%B4%EC%95%88%EA%B3%BC%EC%9D%98%EC%9B%90&menu=route&pathType=1
+              - paragraph [ref=e612]:
+                - text: 87.0km의원02-6949-0088
+                - generic [ref=e615] [cursor=pointer]:
+                  - generic [ref=e616]: 주소
+                  - text: 서울특별시 서초구 강남대로 491, 강남아이오케이안과 1~4층 (반포동)
+              - list [ref=e617]:
+                - listitem [ref=e618]:
+                  - generic [ref=e620]: 주사제처방률
+                - listitem [ref=e621]:
+                  - generic [ref=e623]: 약품목수
+            - listitem [ref=e624]:
+              - link "이안과의원" [ref=e625] [cursor=pointer]:
+                - /url: "#"
+              - link "길찾기" [ref=e626] [cursor=pointer]:
+                - /url: http://map.naver.com/index.nhn?elng=127.0892466&elat=36.9918474&etext=%EC%9D%B4%EC%95%88%EA%B3%BC%EC%9D%98%EC%9B%90&menu=route&pathType=1
+              - paragraph [ref=e627]:
+                - text: 87.1km의원031-655-5800
+                - generic [ref=e630] [cursor=pointer]:
+                  - generic [ref=e631]: 주소
+                  - text: 경기도 평택시 중앙2로 19, (평택동)
+              - list [ref=e632]:
+                - listitem [ref=e633]:
+                  - generic [ref=e635]: 약품목수
+                - listitem [ref=e636]:
+                  - generic [ref=e638]: 주사제처방률
+            - listitem [ref=e639]:
+              - link "하이안과의원" [ref=e640] [cursor=pointer]:
+                - /url: "#"
+              - link "길찾기" [ref=e641] [cursor=pointer]:
+                - /url: http://map.naver.com/index.nhn?elng=127.0214762&elat=37.5173225&etext=%ED%95%98%EC%9D%B4%EC%95%88%EA%B3%BC%EC%9D%98%EC%9B%90&menu=route&pathType=1
+              - paragraph [ref=e642]:
+                - text: 87.4km의원02-540-5377
+                - generic [ref=e645] [cursor=pointer]:
+                  - generic [ref=e646]: 주소
+                  - text: 서울특별시 강남구 도산대로 119, 3층 (신사동)
+              - list [ref=e647]:
+                - listitem [ref=e648]:
+                  - generic [ref=e650]: 주사제처방률
+                - listitem [ref=e651]:
+                  - generic [ref=e653]: 약품목수
+          - link "다운로드" [ref=e31] [cursor=pointer]:
+            - /url: /ra/hosp/selectHospSrchDtnListAjax.do?pageIndex=1&pages=0&tabgbn=null&_sidoCd=110000&_sidoCdNm=%EC%84%9C%EC%9A%B8&_sgguCd=110005&_sgguCdNm=%EA%B5%AC%EB%A1%9C%EA%B5%AC&_emdongNm=&_yadmNm=%EC%9D%B4%EC%95%88%EA%B3%BC%EC%9D%98%EC%9B%90&_xPosWGS84=&_yPosWGS84=&sidoCdMap2=&sidoCdNmMap2=&sgguCdMap2=&sgguCdNmMap2=&emdongNmMap2=&sidoCdNmMap=&emdongNmMap=&sortOrdr=&totalSrhYn=Y&isNoPositionGbn=&sno=&clCd=01&srchCd=&ykiho=&srchMode=map&isSim=N&xpos=127.98055&ypos=37.32240&isProfessional=&mode=Y&xPosWGS84=127.98055&yPosWGS84=37.3224&isDgsMap=&isEmyMap=&isHospMap=&gubun=&evlCd=09&isDown=&homeyadmNm=%EC%9D%B4%EC%95%88%EA%B3%BC%EC%9D%98%EC%9B%90&kindyadmNm=&gubun1=01&goodyadmNm=&gubun5=E1&goodshwSbjtCd=%EA%B4%80%EC%83%81%EB%8F%99%EB%A7%A5%EC%9A%B0%ED%9A%8C%EC%88%A0&sortType=&specialyadmNm=&tempyadmNm=&isDown=Y
+        - link "창 닫기" [ref=e33] [cursor=pointer]:
+          - /url: "#a"
+    - link "시/도 시/군/구 읍/면/동" [ref=e35] [cursor=pointer]:
+      - /url: "#a"
+      - generic [ref=e36]: 시/도
+      - generic [ref=e37]: 시/군/구
+      - generic [ref=e38]: 읍/면/동
+    - generic [ref=e39]:
+      - generic [ref=e40]:
+        - generic [ref=e655]:
+          - generic:
+            - generic:
+              - generic:
+                - generic "드림아이안과의원" [ref=e702]
+                - generic "이안과의원" [ref=e703]
+                - generic "성남이안과의원" [ref=e704]
+                - generic "연세이안과의원" [ref=e705]
+                - generic "해피아이안과의원" [ref=e706]
+                - generic "송파이안과의원" [ref=e707]
+                - generic "서울이안과의원" [ref=e708]
+                - generic "휴아이안과의원" [ref=e709]
+                - generic "굿아이동탄이안과의원" [ref=e710]
+                - generic "성모드림아이안과의원" [ref=e711]
+                - generic "신내이안과의원" [ref=e712]
+                - generic "서울아이안과의원" [ref=e713]
+                - generic "카이안과의원" [ref=e714]
+                - generic "삼성굿아이안과의원" [ref=e715]
+                - generic "수원이안과의원" [ref=e716]
+                - generic "성모아이안과의원" [ref=e717]
+                - generic "삼성아이안과의원" [ref=e718]
+                - generic "강남아이오케이안과의원" [ref=e719]
+                - generic "이안과의원" [ref=e720]
+                - generic "하이안과의원" [ref=e721]
+        - generic:
+          - generic: 100m
+          - link [ref=e724] [cursor=pointer]:
+            - /url: https://ssl.pstatic.net/static/maps/mantle/notice/legal.html
+            - img "NAVER" [ref=e725]
+      - generic:
+        - generic [ref=e41]:
+          - link "주변병원" [ref=e42] [cursor=pointer]:
+            - /url: javascript:void(0);
+          - link "주변약국" [ref=e43] [cursor=pointer]:
+            - /url: javascript:void(0);
+          - link "응급실" [ref=e44] [cursor=pointer]:
+            - /url: javascript:void(0);
+        - generic [ref=e45]:
+          - link "확대보기" [ref=e46] [cursor=pointer]:
+            - /url: javascript:void(0);
+          - link "축소보기" [ref=e47] [cursor=pointer]:
+            - /url: javascript:void(0);
+        - link "현재위치" [ref=e49] [cursor=pointer]:
+          - /url: javascript:void(0);
+        - link "현지도 검색" [ref=e51] [cursor=pointer]:
+          - /url: javascript:void(0);
+          - text: 현지도검색

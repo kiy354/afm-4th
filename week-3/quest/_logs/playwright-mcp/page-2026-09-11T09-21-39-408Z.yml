@@ -1,0 +1,500 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - complementary [ref=e5]:
+      - navigation [ref=e7]:
+        - generic [ref=e8]:
+          - link [ref=e10] [cursor=pointer]:
+            - /url: /
+            - img "TextLogo" [ref=e11]
+          - link [ref=e12] [cursor=pointer]:
+            - /url: /search
+            - button "검색" [ref=e13]
+        - generic [ref=e17]:
+          - generic [ref=e18]:
+            - button "비대면 진료" [ref=e20] [cursor=pointer]
+            - button "병원 찾기" [ref=e30] [cursor=pointer]
+            - button "약국 찾기" [ref=e40] [cursor=pointer]
+            - button "실시간 의료 상담" [ref=e51] [cursor=pointer]
+            - button "건강 정보" [ref=e60] [cursor=pointer]
+          - generic [ref=e69]:
+            - link [ref=e70] [cursor=pointer]:
+              - /url: https://abr.ge/@doctornow/web_organic?channel=web_organic&campaign=web_service&content=web_lnb_btn_service&term=%EC%95%B1+%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C&ad_group=WEB&og_tag_id=138187085&routing_short_id=d816rm&tracking_template_id=2b94e9766fea0e112f2b11b7410088c4&ad_type=click
+              - button "앱 다운로드" [ref=e71]
+            - button "로그인/가입" [ref=e72] [cursor=pointer]
+          - generic [ref=e77]:
+            - img "광고 이미지" [ref=e78] [cursor=pointer]
+            - paragraph [ref=e80]: AD
+    - generic [ref=e82]:
+      - generic [ref=e83]:
+        - generic [ref=e85]:
+          - button [ref=e86] [cursor=pointer]:
+            - link [ref=e87]:
+              - /url: /
+              - paragraph [ref=e88]: 홈
+          - button [ref=e91] [cursor=pointer]:
+            - link [ref=e92]:
+              - /url: /hospitals
+              - paragraph [ref=e93]: 병원 찾기
+          - button [ref=e96] [cursor=pointer]:
+            - link [ref=e97]:
+              - /url: /hospitals/search?keyword=구로구 안과
+              - paragraph [ref=e98]: 검색 결과
+        - generic [ref=e100]:
+          - button [ref=e101] [cursor=pointer]
+          - generic [ref=e105]:
+            - textbox "지역+과목명, 병원명을 입력해주세요" [ref=e106]: 구로구 안과
+            - button [ref=e107] [cursor=pointer]
+        - generic [ref=e111]:
+          - heading "구로구 안과 병원 추천 순위 16곳 (2026)" [level=1] [ref=e112]
+          - generic [ref=e113]:
+            - button [ref=e115] [cursor=pointer]
+            - generic [ref=e118]:
+              - button "관련도 순" [ref=e119] [cursor=pointer]:
+                - generic [aria-hidden] [ref=e123]: chevron_right
+              - button "비대면 진료" [ref=e124] [cursor=pointer]
+              - button "진료중" [ref=e130] [cursor=pointer]
+              - button "야간진료" [ref=e132] [cursor=pointer]
+              - button "전문의" [ref=e134] [cursor=pointer]
+          - generic [ref=e139]:
+            - link "한의수안과의원 병원 상세 보기 한의수안과의원 안과 진료종료 내일 휴무 15.0km 서울특별시 구로구 개봉동 야간진료 안과 전문의 1명" [ref=e141] [cursor=pointer]:
+              - /url: /hospitals/1EBBD9
+              - generic [ref=e142]: 한의수안과의원 병원 상세 보기
+              - generic [ref=e143]:
+                - generic [ref=e145]:
+                  - heading "한의수안과의원" [level=3] [ref=e147]
+                  - generic [ref=e148]: 안과
+                  - generic [ref=e150]:
+                    - generic [ref=e151]: 진료종료
+                    - generic [ref=e154]: 내일 휴무
+                  - generic [ref=e156]:
+                    - generic [ref=e159]: 15.0km
+                    - generic [ref=e160]: 서울특별시 구로구 개봉동
+                - generic [ref=e162]:
+                  - generic [ref=e163]: 야간진료
+                  - generic [ref=e164]: 안과 전문의 1명
+            - link "타임안과의원 병원 상세 보기 타임안과의원 안과 14.3km 서울특별시 구로구 고척동 안과 전문의 1명" [ref=e166] [cursor=pointer]:
+              - /url: /hospitals/CFB43B
+              - generic [ref=e167]: 타임안과의원 병원 상세 보기
+              - generic [ref=e168]:
+                - generic [ref=e170]:
+                  - heading "타임안과의원" [level=3] [ref=e172]
+                  - generic [ref=e173]: 안과
+                  - generic [ref=e176]:
+                    - generic [ref=e179]: 14.3km
+                    - generic [ref=e180]: 서울특별시 구로구 고척동
+                - generic [ref=e182]: 안과 전문의 1명
+            - link "최안과의원 병원 상세 보기 최안과의원 안과 진료중 18:30에 마감 16.0km 서울특별시 구로구 오류동 안과 전문의 1명" [ref=e185] [cursor=pointer]:
+              - /url: /hospitals/1B5D0A
+              - generic [ref=e186]: 최안과의원 병원 상세 보기
+              - generic [ref=e187]:
+                - generic [ref=e189]:
+                  - heading "최안과의원" [level=3] [ref=e191]
+                  - generic [ref=e192]: 안과
+                  - generic [ref=e194]:
+                    - generic [ref=e195]: 진료중
+                    - generic [ref=e199]: 18:30에 마감
+                  - generic [ref=e201]:
+                    - generic [ref=e204]: 16.0km
+                    - generic [ref=e205]: 서울특별시 구로구 오류동
+                - generic [ref=e207]: 안과 전문의 1명
+            - link "조은성모안과의원 병원 상세 보기 조은성모안과의원 안과 진료종료 내일 09:30에 시작 14.4km 서울특별시 구로구 고척동 안과 전문의 1명" [ref=e210] [cursor=pointer]:
+              - /url: /hospitals/6E7CBE
+              - generic [ref=e211]: 조은성모안과의원 병원 상세 보기
+              - generic [ref=e212]:
+                - generic [ref=e214]:
+                  - heading "조은성모안과의원" [level=3] [ref=e216]
+                  - generic [ref=e217]: 안과
+                  - generic [ref=e219]:
+                    - generic [ref=e220]: 진료종료
+                    - generic [ref=e223]: 내일 09:30에 시작
+                  - generic [ref=e225]:
+                    - generic [ref=e228]: 14.4km
+                    - generic [ref=e229]: 서울특별시 구로구 고척동
+                - generic [ref=e231]: 안과 전문의 1명
+            - link "정안과의원 병원 상세 보기 정안과의원 안과 진료종료 내일 09:30에 시작 12.8km 서울특별시 구로구 구로동 안과 전문의 2명" [ref=e234] [cursor=pointer]:
+              - /url: /hospitals/530A17
+              - generic [ref=e235]: 정안과의원 병원 상세 보기
+              - generic [ref=e236]:
+                - generic [ref=e238]:
+                  - heading "정안과의원" [level=3] [ref=e240]
+                  - generic [ref=e241]: 안과
+                  - generic [ref=e243]:
+                    - generic [ref=e244]: 진료종료
+                    - generic [ref=e247]: 내일 09:30에 시작
+                  - generic [ref=e249]:
+                    - generic [ref=e252]: 12.8km
+                    - generic [ref=e253]: 서울특별시 구로구 구로동
+                - generic [ref=e255]: 안과 전문의 2명
+            - link "전안과의원 병원 상세 보기 전안과의원 안과 진료종료 내일 10:00에 시작 12.4km 서울특별시 구로구 신도림동 안과 전문의 1명" [ref=e258] [cursor=pointer]:
+              - /url: /hospitals/CE4F97
+              - generic [ref=e259]: 전안과의원 병원 상세 보기
+              - generic [ref=e260]:
+                - generic [ref=e262]:
+                  - heading "전안과의원" [level=3] [ref=e264]
+                  - generic [ref=e265]: 안과
+                  - generic [ref=e267]:
+                    - generic [ref=e268]: 진료종료
+                    - generic [ref=e271]: 내일 10:00에 시작
+                  - generic [ref=e273]:
+                    - generic [ref=e276]: 12.4km
+                    - generic [ref=e277]: 서울특별시 구로구 신도림동
+                - generic [ref=e279]: 안과 전문의 1명
+            - link "이기현안과의원 병원 상세 보기 이기현안과의원 안과 진료종료 내일 09:00에 시작 15.0km 서울특별시 구로구 개봉동 안과 전문의 1명" [ref=e282] [cursor=pointer]:
+              - /url: /hospitals/6BECAD
+              - generic [ref=e283]: 이기현안과의원 병원 상세 보기
+              - generic [ref=e284]:
+                - generic [ref=e286]:
+                  - heading "이기현안과의원" [level=3] [ref=e288]
+                  - generic [ref=e289]: 안과
+                  - generic [ref=e291]:
+                    - generic [ref=e292]: 진료종료
+                    - generic [ref=e295]: 내일 09:00에 시작
+                  - generic [ref=e297]:
+                    - generic [ref=e300]: 15.0km
+                    - generic [ref=e301]: 서울특별시 구로구 개봉동
+                - generic [ref=e303]: 안과 전문의 1명
+            - link "연세안과의원 병원 상세 보기 연세안과의원 안과 진료종료 내일 09:00에 시작 15.5km 서울특별시 구로구 고척동 안과 전문의 1명" [ref=e306] [cursor=pointer]:
+              - /url: /hospitals/73000D
+              - generic [ref=e307]: 연세안과의원 병원 상세 보기
+              - generic [ref=e308]:
+                - generic [ref=e310]:
+                  - heading "연세안과의원" [level=3] [ref=e312]
+                  - generic [ref=e313]: 안과
+                  - generic [ref=e315]:
+                    - generic [ref=e316]: 진료종료
+                    - generic [ref=e319]: 내일 09:00에 시작
+                  - generic [ref=e321]:
+                    - generic [ref=e324]: 15.5km
+                    - generic [ref=e325]: 서울특별시 구로구 고척동
+                - generic [ref=e327]: 안과 전문의 1명
+            - link "서울연세안과의원 병원 상세 보기 서울연세안과의원 안과 11.3km 서울특별시 구로구 구로동 안과 전문의 3명" [ref=e330] [cursor=pointer]:
+              - /url: /hospitals/428B24
+              - generic [ref=e331]: 서울연세안과의원 병원 상세 보기
+              - generic [ref=e332]:
+                - generic [ref=e334]:
+                  - heading "서울연세안과의원" [level=3] [ref=e336]
+                  - generic [ref=e337]: 안과
+                  - generic [ref=e340]:
+                    - generic [ref=e343]: 11.3km
+                    - generic [ref=e344]: 서울특별시 구로구 구로동
+                - generic [ref=e346]: 안과 전문의 3명
+            - link "서울안과의원 병원 상세 보기 서울안과의원 안과 14.8km 서울특별시 구로구 개봉동 안과 전문의 1명" [ref=e349] [cursor=pointer]:
+              - /url: /hospitals/FA1773
+              - generic [ref=e350]: 서울안과의원 병원 상세 보기
+              - generic [ref=e351]:
+                - generic [ref=e353]:
+                  - heading "서울안과의원" [level=3] [ref=e355]
+                  - generic [ref=e356]: 안과
+                  - generic [ref=e359]:
+                    - generic [ref=e362]: 14.8km
+                    - generic [ref=e363]: 서울특별시 구로구 개봉동
+                - generic [ref=e365]: 안과 전문의 1명
+            - link "서울눈에빛안과의원 병원 상세 보기 서울눈에빛안과의원 안과 12.2km 서울특별시 구로구 신도림동 안과 전문의 1명" [ref=e368] [cursor=pointer]:
+              - /url: /hospitals/C55572
+              - generic [ref=e369]: 서울눈에빛안과의원 병원 상세 보기
+              - generic [ref=e370]:
+                - generic [ref=e372]:
+                  - heading "서울눈에빛안과의원" [level=3] [ref=e374]
+                  - generic [ref=e375]: 안과
+                  - generic [ref=e378]:
+                    - generic [ref=e381]: 12.2km
+                    - generic [ref=e382]: 서울특별시 구로구 신도림동
+                - generic [ref=e384]: 안과 전문의 1명
+            - link "삼성밝은안과의원 병원 상세 보기 삼성밝은안과의원 안과 진료종료 내일 휴무 11.9km 서울특별시 구로구 구로동 안과 전문의 1명" [ref=e387] [cursor=pointer]:
+              - /url: /hospitals/7B6043
+              - generic [ref=e388]: 삼성밝은안과의원 병원 상세 보기
+              - generic [ref=e389]:
+                - generic [ref=e391]:
+                  - heading "삼성밝은안과의원" [level=3] [ref=e393]
+                  - generic [ref=e394]: 안과
+                  - generic [ref=e396]:
+                    - generic [ref=e397]: 진료종료
+                    - generic [ref=e400]: 내일 휴무
+                  - generic [ref=e402]:
+                    - generic [ref=e405]: 11.9km
+                    - generic [ref=e406]: 서울특별시 구로구 구로동
+                - generic [ref=e408]: 안과 전문의 1명
+            - link "삼성드림안과의원 병원 상세 보기 삼성드림안과의원 안과 진료중 18:30에 마감 12.0km 서울특별시 구로구 구로동 안과 전문의 1명" [ref=e411] [cursor=pointer]:
+              - /url: /hospitals/B0FD0B
+              - generic [ref=e412]: 삼성드림안과의원 병원 상세 보기
+              - generic [ref=e413]:
+                - generic [ref=e415]:
+                  - heading "삼성드림안과의원" [level=3] [ref=e417]
+                  - generic [ref=e418]: 안과
+                  - generic [ref=e420]:
+                    - generic [ref=e421]: 진료중
+                    - generic [ref=e425]: 18:30에 마감
+                  - generic [ref=e427]:
+                    - generic [ref=e430]: 12.0km
+                    - generic [ref=e431]: 서울특별시 구로구 구로동
+                - generic [ref=e433]: 안과 전문의 1명
+            - link "밝은이안과의원 병원 상세 보기 밝은이안과의원 안과 진료중 18:30에 마감 16.2km 서울특별시 구로구 오류동 야간진료 안과 전문의 1명" [ref=e436] [cursor=pointer]:
+              - /url: /hospitals/35B1AE
+              - generic [ref=e437]: 밝은이안과의원 병원 상세 보기
+              - generic [ref=e438]:
+                - generic [ref=e440]:
+                  - heading "밝은이안과의원" [level=3] [ref=e442]
+                  - generic [ref=e443]: 안과
+                  - generic [ref=e445]:
+                    - generic [ref=e446]: 진료중
+                    - generic [ref=e450]: 18:30에 마감
+                  - generic [ref=e452]:
+                    - generic [ref=e455]: 16.2km
+                    - generic [ref=e456]: 서울특별시 구로구 오류동
+                - generic [ref=e458]:
+                  - generic [ref=e459]: 야간진료
+                  - generic [ref=e460]: 안과 전문의 1명
+            - link "김&홍안과의원 병원 상세 보기 김&홍안과의원 안과 12.1km 서울특별시 구로구 구로동 안과 전문의 1명" [ref=e462] [cursor=pointer]:
+              - /url: /hospitals/A8E0A4
+              - generic [ref=e463]: 김&홍안과의원 병원 상세 보기
+              - generic [ref=e464]:
+                - generic [ref=e466]:
+                  - heading "김&홍안과의원" [level=3] [ref=e468]
+                  - generic [ref=e469]: 안과
+                  - generic [ref=e472]:
+                    - generic [ref=e475]: 12.1km
+                    - generic [ref=e476]: 서울특별시 구로구 구로동
+                - generic [ref=e478]: 안과 전문의 1명
+            - link "구로밝은빛안과의원 병원 상세 보기 구로밝은빛안과의원 안과 진료종료 내일 09:00에 시작 12.4km 서울특별시 구로구 구로동 안과 전문의 1명" [ref=e481] [cursor=pointer]:
+              - /url: /hospitals/EBDA4A
+              - generic [ref=e482]: 구로밝은빛안과의원 병원 상세 보기
+              - generic [ref=e483]:
+                - generic [ref=e485]:
+                  - heading "구로밝은빛안과의원" [level=3] [ref=e487]
+                  - generic [ref=e488]: 안과
+                  - generic [ref=e490]:
+                    - generic [ref=e491]: 진료종료
+                    - generic [ref=e494]: 내일 09:00에 시작
+                  - generic [ref=e496]:
+                    - generic [ref=e499]: 12.4km
+                    - generic [ref=e500]: 서울특별시 구로구 구로동
+                - generic [ref=e502]: 안과 전문의 1명
+          - separator [ref=e504]
+          - generic [ref=e505]:
+            - generic [ref=e506]:
+              - heading "다른 지역 안과" [level=2] [ref=e507]
+              - generic [ref=e508]:
+                - link "서울 안과 병원 검색 서울 안과" [ref=e510] [cursor=pointer]:
+                  - /url: /hospitals/search?keyword=%EC%84%9C%EC%9A%B8%20%EC%95%88%EA%B3%BC
+                  - generic [ref=e511]: 서울 안과 병원 검색
+                  - generic [ref=e512]: 서울 안과
+                - link "부산 안과 병원 검색 부산 안과" [ref=e514] [cursor=pointer]:
+                  - /url: /hospitals/search?keyword=%EB%B6%80%EC%82%B0%20%EC%95%88%EA%B3%BC
+                  - generic [ref=e515]: 부산 안과 병원 검색
+                  - generic [ref=e516]: 부산 안과
+                - link "대구 안과 병원 검색 대구 안과" [ref=e518] [cursor=pointer]:
+                  - /url: /hospitals/search?keyword=%EB%8C%80%EA%B5%AC%20%EC%95%88%EA%B3%BC
+                  - generic [ref=e519]: 대구 안과 병원 검색
+                  - generic [ref=e520]: 대구 안과
+                - link "인천 안과 병원 검색 인천 안과" [ref=e522] [cursor=pointer]:
+                  - /url: /hospitals/search?keyword=%EC%9D%B8%EC%B2%9C%20%EC%95%88%EA%B3%BC
+                  - generic [ref=e523]: 인천 안과 병원 검색
+                  - generic [ref=e524]: 인천 안과
+                - link "광주 안과 병원 검색 광주 안과" [ref=e526] [cursor=pointer]:
+                  - /url: /hospitals/search?keyword=%EA%B4%91%EC%A3%BC%20%EC%95%88%EA%B3%BC
+                  - generic [ref=e527]: 광주 안과 병원 검색
+                  - generic [ref=e528]: 광주 안과
+                - link "대전 안과 병원 검색 대전 안과" [ref=e530] [cursor=pointer]:
+                  - /url: /hospitals/search?keyword=%EB%8C%80%EC%A0%84%20%EC%95%88%EA%B3%BC
+                  - generic [ref=e531]: 대전 안과 병원 검색
+                  - generic [ref=e532]: 대전 안과
+                - link "울산 안과 병원 검색 울산 안과" [ref=e534] [cursor=pointer]:
+                  - /url: /hospitals/search?keyword=%EC%9A%B8%EC%82%B0%20%EC%95%88%EA%B3%BC
+                  - generic [ref=e535]: 울산 안과 병원 검색
+                  - generic [ref=e536]: 울산 안과
+                - link "세종 안과 병원 검색 세종 안과" [ref=e538] [cursor=pointer]:
+                  - /url: /hospitals/search?keyword=%EC%84%B8%EC%A2%85%20%EC%95%88%EA%B3%BC
+                  - generic [ref=e539]: 세종 안과 병원 검색
+                  - generic [ref=e540]: 세종 안과
+                - link "경기 안과 병원 검색 경기 안과" [ref=e542] [cursor=pointer]:
+                  - /url: /hospitals/search?keyword=%EA%B2%BD%EA%B8%B0%20%EC%95%88%EA%B3%BC
+                  - generic [ref=e543]: 경기 안과 병원 검색
+                  - generic [ref=e544]: 경기 안과
+                - link "강원 안과 병원 검색 강원 안과" [ref=e546] [cursor=pointer]:
+                  - /url: /hospitals/search?keyword=%EA%B0%95%EC%9B%90%20%EC%95%88%EA%B3%BC
+                  - generic [ref=e547]: 강원 안과 병원 검색
+                  - generic [ref=e548]: 강원 안과
+                - link "충북 안과 병원 검색 충북 안과" [ref=e550] [cursor=pointer]:
+                  - /url: /hospitals/search?keyword=%EC%B6%A9%EB%B6%81%20%EC%95%88%EA%B3%BC
+                  - generic [ref=e551]: 충북 안과 병원 검색
+                  - generic [ref=e552]: 충북 안과
+                - link "충남 안과 병원 검색 충남 안과" [ref=e554] [cursor=pointer]:
+                  - /url: /hospitals/search?keyword=%EC%B6%A9%EB%82%A8%20%EC%95%88%EA%B3%BC
+                  - generic [ref=e555]: 충남 안과 병원 검색
+                  - generic [ref=e556]: 충남 안과
+                - link "전북 안과 병원 검색 전북 안과" [ref=e558] [cursor=pointer]:
+                  - /url: /hospitals/search?keyword=%EC%A0%84%EB%B6%81%20%EC%95%88%EA%B3%BC
+                  - generic [ref=e559]: 전북 안과 병원 검색
+                  - generic [ref=e560]: 전북 안과
+                - link "전남 안과 병원 검색 전남 안과" [ref=e562] [cursor=pointer]:
+                  - /url: /hospitals/search?keyword=%EC%A0%84%EB%82%A8%20%EC%95%88%EA%B3%BC
+                  - generic [ref=e563]: 전남 안과 병원 검색
+                  - generic [ref=e564]: 전남 안과
+                - link "경북 안과 병원 검색 경북 안과" [ref=e566] [cursor=pointer]:
+                  - /url: /hospitals/search?keyword=%EA%B2%BD%EB%B6%81%20%EC%95%88%EA%B3%BC
+                  - generic [ref=e567]: 경북 안과 병원 검색
+                  - generic [ref=e568]: 경북 안과
+                - link "경남 안과 병원 검색 경남 안과" [ref=e570] [cursor=pointer]:
+                  - /url: /hospitals/search?keyword=%EA%B2%BD%EB%82%A8%20%EC%95%88%EA%B3%BC
+                  - generic [ref=e571]: 경남 안과 병원 검색
+                  - generic [ref=e572]: 경남 안과
+                - link "제주 안과 병원 검색 제주 안과" [ref=e574] [cursor=pointer]:
+                  - /url: /hospitals/search?keyword=%EC%A0%9C%EC%A3%BC%20%EC%95%88%EA%B3%BC
+                  - generic [ref=e575]: 제주 안과 병원 검색
+                  - generic [ref=e576]: 제주 안과
+            - generic [ref=e577]:
+              - heading "구로구 다른 진료과" [level=2] [ref=e578]
+              - generic [ref=e579]:
+                - link "구로구 내과 병원 검색 구로구 내과" [ref=e581] [cursor=pointer]:
+                  - /url: /hospitals/search?keyword=%EA%B5%AC%EB%A1%9C%EA%B5%AC%20%EB%82%B4%EA%B3%BC
+                  - generic [ref=e582]: 구로구 내과 병원 검색
+                  - generic [ref=e583]: 구로구 내과
+                - link "구로구 소아청소년과 병원 검색 구로구 소아청소년과" [ref=e585] [cursor=pointer]:
+                  - /url: /hospitals/search?keyword=%EA%B5%AC%EB%A1%9C%EA%B5%AC%20%EC%86%8C%EC%95%84%EC%B2%AD%EC%86%8C%EB%85%84%EA%B3%BC
+                  - generic [ref=e586]: 구로구 소아청소년과 병원 검색
+                  - generic [ref=e587]: 구로구 소아청소년과
+                - link "구로구 이비인후과 병원 검색 구로구 이비인후과" [ref=e589] [cursor=pointer]:
+                  - /url: /hospitals/search?keyword=%EA%B5%AC%EB%A1%9C%EA%B5%AC%20%EC%9D%B4%EB%B9%84%EC%9D%B8%ED%9B%84%EA%B3%BC
+                  - generic [ref=e590]: 구로구 이비인후과 병원 검색
+                  - generic [ref=e591]: 구로구 이비인후과
+                - link "구로구 피부과 병원 검색 구로구 피부과" [ref=e593] [cursor=pointer]:
+                  - /url: /hospitals/search?keyword=%EA%B5%AC%EB%A1%9C%EA%B5%AC%20%ED%94%BC%EB%B6%80%EA%B3%BC
+                  - generic [ref=e594]: 구로구 피부과 병원 검색
+                  - generic [ref=e595]: 구로구 피부과
+                - link "구로구 정형외과 병원 검색 구로구 정형외과" [ref=e597] [cursor=pointer]:
+                  - /url: /hospitals/search?keyword=%EA%B5%AC%EB%A1%9C%EA%B5%AC%20%EC%A0%95%ED%98%95%EC%99%B8%EA%B3%BC
+                  - generic [ref=e598]: 구로구 정형외과 병원 검색
+                  - generic [ref=e599]: 구로구 정형외과
+                - link "구로구 정신건강의학과 병원 검색 구로구 정신건강의학과" [ref=e601] [cursor=pointer]:
+                  - /url: /hospitals/search?keyword=%EA%B5%AC%EB%A1%9C%EA%B5%AC%20%EC%A0%95%EC%8B%A0%EA%B1%B4%EA%B0%95%EC%9D%98%ED%95%99%EA%B3%BC
+                  - generic [ref=e602]: 구로구 정신건강의학과 병원 검색
+                  - generic [ref=e603]: 구로구 정신건강의학과
+                - link "구로구 가정의학과 병원 검색 구로구 가정의학과" [ref=e605] [cursor=pointer]:
+                  - /url: /hospitals/search?keyword=%EA%B5%AC%EB%A1%9C%EA%B5%AC%20%EA%B0%80%EC%A0%95%EC%9D%98%ED%95%99%EA%B3%BC
+                  - generic [ref=e606]: 구로구 가정의학과 병원 검색
+                  - generic [ref=e607]: 구로구 가정의학과
+                - link "구로구 산부인과 병원 검색 구로구 산부인과" [ref=e609] [cursor=pointer]:
+                  - /url: /hospitals/search?keyword=%EA%B5%AC%EB%A1%9C%EA%B5%AC%20%EC%82%B0%EB%B6%80%EC%9D%B8%EA%B3%BC
+                  - generic [ref=e610]: 구로구 산부인과 병원 검색
+                  - generic [ref=e611]: 구로구 산부인과
+                - link "구로구 비뇨의학과 병원 검색 구로구 비뇨의학과" [ref=e613] [cursor=pointer]:
+                  - /url: /hospitals/search?keyword=%EA%B5%AC%EB%A1%9C%EA%B5%AC%20%EB%B9%84%EB%87%A8%EC%9D%98%ED%95%99%EA%B3%BC
+                  - generic [ref=e614]: 구로구 비뇨의학과 병원 검색
+                  - generic [ref=e615]: 구로구 비뇨의학과
+                - link "구로구 신경과 병원 검색 구로구 신경과" [ref=e617] [cursor=pointer]:
+                  - /url: /hospitals/search?keyword=%EA%B5%AC%EB%A1%9C%EA%B5%AC%20%EC%8B%A0%EA%B2%BD%EA%B3%BC
+                  - generic [ref=e618]: 구로구 신경과 병원 검색
+                  - generic [ref=e619]: 구로구 신경과
+                - link "구로구 신경외과 병원 검색 구로구 신경외과" [ref=e621] [cursor=pointer]:
+                  - /url: /hospitals/search?keyword=%EA%B5%AC%EB%A1%9C%EA%B5%AC%20%EC%8B%A0%EA%B2%BD%EC%99%B8%EA%B3%BC
+                  - generic [ref=e622]: 구로구 신경외과 병원 검색
+                  - generic [ref=e623]: 구로구 신경외과
+                - link "구로구 재활의학과 병원 검색 구로구 재활의학과" [ref=e625] [cursor=pointer]:
+                  - /url: /hospitals/search?keyword=%EA%B5%AC%EB%A1%9C%EA%B5%AC%20%EC%9E%AC%ED%99%9C%EC%9D%98%ED%95%99%EA%B3%BC
+                  - generic [ref=e626]: 구로구 재활의학과 병원 검색
+                  - generic [ref=e627]: 구로구 재활의학과
+                - link "구로구 마취통증의학과 병원 검색 구로구 마취통증의학과" [ref=e629] [cursor=pointer]:
+                  - /url: /hospitals/search?keyword=%EA%B5%AC%EB%A1%9C%EA%B5%AC%20%EB%A7%88%EC%B7%A8%ED%86%B5%EC%A6%9D%EC%9D%98%ED%95%99%EA%B3%BC
+                  - generic [ref=e630]: 구로구 마취통증의학과 병원 검색
+                  - generic [ref=e631]: 구로구 마취통증의학과
+                - link "구로구 외과 병원 검색 구로구 외과" [ref=e633] [cursor=pointer]:
+                  - /url: /hospitals/search?keyword=%EA%B5%AC%EB%A1%9C%EA%B5%AC%20%EC%99%B8%EA%B3%BC
+                  - generic [ref=e634]: 구로구 외과 병원 검색
+                  - generic [ref=e635]: 구로구 외과
+                - link "구로구 치과 병원 검색 구로구 치과" [ref=e637] [cursor=pointer]:
+                  - /url: /hospitals/search?keyword=%EA%B5%AC%EB%A1%9C%EA%B5%AC%20%EC%B9%98%EA%B3%BC
+                  - generic [ref=e638]: 구로구 치과 병원 검색
+                  - generic [ref=e639]: 구로구 치과
+      - contentinfo [ref=e640]:
+        - generic [ref=e641]:
+          - generic [ref=e643]:
+            - list [ref=e644]:
+              - listitem [ref=e645]: 닥터나우
+              - listitem [ref=e646]:
+                - link "회사 소개" [ref=e647] [cursor=pointer]:
+                  - /url: https://company.doctornow.co.kr/company
+              - listitem [ref=e648]:
+                - link "팀 문화" [ref=e649] [cursor=pointer]:
+                  - /url: https://company.doctornow.co.kr/culture
+              - listitem [ref=e650]:
+                - link "서비스 소개" [ref=e651] [cursor=pointer]:
+                  - /url: https://company.doctornow.co.kr/service
+              - listitem [ref=e652]:
+                - link "제휴 안내" [ref=e653] [cursor=pointer]:
+                  - /url: https://company.doctornow.co.kr/partnership
+              - listitem [ref=e654]:
+                - link "소식 · 공지" [ref=e655] [cursor=pointer]:
+                  - /url: https://company.doctornow.co.kr/notice
+              - listitem [ref=e656]:
+                - link "채용 공고" [ref=e657] [cursor=pointer]:
+                  - /url: https://recruit.doctornow.co.kr/
+            - generic [ref=e658]:
+              - list [ref=e659]:
+                - listitem [ref=e660]: 서비스
+                - listitem [ref=e661]:
+                  - link "비대면 진료" [ref=e662] [cursor=pointer]:
+                    - /url: /telemedicine/doctors
+                - listitem [ref=e663]:
+                  - link "병원 찾기" [ref=e664] [cursor=pointer]:
+                    - /url: /hospitals
+                - listitem [ref=e665]:
+                  - link "탈모 진료비" [ref=e666] [cursor=pointer]:
+                    - /url: /non-benefit/%ED%83%88%EB%AA%A8/%ED%94%84%EB%A1%9C%ED%8E%98%EC%8B%9C%EC%95%84
+                - listitem [ref=e667]:
+                  - link "다이어트 진료비" [ref=e668] [cursor=pointer]:
+                    - /url: /non-benefit/%EB%B9%84%EB%A7%8C/%EB%A7%88%EC%9A%B4%EC%9E%90%EB%A1%9C
+                - listitem [ref=e669]:
+                  - link "여드름 진료비" [ref=e670] [cursor=pointer]:
+                    - /url: /non-benefit/%EC%97%AC%EB%93%9C%EB%A6%84/%EC%9D%B4%EC%86%8C%ED%8B%B0%EB%85%BC
+                - listitem [ref=e671]:
+                  - link "약국 찾기" [ref=e672] [cursor=pointer]:
+                    - /url: /non-benefit/map
+                - listitem [ref=e673]:
+                  - link "건강 매거진" [ref=e674] [cursor=pointer]:
+                    - /url: /content/magazine/list/INTERNAL
+                - listitem [ref=e675]:
+                  - link "1분 FAQ" [ref=e676] [cursor=pointer]:
+                    - /url: /content/faq
+                - listitem [ref=e677]:
+                  - link "실시간 의료상담" [ref=e678] [cursor=pointer]:
+                    - /url: /content/qna/realtime
+                - listitem [ref=e679]:
+                  - link "의약품 사전" [ref=e680] [cursor=pointer]:
+                    - /url: /medicine-dictionary
+                - listitem [ref=e681]:
+                  - link "질환백과" [ref=e682] [cursor=pointer]:
+                    - /url: /disease-encyclopedia
+              - list [ref=e683]:
+                - listitem [ref=e684]: 고객센터
+                - listitem [ref=e685]:
+                  - text: "채팅 문의 :"
+                  - link "채널톡" [ref=e686] [cursor=pointer]:
+                    - /url: https://doctornow.channel.io/home
+                - listitem [ref=e687]:
+                  - link "메일로 문의하기" [ref=e688] [cursor=pointer]:
+                    - /url: mailto:contact@doctornow.co.kr
+          - generic [ref=e689]:
+            - generic [ref=e690]:
+              - generic [ref=e691]:
+                - link "개인정보 처리 방침" [ref=e692] [cursor=pointer]:
+                  - /url: https://company.doctornow.co.kr/board/?action=readpost&post_id=1029&bbspaged=2
+                - link "서비스 이용약관" [ref=e693] [cursor=pointer]:
+                  - /url: https://company.doctornow.co.kr/board/?action=readpost&post_id=1028&bbspaged=2
+              - generic [ref=e694]:
+                - paragraph [ref=e695]: (주) 닥터나우
+                - paragraph [ref=e696]: "대표 정진웅 | 사업자 등록 번호 : 279-88-01452 | 통신판매업 신고번호 : 2024-서울강남-00439"
+                - paragraph [ref=e697]:
+                  - text: "주소 : 서울 강남구 테헤란로 625, 16층 |"
+                  - link "사업자 정보 확인" [ref=e698] [cursor=pointer]:
+                    - /url: https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2798801452
+              - generic [ref=e699]: Copyright 2026. 닥터나우 Inc. All rights reserved.
+            - generic [ref=e700]:
+              - link [ref=e701] [cursor=pointer]:
+                - /url: https://www.instagram.com/doctornow_official/
+              - link [ref=e704] [cursor=pointer]:
+                - /url: https://pf.kakao.com/_whSxnK
+              - link [ref=e707] [cursor=pointer]:
+                - /url: https://m.post.naver.com/doctornow
+              - link [ref=e710] [cursor=pointer]:
+                - /url: https://www.youtube.com/channel/UCdDJbE9dUH6YSYttHyZKWGQ
+  - alert [ref=e713]

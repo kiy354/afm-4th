@@ -1,0 +1,35 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - heading "오늘의 날씨" [level=1] [ref=e6]:
+        - generic [aria-hidden] [ref=e7]: ⛅
+        - text: 오늘의 날씨
+      - generic [ref=e8]:
+        - radiogroup "온도 단위" [ref=e9]:
+          - radio "°C" [checked] [ref=e10] [cursor=pointer]
+          - radio "°F" [ref=e11] [cursor=pointer]
+        - button "내 위치" [ref=e12] [cursor=pointer]:
+          - generic [aria-hidden] [ref=e13]: 📍
+          - text: 내 위치
+        - button "갱신 중" [disabled] [ref=e14]:
+          - generic [aria-hidden] [ref=e15]: ↻
+          - text: 갱신 중
+    - navigation "도시 선택" [ref=e16]:
+      - button "서울" [ref=e17] [cursor=pointer]
+      - button "부산" [ref=e18] [cursor=pointer]
+      - button "인천" [ref=e19] [cursor=pointer]
+      - button "대구" [ref=e20] [cursor=pointer]
+      - button "광주" [ref=e21] [cursor=pointer]
+      - button "강릉" [ref=e22] [cursor=pointer]
+      - button "제주" [ref=e23] [cursor=pointer]
+      - button "도쿄" [ref=e24] [cursor=pointer]
+      - button "뉴욕" [ref=e25] [cursor=pointer]
+  - main [ref=e26]:
+    - status [ref=e27]:
+      - generic [ref=e28]: 날씨 정보를 불러오는 중입니다
+  - contentinfo [ref=e40]:
+    - paragraph [ref=e41]:
+      - text: 데이터 제공
+      - link "OpenWeatherMap" [ref=e42] [cursor=pointer]:
+        - /url: https://openweathermap.org/
+      - text: · 10분마다 자동 갱신

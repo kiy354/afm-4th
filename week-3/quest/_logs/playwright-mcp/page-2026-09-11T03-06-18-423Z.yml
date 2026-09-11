@@ -1,0 +1,73 @@
+- generic [ref=f18e2]:
+  - generic [ref=f18e3]:
+    - generic [ref=f18e6]:
+      - generic [ref=f18e8]:
+        - generic [ref=f18e10]:
+          - heading "AI 공장장 4기 — 구글폼 자동 작성 실습" [level=1] [ref=f18e12]
+          - generic [ref=f18e13]: AI 에이전트가 대신 채우고 제출하는 연습용 폼입니다. 로그인 없이 누구나 제출할 수 있어요.
+        - generic [ref=f18e15]:
+          - generic [ref=f18e17]:
+            - link "Google에 로그인" [ref=f18e18] [cursor=pointer]:
+              - /url: https://accounts.google.com/Login?continue=https%3A%2F%2Fdocs.google.com%2Fforms%2Fd%2Fe%2F1FAIpQLSfKyhtnKbiLrbZ3I6iaY5M2EBPVjOrlHnAWuOUFQvTzfo-g0w%2Fviewform%3Fentry.16858268%3D%25EA%25B9%2580%25ED%2581%25B4%25EB%25A1%259C%25EB%2593%259C%26entry.1103264309%3DPlaywright%2520MCP%25EB%25A1%259C%2520%25EB%25B8%258C%25EB%259D%25BC%25EC%259A%25B0%25EC%25A0%2580%2520%25EC%259E%2590%25EB%258F%2599%25ED%2599%2594%2520%25EC%258B%25A4%25EC%258A%25B5%2520%25EB%25A7%2588%25EB%25AC%25B4%25EB%25A6%25AC%25ED%2595%2598%25EA%25B3%25A0%252C%2520%25ED%2581%25AC%25EB%25A1%25A4%25EB%25A7%2581%25ED%2595%259C%2520%25EB%258D%25B0%25EC%259D%25B4%25ED%2584%25B0%25EB%25A5%25BC%2520%25EC%25A0%2595%25EB%25A6%25AC%25ED%2595%25B4%2520%25EA%25B0%2584%25EB%258B%25A8%25ED%2595%259C%2520%25EB%25A6%25AC%25ED%258F%25AC%25ED%258A%25B8%2520%25ED%258E%2598%25EC%259D%25B4%25EC%25A7%2580%25EA%25B9%258C%25EC%25A7%2580%2520%25EB%25A7%258C%25EB%2593%25A4%25EC%2596%25B4%25EB%25B3%25B4%25EA%25B8%25B0%26entry.1685025906%3D4%26fbzx%3D2661180152452446920
+            - text: 하여 진행상황을 저장하세요.
+            - button "자세히 알아보기" [ref=f18e19] [cursor=pointer]
+          - generic [aria-hidden] [ref=f18e21]: "* 표시는 필수 질문임"
+      - list [ref=f18e22]:
+        - listitem [ref=f18e23]:
+          - generic [ref=f18e25]:
+            - heading "이름 필수 질문" [level=3] [ref=f18e28]:
+              - generic [ref=f18e29]: 이름
+              - generic "필수 질문" [ref=f18e30]: "*"
+            - textbox "이름 필수 질문" [ref=f18e36]: 김클로드
+        - listitem [ref=f18e38]:
+          - generic [ref=f18e40]:
+            - heading "이번 주 목표 필수 질문" [level=3] [ref=f18e43]:
+              - generic [ref=f18e44]: 이번 주 목표
+              - generic "필수 질문" [ref=f18e45]: "*"
+            - textbox "이번 주 목표 필수 질문" [ref=f18e51]: Playwright MCP로 브라우저 자동화 실습 마무리하고, 크롤링한 데이터를 정리해 간단한 리포트 페이지까지 만들어보기
+        - listitem [ref=f18e53]:
+          - generic [ref=f18e55]:
+            - heading "이번 주 수업 만족도 (1~5) 필수 질문" [level=3] [ref=f18e58]:
+              - generic [ref=f18e59]: 이번 주 수업 만족도 (1~5)
+              - generic "필수 질문" [ref=f18e60]: "*"
+            - radiogroup "이번 주 수업 만족도 (1~5) 필수 질문" [ref=f18e63]:
+              - generic [ref=f18e64]:
+                - generic [ref=f18e67]:
+                  - radio "1" [ref=f18e130] [cursor=pointer]
+                  - generic [ref=f18e69]: "1"
+                - generic [ref=f18e74]:
+                  - radio "2" [ref=f18e133] [cursor=pointer]
+                  - generic [ref=f18e76]: "2"
+                - generic [ref=f18e81]:
+                  - radio "3" [ref=f18e136] [cursor=pointer]
+                  - generic [ref=f18e83]: "3"
+                - generic [ref=f18e88]:
+                  - radio "4" [checked] [active] [ref=f18e139] [cursor=pointer]
+                  - generic [ref=f18e90]: "4"
+                - generic [ref=f18e95]:
+                  - radio "5" [ref=f18e142] [cursor=pointer]
+                  - generic [ref=f18e97]: "5"
+      - generic [ref=f18e100]:
+        - generic [ref=f18e101]:
+          - button "제출" [ref=f18e103] [cursor=pointer]
+          - button "양식 지우기" [ref=f18e108] [cursor=pointer]
+        - generic [ref=f18e112]: Google Forms를 통해 비밀번호를 제출하지 마세요.
+    - generic [ref=f18e113]:
+      - generic [ref=f18e114]:
+        - text: 이 콘텐츠는 Google이 만들거나 승인하지 않았습니다. -
+        - link "서비스 약관" [ref=f18e115] [cursor=pointer]:
+          - /url: https://policies.google.com/terms
+        - text: "-"
+        - link "개인정보처리방침" [ref=f18e116] [cursor=pointer]:
+          - /url: https://policies.google.com/privacy
+        - paragraph [ref=f18e117]:
+          - text: 양식이 의심스러운가요?
+          - link "보고서" [ref=f18e118] [cursor=pointer]:
+            - /url: https://docs.google.com/forms/d/e/1FAIpQLSfKyhtnKbiLrbZ3I6iaY5M2EBPVjOrlHnAWuOUFQvTzfo-g0w/abuse
+      - link [ref=f18e120] [cursor=pointer]:
+        - /url: //www.google.com/forms/about/?utm_source=product&utm_medium=forms_logo&utm_campaign=forms
+        - img "Google" [ref=f18e121]
+        - text: 설문지
+  - generic [ref=f18e125]:
+    - button "고객센터" [ref=f18e126] [cursor=pointer]
+    - tooltip [aria-hidden] [ref=f18e129]: 고객센터

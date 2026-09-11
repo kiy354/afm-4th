@@ -1,0 +1,20 @@
+[     416ms] [INFO] %c NAVER Maps JavaScript API v2 %c
+ 지금 사용하고 있는 네이버 지도 JavaScript API v2 버전은 2017년 12월 11일부터 지원을 종료합니다. 따라서 네이버 지도 JavaScript API v3 버전으로 마이그레이션이 필요합니다. 자세한 내용은 네이버 개발자 센터 공지사항(https://developers.naver.com/notice)을 참고해 주세요.   background: #2db400; color: white; display: block; background: none; @ https://openapi.map.naver.com/openapi/v2/maps.js?clientId=4Fe2XHCBsG2YxaWyhTT7:15
+[     481ms] [WARNING] A parser-blocking, cross site (i.e. different eTLD+1) script, https://openapi.map.naver.com/openapi/v3/maps-geocoder.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details. @ https://openapi.map.naver.com/openapi/v3/maps.js?govClientId=v8pbn7vcmo&submodules=geocoder:15
+[     482ms] [WARNING] A parser-blocking, cross site (i.e. different eTLD+1) script, https://openapi.map.naver.com/openapi/v3/maps-geocoder.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details. @ https://openapi.map.naver.com/openapi/v3/maps.js?govClientId=v8pbn7vcmo&submodules=geocoder:15
+[    3624ms] [LOG] 지원하지 않는 브라우저 @ https://www.hira.or.kr/js/hospital/HospitalMap.js?t=8:63
+[    4985ms] [LOG] ============= HospitalMap.js 검색모드==================== @ https://www.hira.or.kr/js/hospital/HospitalMap.js?t=8:105
+[    5408ms] ReferenceError: oMap is not defined
+    at Object.<anonymous> (https://www.hira.or.kr/js/hospital/HospitalMap.js?t=8:534:10)
+    at n.each (https://www.hira.or.kr/lib/jquery-1.11.0.min.js?t=2:2:2969)
+    at n.fn.init.each (https://www.hira.or.kr/lib/jquery-1.11.0.min.js?t=2:2:845)
+    at Object.addPointList (https://www.hira.or.kr/js/hospital/HospitalMap.js?t=8:504:11)
+    at callback (https://www.hira.or.kr/js/hospital/HospitalMap.js?t=8:986:18)
+    at Object.success (https://www.hira.or.kr/js/AjaxJSON.js?t=1:81:6)
+    at j (https://www.hira.or.kr/lib/jquery-1.11.0.min.js?t=2:2:27136)
+    at Object.fireWith [as resolveWith] (https://www.hira.or.kr/lib/jquery-1.11.0.min.js?t=2:2:27949)
+    at x (https://www.hira.or.kr/lib/jquery-1.11.0.min.js?t=2:4:22244)
+    at XMLHttpRequest.b (https://www.hira.or.kr/lib/jquery-1.11.0.min.js?t=2:4:26298)
+[   14177ms] [LOG] [위치생성] 127.98055/37.32240 @ https://www.hira.or.kr/js/hospital/HospitalMap.js?t=8:91
+[   14177ms] [LOG] [위치주입] 127.98055/37.32240 @ https://www.hira.or.kr/js/hospital/HospitalMap.js?t=8:92
+[   14179ms] [LOG] [지도초기화] : 127.98055/37.32240 @ https://www.hira.or.kr/js/hospital/HospitalMap.js?t=8:148

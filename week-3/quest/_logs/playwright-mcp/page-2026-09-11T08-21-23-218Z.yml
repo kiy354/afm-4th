@@ -1,0 +1,14 @@
+- generic [ref=f29e1]:
+  - generic [ref=f29e3]:
+    - generic [ref=f29e5]:
+      - button [ref=f29e6] [cursor=pointer]:
+        - img "이전으로" [ref=f29e7]
+      - searchbox "어떤 상품을 찾고 계세요?" [active] [ref=f29e15]
+    - generic [ref=f29e17]:
+      - generic [ref=f29e18]:
+        - generic [ref=f29e19]: 최근 검색어
+        - button "전체삭제" [ref=f29e20] [cursor=pointer]
+      - generic [ref=f29e23]:
+        - button "차량용 핸드폰 거치대" [ref=f29e24] [cursor=pointer]
+        - button [ref=f29e26] [cursor=pointer]
+  - alert [ref=f29e29]

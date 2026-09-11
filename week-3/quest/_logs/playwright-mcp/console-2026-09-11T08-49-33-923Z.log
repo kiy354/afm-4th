@@ -1,0 +1,14 @@
+[     675ms] [LOG] [weblog] FCP {name: FCP, value: 660, rating: good, delta: 660, entries: Array(1)} @ https://assets.coupangcdn.com/front/sdp-next/_next/static/chunks/9662-b7e2dacc9f1e12ad.js:0
+[     676ms] [LOG] [weblog] LCP {name: LCP, value: 660, rating: good, delta: 660, entries: Array(1)} @ https://assets.coupangcdn.com/front/sdp-next/_next/static/chunks/9662-b7e2dacc9f1e12ad.js:0
+[    1583ms] [LOG] [weblog] tti: 619, serverTime: 536, domReady: 619, imageLoadingTime: 0 @ https://assets.coupangcdn.com/front/sdp-next/_next/static/chunks/9662-b7e2dacc9f1e12ad.js:0
+[    2039ms] [WARNING] document.domain mutation is ignored because the surrounding agent cluster is origin-keyed. @ https://login.coupang.com/login/login.pang?rtnUrl=https%3A%2F%2Fwww.coupang.com%2Fnp%2Fpost%2Flogin%3Fr%3Dhttp%253A%252F%252Fwww.coupang.com%252Fvp%252Fproducts%252F6290698187%253FitemId%253D12492575291%2526vendorItemId%253D95983110873:128
+[    2107ms] [LOG] mweb otp login v4: init @ https://login.coupang.com/resources/20260908200732/dist/login.min.js:1
+[    2192ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://login.coupang.com/login/login.pang?rtnUrl=https%3A%2F%2Fwww.coupang.com%2Fnp%2Fpost%2Flogin%3Fr%3Dhttp%253A%252F%252Fwww.coupang.com%252Fvp%252Fproducts%252F6290698187%253FitemId%253D12492575291%2526vendorItemId%253D95983110873:0
+[    2193ms] [LOG] test web-vitals:  fcp --  {name: FCP, value: 332, rating: good, delta: 332, entries: Array(1)} @ https://assets.coupangcdn.com/customjs/coupang-web-log/3.4.1/web-log.umd.min.js:0
+[    2410ms] [LOG] wdpop: start @ https://www.coupang.com/dpop/iframe:13
+[    2411ms] [LOG] wdpop: reschedule @ https://www.coupang.com/dpop/iframe:13
+[    2411ms] [LOG] wdpop: inited @ https://www.coupang.com/dpop/iframe:13
+[    2422ms] [ERROR] Permissions policy violation: accelerometer is not allowed in this document. @ https://www.coupang.com/9z021S/Ija/1F8/igM-hA/rYiwmf1VkuauDp9m/bGdLUXc/Q2/YjIR0GTUwB:0
+[    2422ms] [WARNING] The deviceorientation events are blocked by permissions policy. See https://github.com/w3c/webappsec-permissions-policy/blob/master/features.md#sensor-features @ https://www.coupang.com/9z021S/Ija/1F8/igM-hA/rYiwmf1VkuauDp9m/bGdLUXc/Q2/YjIR0GTUwB:0
+[    2422ms] [ERROR] Permissions policy violation: accelerometer is not allowed in this document. @ https://www.coupang.com/9z021S/Ija/1F8/igM-hA/rYiwmf1VkuauDp9m/bGdLUXc/Q2/YjIR0GTUwB:0
+[    2422ms] [WARNING] The devicemotion events are blocked by permissions policy. See https://github.com/w3c/webappsec-permissions-policy/blob/master/features.md#sensor-features @ https://www.coupang.com/9z021S/Ija/1F8/igM-hA/rYiwmf1VkuauDp9m/bGdLUXc/Q2/YjIR0GTUwB:0

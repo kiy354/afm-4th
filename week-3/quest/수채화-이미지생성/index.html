@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>수채화 스튜디오 · fal.ai</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone@7.25.9/babel.min.js"></script>
+<style>
+  body {
+    background-color: #fbf8f3;
+    background-image:
+      radial-gradient(at 12% 18%, rgba(147, 197, 253, 0.22) 0px, transparent 55%),
+      radial-gradient(at 88% 8%, rgba(251, 207, 232, 0.25) 0px, transparent 50%),
+      radial-gradient(at 72% 88%, rgba(167, 243, 208, 0.20) 0px, transparent 55%),
+      radial-gradient(at 20% 92%, rgba(253, 230, 138, 0.22) 0px, transparent 50%);
+    background-attachment: fixed;
+  }
+  .paper { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E"); }
+  @keyframes bleed { 0%, 100% { transform: scale(1); opacity: .55 } 50% { transform: scale(1.18); opacity: .9 } }
+  .bleed { animation: bleed 2.2s ease-in-out infinite; }
+  @keyframes floatUp { from { opacity: 0; transform: translateY(10px) } to { opacity: 1; transform: none } }
+  .float-up { animation: floatUp .45s ease-out both; }
+  .scroll-thin::-webkit-scrollbar { width: 6px; height: 6px }
+  .scroll-thin::-webkit-scrollbar-thumb { background: #d6cfc2; border-radius: 9999px }
+</style>
+</head>
+<body class="paper text-stone-800">
+<div id="root"></div>
+
+<script type="text/babel">
+const { useState, useEffect, useMemo, useCallback } = React;
+
+// ========================================
+// ⚙️ Config & Constants
+// ========================================
+
+const FAL_ENDPOINT = 'https://fal.run';
+// 공개 저장소이므로 키는 비워 둔다. 우측 상단 🔑 버튼에서 넣으면 브라우저에 저장된다.
+const DEFAULT_API_KEY = '';
+const LS_KEY_API = 'wc.apiKey';
+const LS_KEY_GALLERY = 'wc.gallery';
+
+const MODELS = [
+  { id: 'fal-ai/flux/schnell', label: '빠른 생성 (Flux Schnell)', desc: '1~3초, 구도 탐색용', steps: 4 },
+  { id: 'fal-ai/flux/dev',     label: '고품질 (Flux Dev)',        desc: '10초 내외, 마무리용', steps: 28 },
+];
+
+// 이미지 모델은 한국어를 알아듣지 못하므로, 먼저 LLM으로 영어 묘사로 옮긴다
+const TRANSLATE_MODEL = 'google/gemini-flash-1.5';
+const TRANSLATE_SYSTEM = [
+  'You rewrite a short idea (usually Korean) into one vivid English prompt for an image generator.',
+  'Describe the subject, composition, lighting and colours concretely in a single sentence under 50 words.',
+  'Do not mention watercolor, painting style, medium or artist names — those are appended separately.',
+  'Output only the prompt sentence, with no quotes or preamble.',
+].join(' ');
+
+// 수채화 화풍 프리셋 — 사용자의 문장 뒤에 붙는 스타일 지시문
+const STYLE_PRESETS = [
+  {
+    id: 'classic', name: '투명 수채', emoji: '💧', swatch: 'from-sky-200 to-blue-300',
+    hint: '맑게 겹쳐 칠한 정통 수채화',
+    suffix: 'delicate transparent watercolor painting, layered luminous washes, soft bleeding edges, light pencil underdrawing, generous white negative space, cold-press paper texture',
+  },
+  {
+    id: 'wet', name: '웻온웻 번짐', emoji: '🌊', swatch: 'from-cyan-200 to-teal-300',
+    hint: '물기 많은 번짐과 물감 꽃',
+    suffix: 'wet-on-wet watercolor, blooming pigment, granulating washes, soft diffused edges, colors melting into each other, dreamy atmospheric mood',
+  },
+  {
+    id: 'ink', name: '펜선 + 채색', emoji: '🖋️', swatch: 'from-stone-300 to-slate-400',
+    hint: '가는 펜선 위에 얹은 담채',
+    suffix: 'ink line and watercolor wash illustration, fine black pen linework, loose color washes spilling past the lines, urban sketchbook style, lively and spontaneous',
+  },
+  {
+    id: 'botanical', name: '보태니컬', emoji: '🌿', swatch: 'from-emerald-200 to-green-300',
+    hint: '식물도감 같은 정밀 묘사',
+    suffix: 'botanical watercolor illustration in the style of a scientific plate, precise fine brushwork, muted natural pigments, clean white background, subtle shadows',
+  },
+  {
+    id: 'pastel', name: '파스텔 동화', emoji: '🧸', swatch: 'from-rose-200 to-orange-200',
+    hint: '그림책 느낌의 포근한 색감',
+    suffix: 'soft pastel watercolor children book illustration, gentle rounded shapes, warm cozy palette, whimsical storybook mood, hand-painted charm',
+  },
+  {
+    id: 'sumi', name: '수묵담채', emoji: '🎋', swatch: 'from-neutral-300 to-stone-400',
+    hint: '여백이 넓은 동양화풍',
+    suffix: 'oriental ink wash painting with light watercolor tint, expressive sumi-e brushstrokes, rice paper texture, minimal composition with wide empty space',
+  },
+];
+
+// 모든 프리셋에 공통으로 덧붙이는 재질감 지시문
+const COMMON_SUFFIX = 'watercolor on textured art paper, visible brush strokes and pigment granulation, hand-painted artwork, no text, no watermark';
+
+const SIZE_OPTIONS = [
+  { value: 'square_hd',      label: '정사각 1:1' },
+  { value: 'landscape_4_3',  label: '가로 4:3' },
+  { value: 'landscape_16_9', label: '와이드 16:9' },
+  { value: 'portrait_4_3',   label: '세로 3:4' },
+  { value: 'portrait_16_9',  label: '세로 9:16' },
+];
+
+const SAMPLE_PROMPTS = [
+  '창가에 앉아 졸고 있는 고양이',
+  '비 오는 날의 서울 골목길',
+  '유칼립투스 가지와 들꽃 한 다발',
+  '안개 낀 새벽 호수와 나룻배',
+  '레몬과 유리컵이 놓인 아침 식탁',
+  '벚꽃이 흩날리는 언덕 위 작은 집',
+];
+
+// ========================================
+// 🛠️ Utils & fal.ai API
+// ========================================
+
+function buildPrompt(subject, preset) {
+  return [subject.trim(), preset.suffix, COMMON_SUFFIX].filter(Boolean).join(', ');
+}
+
+// 한국어 문장을 영어 묘사로 옮긴다. 실패하면 원문을 그대로 쓴다.
+async function translateSubject(apiKey, text) {
+  try {
+    const res = await fetch(`${FAL_ENDPOINT}/fal-ai/any-llm`, {
+      method: 'POST',
+      headers: { 'Authorization': `Key ${apiKey}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ model: TRANSLATE_MODEL, system_prompt: TRANSLATE_SYSTEM, prompt: text }),
+    });
+    if (!res.ok) return text;
+    const data = await res.json();
+    // 뒤에 화풍 지시문이 붙으므로 마침표는 떼어 낸다
+    const output = (data.output || '').trim().replace(/[.\s]+$/, '');
+    return output || text;
+  } catch (_) {
+    return text;
+  }
+}
+
+async function generateImages({ apiKey, model, prompt, imageSize, numImages, seed }) {
+  const modelMeta = MODELS.find(m => m.id === model) || MODELS[0];
+  const body = {
+    prompt,
+    image_size: imageSize,
+    num_images: numImages,
+    num_inference_steps: modelMeta.steps,
+    enable_safety_checker: true,
+  };
+  if (seed !== null && seed !== undefined && String(seed).trim() !== '') body.seed = Number(seed);
+
+  const res = await fetch(`${FAL_ENDPOINT}/${model}`, {
+    method: 'POST',
+    headers: { 'Authorization': `Key ${apiKey}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
+  });
+
+  if (!res.ok) {
+    let detail = `HTTP ${res.status}`;
+    try {
+      const err = await res.json();
+      detail = err.detail
+        ? (typeof err.detail === 'string' ? err.detail : JSON.stringify(err.detail))
+        : JSON.stringify(err);
+    } catch (_) { /* 본문이 JSON이 아니면 상태 코드만 쓴다 */ }
+    if (res.status === 401 || res.status === 403) throw new Error(`API 키가 유효하지 않습니다. (${detail})`);
+    if (res.status === 429) throw new Error('요청이 몰렸습니다. 잠시 후 다시 시도해 주세요.');
+    throw new Error(`생성에 실패했습니다 — ${detail}`);
+  }
+  return res.json();
+}
+
+async function downloadImage(url, filename) {
+  try {
+    const res = await fetch(url);
+    const blob = await res.blob();
+    const objectUrl = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = objectUrl;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(objectUrl), 2000);
+  } catch (_) {
+    window.open(url, '_blank', 'noopener');
+  }
+}
+
+function loadJSON(key, fallback) {
+  try {
+    const raw = localStorage.getItem(key);
+    return raw ? JSON.parse(raw) : fallback;
+  } catch (_) { return fallback; }
+}
+
+function formatTime(ts) {
+  const d = new Date(ts);
+  return `${d.getMonth() + 1}월 ${d.getDate()}일 ${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`;
+}
+
+// ========================================
+// 🎨 Design System Components
+// ========================================
+
+function Button({ children, variant = 'primary', size = 'md', className = '', ...props }) {
+  const base = 'inline-flex items-center justify-center gap-2 rounded-full font-medium transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 disabled:opacity-40 disabled:cursor-not-allowed';
+  const variants = {
+    primary: 'bg-gradient-to-r from-sky-500 to-indigo-500 text-white shadow-md shadow-sky-500/25 hover:shadow-lg hover:shadow-sky-500/35 hover:-translate-y-px active:translate-y-0',
+    secondary: 'bg-white/80 text-stone-700 border border-stone-300 hover:bg-white hover:border-stone-400',
+    ghost: 'text-stone-600 hover:bg-stone-900/5',
+    danger: 'bg-rose-50 text-rose-600 border border-rose-200 hover:bg-rose-100',
+  };
+  const sizes = { sm: 'px-3 py-1.5 text-xs', md: 'px-4 py-2 text-sm', lg: 'px-6 py-3 text-base' };
+  return (
+    <button className={`${base} ${variants[variant]} ${sizes[size]} ${className}`} {...props}>
+      {children}
+    </button>
+  );
+}
+
+function Card({ children, className = '' }) {
+  return (
+    <div className={`rounded-3xl bg-white/70 backdrop-blur-sm border border-white/80 shadow-sm shadow-stone-300/40 ${className}`}>
+      {children}
+    </div>
+  );
+}
+
+function Label({ children, htmlFor }) {
+  return <label htmlFor={htmlFor} className="block text-xs font-semibold tracking-wide text-stone-500 mb-1.5">{children}</label>;
+}
+
+function Textarea({ label, id, className = '', ...props }) {
+  return (
+    <div>
+      {label && <Label htmlFor={id}>{label}</Label>}
+      <textarea
+        id={id}
+        className={`w-full rounded-2xl border border-stone-300 bg-white/80 px-4 py-3 text-sm leading-relaxed placeholder:text-stone-400 focus:outline-none focus:border-sky-400 focus:ring-2 focus:ring-sky-100 resize-none scroll-thin ${className}`}
+        {...props}
+      />
+    </div>
+  );
+}
+
+function Input({ label, id, className = '', ...props }) {
+  return (
+    <div>
+      {label && <Label htmlFor={id}>{label}</Label>}
+      <input
+        id={id}
+        className={`w-full rounded-xl border border-stone-300 bg-white/80 px-3 py-2 text-sm placeholder:text-stone-400 focus:outline-none focus:border-sky-400 focus:ring-2 focus:ring-sky-100 ${className}`}
+        {...props}
+      />
+    </div>
+  );
+}
+
+function Select({ label, id, options, className = '', ...props }) {
+  return (
+    <div>
+      {label && <Label htmlFor={id}>{label}</Label>}
+      <select
+        id={id}
+        className={`w-full rounded-xl border border-stone-300 bg-white/80 px-3 py-2 text-sm focus:outline-none focus:border-sky-400 focus:ring-2 focus:ring-sky-100 ${className}`}
+        {...props}
+      >
+        {options.map(o => <option key={o.value} value={o.value}>{o.label}</option>)}
+      </select>
+    </div>
+  );
+}
+
+function Modal({ isOpen, onClose, title, children, size = 'md' }) {
+  useEffect(() => {
+    if (!isOpen) return;
+    const onKey = e => { if (e.key === 'Escape') onClose(); };
+    window.addEventListener('keydown', onKey);
+    document.body.style.overflow = 'hidden';
+    return () => {
+      window.removeEventListener('keydown', onKey);
+      document.body.style.overflow = '';
+    };
+  }, [isOpen, onClose]);
+
+  if (!isOpen) return null;
+  const sizes = { sm: 'max-w-sm', md: 'max-w-lg', lg: 'max-w-4xl' };
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-stone-900/50 backdrop-blur-sm"
+      onClick={onClose} role="dialog" aria-modal="true" aria-label={title}
+    >
+      <div className={`w-full ${sizes[size]} float-up`} onClick={e => e.stopPropagation()}>
+        <div className="rounded-3xl bg-[#fdfbf7] shadow-2xl border border-white overflow-hidden">
+          <div className="flex items-center justify-between px-5 py-4 border-b border-stone-200">
+            <h2 className="font-semibold text-stone-800">{title}</h2>
+            <button onClick={onClose} aria-label="닫기" className="w-8 h-8 rounded-full text-stone-400 hover:bg-stone-900/5 hover:text-stone-700 transition">✕</button>
+          </div>
+          <div className="p-5">{children}</div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Badge({ children, className = '' }) {
+  return <span className={`inline-flex items-center rounded-full bg-stone-900/5 px-2.5 py-1 text-[11px] font-medium text-stone-600 ${className}`}>{children}</span>;
+}
+
+function BrushSpinner({ label }) {
+  return (
+    <div className="flex flex-col items-center gap-4">
+      <div className="relative w-16 h-16">
+        <span className="absolute inset-0 rounded-full bg-sky-300/60 blur-md bleed" />
+        <span className="absolute inset-2 rounded-full bg-rose-300/60 blur-md bleed" style={{ animationDelay: '.4s' }} />
+        <span className="absolute inset-4 rounded-full bg-amber-300/60 blur-md bleed" style={{ animationDelay: '.8s' }} />
+      </div>
+      {label && <p className="text-sm text-stone-500">{label}</p>}
+    </div>
+  );
+}
+
+// ========================================
+// 🧩 Layout & Feature Components
+// ========================================
+
+function Header({ onOpenSettings, hasKey }) {
+  return (
+    <header className="flex items-start justify-between gap-4 mb-8">
+      <div>
+        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-stone-800">
+          수채화 <span className="bg-gradient-to-r from-sky-500 via-violet-500 to-rose-400 bg-clip-text text-transparent">스튜디오</span>
+        </h1>
+        <p className="mt-2 text-sm text-stone-500">한 줄만 적으면 fal.ai가 물감을 풀어 그려 줍니다.</p>
+      </div>
+      <Button variant="secondary" size="sm" onClick={onOpenSettings}>
+        <span aria-hidden="true">🔑</span>
+        <span className="hidden sm:inline">API 키</span>
+        <span
+          className={`w-2 h-2 rounded-full ${hasKey ? 'bg-emerald-400' : 'bg-rose-400'}`}
+          aria-label={hasKey ? '키 설정됨' : '키 없음'}
+        />
+      </Button>
+    </header>
+  );
+}
+
+function StylePicker({ value, onChange }) {
+  return (
+    <div>
+      <Label>화풍</Label>
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+        {STYLE_PRESETS.map(preset => {
+          const active = preset.id === value;
+          return (
+            <button
+              key={preset.id}
+              type="button"
+              onClick={() => onChange(preset.id)}
+              aria-pressed={active}
+              title={preset.hint}
+              className={`rounded-2xl border p-2.5 text-left transition-all ${
+                active
+                  ? 'border-sky-400 bg-sky-50/80 shadow-sm shadow-sky-200'
+                  : 'border-stone-200 bg-white/60 hover:border-stone-300 hover:bg-white'
+              }`}
+            >
+              <div className={`h-8 w-full rounded-lg bg-gradient-to-br ${preset.swatch} opacity-80 mb-2`} />
+              <div className="flex items-center gap-1.5">
+                <span aria-hidden="true">{preset.emoji}</span>
+                <span className="text-xs font-semibold text-stone-700">{preset.name}</span>
+              </div>
+              <p className="mt-0.5 text-[11px] leading-snug text-stone-400">{preset.hint}</p>
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+function PromptPanel({ form, setForm, onGenerate, loading, stageLabel }) {
+  const update = (key, value) => setForm(prev => ({ ...prev, [key]: value }));
+  const preset = STYLE_PRESETS.find(p => p.id === form.style) || STYLE_PRESETS[0];
+  const preview = useMemo(() => `${preset.suffix}, ${COMMON_SUFFIX}`, [preset]);
+
+  const handleKeyDown = e => {
+    if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') onGenerate();
+  };
+
+  return (
+    <Card className="p-5 sm:p-6 space-y-5">
+      <Textarea
+        id="prompt"
+        label="무엇을 그릴까요?"
+        rows={3}
+        maxLength={500}
+        value={form.prompt}
+        onChange={e => update('prompt', e.target.value)}
+        onKeyDown={handleKeyDown}
+        placeholder="예: 창가에 앉아 졸고 있는 고양이"
+      />
+
+      <div className="flex flex-wrap gap-1.5">
+        {SAMPLE_PROMPTS.map(sample => (
+          <button
+            key={sample}
+            type="button"
+            onClick={() => update('prompt', sample)}
+            className="rounded-full border border-stone-200 bg-white/60 px-2.5 py-1 text-[11px] text-stone-500 hover:border-sky-300 hover:text-sky-600 hover:bg-sky-50 transition"
+          >
+            {sample}
+          </button>
+        ))}
+      </div>
+
+      <StylePicker value={form.style} onChange={v => update('style', v)} />
+
+      <div className="grid grid-cols-2 gap-3">
+        <Select
+          id="size" label="비율" options={SIZE_OPTIONS}
+          value={form.imageSize} onChange={e => update('imageSize', e.target.value)}
+        />
+        <Select
+          id="count" label="장수"
+          options={[1, 2, 3, 4].map(n => ({ value: n, label: `${n}장` }))}
+          value={form.numImages} onChange={e => update('numImages', Number(e.target.value))}
+        />
+      </div>
+
+      <Select
+        id="model" label="품질"
+        options={MODELS.map(m => ({ value: m.id, label: `${m.label} — ${m.desc}` }))}
+        value={form.model} onChange={e => update('model', e.target.value)}
+      />
+
+      <label className="flex items-start gap-2.5 rounded-2xl border border-stone-200 bg-white/60 p-3 cursor-pointer">
+        <input
+          type="checkbox" className="mt-0.5 h-4 w-4 accent-sky-500"
+          checked={form.translate} onChange={e => update('translate', e.target.checked)}
+        />
+        <span>
+          <span className="block text-xs font-semibold text-stone-700">프롬프트 자동 번역·보정</span>
+          <span className="block text-[11px] leading-snug text-stone-400">
+            한글 문장을 영어 묘사로 옮겨 전달합니다. 끄면 적은 그대로 보내지만, 한글은 그림에 거의 반영되지 않습니다.
+          </span>
+        </span>
+      </label>
+
+      <details>
+        <summary className="cursor-pointer text-xs font-semibold tracking-wide text-stone-500 hover:text-stone-700 select-none">
+          고급 설정
+        </summary>
+        <div className="mt-3 space-y-3">
+          <Input
+            id="seed" label="시드 · 같은 값이면 비슷한 그림, 비우면 매번 랜덤"
+            type="number" inputMode="numeric" placeholder="예: 1234"
+            value={form.seed} onChange={e => update('seed', e.target.value)}
+          />
+          <div className="rounded-2xl bg-stone-900/[0.03] border border-stone-200/70 p-3">
+            <p className="text-[11px] font-semibold text-stone-400 mb-1">문장 뒤에 붙는 화풍 지시문</p>
+            <p className="text-[11px] leading-relaxed text-stone-500">{preview}</p>
+          </div>
+        </div>
+      </details>
+
+      <Button size="lg" className="w-full" onClick={onGenerate} disabled={loading || !form.prompt.trim()}>
+        {loading ? stageLabel : '🖌️  수채화 그리기'}
+      </Button>
+      <p className="text-center text-[11px] text-stone-400">Ctrl(⌘) + Enter 로도 실행됩니다</p>
+    </Card>
+  );
+}
+
+function ImageCard({ item, onOpen, onDownload }) {
+  return (
+    <figure className="float-up rounded-2xl overflow-hidden bg-white border border-white shadow-sm shadow-stone-300/50 hover:shadow-lg hover:shadow-stone-400/30 transition-shadow">
+      <button type="button" onClick={() => onOpen(item)} className="block w-full text-left" aria-label="크게 보기">
+        <img src={item.url} alt={item.prompt} loading="lazy" className="w-full aspect-square object-cover" />
+      </button>
+      <figcaption className="p-3">
+        <p className="text-xs text-stone-600 line-clamp-2 min-h-[2rem]">{item.prompt}</p>
+        <div className="mt-2 flex items-center justify-between gap-2">
+          <Badge>{item.styleName}</Badge>
+          <div className="flex gap-1">
+            <Button variant="ghost" size="sm" onClick={() => onOpen(item)}>확대</Button>
+            <Button variant="ghost" size="sm" onClick={() => onDownload(item)}>저장</Button>
+          </div>
+        </div>
+      </figcaption>
+    </figure>
+  );
+}
+
+function Gallery({ items, onOpen, onDownload, onClear }) {
+  if (items.length === 0) {
+    return (
+      <Card className="min-h-[420px] flex flex-col items-center justify-center text-center p-10">
+        <div className="text-5xl mb-4" aria-hidden="true">🎨</div>
+        <p className="font-semibold text-stone-600">아직 빈 도화지입니다</p>
+        <p className="mt-1.5 text-sm text-stone-400 max-w-xs">
+          왼쪽에 그리고 싶은 장면을 적고 화풍을 고른 뒤, 그리기 버튼을 눌러 보세요.
+        </p>
+      </Card>
+    );
+  }
+  return (
+    <div>
+      <div className="flex items-center justify-between mb-3">
+        <h2 className="text-sm font-semibold text-stone-500">작품 {items.length}점</h2>
+        <Button variant="danger" size="sm" onClick={onClear}>전체 비우기</Button>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
+        {items.map(item => (
+          <ImageCard key={item.id} item={item} onOpen={onOpen} onDownload={onDownload} />
+        ))}
+      </div>
+      <p className="mt-6 text-center text-[11px] text-stone-400">
+        이미지는 fal.ai 서버에 보관되며 시간이 지나면 링크가 만료될 수 있습니다. 마음에 드는 그림은 저장해 두세요.
+      </p>
+    </div>
+  );
+}
+
+function DetailModal({ item, onClose, onDownload, onReuse }) {
+  const [copied, setCopied] = useState(false);
+  useEffect(() => { setCopied(false); }, [item]);
+  if (!item) return null;
+
+  const copyPrompt = async () => {
+    try {
+      await navigator.clipboard.writeText(item.fullPrompt);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1800);
+    } catch (_) { /* 클립보드 권한이 없으면 조용히 넘어간다 */ }
+  };
+
+  return (
+    <Modal isOpen={!!item} onClose={onClose} title="작품 보기" size="lg">
+      <div className="grid md:grid-cols-[1.4fr_1fr] gap-5">
+        <img src={item.url} alt={item.prompt} className="w-full rounded-2xl border border-stone-200 bg-white" />
+        <div className="flex flex-col gap-4">
+          <div>
+            <Label>프롬프트</Label>
+            <p className="text-sm text-stone-700 leading-relaxed">{item.prompt}</p>
+            {item.subject && item.subject !== item.prompt && (
+              <p className="mt-1.5 text-xs italic text-stone-400 leading-relaxed">→ {item.subject}</p>
+            )}
+          </div>
+          <div className="flex flex-wrap gap-1.5">
+            <Badge>{item.styleName}</Badge>
+            <Badge>{item.sizeLabel}</Badge>
+            <Badge>{item.modelLabel}</Badge>
+            {item.seed !== undefined && item.seed !== null && <Badge>시드 {item.seed}</Badge>}
+            <Badge>{formatTime(item.createdAt)}</Badge>
+          </div>
+          <div className="rounded-2xl bg-stone-900/[0.03] border border-stone-200/70 p-3 max-h-32 overflow-auto scroll-thin">
+            <p className="text-[11px] leading-relaxed text-stone-500">{item.fullPrompt}</p>
+          </div>
+          <div className="mt-auto grid grid-cols-2 gap-2">
+            <Button onClick={() => onDownload(item)}>내려받기</Button>
+            <Button variant="secondary" onClick={copyPrompt}>{copied ? '복사됨 ✓' : '프롬프트 복사'}</Button>
+            <Button variant="secondary" className="col-span-2" onClick={() => onReuse(item)}>이 설정으로 다시 그리기</Button>
+          </div>
+        </div>
+      </div>
+    </Modal>
+  );
+}
+
+function ApiKeyModal({ isOpen, onClose, apiKey, onSave }) {
+  const [draft, setDraft] = useState(apiKey);
+  useEffect(() => { if (isOpen) setDraft(apiKey); }, [isOpen, apiKey]);
+
+  return (
+    <Modal isOpen={isOpen} onClose={onClose} title="fal.ai API 키">
+      <div className="space-y-4">
+        <Input
+          id="apikey" label="키 (id:secret 형식)" type="password" autoComplete="off"
+          value={draft} onChange={e => setDraft(e.target.value)} placeholder="xxxxxxxx-… : xxxxxxxx"
+        />
+        <p className="text-xs leading-relaxed text-stone-500">
+          키는 이 브라우저의 localStorage에만 저장되고, 요청은 브라우저에서 fal.ai로 바로 전송됩니다.
+          이 파일을 그대로 인터넷에 올리면 키가 노출되니, 공개 배포할 때는 서버를 한 단계 두고 키를 숨기세요.
+        </p>
+        <div className="flex justify-end gap-2">
+          <Button variant="ghost" onClick={onClose}>취소</Button>
+          <Button onClick={() => { onSave(draft.trim()); onClose(); }}>저장</Button>
+        </div>
+      </div>
+    </Modal>
+  );
+}
+
+// ========================================
+// 🚀 App
+// ========================================
+
+function App() {
+  const [apiKey, setApiKey] = useState(() => loadJSON(LS_KEY_API, null) || DEFAULT_API_KEY);
+  const [gallery, setGallery] = useState(() => loadJSON(LS_KEY_GALLERY, []));
+  const [form, setForm] = useState({
+    prompt: '',
+    style: 'classic',
+    imageSize: 'square_hd',
+    numImages: 1,
+    model: MODELS[0].id,
+    seed: '',
+    translate: true,
+  });
+  const [stage, setStage] = useState(null); // null | 'translating' | 'painting'
+  const loading = stage !== null;
+  const [elapsed, setElapsed] = useState(0);
+  const [error, setError] = useState(null);
+  const [selected, setSelected] = useState(null);
+  const [settingsOpen, setSettingsOpen] = useState(false);
+
+  useEffect(() => { localStorage.setItem(LS_KEY_API, JSON.stringify(apiKey)); }, [apiKey]);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(LS_KEY_GALLERY, JSON.stringify(gallery.slice(0, 60)));
+    } catch (_) { /* 용량을 넘기면 저장만 건너뛴다 */ }
+  }, [gallery]);
+
+  // 생성 중 경과 시간 타이머
+  useEffect(() => {
+    if (!loading) return;
+    const startedAt = Date.now();
+    setElapsed(0);
+    const id = setInterval(() => setElapsed((Date.now() - startedAt) / 1000), 100);
+    return () => clearInterval(id);
+  }, [loading]);
+
+  const handleGenerate = useCallback(async () => {
+    if (!form.prompt.trim() || loading) return;
+    if (!apiKey) { setError('먼저 fal.ai API 키를 입력해 주세요.'); setSettingsOpen(true); return; }
+
+    const preset = STYLE_PRESETS.find(p => p.id === form.style) || STYLE_PRESETS[0];
+    setError(null);
+    setStage(form.translate ? 'translating' : 'painting');
+    try {
+      const subject = form.translate
+        ? await translateSubject(apiKey, form.prompt.trim())
+        : form.prompt.trim();
+      const fullPrompt = buildPrompt(subject, preset);
+      setStage('painting');
+      const data = await generateImages({
+        apiKey,
+        model: form.model,
+        prompt: fullPrompt,
+        imageSize: form.imageSize,
+        numImages: form.numImages,
+        seed: form.seed,
+      });
+      const modelLabel = (MODELS.find(m => m.id === form.model) || MODELS[0]).label;
+      const sizeLabel = (SIZE_OPTIONS.find(s => s.value === form.imageSize) || SIZE_OPTIONS[0]).label;
+      const created = (data.images || []).map((img, i) => ({
+        id: `${Date.now()}-${i}`,
+        url: img.url,
+        prompt: form.prompt.trim(),
+        subject,
+        fullPrompt,
+        style: preset.id,
+        styleName: preset.name,
+        imageSize: form.imageSize,
+        sizeLabel,
+        model: form.model,
+        modelLabel,
+        seed: data.seed,
+        createdAt: Date.now(),
+      }));
+      if (created.length === 0) throw new Error('이미지가 반환되지 않았습니다. 프롬프트를 바꿔 다시 시도해 보세요.');
+      setGallery(prev => [...created, ...prev]);
+    } catch (e) {
+      setError(e.message || '알 수 없는 오류가 발생했습니다.');
+    } finally {
+      setStage(null);
+    }
+  }, [apiKey, form, loading]);
+
+  const handleDownload = useCallback(item => {
+    downloadImage(item.url, `watercolor-${item.style}-${item.id}.jpg`);
+  }, []);
+
+  const handleReuse = useCallback(item => {
+    setForm(prev => ({
+      ...prev,
+      prompt: item.prompt,
+      style: item.style,
+      imageSize: item.imageSize,
+      model: item.model,
+    }));
+    setSelected(null);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
+  const handleClear = useCallback(() => {
+    if (window.confirm('갤러리의 작품을 모두 지울까요? 저장하지 않은 이미지는 되살릴 수 없습니다.')) {
+      setGallery([]);
+    }
+  }, []);
+
+  const stageLabel = stage === 'translating'
+    ? '프롬프트 다듬는 중…'
+    : `그리는 중… ${elapsed.toFixed(1)}초`;
+
+  return (
+    <div className="min-h-screen max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+      <Header onOpenSettings={() => setSettingsOpen(true)} hasKey={!!apiKey} />
+
+      <div className="grid lg:grid-cols-[400px_1fr] gap-6 items-start">
+        <div className="lg:sticky lg:top-8">
+          <PromptPanel
+            form={form} setForm={setForm}
+            onGenerate={handleGenerate} loading={loading} stageLabel={stageLabel}
+          />
+        </div>
+
+        <div>
+          {error && (
+            <div role="alert" className="mb-4 flex items-start gap-3 rounded-2xl border border-rose-200 bg-rose-50/80 px-4 py-3 text-sm text-rose-700">
+              <span aria-hidden="true">⚠️</span>
+              <p className="flex-1">{error}</p>
+              <button onClick={() => setError(null)} aria-label="알림 닫기" className="text-rose-400 hover:text-rose-600">✕</button>
+            </div>
+          )}
+
+          {loading && (
+            <Card className="mb-4 py-12 flex justify-center">
+              <BrushSpinner label={stage === 'translating' ? '프롬프트를 영어 묘사로 옮기는 중…' : `물감이 번지는 중… ${elapsed.toFixed(1)}초`} />
+            </Card>
+          )}
+
+          <Gallery items={gallery} onOpen={setSelected} onDownload={handleDownload} onClear={handleClear} />
+        </div>
+      </div>
+
+      <DetailModal item={selected} onClose={() => setSelected(null)} onDownload={handleDownload} onReuse={handleReuse} />
+      <ApiKeyModal isOpen={settingsOpen} onClose={() => setSettingsOpen(false)} apiKey={apiKey} onSave={setApiKey} />
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>

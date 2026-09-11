@@ -1,0 +1,1059 @@
+- generic [active] [ref=e1]:
+  - generic:
+    - link "메뉴 영역으로 바로가기" [ref=e2] [cursor=pointer]:
+      - /url: "#lnb"
+    - link "본문 영역으로 바로가기" [ref=e4] [cursor=pointer]:
+      - /url: "#content"
+  - generic [ref=e6]:
+    - generic [ref=e8]:
+      - generic [ref=e11]:
+        - heading [level=1] [ref=e12]:
+          - link "NAVER" [ref=e13] [cursor=pointer]:
+            - /url: https://www.naver.com
+        - search [ref=e15]:
+          - group "검색" [ref=e16]:
+            - combobox "검색어를 입력해 주세요." [ref=e18]: 스팸 6호 후기
+            - button "한글 입력기" [ref=e20] [cursor=pointer]
+            - button "검색" [ref=e22] [cursor=pointer]
+      - generic [ref=e24]:
+        - generic [ref=e26]:
+          - generic [ref=e27]:
+            - tab "전체" [ref=e29] [cursor=pointer]
+            - tab "카페" [selected] [ref=e32] [cursor=pointer]
+            - tab "AI new" [ref=e34] [cursor=pointer]:
+              - text: AI
+              - generic [ref=e35]: new
+            - tab "블로그" [ref=e38] [cursor=pointer]
+            - tab "클립" [ref=e40] [cursor=pointer]
+            - tab "이미지" [ref=e42] [cursor=pointer]
+            - tab "지식iN" [ref=e44] [cursor=pointer]
+            - tab "동영상" [ref=e46] [cursor=pointer]
+            - tab "쇼핑 새 창 열림" [ref=e48] [cursor=pointer]:
+              - text: 쇼핑
+              - generic [ref=e49]: 새 창 열림
+            - tab "뉴스" [ref=e51] [cursor=pointer]
+            - tab "어학사전 새 창 열림" [ref=e53] [cursor=pointer]:
+              - text: 어학사전
+              - generic [ref=e54]: 새 창 열림
+          - button "더보기" [ref=e56] [cursor=pointer]
+        - list [ref=e59]:
+          - listitem [ref=e60]:
+            - button "공유" [ref=e61] [cursor=pointer]
+    - main [ref=e62]:
+      - generic [ref=e63]:
+        - heading "스팸 6호 후기 카페검색 결과" [level=1] [ref=e64]
+        - generic [ref=e65]:
+          - generic [ref=e68]:
+            - button "검색옵션 열기" [ref=e70] [cursor=pointer]: 옵션
+            - listbox "정렬 필터를 선택하세요" [ref=e72]:
+              - option "관련도순" [selected] [ref=e73] [cursor=pointer]
+              - option "최신순" [ref=e74] [cursor=pointer]
+          - list [ref=e77]:
+            - listitem [ref=e78]:
+              - generic [ref=e79]:
+                - generic [ref=e80]:
+                  - button "문서 저장하기" [ref=e82] [cursor=pointer]
+                  - generic [ref=e84]:
+                    - link [ref=e85] [cursor=pointer]:
+                      - /url: https://cafe.naver.com/aodlfrmf
+                      - img "이미지준비중" [ref=e86]
+                    - generic [ref=e87]:
+                      - link "매일 글쓰자" [ref=e88] [cursor=pointer]:
+                        - /url: https://cafe.naver.com/aodlfrmf
+                      - generic [ref=e89]: 2024.10.28.
+                - generic [ref=e90]:
+                  - link "6" [ref=e92] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/aodlfrmf/8378?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImFvZGxmcm1mIiwiYXJ0aWNsZUlkIjo4Mzc4LCJpc3N1ZWRBdCI6MTc4OTExOTg4NzM5MX0.TAHnnRf3AqjkrGY_YpQNIYg4gAYmflfsJRXA4a_rzLc&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                  - link [ref=e95] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/aodlfrmf/8378?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImFvZGxmcm1mIiwiYXJ0aWNsZUlkIjo4Mzc4LCJpc3N1ZWRBdCI6MTc4OTExOTg4NzM5MX0.TAHnnRf3AqjkrGY_YpQNIYg4gAYmflfsJRXA4a_rzLc&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - mark [ref=e96]: 스팸6호
+                    - text: 남녀노소 사용
+                    - mark [ref=e97]: 후기
+                    - text: 모음
+                  - link [ref=e99] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/aodlfrmf/8378?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImFvZGxmcm1mIiwiYXJ0aWNsZUlkIjo4Mzc4LCJpc3N1ZWRBdCI6MTc4OTExOTg4NzM5MX0.TAHnnRf3AqjkrGY_YpQNIYg4gAYmflfsJRXA4a_rzLc&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - text: 안녕하세요 여러분~ 이번 포스팅 주제는
+                    - mark [ref=e100]: 스팸6호
+                    - text: 와 관련된 최신의 CJ
+                    - mark [ref=e101]: 스팸
+                    - text: 추석 선물세트
+                    - mark [ref=e102]: 스팸 6호
+                    - text: "쇼핑백포함, 1세트를 공유하고 싶어요, 끝까지 읽어주세요~ 판매가격: 52,500원 원래가격: 62,500원 할인율: 16% 적립금: 최대 2,625원 적립 ! 시제이"
+                    - mark [ref=e103]: 스팸
+                    - text: 추석 선물세트가 너무 맛있어요! 이 선물세트에는
+                    - mark [ref=e104]: 스팸 6호
+                    - text: 가 들어 있어요. 뭔가 맛있게 튀겨먹으려면
+                    - mark [ref=e105]: 스팸 6호
+                    - text: 가 제일 좋죠. 진짜 폭탄 같이 맛있어요. 外面은...
+            - listitem [ref=e106]:
+              - generic [ref=e107]:
+                - generic [ref=e108]:
+                  - button "문서 저장하기" [ref=e110] [cursor=pointer]
+                  - generic [ref=e112]:
+                    - link [ref=e113] [cursor=pointer]:
+                      - /url: https://cafe.naver.com/dj114
+                      - img "이미지준비중" [ref=e114]
+                    - generic [ref=e115]:
+                      - link "당진 부동산" [ref=e116] [cursor=pointer]:
+                        - /url: https://cafe.naver.com/dj114
+                      - generic [ref=e117]: 대표
+                      - generic [ref=e118]: 2019.01.31.
+                - generic [ref=e119]:
+                  - link [ref=e121] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/dj114/213206?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImRqMTE0IiwiYXJ0aWNsZUlkIjoyMTMyMDYsImlzc3VlZEF0IjoxNzg5MTE5ODg3MzkxfQ.XL3bofoiigUmvnEMbO8i9JXj4u87VWqKs6W4hPcVjK4&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - mark [ref=e122]: 스팸 6호
+                    - text: 사실분
+                  - link "2만7천원에 팔어요 연락주새용" [ref=e124] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/dj114/213206?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImRqMTE0IiwiYXJ0aWNsZUlkIjoyMTMyMDYsImlzc3VlZEF0IjoxNzg5MTE5ODg3MzkxfQ.XL3bofoiigUmvnEMbO8i9JXj4u87VWqKs6W4hPcVjK4&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+            - listitem [ref=e125]:
+              - generic [ref=e126]:
+                - generic [ref=e127]:
+                  - button "문서 저장하기" [ref=e129] [cursor=pointer]
+                  - generic [ref=e131]:
+                    - link [ref=e132] [cursor=pointer]:
+                      - /url: https://cafe.naver.com/coffime
+                      - img "이미지준비중" [ref=e133]
+                    - generic [ref=e134]:
+                      - link "커피매냐" [ref=e135] [cursor=pointer]:
+                        - /url: https://cafe.naver.com/coffime
+                      - generic [ref=e136]: 2024.09.24.
+                - generic [ref=e137]:
+                  - link "5" [ref=e139] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/coffime/930?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImNvZmZpbWUiLCJhcnRpY2xlSWQiOjkzMCwiaXNzdWVkQXQiOjE3ODkxMTk4ODczOTF9.Zx0AoA6ajkYi13yxDR-vkf8FK_0_GeQe9hxYZg707DQ&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                  - link [ref=e142] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/coffime/930?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImNvZmZpbWUiLCJhcnRpY2xlSWQiOjkzMCwiaXNzdWVkQXQiOjE3ODkxMTk4ODczOTF9.Zx0AoA6ajkYi13yxDR-vkf8FK_0_GeQe9hxYZg707DQ&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - mark [ref=e143]: 스팸6호
+                    - text: 남녀노소 사용
+                    - mark [ref=e144]: 후기
+                    - text: 모음
+                  - link [ref=e146] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/coffime/930?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImNvZmZpbWUiLCJhcnRpY2xlSWQiOjkzMCwiaXNzdWVkQXQiOjE3ODkxMTk4ODczOTF9.Zx0AoA6ajkYi13yxDR-vkf8FK_0_GeQe9hxYZg707DQ&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - text: 이번 시간 주제는
+                    - mark [ref=e147]: 스팸6호
+                    - text: 에 대해 주목할 만한 CJ
+                    - mark [ref=e148]: 스팸
+                    - text: "3호 선물세트(200g x 6ea 340g x 6ea)1set, 1세트를 보여드릴까 해요, 함께 알아가볼까요? 판매가격: 49,800원 평점: 5.0 평점 수: 151 적립금: 최대 2,490원 적립 저는 CJ"
+                    - mark [ref=e149]: 스팸
+                    - text: 3호 선물세트에 완전히 빠져들었어요. 너무 맛있어서 하루종일 먹고 싶은 정도예요. 저는 평소에
+                    - mark [ref=e150]: 스팸
+                    - text: 을 그다지 좋아하지 않았는데요, 이거 먹어보고 생각이 완전히 바뀌었어요. 살짝 바삭한...
+            - listitem [ref=e151]:
+              - generic [ref=e152]:
+                - generic [ref=e153]:
+                  - button "문서 저장하기" [ref=e155] [cursor=pointer]
+                  - generic [ref=e157]:
+                    - link [ref=e158] [cursor=pointer]:
+                      - /url: https://cafe.naver.com/bbanga84
+                    - generic [ref=e159]:
+                      - link "상품정보상점" [ref=e160] [cursor=pointer]:
+                        - /url: https://cafe.naver.com/bbanga84
+                      - generic [ref=e161]: 2주 전
+                - generic [ref=e162]:
+                  - link "3" [ref=e164] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/bbanga84/993?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJiYW5nYTg0IiwiYXJ0aWNsZUlkIjo5OTMsImlzc3VlZEF0IjoxNzg5MTE5ODg3MzkxfQ.lLUBY64YQZsKmTCxtoqvoKCPZsupcnKIzoHekptPTZk&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                  - link [ref=e167] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/bbanga84/993?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJiYW5nYTg0IiwiYXJ0aWNsZUlkIjo5OTMsImlzc3VlZEF0IjoxNzg5MTE5ODg3MzkxfQ.lLUBY64YQZsKmTCxtoqvoKCPZsupcnKIzoHekptPTZk&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - text: CJ
+                    - mark [ref=e168]: 스팸
+                    - text: 선물세트
+                    - mark [ref=e169]: 6호
+                    - text: 명절선물 넉넉한 2400g 구성 실사용
+                    - mark [ref=e170]: 후기
+                  - link [ref=e172] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/bbanga84/993?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJiYW5nYTg0IiwiYXJ0aWNsZUlkIjo5OTMsImlzc3VlZEF0IjoxNzg5MTE5ODg3MzkxfQ.lLUBY64YQZsKmTCxtoqvoKCPZsupcnKIzoHekptPTZk&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - text: 실속 가득한 2400g 구성과 사양 둘러보기 CJ
+                    - mark [ref=e173]: 스팸
+                    - text: 선물세트
+                    - mark [ref=e174]: 6호
+                    - text: 클래식 설 설날 명절
+                    - mark [ref=e175]: 스팸
+                    - text: 세트 가정용 집들이 단체 제일제당 쇼핑백포함 [원산지:미국] 주요 사양 상품명 CJ
+                    - mark [ref=e176]: 스팸
+                    - text: 선물세트
+                    - mark [ref=e177]: 6호
+                    - text: 클래식 총중량 2400g... 실제 구매자 리뷰로 보는 솔직한 평가와 꿀팁 실제 구매한 사람들의
+                    - mark [ref=e178]: 후기
+                    - text: 를 꼼꼼히 살쳐보니 "소개 내용과 동일하고 깔끔하다"거나 "명절선물로 딱이고 받는 분도 좋아해요"라는 만족스러운 평이 주를 이루고...
+            - listitem [ref=e179]:
+              - generic [ref=e180]:
+                - generic [ref=e181]:
+                  - button "문서 저장하기" [ref=e183] [cursor=pointer]
+                  - generic [ref=e185]:
+                    - link [ref=e186] [cursor=pointer]:
+                      - /url: https://cafe.naver.com/xnwkwjdqh1
+                      - img "이미지준비중" [ref=e187]
+                    - generic [ref=e188]:
+                      - link "정보 투자" [ref=e189] [cursor=pointer]:
+                        - /url: https://cafe.naver.com/xnwkwjdqh1
+                      - generic [ref=e190]: 2024.09.11.
+                - generic [ref=e191]:
+                  - link "5" [ref=e193] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/xnwkwjdqh1/5143?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6Inhud2t3amRxaDEiLCJhcnRpY2xlSWQiOjUxNDMsImlzc3VlZEF0IjoxNzg5MTE5ODg3MzkxfQ.CVys3RnxxbMZbEDOXYomvsxAjtT1iGlcBJlDXsSINmU&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                  - link [ref=e196] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/xnwkwjdqh1/5143?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6Inhud2t3amRxaDEiLCJhcnRpY2xlSWQiOjUxNDMsImlzc3VlZEF0IjoxNzg5MTE5ODg3MzkxfQ.CVys3RnxxbMZbEDOXYomvsxAjtT1iGlcBJlDXsSINmU&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - mark [ref=e197]: 스팸6호
+                    - text: 솔직
+                    - mark [ref=e198]: 후기
+                    - text: 대방출! 이거 실화냐
+                  - link [ref=e200] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/xnwkwjdqh1/5143?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6Inhud2t3amRxaDEiLCJhcnRpY2xlSWQiOjUxNDMsImlzc3VlZEF0IjoxNzg5MTE5ODg3MzkxfQ.CVys3RnxxbMZbEDOXYomvsxAjtT1iGlcBJlDXsSINmU&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - text: 이번 시간에는
+                    - mark [ref=e201]: 스팸6호
+                    - text: 와 관련된 실용적인 CJ
+                    - mark [ref=e202]: 스팸
+                    - text: 선물세트
+                    - mark [ref=e203]: 6호
+                    - text: "쇼핑백 증정 클래식 명절 추석 선물 SET 기업 직원 단체, 1개를 소개해드릴게요, 놓치지 마시고 봐주세요~ 판매가격: 40,900원 평점: 2.5 평점 수: 5 적립금: 최대 2,045원 적립 진짜 이번 추석 선물은 무조건 이걸로 정했다니까요! CJ"
+                    - mark [ref=e204]: 스팸
+                    - text: 선물세트
+                    - mark [ref=e205]: 6호
+                    - text: 쇼핑백 증정 클래식 명절 추석 선물 SET! 이거 완전 혜자 구성 아닙니까?
+                    - mark [ref=e206]: 스팸
+                    - text: 종류별로 다 들어있어서...
+            - listitem [ref=e207]:
+              - generic [ref=e208]:
+                - generic [ref=e209]:
+                  - button "문서 저장하기" [ref=e211] [cursor=pointer]
+                  - generic [ref=e213]:
+                    - link [ref=e214] [cursor=pointer]:
+                      - /url: https://cafe.naver.com/aodlfrmf
+                      - img "이미지준비중" [ref=e215]
+                    - generic [ref=e216]:
+                      - link "매일 글쓰자" [ref=e217] [cursor=pointer]:
+                        - /url: https://cafe.naver.com/aodlfrmf
+                      - generic [ref=e218]: 2024.10.05.
+                - generic [ref=e219]:
+                  - link "7" [ref=e221] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/aodlfrmf/5737?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImFvZGxmcm1mIiwiYXJ0aWNsZUlkIjo1NzM3LCJpc3N1ZWRBdCI6MTc4OTExOTg4NzM5MX0.JpCyMSSZEuloTnKzShKZXqGgeIumVl9YyRJV8tmzaV8&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                  - link [ref=e224] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/aodlfrmf/5737?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImFvZGxmcm1mIiwiYXJ0aWNsZUlkIjo1NzM3LCJpc3N1ZWRBdCI6MTc4OTExOTg4NzM5MX0.JpCyMSSZEuloTnKzShKZXqGgeIumVl9YyRJV8tmzaV8&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - mark [ref=e225]: 스팸6호
+                    - text: 남녀노소 사용
+                    - mark [ref=e226]: 후기
+                    - text: 모음
+                  - link [ref=e228] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/aodlfrmf/5737?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImFvZGxmcm1mIiwiYXJ0aWNsZUlkIjo1NzM3LCJpc3N1ZWRBdCI6MTc4OTExOTg4NzM5MX0.JpCyMSSZEuloTnKzShKZXqGgeIumVl9YyRJV8tmzaV8&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - text: 오늘의 핫 아이템은
+                    - mark [ref=e229]: 스팸6호
+                    - text: 에 관한 필수적인 CJ제일제당
+                    - mark [ref=e230]: 스팸
+                    - text: "클래식 340g x 6캔 코스트코, 6개를 소개할까 합니다, 놓치지 마세요! 판매가격: 37,000원 평점: 5.0 평점 수: 159 적립금: 최대 1,850원 적립 와! 정말 맛있어서 미칠 것 같아! 요즘 네이버에 뜬벋던"
+                    - mark [ref=e231]: 스팸
+                    - text: 클래식, 얼른 먹어본 사람 있음?? 진짜 대박인데? 나는 처음에 그냥 뭐 저렴하니까 사본 거였는데... 먹어보고 난 후부터는 완전 빠져버렸어! เนื้อ이...
+            - listitem [ref=e232]:
+              - generic [ref=e233]:
+                - generic [ref=e234]:
+                  - button "문서 저장하기" [ref=e236] [cursor=pointer]
+                  - generic [ref=e238]:
+                    - link [ref=e239] [cursor=pointer]:
+                      - /url: https://cafe.naver.com/bmjmo
+                    - generic [ref=e240]:
+                      - link "브랜드 홍보 연구소" [ref=e241] [cursor=pointer]:
+                        - /url: https://cafe.naver.com/bmjmo
+                      - generic [ref=e242]: 2주 전
+                - generic [ref=e243]:
+                  - link "3" [ref=e245] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/bmjmo/1783?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJtam1vIiwiYXJ0aWNsZUlkIjoxNzgzLCJpc3N1ZWRBdCI6MTc4OTExOTg4NzM5MX0.kAu7ptFsXgGHnoCMwvQWH2Y2QJR7F8HP8P0xOVTNNUk&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                  - link [ref=e248] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/bmjmo/1783?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJtam1vIiwiYXJ0aWNsZUlkIjoxNzgzLCJpc3N1ZWRBdCI6MTc4OTExOTg4NzM5MX0.kAu7ptFsXgGHnoCMwvQWH2Y2QJR7F8HP8P0xOVTNNUk&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - mark [ref=e249]: 스팸
+                    - text: 선물세트
+                    - mark [ref=e250]: 6호
+                    - text: 명절 단체 선물로 직접 준비해본 솔직한
+                    - mark [ref=e251]: 후기
+                  - link [ref=e253] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/bmjmo/1783?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJtam1vIiwiYXJ0aWNsZUlkIjoxNzgzLCJpc3N1ZWRBdCI6MTc4OTExOTg4NzM5MX0.kAu7ptFsXgGHnoCMwvQWH2Y2QJR7F8HP8P0xOVTNNUk&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - text: 회사 직원분들 명절 선물을 고민하다가 가장 실패 없는
+                    - mark [ref=e254]: 스팸
+                    - text: 선물세트
+                    - mark [ref=e255]: 6호
+                    - text: 로 결정하고 한가득 준비하게 되었어요. 매번 명절 때마다 어떤 선물이 좋을지 머리를 맞대고 고민하곤 했었는데, 역시 받는 사람... 실제 배송 기간 체감과 사전 주문 팁 실제 구매자 분들의
+                    - mark [ref=e256]: 후기
+                    - text: 를 살펴보면 소개 내용과 동일하고 깔끔하다는 칭찬이 압도적으로 많아서 믿음이 갔어요. 다만 명절 직전 물량이 몰리는 시기에는 배송에 일주일...
+            - listitem [ref=e257]:
+              - generic [ref=e258]:
+                - generic [ref=e259]:
+                  - button "문서 저장하기" [ref=e261] [cursor=pointer]
+                  - generic [ref=e263]:
+                    - link [ref=e264] [cursor=pointer]:
+                      - /url: https://cafe.naver.com/bmjmo1
+                    - generic [ref=e265]:
+                      - link "상품리뷰상점" [ref=e266] [cursor=pointer]:
+                        - /url: https://cafe.naver.com/bmjmo1
+                      - generic [ref=e267]: 1주 전
+                - generic [ref=e268]:
+                  - link "3" [ref=e270] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/bmjmo1/1046?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJtam1vMSIsImFydGljbGVJZCI6MTA0NiwiaXNzdWVkQXQiOjE3ODkxMTk4ODczOTF9.YO72HJYIeNXT0dFgYQNS2_d2vIPTwfH7DA_FwqMV63w&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                  - link [ref=e273] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/bmjmo1/1046?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJtam1vMSIsImFydGljbGVJZCI6MTA0NiwiaXNzdWVkQXQiOjE3ODkxMTk4ODczOTF9.YO72HJYIeNXT0dFgYQNS2_d2vIPTwfH7DA_FwqMV63w&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - mark [ref=e274]: 스팸
+                    - text: 선물세트
+                    - mark [ref=e275]: 6호
+                    - text: 클래식 명절 선물 직접 골라본 솔직
+                    - mark [ref=e276]: 후기
+                  - link [ref=e278] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/bmjmo1/1046?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJtam1vMSIsImFydGljbGVJZCI6MTA0NiwiaXNzdWVkQXQiOjE3ODkxMTk4ODczOTF9.YO72HJYIeNXT0dFgYQNS2_d2vIPTwfH7DA_FwqMV63w&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - text: 구성 요소와 실속 있는 활용도
+                    - mark [ref=e279]: 스팸
+                    - text: 선물세트
+                    - mark [ref=e280]: 6호
+                    - text: 클래식 설 명절
+                    - mark [ref=e281]: 스팸
+                    - text: 세트 가정용 집들이 단체 쇼핑백 렌즈와이프 6매 포함 [원산지:미국] 주요 사양 상품명
+                    - mark [ref=e282]: 스팸
+                    - text: 선물세트
+                    - mark [ref=e283]: 6호
+                    - text: 클래식 원산지 미국산 총 중량 2400g 보관방법 실온보관 특별구성 쇼핑백 제공, 렌즈와이프 6매 포함 선물 세트를 고를 때 가장 신경 쓰이는 건 받는 사람의 취향과 실제 활용도인데요. 이번에 살펴본
+                    - mark [ref=e284]: 스팸
+                    - text: 선물세트
+                    - mark [ref=e285]: 6호
+                    - text: 는 호불호 없는 구성으로 꽉...
+            - listitem [ref=e286]:
+              - generic [ref=e287]:
+                - generic [ref=e288]:
+                  - button "문서 저장하기" [ref=e290] [cursor=pointer]
+                  - generic [ref=e292]:
+                    - link [ref=e293] [cursor=pointer]:
+                      - /url: https://cafe.naver.com/bmjmo1
+                    - generic [ref=e294]:
+                      - link "상품리뷰상점" [ref=e295] [cursor=pointer]:
+                        - /url: https://cafe.naver.com/bmjmo1
+                      - generic [ref=e296]: 2주 전
+                - generic [ref=e297]:
+                  - link "3" [ref=e299] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/bmjmo1/1016?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJtam1vMSIsImFydGljbGVJZCI6MTAxNiwiaXNzdWVkQXQiOjE3ODkxMTk4ODczOTF9.7q67oxws-nUEZqOzrXW0OJlaAb64NMkcP-jpfhH6ags&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                  - link [ref=e302] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/bmjmo1/1016?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJtam1vMSIsImFydGljbGVJZCI6MTAxNiwiaXNzdWVkQXQiOjE3ODkxMTk4ODczOTF9.7q67oxws-nUEZqOzrXW0OJlaAb64NMkcP-jpfhH6ags&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - mark [ref=e303]: 스팸
+                    - text: 선물세트
+                    - mark [ref=e304]: 6호
+                    - text: 명절 직원선물 직접 준비해보니 대만족이에요
+                  - link [ref=e306] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/bmjmo1/1016?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJtam1vMSIsImFydGljbGVJZCI6MTAxNiwiaXNzdWVkQXQiOjE3ODkxMTk4ODczOTF9.7q67oxws-nUEZqOzrXW0OJlaAb64NMkcP-jpfhH6ags&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - text: 실속과 마음을 모두 담은 알찬 구성
+                    - mark [ref=e307]: 스팸
+                    - text: 선물세트
+                    - mark [ref=e308]: 6호
+                    - text: 클래식 설 명절
+                    - mark [ref=e309]: 스팸
+                    - text: 세트 가정용 집들이 단체 쇼핑백 렌즈와이프 6매 포함 [원산지:미국] 주요 사양 상품명
+                    - mark [ref=e310]: 스팸
+                    - text: 선물세트
+                    - mark [ref=e311]: 6호
+                    - text: 클래식 원산지 미국산... 실제 구매자들이 말하는 솔직한
+                    - mark [ref=e312]: 후기
+                    - text: 분석 실제 구매한 사람들의 반응을 살펴보니 전체적으로 선물용으로 깔끔하다는 평이 90% 이상을 차지했는데요. "소개 내용과 동일하고 정말 깔끔해서 명절선물로 딱입니다...
+            - listitem [ref=e313]:
+              - generic [ref=e314]:
+                - generic [ref=e315]:
+                  - button "문서 저장하기" [ref=e317] [cursor=pointer]
+                  - generic [ref=e319]:
+                    - link [ref=e320] [cursor=pointer]:
+                      - /url: https://cafe.naver.com/bmjmo
+                    - generic [ref=e321]:
+                      - link "브랜드 홍보 연구소" [ref=e322] [cursor=pointer]:
+                        - /url: https://cafe.naver.com/bmjmo
+                      - generic [ref=e323]: 1주 전
+                - generic [ref=e324]:
+                  - link "3" [ref=e326] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/bmjmo/1864?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJtam1vIiwiYXJ0aWNsZUlkIjoxODY0LCJpc3N1ZWRBdCI6MTc4OTExOTg4NzM5MX0.aQaU4UaY50h1EQNwk3xbOjp0jPk2Mc5LrXWZmPQh82Y&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                  - link [ref=e329] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/bmjmo/1864?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJtam1vIiwiYXJ0aWNsZUlkIjoxODY0LCJpc3N1ZWRBdCI6MTc4OTExOTg4NzM5MX0.aQaU4UaY50h1EQNwk3xbOjp0jPk2Mc5LrXWZmPQh82Y&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - text: 명절 단체선물 배송 일정 당겨서 준비하는
+                    - mark [ref=e330]: 스팸
+                    - text: 선물세트
+                    - mark [ref=e331]: 6호
+                    - text: 클래식 구성
+                    - mark [ref=e332]: 후기
+                  - link [ref=e334] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/bmjmo/1864?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJtam1vIiwiYXJ0aWNsZUlkIjoxODY0LCJpc3N1ZWRBdCI6MTc4OTExOTg4NzM5MX0.aQaU4UaY50h1EQNwk3xbOjp0jPk2Mc5LrXWZmPQh82Y&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - text: 실속 있는 중량과 렌즈와이프 사은품 구성
+                    - mark [ref=e335]: 스팸
+                    - text: 선물세트
+                    - mark [ref=e336]: 6호
+                    - text: 클래식 설 명절
+                    - mark [ref=e337]: 스팸
+                    - text: 세트 가정용 집들이 단체 쇼핑백 렌즈와이프 6매 포함 [원산지:미국] 주요 사양 제품명
+                    - mark [ref=e338]: 스팸
+                    - text: 선물세트
+                    - mark [ref=e339]: 6호
+                    - text: 클래식 총 중량 2400g 원산지 미국산 보관방법 실온보관 사은품 렌즈와이프 6매 포장형태 전용 쇼핑백 포함 이번에 살펴본 구성은 호불호가 없는 2400g의 넉넉한 중량으로 채워져 있어 가정용이나 선물용 모두 적합합니다. 미국산...
+            - listitem [ref=e340]:
+              - generic [ref=e341]:
+                - generic [ref=e342]:
+                  - button "문서 저장하기" [ref=e344] [cursor=pointer]
+                  - generic [ref=e346]:
+                    - link [ref=e347] [cursor=pointer]:
+                      - /url: https://cafe.naver.com/xnwkwjdqh1
+                      - img "이미지준비중" [ref=e348]
+                    - generic [ref=e349]:
+                      - link "정보 투자" [ref=e350] [cursor=pointer]:
+                        - /url: https://cafe.naver.com/xnwkwjdqh1
+                      - generic [ref=e351]: 2024.09.18.
+                - generic [ref=e352]:
+                  - link "5" [ref=e354] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/xnwkwjdqh1/6123?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6Inhud2t3amRxaDEiLCJhcnRpY2xlSWQiOjYxMjMsImlzc3VlZEF0IjoxNzg5MTE5ODg3MzkxfQ.0mpntLbXlGWu0LJZhDMxF23Bq_vATMocRS_kM1jcr60&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                  - link [ref=e357] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/xnwkwjdqh1/6123?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6Inhud2t3amRxaDEiLCJhcnRpY2xlSWQiOjYxMjMsImlzc3VlZEF0IjoxNzg5MTE5ODg3MzkxfQ.0mpntLbXlGWu0LJZhDMxF23Bq_vATMocRS_kM1jcr60&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - mark [ref=e358]: 스팸6호
+                    - text: 사용
+                    - mark [ref=e359]: 후기
+                    - text: 로 알아보는 제품 매력
+                  - link [ref=e361] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/xnwkwjdqh1/6123?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6Inhud2t3amRxaDEiLCJhcnRpY2xlSWQiOjYxMjMsImlzc3VlZEF0IjoxNzg5MTE5ODg3MzkxfQ.0mpntLbXlGWu0LJZhDMxF23Bq_vATMocRS_kM1jcr60&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - text: 안녕하세요, 오늘의 주제는
+                    - mark [ref=e362]: 스팸6호
+                    - text: 에 대해 주목받는
+                    - mark [ref=e363]: 스팸 6
+                    - text: "C호 선물세트, 4세트를 보여드리고자 합니다, 모두 주목해주실 거죠? 판매가격: 152,800원 원래가격: 279,600원 할인율: 45% 평점: 5.0 평점 수: 4 짜잔,"
+                    - mark [ref=e364]: 스팸 6
+                    - text: C호 선물세트 4세트가 마침내 내 품에 안겨졌어요! 믿을 수 없을 정도로 멋지게 포장되어서 마치 태어날 때부터 선물용으로 만들어진 것 같아요.
+                    - mark [ref=e365]: 스팸
+                    - text: 캔이 너무 귀여워서 잠시 동안 멍해졌어요....
+            - listitem [ref=e366]:
+              - generic [ref=e367]:
+                - generic [ref=e368]:
+                  - button "문서 저장하기" [ref=e370] [cursor=pointer]
+                  - generic [ref=e372]:
+                    - link [ref=e373] [cursor=pointer]:
+                      - /url: https://cafe.naver.com/bbanga1227
+                    - generic [ref=e374]:
+                      - link "상품광고정보" [ref=e375] [cursor=pointer]:
+                        - /url: https://cafe.naver.com/bbanga1227
+                      - generic [ref=e376]: 1주 전
+                - generic [ref=e377]:
+                  - link "3" [ref=e379] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/bbanga1227/1058?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJiYW5nYTEyMjciLCJhcnRpY2xlSWQiOjEwNTgsImlzc3VlZEF0IjoxNzg5MTE5ODg3MzkxfQ.KOqKI6ouxL9MoUvgPa8y0NUYaMMg9Wet1F27sk-va7Q&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                  - link [ref=e382] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/bbanga1227/1058?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJiYW5nYTEyMjciLCJhcnRpY2xlSWQiOjEwNTgsImlzc3VlZEF0IjoxNzg5MTE5ODg3MzkxfQ.KOqKI6ouxL9MoUvgPa8y0NUYaMMg9Wet1F27sk-va7Q&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - mark [ref=e383]: 스팸
+                    - text: 선물세트
+                    - mark [ref=e384]: 6호
+                    - text: 명절 앞두고 직원 선물 챙기다 식은땀 흘린 사연
+                  - link [ref=e386] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/bbanga1227/1058?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJiYW5nYTEyMjciLCJhcnRpY2xlSWQiOjEwNTgsImlzc3VlZEF0IjoxNzg5MTE5ODg3MzkxfQ.KOqKI6ouxL9MoUvgPa8y0NUYaMMg9Wet1F27sk-va7Q&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - text: 알찬 2400g 용량과 덤 사은품 구성
+                    - mark [ref=e387]: 스팸
+                    - text: 선물세트
+                    - mark [ref=e388]: 6호
+                    - text: 클래식 설 명절
+                    - mark [ref=e389]: 스팸
+                    - text: 세트 가정용 집들이 단체 쇼핑백 렌즈와이프 6매 포함 [원산지:미국] 주요 사양 상품명
+                    - mark [ref=e390]: 스팸
+                    - text: 선물세트
+                    - mark [ref=e391]: 6호
+                    - text: 클래식 총중량 2400g 원산지... 배송 타이밍 팁과 솔직
+                    - mark [ref=e392]: 후기
+                    - text: 분석 실제 구매자들의 평가를 꼼꼼히 훑어보니 제품의 세련된 포장과 실속 있는 내용물에는 소개 내용과 동일하고 깔끔하다는 칭찬이 많았어요. 다만 명절 직전 물량이 몰리는...
+            - listitem [ref=e393]:
+              - generic [ref=e394]:
+                - generic [ref=e395]:
+                  - button "문서 저장하기" [ref=e397] [cursor=pointer]
+                  - generic [ref=e399]:
+                    - link [ref=e400] [cursor=pointer]:
+                      - /url: https://cafe.naver.com/bluejjung35
+                    - generic [ref=e401]:
+                      - link "상품마케팅" [ref=e402] [cursor=pointer]:
+                        - /url: https://cafe.naver.com/bluejjung35
+                      - generic [ref=e403]: 2주 전
+                - generic [ref=e404]:
+                  - link "3" [ref=e406] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/bluejjung35/974?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJsdWVqanVuZzM1IiwiYXJ0aWNsZUlkIjo5NzQsImlzc3VlZEF0IjoxNzg5MTE5ODg3MzkxfQ.w6oAPEGD-4hRt-hNYJD4AQsmZCrbCiVxu8CVaDPepoY&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                  - link [ref=e409] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/bluejjung35/974?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJsdWVqanVuZzM1IiwiYXJ0aWNsZUlkIjo5NzQsImlzc3VlZEF0IjoxNzg5MTE5ODg3MzkxfQ.w6oAPEGD-4hRt-hNYJD4AQsmZCrbCiVxu8CVaDPepoY&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - text: CJ
+                    - mark [ref=e410]: 스팸
+                    - text: 선물세트
+                    - mark [ref=e411]: 6호
+                    - text: 클래식 명절 단체선물
+                    - mark [ref=e412]: 후기
+                  - link [ref=e414] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/bluejjung35/974?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJsdWVqanVuZzM1IiwiYXJ0aWNsZUlkIjo5NzQsImlzc3VlZEF0IjoxNzg5MTE5ODg3MzkxfQ.w6oAPEGD-4hRt-hNYJD4AQsmZCrbCiVxu8CVaDPepoY&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - text: 실패 없는 구관이 명관, 클래식 라인의 위엄 CJ
+                    - mark [ref=e415]: 스팸
+                    - text: 선물세트
+                    - mark [ref=e416]: 6호
+                    - text: 클래식 설 설날 명절
+                    - mark [ref=e417]: 스팸
+                    - text: 세트 가정용 집들이 단체 제일제당 쇼핑백포함 [원산지:미국] 주요 사양 상품명 CJ
+                    - mark [ref=e418]: 스팸
+                    - text: 선물세트
+                    - mark [ref=e419]: 6호
+                    - text: 클래식 총 중량... 실제 구매자 리뷰 분석과 배송 팁 구매 전
+                    - mark [ref=e420]: 후기
+                    - text: 를 꼼꼼히 살폈을 때 제품에 대한 만족도는 소개 내용과 동일하고 아주 깔끔하다는 평이 압도적이었어요. 다만 단체 선물이나 회사 직원용으로 미리 준비하시는...
+            - listitem [ref=e421]:
+              - generic [ref=e422]:
+                - generic [ref=e423]:
+                  - button "문서 저장하기" [ref=e425] [cursor=pointer]
+                  - generic [ref=e427]:
+                    - link [ref=e428] [cursor=pointer]:
+                      - /url: https://cafe.naver.com/costco12
+                    - generic [ref=e429]:
+                      - link "코사모(코스트코를 사랑하는 이들의 모임)" [ref=e430] [cursor=pointer]:
+                        - /url: https://cafe.naver.com/costco12
+                      - generic [ref=e431]: 대표
+                      - generic [ref=e432]: 13분 전
+                - generic [ref=e433]:
+                  - link "9" [ref=e435] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/costco12/775291?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImNvc3RjbzEyIiwiYXJ0aWNsZUlkIjo3NzUyOTEsImlzc3VlZEF0IjoxNzg5MTE5ODg3MzkxfQ.1K6-ZBmIyzqxdDDp35xnakAnvrLHFdghLR54GmAtpco&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                  - link [ref=e438] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/costco12/775291?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImNvc3RjbzEyIiwiYXJ0aWNsZUlkIjo3NzUyOTEsImlzc3VlZEF0IjoxNzg5MTE5ODg3MzkxfQ.1K6-ZBmIyzqxdDDp35xnakAnvrLHFdghLR54GmAtpco&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - text: 부산점 쇼핑
+                    - mark [ref=e439]: 후기
+                    - text: 10월9일
+                  - link [ref=e441] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/costco12/775291?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImNvc3RjbzEyIiwiYXJ0aWNsZUlkIjo3NzUyOTEsImlzc3VlZEF0IjoxNzg5MTE5ODg3MzkxfQ.1K6-ZBmIyzqxdDDp35xnakAnvrLHFdghLR54GmAtpco&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - text: 1~양파1망
+                    - mark [ref=e442]: "6"
+                    - text: ",890원 코코매장에 친환경 양파,일반 국내산 양파 2가지가 있어요. 친환경 사 먹다가 이번엔 국내산 양파가 저렴하길래 구입했는데 양파 흠없이 깨끗해서 만족해요. 2~"
+                    - mark [ref=e443]: 스팸
+                    - text: 세트 CC-1호 59,900원
+                    - mark [ref=e444]: 스팸
+                    - text: 200g×16개 구성이네요. 언니네 명절 선물세트로 구입했는데 예전엔 과일 좋아해서 주로 과일세트로 선물했었는데 과일은 복불복이 많아서 맘편하게
+                    - mark [ref=e445]: 스팸
+                    - text: 으로만 구성된
+                    - mark [ref=e446]: 스팸
+                    - text: 세트 1호로 구입했어요. 3...
+            - listitem [ref=e447]:
+              - generic [ref=e448]:
+                - generic [ref=e449]:
+                  - button "문서 저장하기" [ref=e451] [cursor=pointer]
+                  - generic [ref=e453]:
+                    - link [ref=e454] [cursor=pointer]:
+                      - /url: https://cafe.naver.com/coffime
+                      - img "이미지준비중" [ref=e455]
+                    - generic [ref=e456]:
+                      - link "커피매냐" [ref=e457] [cursor=pointer]:
+                        - /url: https://cafe.naver.com/coffime
+                      - generic [ref=e458]: 2024.09.19.
+                - generic [ref=e459]:
+                  - link "4" [ref=e461] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/coffime/370?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImNvZmZpbWUiLCJhcnRpY2xlSWQiOjM3MCwiaXNzdWVkQXQiOjE3ODkxMTk4ODczOTF9.BGMUX-Kg59zo5DaFQ-nipESCC7IBBZJGKEFV_MaB8NA&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                  - link [ref=e464] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/coffime/370?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImNvZmZpbWUiLCJhcnRpY2xlSWQiOjM3MCwiaXNzdWVkQXQiOjE3ODkxMTk4ODczOTF9.BGMUX-Kg59zo5DaFQ-nipESCC7IBBZJGKEFV_MaB8NA&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - mark [ref=e465]: 스팸6호
+                    - text: 선물세트 소비자 연령대별 제품 선호도 분석
+                  - link [ref=e467] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/coffime/370?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImNvZmZpbWUiLCJhcnRpY2xlSWQiOjM3MCwiaXNzdWVkQXQiOjE3ODkxMTk4ODczOTF9.BGMUX-Kg59zo5DaFQ-nipESCC7IBBZJGKEFV_MaB8NA&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - text: 반가워요 여러분, 이번 포스팅의 중심 내용은
+                    - mark [ref=e468]: 스팸6호
+                    - text: 선물세트 와 관련된 최신의
+                    - mark [ref=e469]: 스팸 6
+                    - text: "C호 선물세트, 1세트를 소개하고자 합니다, 끝까지 관심 부탁드려요! 판매가격: 38,200원 원래가격: 69,900원 할인율: 45% 평점: 4.5 평점 수: 25 와~ 얘들아"
+                    - mark [ref=e470]: 스팸 6
+                    - text: C호 선물세트 사서
+                    - mark [ref=e471]: 후기
+                    - text: 를 써 볼게요. 정말 너무 좋았어ㅠㅠ 일단 육포가 너무 맛있어요. 부드러운데 고기 맛이 너무...
+            - listitem [ref=e472]:
+              - generic [ref=e473]:
+                - generic [ref=e474]:
+                  - button "문서 저장하기" [ref=e476] [cursor=pointer]
+                  - generic [ref=e478]:
+                    - link [ref=e479] [cursor=pointer]:
+                      - /url: https://cafe.naver.com/sometim
+                    - generic [ref=e480]:
+                      - link "또 다른 리뷰" [ref=e481] [cursor=pointer]:
+                        - /url: https://cafe.naver.com/sometim
+                      - generic [ref=e482]: 2024.03.14.
+                - generic [ref=e483]:
+                  - link [ref=e485] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/sometim/54488?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6InNvbWV0aW0iLCJhcnRpY2xlSWQiOjU0NDg4LCJpc3N1ZWRBdCI6MTc4OTExOTg4NzM5MX0.ACP3W9YzKnj7vJ39LcnsRbHrRId6gr3ApDcDDmk5ej4&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - text: 고객만족도 1위
+                    - mark [ref=e486]: 스팸6호
+                    - text: 선물세트 지금 바로 구매해야 합니다!
+                  - link [ref=e488] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/sometim/54488?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6InNvbWV0aW0iLCJhcnRpY2xlSWQiOjU0NDg4LCJpc3N1ZWRBdCI6MTc4OTExOTg4NzM5MX0.ACP3W9YzKnj7vJ39LcnsRbHrRId6gr3ApDcDDmk5ej4&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - text: 제품별 스펙과 가격대, 사용
+                    - mark [ref=e489]: 후기
+                    - text: 까지 꼼꼼하게 비교해보며 현명한 구매 결정을 위해 도움을 드리겠습니다 고객만족도 1위
+                    - mark [ref=e490]: 스팸6호
+                    - text: 선물세트 지금 바로 구매해야 합니다! 구매에 도움이 되는 팁!! 선물 고민 끝! 짜릿하면서도 달콤한
+                    - mark [ref=e491]: 스팸6호
+                    - text: 선물세트로 기분 좋은 선물을 전하세요. ★ BEST SELLER ★ 1. CJ 명절
+                    - mark [ref=e492]: 스팸6호
+                    - mark [ref=e493]: 스팸
+                    - text: 클래식 선물세트, 1세트 – 국내 최대 규모의 농수산 식품 전문 기업 CJ에서...
+            - listitem [ref=e494]:
+              - generic [ref=e495]:
+                - generic [ref=e496]:
+                  - button "문서 저장하기" [ref=e498] [cursor=pointer]
+                  - generic [ref=e500]:
+                    - link [ref=e501] [cursor=pointer]:
+                      - /url: https://cafe.naver.com/bmjmo2
+                    - generic [ref=e502]:
+                      - link "홍보상점" [ref=e503] [cursor=pointer]:
+                        - /url: https://cafe.naver.com/bmjmo2
+                      - generic [ref=e504]: 22시간 전
+                - generic [ref=e505]:
+                  - link "3" [ref=e507] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/bmjmo2/1202?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJtam1vMiIsImFydGljbGVJZCI6MTIwMiwiaXNzdWVkQXQiOjE3ODkxMTk4ODczOTJ9.TER-lOaMYFZ3K5bU8SOIAQqqNZjjgDCmoBfKh7JfkYY&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                  - link [ref=e510] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/bmjmo2/1202?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJtam1vMiIsImFydGljbGVJZCI6MTIwMiwiaXNzdWVkQXQiOjE3ODkxMTk4ODczOTJ9.TER-lOaMYFZ3K5bU8SOIAQqqNZjjgDCmoBfKh7JfkYY&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - mark [ref=e511]: 스팸
+                    - text: 선물세트
+                    - mark [ref=e512]: 6호
+                    - text: 클래식 명절 단체선물 준비 가격 비교
+                  - link [ref=e514] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/bmjmo2/1202?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJtam1vMiIsImFydGljbGVJZCI6MTIwMiwiaXNzdWVkQXQiOjE3ODkxMTk4ODczOTJ9.TER-lOaMYFZ3K5bU8SOIAQqqNZjjgDCmoBfKh7JfkYY&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - text: 실속 가득한 구성과 사은품 혜택
+                    - mark [ref=e515]: 스팸
+                    - text: 선물세트
+                    - mark [ref=e516]: 6호
+                    - text: 클래식 설 명절
+                    - mark [ref=e517]: 스팸
+                    - text: 세트 가정용 집들이 단체 쇼핑백 렌즈와이프 6매 포함 [원산지:미국] 주요 사양 상품명
+                    - mark [ref=e518]: 스팸
+                    - text: 선물세트
+                    - mark [ref=e519]: 6호
+                    - text: 클래식 총 중량 2,400g 원산지... 실제 이용자
+                    - mark [ref=e520]: 후기
+                    - text: 와 배송 꿀팁 실제 구매자 분들의 평을 꼼꼼히 살쳐보니 할인 폭이 커서 대량 구매 시에도 부담이 대폭 줄어들었다는 호평이 많았어요. 다만 명절 직전에는 택배 물량이 몰려 배송 소요...
+            - listitem [ref=e521]:
+              - generic [ref=e522]:
+                - generic [ref=e523]:
+                  - button "문서 저장하기" [ref=e525] [cursor=pointer]
+                  - generic [ref=e527]:
+                    - link [ref=e528] [cursor=pointer]:
+                      - /url: https://cafe.naver.com/bmjmo4
+                    - generic [ref=e529]:
+                      - link "상품광고" [ref=e530] [cursor=pointer]:
+                        - /url: https://cafe.naver.com/bmjmo4
+                      - generic [ref=e531]: 2주 전
+                - generic [ref=e532]:
+                  - link "3" [ref=e534] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/bmjmo4/975?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJtam1vNCIsImFydGljbGVJZCI6OTc1LCJpc3N1ZWRBdCI6MTc4OTExOTg4NzM5Mn0._rPTn0rkUyX4DjxcBcuIaWJPo-ALHybjKXB9UUkHmqs&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                  - link [ref=e537] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/bmjmo4/975?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJtam1vNCIsImFydGljbGVJZCI6OTc1LCJpc3N1ZWRBdCI6MTc4OTExOTg4NzM5Mn0._rPTn0rkUyX4DjxcBcuIaWJPo-ALHybjKXB9UUkHmqs&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - text: CJ
+                    - mark [ref=e538]: 스팸
+                    - text: 선물세트
+                    - mark [ref=e539]: 6호
+                    - text: 클래식 명절 선물 준비로 밤잠 설치다 챙긴
+                    - mark [ref=e540]: 후기
+                  - link [ref=e542] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/bmjmo4/975?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJtam1vNCIsImFydGljbGVJZCI6OTc1LCJpc3N1ZWRBdCI6MTc4OTExOTg4NzM5Mn0._rPTn0rkUyX4DjxcBcuIaWJPo-ALHybjKXB9UUkHmqs&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - text: CJ
+                    - mark [ref=e543]: 스팸
+                    - text: 선물세트
+                    - mark [ref=e544]: 6호
+                    - text: 클래식 핵심 사양 살펴보기 CJ
+                    - mark [ref=e545]: 스팸
+                    - text: 선물세트
+                    - mark [ref=e546]: 6호
+                    - text: 클래식 설 설날 명절
+                    - mark [ref=e547]: 스팸
+                    - text: 세트 가정용 집들이 단체 제일제당 쇼핑백포함 [원산지:미국] 주요 사양 상품번호 5084743782 원산지 미국산... 일부 유저들은 배송에 일주일가량 걸려서 일정 맞추느라 심장 졸였다는
+                    - mark [ref=e548]: 후기
+                    - text: 를 남겼으니 미리미리 주문해두시는 걸 추천드려요. 배송 스트레스를 피하기 위해서는 미리 찜해두고 쿠폰 혜택이 살아있을 때 빠르게...
+            - listitem [ref=e549]:
+              - generic [ref=e550]:
+                - generic [ref=e551]:
+                  - button "문서 저장하기" [ref=e553] [cursor=pointer]
+                  - generic [ref=e555]:
+                    - link [ref=e556] [cursor=pointer]:
+                      - /url: https://cafe.naver.com/blackpl3mx
+                      - img "이미지준비중" [ref=e557]
+                    - generic [ref=e558]:
+                      - link "쇼핑중독자모임" [ref=e559] [cursor=pointer]:
+                        - /url: https://cafe.naver.com/blackpl3mx
+                      - generic [ref=e560]: 2026.02.03.
+                - generic [ref=e561]:
+                  - link "2" [ref=e563] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/blackpl3mx/679?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJsYWNrcGwzbXgiLCJhcnRpY2xlSWQiOjY3OSwiaXNzdWVkQXQiOjE3ODkxMTk4ODczOTJ9.9zQd_501CBFzgeZ-EsRoLmYBHF7QJizcHuYZSQB2mOQ&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                  - link [ref=e566] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/blackpl3mx/679?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJsYWNrcGwzbXgiLCJhcnRpY2xlSWQiOjY3OSwiaXNzdWVkQXQiOjE3ODkxMTk4ODczOTJ9.9zQd_501CBFzgeZ-EsRoLmYBHF7QJizcHuYZSQB2mOQ&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - text: 설명절선물세트 추천! 추석 선물세트
+                    - mark [ref=e567]: 6호
+                    - mark [ref=e568]: 스팸
+                    - text: 으로 마음까지 든든하게
+                  - link [ref=e570] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/blackpl3mx/679?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJsYWNrcGwzbXgiLCJhcnRpY2xlSWQiOjY3OSwiaXNzdWVkQXQiOjE3ODkxMTk4ODczOTJ9.9zQd_501CBFzgeZ-EsRoLmYBHF7QJizcHuYZSQB2mOQ&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - text: 추석 선물세트
+                    - mark [ref=e571]: 6호
+                    - mark [ref=e572]: 스팸
+                    - text: 으로 마음까지 든든하게 안녕하세요 여러분! 곧 다가오는 명절, 가족과 친지에게 어떤 선물을 준비해야 할지 고민이 많으시죠? 오늘은 제가 실제로 받아보고 너무 만족했던... 직접 써본
+                    - mark [ref=e573]: 후기
+                    - text: 와 만족도 제가 실제로 받아서 맛본
+                    - mark [ref=e574]: 스팸
+                    - text: 은 부드럽고 짜지 않아서 밥반찬으로 너무 좋더라고요. 작은 아이부터 어른까지 모두 좋아할 만한 맛이라 온 가족이 즐겁게 먹었어요 설명절선물세트라서 포장도...
+            - listitem [ref=e575]:
+              - generic [ref=e576]:
+                - generic [ref=e577]:
+                  - button "문서 저장하기" [ref=e579] [cursor=pointer]
+                  - generic [ref=e581]:
+                    - link [ref=e582] [cursor=pointer]:
+                      - /url: https://cafe.naver.com/joonggonara
+                    - generic [ref=e583]:
+                      - link "중고나라" [ref=e584] [cursor=pointer]:
+                        - /url: https://cafe.naver.com/joonggonara
+                      - generic [ref=e585]: 대표
+                      - generic [ref=e586]: 9시간 전
+                - generic [ref=e587]:
+                  - link [ref=e589] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/joonggonara/1134893591?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6Impvb25nZ29uYXJhIiwiYXJ0aWNsZUlkIjoxMTM0ODkzNTkxLCJpc3N1ZWRBdCI6MTc4OTExOTg4NzM5Mn0.Z9j3I7yp3YrMwsZHRb9dxhoCW9RPHP375ewzlABXWr4&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                  - link [ref=e591] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/joonggonara/1134893591?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6Impvb25nZ29uYXJhIiwiYXJ0aWNsZUlkIjoxMTM0ODkzNTkxLCJpc3N1ZWRBdCI6MTc4OTExOTg4NzM5Mn0.Z9j3I7yp3YrMwsZHRb9dxhoCW9RPHP375ewzlABXWr4&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - mark [ref=e592]: 스팸
+                    - text: 클래식
+                    - mark [ref=e593]: 6호
+                    - text: 선물세트 4세트 112,000원
+                  - link [ref=e595] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/joonggonara/1134893591?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6Impvb25nZ29uYXJhIiwiYXJ0aWNsZUlkIjoxMTM0ODkzNTkxLCJpc3N1ZWRBdCI6MTc4OTExOTg4NzM5Mn0.Z9j3I7yp3YrMwsZHRb9dxhoCW9RPHP375ewzlABXWr4&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - mark [ref=e596]: 스팸
+                    - text: 클래식 200g 12캔 구성, 4세트 묶음으로 112,000원에 나온 매물입니다. 선물세트를 여러 개 한 번에 구하려 할 때 가장 번거로운 점은 수량 확보입니다. 이 매물은 4세트 단위 판매로, 명절 준비나 단체... 가급적 안전결제 서비스를 이용해주세요~ 구매 전 판매자와 충분히 소통해 상태·배송·반품 정책을 명확히 하고, 신용도 높은 판매자인지 매물
+                    - mark [ref=e597]: 후기
+                    - text: 를 참고해 판단하세요. 현금 선거래 회피, 계약금 사기에...
+            - listitem [ref=e598]:
+              - generic [ref=e599]:
+                - generic [ref=e600]:
+                  - button "문서 저장하기" [ref=e602] [cursor=pointer]
+                  - generic [ref=e604]:
+                    - link [ref=e605] [cursor=pointer]:
+                      - /url: https://cafe.naver.com/pretty7978
+                    - generic [ref=e606]:
+                      - link "얼짱몸짱 [선릉점]" [ref=e607] [cursor=pointer]:
+                        - /url: https://cafe.naver.com/pretty7978
+                      - generic [ref=e608]: 2026.04.02.
+                - generic [ref=e609]:
+                  - link [ref=e611] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/pretty7978/31622?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6InByZXR0eTc5NzgiLCJhcnRpY2xlSWQiOjMxNjIyLCJpc3N1ZWRBdCI6MTc4OTExOTg4NzM5Mn0.jZssj1Wh9EdChQzNlO_lPomjicWJ7PU5HZDDNp7Hx3I&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                  - link [ref=e613] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/pretty7978/31622?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6InByZXR0eTc5NzgiLCJhcnRpY2xlSWQiOjMxNjIyLCJpc3N1ZWRBdCI6MTc4OTExOTg4NzM5Mn0.jZssj1Wh9EdChQzNlO_lPomjicWJ7PU5HZDDNp7Hx3I&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - mark [ref=e614]: 스팸
+                    - text: 명절 선물세트로 따뜻한 마음 전하는 법
+                  - link [ref=e616] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/pretty7978/31622?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6InByZXR0eTc5NzgiLCJhcnRpY2xlSWQiOjMxNjIyLCJpc3N1ZWRBdCI6MTc4OTExOTg4NzM5Mn0.jZssj1Wh9EdChQzNlO_lPomjicWJ7PU5HZDDNp7Hx3I&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - text: 특히,
+                    - mark [ref=e617]: 후기
+                    - text: 를 보면 많은 사람들이 신선한 맛과 풍부한 맛에 감탄하며 경험을 공유하고 있는데, 저 역시 그 경험에 충분히 공감했답니다. 혹시, 여러분도 간편하면서도 풍미 깊은 제품을 찾고 계시나요? 그렇다면 이
+                    - mark [ref=e618]: 스팸
+                    - text: 클래식 노캡, 200g, 6개는 정말 추천드릴 만한 제품이에요. 정성스럽게 만들어진 맛과 품질, 그리고 포장까지 고려하면, 평소 식사뿐 아니라 특별한 모임이나 선물용으로도 손색이 없답니다....
+            - listitem [ref=e619]:
+              - generic [ref=e620]:
+                - generic [ref=e621]:
+                  - button "문서 저장하기" [ref=e623] [cursor=pointer]
+                  - generic [ref=e625]:
+                    - link [ref=e626] [cursor=pointer]:
+                      - /url: https://cafe.naver.com/bbanga84
+                    - generic [ref=e627]:
+                      - link "상품정보상점" [ref=e628] [cursor=pointer]:
+                        - /url: https://cafe.naver.com/bbanga84
+                      - generic [ref=e629]: 1주 전
+                - generic [ref=e630]:
+                  - link "3" [ref=e632] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/bbanga84/1090?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJiYW5nYTg0IiwiYXJ0aWNsZUlkIjoxMDkwLCJpc3N1ZWRBdCI6MTc4OTExOTg4NzM5Mn0.WPcYwk8T504WMC-3vMeCwYEqctcxfM6OP6Xr2Q9PwXY&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                  - link [ref=e635] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/bbanga84/1090?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJiYW5nYTg0IiwiYXJ0aWNsZUlkIjoxMDkwLCJpc3N1ZWRBdCI6MTc4OTExOTg4NzM5Mn0.WPcYwk8T504WMC-3vMeCwYEqctcxfM6OP6Xr2Q9PwXY&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - mark [ref=e636]: 스팸
+                    - text: 선물세트
+                    - mark [ref=e637]: 6호
+                    - text: 클래식 명절 선물 준비하며 겪은 솔직한 이야기
+                  - link [ref=e639] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/bbanga84/1090?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJiYW5nYTg0IiwiYXJ0aWNsZUlkIjoxMDkwLCJpc3N1ZWRBdCI6MTc4OTExOTg4NzM5Mn0.WPcYwk8T504WMC-3vMeCwYEqctcxfM6OP6Xr2Q9PwXY&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - text: 실속 가득한
+                    - mark [ref=e640]: 스팸
+                    - text: 구성과 매력
+                    - mark [ref=e641]: 스팸
+                    - text: 선물세트
+                    - mark [ref=e642]: 6호
+                    - text: 클래식 설 명절
+                    - mark [ref=e643]: 스팸
+                    - text: 세트 가정용 집들이 단체 쇼핑백 렌즈와이프 6매 포함 [원산지:미국] 주요 사양 상품명
+                    - mark [ref=e644]: 스팸
+                    - text: 선물세트
+                    - mark [ref=e645]: 6호
+                    - text: 클래식 원산지 미국산 보관방법... 배송 일정 체크와 솔직
+                    - mark [ref=e646]: 후기
+                    - text: 분석 선물용으로 준비할 때는 아무래도 도착 시점이 가장 신경 쓰이는데요. 실제
+                    - mark [ref=e647]: 후기
+                    - text: 를 찾아보았더니 제품 상태는 소개 내용과 동일하고 깔끔해서 아주 만족스럽다는 평이...
+            - listitem [ref=e648]:
+              - generic [ref=e649]:
+                - generic [ref=e650]:
+                  - button "문서 저장하기" [ref=e652] [cursor=pointer]
+                  - generic [ref=e654]:
+                    - link [ref=e655] [cursor=pointer]:
+                      - /url: https://cafe.naver.com/skybluezpre9
+                    - generic [ref=e656]:
+                      - link "지갑탈출쇼핑단" [ref=e657] [cursor=pointer]:
+                        - /url: https://cafe.naver.com/skybluezpre9
+                      - generic [ref=e658]: 2026.01.30.
+                - generic [ref=e659]:
+                  - link "3" [ref=e661] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/skybluezpre9/353?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6InNreWJsdWV6cHJlOSIsImFydGljbGVJZCI6MzUzLCJpc3N1ZWRBdCI6MTc4OTExOTg4NzM5Mn0.yX-h0SABByb2g2_Wm2zPGjl_cm2qrfl1hjUGRPwLN84&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                  - link [ref=e664] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/skybluezpre9/353?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6InNreWJsdWV6cHJlOSIsImFydGljbGVJZCI6MzUzLCJpc3N1ZWRBdCI6MTc4OTExOTg4NzM5Mn0.yX-h0SABByb2g2_Wm2zPGjl_cm2qrfl1hjUGRPwLN84&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - text: CJ
+                    - mark [ref=e665]: 스팸6호
+                    - text: 설 추석 명절 선물세트, 가성비 최고 명절 선물 추천!
+                  - link [ref=e667] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/skybluezpre9/353?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6InNreWJsdWV6cHJlOSIsImFydGljbGVJZCI6MzUzLCJpc3N1ZWRBdCI6MTc4OTExOTg4NzM5Mn0.yX-h0SABByb2g2_Wm2zPGjl_cm2qrfl1hjUGRPwLN84&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - text: CJ
+                    - mark [ref=e668]: 스팸6호
+                    - text: 설 추석 명절 선물세트, 가성비 최고 명절 선물 추천! 안녕하세요 여러분! 곧 다가오는 설과 추석, 명절 선물 고르기 고민 많으시죠? 오늘은 제가 직접 사용해보고 너무 만족했던 CJ
+                    - mark [ref=e669]: 스팸6호
+                    - text: 설... 직접 써본 생생
+                    - mark [ref=e670]: 후기
+                    - text: 평소
+                    - mark [ref=e671]: 스팸
+                    - text: 을 좋아하는 저는 명절에 이 세트를 가족과 함께 나눠 먹었는데요, 고기 함량이 높아서 일반
+                    - mark [ref=e672]: 스팸
+                    - text: 보다 훨씬 촉촉하고 풍미가 좋더라고요. 볶음밥, 김치찌개, 간단한 요리할 때...
+            - listitem [ref=e673]:
+              - generic [ref=e674]:
+                - generic [ref=e675]:
+                  - button "문서 저장하기" [ref=e677] [cursor=pointer]
+                  - generic [ref=e679]:
+                    - link [ref=e680] [cursor=pointer]:
+                      - /url: https://cafe.naver.com/camiso
+                      - img "이미지준비중" [ref=e681]
+                    - generic [ref=e682]:
+                      - link "차암동 스마일시티 & 음봉 스마트밸리 맘카페 (미소맘)" [ref=e683] [cursor=pointer]:
+                        - /url: https://cafe.naver.com/camiso
+                      - generic [ref=e684]: 2020.10.16.
+                - generic [ref=e685]:
+                  - link "3" [ref=e687] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/camiso/183693?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImNhbWlzbyIsImFydGljbGVJZCI6MTgzNjkzLCJpc3N1ZWRBdCI6MTc4OTExOTg4NzM5Mn0.njwX_f67HasLRTkElSkM1xYq8g6JGMex9Wz3OHPNAsM&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                  - link [ref=e690] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/camiso/183693?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImNhbWlzbyIsImFydGljbGVJZCI6MTgzNjkzLCJpc3N1ZWRBdCI6MTc4OTExOTg4NzM5Mn0.njwX_f67HasLRTkElSkM1xYq8g6JGMex9Wz3OHPNAsM&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - mark [ref=e691]: 스팸6호
+                    - text: 팔아용
+                  - link [ref=e693] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/camiso/183693?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImNhbWlzbyIsImFydGljbGVJZCI6MTgzNjkzLCJpc3N1ZWRBdCI6MTc4OTExOTg4NzM5Mn0.njwX_f67HasLRTkElSkM1xYq8g6JGMex9Wz3OHPNAsM&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - mark [ref=e694]: 스팸 6호
+                    - text: 26,000원입니당
+            - listitem [ref=e695]:
+              - generic [ref=e696]:
+                - generic [ref=e697]:
+                  - button "문서 저장하기" [ref=e699] [cursor=pointer]
+                  - generic [ref=e701]:
+                    - link [ref=e702] [cursor=pointer]:
+                      - /url: https://cafe.naver.com/bmjmo
+                    - generic [ref=e703]:
+                      - link "브랜드 홍보 연구소" [ref=e704] [cursor=pointer]:
+                        - /url: https://cafe.naver.com/bmjmo
+                      - generic [ref=e705]: 2주 전
+                - generic [ref=e706]:
+                  - link "3" [ref=e708] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/bmjmo/1746?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJtam1vIiwiYXJ0aWNsZUlkIjoxNzQ2LCJpc3N1ZWRBdCI6MTc4OTExOTg4NzM5Mn0.xpqeTTTbhc5TzASf0wlXTZyJYWJtTQdhayaShtpK1Dw&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                  - link [ref=e711] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/bmjmo/1746?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJtam1vIiwiYXJ0aWNsZUlkIjoxNzQ2LCJpc3N1ZWRBdCI6MTc4OTExOTg4NzM5Mn0.xpqeTTTbhc5TzASf0wlXTZyJYWJtTQdhayaShtpK1Dw&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - mark [ref=e712]: 스팸
+                    - text: 선물세트
+                    - mark [ref=e713]: 6호
+                    - text: 클래식 명절 준비 미리했더니 마음이 편해요
+                  - link [ref=e715] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/bmjmo/1746?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJtam1vIiwiYXJ0aWNsZUlkIjoxNzQ2LCJpc3N1ZWRBdCI6MTc4OTExOTg4NzM5Mn0.xpqeTTTbhc5TzASf0wlXTZyJYWJtTQdhayaShtpK1Dw&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - text: 명절 선물 끝판왕의 묵직한 구성
+                    - mark [ref=e716]: 스팸
+                    - text: 선물세트
+                    - mark [ref=e717]: 6호
+                    - text: 클래식 설 명절
+                    - mark [ref=e718]: 스팸
+                    - text: 세트 가정용 집들이 단체 쇼핑백 렌즈와이프 6매 포함 [원산지:미국] 주요 사양 상품명
+                    - mark [ref=e719]: 스팸
+                    - text: 선물세트
+                    - mark [ref=e720]: 6호
+                    - text: 클래식 원산지 미국산 보관방법... 실제 구매
+                    - mark [ref=e721]: 후기
+                    - text: 를 살펴보니 일주일 정도 소요되어 마음을 졸였다는 이야기가 눈에 띄더라고요. 기업 단체 주문이나 명절 직전에는 물량이 몰릴 수 있으니 여유 있게 미리 주문하는 지혜가 절대적으로 필요해...
+            - listitem [ref=e722]:
+              - generic [ref=e723]:
+                - generic [ref=e724]:
+                  - button "문서 저장하기" [ref=e726] [cursor=pointer]
+                  - generic [ref=e728]:
+                    - link [ref=e729] [cursor=pointer]:
+                      - /url: https://cafe.naver.com/rbfwhdkd
+                      - img "이미지준비중" [ref=e730]
+                    - generic [ref=e731]:
+                      - link "귤 매니아" [ref=e732] [cursor=pointer]:
+                        - /url: https://cafe.naver.com/rbfwhdkd
+                      - generic [ref=e733]: 2024.10.17.
+                - generic [ref=e734]:
+                  - link [ref=e736] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/rbfwhdkd/888?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6InJiZndoZGtkIiwiYXJ0aWNsZUlkIjo4ODgsImlzc3VlZEF0IjoxNzg5MTE5ODg3MzkyfQ.WoB8_cnMAG4RGbrka-6L_EWtSkuHnyL5fF_R4-EqMLM&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                  - link [ref=e738] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/rbfwhdkd/888?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6InJiZndoZGtkIiwiYXJ0aWNsZUlkIjo4ODgsImlzc3VlZEF0IjoxNzg5MTE5ODg3MzkyfQ.WoB8_cnMAG4RGbrka-6L_EWtSkuHnyL5fF_R4-EqMLM&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - text: "["
+                    - mark [ref=e739]: 스팸 6
+                    - text: C호 선물세트] 구매 결정에 도움되는 핵심 정보
+                  - link [ref=e741] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/rbfwhdkd/888?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6InJiZndoZGtkIiwiYXJ0aWNsZUlkIjo4ODgsImlzc3VlZEF0IjoxNzg5MTE5ODg3MzkyfQ.WoB8_cnMAG4RGbrka-6L_EWtSkuHnyL5fF_R4-EqMLM&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - text: 출처 - 내돈내산 커뮤니티
+                    - mark [ref=e742]: 스팸 6
+                    - text: C호 선물세트, 1세트 할인 정보 &
+                    - mark [ref=e743]: 후기
+                    - text: 바로가기 상표권 및 저작권 침해 게시물에 대한 문제를 매우 중요하게 생각하고 있습니다. 만약 게시된 내용이 상표권이나 저작권을 침해하는 상품이라면, 메일로 연락 주시기 바랍니다. 신속한 처리를 약속드립니다. *********@gmail.com 댓글에 남겨진 상품 정보와 최저가 링크를 통해 쇼핑을 시작해보세요! ️
+            - listitem [ref=e744]:
+              - generic [ref=e745]:
+                - generic [ref=e746]:
+                  - button "문서 저장하기" [ref=e748] [cursor=pointer]
+                  - generic [ref=e750]:
+                    - link [ref=e751] [cursor=pointer]:
+                      - /url: https://cafe.naver.com/todghkfthrdyfl
+                    - generic [ref=e752]:
+                      - link "생활속요리" [ref=e753] [cursor=pointer]:
+                        - /url: https://cafe.naver.com/todghkfthrdyfl
+                      - generic [ref=e754]: 2022.02.09.
+                - generic [ref=e755]:
+                  - link [ref=e757] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/todghkfthrdyfl/251?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6InRvZGdoa2Z0aHJkeWZsIiwiYXJ0aWNsZUlkIjoyNTEsImlzc3VlZEF0IjoxNzg5MTE5ODg3MzkyfQ.vayyE-gzaR_wE1x0gdl4lCgwQSNnUk0S8-9SmnBk6_0&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - mark [ref=e758]: 스팸6호
+                    - text: 가격비교 추천 베스트 득템하세요
+                  - link [ref=e760] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/todghkfthrdyfl/251?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6InRvZGdoa2Z0aHJkeWZsIiwiYXJ0aWNsZUlkIjoyNTEsImlzc3VlZEF0IjoxNzg5MTE5ODg3MzkyfQ.vayyE-gzaR_wE1x0gdl4lCgwQSNnUk0S8-9SmnBk6_0&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - text: 8,616,000
+                    - mark [ref=e761]: 스팸 6호
+                    - text: "햄 선물세트 + 쇼핑백, 25세트 ※지금구매하시면: 1,073,900"
+                    - mark [ref=e762]: 스팸 6호
+                    - text: "햄 선물세트 + 쇼핑백, 160세트 ※지금구매하시면:"
+                    - mark [ref=e763]: "6"
+                    - text: ",892,800 CJ제일제당 22년 설 선물세트"
+                    - mark [ref=e764]: 스팸
+                    - text: 1호 3호
+                    - mark [ref=e765]: 6호
+                    - text: 8호... 2,391,890
+                    - mark [ref=e766]: 스팸6호
+                    - text: 제품 가격
+                    - mark [ref=e767]: 후기
+                    - text: 정보 로켓와우회원의 특권 무료체험 후 월 2,900원 결제 (오픈특가) 낮시간 주문 새벽도착 오후 7시까지 주문 가능, 상품별 새벽배송 가능 여부 확인 아침 주문...
+            - listitem [ref=e768]:
+              - generic [ref=e769]:
+                - generic [ref=e770]:
+                  - button "문서 저장하기" [ref=e772] [cursor=pointer]
+                  - generic [ref=e774]:
+                    - link [ref=e775] [cursor=pointer]:
+                      - /url: https://cafe.naver.com/bookjoang
+                      - img "이미지준비중" [ref=e776]
+                    - generic [ref=e777]:
+                      - link "독서좋아" [ref=e778] [cursor=pointer]:
+                        - /url: https://cafe.naver.com/bookjoang
+                      - generic [ref=e779]: 2024.09.17.
+                - generic [ref=e780]:
+                  - link "5" [ref=e782] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/bookjoang/2387?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJvb2tqb2FuZyIsImFydGljbGVJZCI6MjM4NywiaXNzdWVkQXQiOjE3ODkxMTk4ODczOTJ9.iRFE4Gv1hYQ2-r8xKS8Mpf7-fpAQamLBtgfTkh8yeVY&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                  - link [ref=e785] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/bookjoang/2387?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJvb2tqb2FuZyIsImFydGljbGVJZCI6MjM4NywiaXNzdWVkQXQiOjE3ODkxMTk4ODczOTJ9.iRFE4Gv1hYQ2-r8xKS8Mpf7-fpAQamLBtgfTkh8yeVY&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - mark [ref=e786]: 스팸
+                    - text: 복합5호 사용
+                    - mark [ref=e787]: 후기
+                    - text: 모음으로 보는 제품 가치
+                  - link [ref=e789] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/bookjoang/2387?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJvb2tqb2FuZyIsImFydGljbGVJZCI6MjM4NywiaXNzdWVkQXQiOjE3ODkxMTk4ODczOTJ9.iRFE4Gv1hYQ2-r8xKS8Mpf7-fpAQamLBtgfTkh8yeVY&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - text: 안녕하세요 모두~ 이번에는
+                    - mark [ref=e790]: 스팸
+                    - text: 복합5호 관련해서 너무 좋은
+                    - mark [ref=e791]: 스팸 6
+                    - text: "C호 선물세트, 1세트를 소개해드릴게요, 끝까지 읽어주세요~ 판매가격: 34,900원 원래가격: 69,900원 할인율: 50% 평점: 5.0 평점 수: 2,113 적립금: 최대 1,745원 적립 심한 것들이야!"
+                    - mark [ref=e792]: 스팸 6
+                    - text: C호 선물세트를 받았는데 넘나 고마워! 이 세트 너무 멋져. 빈티지한 캔디자인과 시원한 색감이 마음에 드는 거야. 그 안에
+                    - mark [ref=e793]: 스팸
+                    - text: 캔 6개가 들어 있는데, 그게 또...
+            - listitem [ref=e794]:
+              - generic [ref=e795]:
+                - generic [ref=e796]:
+                  - button "문서 저장하기" [ref=e798] [cursor=pointer]
+                  - generic [ref=e800]:
+                    - link [ref=e801] [cursor=pointer]:
+                      - /url: https://cafe.naver.com/blacktreasure
+                      - img "이미지준비중" [ref=e802]
+                    - generic [ref=e803]:
+                      - link "세상의 보물섬" [ref=e804] [cursor=pointer]:
+                        - /url: https://cafe.naver.com/blacktreasure
+                      - generic [ref=e805]: 2024.08.16.
+                - generic [ref=e806]:
+                  - link [ref=e808] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/blacktreasure/715?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJsYWNrdHJlYXN1cmUiLCJhcnRpY2xlSWQiOjcxNSwiaXNzdWVkQXQiOjE3ODkxMTk4ODczOTJ9.97iUwDhttrqYW9XL3x8MZMnyKMi3fT21Ni2-oF388pE&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                  - link [ref=e810] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/blacktreasure/715?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJsYWNrdHJlYXN1cmUiLCJhcnRpY2xlSWQiOjcxNSwiaXNzdWVkQXQiOjE3ODkxMTk4ODczOTJ9.97iUwDhttrqYW9XL3x8MZMnyKMi3fT21Ni2-oF388pE&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - text: 영양 가득한 간편식의 새로운 지평, 'CJ
+                    - mark [ref=e811]: 스팸 6호
+                    - text: "' 명절 선물세트"
+                  - link [ref=e813] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/blacktreasure/715?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImJsYWNrdHJlYXN1cmUiLCJhcnRpY2xlSWQiOjcxNSwiaXNzdWVkQXQiOjE3ODkxMTk4ODczOTJ9.97iUwDhttrqYW9XL3x8MZMnyKMi3fT21Ni2-oF388pE&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - text: 편리한 포장과 합리적인 가격 CJ
+                    - mark [ref=e814]: 스팸 6호
+                    - text: 명절 선물세트는
+                    - mark [ref=e815]: 스팸
+                    - text: 클래식 12개가 포함되어 있어 선물로 주기에 충분한 양이다. 또한 별도의 쇼핑백이 제공되어 선물 포장이 간편하다. 배송료도 무료여서 경제적이며, 높은 평점과 많은 긍정적인
+                    - mark [ref=e816]: 후기
+                    - text: 를 보면 품질과 만족도 또한 탁월한 것으로 보인다. 다양한 활용법과 영양 균형
+                    - mark [ref=e817]: 스팸
+                    - text: 클래식은 구이, 볶음, 햄버거 등 다양한 요리에 활용할 수 있는 만능 식재료다. 간단한...
+            - listitem [ref=e818]:
+              - generic [ref=e819]:
+                - generic [ref=e820]:
+                  - button "문서 저장하기" [ref=e822] [cursor=pointer]
+                  - generic [ref=e824]:
+                    - link [ref=e825] [cursor=pointer]:
+                      - /url: https://cafe.naver.com/purplef58fd
+                      - img "이미지준비중" [ref=e826]
+                    - generic [ref=e827]:
+                      - link "투데이 인포" [ref=e828] [cursor=pointer]:
+                        - /url: https://cafe.naver.com/purplef58fd
+                      - generic [ref=e829]: 2024.09.09.
+                - generic [ref=e830]:
+                  - link "3" [ref=e832] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/purplef58fd/12?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6InB1cnBsZWY1OGZkIiwiYXJ0aWNsZUlkIjoxMiwiaXNzdWVkQXQiOjE3ODkxMTk4ODczOTJ9.cYkMiHZe-SloC72y7otlIIIA39Q8IDllr5aspWEiVOg&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                  - link [ref=e835] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/purplef58fd/12?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6InB1cnBsZWY1OGZkIiwiYXJ0aWNsZUlkIjoxMiwiaXNzdWVkQXQiOjE3ODkxMTk4ODczOTJ9.cYkMiHZe-SloC72y7otlIIIA39Q8IDllr5aspWEiVOg&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - text: CJ제일제당
+                    - mark [ref=e836]: 스팸 6호
+                    - text: 선물세트 이 아이템을 모르고 살다니, 어떻게 그럴 수 있나요? - Top1
+                  - link [ref=e838] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/purplef58fd/12?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6InB1cnBsZWY1OGZkIiwiYXJ0aWNsZUlkIjoxMiwiaXNzdWVkQXQiOjE3ODkxMTk4ODczOTJ9.cYkMiHZe-SloC72y7otlIIIA39Q8IDllr5aspWEiVOg&q=%ec%8a%a4%ed%8c%b8%206%ed%98%b8%20%ed%9b%84%ea%b8%b0&tc=naver_search
+                    - text: ■ CJ제일제당
+                    - mark [ref=e839]: 스팸 6호
+                    - text: 선물세트 인기
+                    - mark [ref=e840]: 후기
+                    - text: Top1 위 ■ [CJ 24년 추석 선물세트]
+                    - mark [ref=e841]: 스팸 6호
+                    - text: ", 단품, 1개 상품가격 ↓ 43,000원 ↓ 5% 할인 ↓ 40,500원 로켓배송 (유/무) ❌ (⭐별점⭐ 총 0점 | 상품"
+                    - mark [ref=e842]: 후기
+                    - text: 0개) 파트너스 활동으로, 일정액의 수수료를 제공받을 수 있습니다. ⭐게시물 삭제 요청⭐ 상표권&저작권에 문제가 되는 게시물 삭제에 관하여 메일로 문의를 보내주시면 감사하겠습니다. 메일주소...
+        - generic [ref=e853]:
+          - link [ref=e854] [cursor=pointer]:
+            - /url: https://mkt.naver.com/p1/atrb?channel_id=naver_pcsearchmktbanner&campaign_id=2603-naverclip-001&target=https%3A%2F%2Fclipcreators.naver.com%2Fpromotion%2Ftoday%3Fdtm_source%3Dnaver_pcsearchmktbanner%26dtm_medium%3Dmktatrb_etc%26dtm_campaign%3D2603-naverclip-001
+            - generic [ref=e856]:
+              - strong [ref=e857]: 태그 하나로, 기록은 더 멀리
+              - paragraph [ref=e858]: 오늘의 경험을 기록하고 포인트 적립
+          - link [ref=e859] [cursor=pointer]:
+            - /url: https://mkt.naver.com/p1/atrb?channel_id=naver_pcsearchmktbanner&campaign_id=2609-shopping-002&target=https%3A%2F%2Fshopping.naver.com%2Ffesta%2Fgift%2F6a4f0fb8e73d32500f261a71%3FlayerId%3DL_260811143826330%26dtm_source%3Dnaver_pcsearchmktbanner%26dtm_medium%3Dmktatrb_etc%26dtm_campaign%3D2609-shopping-002
+            - generic [ref=e861]:
+              - strong [ref=e862]: 추석+세일
+              - paragraph [ref=e863]: 선물핫딜부터 선착순 쿠폰까지!
+          - link [ref=e864] [cursor=pointer]:
+            - /url: https://mkt.naver.com/naverhyundaicard3?eventCode=NAVHJ&dtm_source=naver_pcsearchmktbanner&dtm_medium=display&dtm_campaign=hyundaicard3mkt
+            - generic [ref=e866]:
+              - strong [ref=e867]: 적립적인 멤버십 전용카드
+              - paragraph [ref=e868]: 네이버 현대카드 Ed.3
+          - link [ref=e869] [cursor=pointer]:
+            - /url: https://mkt.naver.com/p1/atrb?channel_id=naver_pcsearchmktbanner&campaign_id=2607-naverAI-001&target=https%3A%2F%2Fmkt.naver.com%2Faitab%3Fdtm_source%3Dnaver_pcsearchmktbanner%26dtm_medium%3Dmktatrb_etc%26dtm_campaign%3D2607-naverAI-001
+            - generic [ref=e871]:
+              - strong [ref=e872]: 끝까지 끝내주는 AI, 네이버 AI탭
+              - paragraph [ref=e873]: 검색이 대화가 되다
+    - generic [ref=e874]:
+      - link "맨위로" [ref=e876] [cursor=pointer]:
+        - /url: "#"
+      - generic [ref=e879]:
+        - link "전체서비스 새 창 열림" [ref=e881] [cursor=pointer]:
+          - /url: https://www.naver.com/more.html
+          - text: 전체서비스
+          - generic [ref=e882]: 새 창 열림
+        - link "이용약관 새 창 열림" [ref=e884] [cursor=pointer]:
+          - /url: https://policy.naver.com/policy/service.html
+          - text: 이용약관
+          - generic [ref=e885]: 새 창 열림
+        - link "개인정보처리방침 새 창 열림" [ref=e887] [cursor=pointer]:
+          - /url: https://policy.naver.com/policy/privacy.html
+          - strong [ref=e888]: 개인정보처리방침
+          - generic [ref=e889]: 새 창 열림
+        - link "검색 고객센터 새 창 열림" [ref=e891] [cursor=pointer]:
+          - /url: https://help.naver.com/alias/search/integration/main.naver
+          - text: 검색 고객센터
+          - generic [ref=e892]: 새 창 열림
+        - link "© NAVER Corp. 새 창 열림" [ref=e894] [cursor=pointer]:
+          - /url: https://www.navercorp.com/
+          - text: © NAVER Corp.
+          - generic [ref=e895]: 새 창 열림

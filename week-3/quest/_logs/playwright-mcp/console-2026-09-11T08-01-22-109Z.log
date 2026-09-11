@@ -1,0 +1,12 @@
+[   22807ms] [WARNING] "circular" and "bound" option cannot be used together, ignoring bound. @ https://static-resource-smartstore.pstatic.net/smartstore/p/static/20260904183529/js/542.d8faa969.js:0
+[   22824ms] [WARNING] "circular" and "bound" option cannot be used together, ignoring bound. @ https://static-resource-smartstore.pstatic.net/smartstore/p/static/20260904183529/js/542.d8faa969.js:0
+[   23435ms] [WARNING] MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 visible listeners added. Use emitter.setMaxListeners() to increase limit
+    at h (https://editor-static.pstatic.net/v/basic/1.73.1/se.viewer.js:6:27262)
+    at s.on.s.addListener (https://editor-static.pstatic.net/v/basic/1.73.1/se.viewer.js:6:29831)
+    at new t (https://editor-static.pstatic.net/v/basic/1.73.1/se.24.6bf71b05.js:1:2126)
+    at https://editor-static.pstatic.net/v/basic/1.73.1/se.viewer.js:12:53355 @ https://static-resource-smartstore.pstatic.net/smartstore/p/static/20260904183529/js/542.d8faa969.js:0
+[   23435ms] [WARNING] MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 invisible listeners added. Use emitter.setMaxListeners() to increase limit
+    at h (https://editor-static.pstatic.net/v/basic/1.73.1/se.viewer.js:6:27262)
+    at s.on.s.addListener (https://editor-static.pstatic.net/v/basic/1.73.1/se.viewer.js:6:29831)
+    at new t (https://editor-static.pstatic.net/v/basic/1.73.1/se.24.6bf71b05.js:1:2161)
+    at https://editor-static.pstatic.net/v/basic/1.73.1/se.viewer.js:12:53355 @ https://static-resource-smartstore.pstatic.net/smartstore/p/static/20260904183529/js/542.d8faa969.js:0

@@ -1,0 +1,4 @@
+[    1556ms] [LOG] [weblog] FCP {name: FCP, value: 1392, rating: good, delta: 1392, entries: Array(1)} @ https://assets.coupangcdn.com/front/front-web-next/_next/static/chunks/8895-021ce28c4554c35e.js:0
+[    1557ms] [LOG] [weblog] LCP {name: LCP, value: 1392, rating: good, delta: 1392, entries: Array(1)} @ https://assets.coupangcdn.com/front/front-web-next/_next/static/chunks/8895-021ce28c4554c35e.js:0
+[    1559ms] [LOG] [weblog] LCP {name: LCP, value: 1460, rating: good, delta: 68, entries: Array(1)} @ https://assets.coupangcdn.com/front/front-web-next/_next/static/chunks/8895-021ce28c4554c35e.js:0
+[    2769ms] [LOG] [weblog] tti: 1505, serverTime: 1228, domReady: 1505, imageLoadingTime: 0 @ https://assets.coupangcdn.com/front/front-web-next/_next/static/chunks/8895-021ce28c4554c35e.js:0

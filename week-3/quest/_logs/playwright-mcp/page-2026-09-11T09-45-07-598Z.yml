@@ -1,0 +1,793 @@
+- generic [active] [ref=f10e1]:
+  - generic:
+    - link "게시판 목록 바로가기" [ref=f10e2] [cursor=pointer]:
+      - /url: "#cafe-menu"
+    - link "본문 바로가기" [ref=f10e3] [cursor=pointer]:
+      - /url: "#main-area"
+    - link "웹 접근성이 좋은 모바일 웹에서 사용하겠습니까?" [ref=f10e4] [cursor=pointer]:
+      - /url: https://m.cafe.naver.com/aclove
+  - heading "경리-회계 직장인들의 쉼터" [level=1] [ref=f10e5]
+  - generic [ref=f10e6]:
+    - generic [ref=f10e7]:
+      - generic [ref=f10e8]:
+        - link [ref=f10e9] [cursor=pointer]:
+          - /url: http://www.naver.com
+          - img "NAVER" [ref=f10e10]
+        - generic [ref=f10e11]:
+          - paragraph [ref=f10e12]:
+            - link "카페홈" [ref=f10e13] [cursor=pointer]:
+              - /url: https://section.cafe.naver.com
+          - link "이웃" [ref=f10e15] [cursor=pointer]:
+            - /url: https://cafe.naver.com/ca-fe/home/town
+          - generic [ref=f10e16]:
+            - link "가입카페" [ref=f10e17] [cursor=pointer]:
+              - /url: "#"
+            - link [ref=f10e18] [cursor=pointer]:
+              - /url: "#"
+              - img "가입카페" [ref=f10e19]
+          - link "새글" [ref=f10e21] [cursor=pointer]:
+            - /url: "#"
+          - link "내소식" [ref=f10e23] [cursor=pointer]:
+            - /url: "#"
+          - link "채팅" [ref=f10e25] [cursor=pointer]:
+            - /url: "#"
+          - generic [ref=f10e26]:
+            - strong [ref=f10e27]: 사용자 링크
+            - list [ref=f10e28]:
+              - listitem [ref=f10e29]:
+                - link "로그인" [ref=f10e30] [cursor=pointer]:
+                  - /url: https://nid.naver.com/nidlogin.login
+              - listitem [ref=f10e34]:
+                - link "서비스 더보기" [ref=f10e35] [cursor=pointer]:
+                  - /url: javascript:;
+      - link [ref=f10e40] [cursor=pointer]:
+        - /url: /MyCafeIntro.nhn?clubid=10107412
+        - img "경리-회계 직장인들의 쉼터" [ref=f10e41]
+      - generic [ref=f10e42]:
+        - generic [ref=f10e43]:
+          - generic [ref=f10e45]:
+            - list [ref=f10e46]:
+              - listitem [ref=f10e47] [cursor=pointer]:
+                - button "카페정보" [disabled] [ref=f10e48]
+              - listitem [ref=f10e49] [cursor=pointer]:
+                - button "나의활동" [ref=f10e50]
+            - generic [ref=f10e51]:
+              - heading "카페정보" [level=4] [ref=f10e52]
+              - list [ref=f10e54]:
+                - listitem [ref=f10e55]:
+                  - link [ref=f10e56] [cursor=pointer]:
+                    - /url: /MyCafeIntro.nhn?clubid=10107412
+                    - img "카페아이콘" [ref=f10e57]
+                - listitem [ref=f10e58]:
+                  - link "포키빵빵" [ref=f10e59] [cursor=pointer]:
+                    - /url: /f-e/cafes/10107412/members/2ks0BbMzO7d9PheHp7cFe0IoQTp0PDJIroPcGCK2HEg
+                  - emphasis [ref=f10e62]: 매니저
+                  - link "2003.12.16. 개설" [ref=f10e64] [cursor=pointer]:
+                    - /url: "#"
+                  - link "카페소개" [ref=f10e66] [cursor=pointer]:
+                    - /url: "#"
+              - list [ref=f10e68]:
+                - link [ref=f10e70] [cursor=pointer]:
+                  - /url: "#"
+                  - img "AI MATE" [ref=f10e71]
+                  - emphasis [ref=f10e72]: 1,025만 인용
+                  - img "상세보기" [ref=f10e73]
+                - listitem [ref=f10e74]:
+                  - link [ref=f10e75] [cursor=pointer]:
+                    - /url: "#"
+                    - strong [ref=f10e76]: 카페등급
+                    - emphasis [ref=f10e78]: 나무4단계
+                - listitem [ref=f10e79] [cursor=pointer]:
+                  - strong [ref=f10e80]: 카페멤버수
+                  - link "멤버수 187,110 비공개" [ref=f10e81]:
+                    - /url: "#"
+                    - img "멤버수" [ref=f10e82]
+                    - emphasis [ref=f10e83]:
+                      - text: 187,110
+                      - generic [ref=f10e84]: 비공개
+                  - link "닫기":
+                    - /url: "#"
+                  - link "초대" [ref=f10e86]:
+                    - /url: "#"
+                - listitem [ref=f10e87]:
+                  - img "지역" [ref=f10e88]
+                  - text: 서울특별시 강남구
+            - generic [ref=f10e89]:
+              - strong [ref=f10e90]: 대표 인기카페
+              - img "NAVER 대표카페" [ref=f10e91]
+            - link "카페 가입하기" [ref=f10e93] [cursor=pointer]:
+              - /url: "#"
+            - list [ref=f10e95]:
+              - listitem [ref=f10e96]:
+                - link "카페 채팅" [ref=f10e97] [cursor=pointer]:
+                  - /url: "#"
+          - generic [ref=f10e99]:
+            - textbox "카페글 검색어 입력" [ref=f10e100]
+            - button "검색" [ref=f10e101] [cursor=pointer]
+          - generic [ref=f10e103]:
+            - list [ref=f10e104]:
+              - listitem [ref=f10e105]:
+                - link "전체글보기" [ref=f10e106] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.boardtype=L
+                - generic [ref=f10e107]: 552,790
+              - listitem [ref=f10e108]:
+                - link "인기글" [ref=f10e109] [cursor=pointer]:
+                  - /url: /f-e/cafes/10107412/popular
+                - img "새 게시글" [ref=f10e110]
+            - list [ref=f10e112]:
+              - listitem [ref=f10e113]:
+                - link "티키타카페 게시판" [ref=f10e114] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=552&search.boardtype=L
+                - img "새 게시글" [ref=f10e115]
+            - heading "✅ 카페규정(사원○)" [level=3] [ref=f10e117]:
+              - generic "&#9989; 카페규정(사원○)" [ref=f10e118]: ✅ 카페규정(사원○)
+            - list [ref=f10e119]:
+              - listitem [ref=f10e120]:
+                - link "🎯카페이용방법" [ref=f10e121] [cursor=pointer]:
+                  - /url: https://cafe.naver.com/aclove/590763
+              - listitem [ref=f10e122]:
+                - link "🔔공지사항" [ref=f10e123] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=2&search.boardtype=L
+              - listitem [ref=f10e124]:
+                - link "💙회원님 부탁드려요" [ref=f10e125] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=262&search.boardtype=L
+              - listitem [ref=f10e126]:
+                - link "📘카페규정" [ref=f10e127] [cursor=pointer]:
+                  - /url: https://cafe.naver.com/aclove/503409
+              - listitem [ref=f10e128]:
+                - link "📘등급별 컨텐츠 이용범위" [ref=f10e129] [cursor=pointer]:
+                  - /url: https://cafe.naver.com/aclove/375343
+              - listitem [ref=f10e130]:
+                - link "📘카페 아이콘의 의미" [ref=f10e131] [cursor=pointer]:
+                  - /url: https://cafe.naver.com/aclove/583790
+              - listitem [ref=f10e132]:
+                - link "🚨카페 활동 10가지 규칙" [ref=f10e133] [cursor=pointer]:
+                  - /url: https://cafe.naver.com/aclove/482528
+              - listitem [ref=f10e134]:
+                - link "🚨카페신고방(욕설,광고)" [ref=f10e135] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=137&search.boardtype=L
+                - img "새 게시글" [ref=f10e136]
+            - generic [ref=f10e137]:
+              - heading [level=3] [ref=f10e138]:
+                - link "✅ 등업신청(사원○)" [ref=f10e139] [cursor=pointer]:
+                  - /url: "#"
+                - img "새 게시글" [ref=f10e140]
+              - paragraph [ref=f10e141]:
+                - link [ref=f10e142] [cursor=pointer]:
+                  - /url: "#"
+                  - img "열기/닫기" [ref=f10e143]
+            - heading "☑️ 업무도서" [level=3] [ref=f10e145]:
+              - generic "&#9745;&#65039; 업무도서" [ref=f10e146]: ☑️ 업무도서
+            - list [ref=f10e147]:
+              - listitem [ref=f10e148]:
+                - link "🎯도서구입 카페이용" [ref=f10e149] [cursor=pointer]:
+                  - /url: https://cafe.naver.com/aclove/591336
+              - listitem [ref=f10e150]:
+                - link "📖경리서점 추천도서" [ref=f10e151] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=449&search.boardtype=L
+              - listitem [ref=f10e152]:
+                - link "📖도서회원 등업신청" [ref=f10e153] [cursor=pointer]:
+                  - /url: https://cafe.naver.com/kyunglistudy/922
+              - listitem [ref=f10e154]:
+                - link "📖(도서)이벤트" [ref=f10e155] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=431&search.boardtype=L
+            - heading "☑️ 정보이용료" [level=3] [ref=f10e157]:
+              - generic "&#9745;&#65039; 정보이용료" [ref=f10e158]: ☑️ 정보이용료
+            - list [ref=f10e159]:
+              - listitem [ref=f10e160]:
+                - link "🎯정보이용 공지사항" [ref=f10e161] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=496&search.boardtype=L
+              - listitem [ref=f10e162]:
+                - link "🎯도서 공동구매🥇" [ref=f10e163] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=536&search.boardtype=L
+              - listitem [ref=f10e164]:
+                - link "도서 배송문의" [ref=f10e165] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=542&search.boardtype=L
+              - listitem [ref=f10e166]:
+                - link "🎯네이버 페이결제" [ref=f10e167] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=543&search.boardtype=L
+              - listitem [ref=f10e168]:
+                - link "🎯신용카드 전자결제" [ref=f10e169] [cursor=pointer]:
+                  - /url: https://cafe.naver.com/aclove/658266
+              - listitem [ref=f10e170]:
+                - link "🎯추가입금/등록변경" [ref=f10e171] [cursor=pointer]:
+                  - /url: https://cafe.naver.com/aclove/591325
+              - listitem [ref=f10e172]:
+                - link "💜희망 관심 교육" [ref=f10e173] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=483&search.boardtype=L
+            - heading "✅ 회원공감((사원○)" [level=3] [ref=f10e175]:
+              - generic "&#9989; 회원공감((사원○)" [ref=f10e176]: ✅ 회원공감((사원○)
+            - list [ref=f10e177]:
+              - listitem [ref=f10e178]:
+                - link "💙카페에 감사합니다." [ref=f10e179] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=438&search.boardtype=L
+                - img "새 게시글" [ref=f10e180]
+              - listitem [ref=f10e181]:
+                - link "💙나를 칭찬해!(대리○)" [ref=f10e182] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=384&search.boardtype=L
+              - listitem [ref=f10e183]:
+                - link "📘카페 대문(핸드폰 메인)" [ref=f10e184] [cursor=pointer]:
+                  - /url: https://cafe.naver.com/aclove/360541
+              - listitem [ref=f10e185]:
+                - link "💙카페에 제안합니다." [ref=f10e186] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=437&search.boardtype=L
+              - listitem [ref=f10e187]:
+                - link "💙꼰대와 MZ 세대공감" [ref=f10e188] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=385&search.boardtype=L
+                - img "새 게시글" [ref=f10e189]
+            - heading "✍️ 생생한 나의 실무" [level=3] [ref=f10e191]:
+              - generic "&#9997;&#65039; 생생한 나의 실무" [ref=f10e192]: ✍️ 생생한 나의 실무
+            - list [ref=f10e193]:
+              - listitem [ref=f10e194]:
+                - link "📘나의 실무경험(사원○)" [ref=f10e195] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=305&search.boardtype=L
+                - img "새 게시글" [ref=f10e196]
+              - listitem [ref=f10e197]:
+                - link "📘나의 노하우(사원○)" [ref=f10e198] [cursor=pointer]:
+                  - /url: /MemoList.nhn?search.clubid=10107412&search.menuid=87&viewType=pc
+                - img "새 게시글" [ref=f10e199]
+              - listitem [ref=f10e200]:
+                - link "📘한줄 업무상식(사원○)" [ref=f10e201] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=286&search.boardtype=L
+              - listitem [ref=f10e202]:
+                - link "☑️업무 매뉴얼(팀장○)" [ref=f10e203] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=211&search.boardtype=L
+            - heading "✍️ 신입사원!(질문x)" [level=3] [ref=f10e205]:
+              - generic "&#9997;&#65039; 신입사원!(질문x)" [ref=f10e206]: ✍️ 신입사원!(질문x)
+            - list [ref=f10e207]:
+              - listitem [ref=f10e208]:
+                - link "💙가입인사" [ref=f10e209] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=1&search.boardtype=L
+                - img "새 게시글" [ref=f10e210]
+              - listitem [ref=f10e211]:
+                - link "🥇공부하는 마음가짐" [ref=f10e212] [cursor=pointer]:
+                  - /url: https://cafe.naver.com/aclove/558408
+              - listitem [ref=f10e213]:
+                - link "🥇경리실무 공부법" [ref=f10e214] [cursor=pointer]:
+                  - /url: https://cafe.naver.com/aclove/462665
+              - listitem [ref=f10e215]:
+                - link "일반회사 업무(사원○)" [ref=f10e216] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=530&search.boardtype=L
+              - listitem [ref=f10e217]:
+                - link "처음 출근 찐 초보(사원○)" [ref=f10e218] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=232&search.boardtype=L
+              - listitem [ref=f10e219]:
+                - link "전산회계 2급 이론(과장○)" [ref=f10e220] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=548&search.boardtype=L
+              - listitem [ref=f10e221]:
+                - link "전산세무 2급 이론(팀장○)" [ref=f10e222] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=550&search.boardtype=L
+            - heading "1️⃣ 업무 질문(질문○)" [level=3] [ref=f10e224]:
+              - generic "1&#65039;&#8419; 업무 질문(질문○)" [ref=f10e225]: 1️⃣ 업무 질문(질문○)
+            - list [ref=f10e226]:
+              - listitem [ref=f10e227]:
+                - link "❓회계프로그램 사용법" [ref=f10e228] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=78&search.boardtype=L
+                - img "새 게시글" [ref=f10e229]
+              - listitem [ref=f10e230]:
+                - link "📓프로그램 추천/견적" [ref=f10e231] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=403&search.boardtype=L
+                - img "새 게시글" [ref=f10e232]
+              - listitem [ref=f10e233]:
+                - link "❓연구비(국고, RCMS)" [ref=f10e234] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=317&search.boardtype=L
+                - img "새 게시글" [ref=f10e235]
+              - listitem [ref=f10e236]:
+                - link "❓분개/전표(회계처리)" [ref=f10e237] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=427&search.boardtype=L
+                - img "새 게시글" [ref=f10e238]
+              - listitem [ref=f10e239]:
+                - link "❓원천세 신고" [ref=f10e240] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=508&search.boardtype=L
+                - img "새 게시글" [ref=f10e241]
+              - listitem [ref=f10e242]:
+                - link "❓세금 연말정산" [ref=f10e243] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=366&search.boardtype=L
+                - img "새 게시글" [ref=f10e244]
+              - listitem [ref=f10e245]:
+                - link "❓부가가치세" [ref=f10e246] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=509&search.boardtype=L
+                - img "새 게시글" [ref=f10e247]
+              - listitem [ref=f10e248]:
+                - link "❓법인세" [ref=f10e249] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=147&search.boardtype=L
+                - img "새 게시글" [ref=f10e250]
+              - listitem [ref=f10e251]:
+                - link "❓종합소득세" [ref=f10e252] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=450&search.boardtype=L
+              - listitem [ref=f10e253]:
+                - link "❓급여/수당 계산" [ref=f10e254] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=455&search.boardtype=L
+                - img "새 게시글" [ref=f10e255]
+              - listitem [ref=f10e256]:
+                - link "❓4대 보험" [ref=f10e257] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=446&search.boardtype=L
+                - img "새 게시글" [ref=f10e258]
+              - listitem [ref=f10e259]:
+                - link "❓연차휴가/수당" [ref=f10e260] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=390&search.boardtype=L
+              - listitem [ref=f10e261]:
+                - link "❓퇴직연금/퇴직금" [ref=f10e262] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=391&search.boardtype=L
+                - img "새 게시글" [ref=f10e263]
+              - listitem [ref=f10e264]:
+                - link "❓인사노무총무" [ref=f10e265] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=511&search.boardtype=L
+                - img "새 게시글" [ref=f10e266]
+              - listitem [ref=f10e267]:
+                - link "❓법정의무교육" [ref=f10e268] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=368&search.boardtype=L
+                - img "새 게시글" [ref=f10e269]
+              - listitem [ref=f10e270]:
+                - link "❓출산/육아" [ref=f10e271] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=389&search.boardtype=L
+                - img "새 게시글" [ref=f10e272]
+              - listitem [ref=f10e273]:
+                - link "❓엑셀도우미" [ref=f10e274] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=139&search.boardtype=L
+                - img "새 게시글" [ref=f10e275]
+              - listitem [ref=f10e276]:
+                - link "❓서식/규정(요청)" [ref=f10e277] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=367&search.boardtype=L
+                - img "새 게시글" [ref=f10e278]
+              - listitem [ref=f10e279]:
+                - link "📘서식 자료((대리○)" [ref=f10e280] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=96&search.boardtype=L
+                - img "새 게시글" [ref=f10e281]
+              - listitem [ref=f10e282]:
+                - link "❓자격증(전산세무회계)" [ref=f10e283] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=119&search.boardtype=L
+                - img "새 게시글" [ref=f10e284]
+              - listitem [ref=f10e285]:
+                - link "❓업무경험 나눔터" [ref=f10e286] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=7&search.boardtype=L
+                - img "새 게시글" [ref=f10e287]
+              - listitem [ref=f10e288]:
+                - link "💣질문 휴지통" [ref=f10e289] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=394&search.boardtype=L
+            - heading "2️⃣ 같은 업종 모여라!(질문○)" [level=3] [ref=f10e291]:
+              - generic "2&#65039;&#8419; 같은 업종 모여라!(질문○)" [ref=f10e292]: 2️⃣ 같은 업종 모여라!(질문○)
+            - list [ref=f10e293]:
+              - listitem [ref=f10e294]:
+                - link "❓건설업" [ref=f10e295] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=311&search.boardtype=L
+                - img "새 게시글" [ref=f10e296]
+              - listitem [ref=f10e297]:
+                - link "❓제조업" [ref=f10e298] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=424&search.boardtype=L
+                - img "새 게시글" [ref=f10e299]
+              - listitem [ref=f10e300]:
+                - link "❓병원(의료)" [ref=f10e301] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=320&search.boardtype=L
+                - img "새 게시글" [ref=f10e302]
+              - listitem [ref=f10e303]:
+                - link "❓무역(수출, 수입, 외환)" [ref=f10e304] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=322&search.boardtype=L
+                - img "새 게시글" [ref=f10e305]
+              - listitem [ref=f10e306]:
+                - link "❓개인사업자(자영업)" [ref=f10e307] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=301&search.boardtype=L
+                - img "새 게시글" [ref=f10e308]
+              - listitem [ref=f10e309]:
+                - link "❓스타트업/창업" [ref=f10e310] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=420&search.boardtype=L
+                - img "새 게시글" [ref=f10e311]
+              - listitem [ref=f10e312]:
+                - link "❓비영리 법인" [ref=f10e313] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=361&search.boardtype=L
+              - listitem [ref=f10e314]:
+                - link "❓쇼핑몰/프리랜서" [ref=f10e315] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=447&search.boardtype=L
+              - listitem [ref=f10e316]:
+                - link "❓업체(제품) 제안/추천" [ref=f10e317] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=370&search.boardtype=L
+                - img "새 게시글" [ref=f10e318]
+              - listitem [ref=f10e319]:
+                - link "📘궁금한 사례(사원○)" [ref=f10e320] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=441&search.boardtype=L
+            - heading "3️⃣사장님(창업) 모여라!" [level=3] [ref=f10e322]:
+              - generic "3&#65039;&#8419;사장님(창업) 모여라!" [ref=f10e323]: 3️⃣사장님(창업) 모여라!
+            - list [ref=f10e324]:
+              - listitem [ref=f10e325]:
+                - link "📘사장님 학교(사원○)" [ref=f10e326] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=299&search.boardtype=L
+              - listitem [ref=f10e327]:
+                - link "📘근로자 권리(대리○)" [ref=f10e328] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=297&search.boardtype=L
+            - heading "4️⃣세무대리인 모여라!" [level=3] [ref=f10e330]:
+              - generic "4&#65039;&#8419;세무대리인 모여라!" [ref=f10e331]: 4️⃣세무대리인 모여라!
+            - list [ref=f10e332]:
+              - listitem [ref=f10e333]:
+                - link "❓세무대리인(업무질문)" [ref=f10e334] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=300&search.boardtype=L
+                - img "새 게시글" [ref=f10e335]
+              - listitem [ref=f10e336]:
+                - link "❓기장료/조정료" [ref=f10e337] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=541&search.boardtype=L
+                - img "새 게시글" [ref=f10e338]
+              - listitem [ref=f10e339]:
+                - link "📘세무대리인(업무자료)" [ref=f10e340] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=436&search.boardtype=L
+              - listitem [ref=f10e341]:
+                - link "👨‍👩‍👦 세무대리인(하소연)" [ref=f10e342] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=377&search.boardtype=L
+                - img "새 게시글" [ref=f10e343]
+              - listitem [ref=f10e344]:
+                - link "👨‍👩‍👦 세무회계사무소 취업" [ref=f10e345] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=457&search.boardtype=L
+              - listitem [ref=f10e346]:
+                - link "👨‍👩‍👦 세무회계사무소 구인" [ref=f10e347] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=433&search.boardtype=L
+                - img "새 게시글" [ref=f10e348]
+              - listitem [ref=f10e349]:
+                - link "👨‍👩‍👦 세무회계사무소 구직" [ref=f10e350] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=434&search.boardtype=L
+                - img "새 게시글" [ref=f10e351]
+            - heading "5️⃣ 전문가 모여라!" [level=3] [ref=f10e353]:
+              - generic "5&#65039;&#8419; 전문가 모여라!" [ref=f10e354]: 5️⃣ 전문가 모여라!
+            - list [ref=f10e355]:
+              - listitem [ref=f10e356]:
+                - link "❓회계사/세무사" [ref=f10e357] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=398&search.boardtype=L
+              - listitem [ref=f10e358]:
+                - link "❓노무사" [ref=f10e359] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=397&search.boardtype=L
+                - img "새 게시글" [ref=f10e360]
+              - listitem [ref=f10e361]:
+                - link "👨‍👩‍👦 회계/세무/노무 추천" [ref=f10e362] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=538&search.boardtype=L
+            - heading "6️⃣ 인사쟁이 모여라!" [level=3] [ref=f10e364]:
+              - generic "6&#65039;&#8419; 인사쟁이 모여라!" [ref=f10e365]: 6️⃣ 인사쟁이 모여라!
+            - list [ref=f10e366]:
+              - listitem [ref=f10e367]:
+                - link "❓인사쟁이(하소연)" [ref=f10e368] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=445&search.boardtype=L
+            - heading "✅ 커뮤니티(업무질문x)" [level=3] [ref=f10e370]:
+              - generic "&#9989; 커뮤니티(업무질문x)" [ref=f10e371]: ✅ 커뮤니티(업무질문x)
+            - list [ref=f10e372]:
+              - listitem [ref=f10e373]:
+                - link "👨‍👩‍👦 본인 홍보(명함교환)" [ref=f10e374] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=507&search.boardtype=L
+              - listitem [ref=f10e375]:
+                - link "👨‍👩‍👦 좋은말 좋은글" [ref=f10e376] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=520&search.boardtype=L
+                - img "새 게시글" [ref=f10e377]
+              - listitem [ref=f10e378]:
+                - link "👨‍👩‍👦 경제 지식이 돈이다" [ref=f10e379] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=439&search.boardtype=L
+              - listitem [ref=f10e380]:
+                - link "👨‍👩‍👦 연봉정보공유" [ref=f10e381] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=388&search.boardtype=L
+              - listitem [ref=f10e382]:
+                - link "👨‍👩‍👦 직장인 수다(꽁냥꽁냥" [ref=f10e383] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=3&search.boardtype=L
+                - img "새 게시글" [ref=f10e384]
+              - listitem [ref=f10e385]:
+                - link "👨‍👩‍👦 직장생활 뒷담화" [ref=f10e386] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=347&search.boardtype=L
+                - img "새 게시글" [ref=f10e387]
+              - listitem [ref=f10e388]:
+                - link "👨‍👩‍👦 직장인 커뮤니티" [ref=f10e389] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=351&search.boardtype=L
+                - img "새 게시글" [ref=f10e390]
+              - listitem [ref=f10e391]:
+                - link "👨‍👩‍👦 경력단절 워킹맘" [ref=f10e392] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=547&search.boardtype=L
+              - listitem [ref=f10e393]:
+                - link "👨‍👩‍👦 세상속 진상 행동" [ref=f10e394] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=459&search.boardtype=L
+              - listitem [ref=f10e395]:
+                - link "👨‍👩‍👦 면접/입사/퇴사/이직" [ref=f10e396] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=354&search.boardtype=L
+                - img "새 게시글" [ref=f10e397]
+              - listitem [ref=f10e398]:
+                - link "👨‍👩‍👦 급여/경력 고민" [ref=f10e399] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=348&search.boardtype=L
+                - img "새 게시글" [ref=f10e400]
+              - listitem [ref=f10e401]:
+                - link "👨‍👩‍👦 직장인 유머" [ref=f10e402] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=404&search.boardtype=L
+              - listitem [ref=f10e403]:
+                - link "👨‍👩‍👦 영화/드라마/연애" [ref=f10e404] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=405&search.boardtype=L
+              - listitem [ref=f10e405]:
+                - link "👨‍👩‍👦 운동/스포츠" [ref=f10e406] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=406&search.boardtype=L
+                - img "새 게시글" [ref=f10e407]
+              - listitem [ref=f10e408]:
+                - link "👨‍👩‍👦 PHOTO방(사진)" [ref=f10e409] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=150&search.boardtype=I
+              - listitem [ref=f10e410]:
+                - link "👨‍👩‍👦 구인/구직" [ref=f10e411] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=84&search.boardtype=L
+              - listitem [ref=f10e412]:
+                - link "💣요일 휴지통" [ref=f10e413] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=430&search.boardtype=L
+              - listitem [ref=f10e414]:
+                - link "참고 동영상/자료" [ref=f10e415] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=163&search.boardtype=L
+            - heading "1️⃣ 체계적 공부(질문x)" [level=3] [ref=f10e417]:
+              - generic "1&#65039;&#8419; 체계적 공부(질문x)" [ref=f10e418]: 1️⃣ 체계적 공부(질문x)
+            - list [ref=f10e419]:
+              - listitem [ref=f10e420]:
+                - link "사장님 공부(임원○)" [ref=f10e421] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=528&search.boardtype=L
+              - listitem [ref=f10e422]:
+                - link "세무대리인(임원○)" [ref=f10e423] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=545&search.boardtype=L
+              - listitem [ref=f10e424]:
+                - link "회계원리 공부(임원○)" [ref=f10e425] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=546&search.boardtype=L
+              - listitem [ref=f10e426]:
+                - link "IFRS 회계 공부(임원○)" [ref=f10e427] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=526&search.boardtype=L
+              - listitem [ref=f10e428]:
+                - link "경리 공부(임원○)" [ref=f10e429] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=527&search.boardtype=L
+              - listitem [ref=f10e430]:
+                - link "소득세 공부(임원○)" [ref=f10e431] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=247&search.boardtype=L
+              - listitem [ref=f10e432]:
+                - link "법인세 공부(임원○)" [ref=f10e433] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=524&search.boardtype=L
+              - listitem [ref=f10e434]:
+                - link "부가세 공부(임원○)" [ref=f10e435] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=525&search.boardtype=L
+              - listitem [ref=f10e436]:
+                - link "근로기준법 공부(임원○)" [ref=f10e437] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=251&search.boardtype=L
+              - listitem [ref=f10e438]:
+                - link "임원관련업무(임원○)" [ref=f10e439] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=253&search.boardtype=L
+              - listitem [ref=f10e440]:
+                - link "경영관리(임원○)" [ref=f10e441] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=363&search.boardtype=L
+              - listitem [ref=f10e442]:
+                - link "강의 교안(임원○)" [ref=f10e443] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=478&search.boardtype=L
+              - listitem [ref=f10e444]:
+                - link "경리강의(MP3)(팀장○)" [ref=f10e445] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=422&search.boardtype=L
+            - heading "2️⃣ 변경된 업무(질문x)" [level=3] [ref=f10e447]:
+              - generic "2&#65039;&#8419; 변경된 업무(질문x)" [ref=f10e448]: 2️⃣ 변경된 업무(질문x)
+            - list [ref=f10e449]:
+              - listitem [ref=f10e450]:
+                - link "개정세법(사원○)" [ref=f10e451] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=316&search.boardtype=L
+              - listitem [ref=f10e452]:
+                - link "최신 업무 이슈(사원○)" [ref=f10e453] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=127&search.boardtype=L
+            - heading "3️⃣ 회계업무 정보(질문x)" [level=3] [ref=f10e455]:
+              - generic "3&#65039;&#8419; 회계업무 정보(질문x)" [ref=f10e456]: 3️⃣ 회계업무 정보(질문x)
+            - list [ref=f10e457]:
+              - listitem [ref=f10e458]:
+                - link "초보 회계(대리○)" [ref=f10e459] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=198&search.boardtype=L
+              - listitem [ref=f10e460]:
+                - link "경제속의 회계" [ref=f10e461] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=521&search.boardtype=L
+              - listitem [ref=f10e462]:
+                - link "경리실무업무(대리○)" [ref=f10e463] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=133&search.boardtype=L
+              - listitem [ref=f10e464]:
+                - link "개인회사 경리(대리○)" [ref=f10e465] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=213&search.boardtype=L
+              - listitem [ref=f10e466]:
+                - link "분개사례 1개((사원○)" [ref=f10e467] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=360&search.boardtype=L
+              - listitem [ref=f10e468]:
+                - link "분개사례(과장○)" [ref=f10e469] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=21&search.boardtype=L
+              - listitem [ref=f10e470]:
+                - link "계정과목 해설(과장○)" [ref=f10e471] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=371&search.boardtype=L
+              - listitem [ref=f10e472]:
+                - link "재무제표 분석(과장○)" [ref=f10e473] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=193&search.boardtype=L
+              - listitem [ref=f10e474]:
+                - link "원가/관리회계(대리○)" [ref=f10e475] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=295&search.boardtype=L
+              - listitem [ref=f10e476]:
+                - link "자금관리(대리○)" [ref=f10e477] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=343&search.boardtype=L
+              - listitem [ref=f10e478]:
+                - link "결산/세무조정(팀장○)" [ref=f10e479] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=512&search.boardtype=L
+            - heading "4️⃣ 세무업무 정보(질문x)" [level=3] [ref=f10e481]:
+              - generic "4&#65039;&#8419; 세무업무 정보(질문x)" [ref=f10e482]: 4️⃣ 세무업무 정보(질문x)
+            - list [ref=f10e483]:
+              - listitem [ref=f10e484]:
+                - link "초보 세무(대리○)" [ref=f10e485] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=201&search.boardtype=L
+              - listitem [ref=f10e486]:
+                - link "증빙관리(팀장○)" [ref=f10e487] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=175&search.boardtype=L
+              - listitem [ref=f10e488]:
+                - link "부가가치세(과장○)" [ref=f10e489] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=177&search.boardtype=L
+              - listitem [ref=f10e490]:
+                - link "원천징수(과장○)" [ref=f10e491] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=179&search.boardtype=L
+              - listitem [ref=f10e492]:
+                - link "연말정산(사원○)" [ref=f10e493] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=260&search.boardtype=L
+              - listitem [ref=f10e494]:
+                - link "종합소득세(과장○)" [ref=f10e495] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=379&search.boardtype=L
+              - listitem [ref=f10e496]:
+                - link "양도소득세(팀장○)" [ref=f10e497] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=544&search.boardtype=L
+              - listitem [ref=f10e498]:
+                - link "법인세(팀장○)" [ref=f10e499] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=178&search.boardtype=L
+              - listitem [ref=f10e500]:
+                - link "계정과목별 세무(팀장○)" [ref=f10e501] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=549&search.boardtype=L
+              - listitem [ref=f10e502]:
+                - link "세액공제/감면(팀장○)" [ref=f10e503] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=456&search.boardtype=L
+              - listitem [ref=f10e504]:
+                - link "세무조사(팀장○)" [ref=f10e505] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=194&search.boardtype=L
+              - listitem [ref=f10e506]:
+                - link "세법과 상법(팀장○)" [ref=f10e507] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=510&search.boardtype=L
+              - listitem [ref=f10e508]:
+                - link "법인컨설팅(팀장○)" [ref=f10e509] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=519&search.boardtype=L
+              - listitem [ref=f10e510]:
+                - link "조세법전(사원○)" [ref=f10e511] [cursor=pointer]:
+                  - /url: https://taxlaw.nts.go.kr/st/USESTA001M.do
+              - listitem [ref=f10e512]:
+                - link "관심 예규(사원 ○)" [ref=f10e513] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=378&search.boardtype=L
+            - heading "5️⃣ 인사노무 정보(질문x)" [level=3] [ref=f10e515]:
+              - generic "5&#65039;&#8419; 인사노무 정보(질문x)" [ref=f10e516]: 5️⃣ 인사노무 정보(질문x)
+            - list [ref=f10e517]:
+              - listitem [ref=f10e518]:
+                - link "지하철 노동법(과장○)" [ref=f10e519] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=477&search.boardtype=L
+              - listitem [ref=f10e520]:
+                - link "4인이하사업장(대리○)" [ref=f10e521] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=271&search.boardtype=L
+              - listitem [ref=f10e522]:
+                - link "근로계약(대리○)" [ref=f10e523] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=372&search.boardtype=L
+              - listitem [ref=f10e524]:
+                - link "인사총무실무(대리○)" [ref=f10e525] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=369&search.boardtype=L
+              - listitem [ref=f10e526]:
+                - link "노무관리실무(대리○)" [ref=f10e527] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=159&search.boardtype=L
+                - img "새 게시글" [ref=f10e528]
+              - listitem [ref=f10e529]:
+                - link "급여임금(팀장○)" [ref=f10e530] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=191&search.boardtype=L
+              - listitem [ref=f10e531]:
+                - link "연차휴가(과장○)" [ref=f10e532] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=236&search.boardtype=L
+              - listitem [ref=f10e533]:
+                - link "퇴직연금(과장○)" [ref=f10e534] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=254&search.boardtype=L
+              - listitem [ref=f10e535]:
+                - link "4대 보험(팀장○)" [ref=f10e536] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=176&search.boardtype=L
+              - listitem [ref=f10e537]:
+                - link "업종별 실무(과장○)" [ref=f10e538] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=165&search.boardtype=L
+              - listitem [ref=f10e539]:
+                - link "근로자별 노동법(과장○)" [ref=f10e540] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10107412&search.menuid=414&search.boardtype=L
+            - generic [ref=f10e541]:
+              - heading [level=3] [ref=f10e542]:
+                - link "6️⃣ 업무지원 정보(질문x)" [ref=f10e543] [cursor=pointer]:
+                  - /url: "#"
+              - paragraph [ref=f10e544]:
+                - link [ref=f10e545] [cursor=pointer]:
+                  - /url: "#"
+                  - img "열기/닫기" [ref=f10e546]
+            - generic [ref=f10e547]:
+              - heading [level=3] [ref=f10e548]:
+                - link "7️⃣ 업무지원 사이트(사원○)" [ref=f10e549] [cursor=pointer]:
+                  - /url: "#"
+              - paragraph [ref=f10e550]:
+                - link [ref=f10e551] [cursor=pointer]:
+                  - /url: "#"
+                  - img "열기/닫기" [ref=f10e552]
+            - generic [ref=f10e553]:
+              - heading [level=3] [ref=f10e554]:
+                - link "✅ 전문가 컨텐츠 정보(질문x)" [ref=f10e555] [cursor=pointer]:
+                  - /url: "#"
+              - paragraph [ref=f10e556]:
+                - link [ref=f10e557] [cursor=pointer]:
+                  - /url: "#"
+                  - img "열기/닫기" [ref=f10e558]
+            - generic [ref=f10e559]:
+              - heading [level=3] [ref=f10e560]:
+                - link "■ 우리동네 모여라(휴면)" [ref=f10e561] [cursor=pointer]:
+                  - /url: "#"
+              - paragraph [ref=f10e562]:
+                - link [ref=f10e563] [cursor=pointer]:
+                  - /url: "#"
+                  - img "열기/닫기" [ref=f10e564]
+            - generic [ref=f10e565]:
+              - heading [level=3] [ref=f10e566]:
+                - link "※ 예전자료실" [ref=f10e567] [cursor=pointer]:
+                  - /url: "#"
+              - paragraph [ref=f10e568]:
+                - link [ref=f10e569] [cursor=pointer]:
+                  - /url: "#"
+                  - img "열기/닫기" [ref=f10e570]
+            - generic [ref=f10e571]:
+              - heading [level=3] [ref=f10e572]:
+                - link "스텝방" [ref=f10e573] [cursor=pointer]:
+                  - /url: "#"
+                - img "새 게시글" [ref=f10e574]
+              - paragraph [ref=f10e575]:
+                - link [ref=f10e576] [cursor=pointer]:
+                  - /url: "#"
+                  - img "열기/닫기" [ref=f10e577]
+            - generic [ref=f10e578]:
+              - heading [level=3] [ref=f10e579]:
+                - link "※ 예전게시판" [ref=f10e580] [cursor=pointer]:
+                  - /url: "#"
+              - paragraph [ref=f10e581]:
+                - link [ref=f10e582] [cursor=pointer]:
+                  - /url: "#"
+                  - img "열기/닫기" [ref=f10e583]
+          - list [ref=f10e584]:
+            - listitem [ref=f10e585]:
+              - generic [ref=f10e586]:
+                - heading "지난주 멤버 랭킹" [level=4] [ref=f10e588]
+                - list [ref=f10e589]:
+                  - listitem [ref=f10e590]:
+                    - generic [ref=f10e591]: 댓글
+                  - listitem [ref=f10e592]:
+                    - generic [ref=f10e593]: ▼
+                    - link "게시글" [ref=f10e594] [cursor=pointer]:
+                      - /url: "#"
+                  - listitem [ref=f10e595]:
+                    - generic [ref=f10e596]: ▼
+                    - link "방문" [ref=f10e597] [cursor=pointer]:
+                      - /url: "#"
+                - heading "댓글" [level=5] [ref=f10e598]
+                - generic [ref=f10e599]:
+                  - list [ref=f10e600]:
+                    - listitem [ref=f10e601]:
+                      - generic [ref=f10e602]: "1."
+                      - link "망치친구" [ref=f10e604] [cursor=pointer]:
+                        - /url: "#"
+                    - listitem [ref=f10e606]:
+                      - generic [ref=f10e607]: "2."
+                      - link "안통해농담" [ref=f10e609] [cursor=pointer]:
+                        - /url: "#"
+                    - listitem [ref=f10e611]:
+                      - generic [ref=f10e612]: "3."
+                      - link "루꼴라바질" [ref=f10e614] [cursor=pointer]:
+                        - /url: "#"
+                    - listitem [ref=f10e616]:
+                      - generic [ref=f10e617]: "4."
+                      - link "세무대리근무" [ref=f10e619] [cursor=pointer]:
+                        - /url: "#"
+                    - listitem [ref=f10e621]:
+                      - generic [ref=f10e622]: "5."
+                      - link "로뎀투" [ref=f10e624] [cursor=pointer]:
+                        - /url: "#"
+                  - generic [ref=f10e626]:
+                    - text: 이전 ㅣ
+                    - link "다음" [ref=f10e628] [cursor=pointer]:
+                      - /url: "#"
+          - link [ref=f10e630] [cursor=pointer]:
+            - /url: https://talk.naver.com/ct/w4nd8o
+            - img "궁금한게 있을 땐 카페 스마트봇" [ref=f10e631]
+        - iframe [ref=f10e633]
+      - contentinfo [ref=f10e634]:
+        - heading "경리-회계 직장인들의 쉼터" [level=2] [ref=f10e635]
+        - link "https://cafe.naver.com/aclove" [ref=f10e636] [cursor=pointer]:
+          - /url: "#"
+        - heading "NAVER 카페" [level=2]:
+          - link "NAVER 카페" [ref=f10e637] [cursor=pointer]:
+            - /url: "#"
+    - link "콘텐츠 상단" [ref=f10e639] [cursor=pointer]:
+      - /url: "#"
+  - iframe

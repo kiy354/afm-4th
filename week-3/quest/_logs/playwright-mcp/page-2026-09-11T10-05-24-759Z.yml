@@ -1,0 +1,45 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - generic [aria-hidden] [ref=e8]: 👁️
+      - generic [ref=e9]:
+        - heading "눈이 선생님" [level=1] [ref=e10]
+        - paragraph [ref=e11]: 👁️ 증상 살펴보기 모드
+      - button "진료 메모 복사" [disabled] [ref=e12]:
+        - text: 📋
+        - generic [ref=e13]: 메모 복사
+      - button "상담 새로 시작" [disabled] [ref=e14]:
+        - text: ↺
+        - generic [ref=e15]: 새 상담
+      - button "설정 열기" [ref=e16] [cursor=pointer]:
+        - text: ⚙
+        - generic [ref=e17]: 설정
+  - radiogroup "상담 주제 선택" [ref=e19]:
+    - radio "👁️ 증상 살펴보기 불편한 곳을 하나씩 여쭤볼게요" [checked] [ref=e20] [cursor=pointer]:
+      - generic [ref=e21]: 👁️ 증상 살펴보기
+      - generic [ref=e22]: 불편한 곳을 하나씩 여쭤볼게요
+    - radio "🕶️ 렌즈 · 안경 착용 습관과 관리법을 함께 봐요" [ref=e23] [cursor=pointer]:
+      - generic [ref=e24]: 🕶️ 렌즈 · 안경
+      - generic [ref=e25]: 착용 습관과 관리법을 함께 봐요
+    - radio "🔬 수술 · 검사 무엇을 준비하면 좋을지 알려드려요" [ref=e26] [cursor=pointer]:
+      - generic [ref=e27]: 🔬 수술 · 검사
+      - generic [ref=e28]: 무엇을 준비하면 좋을지 알려드려요
+    - radio "🌿 생활 눈관리 오늘부터 할 수 있는 습관이에요" [ref=e29] [cursor=pointer]:
+      - generic [ref=e30]: 🌿 생활 눈관리
+      - generic [ref=e31]: 오늘부터 할 수 있는 습관이에요
+  - main [ref=e32]:
+    - generic [ref=e33]:
+      - generic [aria-hidden] [ref=e36]: 👁️
+      - heading "눈이 요즘 어떠신가요?" [level=2] [ref=e37]
+      - paragraph [ref=e38]: 천천히 말씀해 주세요. 하나씩 여쭤보면서 함께 살펴볼게요. 진단은 안과 선생님의 몫이지만, 무엇을 준비해 가면 좋을지는 제가 도와드릴 수 있어요.
+      - generic [ref=e39]:
+        - button "💬 눈이 뻑뻑하고 모래알이 굴러가는 느낌이에요" [ref=e40] [cursor=pointer]
+        - button "💬 모니터를 오래 보면 눈이 시리고 두통이 와요" [ref=e41] [cursor=pointer]
+        - button "💬 눈앞에 날파리 같은 게 떠다녀요" [ref=e42] [cursor=pointer]
+        - button "💬 라식이랑 라섹은 뭐가 다른가요?" [ref=e43] [cursor=pointer]
+  - generic [ref=e44]:
+    - generic [ref=e45]:
+      - textbox "메시지 입력" [disabled] [ref=e46]:
+        - /placeholder: API 키를 먼저 설정해 주세요
+      - button "보내기" [disabled] [ref=e47]
+    - paragraph [ref=e48]: 이 상담은 안과 진료를 대체하지 않으며 진단·처방을 하지 않습니다. 급한 증상은 119 또는 가까운 안과 응급실로 연락해 주세요.

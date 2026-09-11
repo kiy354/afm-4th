@@ -1,0 +1,1548 @@
+- generic [active] [ref=f268e1]:
+  - generic [ref=f268e5]:
+    - link [ref=f268e6] [cursor=pointer]:
+      - /url: /np/campaigns/82?adType=DA&eventId=BiSM7kLSMYQHlyZF
+    - link [ref=f268e7] [cursor=pointer]:
+      - /url: https://shop.coupang.com/sajodaerim/268667?source=brandstore_display_ads&adType=DA&eventId=VQ6PZ80mkM1J5Puq
+  - generic [ref=f268e8]:
+    - generic [ref=f268e10]:
+      - list [ref=f268e11]:
+        - listitem [ref=f268e12]:
+          - link "판매자 가입" [ref=f268e13] [cursor=pointer]:
+            - /url: https://wing.coupang.com/tenants/vendor-signup/signup?utm_source=button_pc_coupang_top_right_cta&utm_medium=non_paid&utm_campaign=seller_registration
+        - listitem [ref=f268e14]:
+          - link "고객센터" [ref=f268e15] [cursor=pointer]:
+            - /url: https://mc.coupang.com/ssr/desktop/contact/inquiry
+        - listitem [ref=f268e16]:
+          - link "로그아웃" [ref=f268e17] [cursor=pointer]:
+            - /url: https://login.coupang.com/login/logout.pang?rtnUrl=https%3A%2F%2Fwww.coupang.com%2Fnp%2Fpost%2Flogout%3Fr%3Dhttp%253A%252F%252Fwww.coupang.com%252Fnp%252Fsearch%253Fq%253D%2525EB%2525A9%2525B8%2525EA%2525B7%2525A0%2525EC%25259A%2525B0%2525EC%25259C%2525A0%252B200ml%2526sorter%253DsalePriceAsc
+        - listitem [ref=f268e18]:
+          - link [ref=f268e19] [cursor=pointer]:
+            - /url: https://mc.coupang.com/ssr/desktop/order/list
+            - strong [ref=f268e20]: 김*임
+            - text: 님
+      - list [ref=f268e21]:
+        - listitem [ref=f268e22]: 즐겨찾기
+        - listitem [ref=f268e23]:
+          - generic [ref=f268e24] [cursor=pointer]: 입점신청
+    - generic [ref=f268e27]:
+      - generic [ref=f268e28] [cursor=pointer]: 카테고리
+      - generic [ref=f268e34]:
+        - generic [ref=f268e35]:
+          - link [ref=f268e36] [cursor=pointer]:
+            - /url: https://www.coupang.com
+            - img "Coupang" [ref=f268e37]
+          - generic [ref=f268e38]:
+            - link "전체" [ref=f268e41] [cursor=pointer]:
+              - /url: "#"
+            - textbox "쿠팡 상품 검색" [ref=f268e43]:
+              - /placeholder: 찾고 싶은 상품을 검색해보세요!
+              - text: 멸균우유 200ml
+            - generic [ref=f268e44] [cursor=pointer]
+            - button "검색" [ref=f268e45] [cursor=pointer]
+          - list [ref=f268e46]:
+            - listitem [ref=f268e47]:
+              - link "마이쿠팡" [ref=f268e48] [cursor=pointer]:
+                - /url: https://mc.coupang.com/ssr/desktop/order/list
+            - listitem [ref=f268e50]:
+              - link "장바구니" [ref=f268e51] [cursor=pointer]:
+                - /url: //cart.coupang.com/cartView.pang
+                - emphasis [ref=f268e52]
+        - generic [ref=f268e55]:
+          - list [ref=f268e58]:
+            - listitem [ref=f268e59]:
+              - link "쿠팡플레이 쿠팡플레이" [ref=f268e60] [cursor=pointer]:
+                - /url: https://www.coupangplay.com/catalog
+                - img "쿠팡플레이" [ref=f268e61]
+                - generic [ref=f268e62]: 쿠팡플레이
+            - listitem [ref=f268e63]:
+              - link "로켓배송 로켓배송" [ref=f268e64] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/campaigns/82
+                - img "로켓배송" [ref=f268e65]
+                - generic [ref=f268e66]: 로켓배송
+            - listitem [ref=f268e67]:
+              - link "로켓프레시 로켓프레시" [ref=f268e68] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/categories/393760
+                - img "로켓프레시" [ref=f268e69]
+                - generic [ref=f268e70]: 로켓프레시
+            - listitem [ref=f268e71]:
+              - link "2026 추석 2026 추석" [ref=f268e72] [cursor=pointer]:
+                - /url: https://www.coupang.com/mlp/web/mlp-landing-page?landingId=4800
+                - img "2026 추석" [ref=f268e73]
+                - generic [ref=f268e74]: 2026 추석
+            - listitem [ref=f268e76]:
+              - link "다시 구매 다시 구매" [ref=f268e77] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/fbi?sourceType=home_section_fbi
+                - img "다시 구매" [ref=f268e78]
+                - generic [ref=f268e79]: 다시 구매
+            - listitem [ref=f268e81]:
+              - link "쿠팡비즈 쿠팡비즈" [ref=f268e82] [cursor=pointer]:
+                - /url: https://login.coupang.com/corporation/member/landing-page
+                - img "쿠팡비즈" [ref=f268e83]
+                - generic [ref=f268e84]: 쿠팡비즈
+            - listitem [ref=f268e85]:
+              - link "로켓직구 로켓직구" [ref=f268e86] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/coupangglobal
+                - img "로켓직구" [ref=f268e87]
+                - generic [ref=f268e88]: 로켓직구
+            - listitem [ref=f268e89]:
+              - link "골드박스 골드박스" [ref=f268e90] [cursor=pointer]:
+                - /url: https://www.coupang.com/mlp/web/mlp-landing-page?landingId=3712&sourceType=gm_crm_goldbox&subSourceType=gm_crm_gwsrtcut
+                - img "골드박스" [ref=f268e91]
+                - generic [ref=f268e92]: 골드박스
+            - listitem [ref=f268e93]:
+              - link "이달의신상 이달의신상" [ref=f268e94] [cursor=pointer]:
+                - /url: https://pages.coupang.com/p/136938
+                - img "이달의신상" [ref=f268e95]
+                - generic [ref=f268e96]: 이달의신상
+            - listitem [ref=f268e97]:
+              - link "입점신청 입점신청" [ref=f268e98] [cursor=pointer]:
+                - /url: https://wing.coupang.com/tenants/vendor-signup/signup?utm_source=button_pc_coupang_shortcut_1&utm_medium=non_paid&utm_id=onsite_ca&utm_content=202411
+                - img "입점신청" [ref=f268e99]
+                - generic [ref=f268e100]: 입점신청
+            - listitem [ref=f268e101]:
+              - link "판매자특가 판매자특가" [ref=f268e102] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/omp
+                - img "판매자특가" [ref=f268e103]
+                - generic [ref=f268e104]: 판매자특가
+            - listitem [ref=f268e105]:
+              - link "와우회원할인 와우회원할인" [ref=f268e106] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/campaigns/83
+                - img "와우회원할인" [ref=f268e107]
+                - generic [ref=f268e108]: 와우회원할인
+            - listitem [ref=f268e109]:
+              - link "반품마켓 반품마켓" [ref=f268e110] [cursor=pointer]:
+                - /url: https://pages.coupang.com/p/54908
+                - img "반품마켓" [ref=f268e111]
+                - generic [ref=f268e112]: 반품마켓
+            - listitem [ref=f268e113]:
+              - link "착한상점 착한상점" [ref=f268e114] [cursor=pointer]:
+                - /url: https://pages.coupang.com/p/63240
+                - img "착한상점" [ref=f268e115]
+                - generic [ref=f268e116]: 착한상점
+            - listitem [ref=f268e118]:
+              - link "기획전 기획전" [ref=f268e119] [cursor=pointer]:
+                - /url: https://pages.coupang.com/p/bep?sourceType=gm_crm_oms&subSourceType=gm_crm_gwsrtcut
+                - img "기획전" [ref=f268e120]
+                - generic [ref=f268e121]: 기획전
+            - listitem [ref=f268e122]:
+              - link "쿠팡트래블 쿠팡트래블" [ref=f268e123] [cursor=pointer]:
+                - /url: https://trip.coupang.com/?channel=gnb
+                - img "쿠팡트래블" [ref=f268e124]
+                - generic [ref=f268e125]: 쿠팡트래블
+          - generic [ref=f268e127] [cursor=pointer]
+  - generic:
+    - article:
+      - generic:
+        - link "장바구니" [ref=f268e130] [cursor=pointer]:
+          - /url: //cart.coupang.com/cartView.pang
+          - emphasis
+        - generic [ref=f268e132]:
+          - generic [ref=f268e133]: 최근본상품
+          - emphasis
+        - list [ref=f268e135]
+  - generic [ref=f268e137]:
+    - generic [ref=f268e140]:
+      - list [ref=f268e141]:
+        - listitem [ref=f268e142]:
+          - link "전체" [ref=f268e143] [cursor=pointer]:
+            - /url: /np/search?q=%EB%A9%B8%EA%B7%A0%EC%9A%B0%EC%9C%A0+200ml&sorter=salePriceAsc
+      - strong [ref=f268e147]: "'멸균우유 200ml'"
+    - generic [ref=f268e150]:
+      - generic [ref=f268e151]:
+        - generic [ref=f268e154]:
+          - heading "필터" [level=4] [ref=f268e156]
+          - list [ref=f268e159]:
+            - listitem [ref=f268e160]:
+              - img "rocket_luxury,rocket_wow,coupang_global" [ref=f268e164] [cursor=pointer]
+              - list [ref=f268e166]:
+                - listitem [ref=f268e167]:
+                  - generic:
+                    - generic:
+                      - img "rocket_luxury"
+                    - text: 만 보기
+                - listitem [ref=f268e168]:
+                  - generic [ref=f268e169] [cursor=pointer]:
+                    - img "rocket_wow" [ref=f268e172]
+                    - text: 만 보기
+                - listitem [ref=f268e173]:
+                  - generic [ref=f268e174] [cursor=pointer]:
+                    - img "coupang_global" [ref=f268e177]
+                    - text: 만 보기
+            - listitem [ref=f268e178]:
+              - generic:
+                - generic:
+                  - img "top_brand"
+            - listitem [ref=f268e179]:
+              - generic [ref=f268e180] [cursor=pointer]: 무료배송
+          - separator [ref=f268e182]
+          - generic [ref=f268e183]:
+            - heading "카테고리" [level=5] [ref=f268e184]
+            - generic [ref=f268e185]:
+              - list [ref=f268e186]:
+                - listitem [ref=f268e187]:
+                  - link "전체" [ref=f268e189] [cursor=pointer]:
+                    - /url: https://www.coupang.com
+                - listitem [ref=f268e190]:
+                  - link "식품" [ref=f268e192] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/194276
+                - listitem [ref=f268e193]:
+                  - link "싱글라이프" [ref=f268e195] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/433784
+                - listitem [ref=f268e196]:
+                  - link "로켓직구" [ref=f268e198] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/coupangglobal
+                - listitem [ref=f268e199]:
+                  - link "쿠팡수입" [ref=f268e201] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/510691
+                - listitem:
+                  - link "실버스토어" [ref=f268e203] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/383370
+                - listitem:
+                  - link "반려동물용품" [ref=f268e205] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/115674
+                - listitem:
+                  - link "미세먼지용품" [ref=f268e207] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/campaigns/17593
+                - listitem:
+                  - link "생활용품" [ref=f268e209] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/115673
+              - generic [ref=f268e210] [cursor=pointer]: + 더보기
+          - separator [ref=f268e211]
+          - generic [ref=f268e212]:
+            - heading "브랜드" [level=5] [ref=f268e213]
+            - generic [ref=f268e214]:
+              - list [ref=f268e215]:
+                - listitem [ref=f268e216]:
+                  - generic [ref=f268e217] [cursor=pointer]: 서울우유
+                - listitem [ref=f268e219]:
+                  - generic [ref=f268e220] [cursor=pointer]: 매일우유
+                - listitem [ref=f268e222]:
+                  - generic [ref=f268e223] [cursor=pointer]: 맛있는우유GT
+                - listitem [ref=f268e225]:
+                  - generic [ref=f268e226] [cursor=pointer]: 건국유업
+                - listitem [ref=f268e228]:
+                  - generic [ref=f268e229] [cursor=pointer]: 상하목장
+                - listitem:
+                  - generic [ref=f268e231] [cursor=pointer]: 덴마크
+                - listitem:
+                  - generic [ref=f268e233] [cursor=pointer]: 부산우유
+                - listitem:
+                  - generic [ref=f268e235] [cursor=pointer]: 파스퇴르
+                - listitem:
+                  - generic [ref=f268e237] [cursor=pointer]: 에이투밀크
+                - listitem:
+                  - generic [ref=f268e239] [cursor=pointer]: 매일유업
+                - listitem:
+                  - generic [ref=f268e241] [cursor=pointer]: 비락
+                - listitem:
+                  - generic [ref=f268e243] [cursor=pointer]: 연세우유
+                - listitem:
+                  - generic [ref=f268e245] [cursor=pointer]: 범산목장
+                - listitem:
+                  - generic [ref=f268e247] [cursor=pointer]: 클릭유
+              - generic [ref=f268e249] [cursor=pointer]: + 더보기
+          - separator [ref=f268e250]
+          - generic [ref=f268e251]:
+            - heading "상품 상태" [level=5] [ref=f268e252]
+            - list [ref=f268e254]:
+              - listitem [ref=f268e255]:
+                - generic [ref=f268e256] [cursor=pointer]: 새 상품
+              - listitem [ref=f268e258]:
+                - generic [ref=f268e259] [cursor=pointer]: 박스 훼손
+          - separator [ref=f268e261]
+          - generic [ref=f268e262]:
+            - heading "개당 용량" [level=5] [ref=f268e263]
+            - list [ref=f268e265]:
+              - listitem [ref=f268e266]:
+                - generic [ref=f268e267] [cursor=pointer]: 125ml 이하
+              - listitem [ref=f268e269]:
+                - generic [ref=f268e270] [cursor=pointer]: 125~200ml
+              - listitem [ref=f268e272]:
+                - generic [ref=f268e273] [cursor=pointer]: 200~500ml
+              - listitem [ref=f268e275]:
+                - generic [ref=f268e276] [cursor=pointer]: 500ml~1L
+              - listitem [ref=f268e278]:
+                - generic [ref=f268e279] [cursor=pointer]: 1~2L
+              - listitem [ref=f268e281]:
+                - generic [ref=f268e282] [cursor=pointer]: 2L 이상
+          - separator [ref=f268e284]
+          - generic [ref=f268e285]:
+            - heading "낱개상품 여부" [level=5] [ref=f268e286]
+            - list [ref=f268e288]:
+              - listitem [ref=f268e289]:
+                - generic [ref=f268e290] [cursor=pointer]: 낱개상품
+          - separator [ref=f268e292]
+          - generic [ref=f268e293]:
+            - heading "용량" [level=5] [ref=f268e294]
+            - list [ref=f268e296]:
+              - listitem [ref=f268e297]:
+                - generic [ref=f268e298] [cursor=pointer]: 200ml 이하
+              - listitem [ref=f268e300]:
+                - generic [ref=f268e301] [cursor=pointer]: 200~500ml
+              - listitem [ref=f268e303]:
+                - generic: 500~1,000ml
+              - listitem [ref=f268e304]:
+                - generic: 1L 이상
+          - separator [ref=f268e305]
+          - generic [ref=f268e306]:
+            - heading "용기형태" [level=5] [ref=f268e307]
+            - list [ref=f268e309]:
+              - listitem [ref=f268e310]:
+                - generic [ref=f268e311] [cursor=pointer]: 플라스틱병
+              - listitem [ref=f268e313]:
+                - generic [ref=f268e314] [cursor=pointer]: 유리병
+              - listitem [ref=f268e316]:
+                - generic [ref=f268e317] [cursor=pointer]: 캔
+              - listitem [ref=f268e319]:
+                - generic [ref=f268e320] [cursor=pointer]: 파우치
+              - listitem [ref=f268e322]:
+                - generic [ref=f268e323] [cursor=pointer]: 종이팩
+              - listitem [ref=f268e325]:
+                - generic [ref=f268e326] [cursor=pointer]: 컵
+          - separator [ref=f268e328]
+          - generic [ref=f268e329]:
+            - heading "맛" [level=5] [ref=f268e330]
+            - list [ref=f268e332]:
+              - listitem [ref=f268e333]:
+                - generic [ref=f268e334] [cursor=pointer]: 흰우유
+              - listitem [ref=f268e336]:
+                - generic [ref=f268e337] [cursor=pointer]: 바나나우유
+              - listitem [ref=f268e339]:
+                - generic [ref=f268e340] [cursor=pointer]: 초코우유
+              - listitem [ref=f268e342]:
+                - generic [ref=f268e343] [cursor=pointer]: 딸기우유
+              - listitem [ref=f268e345]:
+                - generic [ref=f268e346] [cursor=pointer]: 커피우유
+          - separator [ref=f268e348]
+          - generic [ref=f268e349]:
+            - heading "멸균/냉장" [level=5] [ref=f268e350]
+            - list [ref=f268e352]:
+              - listitem [ref=f268e353]:
+                - generic [ref=f268e354] [cursor=pointer]: 냉장우유
+              - listitem [ref=f268e356]:
+                - generic [ref=f268e357] [cursor=pointer]: 멸균우유
+          - separator [ref=f268e359]
+          - generic [ref=f268e360]:
+            - heading "용도" [level=5] [ref=f268e361]
+            - list [ref=f268e363]:
+              - listitem [ref=f268e364]:
+                - generic [ref=f268e365] [cursor=pointer]: 가정용
+              - listitem [ref=f268e367]:
+                - generic [ref=f268e368] [cursor=pointer]: 업소용
+          - separator [ref=f268e370]
+          - generic [ref=f268e371]:
+            - heading "종류" [level=5] [ref=f268e372]
+            - generic [ref=f268e373]:
+              - list [ref=f268e374]:
+                - listitem [ref=f268e375]:
+                  - generic [ref=f268e376] [cursor=pointer]: 우유
+                - listitem [ref=f268e378]:
+                  - generic [ref=f268e379] [cursor=pointer]: 두유
+                - listitem [ref=f268e381]:
+                  - generic [ref=f268e382] [cursor=pointer]: 과즙음료
+                - listitem [ref=f268e384]:
+                  - generic: 탄산음료
+                - listitem [ref=f268e385]:
+                  - generic: 생수
+                - listitem:
+                  - generic: 탄산수
+                - listitem:
+                  - generic [ref=f268e386] [cursor=pointer]: 어린이음료
+                - listitem:
+                  - generic [ref=f268e388] [cursor=pointer]: 차음료
+                - listitem:
+                  - generic [ref=f268e390] [cursor=pointer]: 커피음료
+                - listitem:
+                  - generic: 기능성음료
+                - listitem:
+                  - generic [ref=f268e392] [cursor=pointer]: 혼합구성
+              - generic [ref=f268e394] [cursor=pointer]: + 더보기
+          - separator [ref=f268e395]
+          - generic [ref=f268e396]:
+            - heading "간편식" [level=5] [ref=f268e397]
+            - list [ref=f268e399]:
+              - listitem [ref=f268e400]:
+                - generic [ref=f268e401] [cursor=pointer]: 즉석섭취음료
+              - listitem [ref=f268e403]:
+                - generic [ref=f268e404] [cursor=pointer]: 즉석섭취식품
+          - separator [ref=f268e406]
+          - generic [ref=f268e407]:
+            - heading "보관방식" [level=5] [ref=f268e408]
+            - list [ref=f268e410]:
+              - listitem [ref=f268e411]:
+                - generic [ref=f268e412] [cursor=pointer]: 냉장보관
+              - listitem [ref=f268e414]:
+                - generic [ref=f268e415] [cursor=pointer]: 실온보관
+          - separator [ref=f268e417]
+          - generic [ref=f268e418]:
+            - heading "설탕함량" [level=5] [ref=f268e419]
+            - list [ref=f268e421]:
+              - listitem [ref=f268e422]:
+                - generic [ref=f268e423] [cursor=pointer]: 무설탕
+              - listitem [ref=f268e425]:
+                - generic [ref=f268e426] [cursor=pointer]: 저설탕
+              - listitem [ref=f268e428]:
+                - generic [ref=f268e429] [cursor=pointer]: 설탕첨가
+              - listitem [ref=f268e431]:
+                - generic [ref=f268e432] [cursor=pointer]: 당 첨가
+          - separator [ref=f268e434]
+          - generic [ref=f268e435]:
+            - heading "어린이용 여부" [level=5] [ref=f268e436]
+            - list [ref=f268e438]:
+              - listitem [ref=f268e439]:
+                - generic [ref=f268e440] [cursor=pointer]: 어린이용
+          - separator [ref=f268e442]
+          - generic [ref=f268e443]:
+            - heading "유기농/친환경 등" [level=5] [ref=f268e444]
+            - list [ref=f268e446]:
+              - listitem [ref=f268e447]:
+                - generic [ref=f268e448] [cursor=pointer]: 인증 있음
+          - separator [ref=f268e450]
+          - generic [ref=f268e451]:
+            - heading "비건 여부" [level=5] [ref=f268e452]
+            - list [ref=f268e454]:
+              - listitem [ref=f268e455]:
+                - generic [ref=f268e456] [cursor=pointer]: 비건
+          - separator [ref=f268e458]
+          - generic [ref=f268e459]:
+            - heading "친환경 인증" [level=5] [ref=f268e460]
+            - list [ref=f268e462]:
+              - listitem [ref=f268e463]:
+                - generic [ref=f268e464] [cursor=pointer]: 유기
+              - listitem [ref=f268e466]:
+                - generic: 무농약
+              - listitem [ref=f268e467]:
+                - generic: 기타(무항생제 등)
+          - separator [ref=f268e468]
+          - generic [ref=f268e469]:
+            - heading "별점" [level=5] [ref=f268e470]
+            - list [ref=f268e472]:
+              - listitem [ref=f268e473]:
+                - generic "전체" [ref=f268e474]: 별점전체
+              - listitem [ref=f268e475]:
+                - generic "4점 이상" [ref=f268e476]:
+                  - generic [ref=f268e477] [cursor=pointer]
+                  - text: 4점 이상
+              - listitem [ref=f268e478]:
+                - generic "3점 이상" [ref=f268e479]:
+                  - generic [ref=f268e480] [cursor=pointer]
+                  - text: 3점 이상
+              - listitem [ref=f268e481]:
+                - generic "2점 이상" [ref=f268e482]:
+                  - generic [ref=f268e483] [cursor=pointer]
+                  - text: 2점 이상
+              - listitem [ref=f268e484]:
+                - generic "1점 이상" [ref=f268e485]:
+                  - generic [ref=f268e486] [cursor=pointer]
+                  - text: 1점 이상
+          - separator [ref=f268e487]
+          - generic [ref=f268e488]:
+            - heading "가격" [level=5] [ref=f268e489]
+            - list [ref=f268e491]:
+              - listitem [ref=f268e492]:
+                - generic "priceFilter" [ref=f268e493]: 가격 전체
+              - listitem [ref=f268e494]:
+                - generic "priceFilter" [ref=f268e495]: 2만원 이하
+              - listitem [ref=f268e496]:
+                - generic "priceFilter" [ref=f268e497]: 2만원~4만원
+              - listitem [ref=f268e498]:
+                - generic "priceFilter" [ref=f268e499]: 4만원~6만원
+              - listitem [ref=f268e500]:
+                - generic "priceFilter" [ref=f268e501]: 6만원~8만원
+              - listitem [ref=f268e502]:
+                - generic "priceFilter" [ref=f268e503]: 8만원 이상
+            - generic [ref=f268e504]:
+              - generic [ref=f268e505]:
+                - textbox "minPrice" [ref=f268e506]
+                - generic [ref=f268e507]: ~
+                - textbox "maxPrice" [ref=f268e508]
+                - text: 원
+              - generic "priceFilter" [ref=f268e509]: 검색
+          - separator [ref=f268e510]
+        - generic [ref=f268e513]:
+          - generic [ref=f268e514]: 현재 검색 결과에 만족하셨나요?
+          - button [ref=f268e515] [cursor=pointer]
+          - button [ref=f268e516] [cursor=pointer]
+          - generic [ref=f268e517]:
+            - paragraph [ref=f268e518]: 어떤 문제가 있었나요?
+            - list [ref=f268e519]:
+              - listitem [ref=f268e520] [cursor=pointer]: 이미지나 정보가 부정확해요
+              - listitem [ref=f268e521] [cursor=pointer]: 추천해준 검색어가 도움이 안 돼요
+              - listitem [ref=f268e522] [cursor=pointer]: 관련 없는 상품이 있어요
+              - listitem [ref=f268e523] [cursor=pointer]: 필터가 도움이 안 돼요
+              - listitem [ref=f268e524] [cursor=pointer]: 기타 원하는 옵션이 없어요
+      - generic [ref=f268e525]:
+        - generic [ref=f268e526]:
+          - heading [level=1] [ref=f268e527]:
+            - strong [ref=f268e528]: "'멸균우유 200ml'"
+            - text: 에 대한 검색결과
+          - generic [ref=f268e529]:
+            - generic [ref=f268e530]: "연관검색어:"
+            - link "멸균우유200ml24팩" [ref=f268e531] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=%EB%A9%B8%EA%B7%A0%EC%9A%B0%EC%9C%A0200ml24%ED%8C%A9&channel=relate
+            - link "멸균우유" [ref=f268e532] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=%EB%A9%B8%EA%B7%A0%EC%9A%B0%EC%9C%A0&channel=relate
+            - link "우유" [ref=f268e533] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=%EC%9A%B0%EC%9C%A0&channel=relate
+            - link "멸균우유200" [ref=f268e534] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=%EB%A9%B8%EA%B7%A0%EC%9A%B0%EC%9C%A0200&channel=relate
+            - link "서울우유" [ref=f268e535] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=%EC%84%9C%EC%9A%B8%EC%9A%B0%EC%9C%A0&channel=relate
+            - link "우유200ml" [ref=f268e536] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=%EC%9A%B0%EC%9C%A0200ml&channel=relate
+            - link "매일우유멸균우유" [ref=f268e537] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=%EB%A7%A4%EC%9D%BC%EC%9A%B0%EC%9C%A0%EB%A9%B8%EA%B7%A0%EC%9A%B0%EC%9C%A0&channel=relate
+            - link "서울우유멸균" [ref=f268e538] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=%EC%84%9C%EC%9A%B8%EC%9A%B0%EC%9C%A0%EB%A9%B8%EA%B7%A0&channel=relate
+            - link "쵸코우유멸균우유" [ref=f268e539] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=%EC%B5%B8%EC%BD%94%EC%9A%B0%EC%9C%A0%EB%A9%B8%EA%B7%A0%EC%9A%B0%EC%9C%A0&channel=relate
+            - link "멸균" [ref=f268e540] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=%EB%A9%B8%EA%B7%A0&channel=relate
+          - generic [ref=f268e541]:
+            - generic [ref=f268e544]:
+              - checkbox "배송비 포함" [ref=f268e545] [cursor=pointer]
+              - generic [ref=f268e548]: 배송비 포함
+            - list [ref=f268e552]:
+              - listitem [ref=f268e553]:
+                - radio "쿠팡 랭킹순" [ref=f268e554]
+                - generic [ref=f268e555] [cursor=pointer]: 쿠팡 랭킹순
+                - generic [ref=f268e556]: 설명
+              - listitem [ref=f268e557]:
+                - radio "낮은가격순" [checked] [ref=f268e558]
+                - generic [ref=f268e559] [cursor=pointer]: 낮은가격순
+              - listitem [ref=f268e560]:
+                - radio "높은가격순" [ref=f268e561]
+                - generic [ref=f268e562] [cursor=pointer]: 높은가격순
+              - listitem [ref=f268e563]:
+                - radio "판매량순" [ref=f268e564]
+                - generic [ref=f268e565] [cursor=pointer]: 판매량순
+              - listitem [ref=f268e566]:
+                - radio "최신순" [ref=f268e567]
+                - generic [ref=f268e568] [cursor=pointer]: 최신순
+            - list [ref=f268e573]:
+              - listitem [ref=f268e574] [cursor=pointer]:
+                - radio "36개씩 보기" [checked] [ref=f268e575]
+                - generic [ref=f268e576]: 36개씩 보기
+        - generic [ref=f268e579]:
+          - list [ref=f268e581]:
+            - listitem [ref=f268e582] [cursor=pointer]:
+              - link "매일우유 매일유업 오리지널, 200ml, 1개 3,580원 (100ml당 1,790원) 9/15(화) 도착 예정 무료배송 5 (278,575) 최대 179원 적립 최대 179원 적립 1" [ref=f268e583]:
+                - /url: /vp/products/4708084849?itemId=25733376191&vendorItemId=95233015408&pickType=COU_PICK&q=멸균우유 200ml&searchId=a353c5139009315&sourceType=search&itemsCount=36&searchRank=0&rank=0
+                - figure [ref=f268e584]:
+                  - img "매일우유 매일유업 오리지널, 200ml, 1개" [ref=f268e585]
+                - generic [ref=f268e586]:
+                  - generic [ref=f268e591]: 매일우유 매일유업 오리지널, 200ml, 1개
+                  - generic [ref=f268e594]:
+                    - generic [ref=f268e595]: 3,580원
+                    - generic [ref=f268e596]: (100ml당 1,790원)
+                  - generic [ref=f268e597]:
+                    - generic [ref=f268e598]: 9/15(화) 도착 예정
+                    - generic [ref=f268e600]: 무료배송
+                  - generic [ref=f268e602]:
+                    - generic "5" [ref=f268e603]
+                    - generic [ref=f268e609]: (278,575)
+                  - generic [ref=f268e612]:
+                    - img "최대 179원 적립" [ref=f268e613]
+                    - generic [ref=f268e614]: 최대 179원 적립
+                  - generic [ref=f268e615]: "1"
+            - listitem [ref=f268e616] [cursor=pointer]:
+              - link "서울우유 멸균 흰우유, 200ml, 2개 할인 · 17:31:07 3,970원 2% 3,870원 (100ml당 968원) 9/15(화) 도착 예정 무료배송 5 (556,093) 최대 194원 적립 최대 194원 적립 2" [ref=f268e617]:
+                - /url: /vp/products/4975075206?itemId=24951141393&vendorItemId=92002138831&q=멸균우유 200ml&searchId=a353c5139009315&sourceType=search&itemsCount=36&searchRank=1&rank=1
+                - figure [ref=f268e618]:
+                  - img "서울우유 멸균 흰우유, 200ml, 2개" [ref=f268e619]
+                - generic [ref=f268e620]:
+                  - generic [ref=f268e622]: 서울우유 멸균 흰우유, 200ml, 2개
+                  - generic [ref=f268e623]:
+                    - generic [ref=f268e624]:
+                      - generic [ref=f268e625]: 할인
+                      - generic [ref=f268e626]: · 17:31:07
+                      - deletion [ref=f268e627]: 3,970원
+                    - generic [ref=f268e629]:
+                      - generic [ref=f268e630]: 2%
+                      - generic [ref=f268e635]: 3,870원
+                      - generic [ref=f268e636]: (100ml당 968원)
+                  - generic [ref=f268e637]:
+                    - generic [ref=f268e638]: 9/15(화) 도착 예정
+                    - generic [ref=f268e640]: 무료배송
+                  - generic [ref=f268e642]:
+                    - generic "5" [ref=f268e643]
+                    - generic [ref=f268e649]: (556,093)
+                  - generic [ref=f268e652]:
+                    - img "최대 194원 적립" [ref=f268e653]
+                    - generic [ref=f268e654]: 최대 194원 적립
+                  - generic [ref=f268e655]: "2"
+            - listitem [ref=f268e656] [cursor=pointer]:
+              - link "서울우유 저지방 멸균우유, 200ml, 6개 4,520원 (100ml당 377원) 배송비 3,000원 9/15(화) 도착 예정 오늘출발 5 (2,855) 최대 226원 적립 최대 226원 적립 3" [ref=f268e657]:
+                - /url: /vp/products/8850615297?itemId=27033586546&vendorItemId=95193609936&q=멸균우유 200ml&searchId=a353c5139009315&sourceType=search&itemsCount=36&searchRank=2&rank=2
+                - figure [ref=f268e658]:
+                  - img "서울우유 저지방 멸균우유, 200ml, 6개" [ref=f268e659]
+                - generic [ref=f268e660]:
+                  - generic [ref=f268e663]:
+                    - text: 서울우유 저지방
+                    - mark [ref=f268e664]: 멸균우유
+                    - text: ","
+                    - mark [ref=f268e665]: 200ml
+                    - text: ", 6개"
+                  - generic [ref=f268e667]:
+                    - generic [ref=f268e668]:
+                      - generic [ref=f268e669]: 4,520원
+                      - generic [ref=f268e670]: (100ml당 377원)
+                    - generic [ref=f268e671]: 배송비 3,000원
+                  - generic [ref=f268e672]:
+                    - generic [ref=f268e673]: 9/15(화) 도착 예정
+                    - generic [ref=f268e675]: 오늘출발
+                  - generic [ref=f268e677]:
+                    - generic "5" [ref=f268e678]
+                    - generic [ref=f268e684]: (2,855)
+                  - generic [ref=f268e687]:
+                    - img "최대 226원 적립" [ref=f268e688]
+                    - generic [ref=f268e689]: 최대 226원 적립
+                  - generic [ref=f268e690]: "3"
+            - listitem [ref=f268e691] [cursor=pointer]:
+              - link "연세대학교 연세우유, 200ml, 3개 4,770원 (100ml당 795원) 9/15(화) 도착 예정 무료배송 ∙ 오늘출발 5 (119,642) 최대 239원 적립 최대 239원 적립 4" [ref=f268e692]:
+                - /url: /vp/products/3955632?itemId=28334322849&vendorItemId=95286637109&q=멸균우유 200ml&searchId=a353c5139009315&sourceType=search&itemsCount=36&searchRank=3&rank=3
+                - figure [ref=f268e693]:
+                  - img "연세대학교 연세우유, 200ml, 3개" [ref=f268e694]
+                - generic [ref=f268e695]:
+                  - generic [ref=f268e697]: 연세대학교 연세우유, 200ml, 3개
+                  - generic [ref=f268e700]:
+                    - generic [ref=f268e701]: 4,770원
+                    - generic [ref=f268e702]: (100ml당 795원)
+                  - generic [ref=f268e703]:
+                    - generic [ref=f268e704]: 9/15(화) 도착 예정
+                    - generic [ref=f268e706]: 무료배송 ∙ 오늘출발
+                  - generic [ref=f268e708]:
+                    - generic "5" [ref=f268e709]
+                    - generic [ref=f268e715]: (119,642)
+                  - generic [ref=f268e718]:
+                    - img "최대 239원 적립" [ref=f268e719]
+                    - generic [ref=f268e720]: 최대 239원 적립
+                  - generic [ref=f268e721]: "4"
+            - listitem [ref=f268e722] [cursor=pointer]:
+              - link "서울우유 멸균 흰우유, 200ml, 4개 할인 · 17:31:07 5,020원 3% 4,820원 (100ml당 603원) 9/15(화) 도착 예정 무료배송 5 (556,093) 최대 241원 적립 최대 241원 적립 5" [ref=f268e723]:
+                - /url: /vp/products/4975075206?itemId=24951148032&vendorItemId=92002138847&q=멸균우유 200ml&searchId=a353c5139009315&sourceType=search&itemsCount=36&searchRank=4&rank=4
+                - figure [ref=f268e724]:
+                  - img "서울우유 멸균 흰우유, 200ml, 4개" [ref=f268e725]
+                - generic [ref=f268e726]:
+                  - generic [ref=f268e728]: 서울우유 멸균 흰우유, 200ml, 4개
+                  - generic [ref=f268e729]:
+                    - generic [ref=f268e730]:
+                      - generic [ref=f268e731]: 할인
+                      - generic [ref=f268e732]: · 17:31:07
+                      - deletion [ref=f268e733]: 5,020원
+                    - generic [ref=f268e735]:
+                      - generic [ref=f268e736]: 3%
+                      - generic [ref=f268e741]: 4,820원
+                      - generic [ref=f268e742]: (100ml당 603원)
+                  - generic [ref=f268e743]:
+                    - generic [ref=f268e744]: 9/15(화) 도착 예정
+                    - generic [ref=f268e746]: 무료배송
+                  - generic [ref=f268e748]:
+                    - generic "5" [ref=f268e749]
+                    - generic [ref=f268e755]: (556,093)
+                  - generic [ref=f268e758]:
+                    - img "최대 241원 적립" [ref=f268e759]
+                    - generic [ref=f268e760]: 최대 241원 적립
+                  - generic [ref=f268e761]: "5"
+            - listitem [ref=f268e762] [cursor=pointer]:
+              - link "매일유업 멸균우유 고소한맛, 200ml, 3개 4,900원 (100ml당 817원) 9/15(화) 도착 예정 무료배송 5 (278,575) 최대 245원 적립 최대 245원 적립 6" [ref=f268e763]:
+                - /url: /vp/products/4708084849?itemId=24874767194&vendorItemId=91881625094&q=멸균우유 200ml&searchId=a353c5139009315&sourceType=search&itemsCount=36&searchRank=5&rank=5
+                - figure [ref=f268e764]:
+                  - img "매일유업 멸균우유 고소한맛, 200ml, 3개" [ref=f268e765]
+                - generic [ref=f268e766]:
+                  - generic [ref=f268e769]:
+                    - text: 매일유업
+                    - mark [ref=f268e770]: 멸균우유
+                    - text: 고소한맛,
+                    - mark [ref=f268e771]: 200ml
+                    - text: ", 3개"
+                  - generic [ref=f268e774]:
+                    - generic [ref=f268e775]: 4,900원
+                    - generic [ref=f268e776]: (100ml당 817원)
+                  - generic [ref=f268e777]:
+                    - generic [ref=f268e778]: 9/15(화) 도착 예정
+                    - generic [ref=f268e780]: 무료배송
+                  - generic [ref=f268e782]:
+                    - generic "5" [ref=f268e783]
+                    - generic [ref=f268e789]: (278,575)
+                  - generic [ref=f268e792]:
+                    - img "최대 245원 적립" [ref=f268e793]
+                    - generic [ref=f268e794]: 최대 245원 적립
+                  - generic [ref=f268e795]: "6"
+            - listitem [ref=f268e796] [cursor=pointer]:
+              - link "매일유업 멸균우유 고소한맛, 200ml, 4개 5,590원 (100ml당 699원) 9/15(화) 도착 예정 무료배송 5 (278,575) 최대 280원 적립 최대 280원 적립 7" [ref=f268e797]:
+                - /url: /vp/products/4708084849?itemId=24874767205&vendorItemId=91881625153&q=멸균우유 200ml&searchId=a353c5139009315&sourceType=search&itemsCount=36&searchRank=6&rank=6
+                - figure [ref=f268e798]:
+                  - img "매일유업 멸균우유 고소한맛, 200ml, 4개" [ref=f268e799]
+                - generic [ref=f268e800]:
+                  - generic [ref=f268e803]:
+                    - text: 매일유업
+                    - mark [ref=f268e804]: 멸균우유
+                    - text: 고소한맛,
+                    - mark [ref=f268e805]: 200ml
+                    - text: ", 4개"
+                  - generic [ref=f268e808]:
+                    - generic [ref=f268e809]: 5,590원
+                    - generic [ref=f268e810]: (100ml당 699원)
+                  - generic [ref=f268e811]:
+                    - generic [ref=f268e812]: 9/15(화) 도착 예정
+                    - generic [ref=f268e814]: 무료배송
+                  - generic [ref=f268e816]:
+                    - generic "5" [ref=f268e817]
+                    - generic [ref=f268e823]: (278,575)
+                  - generic [ref=f268e826]:
+                    - img "최대 280원 적립" [ref=f268e827]
+                    - generic [ref=f268e828]: 최대 280원 적립
+                  - generic [ref=f268e829]: "7"
+            - listitem [ref=f268e830] [cursor=pointer]:
+              - link "남양 멸균 맛있는 우유 GT, 200ml, 6개 6,160원 (100ml당 513원) 9/15(화) 도착 예정 무료배송 5 (114,653) 최대 308원 적립 최대 308원 적립 8" [ref=f268e831]:
+                - /url: /vp/products/6436856710?itemId=20872548656&vendorItemId=94085991372&q=멸균우유 200ml&searchId=a353c5139009315&sourceType=search&itemsCount=36&searchRank=7&rank=7
+                - figure [ref=f268e832]:
+                  - img "남양 멸균 맛있는 우유 GT, 200ml, 6개" [ref=f268e833]
+                - generic [ref=f268e834]:
+                  - generic [ref=f268e836]: 남양 멸균 맛있는 우유 GT, 200ml, 6개
+                  - generic [ref=f268e839]:
+                    - generic [ref=f268e840]: 6,160원
+                    - generic [ref=f268e841]: (100ml당 513원)
+                  - generic [ref=f268e842]:
+                    - generic [ref=f268e843]: 9/15(화) 도착 예정
+                    - generic [ref=f268e845]: 무료배송
+                  - generic [ref=f268e847]:
+                    - generic "5" [ref=f268e848]
+                    - generic [ref=f268e854]: (114,653)
+                  - generic [ref=f268e857]:
+                    - img "최대 308원 적립" [ref=f268e858]
+                    - generic [ref=f268e859]: 최대 308원 적립
+                  - generic [ref=f268e860]: "8"
+            - listitem [ref=f268e861] [cursor=pointer]:
+              - link "서울우유 저지방 멸균우유, 200ml, 12개 6,220원 (100ml당 259원) 배송비 5,000원 9/15(화) 도착 예정 오늘출발 5 (2,855) 최대 311원 적립 최대 311원 적립 9" [ref=f268e862]:
+                - /url: /vp/products/8850615297?itemId=25914021108&vendorItemId=95193590122&q=멸균우유 200ml&searchId=a353c5139009315&sourceType=search&itemsCount=36&searchRank=8&rank=8
+                - figure [ref=f268e863]:
+                  - img "서울우유 저지방 멸균우유, 200ml, 12개" [ref=f268e864]
+                - generic [ref=f268e865]:
+                  - generic [ref=f268e868]:
+                    - text: 서울우유 저지방
+                    - mark [ref=f268e869]: 멸균우유
+                    - text: ","
+                    - mark [ref=f268e870]: 200ml
+                    - text: ", 12개"
+                  - generic [ref=f268e872]:
+                    - generic [ref=f268e873]:
+                      - generic [ref=f268e874]: 6,220원
+                      - generic [ref=f268e875]: (100ml당 259원)
+                    - generic [ref=f268e876]: 배송비 5,000원
+                  - generic [ref=f268e877]:
+                    - generic [ref=f268e878]: 9/15(화) 도착 예정
+                    - generic [ref=f268e880]: 오늘출발
+                  - generic [ref=f268e882]:
+                    - generic "5" [ref=f268e883]
+                    - generic [ref=f268e889]: (2,855)
+                  - generic [ref=f268e892]:
+                    - img "최대 311원 적립" [ref=f268e893]
+                    - generic [ref=f268e894]: 최대 311원 적립
+                  - generic [ref=f268e895]: "9"
+            - listitem [ref=f268e896] [cursor=pointer]:
+              - link "서울우유 멸균 흰우유, 200ml, 6개 할인 · 17:31:07 6,630원 4% 6,330원 (100ml당 528원) 9/15(화) 도착 예정 무료배송 5 (556,093) 최대 316원 적립 최대 316원 적립 10" [ref=f268e897]:
+                - /url: /vp/products/4975075206?itemId=24951157894&vendorItemId=92002138874&q=멸균우유 200ml&searchId=a353c5139009315&sourceType=search&itemsCount=36&searchRank=9&rank=9
+                - figure [ref=f268e898]:
+                  - img "서울우유 멸균 흰우유, 200ml, 6개" [ref=f268e899]
+                - generic [ref=f268e900]:
+                  - generic [ref=f268e902]: 서울우유 멸균 흰우유, 200ml, 6개
+                  - generic [ref=f268e903]:
+                    - generic [ref=f268e904]:
+                      - generic [ref=f268e905]: 할인
+                      - generic [ref=f268e906]: · 17:31:07
+                      - deletion [ref=f268e907]: 6,630원
+                    - generic [ref=f268e909]:
+                      - generic [ref=f268e910]: 4%
+                      - generic [ref=f268e915]: 6,330원
+                      - generic [ref=f268e916]: (100ml당 528원)
+                  - generic [ref=f268e917]:
+                    - generic [ref=f268e918]: 9/15(화) 도착 예정
+                    - generic [ref=f268e920]: 무료배송
+                  - generic [ref=f268e922]:
+                    - generic "5" [ref=f268e923]
+                    - generic [ref=f268e929]: (556,093)
+                  - generic [ref=f268e932]:
+                    - img "최대 316원 적립" [ref=f268e933]
+                    - generic [ref=f268e934]: 최대 316원 적립
+                  - generic [ref=f268e935]: "10"
+            - listitem [ref=f268e936] [cursor=pointer]:
+              - link "매일유업 멸균우유 고소한맛, 200ml, 6개 6,980원 (100ml당 582원) 9/15(화) 도착 예정 무료배송 5 (278,575) 최대 349원 적립 최대 349원 적립" [ref=f268e937]:
+                - /url: /vp/products/4708084849?itemId=24874767207&vendorItemId=91881625161&q=멸균우유 200ml&searchId=a353c5139009315&sourceType=search&itemsCount=36&searchRank=10&rank=10
+                - figure [ref=f268e938]:
+                  - img "매일유업 멸균우유 고소한맛, 200ml, 6개" [ref=f268e939]
+                - generic [ref=f268e940]:
+                  - generic [ref=f268e943]:
+                    - text: 매일유업
+                    - mark [ref=f268e944]: 멸균우유
+                    - text: 고소한맛,
+                    - mark [ref=f268e945]: 200ml
+                    - text: ", 6개"
+                  - generic [ref=f268e948]:
+                    - generic [ref=f268e949]: 6,980원
+                    - generic [ref=f268e950]: (100ml당 582원)
+                  - generic [ref=f268e951]:
+                    - generic [ref=f268e952]: 9/15(화) 도착 예정
+                    - generic [ref=f268e954]: 무료배송
+                  - generic [ref=f268e956]:
+                    - generic "5" [ref=f268e957]
+                    - generic [ref=f268e963]: (278,575)
+                  - generic [ref=f268e966]:
+                    - img "최대 349원 적립" [ref=f268e967]
+                    - generic [ref=f268e968]: 최대 349원 적립
+            - listitem [ref=f268e969] [cursor=pointer]:
+              - link "파스퇴르 바른목장 소화가 잘되는 우유, 200ml, 5개 9,000원 12% 7,900원 (100ml당 790원) 9/15(화) 도착 예정 무료배송 ∙ 오늘출발 5 (5,452) 최대 395원 적립 최대 395원 적립" [ref=f268e970]:
+                - /url: /vp/products/20212391?itemId=27197858970&vendorItemId=94165307829&q=멸균우유 200ml&searchId=a353c5139009315&sourceType=search&itemsCount=36&searchRank=11&rank=11
+                - figure [ref=f268e971]:
+                  - img "파스퇴르 바른목장 소화가 잘되는 우유, 200ml, 5개" [ref=f268e972]
+                - generic [ref=f268e973]:
+                  - generic [ref=f268e975]: 파스퇴르 바른목장 소화가 잘되는 우유, 200ml, 5개
+                  - generic [ref=f268e976]:
+                    - deletion [ref=f268e978]: 9,000원
+                    - generic [ref=f268e980]:
+                      - generic [ref=f268e981]: 12%
+                      - generic [ref=f268e982]: 7,900원
+                      - generic [ref=f268e983]: (100ml당 790원)
+                  - generic [ref=f268e984]:
+                    - generic [ref=f268e985]: 9/15(화) 도착 예정
+                    - generic [ref=f268e987]: 무료배송 ∙ 오늘출발
+                  - generic [ref=f268e989]:
+                    - generic "5" [ref=f268e990]
+                    - generic [ref=f268e996]: (5,452)
+                  - generic [ref=f268e999]:
+                    - img "최대 395원 적립" [ref=f268e1000]
+                    - generic [ref=f268e1001]: 최대 395원 적립
+            - listitem [ref=f268e1002]:
+              - heading "최근 다른 고객이 많이 구매한 상품" [level=2] [ref=f268e1003]
+              - list [ref=f268e1007]:
+                - listitem [ref=f268e1008]:
+                  - link "소화가잘되는우유 오리지널, 190ml, 24개 37%28,800원 18,000원 (100ml당 395원) 240원 와우 가입 쿠폰 내일(토) 도착 보장 새 상품, 반품-미개봉 (55) 최저16,810원 5 (180,848) 최대 888원 적립 최대 888원 적립" [ref=f268e1009] [cursor=pointer]:
+                    - /url: /vp/products/4866946618?itemId=6318956874&vendorItemId=3025163213&sourceType=SDW_TOP_SELLING_WIDGET_V2&searchId=a353c5139009315&q=멸균우유 200ml
+                    - figure [ref=f268e1010]:
+                      - img "소화가잘되는우유 오리지널, 190ml, 24개" [ref=f268e1011]
+                    - generic [ref=f268e1012]:
+                      - generic [ref=f268e1014]: 소화가잘되는우유 오리지널, 190ml, 24개
+                      - generic [ref=f268e1015]:
+                        - generic [ref=f268e1016]:
+                          - generic [ref=f268e1017]: 37%
+                          - deletion [ref=f268e1018]: 28,800원
+                        - generic [ref=f268e1019]:
+                          - strong [ref=f268e1021]: 18,000원
+                          - generic [ref=f268e1022]: (100ml당 395원)
+                          - generic [ref=f268e1023]:
+                            - strong [ref=f268e1026]: 240원
+                            - generic [ref=f268e1028]: 와우 가입 쿠폰
+                      - generic [ref=f268e1029]: 내일(토) 도착 보장
+                      - generic [ref=f268e1031]:
+                        - generic [ref=f268e1032]:
+                          - text: 새 상품, 반품-미개봉
+                          - strong [ref=f268e1033]: (55)
+                        - generic [ref=f268e1034]:
+                          - text: 최저
+                          - strong [ref=f268e1035]: 16,810
+                          - text: 원
+                      - generic [ref=f268e1037]:
+                        - generic "5" [ref=f268e1038]
+                        - generic [ref=f268e1044]: (180,848)
+                      - generic [ref=f268e1048]:
+                        - img "최대 888원 적립" [ref=f268e1049]
+                        - generic [ref=f268e1050]: 최대 888원 적립
+                - listitem [ref=f268e1051]:
+                  - link "서울우유 1급A우유, 2.3L, 1개 7,580원 (100ml당 330원) 내일(토) 새벽 도착 보장 5 (1,580,899) 최대 379원 적립 최대 379원 적립" [ref=f268e1052] [cursor=pointer]:
+                    - /url: /vp/products/130180913?itemId=383114455&vendorItemId=3930090438&sourceType=SDW_TOP_SELLING_WIDGET_V2&searchId=a353c5139009315&q=멸균우유 200ml
+                    - figure [ref=f268e1053]:
+                      - img "서울우유 1급A우유, 2.3L, 1개" [ref=f268e1054]
+                    - generic [ref=f268e1055]:
+                      - generic [ref=f268e1057]: 서울우유 1급A우유, 2.3L, 1개
+                      - generic [ref=f268e1059]:
+                        - strong [ref=f268e1061]: 7,580원
+                        - generic [ref=f268e1062]: (100ml당 330원)
+                      - generic [ref=f268e1063]: 내일(토) 새벽 도착 보장
+                      - generic [ref=f268e1066]:
+                        - generic "5" [ref=f268e1067]
+                        - generic [ref=f268e1073]: (1,580,899)
+                      - generic [ref=f268e1077]:
+                        - img "최대 379원 적립" [ref=f268e1078]
+                        - generic [ref=f268e1079]: 최대 379원 적립
+                - listitem [ref=f268e1080]:
+                  - link "파스퇴르 저온살균 우유, 900ml, 2개 6,360원 (100ml당 353원) 내일(토) 새벽 도착 보장 5 (189,303) 최대 318원 적립 최대 318원 적립" [ref=f268e1081] [cursor=pointer]:
+                    - /url: /vp/products/5071588446?itemId=6863888269&vendorItemId=74156482643&sourceType=SDW_TOP_SELLING_WIDGET_V2&searchId=a353c5139009315&q=멸균우유 200ml
+                    - figure [ref=f268e1082]:
+                      - img "파스퇴르 저온살균 우유, 900ml, 2개" [ref=f268e1083]
+                    - generic [ref=f268e1084]:
+                      - generic [ref=f268e1086]: 파스퇴르 저온살균 우유, 900ml, 2개
+                      - generic [ref=f268e1088]:
+                        - strong [ref=f268e1090]: 6,360원
+                        - generic [ref=f268e1091]: (100ml당 353원)
+                      - generic [ref=f268e1092]: 내일(토) 새벽 도착 보장
+                      - generic [ref=f268e1095]:
+                        - generic "5" [ref=f268e1096]
+                        - generic [ref=f268e1102]: (189,303)
+                      - generic [ref=f268e1106]:
+                        - img "최대 318원 적립" [ref=f268e1107]
+                        - generic [ref=f268e1108]: 최대 318원 적립
+                - listitem [ref=f268e1109]:
+                  - link "상하목장 유기농 우유, 125ml, 24개 29%28,080원 19,800원 (100ml당 660원) 내일(토) 새벽 도착 보장 5 (15,467) 최대 990원 적립 최대 990원 적립" [ref=f268e1110] [cursor=pointer]:
+                    - /url: /vp/products/1248809001?itemId=2247172040&vendorItemId=70244580730&sourceType=SDW_TOP_SELLING_WIDGET_V2&searchId=a353c5139009315&q=멸균우유 200ml
+                    - figure [ref=f268e1111]:
+                      - img "상하목장 유기농 우유, 125ml, 24개" [ref=f268e1112]
+                    - generic [ref=f268e1113]:
+                      - generic [ref=f268e1115]: 상하목장 유기농 우유, 125ml, 24개
+                      - generic [ref=f268e1116]:
+                        - generic [ref=f268e1117]:
+                          - generic [ref=f268e1118]: 29%
+                          - deletion [ref=f268e1119]: 28,080원
+                        - generic [ref=f268e1120]:
+                          - strong [ref=f268e1122]: 19,800원
+                          - generic [ref=f268e1123]: (100ml당 660원)
+                      - generic [ref=f268e1124]: 내일(토) 새벽 도착 보장
+                      - generic [ref=f268e1127]:
+                        - generic "5" [ref=f268e1128]
+                        - generic [ref=f268e1134]: (15,467)
+                      - generic [ref=f268e1138]:
+                        - img "최대 990원 적립" [ref=f268e1139]
+                        - generic [ref=f268e1140]: 최대 990원 적립
+            - listitem [ref=f268e1141] [cursor=pointer]:
+              - link "매일유업 멸균우유 고소한맛, 200ml, 8개 7,950원 (100ml당 497원) 9/15(화) 도착 예정 무료배송 5 (278,575) 최대 398원 적립 최대 398원 적립" [ref=f268e1142]:
+                - /url: /vp/products/4708084849?itemId=24874767201&vendorItemId=91881625124&q=멸균우유 200ml&searchId=a353c5139009315&sourceType=search&itemsCount=36&searchRank=12&rank=12
+                - figure [ref=f268e1143]:
+                  - img "매일유업 멸균우유 고소한맛, 200ml, 8개" [ref=f268e1144]
+                - generic [ref=f268e1145]:
+                  - generic [ref=f268e1148]:
+                    - text: 매일유업
+                    - mark [ref=f268e1149]: 멸균우유
+                    - text: 고소한맛,
+                    - mark [ref=f268e1150]: 200ml
+                    - text: ", 8개"
+                  - generic [ref=f268e1153]:
+                    - generic [ref=f268e1154]: 7,950원
+                    - generic [ref=f268e1155]: (100ml당 497원)
+                  - generic [ref=f268e1156]:
+                    - generic [ref=f268e1157]: 9/15(화) 도착 예정
+                    - generic [ref=f268e1159]: 무료배송
+                  - generic [ref=f268e1161]:
+                    - generic "5" [ref=f268e1162]
+                    - generic [ref=f268e1168]: (278,575)
+                  - generic [ref=f268e1171]:
+                    - img "최대 398원 적립" [ref=f268e1172]
+                    - generic [ref=f268e1173]: 최대 398원 적립
+            - listitem [ref=f268e1174] [cursor=pointer]:
+              - link "서울우유 멸균 흰우유팩, 200ml, 8개 10,880원 20% 8,660원 (100ml당 541원) 9/15(화) 도착 예정 무료배송 5 (556,093) 최대 433원 적립 최대 433원 적립" [ref=f268e1175]:
+                - /url: /vp/products/4975075206?itemId=25558614208&vendorItemId=93993559379&q=멸균우유 200ml&searchId=a353c5139009315&sourceType=search&itemsCount=36&searchRank=13&rank=13
+                - figure [ref=f268e1176]:
+                  - img "서울우유 멸균 흰우유팩, 200ml, 8개" [ref=f268e1177]
+                - generic [ref=f268e1178]:
+                  - generic [ref=f268e1180]: 서울우유 멸균 흰우유팩, 200ml, 8개
+                  - generic [ref=f268e1181]:
+                    - deletion [ref=f268e1183]: 10,880원
+                    - generic [ref=f268e1185]:
+                      - generic [ref=f268e1186]: 20%
+                      - generic [ref=f268e1187]: 8,660원
+                      - generic [ref=f268e1188]: (100ml당 541원)
+                  - generic [ref=f268e1189]:
+                    - generic [ref=f268e1190]: 9/15(화) 도착 예정
+                    - generic [ref=f268e1192]: 무료배송
+                  - generic [ref=f268e1194]:
+                    - generic "5" [ref=f268e1195]
+                    - generic [ref=f268e1201]: (556,093)
+                  - generic [ref=f268e1204]:
+                    - img "최대 433원 적립" [ref=f268e1205]
+                    - generic [ref=f268e1206]: 최대 433원 적립
+            - listitem [ref=f268e1207] [cursor=pointer]:
+              - link "매일유업 멸균우유 고소한맛, 200ml, 10개 9,270원 (100ml당 464원) 9/15(화) 도착 예정 무료배송 5 (278,575) 최대 464원 적립 최대 464원 적립" [ref=f268e1208]:
+                - /url: /vp/products/4708084849?itemId=24874767203&vendorItemId=91881625145&q=멸균우유 200ml&searchId=a353c5139009315&sourceType=search&itemsCount=36&searchRank=14&rank=14
+                - figure [ref=f268e1209]:
+                  - img "매일유업 멸균우유 고소한맛, 200ml, 10개" [ref=f268e1210]
+                - generic [ref=f268e1211]:
+                  - generic [ref=f268e1214]:
+                    - text: 매일유업
+                    - mark [ref=f268e1215]: 멸균우유
+                    - text: 고소한맛,
+                    - mark [ref=f268e1216]: 200ml
+                    - text: ", 10개"
+                  - generic [ref=f268e1219]:
+                    - generic [ref=f268e1220]: 9,270원
+                    - generic [ref=f268e1221]: (100ml당 464원)
+                  - generic [ref=f268e1222]:
+                    - generic [ref=f268e1223]: 9/15(화) 도착 예정
+                    - generic [ref=f268e1225]: 무료배송
+                  - generic [ref=f268e1227]:
+                    - generic "5" [ref=f268e1228]
+                    - generic [ref=f268e1234]: (278,575)
+                  - generic [ref=f268e1237]:
+                    - img "최대 464원 적립" [ref=f268e1238]
+                    - generic [ref=f268e1239]: 최대 464원 적립
+            - listitem [ref=f268e1240] [cursor=pointer]:
+              - link "서울우유 멸균 흰우유, 200ml, 10개 9,470원 (100ml당 474원) 9/15(화) 도착 예정 무료배송 5 (556,093) 최대 474원 적립 최대 474원 적립" [ref=f268e1241]:
+                - /url: /vp/products/4975075206?itemId=16570354969&vendorItemId=93080995164&q=멸균우유 200ml&searchId=a353c5139009315&sourceType=search&itemsCount=36&searchRank=15&rank=15
+                - figure [ref=f268e1242]:
+                  - img "서울우유 멸균 흰우유, 200ml, 10개" [ref=f268e1243]
+                - generic [ref=f268e1244]:
+                  - generic [ref=f268e1246]: 서울우유 멸균 흰우유, 200ml, 10개
+                  - generic [ref=f268e1249]:
+                    - generic [ref=f268e1250]: 9,470원
+                    - generic [ref=f268e1251]: (100ml당 474원)
+                  - generic [ref=f268e1252]:
+                    - generic [ref=f268e1253]: 9/15(화) 도착 예정
+                    - generic [ref=f268e1255]: 무료배송
+                  - generic [ref=f268e1257]:
+                    - generic "5" [ref=f268e1258]
+                    - generic [ref=f268e1264]: (556,093)
+                  - generic [ref=f268e1267]:
+                    - img "최대 474원 적립" [ref=f268e1268]
+                    - generic [ref=f268e1269]: 최대 474원 적립
+            - listitem [ref=f268e1270] [cursor=pointer]:
+              - link "서울우유 멸균 흰우유, 200ml, 12개 할인 · 17:31:07 9,900원 4% 9,500원 (100ml당 396원) 9/15(화) 도착 예정 무료배송 5 (556,093) 최대 475원 적립 최대 475원 적립" [ref=f268e1271]:
+                - /url: /vp/products/4975075206?itemId=2477474681&vendorItemId=92002138857&q=멸균우유 200ml&searchId=a353c5139009315&sourceType=search&itemsCount=36&searchRank=16&rank=16
+                - figure [ref=f268e1272]:
+                  - img "서울우유 멸균 흰우유, 200ml, 12개" [ref=f268e1273]
+                - generic [ref=f268e1274]:
+                  - generic [ref=f268e1276]: 서울우유 멸균 흰우유, 200ml, 12개
+                  - generic [ref=f268e1277]:
+                    - generic [ref=f268e1278]:
+                      - generic [ref=f268e1279]: 할인
+                      - generic [ref=f268e1280]: · 17:31:07
+                      - deletion [ref=f268e1281]: 9,900원
+                    - generic [ref=f268e1283]:
+                      - generic [ref=f268e1284]: 4%
+                      - generic [ref=f268e1289]: 9,500원
+                      - generic [ref=f268e1290]: (100ml당 396원)
+                  - generic [ref=f268e1291]:
+                    - generic [ref=f268e1292]: 9/15(화) 도착 예정
+                    - generic [ref=f268e1294]: 무료배송
+                  - generic [ref=f268e1296]:
+                    - generic "5" [ref=f268e1297]
+                    - generic [ref=f268e1303]: (556,093)
+                  - generic [ref=f268e1306]:
+                    - img "최대 475원 적립" [ref=f268e1307]
+                    - generic [ref=f268e1308]: 최대 475원 적립
+            - listitem [ref=f268e1309] [cursor=pointer]:
+              - link "연세우유 고소한 멸균 흰우유 200ml 수량선택, 8개 13,640원 21% 10,640원 (100ml당 665원) 9/15(화) 도착 예정 무료배송 5 (119,642) 최대 532원 적립 최대 532원 적립 품절임박" [ref=f268e1310]:
+                - /url: /vp/products/3955632?itemId=28743274028&vendorItemId=95682520218&q=멸균우유 200ml&searchId=a353c5139009315&sourceType=search&itemsCount=36&searchRank=17&rank=17
+                - figure [ref=f268e1311]:
+                  - img "연세우유 고소한 멸균 흰우유 200ml 수량선택, 8개" [ref=f268e1312]
+                - generic [ref=f268e1313]:
+                  - generic [ref=f268e1315]: 연세우유 고소한 멸균 흰우유 200ml 수량선택, 8개
+                  - generic [ref=f268e1316]:
+                    - deletion [ref=f268e1318]: 13,640원
+                    - generic [ref=f268e1320]:
+                      - generic [ref=f268e1321]: 21%
+                      - generic [ref=f268e1322]: 10,640원
+                      - generic [ref=f268e1323]: (100ml당 665원)
+                  - generic [ref=f268e1324]:
+                    - generic [ref=f268e1325]: 9/15(화) 도착 예정
+                    - generic [ref=f268e1327]: 무료배송
+                  - generic [ref=f268e1329]:
+                    - generic "5" [ref=f268e1330]
+                    - generic [ref=f268e1336]: (119,642)
+                  - generic [ref=f268e1339]:
+                    - img "최대 532원 적립" [ref=f268e1340]
+                    - generic [ref=f268e1341]: 최대 532원 적립
+                  - generic [ref=f268e1342]: 품절임박
+            - listitem [ref=f268e1344] [cursor=pointer]:
+              - link "서울우유 저지방 멸균우유, 200ml, 10개 14,500원 26% 10,650원 (100ml당 533원) 9/15(화) 도착 예정 무료배송 5 (2,855) 최대 533원 적립 최대 533원 적립" [ref=f268e1345]:
+                - /url: /vp/products/8850615297?itemId=28187224978&vendorItemId=94002104674&q=멸균우유 200ml&searchId=a353c5139009315&sourceType=search&itemsCount=36&searchRank=18&rank=18
+                - figure [ref=f268e1346]:
+                  - img "서울우유 저지방 멸균우유, 200ml, 10개" [ref=f268e1347]
+                - generic [ref=f268e1348]:
+                  - generic [ref=f268e1351]:
+                    - text: 서울우유 저지방
+                    - mark [ref=f268e1352]: 멸균우유
+                    - text: ","
+                    - mark [ref=f268e1353]: 200ml
+                    - text: ", 10개"
+                  - generic [ref=f268e1354]:
+                    - deletion [ref=f268e1356]: 14,500원
+                    - generic [ref=f268e1358]:
+                      - generic [ref=f268e1359]: 26%
+                      - generic [ref=f268e1360]: 10,650원
+                      - generic [ref=f268e1361]: (100ml당 533원)
+                  - generic [ref=f268e1362]:
+                    - generic [ref=f268e1363]: 9/15(화) 도착 예정
+                    - generic [ref=f268e1365]: 무료배송
+                  - generic [ref=f268e1367]:
+                    - generic "5" [ref=f268e1368]
+                    - generic [ref=f268e1374]: (2,855)
+                  - generic [ref=f268e1377]:
+                    - img "최대 533원 적립" [ref=f268e1378]
+                    - generic [ref=f268e1379]: 최대 533원 적립
+            - listitem [ref=f268e1380] [cursor=pointer]:
+              - link "매일유업 멸균우유 고소한맛, 200ml, 12개 10,730원 (100ml당 447원) 9/15(화) 도착 예정 무료배송 5 (278,575) 최대 536원 적립 최대 536원 적립" [ref=f268e1381]:
+                - /url: /vp/products/4708084849?itemId=24874767199&vendorItemId=91881625117&q=멸균우유 200ml&searchId=a353c5139009315&sourceType=search&itemsCount=36&searchRank=19&rank=19
+                - figure [ref=f268e1382]:
+                  - img "매일유업 멸균우유 고소한맛, 200ml, 12개" [ref=f268e1383]
+                - generic [ref=f268e1384]:
+                  - generic [ref=f268e1387]:
+                    - text: 매일유업
+                    - mark [ref=f268e1388]: 멸균우유
+                    - text: 고소한맛,
+                    - mark [ref=f268e1389]: 200ml
+                    - text: ", 12개"
+                  - generic [ref=f268e1392]:
+                    - generic [ref=f268e1393]: 10,730원
+                    - generic [ref=f268e1394]: (100ml당 447원)
+                  - generic [ref=f268e1395]:
+                    - generic [ref=f268e1396]: 9/15(화) 도착 예정
+                    - generic [ref=f268e1398]: 무료배송
+                  - generic [ref=f268e1400]:
+                    - generic "5" [ref=f268e1401]
+                    - generic [ref=f268e1407]: (278,575)
+                  - generic [ref=f268e1410]:
+                    - img "최대 536원 적립" [ref=f268e1411]
+                    - generic [ref=f268e1412]: 최대 536원 적립
+            - listitem [ref=f268e1413] [cursor=pointer]:
+              - link "매일우유 멸균 무지방0% 200mlx12팩/흰우유, 200ml, 12개 10,800원 (100ml당 450원) 9/15(화) 도착 예정 무료배송 5 (40,978) 최대 540원 적립 최대 540원 적립" [ref=f268e1414]:
+                - /url: /vp/products/33414098?itemId=17093871749&vendorItemId=92316147862&q=멸균우유 200ml&searchId=a353c5139009315&sourceType=search&itemsCount=36&searchRank=20&rank=20
+                - figure [ref=f268e1415]:
+                  - img "매일우유 멸균 무지방0% 200mlx12팩/흰우유, 200ml, 12개" [ref=f268e1416]
+                - generic [ref=f268e1417]:
+                  - generic [ref=f268e1419]: 매일우유 멸균 무지방0% 200mlx12팩/흰우유, 200ml, 12개
+                  - generic [ref=f268e1422]:
+                    - generic [ref=f268e1423]: 10,800원
+                    - generic [ref=f268e1424]: (100ml당 450원)
+                  - generic [ref=f268e1425]:
+                    - generic [ref=f268e1426]: 9/15(화) 도착 예정
+                    - generic [ref=f268e1428]: 무료배송
+                  - generic [ref=f268e1430]:
+                    - generic "5" [ref=f268e1431]
+                    - generic [ref=f268e1437]: (40,978)
+                  - generic [ref=f268e1440]:
+                    - img "최대 540원 적립" [ref=f268e1441]
+                    - generic [ref=f268e1442]: 최대 540원 적립
+            - listitem [ref=f268e1443] [cursor=pointer]:
+              - link "서울우유 저지방 멸균우유, 200ml, 18개 10,870원 (100ml당 302원) 배송비 5,000원 9/15(화) 도착 예정 오늘출발 5 (2,855) 최대 544원 적립 최대 544원 적립" [ref=f268e1444]:
+                - /url: /vp/products/8850615297?itemId=25745276396&vendorItemId=95193575163&q=멸균우유 200ml&searchId=a353c5139009315&sourceType=search&itemsCount=36&searchRank=21&rank=21
+                - figure [ref=f268e1445]:
+                  - img "서울우유 저지방 멸균우유, 200ml, 18개" [ref=f268e1446]
+                - generic [ref=f268e1447]:
+                  - generic [ref=f268e1450]:
+                    - text: 서울우유 저지방
+                    - mark [ref=f268e1451]: 멸균우유
+                    - text: ","
+                    - mark [ref=f268e1452]: 200ml
+                    - text: ", 18개"
+                  - generic [ref=f268e1454]:
+                    - generic [ref=f268e1455]:
+                      - generic [ref=f268e1456]: 10,870원
+                      - generic [ref=f268e1457]: (100ml당 302원)
+                    - generic [ref=f268e1458]: 배송비 5,000원
+                  - generic [ref=f268e1459]:
+                    - generic [ref=f268e1460]: 9/15(화) 도착 예정
+                    - generic [ref=f268e1462]: 오늘출발
+                  - generic [ref=f268e1464]:
+                    - generic "5" [ref=f268e1465]
+                    - generic [ref=f268e1471]: (2,855)
+                  - generic [ref=f268e1474]:
+                    - img "최대 544원 적립" [ref=f268e1475]
+                    - generic [ref=f268e1476]: 최대 544원 적립
+            - listitem [ref=f268e1477] [cursor=pointer]:
+              - link "서울우유 멸균 흰우유, 200ml, 12개 15,000원 22% 11,650원 (100ml당 485원) 9/15(화) 도착 예정 무료배송 5 (2,675) 최대 583원 적립 최대 583원 적립" [ref=f268e1478]:
+                - /url: /vp/products/9413062069?itemId=24318605023&vendorItemId=88412120283&q=멸균우유 200ml&searchId=a353c5139009315&sourceType=search&itemsCount=36&searchRank=22&rank=22
+                - figure [ref=f268e1479]:
+                  - img "서울우유 멸균 흰우유, 200ml, 12개" [ref=f268e1480]
+                - generic [ref=f268e1481]:
+                  - generic [ref=f268e1483]: 서울우유 멸균 흰우유, 200ml, 12개
+                  - generic [ref=f268e1484]:
+                    - deletion [ref=f268e1486]: 15,000원
+                    - generic [ref=f268e1488]:
+                      - generic [ref=f268e1489]: 22%
+                      - generic [ref=f268e1490]: 11,650원
+                      - generic [ref=f268e1491]: (100ml당 485원)
+                  - generic [ref=f268e1492]:
+                    - generic [ref=f268e1493]: 9/15(화) 도착 예정
+                    - generic [ref=f268e1495]: 무료배송
+                  - generic [ref=f268e1497]:
+                    - generic "5" [ref=f268e1498]
+                    - generic [ref=f268e1504]: (2,675)
+                  - generic [ref=f268e1507]:
+                    - img "최대 583원 적립" [ref=f268e1508]
+                    - generic [ref=f268e1509]: 최대 583원 적립
+            - listitem [ref=f268e1510] [cursor=pointer]:
+              - link "덴마크 대니쉬우유 오리지널 멸균, 200ml, 16개 12,400원 (100ml당 388원) 9/15(화) 도착 예정 무료배송 ∙ 오늘출발 5 (6,733) 최대 620원 적립 최대 620원 적립" [ref=f268e1511]:
+                - /url: /vp/products/7163915464?itemId=24635873934&vendorItemId=91646817316&q=멸균우유 200ml&searchId=a353c5139009315&sourceType=search&itemsCount=36&searchRank=23&rank=23
+                - figure [ref=f268e1512]:
+                  - img "덴마크 대니쉬우유 오리지널 멸균, 200ml, 16개" [ref=f268e1513]
+                - generic [ref=f268e1514]:
+                  - generic [ref=f268e1516]: 덴마크 대니쉬우유 오리지널 멸균, 200ml, 16개
+                  - generic [ref=f268e1519]:
+                    - generic [ref=f268e1520]: 12,400원
+                    - generic [ref=f268e1521]: (100ml당 388원)
+                  - generic [ref=f268e1522]:
+                    - generic [ref=f268e1523]: 9/15(화) 도착 예정
+                    - generic [ref=f268e1525]: 무료배송 ∙ 오늘출발
+                  - generic [ref=f268e1527]:
+                    - generic "5" [ref=f268e1528]
+                    - generic [ref=f268e1534]: (6,733)
+                  - generic [ref=f268e1537]:
+                    - img "최대 620원 적립" [ref=f268e1538]
+                    - generic [ref=f268e1539]: 최대 620원 적립
+            - listitem [ref=f268e1540] [cursor=pointer]:
+              - link "멸균우유, 200ml, 12개 12,800원 (100ml당 533원) 9/17(목) 도착 예정 무료배송 5 (119,642) 최대 640원 적립 최대 640원 적립" [ref=f268e1541]:
+                - /url: /vp/products/3955632?itemId=26599647564&vendorItemId=94840420326&q=멸균우유 200ml&searchId=a353c5139009315&sourceType=search&itemsCount=36&searchRank=24&rank=24
+                - figure [ref=f268e1542]:
+                  - img "멸균우유, 200ml, 12개" [ref=f268e1543]
+                - generic [ref=f268e1544]:
+                  - generic [ref=f268e1547]:
+                    - mark [ref=f268e1548]: 멸균우유
+                    - text: ","
+                    - mark [ref=f268e1549]: 200ml
+                    - text: ", 12개"
+                  - generic [ref=f268e1552]:
+                    - generic [ref=f268e1553]: 12,800원
+                    - generic [ref=f268e1554]: (100ml당 533원)
+                  - generic [ref=f268e1555]:
+                    - generic [ref=f268e1556]: 9/17(목) 도착 예정
+                    - generic [ref=f268e1558]: 무료배송
+                  - generic [ref=f268e1560]:
+                    - generic "5" [ref=f268e1561]
+                    - generic [ref=f268e1567]: (119,642)
+                  - generic [ref=f268e1570]:
+                    - img "최대 640원 적립" [ref=f268e1571]
+                    - generic [ref=f268e1572]: 최대 640원 적립
+            - listitem [ref=f268e1573] [cursor=pointer]:
+              - link "비락 올바른 멸균우유 클래식, 200ml, 12개 14,900원 11% 13,200원 (100ml당 550원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 5 (183) 최대 660원 적립 최대 660원 적립" [ref=f268e1574]:
+                - /url: /vp/products/7928028420?itemId=21799816895&vendorItemId=88848409451&q=멸균우유 200ml&searchId=a353c5139009315&sourceType=search&itemsCount=36&searchRank=25&rank=25
+                - figure [ref=f268e1575]:
+                  - img "비락 올바른 멸균우유 클래식, 200ml, 12개" [ref=f268e1576]
+                - generic [ref=f268e1577]:
+                  - generic [ref=f268e1580]:
+                    - text: 비락 올바른
+                    - mark [ref=f268e1581]: 멸균우유
+                    - text: 클래식,
+                    - mark [ref=f268e1582]: 200ml
+                    - text: ", 12개"
+                  - generic [ref=f268e1583]:
+                    - deletion [ref=f268e1585]: 14,900원
+                    - generic [ref=f268e1587]:
+                      - generic [ref=f268e1588]: 11%
+                      - generic [ref=f268e1589]: 13,200원
+                      - generic [ref=f268e1590]: (100ml당 550원)
+                  - generic [ref=f268e1591]:
+                    - generic [ref=f268e1592]: 내일(토) 도착 보장
+                    - generic [ref=f268e1596]: 와우는 무료배송 ∙ 무료반품
+                  - generic [ref=f268e1598]:
+                    - generic "5" [ref=f268e1599]
+                    - generic [ref=f268e1605]: (183)
+                  - generic [ref=f268e1608]:
+                    - img "최대 660원 적립" [ref=f268e1609]
+                    - generic [ref=f268e1610]: 최대 660원 적립
+            - listitem [ref=f268e1611] [cursor=pointer]:
+              - link "매일유업 멸균우유 고소한맛, 200ml, 15개 13,390원 (100ml당 446원) 9/15(화) 도착 예정 무료배송 5 (278,575) 최대 670원 적립 최대 670원 적립" [ref=f268e1612]:
+                - /url: /vp/products/4708084849?itemId=26472125375&vendorItemId=93425979143&q=멸균우유 200ml&searchId=a353c5139009315&sourceType=search&itemsCount=36&searchRank=26&rank=26
+                - figure [ref=f268e1613]:
+                  - img "매일유업 멸균우유 고소한맛, 200ml, 15개" [ref=f268e1614]
+                - generic [ref=f268e1615]:
+                  - generic [ref=f268e1618]:
+                    - text: 매일유업
+                    - mark [ref=f268e1619]: 멸균우유
+                    - text: 고소한맛,
+                    - mark [ref=f268e1620]: 200ml
+                    - text: ", 15개"
+                  - generic [ref=f268e1623]:
+                    - generic [ref=f268e1624]: 13,390원
+                    - generic [ref=f268e1625]: (100ml당 446원)
+                  - generic [ref=f268e1626]:
+                    - generic [ref=f268e1627]: 9/15(화) 도착 예정
+                    - generic [ref=f268e1629]: 무료배송
+                  - generic [ref=f268e1631]:
+                    - generic "5" [ref=f268e1632]
+                    - generic [ref=f268e1638]: (278,575)
+                  - generic [ref=f268e1641]:
+                    - img "최대 670원 적립" [ref=f268e1642]
+                    - generic [ref=f268e1643]: 최대 670원 적립
+            - listitem [ref=f268e1644] [cursor=pointer]:
+              - link "파스퇴르 바른목장 소화가 잘되는 우유, 200ml, 10개 15,000원 7% 13,900원 (100ml당 695원) 9/15(화) 도착 예정 무료배송 5 (5,452) 최대 695원 적립 최대 695원 적립" [ref=f268e1645]:
+                - /url: /vp/products/20212391?itemId=23779417016&vendorItemId=94165307826&q=멸균우유 200ml&searchId=a353c5139009315&sourceType=search&itemsCount=36&searchRank=27&rank=27
+                - figure [ref=f268e1646]:
+                  - img "파스퇴르 바른목장 소화가 잘되는 우유, 200ml, 10개" [ref=f268e1647]
+                - generic [ref=f268e1648]:
+                  - generic [ref=f268e1650]: 파스퇴르 바른목장 소화가 잘되는 우유, 200ml, 10개
+                  - generic [ref=f268e1651]:
+                    - deletion [ref=f268e1653]: 15,000원
+                    - generic [ref=f268e1655]:
+                      - generic [ref=f268e1656]: 7%
+                      - generic [ref=f268e1657]: 13,900원
+                      - generic [ref=f268e1658]: (100ml당 695원)
+                  - generic [ref=f268e1659]:
+                    - generic [ref=f268e1660]: 9/15(화) 도착 예정
+                    - generic [ref=f268e1662]: 무료배송
+                  - generic [ref=f268e1664]:
+                    - generic "5" [ref=f268e1665]
+                    - generic [ref=f268e1671]: (5,452)
+                  - generic [ref=f268e1674]:
+                    - img "최대 695원 적립" [ref=f268e1675]
+                    - generic [ref=f268e1676]: 최대 695원 적립
+            - listitem [ref=f268e1677] [cursor=pointer]:
+              - link "상하목장 유기농 우유, 200ml, 12개 16,900원 16% 14,190원 (100ml당 591원) 9/15(화) 도착 예정 무료배송 ∙ 오늘출발 5 (241,949) 최대 710원 적립 최대 710원 적립" [ref=f268e1678]:
+                - /url: /vp/products/119465439?itemId=29043768159&vendorItemId=95970795912&q=멸균우유 200ml&searchId=a353c5139009315&sourceType=search&itemsCount=36&searchRank=28&rank=28
+                - figure [ref=f268e1679]:
+                  - img "상하목장 유기농 우유, 200ml, 12개" [ref=f268e1680]
+                - generic [ref=f268e1681]:
+                  - generic [ref=f268e1683]: 상하목장 유기농 우유, 200ml, 12개
+                  - generic [ref=f268e1684]:
+                    - deletion [ref=f268e1686]: 16,900원
+                    - generic [ref=f268e1688]:
+                      - generic [ref=f268e1689]: 16%
+                      - generic [ref=f268e1690]: 14,190원
+                      - generic [ref=f268e1691]: (100ml당 591원)
+                  - generic [ref=f268e1692]:
+                    - generic [ref=f268e1693]: 9/15(화) 도착 예정
+                    - generic [ref=f268e1695]: 무료배송 ∙ 오늘출발
+                  - generic [ref=f268e1697]:
+                    - generic "5" [ref=f268e1698]
+                    - generic [ref=f268e1704]: (241,949)
+                  - generic [ref=f268e1707]:
+                    - img "최대 710원 적립" [ref=f268e1708]
+                    - generic [ref=f268e1709]: 최대 710원 적립
+            - listitem [ref=f268e1710] [cursor=pointer]:
+              - link "매일유업 멸균우유 고소한맛, 200ml, 18개 14,440원 (100ml당 401원) 9/15(화) 도착 예정 무료배송 5 (278,575) 최대 722원 적립 최대 722원 적립" [ref=f268e1711]:
+                - /url: /vp/products/4708084849?itemId=26472125377&vendorItemId=93425979141&q=멸균우유 200ml&searchId=a353c5139009315&sourceType=search&itemsCount=36&searchRank=29&rank=29
+                - figure [ref=f268e1712]:
+                  - img "매일유업 멸균우유 고소한맛, 200ml, 18개" [ref=f268e1713]
+                - generic [ref=f268e1714]:
+                  - generic [ref=f268e1717]:
+                    - text: 매일유업
+                    - mark [ref=f268e1718]: 멸균우유
+                    - text: 고소한맛,
+                    - mark [ref=f268e1719]: 200ml
+                    - text: ", 18개"
+                  - generic [ref=f268e1722]:
+                    - generic [ref=f268e1723]: 14,440원
+                    - generic [ref=f268e1724]: (100ml당 401원)
+                  - generic [ref=f268e1725]:
+                    - generic [ref=f268e1726]: 9/15(화) 도착 예정
+                    - generic [ref=f268e1728]: 무료배송
+                  - generic [ref=f268e1730]:
+                    - generic "5" [ref=f268e1731]
+                    - generic [ref=f268e1737]: (278,575)
+                  - generic [ref=f268e1740]:
+                    - img "최대 722원 적립" [ref=f268e1741]
+                    - generic [ref=f268e1742]: 최대 722원 적립
+            - listitem [ref=f268e1743] [cursor=pointer]:
+              - link "서울우유 멸균 흰우유, 200ml, 24개 22,080원 33% 14,610원 (100ml당 304원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 5 (556,093) 최대 730원 적립 최대 730원 적립" [ref=f268e1744]:
+                - /url: /vp/products/4975075206?itemId=20185206891&vendorItemId=71237681228&q=멸균우유 200ml&searchId=a353c5139009315&sourceType=search&itemsCount=36&searchRank=30&rank=30
+                - figure [ref=f268e1745]:
+                  - img "서울우유 멸균 흰우유, 200ml, 24개" [ref=f268e1746]
+                - generic [ref=f268e1747]:
+                  - generic [ref=f268e1749]: 서울우유 멸균 흰우유, 200ml, 24개
+                  - generic [ref=f268e1750]:
+                    - deletion [ref=f268e1752]: 22,080원
+                    - generic [ref=f268e1754]:
+                      - generic [ref=f268e1755]: 33%
+                      - generic [ref=f268e1756]: 14,610원
+                      - generic [ref=f268e1757]: (100ml당 304원)
+                  - generic [ref=f268e1758]:
+                    - generic [ref=f268e1759]: 내일(토) 도착 보장
+                    - generic [ref=f268e1763]: 와우는 무료배송 ∙ 무료반품
+                  - generic [ref=f268e1765]:
+                    - generic "5" [ref=f268e1766]
+                    - generic [ref=f268e1772]: (556,093)
+                  - generic [ref=f268e1775]:
+                    - img "최대 730원 적립" [ref=f268e1776]
+                    - generic [ref=f268e1777]: 최대 730원 적립
+            - listitem [ref=f268e1778] [cursor=pointer]:
+              - link "건국 멸균우유 200ml, 24개 할인 15,500원 4% 14,800원 (100ml당 308원) 9/15(화) 도착 예정 무료배송 ∙ 오늘출발 5 (8,540) 최대 740원 적립 최대 740원 적립" [ref=f268e1779]:
+                - /url: /vp/products/4884130139?itemId=29052987226&vendorItemId=85948638545&q=멸균우유 200ml&searchId=a353c5139009315&sourceType=search&itemsCount=36&searchRank=31&rank=31
+                - figure [ref=f268e1780]:
+                  - img "건국 멸균우유 200ml, 24개" [ref=f268e1781]
+                - generic [ref=f268e1782]:
+                  - generic [ref=f268e1785]:
+                    - text: 건국
+                    - mark [ref=f268e1786]: 멸균우유
+                    - mark [ref=f268e1787]: 200ml
+                    - text: ", 24개"
+                  - generic [ref=f268e1788]:
+                    - generic [ref=f268e1789]:
+                      - generic [ref=f268e1790]: 할인
+                      - deletion [ref=f268e1791]: 15,500원
+                    - generic [ref=f268e1793]:
+                      - generic [ref=f268e1794]: 4%
+                      - generic [ref=f268e1795]: 14,800원
+                      - generic [ref=f268e1796]: (100ml당 308원)
+                  - generic [ref=f268e1797]:
+                    - generic [ref=f268e1798]: 9/15(화) 도착 예정
+                    - generic [ref=f268e1800]: 무료배송 ∙ 오늘출발
+                  - generic [ref=f268e1802]:
+                    - generic "5" [ref=f268e1803]
+                    - generic [ref=f268e1809]: (8,540)
+                  - generic [ref=f268e1812]:
+                    - img "최대 740원 적립" [ref=f268e1813]
+                    - generic [ref=f268e1814]: 최대 740원 적립
+            - listitem [ref=f268e1815] [cursor=pointer]:
+              - link "연세대학교 연세우유, 200ml, 18개 14,930원 (100ml당 415원) 9/15(화) 도착 예정 무료배송 ∙ 오늘출발 5 (119,642) 최대 746원 적립 최대 746원 적립" [ref=f268e1816]:
+                - /url: /vp/products/3955632?itemId=28334322847&vendorItemId=95286637110&q=멸균우유 200ml&searchId=a353c5139009315&sourceType=search&itemsCount=36&searchRank=32&rank=32
+                - figure [ref=f268e1817]:
+                  - img "연세대학교 연세우유, 200ml, 18개" [ref=f268e1818]
+                - generic [ref=f268e1819]:
+                  - generic [ref=f268e1821]: 연세대학교 연세우유, 200ml, 18개
+                  - generic [ref=f268e1824]:
+                    - generic [ref=f268e1825]: 14,930원
+                    - generic [ref=f268e1826]: (100ml당 415원)
+                  - generic [ref=f268e1827]:
+                    - generic [ref=f268e1828]: 9/15(화) 도착 예정
+                    - generic [ref=f268e1830]: 무료배송 ∙ 오늘출발
+                  - generic [ref=f268e1832]:
+                    - generic "5" [ref=f268e1833]
+                    - generic [ref=f268e1839]: (119,642)
+                  - generic [ref=f268e1842]:
+                    - img "최대 746원 적립" [ref=f268e1843]
+                    - generic [ref=f268e1844]: 최대 746원 적립
+            - listitem [ref=f268e1845] [cursor=pointer]:
+              - link "매일유업 멸균우유 고소한맛200ml24팩, 24개, 200ml 15,100원 (100ml당 315원) 배송비 3,500원 9/15(화) 도착 예정 5 (1) 최대 755원 적립 최대 755원 적립" [ref=f268e1846]:
+                - /url: /vp/products/8581737312?itemId=25582923810&vendorItemId=95942097271&q=멸균우유 200ml&searchId=a353c5139009315&sourceType=search&itemsCount=36&searchRank=33&rank=33
+                - figure [ref=f268e1847]:
+                  - img "매일유업 멸균우유 고소한맛200ml24팩, 24개, 200ml" [ref=f268e1848]
+                - generic [ref=f268e1849]:
+                  - generic [ref=f268e1852]:
+                    - text: 매일유업
+                    - mark [ref=f268e1853]: 멸균우유
+                    - text: 고소한맛
+                    - mark [ref=f268e1854]: 200ml
+                    - text: 24팩, 24개,
+                    - mark [ref=f268e1855]: 200ml
+                  - generic [ref=f268e1857]:
+                    - generic [ref=f268e1858]:
+                      - generic [ref=f268e1859]: 15,100원
+                      - generic [ref=f268e1860]: (100ml당 315원)
+                    - generic [ref=f268e1861]: 배송비 3,500원
+                  - generic [ref=f268e1862]: 9/15(화) 도착 예정
+                  - generic [ref=f268e1866]:
+                    - generic "5" [ref=f268e1867]
+                    - generic [ref=f268e1873]: (1)
+                  - generic [ref=f268e1876]:
+                    - img "최대 755원 적립" [ref=f268e1877]
+                    - generic [ref=f268e1878]: 최대 755원 적립
+            - listitem [ref=f268e1879] [cursor=pointer]:
+              - link "서울우유 멸균우유, 8개, 200ml 24,100원 36% 15,400원 (100ml당 963원) 9/16(수) 도착 예정 무료배송 4.5 (17) 최대 770원 적립 최대 770원 적립" [ref=f268e1880]:
+                - /url: /vp/products/8989938249?itemId=29079807855&vendorItemId=96013398661&q=멸균우유 200ml&searchId=a353c5139009315&sourceType=search&itemsCount=36&searchRank=34&rank=34
+                - figure [ref=f268e1881]:
+                  - img "서울우유 멸균우유, 8개, 200ml" [ref=f268e1882]
+                - generic [ref=f268e1883]:
+                  - generic [ref=f268e1886]:
+                    - text: 서울우유
+                    - mark [ref=f268e1887]: 멸균우유
+                    - text: ", 8개,"
+                    - mark [ref=f268e1888]: 200ml
+                  - generic [ref=f268e1889]:
+                    - deletion [ref=f268e1891]: 24,100원
+                    - generic [ref=f268e1893]:
+                      - generic [ref=f268e1894]: 36%
+                      - generic [ref=f268e1895]: 15,400원
+                      - generic [ref=f268e1896]: (100ml당 963원)
+                  - generic [ref=f268e1897]:
+                    - generic [ref=f268e1898]: 9/16(수) 도착 예정
+                    - generic [ref=f268e1900]: 무료배송
+                  - generic [ref=f268e1902]:
+                    - generic "4.5" [ref=f268e1903]
+                    - generic [ref=f268e1909]: (17)
+                  - generic [ref=f268e1912]:
+                    - img "최대 770원 적립" [ref=f268e1913]
+                    - generic [ref=f268e1914]: 최대 770원 적립
+            - listitem [ref=f268e1915] [cursor=pointer]:
+              - link "파스퇴르 전용목장 우유, 200ml, 10개 15,900원 (100ml당 795원) 9/15(화) 도착 예정 무료배송 5 (4,766) 최대 795원 적립 최대 795원 적립" [ref=f268e1916]:
+                - /url: /vp/products/8753720528?itemId=25587742201&vendorItemId=93123763677&q=멸균우유 200ml&searchId=a353c5139009315&sourceType=search&itemsCount=36&searchRank=35&rank=35
+                - figure [ref=f268e1917]:
+                  - img "파스퇴르 전용목장 우유, 200ml, 10개" [ref=f268e1918]
+                - generic [ref=f268e1919]:
+                  - generic [ref=f268e1921]: 파스퇴르 전용목장 우유, 200ml, 10개
+                  - generic [ref=f268e1924]:
+                    - generic [ref=f268e1925]: 15,900원
+                    - generic [ref=f268e1926]: (100ml당 795원)
+                  - generic [ref=f268e1927]:
+                    - generic [ref=f268e1928]: 9/15(화) 도착 예정
+                    - generic [ref=f268e1930]: 무료배송
+                  - generic [ref=f268e1932]:
+                    - generic "5" [ref=f268e1933]
+                    - generic [ref=f268e1939]: (4,766)
+                  - generic [ref=f268e1942]:
+                    - img "최대 795원 적립" [ref=f268e1943]
+                    - generic [ref=f268e1944]: 최대 795원 적립
+          - generic [ref=f268e1947]:
+            - generic "이전" [ref=f268e1948]
+            - link "1" [ref=f268e1949] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=%EB%A9%B8%EA%B7%A0%EC%9A%B0%EC%9C%A0+200ml&sorter=salePriceAsc&page=1
+            - link "2" [ref=f268e1950] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=%EB%A9%B8%EA%B7%A0%EC%9A%B0%EC%9C%A0+200ml&sorter=salePriceAsc&page=2
+            - link "3" [ref=f268e1951] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=%EB%A9%B8%EA%B7%A0%EC%9A%B0%EC%9C%A0+200ml&sorter=salePriceAsc&page=3
+            - link "4" [ref=f268e1952] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=%EB%A9%B8%EA%B7%A0%EC%9A%B0%EC%9C%A0+200ml&sorter=salePriceAsc&page=4
+            - link "5" [ref=f268e1953] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=%EB%A9%B8%EA%B7%A0%EC%9A%B0%EC%9C%A0+200ml&sorter=salePriceAsc&page=5
+            - link "6" [ref=f268e1954] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=%EB%A9%B8%EA%B7%A0%EC%9A%B0%EC%9C%A0+200ml&sorter=salePriceAsc&page=6
+            - link "7" [ref=f268e1955] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=%EB%A9%B8%EA%B7%A0%EC%9A%B0%EC%9C%A0+200ml&sorter=salePriceAsc&page=7
+            - link "8" [ref=f268e1956] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=%EB%A9%B8%EA%B7%A0%EC%9A%B0%EC%9C%A0+200ml&sorter=salePriceAsc&page=8
+            - link "9" [ref=f268e1957] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=%EB%A9%B8%EA%B7%A0%EC%9A%B0%EC%9C%A0+200ml&sorter=salePriceAsc&page=9
+            - link "10" [ref=f268e1958] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=%EB%A9%B8%EA%B7%A0%EC%9A%B0%EC%9C%A0+200ml&sorter=salePriceAsc&page=10
+            - link "다음" [ref=f268e1959] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/search?q=%EB%A9%B8%EA%B7%A0%EC%9A%B0%EC%9C%A0+200ml&sorter=salePriceAsc&page=2
+  - contentinfo [ref=f268e1960]:
+    - generic [ref=f268e1961]:
+      - generic [ref=f268e1962]:
+        - link "회사소개" [ref=f268e1963] [cursor=pointer]:
+          - /url: https://news.coupang.com/
+        - link "Investor Relations" [ref=f268e1964] [cursor=pointer]:
+          - /url: https://ir.aboutcoupang.com/overview/default.aspx
+        - link "인재채용" [ref=f268e1965] [cursor=pointer]:
+          - /url: https://rocketyourcareer.kr.coupang.com
+        - link "입점/제휴문의" [ref=f268e1966] [cursor=pointer]:
+          - /url: https://marketplace.coupangcorp.com/s/?utm_source=button_pc&utm_medium=non_paid&utm_campaign=onsite_ca&utm_id=coupang_app?inflow=WEB_FOOTER_B
+        - link "공지사항" [ref=f268e1967] [cursor=pointer]:
+          - /url: https://mc.coupang.com/ssr/desktop/contact/notice
+        - link "고객의 소리" [ref=f268e1968] [cursor=pointer]:
+          - /url: https://mc.coupang.com/ssr/desktop/contact/voc
+        - link "이용약관" [ref=f268e1969] [cursor=pointer]:
+          - /url: https://www.coupang.com/np/policies/terms
+        - link [ref=f268e1970] [cursor=pointer]:
+          - /url: https://privacy.coupang.com/ko/center/coupang
+          - strong [ref=f268e1971]: 개인정보 처리방침
+        - link "정보보호/개인정보보호 인증" [ref=f268e1972] [cursor=pointer]:
+          - /url: https://privacy.coupang.com/ko/security/status
+        - link "쿠팡페이 이용약관" [ref=f268e1973] [cursor=pointer]:
+          - /url: https://rocketpay.coupang.com/rocketpay/operationTerms/coupangPcFooter
+        - link "신뢰관리센터" [ref=f268e1974] [cursor=pointer]:
+          - /url: https://www.coupang.com/np/safety
+        - link "제휴마케팅" [ref=f268e1975] [cursor=pointer]:
+          - /url: https://partners.coupang.com/
+        - link "광고안내" [ref=f268e1976] [cursor=pointer]:
+          - /url: https://ads.coupang.com
+      - paragraph [ref=f268e1980] [cursor=pointer]: Global Site
+    - generic [ref=f268e1982]:
+      - generic [ref=f268e1983]:
+        - link "COUPANG" [ref=f268e1984] [cursor=pointer]:
+          - /url: https://www.coupang.com/
+        - generic [ref=f268e1985]:
+          - text: "상호명 및 호스팅 서비스 제공 : 쿠팡(주) 대표이사 : 로저스 해롤드 린(Rogers Harold Lynn) (05050) 서울시 광진구 아차산로 412, 2층 사업자 등록번호 : 120-88-00767 통신판매업신고 : 2026-서울광진-1253"
+          - link "사업자정보 확인 >" [ref=f268e1986] [cursor=pointer]:
+            - /url: http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=1208800767
+      - link [ref=f268e1988] [cursor=pointer]:
+        - /url: https://mc.coupang.com/ssr/desktop/contact/inquiry
+        - strong [ref=f268e1989]: 365고객센터
+        - text: "| 전자금융거래분쟁처리담당"
+        - emphasis [ref=f268e1990]: 1577-7011 (유료)
+        - text: "(05050) 서울시 광진구 아차산로 412, 2층 email : help@coupang.com"
+      - paragraph [ref=f268e1991]:
+        - strong [ref=f268e1992]: 채무지급보증 안내
+        - generic [ref=f268e1993]: 당사는 고객님이 현금 결제한 금액에 대해 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.
+        - link "서비스 가입사실 확인 >" [ref=f268e1994] [cursor=pointer]:
+          - /url: https://www.coupang.com/np/etc/popWooriService
+    - generic [ref=f268e2000]:
+      - paragraph [ref=f268e2001]: 사이버몰 내 판매되는 상품 중에는 쿠팡에 등록한 개별 판매자가 판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다. 마켓플레이스(오픈마켓) 상품의 경우 쿠팡은 통신판매중개자이며 통신판매의 당사자가 아닙니다. 쿠팡은 마켓플레이스(오픈마켓) 상품, 거래정보 및 거래 등에 대하여 책임을 지지 않습니다. 쿠팡은 소비자 보호와 안전거래를 위해 신뢰관리센터(CM112@coupang.com)를 운영하고 있으며, 관련 분쟁이 발생할 경우 별도의 분쟁 처리절차에 의거 분쟁이 처리됩니다. Copyright © Coupang Corp. 2010-2025 All Rights Reserved.
+      - list [ref=f268e2002]:
+        - listitem [ref=f268e2003]:
+          - link [ref=f268e2004] [cursor=pointer]:
+            - /url: https://www.facebook.com/Coupang.korea
+        - listitem [ref=f268e2005]:
+          - link [ref=f268e2006] [cursor=pointer]:
+            - /url: https://news.coupang.com/
+        - listitem [ref=f268e2007]:
+          - link [ref=f268e2008] [cursor=pointer]:
+            - /url: https://www.instagram.com/coupang
+  - alert [ref=f268e2009]

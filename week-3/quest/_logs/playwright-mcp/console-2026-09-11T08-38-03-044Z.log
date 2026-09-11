@@ -1,0 +1,8 @@
+[    1500ms] [LOG] [weblog] FCP {name: FCP, value: 1384, rating: good, delta: 1384, entries: Array(1)} @ https://assets.coupangcdn.com/front/front-web-next/_next/static/chunks/8895-021ce28c4554c35e.js:0
+[    1501ms] [LOG] [weblog] LCP {name: LCP, value: 1384, rating: good, delta: 1384, entries: Array(1)} @ https://assets.coupangcdn.com/front/front-web-next/_next/static/chunks/8895-021ce28c4554c35e.js:0
+[    1502ms] [LOG] [weblog] LCP {name: LCP, value: 1412, rating: good, delta: 28, entries: Array(1)} @ https://assets.coupangcdn.com/front/front-web-next/_next/static/chunks/8895-021ce28c4554c35e.js:0
+[    2903ms] [WARNING] Mixed Content: The page at 'https://www.coupang.com/np/search?q=%EB%A7%A5%EB%B0%98%EC%84%9D+%EA%B5%AC%EC%9A%B4%EA%B3%84%EB%9E%80+30%EA%B5%AC' was loaded over HTTPS, but requested an insecure element 'http://static.coupangcdn.com/image/cmg/icon/dco/ad_icon.png'. This request was automatically upgraded to HTTPS, For more information see https://blog.chromium.org/2019/10/no-more-mixed-messages-about-https.html @ https://www.coupang.com/np/search?q=%EB%A7%A5%EB%B0%98%EC%84%9D+%EA%B5%AC%EC%9A%B4%EA%B3%84%EB%9E%80+30%EA%B5%AC:0
+[    3262ms] [LOG] wdpop: start @ https://www.coupang.com/dpop/iframe:13
+[    3263ms] [LOG] wdpop: reschedule @ https://www.coupang.com/dpop/iframe:13
+[    3263ms] [LOG] wdpop: inited @ https://www.coupang.com/dpop/iframe:13
+[    4740ms] [LOG] [weblog] tti: 3443, serverTime: 1169, domReady: 1459, imageLoadingTime: 2107 @ https://assets.coupangcdn.com/front/front-web-next/_next/static/chunks/8895-021ce28c4554c35e.js:0

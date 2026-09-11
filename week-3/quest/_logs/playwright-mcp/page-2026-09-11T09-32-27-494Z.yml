@@ -1,0 +1,1944 @@
+- generic [active] [ref=e1]:
+  - generic:
+    - link "게시판 목록 바로가기" [ref=e2] [cursor=pointer]:
+      - /url: "#cafe-menu"
+    - link "본문 바로가기" [ref=e3] [cursor=pointer]:
+      - /url: "#main-area"
+    - link "웹 접근성이 좋은 모바일 웹에서 사용하겠습니까?" [ref=e4] [cursor=pointer]:
+      - /url: https://m.cafe.naver.com/joonggonara
+  - heading "중고나라" [level=1] [ref=e5]
+  - generic [ref=e6]:
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - link [ref=e9] [cursor=pointer]:
+          - /url: http://www.naver.com
+          - img "NAVER" [ref=e10]
+        - generic [ref=e11]:
+          - paragraph [ref=e12]:
+            - link "카페홈" [ref=e13] [cursor=pointer]:
+              - /url: https://section.cafe.naver.com
+          - link "이웃" [ref=e15] [cursor=pointer]:
+            - /url: https://cafe.naver.com/ca-fe/home/town
+          - generic [ref=e16]:
+            - link "가입카페" [ref=e17] [cursor=pointer]:
+              - /url: "#"
+            - link [ref=e18] [cursor=pointer]:
+              - /url: "#"
+              - img "가입카페" [ref=e19]
+          - link "새글" [ref=e21] [cursor=pointer]:
+            - /url: "#"
+          - link "내소식" [ref=e23] [cursor=pointer]:
+            - /url: "#"
+          - link "채팅" [ref=e25] [cursor=pointer]:
+            - /url: "#"
+          - generic [ref=e26]:
+            - strong [ref=e27]: 사용자 링크
+            - list [ref=e28]:
+              - listitem [ref=e29]:
+                - link "로그인" [ref=e30] [cursor=pointer]:
+                  - /url: https://nid.naver.com/nidlogin.login
+              - listitem [ref=e34]:
+                - link "서비스 더보기" [ref=e35] [cursor=pointer]:
+                  - /url: javascript:;
+      - link [ref=e40] [cursor=pointer]:
+        - /url: /MyCafeIntro.nhn?clubid=10050146
+        - img "중고나라" [ref=e41]
+      - list [ref=e44]:
+        - listitem [ref=e45]:
+          - link "이벤트" [ref=e46] [cursor=pointer]:
+            - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=1257&search.boardtype=L
+        - listitem [ref=e47]:
+          - link "공지사항" [ref=e48] [cursor=pointer]:
+            - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=1256&search.boardtype=L
+        - listitem [ref=e49]:
+          - link "이용정책" [ref=e50] [cursor=pointer]:
+            - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=1805&search.boardtype=L
+        - listitem [ref=e51]:
+          - link "★셀러 회원 신청★" [ref=e52] [cursor=pointer]:
+            - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2446&search.boardtype=L
+      - generic [ref=e53]:
+        - generic [ref=e54]:
+          - generic [ref=e56]:
+            - list [ref=e57]:
+              - listitem [ref=e58] [cursor=pointer]:
+                - button "카페정보" [disabled] [ref=e59]
+              - listitem [ref=e60] [cursor=pointer]:
+                - button "나의활동" [ref=e61]
+            - generic [ref=e62]:
+              - heading "카페정보" [level=4] [ref=e63]
+              - list [ref=e65]:
+                - listitem [ref=e66]:
+                  - link [ref=e67] [cursor=pointer]:
+                    - /url: /MyCafeIntro.nhn?clubid=10050146
+                    - img "카페아이콘" [ref=e68]
+                - listitem [ref=e69]:
+                  - link "중고나라운영진1" [ref=e70] [cursor=pointer]:
+                    - /url: /f-e/cafes/10050146/members/MokGI1z_orABW9EK8LpfFo6WVvnUzJvKl-gGIbFuTRw
+                  - emphasis [ref=e73]: 매니저
+                  - link "2003.12.10. 개설" [ref=e75] [cursor=pointer]:
+                    - /url: "#"
+                  - link "카페소개" [ref=e77] [cursor=pointer]:
+                    - /url: "#"
+              - list [ref=e79]:
+                - listitem [ref=e80]:
+                  - link [ref=e81] [cursor=pointer]:
+                    - /url: "#"
+                    - strong [ref=e82]: 카페등급
+                    - emphasis [ref=e84]: 숲
+                - listitem [ref=e85] [cursor=pointer]:
+                  - strong [ref=e86]: 카페멤버수
+                  - link "멤버수 19,320,443 비공개" [ref=e87]:
+                    - /url: "#"
+                    - img "멤버수" [ref=e88]
+                    - emphasis [ref=e89]:
+                      - text: 19,320,443
+                      - generic [ref=e90]: 비공개
+                  - link "닫기":
+                    - /url: "#"
+                  - link "초대" [ref=e92]:
+                    - /url: "#"
+            - generic [ref=e93]:
+              - strong [ref=e94]: 대표 인기카페
+              - img "NAVER 대표카페" [ref=e95]
+            - link "카페 가입하기" [ref=e97] [cursor=pointer]:
+              - /url: "#"
+            - list [ref=e99]:
+              - listitem [ref=e100]:
+                - link "카페 채팅" [ref=e101] [cursor=pointer]:
+                  - /url: "#"
+          - generic [ref=e103]:
+            - textbox "카페글 검색어 입력" [ref=e104]
+            - button "검색" [ref=e105] [cursor=pointer]
+          - generic [ref=e107]:
+            - list [ref=e108]:
+              - listitem [ref=e109]:
+                - link "전체글보기" [ref=e110] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.boardtype=L
+                - generic [ref=e111]: 230,250,026
+              - listitem [ref=e112]:
+                - link "인기글" [ref=e113] [cursor=pointer]:
+                  - /url: /f-e/cafes/10050146/popular
+                - img "새 게시글" [ref=e114]
+            - heading "✨인기 게시판" [level=3] [ref=e116]:
+              - generic "&#10024;인기 게시판" [ref=e117]: ✨인기 게시판
+            - list [ref=e118]:
+              - listitem [ref=e119]:
+                - link "🃏트레이딩카드" [ref=e120] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2800&search.boardtype=L
+                - img "새 게시글" [ref=e121]
+              - listitem [ref=e122]:
+                - link "[앱상품] IT 새상품" [ref=e123] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=167&search.boardtype=L
+                - img "새 게시글" [ref=e124]
+              - listitem [ref=e125]:
+                - link "[앱상품] 패션 새상품" [ref=e126] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2802&search.boardtype=L
+                - img "새 게시글" [ref=e127]
+              - listitem [ref=e128]:
+                - link "[앱상품] 기타 새상품" [ref=e129] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2803&search.boardtype=L
+                - img "새 게시글" [ref=e130]
+            - list [ref=e132]:
+              - listitem [ref=e133]:
+                - link "📦문앞택배 배송비 무료" [ref=e134] [cursor=pointer]:
+                  - /url: https://tracking.joongna.com/m2arbr
+              - listitem [ref=e135]:
+                - link "💸 빠르게 상품 팔기" [ref=e136] [cursor=pointer]:
+                  - /url: https://tracking.joongna.com/i7wnxt
+              - listitem [ref=e137]:
+                - link "📊 중고 시세 확인하기" [ref=e138] [cursor=pointer]:
+                  - /url: https://tracking.joongna.com/ir0gte
+              - listitem [ref=e139]:
+                - link "상품등록 및 판매 팁✅" [ref=e140] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2769&search.boardtype=L
+              - listitem [ref=e141]:
+                - link "[필독] 중고나라 상품등록 변경안내" [ref=e142] [cursor=pointer]:
+                  - /url: https://cafe.naver.com/joonggonara/1117147411
+              - listitem [ref=e143]:
+                - link "중고나라 고객센터" [ref=e144] [cursor=pointer]:
+                  - /url: https://web.joongna.com/signin?loginType=cafe&callbackUrl=%2Fcafe-help%2Fguide
+              - listitem [ref=e145]:
+                - link "셀러 회원 신청" [ref=e146] [cursor=pointer]:
+                  - /url: https://vvd.bz/cK3S
+              - listitem [ref=e147]:
+                - link "광고/제휴 문의" [ref=e148] [cursor=pointer]:
+                  - /url: https://vvd.bz/dkXU
+              - listitem [ref=e149]:
+                - link "네이버 쪽지함>" [ref=e150] [cursor=pointer]:
+                  - /url: https://vvd.bz/W0d
+            - heading "🚨 중고거래 사기방지 🚨" [level=3] [ref=e152]:
+              - generic "&#128680; 중고거래 사기방지 &#128680;" [ref=e153]: 🚨 중고거래 사기방지 🚨
+            - list [ref=e154]:
+              - listitem [ref=e155]:
+                - link "사기 예방 가이드" [ref=e156] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2488&search.boardtype=L
+              - listitem [ref=e157]:
+                - link "거래 불가 상품 확인" [ref=e158] [cursor=pointer]:
+                  - /url: https://tracking.joongna.com/restricted
+              - listitem [ref=e159]:
+                - link "거래 전 상대방 확인" [ref=e160] [cursor=pointer]:
+                  - /url: https://tracking.joongna.com/fs
+              - listitem [ref=e161]:
+                - link "카톡으로 간편 상대 확인" [ref=e162] [cursor=pointer]:
+                  - /url: https://tracking.joongna.com/drkt
+              - listitem [ref=e163]:
+                - link "이상거래 신고" [ref=e164] [cursor=pointer]:
+                  - /url: /MemoList.nhn?search.clubid=10050146&search.menuid=2288&viewType=pc
+                - img "새 게시글" [ref=e165]
+              - listitem [ref=e166]:
+                - link "※ 이상거래 신고 전 필독" [ref=e167] [cursor=pointer]:
+                  - /url: https://cafe.naver.com/joonggonara/1111706843
+              - listitem [ref=e168]:
+                - link "중고폰 거래사실확인서 발급 받기" [ref=e169] [cursor=pointer]:
+                  - /url: https://cafe.naver.com/joonggonara/1119896688
+            - heading "★ 중고나라 커뮤니티" [level=3] [ref=e171]
+            - list [ref=e173]:
+              - listitem [ref=e174]:
+                - link "중고나라 무료나눔" [ref=e175] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=96&search.boardtype=L
+                - img "새 게시글" [ref=e176]
+              - listitem [ref=e177]:
+                - link "믿고 보는 후기&추천" [ref=e178] [cursor=pointer]:
+                  - /url: https://m.cafe.naver.com/ca-fe/web/cafes/10050146/menus/1528
+              - listitem [ref=e179]:
+                - link "자유 주제 커뮤니티" [ref=e180] [cursor=pointer]:
+                  - /url: https://m.cafe.naver.com/ca-fe/web/cafes/10050146/menus/47
+              - listitem [ref=e181]:
+                - link "어려운 이웃 사연" [ref=e182] [cursor=pointer]:
+                  - /url: https://m.cafe.naver.com/ca-fe/web/cafes/10050146/menus/237
+              - listitem [ref=e183]:
+                - link "IT 커뮤니티" [ref=e184] [cursor=pointer]:
+                  - /url: https://m.cafe.naver.com/ca-fe/web/cafes/10050146/menus/155
+              - listitem [ref=e185]:
+                - link "패션 커뮤니티" [ref=e186] [cursor=pointer]:
+                  - /url: https://m.cafe.naver.com/ca-fe/web/cafes/10050146/menus/2378
+              - listitem [ref=e187]:
+                - link "긍정거래 후기" [ref=e188] [cursor=pointer]:
+                  - /url: https://m.cafe.naver.com/ca-fe/web/cafes/10050146/menus/122
+            - heading "★ 중고나라 제휴사(AD)" [level=3] [ref=e190]
+            - list [ref=e192]:
+              - listitem [ref=e193]:
+                - link "오늘특가" [ref=e194] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=1020&search.boardtype=L
+                - img "새 게시글" [ref=e195]
+              - listitem [ref=e196]:
+                - link "중고인사이드" [ref=e197] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2779&search.boardtype=L
+                - img "새 게시글" [ref=e198]
+              - listitem [ref=e199]:
+                - link "골프/콘도 회원권서치" [ref=e200] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2484&search.boardtype=L
+                - img "새 게시글" [ref=e201]
+              - listitem [ref=e202]:
+                - link "동부회원권거래소 급매물" [ref=e203] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2175&search.boardtype=L
+                - img "새 게시글" [ref=e204]
+              - listitem [ref=e205]:
+                - link "알리X중고나라 특가" [ref=e206] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2442&search.boardtype=I
+              - listitem [ref=e207]:
+                - link "중고나라 광고 문의하기" [ref=e208] [cursor=pointer]:
+                  - /url: https://salesmap.kr/web-form/a0e04b35-eae9-48a7-bc57-e53c090e1de3
+            - heading "★ 전문가 서비스" [level=3] [ref=e210]
+            - list [ref=e212]:
+              - listitem [ref=e213]:
+                - link "가전/컴퓨터/기타 수리" [ref=e214] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2535&search.boardtype=L
+              - listitem [ref=e215]:
+                - link "청소 서비스" [ref=e216] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2536&search.boardtype=L
+              - listitem [ref=e217]:
+                - link "이사/용달/운송 서비스" [ref=e218] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2537&search.boardtype=L
+              - listitem [ref=e219]:
+                - link "인테리어/철거 서비스" [ref=e220] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2538&search.boardtype=L
+              - listitem [ref=e221]:
+                - link "취미/공방/레슨 서비스" [ref=e222] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2539&search.boardtype=L
+              - listitem [ref=e223]:
+                - link "헬스/운동/건강 서비스" [ref=e224] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2540&search.boardtype=L
+              - listitem [ref=e225]:
+                - link "회계/세무/법률" [ref=e226] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2541&search.boardtype=L
+              - listitem [ref=e227]:
+                - link "창업/폐업 컨설팅" [ref=e228] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2542&search.boardtype=L
+              - listitem [ref=e229]:
+                - link "온라인마케팅/대행 컨설팅" [ref=e230] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2763&search.boardtype=L
+              - listitem [ref=e231]:
+                - link "인터넷 개통 서비스" [ref=e232] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2474&search.boardtype=L
+                - img "새 게시글" [ref=e233]
+              - listitem [ref=e234]:
+                - link "렌탈 서비스" [ref=e235] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2764&search.boardtype=L
+                - img "새 게시글" [ref=e236]
+            - heading "★ 수입명품" [level=3] [ref=e238]
+            - list [ref=e240]:
+              - listitem [ref=e241]:
+                - link "[수입명품]여성신발" [ref=e242] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2691&search.boardtype=L
+                - img "새 게시글" [ref=e243]
+              - listitem [ref=e244]:
+                - link "[수입명품]남성신발" [ref=e245] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2692&search.boardtype=L
+                - img "새 게시글" [ref=e246]
+              - listitem [ref=e247]:
+                - link "[수입명품]가방/핸드백" [ref=e248] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2693&search.boardtype=L
+                - img "새 게시글" [ref=e249]
+              - listitem [ref=e250]:
+                - link "[수입명품]지갑/벨트" [ref=e251] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2694&search.boardtype=L
+                - img "새 게시글" [ref=e252]
+              - listitem [ref=e253]:
+                - link "[수입명품]여성의류" [ref=e254] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2695&search.boardtype=L
+                - img "새 게시글" [ref=e255]
+              - listitem [ref=e256]:
+                - link "[수입명품]남성의류" [ref=e257] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2696&search.boardtype=L
+                - img "새 게시글" [ref=e258]
+              - listitem [ref=e259]:
+                - link "[수입명품]패션잡화" [ref=e260] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2697&search.boardtype=L
+                - img "새 게시글" [ref=e261]
+              - listitem [ref=e262]:
+                - link "[수입명품]기타" [ref=e263] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2698&search.boardtype=L
+                - img "새 게시글" [ref=e264]
+              - listitem [ref=e265]:
+                - link "[수입명품]유아동" [ref=e266] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2699&search.boardtype=L
+                - img "새 게시글" [ref=e267]
+              - listitem [ref=e268]:
+                - link "[수입명품]시계/쥬얼리" [ref=e269] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2700&search.boardtype=L
+                - img "새 게시글" [ref=e270]
+            - heading "★ 패션의류" [level=3] [ref=e272]
+            - list [ref=e274]:
+              - listitem [ref=e275]:
+                - link "[패션의류]여성의류" [ref=e276] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2701&search.boardtype=L
+                - img "새 게시글" [ref=e277]
+              - listitem [ref=e278]:
+                - link "[패션의류]남성의류" [ref=e279] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2702&search.boardtype=L
+                - img "새 게시글" [ref=e280]
+              - listitem [ref=e281]:
+                - link "[패션의류]교복/체육복/단복" [ref=e282] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2703&search.boardtype=L
+                - img "새 게시글" [ref=e283]
+            - heading "★ 패션잡화" [level=3] [ref=e285]
+            - list [ref=e287]:
+              - listitem [ref=e288]:
+                - link "[악세서리/귀금속]반지/귀걸이" [ref=e289] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2704&search.boardtype=L
+                - img "새 게시글" [ref=e290]
+              - listitem [ref=e291]:
+                - link "[악세서리/귀금속]목걸이/팬던트" [ref=e292] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2705&search.boardtype=L
+                - img "새 게시글" [ref=e293]
+              - listitem [ref=e294]:
+                - link "[악세서리/귀금속]팔찌/발찌" [ref=e295] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2706&search.boardtype=L
+                - img "새 게시글" [ref=e296]
+              - listitem [ref=e297]:
+                - link "[악세서리/귀금속]순금/골드바/돌반지" [ref=e298] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2707&search.boardtype=L
+                - img "새 게시글" [ref=e299]
+              - listitem [ref=e300]:
+                - link "[패션잡화]운동화" [ref=e301] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2708&search.boardtype=L
+                - img "새 게시글" [ref=e302]
+              - listitem [ref=e303]:
+                - link "[패션잡화]여성신발" [ref=e304] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2709&search.boardtype=L
+                - img "새 게시글" [ref=e305]
+              - listitem [ref=e306]:
+                - link "[패션잡화]남성신발" [ref=e307] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2710&search.boardtype=L
+                - img "새 게시글" [ref=e308]
+              - listitem [ref=e309]:
+                - link "[패션잡화]가방/핸드백" [ref=e310] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2711&search.boardtype=L
+                - img "새 게시글" [ref=e311]
+              - listitem [ref=e312]:
+                - link "[패션잡화]지갑/벨트" [ref=e313] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2712&search.boardtype=L
+                - img "새 게시글" [ref=e314]
+              - listitem [ref=e315]:
+                - link "[패션잡화]시계" [ref=e316] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2713&search.boardtype=L
+                - img "새 게시글" [ref=e317]
+              - listitem [ref=e318]:
+                - link "[패션잡화]선글라스/안경" [ref=e319] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2714&search.boardtype=L
+                - img "새 게시글" [ref=e320]
+              - listitem [ref=e321]:
+                - link "[패션잡화]모자" [ref=e322] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2715&search.boardtype=L
+                - img "새 게시글" [ref=e323]
+              - listitem [ref=e324]:
+                - link "[패션잡화]기타잡화/관련용품" [ref=e325] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2716&search.boardtype=L
+                - img "새 게시글" [ref=e326]
+            - heading "★ 뷰티" [level=3] [ref=e328]
+            - list [ref=e330]:
+              - listitem [ref=e331]:
+                - link "스킨케어" [ref=e332] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2717&search.boardtype=L
+                - img "새 게시글" [ref=e333]
+              - listitem [ref=e334]:
+                - link "메이크업" [ref=e335] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2718&search.boardtype=L
+                - img "새 게시글" [ref=e336]
+              - listitem [ref=e337]:
+                - link "팩/클렌징/필링" [ref=e338] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2719&search.boardtype=L
+                - img "새 게시글" [ref=e339]
+              - listitem [ref=e340]:
+                - link "헤어/바디" [ref=e341] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2720&search.boardtype=L
+                - img "새 게시글" [ref=e342]
+              - listitem [ref=e343]:
+                - link "향수" [ref=e344] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2721&search.boardtype=L
+                - img "새 게시글" [ref=e345]
+              - listitem [ref=e346]:
+                - link "네일케어" [ref=e347] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2722&search.boardtype=L
+                - img "새 게시글" [ref=e348]
+              - listitem [ref=e349]:
+                - link "남성 화장품" [ref=e350] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2723&search.boardtype=L
+                - img "새 게시글" [ref=e351]
+              - listitem [ref=e352]:
+                - link "가발/기타용품" [ref=e353] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2724&search.boardtype=L
+                - img "새 게시글" [ref=e354]
+            - heading "★ 출산/유아동" [level=3] [ref=e356]
+            - list [ref=e358]:
+              - listitem [ref=e359]:
+                - link "출산/육아용품" [ref=e360] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2725&search.boardtype=L
+                - img "새 게시글" [ref=e361]
+              - listitem [ref=e362]:
+                - link "유아동안전/실내용품" [ref=e363] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2726&search.boardtype=L
+                - img "새 게시글" [ref=e364]
+              - listitem [ref=e365]:
+                - link "유아동의류" [ref=e366] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2727&search.boardtype=L
+                - img "새 게시글" [ref=e367]
+              - listitem [ref=e368]:
+                - link "유아동잡화" [ref=e369] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2728&search.boardtype=L
+                - img "새 게시글" [ref=e370]
+              - listitem [ref=e371]:
+                - link "유아동가구" [ref=e372] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2729&search.boardtype=L
+                - img "새 게시글" [ref=e373]
+              - listitem [ref=e374]:
+                - link "유아동교구/완구" [ref=e375] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2730&search.boardtype=L
+                - img "새 게시글" [ref=e376]
+              - listitem [ref=e377]:
+                - link "기타 유아동용품" [ref=e378] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2731&search.boardtype=L
+                - img "새 게시글" [ref=e379]
+            - heading "★ 모바일/태블릿" [level=3] [ref=e381]
+            - list [ref=e383]:
+              - listitem [ref=e384]:
+                - link "스마트폰" [ref=e385] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2732&search.boardtype=L
+                - img "새 게시글" [ref=e386]
+              - listitem [ref=e387]:
+                - link "태블릿PC" [ref=e388] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2733&search.boardtype=L
+                - img "새 게시글" [ref=e389]
+              - listitem [ref=e390]:
+                - link "스마트워치/밴드" [ref=e391] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2734&search.boardtype=L
+                - img "새 게시글" [ref=e392]
+              - listitem [ref=e393]:
+                - link "메모리/젠더/리더기" [ref=e394] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2735&search.boardtype=L
+                - img "새 게시글" [ref=e395]
+              - listitem [ref=e396]:
+                - link "일반/피쳐폰" [ref=e397] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2736&search.boardtype=L
+                - img "새 게시글" [ref=e398]
+              - listitem [ref=e399]:
+                - link "케이스/거치대/보호필름" [ref=e400] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2737&search.boardtype=L
+                - img "새 게시글" [ref=e401]
+              - listitem [ref=e402]:
+                - link "배터리/충전기/케이블" [ref=e403] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2738&search.boardtype=L
+                - img "새 게시글" [ref=e404]
+            - heading "★ 가전제품" [level=3] [ref=e406]
+            - list [ref=e408]:
+              - listitem [ref=e409]:
+                - link "냉장고" [ref=e410] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2739&search.boardtype=L
+                - img "새 게시글" [ref=e411]
+              - listitem [ref=e412]:
+                - link "TV" [ref=e413] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2740&search.boardtype=L
+                - img "새 게시글" [ref=e414]
+              - listitem [ref=e415]:
+                - link "세탁기/건조기" [ref=e416] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2741&search.boardtype=L
+                - img "새 게시글" [ref=e417]
+              - listitem [ref=e418]:
+                - link "주방가전" [ref=e419] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2742&search.boardtype=L
+                - img "새 게시글" [ref=e420]
+              - listitem [ref=e421]:
+                - link "스마트홈" [ref=e422] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2743&search.boardtype=L
+                - img "새 게시글" [ref=e423]
+              - listitem [ref=e424]:
+                - link "영상가전" [ref=e425] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2744&search.boardtype=L
+                - img "새 게시글" [ref=e426]
+              - listitem [ref=e427]:
+                - link "음향가전" [ref=e428] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2745&search.boardtype=L
+                - img "새 게시글" [ref=e429]
+              - listitem [ref=e430]:
+                - link "계절가전" [ref=e431] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2746&search.boardtype=L
+                - img "새 게시글" [ref=e432]
+              - listitem [ref=e433]:
+                - link "생활가전" [ref=e434] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2747&search.boardtype=L
+                - img "새 게시글" [ref=e435]
+              - listitem [ref=e436]:
+                - link "미용가전" [ref=e437] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2748&search.boardtype=L
+                - img "새 게시글" [ref=e438]
+              - listitem [ref=e439]:
+                - link "기타 가전제품" [ref=e440] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2749&search.boardtype=L
+                - img "새 게시글" [ref=e441]
+            - heading "★ 노트북/PC" [level=3] [ref=e443]
+            - list [ref=e445]:
+              - listitem [ref=e446]:
+                - link "노트북/넷북" [ref=e447] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2750&search.boardtype=L
+                - img "새 게시글" [ref=e448]
+              - listitem [ref=e449]:
+                - link "데스크탑/본체" [ref=e450] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2751&search.boardtype=L
+                - img "새 게시글" [ref=e451]
+              - listitem [ref=e452]:
+                - link "모니터" [ref=e453] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2752&search.boardtype=L
+                - img "새 게시글" [ref=e454]
+              - listitem [ref=e455]:
+                - link "CPU/메인보드" [ref=e456] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2753&search.boardtype=L
+                - img "새 게시글" [ref=e457]
+              - listitem [ref=e458]:
+                - link "HDD/SSD/ODD" [ref=e459] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2754&search.boardtype=L
+                - img "새 게시글" [ref=e460]
+              - listitem [ref=e461]:
+                - link "RAM/VGA/SOUND" [ref=e462] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2755&search.boardtype=L
+                - img "새 게시글" [ref=e463]
+              - listitem [ref=e464]:
+                - link "USB/케이블" [ref=e465] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2756&search.boardtype=L
+                - img "새 게시글" [ref=e466]
+              - listitem [ref=e467]:
+                - link "케이스/파워/쿨러" [ref=e468] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2757&search.boardtype=L
+                - img "새 게시글" [ref=e469]
+              - listitem [ref=e470]:
+                - link "키보드/마우스/스피커" [ref=e471] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2758&search.boardtype=L
+                - img "새 게시글" [ref=e472]
+              - listitem [ref=e473]:
+                - link "프린터/복합기/잉크/토너" [ref=e474] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2759&search.boardtype=L
+                - img "새 게시글" [ref=e475]
+              - listitem [ref=e476]:
+                - link "공유기/랜카드" [ref=e477] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2760&search.boardtype=L
+                - img "새 게시글" [ref=e478]
+              - listitem [ref=e479]:
+                - link "소프트웨어" [ref=e480] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2761&search.boardtype=L
+                - img "새 게시글" [ref=e481]
+              - listitem [ref=e482]:
+                - link "기타 주변기기" [ref=e483] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2762&search.boardtype=L
+                - img "새 게시글" [ref=e484]
+            - heading "★ 카메라/캠코더" [level=3] [ref=e486]
+            - list [ref=e488]:
+              - listitem [ref=e489]:
+                - link "DSLR" [ref=e490] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2569&search.boardtype=L
+                - img "새 게시글" [ref=e491]
+              - listitem [ref=e492]:
+                - link "미러리스" [ref=e493] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2570&search.boardtype=L
+                - img "새 게시글" [ref=e494]
+              - listitem [ref=e495]:
+                - link "디지털카메라" [ref=e496] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2571&search.boardtype=L
+                - img "새 게시글" [ref=e497]
+              - listitem [ref=e498]:
+                - link "필름/즉석카메라" [ref=e499] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2572&search.boardtype=L
+                - img "새 게시글" [ref=e500]
+              - listitem [ref=e501]:
+                - link "캠코더/액션캠" [ref=e502] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2573&search.boardtype=L
+                - img "새 게시글" [ref=e503]
+              - listitem [ref=e504]:
+                - link "기타 카메라" [ref=e505] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2574&search.boardtype=L
+                - img "새 게시글" [ref=e506]
+              - listitem [ref=e507]:
+                - link "카메라렌즈" [ref=e508] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2575&search.boardtype=L
+                - img "새 게시글" [ref=e509]
+              - listitem [ref=e510]:
+                - link "삼각대/조명/플래시" [ref=e511] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2576&search.boardtype=L
+                - img "새 게시글" [ref=e512]
+              - listitem [ref=e513]:
+                - link "기타 악세서리" [ref=e514] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2577&search.boardtype=L
+                - img "새 게시글" [ref=e515]
+            - heading "★ 가구/인테리어" [level=3] [ref=e517]
+            - list [ref=e519]:
+              - listitem [ref=e520]:
+                - link "침실가구" [ref=e521] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2578&search.boardtype=L
+                - img "새 게시글" [ref=e522]
+              - listitem [ref=e523]:
+                - link "거실가구" [ref=e524] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2579&search.boardtype=L
+                - img "새 게시글" [ref=e525]
+              - listitem [ref=e526]:
+                - link "주방가구" [ref=e527] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2580&search.boardtype=L
+                - img "새 게시글" [ref=e528]
+              - listitem [ref=e529]:
+                - link "수납/선반/공간박스" [ref=e530] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2581&search.boardtype=L
+                - img "새 게시글" [ref=e531]
+              - listitem [ref=e532]:
+                - link "학생/서재/사무용가구" [ref=e533] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2582&search.boardtype=L
+                - img "새 게시글" [ref=e534]
+              - listitem [ref=e535]:
+                - link "기타가구" [ref=e536] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2583&search.boardtype=L
+                - img "새 게시글" [ref=e537]
+              - listitem [ref=e538]:
+                - link "침구" [ref=e539] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2584&search.boardtype=L
+                - img "새 게시글" [ref=e540]
+              - listitem [ref=e541]:
+                - link "커튼/카페트" [ref=e542] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2585&search.boardtype=L
+                - img "새 게시글" [ref=e543]
+              - listitem [ref=e544]:
+                - link "조명/무드등" [ref=e545] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2586&search.boardtype=L
+                - img "새 게시글" [ref=e546]
+              - listitem [ref=e547]:
+                - link "인테리어소품" [ref=e548] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2587&search.boardtype=L
+                - img "새 게시글" [ref=e549]
+              - listitem [ref=e550]:
+                - link "이벤트/파티용품" [ref=e551] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2588&search.boardtype=L
+              - listitem [ref=e552]:
+                - link "디퓨저/캔들" [ref=e553] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2589&search.boardtype=L
+                - img "새 게시글" [ref=e554]
+              - listitem [ref=e555]:
+                - link "시계/액자/팝아트" [ref=e556] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2590&search.boardtype=L
+                - img "새 게시글" [ref=e557]
+              - listitem [ref=e558]:
+                - link "원예" [ref=e559] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2591&search.boardtype=L
+                - img "새 게시글" [ref=e560]
+            - heading "★ 리빙/생활" [level=3] [ref=e562]
+            - list [ref=e564]:
+              - listitem [ref=e565]:
+                - link "[차량용품]휠/타이어" [ref=e566] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2660&search.boardtype=L
+                - img "새 게시글" [ref=e567]
+              - listitem [ref=e568]:
+                - link "[차량용품]블랙박스/네비게이션" [ref=e569] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2661&search.boardtype=L
+                - img "새 게시글" [ref=e570]
+              - listitem [ref=e571]:
+                - link "[차량용품]카오디오/카시트" [ref=e572] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2662&search.boardtype=L
+                - img "새 게시글" [ref=e573]
+              - listitem [ref=e574]:
+                - link "[차량용품]기타 부품/용품" [ref=e575] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2663&search.boardtype=L
+                - img "새 게시글" [ref=e576]
+              - listitem [ref=e577]:
+                - link "주방용품" [ref=e578] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2654&search.boardtype=L
+                - img "새 게시글" [ref=e579]
+              - listitem [ref=e580]:
+                - link "식품" [ref=e581] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2655&search.boardtype=L
+                - img "새 게시글" [ref=e582]
+              - listitem [ref=e583]:
+                - link "욕실용품" [ref=e584] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2656&search.boardtype=L
+                - img "새 게시글" [ref=e585]
+              - listitem [ref=e586]:
+                - link "청소/세탁용품" [ref=e587] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2657&search.boardtype=L
+                - img "새 게시글" [ref=e588]
+              - listitem [ref=e589]:
+                - link "생활잡화" [ref=e590] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2658&search.boardtype=L
+                - img "새 게시글" [ref=e591]
+              - listitem [ref=e592]:
+                - link "기타 생활용품" [ref=e593] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2659&search.boardtype=L
+                - img "새 게시글" [ref=e594]
+            - heading "★ 게임" [level=3] [ref=e596]
+            - list [ref=e598]:
+              - listitem [ref=e599]:
+                - link "PC게임" [ref=e600] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2664&search.boardtype=L
+                - img "새 게시글" [ref=e601]
+              - listitem [ref=e602]:
+                - link "플레이스테이션" [ref=e603] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2665&search.boardtype=L
+                - img "새 게시글" [ref=e604]
+              - listitem [ref=e605]:
+                - link "PSP" [ref=e606] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2666&search.boardtype=L
+                - img "새 게시글" [ref=e607]
+              - listitem [ref=e608]:
+                - link "닌텐도" [ref=e609] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2667&search.boardtype=L
+                - img "새 게시글" [ref=e610]
+              - listitem [ref=e611]:
+                - link "Wii" [ref=e612] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2668&search.boardtype=L
+                - img "새 게시글" [ref=e613]
+              - listitem [ref=e614]:
+                - link "XBOX" [ref=e615] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2669&search.boardtype=L
+                - img "새 게시글" [ref=e616]
+              - listitem [ref=e617]:
+                - link "게임타이틀" [ref=e618] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2670&search.boardtype=L
+                - img "새 게시글" [ref=e619]
+              - listitem [ref=e620]:
+                - link "기타 게임" [ref=e621] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2671&search.boardtype=L
+                - img "새 게시글" [ref=e622]
+            - heading "★ 반려동물/취미" [level=3] [ref=e624]
+            - list [ref=e626]:
+              - listitem [ref=e627]:
+                - link "[키덜트] 피규어/브릭" [ref=e628] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2672&search.boardtype=L
+                - img "새 게시글" [ref=e629]
+              - listitem [ref=e630]:
+                - link "[키덜트] 프라모델" [ref=e631] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2673&search.boardtype=L
+                - img "새 게시글" [ref=e632]
+              - listitem [ref=e633]:
+                - link "[키덜트] 레고/조립/블록" [ref=e634] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2674&search.boardtype=L
+                - img "새 게시글" [ref=e635]
+              - listitem [ref=e636]:
+                - link "[키덜트] 무선조종/드론/헬리캠" [ref=e637] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2675&search.boardtype=L
+                - img "새 게시글" [ref=e638]
+              - listitem [ref=e639]:
+                - link "반려동물" [ref=e640] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2676&search.boardtype=L
+                - img "새 게시글" [ref=e641]
+              - listitem [ref=e642]:
+                - link "핸드메이드/DIY" [ref=e643] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2677&search.boardtype=L
+                - img "새 게시글" [ref=e644]
+              - listitem [ref=e645]:
+                - link "악기" [ref=e646] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2678&search.boardtype=L
+                - img "새 게시글" [ref=e647]
+              - listitem [ref=e648]:
+                - link "예술작품/골동품/수집" [ref=e649] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2679&search.boardtype=L
+                - img "새 게시글" [ref=e650]
+              - listitem [ref=e651]:
+                - link "미술재료/미술도구" [ref=e652] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2680&search.boardtype=L
+                - img "새 게시글" [ref=e653]
+            - heading "★ 도서/음반/문구" [level=3] [ref=e655]
+            - list [ref=e657]:
+              - listitem [ref=e658]:
+                - link "유아동도서/음반" [ref=e659] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2681&search.boardtype=L
+                - img "새 게시글" [ref=e660]
+              - listitem [ref=e661]:
+                - link "학습/교육" [ref=e662] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2682&search.boardtype=L
+                - img "새 게시글" [ref=e663]
+              - listitem [ref=e664]:
+                - link "소설/만화책" [ref=e665] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2683&search.boardtype=L
+                - img "새 게시글" [ref=e666]
+              - listitem [ref=e667]:
+                - link "여행/취미/레저" [ref=e668] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2684&search.boardtype=L
+                - img "새 게시글" [ref=e669]
+              - listitem [ref=e670]:
+                - link "문학/과학/경영" [ref=e671] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2685&search.boardtype=L
+                - img "새 게시글" [ref=e672]
+              - listitem [ref=e673]:
+                - link "예술/디자인" [ref=e674] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2686&search.boardtype=L
+                - img "새 게시글" [ref=e675]
+              - listitem [ref=e676]:
+                - link "잡지" [ref=e677] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2687&search.boardtype=L
+                - img "새 게시글" [ref=e678]
+              - listitem [ref=e679]:
+                - link "기타 도서" [ref=e680] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2688&search.boardtype=L
+                - img "새 게시글" [ref=e681]
+              - listitem [ref=e682]:
+                - link "음반/DVD/굿즈" [ref=e683] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2689&search.boardtype=L
+                - img "새 게시글" [ref=e684]
+              - listitem [ref=e685]:
+                - link "문구/사무용품" [ref=e686] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2690&search.boardtype=L
+                - img "새 게시글" [ref=e687]
+            - heading "★ 티켓/쿠폰" [level=3] [ref=e689]
+            - list [ref=e691]:
+              - listitem [ref=e692]:
+                - link "[상품권/쿠폰] 백화점/마트/편의점" [ref=e693] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2592&search.boardtype=L
+                - img "새 게시글" [ref=e694]
+              - listitem [ref=e695]:
+                - link "[상품권/쿠폰] 영화/문화/게임" [ref=e696] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2593&search.boardtype=L
+                - img "새 게시글" [ref=e697]
+              - listitem [ref=e698]:
+                - link "[상품권/쿠폰] 외식 주유" [ref=e699] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2594&search.boardtype=L
+                - img "새 게시글" [ref=e700]
+              - listitem [ref=e701]:
+                - link "티켓" [ref=e702] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2595&search.boardtype=L
+                - img "새 게시글" [ref=e703]
+              - listitem [ref=e704]:
+                - link "기타 티켓/쿠폰/이용권" [ref=e705] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2596&search.boardtype=L
+                - img "새 게시글" [ref=e706]
+            - heading "★ 스포츠" [level=3] [ref=e708]
+            - list [ref=e710]:
+              - listitem [ref=e711]:
+                - link "[골프] 드라이버" [ref=e712] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2597&search.boardtype=L
+                - img "새 게시글" [ref=e713]
+              - listitem [ref=e714]:
+                - link "[골프] 우드/유틸리티" [ref=e715] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2598&search.boardtype=L
+                - img "새 게시글" [ref=e716]
+              - listitem [ref=e717]:
+                - link "[골프] 아이언" [ref=e718] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2599&search.boardtype=L
+                - img "새 게시글" [ref=e719]
+              - listitem [ref=e720]:
+                - link "[골프] 웨지/퍼터" [ref=e721] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2600&search.boardtype=L
+                - img "새 게시글" [ref=e722]
+              - listitem [ref=e723]:
+                - link "[골프] 골프백/풀세트" [ref=e724] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2601&search.boardtype=L
+                - img "새 게시글" [ref=e725]
+              - listitem [ref=e726]:
+                - link "[골프] 볼/용품/기타" [ref=e727] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2602&search.boardtype=L
+                - img "새 게시글" [ref=e728]
+              - listitem [ref=e729]:
+                - link "[골프] 골프의류/골프화" [ref=e730] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2603&search.boardtype=L
+                - img "새 게시글" [ref=e731]
+              - listitem [ref=e732]:
+                - link "자전거" [ref=e733] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2604&search.boardtype=L
+                - img "새 게시글" [ref=e734]
+              - listitem [ref=e735]:
+                - link "인라인/스케이트/전동" [ref=e736] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2605&search.boardtype=L
+                - img "새 게시글" [ref=e737]
+              - listitem [ref=e738]:
+                - link "축구" [ref=e739] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2606&search.boardtype=L
+                - img "새 게시글" [ref=e740]
+              - listitem [ref=e741]:
+                - link "야구" [ref=e742] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2607&search.boardtype=L
+                - img "새 게시글" [ref=e743]
+              - listitem [ref=e744]:
+                - link "농구" [ref=e745] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2608&search.boardtype=L
+                - img "새 게시글" [ref=e746]
+              - listitem [ref=e747]:
+                - link "라켓스포츠" [ref=e748] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2609&search.boardtype=L
+                - img "새 게시글" [ref=e749]
+              - listitem [ref=e750]:
+                - link "헬스/요가" [ref=e751] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2610&search.boardtype=L
+                - img "새 게시글" [ref=e752]
+              - listitem [ref=e753]:
+                - link "수상스포츠" [ref=e754] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2611&search.boardtype=L
+                - img "새 게시글" [ref=e755]
+              - listitem [ref=e756]:
+                - link "겨울스포츠" [ref=e757] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2612&search.boardtype=L
+                - img "새 게시글" [ref=e758]
+              - listitem [ref=e759]:
+                - link "검도/격투/권투" [ref=e760] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2613&search.boardtype=L
+                - img "새 게시글" [ref=e761]
+              - listitem [ref=e762]:
+                - link "기타 스포츠" [ref=e763] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2614&search.boardtype=L
+                - img "새 게시글" [ref=e764]
+            - heading "★ 여행/여가활동" [level=3] [ref=e766]
+            - list [ref=e768]:
+              - listitem [ref=e769]:
+                - link "[여행] 등산용품" [ref=e770] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2615&search.boardtype=L
+              - listitem [ref=e771]:
+                - link "[여행] 여행/숙박 티켓" [ref=e772] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2616&search.boardtype=L
+                - img "새 게시글" [ref=e773]
+              - listitem [ref=e774]:
+                - link "[여행] 여행가방/용품" [ref=e775] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2617&search.boardtype=L
+              - listitem [ref=e776]:
+                - link "[여행] 기타" [ref=e777] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2618&search.boardtype=L
+            - heading "★ 레저/여행" [level=3] [ref=e779]
+            - list [ref=e781]:
+              - listitem [ref=e782]:
+                - link "등산의류/용품" [ref=e783] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2619&search.boardtype=L
+                - img "새 게시글" [ref=e784]
+              - listitem [ref=e785]:
+                - link "낚시용품" [ref=e786] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2620&search.boardtype=L
+                - img "새 게시글" [ref=e787]
+              - listitem [ref=e788]:
+                - link "기타 레저/여행용품" [ref=e789] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2621&search.boardtype=L
+                - img "새 게시글" [ref=e790]
+              - listitem [ref=e791]:
+                - link "캠핑용품" [ref=e792] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2622&search.boardtype=L
+                - img "새 게시글" [ref=e793]
+            - heading "★ 오토바이" [level=3] [ref=e795]
+            - list [ref=e797]:
+              - listitem [ref=e798]:
+                - link "125cc 이하" [ref=e799] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2623&search.boardtype=L
+                - img "새 게시글" [ref=e800]
+              - listitem [ref=e801]:
+                - link "125cc 초과" [ref=e802] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2624&search.boardtype=L
+                - img "새 게시글" [ref=e803]
+              - listitem [ref=e804]:
+                - link "오토바이 용품" [ref=e805] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2625&search.boardtype=L
+                - img "새 게시글" [ref=e806]
+              - listitem [ref=e807]:
+                - link "신차" [ref=e808] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2626&search.boardtype=L
+                - img "새 게시글" [ref=e809]
+            - heading "★ 공구/산업용품" [level=3] [ref=e811]
+            - list [ref=e813]:
+              - listitem [ref=e814]:
+                - link "드릴/전동공구" [ref=e815] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2627&search.boardtype=L
+                - img "새 게시글" [ref=e816]
+              - listitem [ref=e817]:
+                - link "에어/유압" [ref=e818] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2628&search.boardtype=L
+                - img "새 게시글" [ref=e819]
+              - listitem [ref=e820]:
+                - link "작업공구" [ref=e821] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2629&search.boardtype=L
+                - img "새 게시글" [ref=e822]
+              - listitem [ref=e823]:
+                - link "측정공구" [ref=e824] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2630&search.boardtype=L
+                - img "새 게시글" [ref=e825]
+              - listitem [ref=e826]:
+                - link "초경/절삭/접착윤활" [ref=e827] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2631&search.boardtype=L
+                - img "새 게시글" [ref=e828]
+              - listitem [ref=e829]:
+                - link "전기/전자" [ref=e830] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2632&search.boardtype=L
+                - img "새 게시글" [ref=e831]
+              - listitem [ref=e832]:
+                - link "배관설비/포장운송" [ref=e833] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2633&search.boardtype=L
+                - img "새 게시글" [ref=e834]
+              - listitem [ref=e835]:
+                - link "금형공작" [ref=e836] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2634&search.boardtype=L
+                - img "새 게시글" [ref=e837]
+              - listitem [ref=e838]:
+                - link "용접기자재" [ref=e839] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2635&search.boardtype=L
+                - img "새 게시글" [ref=e840]
+              - listitem [ref=e841]:
+                - link "산업/안전/공구함" [ref=e842] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2636&search.boardtype=L
+                - img "새 게시글" [ref=e843]
+              - listitem [ref=e844]:
+                - link "산업자재" [ref=e845] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2637&search.boardtype=L
+                - img "새 게시글" [ref=e846]
+              - listitem [ref=e847]:
+                - link "농기계/농업용공구" [ref=e848] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2638&search.boardtype=L
+                - img "새 게시글" [ref=e849]
+            - heading "★ 중고차" [level=3] [ref=e851]
+            - list [ref=e853]:
+              - listitem [ref=e854]:
+                - link "[국산차] 제네시스" [ref=e855] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2782&search.boardtype=L
+              - listitem [ref=e856]:
+                - link "[국산차] 현대" [ref=e857] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2783&search.boardtype=L
+                - img "새 게시글" [ref=e858]
+              - listitem [ref=e859]:
+                - link "[국산차] 기아" [ref=e860] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2784&search.boardtype=L
+                - img "새 게시글" [ref=e861]
+              - listitem [ref=e862]:
+                - link "[국산차] 쉐보레(GM대우)" [ref=e863] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2785&search.boardtype=L
+                - img "새 게시글" [ref=e864]
+              - listitem [ref=e865]:
+                - link "[국산차] 르노" [ref=e866] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2786&search.boardtype=L
+                - img "새 게시글" [ref=e867]
+              - listitem [ref=e868]:
+                - link "[국산차] KGM" [ref=e869] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2787&search.boardtype=L
+                - img "새 게시글" [ref=e870]
+              - listitem [ref=e871]:
+                - link "[국산차] 기타 국산차" [ref=e872] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2788&search.boardtype=L
+              - listitem [ref=e873]:
+                - link "[수입차] BMW" [ref=e874] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2789&search.boardtype=L
+                - img "새 게시글" [ref=e875]
+              - listitem [ref=e876]:
+                - link "[수입차] 벤츠" [ref=e877] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2790&search.boardtype=L
+                - img "새 게시글" [ref=e878]
+              - listitem [ref=e879]:
+                - link "[수입차] 아우디" [ref=e880] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2791&search.boardtype=L
+                - img "새 게시글" [ref=e881]
+              - listitem [ref=e882]:
+                - link "[수입차] 폭스바겐" [ref=e883] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2792&search.boardtype=L
+                - img "새 게시글" [ref=e884]
+              - listitem [ref=e885]:
+                - link "[수입차] 미니" [ref=e886] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2793&search.boardtype=L
+                - img "새 게시글" [ref=e887]
+              - listitem [ref=e888]:
+                - link "[수입차] 렉서스" [ref=e889] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2794&search.boardtype=L
+              - listitem [ref=e890]:
+                - link "[수입차] 도요타" [ref=e891] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2795&search.boardtype=L
+              - listitem [ref=e892]:
+                - link "[수입차] 기타수입차" [ref=e893] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2796&search.boardtype=L
+                - img "새 게시글" [ref=e894]
+            - heading "★ 중고나라 커뮤니티" [level=3] [ref=e896]
+            - list [ref=e898]:
+              - listitem [ref=e899]:
+                - link "믿고 보는 후기&추천" [ref=e900] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=1528&search.boardtype=L
+              - listitem [ref=e901]:
+                - link "자유 주제 커뮤니티" [ref=e902] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=47&search.boardtype=L
+                - img "새 게시글" [ref=e903]
+              - listitem [ref=e904]:
+                - link "어려운 이웃 사연" [ref=e905] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=237&search.boardtype=L
+                - img "새 게시글" [ref=e906]
+              - listitem [ref=e907]:
+                - link "IT 커뮤니티" [ref=e908] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=155&search.boardtype=L
+                - img "새 게시글" [ref=e909]
+              - listitem [ref=e910]:
+                - link "패션 커뮤니티" [ref=e911] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2378&search.boardtype=L
+                - img "새 게시글" [ref=e912]
+              - listitem [ref=e913]:
+                - link "긍정거래 후기" [ref=e914] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=122&search.boardtype=L
+                - img "새 게시글" [ref=e915]
+            - heading "★ 중나 회원 이벤트" [level=3] [ref=e917]
+            - list [ref=e919]:
+              - listitem [ref=e920]:
+                - link "이벤트" [ref=e921] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=1257&search.boardtype=L
+              - listitem [ref=e922]:
+                - link "당첨자발표/종료" [ref=e923] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=1534&search.boardtype=L
+              - listitem [ref=e924]:
+                - link "이벤트 신청하기" [ref=e925] [cursor=pointer]:
+                  - /url: https://docs.google.com/forms/d/e/1FAIpQLScVl4yKehbku8r-BJ283GiSdnXI92jaO5cfvAc5G4wMMsR8Ow/viewform?usp=sf_link
+            - heading "★ 중나 이용팁" [level=3] [ref=e927]
+            - list [ref=e929]:
+              - listitem [ref=e930]:
+                - link "중고나라 공식 블로그" [ref=e931] [cursor=pointer]:
+                  - /url: https://m.blog.naver.com/joonggonara_official
+              - listitem [ref=e932]:
+                - link "슬기로운 중나생활정보" [ref=e933] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2067&search.boardtype=L
+              - listitem [ref=e934]:
+                - link "편의점 택배 신청" [ref=e935] [cursor=pointer]:
+                  - /url: https://m.logii.com/interface/trsvstdfan/T_Reserve_Regi_Form_Step0_Guest.asp?partner_code=jgnr&service=delv_cvsnet
+            - heading "★ 공지사항" [level=3] [ref=e937]
+            - list [ref=e939]:
+              - listitem [ref=e940]:
+                - link "공지사항" [ref=e941] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=1256&search.boardtype=L
+              - listitem [ref=e942]:
+                - link "셀러 회원 공지사항" [ref=e943] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2469&search.boardtype=L
+              - listitem [ref=e944]:
+                - link "이용정책" [ref=e945] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=1805&search.boardtype=L
+              - listitem [ref=e946]:
+                - link "인기 검색 HOT!" [ref=e947] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=300&search.boardtype=L
+                - img "새 게시글" [ref=e948]
+            - heading "★ 문의하기" [level=3] [ref=e950]
+            - list [ref=e952]:
+              - listitem [ref=e953]:
+                - link "중고나라 광고 문의하기" [ref=e954] [cursor=pointer]:
+                  - /url: https://vvd.bz/dkXU
+              - listitem [ref=e955]:
+                - link "셀러 회원 신청" [ref=e956] [cursor=pointer]:
+                  - /url: https://vvd.bz/cK3S
+            - generic [ref=e957]:
+              - heading [level=3] [ref=e958]:
+                - link "폐쇄게시판" [ref=e959] [cursor=pointer]:
+                  - /url: "#"
+                - img "새 게시글" [ref=e960]
+              - paragraph [ref=e961]:
+                - link [ref=e962] [cursor=pointer]:
+                  - /url: "#"
+                  - img "열기/닫기" [ref=e963]
+          - list
+          - link [ref=e965] [cursor=pointer]:
+            - /url: https://talk.naver.com/ct/w4nd8o
+            - img "궁금한게 있을 땐 카페 스마트봇" [ref=e966]
+        - iframe [ref=e968]:
+          - generic [ref=f6e1]:
+            - generic [ref=f6e5]:
+              - generic [ref=f6e8]:
+                - generic [ref=f6e9]: 카페 대문
+                - generic "새창으로 열림" [ref=f6e10]:
+                  - generic "새창으로 열림" [ref=f6e11]:
+                    - paragraph [ref=f6e12]:
+                      - link [ref=f6e13] [cursor=pointer]:
+                        - /url: http://tracking.joongna.com/p4nthb
+                        - img "대문이미지" [ref=f6e14]
+                    - paragraph [ref=f6e15]
+                    - paragraph [ref=f6e16]:
+                      - link [ref=f6e17] [cursor=pointer]:
+                        - /url: https://vvd.bz/hRPa
+                        - img "대문이미지" [ref=f6e18]
+                    - paragraph [ref=f6e19]
+                    - paragraph [ref=f6e20]
+                  - generic "새창으로 열림" [ref=f6e21]:
+                    - paragraph [ref=f6e22]
+                    - img "대문이미지" [ref=f6e23]
+                    - link [ref=f6e24] [cursor=pointer]:
+                      - /url: https://vvd.bz/dkXU
+                      - img "대문이미지" [ref=f6e25]
+                    - paragraph [ref=f6e26]
+                    - paragraph [ref=f6e27]:
+                      - link [ref=f6e28] [cursor=pointer]:
+                        - /url: https://vvd.bz/hUT4
+                        - img "대문이미지" [ref=f6e29]
+                    - paragraph [ref=f6e30]
+                    - paragraph [ref=f6e31]:
+                      - link [ref=f6e32] [cursor=pointer]:
+                        - /url: https://vvd.bz/hoRU
+                        - img "대문이미지" [ref=f6e33]
+                    - paragraph [ref=f6e34]
+                    - paragraph [ref=f6e35]:
+                      - link [ref=f6e36] [cursor=pointer]:
+                        - /url: https://vvd.bz/hf92
+                        - img "대문이미지" [ref=f6e37]
+                    - paragraph [ref=f6e38]
+                    - paragraph [ref=f6e39]
+                    - paragraph [ref=f6e40]
+                    - paragraph [ref=f6e41]:
+                      - link [ref=f6e42] [cursor=pointer]:
+                        - /url: https://vvd.bz/TVm
+                        - img "대문이미지" [ref=f6e43]
+                  - generic "새창으로 열림" [ref=f6e44]:
+                    - generic "새창으로 열림" [ref=f6e45]:
+                      - generic "새창으로 열림" [ref=f6e46]:
+                        - link [ref=f6e47] [cursor=pointer]:
+                          - /url: https://vvd.bz/TVn
+                          - img "대문이미지" [ref=f6e48]
+                        - link [ref=f6e49] [cursor=pointer]:
+                          - /url: https://vvd.bz/TVo
+                          - img "대문이미지" [ref=f6e50]
+                        - link [ref=f6e51] [cursor=pointer]:
+                          - /url: https://vvd.bz/TVq
+                          - img "대문이미지" [ref=f6e52]
+                        - link [ref=f6e53] [cursor=pointer]:
+                          - /url: https://vvd.bz/TVr
+                          - img "대문이미지" [ref=f6e54]
+                        - link [ref=f6e55] [cursor=pointer]:
+                          - /url: https://vvd.bz/TVs
+                          - img "대문이미지" [ref=f6e56]
+                        - link [ref=f6e57] [cursor=pointer]:
+                          - /url: https://vvd.bz/TWL
+                          - img "대문이미지" [ref=f6e58]
+                      - generic "새창으로 열림" [ref=f6e60]:
+                        - link [ref=f6e61] [cursor=pointer]:
+                          - /url: https://vvd.bz/TWv
+                          - img "대문이미지" [ref=f6e62]
+                        - link [ref=f6e63] [cursor=pointer]:
+                          - /url: https://vvd.bz/TWw
+                          - img "대문이미지" [ref=f6e64]
+                        - link [ref=f6e65] [cursor=pointer]:
+                          - /url: https://vvd.bz/TWx
+                          - img "대문이미지" [ref=f6e66]
+                        - link [ref=f6e67] [cursor=pointer]:
+                          - /url: https://vvd.bz/TWy
+                          - img "대문이미지" [ref=f6e68]
+                        - link [ref=f6e69] [cursor=pointer]:
+                          - /url: https://vvd.bz/TX1
+                          - img "대문이미지" [ref=f6e70]
+                        - link [ref=f6e71] [cursor=pointer]:
+                          - /url: https://vvd.bz/TX2
+                          - img "대문이미지" [ref=f6e72]
+                      - generic "새창으로 열림" [ref=f6e74]:
+                        - link [ref=f6e75] [cursor=pointer]:
+                          - /url: https://vvd.bz/TX4
+                          - img "대문이미지" [ref=f6e76]
+                        - link [ref=f6e77] [cursor=pointer]:
+                          - /url: https://vvd.bz/TX5
+                          - img "대문이미지" [ref=f6e78]
+                        - link [ref=f6e79] [cursor=pointer]:
+                          - /url: https://vvd.bz/TX6
+                          - img "대문이미지" [ref=f6e80]
+                        - link [ref=f6e81] [cursor=pointer]:
+                          - /url: https://vvd.bz/TX7
+                          - img "대문이미지" [ref=f6e82]
+                        - link [ref=f6e83] [cursor=pointer]:
+                          - /url: https://vvd.bz/TX9
+                          - img "대문이미지" [ref=f6e84]
+                        - link [ref=f6e85] [cursor=pointer]:
+                          - /url: https://vvd.bz/TXA
+                          - img "대문이미지" [ref=f6e86]
+                      - generic "새창으로 열림" [ref=f6e89]:
+                        - link [ref=f6e90] [cursor=pointer]:
+                          - /url: https://vvd.bz/TVm
+                          - img "대문이미지" [ref=f6e91]
+                      - generic "새창으로 열림" [ref=f6e93]:
+                        - link [ref=f6e94] [cursor=pointer]:
+                          - /url: https://vvd.bz/TXB
+                          - img "대문이미지" [ref=f6e95]
+                        - link [ref=f6e96] [cursor=pointer]:
+                          - /url: https://vvd.bz/TXC
+                          - img "대문이미지" [ref=f6e97]
+                        - link [ref=f6e98] [cursor=pointer]:
+                          - /url: https://vvd.bz/TXD
+                          - img "대문이미지" [ref=f6e99]
+                        - link [ref=f6e100] [cursor=pointer]:
+                          - /url: https://vvd.bz/TXF
+                          - img "대문이미지" [ref=f6e101]
+                        - link [ref=f6e102] [cursor=pointer]:
+                          - /url: https://vvd.bz/TXG
+                          - img "대문이미지" [ref=f6e103]
+                        - link [ref=f6e104] [cursor=pointer]:
+                          - /url: https://vvd.bz/TXH
+                          - img "대문이미지" [ref=f6e105]
+                      - generic "새창으로 열림" [ref=f6e107]:
+                        - link [ref=f6e108] [cursor=pointer]:
+                          - /url: https://vvd.bz/TXI
+                          - img "대문이미지" [ref=f6e109]
+                        - link [ref=f6e110] [cursor=pointer]:
+                          - /url: https://vvd.bz/TXK
+                          - img "대문이미지" [ref=f6e111]
+                        - link [ref=f6e112] [cursor=pointer]:
+                          - /url: https://vvd.bz/TXL
+                          - img "대문이미지" [ref=f6e113]
+                        - link [ref=f6e114] [cursor=pointer]:
+                          - /url: https://vvd.bz/TXM
+                          - img "대문이미지" [ref=f6e115]
+                        - link [ref=f6e116] [cursor=pointer]:
+                          - /url: https://vvd.bz/TVm
+                          - img "대문이미지" [ref=f6e117]
+                        - link [ref=f6e118] [cursor=pointer]:
+                          - /url: https://vvd.bz/TVm
+                          - img "대문이미지" [ref=f6e119]
+                      - generic "새창으로 열림" [ref=f6e125]:
+                        - img "대문이미지" [ref=f6e126]
+              - generic [ref=f6e127]:
+                - generic [ref=f6e128]:
+                  - generic [ref=f6e129]:
+                    - generic [ref=f6e131]:
+                      - generic [ref=f6e133]:
+                        - heading [level=3] [ref=f6e134]:
+                          - link "[패션의류]여성의류" [ref=f6e135] [cursor=pointer]:
+                            - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2701&search.boardtype=L
+                        - link "더보기" [ref=f6e137] [cursor=pointer]:
+                          - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2701&search.boardtype=L
+                      - list [ref=f6e138]:
+                        - listitem [ref=f6e139]:
+                          - generic [ref=f6e140]:
+                            - term [ref=f6e141]:
+                              - link [ref=f6e142] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134919461
+                                - img "컨텐츠 이미지" [ref=f6e143]
+                            - definition [ref=f6e144]:
+                              - link "스튜디오톰보이 딥그린 스커트 55-66" [ref=f6e145] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134919461
+                              - img "new" [ref=f6e148]
+                            - definition [ref=f6e149]:
+                              - link "젤리네마켓" [ref=f6e151] [cursor=pointer]:
+                                - /url: "#"
+                            - definition [ref=f6e153]:
+                              - generic [ref=f6e154]: 18:32 조회 0
+                        - listitem [ref=f6e155]:
+                          - generic [ref=f6e156]:
+                            - term [ref=f6e157]:
+                              - link [ref=f6e158] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134919360
+                                - img "컨텐츠 이미지" [ref=f6e159]
+                            - definition [ref=f6e160]:
+                              - link "마시모두띠 화이트 면데님 팬츠 55" [ref=f6e161] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134919360
+                              - img "new" [ref=f6e164]
+                            - definition [ref=f6e165]:
+                              - link "젤리네마켓" [ref=f6e167] [cursor=pointer]:
+                                - /url: "#"
+                            - definition [ref=f6e169]:
+                              - generic [ref=f6e170]: 18:30 조회 0
+                        - listitem [ref=f6e171]:
+                          - generic [ref=f6e172]:
+                            - term [ref=f6e173]:
+                              - link [ref=f6e174] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134919313
+                                - img "컨텐츠 이미지" [ref=f6e175]
+                            - definition [ref=f6e176]:
+                              - link "Cos 블랙 면/비스코스 스커트 66" [ref=f6e177] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134919313
+                              - img "new" [ref=f6e180]
+                            - definition [ref=f6e181]:
+                              - link "젤리네마켓" [ref=f6e183] [cursor=pointer]:
+                                - /url: "#"
+                            - definition [ref=f6e185]:
+                              - generic [ref=f6e186]: 18:30 조회 0
+                        - listitem [ref=f6e187]:
+                          - generic [ref=f6e188]:
+                            - term [ref=f6e189]:
+                              - link [ref=f6e190] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134919280
+                                - img "컨텐츠 이미지" [ref=f6e191]
+                            - definition [ref=f6e192]:
+                              - link "마크제이콥스 그레이 플레어 가을스커트" [ref=f6e193] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134919280
+                              - img "new" [ref=f6e196]
+                            - definition [ref=f6e197]:
+                              - link "젤리네마켓" [ref=f6e199] [cursor=pointer]:
+                                - /url: "#"
+                            - definition [ref=f6e201]:
+                              - generic [ref=f6e202]: 18:29 조회 0
+                    - generic [ref=f6e204]:
+                      - generic [ref=f6e206]:
+                        - heading [level=3] [ref=f6e207]:
+                          - link "스마트폰" [ref=f6e208] [cursor=pointer]:
+                            - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2732&search.boardtype=L
+                        - link "더보기" [ref=f6e210] [cursor=pointer]:
+                          - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2732&search.boardtype=L
+                      - list [ref=f6e211]:
+                        - listitem [ref=f6e212]:
+                          - generic [ref=f6e213]:
+                            - term [ref=f6e214]:
+                              - link [ref=f6e215] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134919498
+                                - img "컨텐츠 이미지" [ref=f6e216]
+                            - definition [ref=f6e217]:
+                              - link "⭐️03987⭐️ 특S급. 갤럭시A23 128기가 블랙 부산중고폰 팝니다 13만원" [ref=f6e218] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134919498
+                              - img "new" [ref=f6e221]
+                            - definition [ref=f6e222]:
+                              - link "경성대 중고폰 비비폰" [ref=f6e224] [cursor=pointer]:
+                                - /url: "#"
+                            - definition [ref=f6e226]:
+                              - generic [ref=f6e227]: 18:32 조회 0
+                        - listitem [ref=f6e228]:
+                          - generic [ref=f6e229]:
+                            - term [ref=f6e230]:
+                              - link [ref=f6e231] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134919489
+                                - img "컨텐츠 이미지" [ref=f6e232]
+                            - definition [ref=f6e233]:
+                              - link "(15만원) 갤럭시Z플립4 블루 256G 멍없는 깨끗한 단말기 실사용 추천" [ref=f6e234] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134919489
+                              - img "new" [ref=f6e237]
+                            - definition [ref=f6e238]:
+                              - link "당일택배" [ref=f6e240] [cursor=pointer]:
+                                - /url: "#"
+                            - definition [ref=f6e242]:
+                              - generic [ref=f6e243]: 18:32 조회 0
+                        - listitem [ref=f6e244]:
+                          - generic [ref=f6e245]:
+                            - term [ref=f6e246]:
+                              - link [ref=f6e247] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134919488
+                                - img "컨텐츠 이미지" [ref=f6e248]
+                            - definition [ref=f6e249]:
+                              - link "(7만원) 아이폰X 블랙 256G 파손없는 가성비 단말기 서브용 사진용 추천" [ref=f6e250] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134919488
+                              - img "new" [ref=f6e253]
+                            - definition [ref=f6e254]:
+                              - link "현생A" [ref=f6e256] [cursor=pointer]:
+                                - /url: "#"
+                            - definition [ref=f6e258]:
+                              - generic [ref=f6e259]: 18:32 조회 0
+                        - listitem [ref=f6e260]:
+                          - generic [ref=f6e261]:
+                            - term [ref=f6e262]:
+                              - link [ref=f6e263] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134919482
+                                - img "컨텐츠 이미지" [ref=f6e264]
+                            - definition [ref=f6e265]:
+                              - link "<서울 송파> 삼성 갤럭시 Z폴드7 512기가 민트 자급제 무잔상 가성비폰 삼성닷컴 한정색상(100만원)" [ref=f6e266] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134919482
+                              - img "new" [ref=f6e269]
+                            - definition [ref=f6e270]:
+                              - link "송파 위즈2" [ref=f6e272] [cursor=pointer]:
+                                - /url: "#"
+                            - definition [ref=f6e274]:
+                              - generic [ref=f6e275]: 18:32 조회 1
+                  - generic [ref=f6e276]:
+                    - generic [ref=f6e278]:
+                      - generic [ref=f6e280]:
+                        - heading [level=3] [ref=f6e281]:
+                          - link "[패션의류]남성의류" [ref=f6e282] [cursor=pointer]:
+                            - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2702&search.boardtype=L
+                        - link "더보기" [ref=f6e284] [cursor=pointer]:
+                          - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2702&search.boardtype=L
+                      - list [ref=f6e285]:
+                        - listitem [ref=f6e286]:
+                          - generic [ref=f6e287]:
+                            - term [ref=f6e288]:
+                              - link [ref=f6e289] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134919247
+                                - img "컨텐츠 이미지" [ref=f6e290]
+                            - definition [ref=f6e291]:
+                              - link "STJOHN 센죤 프린지 트리밍 롱 니트 코트 4사이즈-7만원" [ref=f6e292] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134919247
+                              - img "new" [ref=f6e295]
+                            - definition [ref=f6e296]:
+                              - link "크리스패션피플" [ref=f6e298] [cursor=pointer]:
+                                - /url: "#"
+                            - definition [ref=f6e300]:
+                              - generic [ref=f6e301]: 18:27 조회 0
+                        - listitem [ref=f6e302]:
+                          - generic [ref=f6e303]:
+                            - term [ref=f6e304]:
+                              - link [ref=f6e305] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134918317
+                                - img "컨텐츠 이미지" [ref=f6e306]
+                            - definition [ref=f6e307]:
+                              - link "자노네 ZANONE 메리노울 라운드 니트 50사이즈-85천원" [ref=f6e308] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134918317
+                              - img "new" [ref=f6e311]
+                            - definition [ref=f6e312]:
+                              - link "크리스패션피플" [ref=f6e314] [cursor=pointer]:
+                                - /url: "#"
+                            - definition [ref=f6e316]:
+                              - generic [ref=f6e317]: 18:11 조회 5
+                        - listitem [ref=f6e318]:
+                          - generic [ref=f6e319]:
+                            - term [ref=f6e320]:
+                              - link [ref=f6e321] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134918013
+                                - img "컨텐츠 이미지" [ref=f6e322]
+                            - definition [ref=f6e323]:
+                              - link "[❤️판매완료❤️]아미 24aw 하트로고 헤비 스웻 팬츠 정품" [ref=f6e324] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134918013
+                              - img "new" [ref=f6e327]
+                            - definition [ref=f6e328]:
+                              - link "평광이" [ref=f6e330] [cursor=pointer]:
+                                - /url: "#"
+                            - definition [ref=f6e332]:
+                              - generic [ref=f6e333]: 18:06 조회 116
+                        - listitem [ref=f6e334]:
+                          - generic [ref=f6e335]:
+                            - term [ref=f6e336]:
+                              - link [ref=f6e337] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134917981
+                                - img "컨텐츠 이미지" [ref=f6e338]
+                            - definition [ref=f6e339]:
+                              - link "룰루레몬 남성 뉴벤처 슬림핏 솔리드 자켓 L 사이즈 정품" [ref=f6e340] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134917981
+                              - img "new" [ref=f6e343]
+                            - definition [ref=f6e344]:
+                              - link "한섬다이아" [ref=f6e346] [cursor=pointer]:
+                                - /url: "#"
+                            - definition [ref=f6e348]:
+                              - generic [ref=f6e349]: 18:05 조회 2
+                    - generic [ref=f6e351]:
+                      - generic [ref=f6e353]:
+                        - heading [level=3] [ref=f6e354]:
+                          - link "음향가전" [ref=f6e355] [cursor=pointer]:
+                            - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2745&search.boardtype=L
+                        - link "더보기" [ref=f6e357] [cursor=pointer]:
+                          - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2745&search.boardtype=L
+                      - list [ref=f6e358]:
+                        - listitem [ref=f6e359]:
+                          - generic [ref=f6e360]:
+                            - term [ref=f6e361]:
+                              - link [ref=f6e362] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134919314
+                                - img "컨텐츠 이미지" [ref=f6e363]
+                            - definition [ref=f6e364]:
+                              - link "(Dynacord)L2400 4옴 1300W*2 다이나코드 파워앰프" [ref=f6e365] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134919314
+                              - img "new" [ref=f6e368]
+                            - definition [ref=f6e369]:
+                              - link "사운드맨1" [ref=f6e371] [cursor=pointer]:
+                                - /url: "#"
+                            - definition [ref=f6e373]:
+                              - generic [ref=f6e374]: 18:30 조회 0
+                        - listitem [ref=f6e375]:
+                          - generic [ref=f6e376]:
+                            - term [ref=f6e377]:
+                              - link [ref=f6e378] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134918829
+                                - img "컨텐츠 이미지" [ref=f6e379]
+                            - definition [ref=f6e380]:
+                              - link "Dual 714Q 턴테이블" [ref=f6e381] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134918829
+                              - img "new" [ref=f6e384]
+                            - definition [ref=f6e385]:
+                              - link "사운드맨1" [ref=f6e387] [cursor=pointer]:
+                                - /url: "#"
+                            - definition [ref=f6e389]:
+                              - generic [ref=f6e390]: 18:21 조회 3
+                        - listitem [ref=f6e391]:
+                          - generic [ref=f6e392]:
+                            - term [ref=f6e393]:
+                              - link [ref=f6e394] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134911667
+                                - img "컨텐츠 이미지" [ref=f6e395]
+                            - definition [ref=f6e396]:
+                              - link "데논 DENON RCD-N12 40만원" [ref=f6e397] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134911667
+                              - img "new" [ref=f6e400]
+                            - definition [ref=f6e401]:
+                              - link "뷰티슈티" [ref=f6e403] [cursor=pointer]:
+                                - /url: "#"
+                            - definition [ref=f6e405]:
+                              - generic [ref=f6e406]: 15:40 조회 28
+                        - listitem [ref=f6e407]:
+                          - generic [ref=f6e408]:
+                            - term [ref=f6e409]:
+                              - link [ref=f6e410] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134907778
+                                - img "컨텐츠 이미지" [ref=f6e411]
+                            - definition [ref=f6e412]:
+                              - link "야마하 THR10 앰프" [ref=f6e413] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134907778
+                              - link "[1]" [ref=f6e416] [cursor=pointer]:
+                                - /url: "#"
+                              - img "new" [ref=f6e417]
+                            - definition [ref=f6e418]:
+                              - link "shyoung0717" [ref=f6e420] [cursor=pointer]:
+                                - /url: "#"
+                            - definition [ref=f6e422]:
+                              - generic [ref=f6e423]: 14:10 조회 27
+                  - generic [ref=f6e424]:
+                    - generic [ref=f6e426]:
+                      - generic [ref=f6e428]:
+                        - heading [level=3] [ref=f6e429]:
+                          - link "노트북/넷북" [ref=f6e430] [cursor=pointer]:
+                            - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2750&search.boardtype=L
+                        - link "더보기" [ref=f6e432] [cursor=pointer]:
+                          - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2750&search.boardtype=L
+                      - list [ref=f6e433]:
+                        - listitem [ref=f6e434]:
+                          - generic [ref=f6e435]:
+                            - term [ref=f6e436]:
+                              - link [ref=f6e437] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134919465
+                                - img "컨텐츠 이미지" [ref=f6e438]
+                            - definition [ref=f6e439]:
+                              - link "애플 맥북프로16 M4 MAX 16core 40GPU 48GB 1TB 판매합니다" [ref=f6e440] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134919465
+                              - img "new" [ref=f6e443]
+                            - definition [ref=f6e444]:
+                              - link "스텔스 다나와" [ref=f6e446] [cursor=pointer]:
+                                - /url: "#"
+                            - definition [ref=f6e448]:
+                              - generic [ref=f6e449]: 18:32 조회 0
+                        - listitem [ref=f6e450]:
+                          - generic [ref=f6e451]:
+                            - term [ref=f6e452]:
+                              - link [ref=f6e453] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134919373
+                                - img "컨텐츠 이미지" [ref=f6e454]
+                            - definition [ref=f6e455]:
+                              - link "[미개봉] 맥북프로 14 M5 PRO/24GB/2TB 블랙[MGDT4KH/A] [370만]" [ref=f6e456] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134919373
+                              - img "new" [ref=f6e459]
+                            - definition [ref=f6e460]:
+                              - link "서울시구로동" [ref=f6e462] [cursor=pointer]:
+                                - /url: "#"
+                            - definition [ref=f6e464]:
+                              - generic [ref=f6e465]: 18:31 조회 0
+                        - listitem [ref=f6e466]:
+                          - generic [ref=f6e467]:
+                            - term [ref=f6e468]:
+                              - link [ref=f6e469] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134918872
+                                - img "컨텐츠 이미지" [ref=f6e470]
+                            - definition [ref=f6e471]:
+                              - link "MSI 신형 고성능 게이밍 노트북/RTX4060" [ref=f6e472] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134918872
+                              - img "new" [ref=f6e475]
+                            - definition [ref=f6e476]:
+                              - link "섭이네IT" [ref=f6e478] [cursor=pointer]:
+                                - /url: "#"
+                            - definition [ref=f6e480]:
+                              - generic [ref=f6e481]: 18:21 조회 2
+                        - listitem [ref=f6e482]:
+                          - generic [ref=f6e483]:
+                            - term [ref=f6e484]:
+                              - link [ref=f6e485] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134918539
+                                - img "컨텐츠 이미지" [ref=f6e486]
+                            - definition [ref=f6e487]:
+                              - link "에이서 스위프트 14 AI (울트라7 S2 / 32G / 512G ) [110만]" [ref=f6e488] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134918539
+                              - img "new" [ref=f6e491]
+                            - definition [ref=f6e492]:
+                              - link "서울시구로동" [ref=f6e494] [cursor=pointer]:
+                                - /url: "#"
+                            - definition [ref=f6e496]:
+                              - generic [ref=f6e497]: 18:15 조회 2
+                    - generic [ref=f6e499]:
+                      - generic [ref=f6e501]:
+                        - heading [level=3] [ref=f6e502]:
+                          - link "[차량용품]휠/타이어" [ref=f6e503] [cursor=pointer]:
+                            - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2660&search.boardtype=L
+                        - link "더보기" [ref=f6e505] [cursor=pointer]:
+                          - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2660&search.boardtype=L
+                      - list [ref=f6e506]:
+                        - listitem [ref=f6e507]:
+                          - generic [ref=f6e508]:
+                            - term [ref=f6e509]:
+                              - link [ref=f6e510] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134918420
+                                - img "컨텐츠 이미지" [ref=f6e511]
+                            - definition [ref=f6e512]:
+                              - link "BMW X1 블랙유광 17인치 순정휠 대품판매20만원" [ref=f6e513] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134918420
+                              - img "new" [ref=f6e516]
+                            - definition [ref=f6e517]:
+                              - link "스타 휠" [ref=f6e519] [cursor=pointer]:
+                                - /url: "#"
+                            - definition [ref=f6e521]:
+                              - generic [ref=f6e522]: 18:13 조회 1
+                        - listitem [ref=f6e523]:
+                          - generic [ref=f6e524]:
+                            - term [ref=f6e525]:
+                              - link [ref=f6e526] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134917074
+                                - img "컨텐츠 이미지" [ref=f6e527]
+                            - definition [ref=f6e528]:
+                              - link "bmw g30 662m 고스트크롬 18인치 순정휠 대품판매20만원" [ref=f6e529] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134917074
+                              - img "new" [ref=f6e532]
+                            - definition [ref=f6e533]:
+                              - link "스타 휠" [ref=f6e535] [cursor=pointer]:
+                                - /url: "#"
+                            - definition [ref=f6e537]:
+                              - generic [ref=f6e538]: 17:44 조회 2
+                        - listitem [ref=f6e539]:
+                          - generic [ref=f6e540]:
+                            - term [ref=f6e541]:
+                              - link [ref=f6e542] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134915925
+                                - img "컨텐츠 이미지" [ref=f6e543]
+                            - definition [ref=f6e544]:
+                              - link "bmw g30 662m 블랙무광 18인치 순정휠 대품판매20만원" [ref=f6e545] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134915925
+                              - img "new" [ref=f6e548]
+                            - definition [ref=f6e549]:
+                              - link "스타 휠" [ref=f6e551] [cursor=pointer]:
+                                - /url: "#"
+                            - definition [ref=f6e553]:
+                              - generic [ref=f6e554]: 17:16 조회 1
+                        - listitem [ref=f6e555]:
+                          - generic [ref=f6e556]:
+                            - term [ref=f6e557]:
+                              - link [ref=f6e558] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134914981
+                                - img "컨텐츠 이미지" [ref=f6e559]
+                            - definition [ref=f6e560]:
+                              - link "2555019 미쉐린타이어 라티튜드스포츠3 중고타이어 255 50 19 미쉐린 19인치 타이어 ㅡ X5 카이엔 마칸" [ref=f6e561] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134914981
+                              - img "new" [ref=f6e564]
+                            - definition [ref=f6e565]:
+                              - link "남양주 타이어" [ref=f6e567] [cursor=pointer]:
+                                - /url: "#"
+                            - definition [ref=f6e569]:
+                              - generic [ref=f6e570]: 16:57 조회 3
+                  - generic [ref=f6e571]:
+                    - generic [ref=f6e573]:
+                      - generic [ref=f6e575]:
+                        - heading [level=3] [ref=f6e576]:
+                          - link "태블릿PC" [ref=f6e577] [cursor=pointer]:
+                            - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2733&search.boardtype=L
+                        - link "더보기" [ref=f6e579] [cursor=pointer]:
+                          - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2733&search.boardtype=L
+                      - list [ref=f6e580]:
+                        - listitem [ref=f6e581]:
+                          - generic [ref=f6e582]:
+                            - term [ref=f6e583]:
+                              - link [ref=f6e584] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134918769
+                                - img "컨텐츠 이미지" [ref=f6e585]
+                            - definition [ref=f6e586]:
+                              - link "[매입] 아이패드M1 M2 M3 M4 M5,갤럭시북 1 2 3 4 5 6,갤럭시워치,에어팟,에어팟맥스,애플워치,정품충전기 대량매입 가능 , 24시간 변동 시세 확인 후 판매 가능 , 단골 및 업자 환영" [ref=f6e587] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134918769
+                              - img "new" [ref=f6e590]
+                            - definition [ref=f6e591]:
+                              - link "폰팩토리신속빠름" [ref=f6e593] [cursor=pointer]:
+                                - /url: "#"
+                            - definition [ref=f6e595]:
+                              - generic [ref=f6e596]: 18:19 조회 0
+                        - listitem [ref=f6e597]:
+                          - generic [ref=f6e598]:
+                            - term [ref=f6e599]:
+                              - link [ref=f6e600] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134915991
+                                - img "컨텐츠 이미지" [ref=f6e601]
+                            - definition [ref=f6e602]:
+                              - link "삼성 갤럭시탭 S11 256기가 그레이 와이파이용 미개봉 102만원 판매합니다" [ref=f6e603] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134915991
+                              - img "new" [ref=f6e606]
+                            - definition [ref=f6e607]:
+                              - link "전문셀러등급제휴업체" [ref=f6e609] [cursor=pointer]:
+                                - /url: "#"
+                            - definition [ref=f6e611]:
+                              - generic [ref=f6e612]: 17:17 조회 1
+                        - listitem [ref=f6e613]:
+                          - generic [ref=f6e614]:
+                            - term [ref=f6e615]:
+                              - link [ref=f6e616] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134915055
+                                - img "컨텐츠 이미지" [ref=f6e617]
+                            - definition [ref=f6e618]:
+                              - link "[미개봉]아이패드11세대 A16 실버 MD4G4KH/A (256GB, Wi-Fi) [58만]" [ref=f6e619] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134915055
+                              - img "new" [ref=f6e622]
+                            - definition [ref=f6e623]:
+                              - link "서울시구로동" [ref=f6e625] [cursor=pointer]:
+                                - /url: "#"
+                            - definition [ref=f6e627]:
+                              - generic [ref=f6e628]: 16:58 조회 1
+                        - listitem [ref=f6e629]:
+                          - generic [ref=f6e630]:
+                            - term [ref=f6e631]:
+                              - link [ref=f6e632] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134912705
+                                - img "컨텐츠 이미지" [ref=f6e633]
+                            - definition [ref=f6e634]:
+                              - link "<서울 송파> 삼성 갤럭시 탭 E 8.0 화이트 A급 (전화,문자 가능)" [ref=f6e635] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134912705
+                              - img "new" [ref=f6e638]
+                            - definition [ref=f6e639]:
+                              - link "송파 위즈2" [ref=f6e641] [cursor=pointer]:
+                                - /url: "#"
+                            - definition [ref=f6e643]:
+                              - generic [ref=f6e644]: 16:04 조회 4
+                    - generic [ref=f6e646]:
+                      - generic [ref=f6e648]:
+                        - heading [level=3] [ref=f6e649]:
+                          - link "CPU/메인보드" [ref=f6e650] [cursor=pointer]:
+                            - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2753&search.boardtype=L
+                        - link "더보기" [ref=f6e652] [cursor=pointer]:
+                          - /url: /ArticleList.nhn?search.clubid=10050146&search.menuid=2753&search.boardtype=L
+                      - list [ref=f6e653]:
+                        - listitem [ref=f6e654]:
+                          - generic [ref=f6e655]:
+                            - term [ref=f6e656]:
+                              - link [ref=f6e657] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134918243
+                                - img "컨텐츠 이미지" [ref=f6e658]
+                            - definition [ref=f6e659]:
+                              - link "[ 공식정품 ] 윈도우11 / 윈도우10 / MS오피스 365 2024 2021 2019 2016 [ 즉시발송 ] 윈도우11 / 윈도우10 / MS오피스 [ 엑셀 ] [ 워드 ] [ 파워포인트 ] [ AS보장 ] [ 영구사용 ] [ 정식업데이트 ] [ 국내최저가 ]" [ref=f6e660] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134918243
+                              - img "new" [ref=f6e663]
+                            - definition [ref=f6e664]:
+                              - link "소프트마니아" [ref=f6e666] [cursor=pointer]:
+                                - /url: "#"
+                            - definition [ref=f6e668]:
+                              - generic [ref=f6e669]: 18:10 조회 0
+                        - listitem [ref=f6e670]:
+                          - generic [ref=f6e671]:
+                            - term [ref=f6e672]:
+                              - link [ref=f6e673] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134917273
+                                - img "컨텐츠 이미지" [ref=f6e674]
+                            - definition [ref=f6e675]:
+                              - link "[판매] i5 CPU 및 부품 판매합니다!" [ref=f6e676] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134917273
+                              - img "new" [ref=f6e679]
+                            - definition [ref=f6e680]:
+                              - link "디아이피씨" [ref=f6e682] [cursor=pointer]:
+                                - /url: "#"
+                            - definition [ref=f6e684]:
+                              - generic [ref=f6e685]: 17:49 조회 2
+                        - listitem [ref=f6e686]:
+                          - generic [ref=f6e687]:
+                            - term [ref=f6e688]:
+                              - link [ref=f6e689] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134916503
+                                - img "컨텐츠 이미지" [ref=f6e690]
+                            - definition [ref=f6e691]:
+                              - link "조립PC 싸게 팔아요 _ 주말영업합니다." [ref=f6e692] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134916503
+                              - img "new" [ref=f6e695]
+                            - definition [ref=f6e696]:
+                              - link "COM4989" [ref=f6e698] [cursor=pointer]:
+                                - /url: "#"
+                            - definition [ref=f6e700]:
+                              - generic [ref=f6e701]: 17:30 조회 4
+                        - listitem [ref=f6e702]:
+                          - generic [ref=f6e703]:
+                            - term [ref=f6e704]:
+                              - link [ref=f6e705] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134916102
+                                - img "컨텐츠 이미지" [ref=f6e706]
+                            - definition [ref=f6e707]:
+                              - link "[매입] H110 H310 H410 H510 H610 B150 B250 B360 B460 B560 B660 삽니다" [ref=f6e708] [cursor=pointer]:
+                                - /url: /ArticleRead.nhn?clubid=10050146&articleid=1134916102
+                              - img "new" [ref=f6e711]
+                            - definition [ref=f6e712]:
+                              - link "아이즈컴" [ref=f6e714] [cursor=pointer]:
+                                - /url: "#"
+                            - definition [ref=f6e716]:
+                              - generic [ref=f6e717]: 17:20 조회 1
+                  - generic [ref=f6e718]:
+                    - list
+                - list [ref=f6e720]:
+                  - listitem [ref=f6e721]:
+                    - generic [ref=f6e722]:
+                      - heading "거래내역 조회하기" [level=4] [ref=f6e724]
+                      - paragraph [ref=f6e726]:
+                        - link "네이버페이 거래내역" [ref=f6e727] [cursor=pointer]:
+                          - /url: https://order.pay.naver.com/home
+                  - listitem [ref=f6e728]:
+                    - generic [ref=f6e729]:
+                      - strong [ref=f6e730]: 사업자 정보
+                      - link "조회" [ref=f6e731] [cursor=pointer]:
+                        - /url: http://www.ftc.go.kr/bizCommPop.do?wrkr_no=2158787482
+                      - list [ref=f6e732]:
+                        - listitem [ref=f6e733]:
+                          - emphasis [ref=f6e734]: "상호 :"
+                          - text: (주)중고나라
+                        - listitem [ref=f6e735]:
+                          - emphasis [ref=f6e736]: "대표 :"
+                          - text: 최인욱
+                        - listitem [ref=f6e737]:
+                          - emphasis [ref=f6e738]: "주소 :"
+                          - text: 서울시 강남구 테헤란로 415 호텔 강남타워 4층
+                        - listitem [ref=f6e739]:
+                          - emphasis [ref=f6e740]: "전화 :"
+                          - text: 1533-7861
+                        - listitem [ref=f6e741]:
+                          - emphasis [ref=f6e742]: "메일 :"
+                          - text: cafe@joonggonara.co.kr
+                        - listitem [ref=f6e743]:
+                          - emphasis [ref=f6e744]: "사업자번호 :"
+                          - text: 215-87-87482
+                        - listitem [ref=f6e745]:
+                          - emphasis [ref=f6e746]: "이용약관 :"
+                          - link "이용약관 보기" [ref=f6e747] [cursor=pointer]:
+                            - /url: https://cafe.naver.com/joonggonara/1082322224
+                        - listitem [ref=f6e748]:
+                          - emphasis [ref=f6e749]: "통신판매신고번호 :"
+                          - text: 제2024-서울강남-06966호
+                  - listitem [ref=f6e750]:
+                    - iframe [ref=f6e752]:
+                      - generic [ref=f13e2]:
+                        - heading [level=1] [ref=f13e3]:
+                          - link [ref=f13e4] [cursor=pointer]:
+                            - /url: http://cyberbureau.police.go.kr
+                            - img "경찰청 수사국" [ref=f13e5]
+                        - group "필수입력항목":
+                          - paragraph [ref=f13e6]:
+                            - combobox [ref=f13e7]:
+                              - option "전화번호" [selected]
+                              - option "계좌번호"
+                              - option "email주소"
+                          - paragraph [ref=f13e8]:
+                            - textbox "내용" [ref=f13e9]
+                            - generic [ref=f13e10] [cursor=pointer]: 검색
+                        - paragraph [ref=f13e11]: 거래 전 반드시 상대방이 최근 3개월 내 3회 이상 '사이버사기'로 사이버범죄 신고시스템에 신고된 사실이 있는지 확인해 보세요.
+                        - paragraph [ref=f13e12]:
+                          - generic [ref=f13e13] [cursor=pointer]: 예방수칙
+                          - generic [ref=f13e14] [cursor=pointer]: 신고하기
+            - link "콘텐츠 하단" [ref=f6e753] [cursor=pointer]:
+              - /url: "#"
+      - contentinfo [ref=e969]:
+        - heading "중고나라" [level=2] [ref=e970]
+        - link "https://cafe.naver.com/joonggonara" [ref=e971] [cursor=pointer]:
+          - /url: "#"
+        - heading "NAVER 카페" [level=2]:
+          - link "NAVER 카페" [ref=e972] [cursor=pointer]:
+            - /url: "#"
+    - link "콘텐츠 상단" [ref=e974] [cursor=pointer]:
+      - /url: "#"
+  - iframe

@@ -1,0 +1,22 @@
+- generic [ref=f19e3]:
+  - generic [ref=f19e5]:
+    - heading "AI 공장장 4기 — 구글폼 자동 작성 실습" [level=1] [ref=f19e7]
+    - generic [ref=f19e8]: 응답이 기록되었습니다.
+    - link "다른 응답 제출" [ref=f19e10] [cursor=pointer]:
+      - /url: https://docs.google.com/forms/d/e/1FAIpQLSfKyhtnKbiLrbZ3I6iaY5M2EBPVjOrlHnAWuOUFQvTzfo-g0w/viewform?usp=form_confirm
+  - generic [ref=f19e11]:
+    - generic [ref=f19e12]:
+      - text: 이 콘텐츠는 Google이 만들거나 승인하지 않았습니다. -
+      - link "서비스 약관" [ref=f19e13] [cursor=pointer]:
+        - /url: https://policies.google.com/terms
+      - text: "-"
+      - link "개인정보처리방침" [ref=f19e14] [cursor=pointer]:
+        - /url: https://policies.google.com/privacy
+      - paragraph [ref=f19e15]:
+        - text: 양식이 의심스러운가요?
+        - link "보고서" [ref=f19e16] [cursor=pointer]:
+          - /url: https://docs.google.com/forms/d/e/1FAIpQLSfKyhtnKbiLrbZ3I6iaY5M2EBPVjOrlHnAWuOUFQvTzfo-g0w/abuse
+    - link [ref=f19e18] [cursor=pointer]:
+      - /url: //www.google.com/forms/about/?utm_source=product&utm_medium=forms_logo&utm_campaign=forms
+      - img "Google" [ref=f19e19]
+      - text: 설문지

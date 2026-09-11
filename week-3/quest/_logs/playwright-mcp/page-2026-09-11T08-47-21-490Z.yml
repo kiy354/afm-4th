@@ -1,0 +1,1896 @@
+- generic [active] [ref=f80e1]:
+  - generic [ref=f80e5]:
+    - link [ref=f80e6] [cursor=pointer]:
+      - /url: /np/campaigns/82?adType=DA&eventId=5uwSBRv39AcEoZlu
+    - link [ref=f80e7] [cursor=pointer]:
+      - /url: https://shop.coupang.com/sajodaerim/268667?source=brandstore_display_ads&adType=DA&eventId=qMHo8uhXO60isC4h
+  - generic [ref=f80e8]:
+    - generic [ref=f80e10]:
+      - list [ref=f80e11]:
+        - listitem [ref=f80e12]:
+          - link "판매자 가입" [ref=f80e13] [cursor=pointer]:
+            - /url: https://wing.coupang.com/tenants/vendor-signup/signup?utm_source=button_pc_coupang_top_right_cta&utm_medium=non_paid&utm_campaign=seller_registration
+        - listitem [ref=f80e14]:
+          - link "고객센터" [ref=f80e15] [cursor=pointer]:
+            - /url: https://mc.coupang.com/ssr/desktop/contact/faq
+        - listitem [ref=f80e16]:
+          - link "회원가입" [ref=f80e17] [cursor=pointer]:
+            - /url: https://login.coupang.com/login/memberJoinFrm.pang
+        - listitem [ref=f80e18]:
+          - link "로그인" [ref=f80e19] [cursor=pointer]:
+            - /url: https://login.coupang.com/login/login.pang?rtnUrl=https%3A%2F%2Fwww.coupang.com%2Fnp%2Fpost%2Flogin%3Fr%3Dhttp%253A%252F%252Fwww.coupang.com%252Fnp%252Fsearch%253Fq%253D%2525EC%252598%2525A4%2525ED%25258A%2525B8%2525EB%2525B0%252580%2526filterType%253Drocket%2526sorter%253DsalePriceAsc
+      - list [ref=f80e20]:
+        - listitem [ref=f80e21]: 즐겨찾기
+        - listitem [ref=f80e22]:
+          - generic [ref=f80e23] [cursor=pointer]: 입점신청
+    - generic [ref=f80e26]:
+      - generic [ref=f80e27] [cursor=pointer]: 카테고리
+      - generic [ref=f80e33]:
+        - generic [ref=f80e34]:
+          - link [ref=f80e35] [cursor=pointer]:
+            - /url: https://www.coupang.com
+            - img "Coupang" [ref=f80e36]
+          - generic [ref=f80e37]:
+            - generic [ref=f80e38]: 전체
+            - textbox "쿠팡 상품 검색" [ref=f80e42]:
+              - /placeholder: 찾고 싶은 상품을 검색해보세요!
+              - text: 오트밀
+            - button "검색" [ref=f80e43] [cursor=pointer]
+          - list [ref=f80e44]:
+            - listitem [ref=f80e45]:
+              - link "마이쿠팡" [ref=f80e46] [cursor=pointer]:
+                - /url: https://mc.coupang.com/ssr/desktop/order/list
+            - listitem [ref=f80e48]:
+              - link "장바구니" [ref=f80e49] [cursor=pointer]:
+                - /url: //cart.coupang.com/cartView.pang
+                - emphasis [ref=f80e50]
+        - list [ref=f80e54]:
+          - listitem [ref=f80e55]:
+            - link "쿠팡플레이 쿠팡플레이" [ref=f80e56] [cursor=pointer]:
+              - /url: https://www.coupangplay.com/catalog
+              - img "쿠팡플레이" [ref=f80e57]
+              - generic [ref=f80e58]: 쿠팡플레이
+          - listitem [ref=f80e59]:
+            - link "로켓배송 로켓배송" [ref=f80e60] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/campaigns/82
+              - img "로켓배송" [ref=f80e61]
+              - generic [ref=f80e62]: 로켓배송
+          - listitem [ref=f80e63]:
+            - link "로켓프레시 로켓프레시" [ref=f80e64] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/categories/393760
+              - img "로켓프레시" [ref=f80e65]
+              - generic [ref=f80e66]: 로켓프레시
+          - listitem [ref=f80e67]:
+            - link "2026 추석 2026 추석" [ref=f80e68] [cursor=pointer]:
+              - /url: https://www.coupang.com/mlp/web/mlp-landing-page?landingId=4800
+              - img "2026 추석" [ref=f80e69]
+              - generic [ref=f80e70]: 2026 추석
+          - listitem [ref=f80e72]:
+            - link "다시 구매 다시 구매" [ref=f80e73] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/fbi?sourceType=home_section_fbi
+              - img "다시 구매" [ref=f80e74]
+              - generic [ref=f80e75]: 다시 구매
+          - listitem [ref=f80e77]:
+            - link "쿠팡비즈 쿠팡비즈" [ref=f80e78] [cursor=pointer]:
+              - /url: https://login.coupang.com/corporation/member/landing-page
+              - img "쿠팡비즈" [ref=f80e79]
+              - generic [ref=f80e80]: 쿠팡비즈
+          - listitem [ref=f80e81]:
+            - link "로켓직구 로켓직구" [ref=f80e82] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/coupangglobal
+              - img "로켓직구" [ref=f80e83]
+              - generic [ref=f80e84]: 로켓직구
+          - listitem [ref=f80e85]:
+            - link "골드박스 골드박스" [ref=f80e86] [cursor=pointer]:
+              - /url: https://www.coupang.com/mlp/web/mlp-landing-page?landingId=3712&sourceType=gm_crm_goldbox&subSourceType=gm_crm_gwsrtcut
+              - img "골드박스" [ref=f80e87]
+              - generic [ref=f80e88]: 골드박스
+          - listitem [ref=f80e89]:
+            - link "이달의신상 이달의신상" [ref=f80e90] [cursor=pointer]:
+              - /url: https://pages.coupang.com/p/136938
+              - img "이달의신상" [ref=f80e91]
+              - generic [ref=f80e92]: 이달의신상
+          - listitem [ref=f80e93]:
+            - link "입점신청 입점신청" [ref=f80e94] [cursor=pointer]:
+              - /url: https://wing.coupang.com/tenants/vendor-signup/signup?utm_source=button_pc_coupang_shortcut_1&utm_medium=non_paid&utm_id=onsite_ca&utm_content=202411
+              - img "입점신청" [ref=f80e95]
+              - generic [ref=f80e96]: 입점신청
+          - listitem [ref=f80e97]:
+            - link "판매자특가 판매자특가" [ref=f80e98] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/omp
+              - img "판매자특가" [ref=f80e99]
+              - generic [ref=f80e100]: 판매자특가
+          - listitem [ref=f80e101]:
+            - link "와우회원할인 와우회원할인" [ref=f80e102] [cursor=pointer]:
+              - /url: https://www.coupang.com/np/campaigns/83
+              - img "와우회원할인" [ref=f80e103]
+              - generic [ref=f80e104]: 와우회원할인
+          - listitem [ref=f80e105]:
+            - link "반품마켓 반품마켓" [ref=f80e106] [cursor=pointer]:
+              - /url: https://pages.coupang.com/p/54908
+              - img "반품마켓" [ref=f80e107]
+              - generic [ref=f80e108]: 반품마켓
+          - listitem [ref=f80e109]:
+            - link "착한상점 착한상점" [ref=f80e110] [cursor=pointer]:
+              - /url: https://pages.coupang.com/p/63240
+              - img "착한상점" [ref=f80e111]
+              - generic [ref=f80e112]: 착한상점
+          - listitem [ref=f80e114]:
+            - link "기획전 기획전" [ref=f80e115] [cursor=pointer]:
+              - /url: https://pages.coupang.com/p/bep?sourceType=gm_crm_oms&subSourceType=gm_crm_gwsrtcut
+              - img "기획전" [ref=f80e116]
+              - generic [ref=f80e117]: 기획전
+          - listitem [ref=f80e118]:
+            - link "쿠팡트래블 쿠팡트래블" [ref=f80e119] [cursor=pointer]:
+              - /url: https://trip.coupang.com/?channel=gnb
+              - img "쿠팡트래블" [ref=f80e120]
+              - generic [ref=f80e121]: 쿠팡트래블
+  - article [ref=f80e123]:
+    - link "23% 오트케어 오트밀가루 아침식사대용 선식 쉐이크 오트케어 맛있는 오트밀 단백질 개별포장, 40개, 50g 광고 Ad information 더 알아보기" [ref=f80e127] [cursor=pointer]:
+      - /url: /vp/products/9483193950?itemId=28236991503&vendorItemId=92759760077&sourceType=srp_top_banner_ads&clickEventId=7355c0e0-adbd-11f1-a90c-88682d975e47&korePlacement=19
+      - generic [ref=f80e128]:
+        - generic [ref=f80e129]: 23%
+        - generic [ref=f80e135]: 오트케어 오트밀가루 아침식사대용 선식 쉐이크 오트케어 맛있는 오트밀 단백질 개별포장, 40개, 50g
+        - generic [ref=f80e139]:
+          - generic [ref=f80e140]: 광고
+          - button "Ad information" [ref=f80e141]
+      - generic [ref=f80e142]: 더 알아보기
+    - generic:
+      - link "장바구니" [ref=f80e144] [cursor=pointer]:
+        - /url: //cart.coupang.com/cartView.pang
+        - emphasis
+      - generic [ref=f80e146]:
+        - generic [ref=f80e147]: 최근본상품
+        - emphasis
+  - generic [ref=f80e150]:
+    - generic [ref=f80e153]:
+      - list [ref=f80e154]:
+        - listitem [ref=f80e155]:
+          - link "전체" [ref=f80e156] [cursor=pointer]:
+            - /url: /np/search?q=%EC%98%A4%ED%8A%B8%EB%B0%80&filterType=rocket&sorter=salePriceAsc
+      - strong [ref=f80e160]: "'오트밀'"
+    - generic [ref=f80e163]:
+      - generic [ref=f80e164]:
+        - generic [ref=f80e167]:
+          - generic [ref=f80e168]:
+            - heading "필터" [level=4] [ref=f80e169]
+            - button "전체해제" [ref=f80e171] [cursor=pointer]
+          - list [ref=f80e174]:
+            - listitem [ref=f80e175]:
+              - img "rocket_luxury,rocket,coupang_global" [ref=f80e179] [cursor=pointer]
+              - list [ref=f80e181]:
+                - listitem [ref=f80e182]:
+                  - generic [ref=f80e183] [cursor=pointer]:
+                    - img "rocket_luxury" [ref=f80e186]
+                    - text: 만 보기
+                - listitem [ref=f80e187]:
+                  - generic [ref=f80e188] [cursor=pointer]:
+                    - img "rocket" [ref=f80e191]
+                    - text: 만 보기
+                - listitem [ref=f80e192]:
+                  - generic [ref=f80e193] [cursor=pointer]:
+                    - img "coupang_global" [ref=f80e196]
+                    - text: 만 보기
+            - listitem [ref=f80e197]:
+              - img "top_brand" [ref=f80e201] [cursor=pointer]
+            - listitem [ref=f80e202]:
+              - generic [ref=f80e203] [cursor=pointer]: 무료배송
+          - separator [ref=f80e205]
+          - generic [ref=f80e206]:
+            - heading "카테고리" [level=5] [ref=f80e207]
+            - generic [ref=f80e208]:
+              - list [ref=f80e209]:
+                - listitem [ref=f80e210]:
+                  - link "전체" [ref=f80e212] [cursor=pointer]:
+                    - /url: https://www.coupang.com
+                - listitem [ref=f80e213]:
+                  - link "식품" [ref=f80e215] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/194276
+                - listitem [ref=f80e216]:
+                  - link "로켓직구" [ref=f80e218] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/coupangglobal
+                - listitem [ref=f80e219]:
+                  - link "싱글라이프" [ref=f80e221] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/433784
+                - listitem [ref=f80e222]:
+                  - link "쿠팡수입" [ref=f80e224] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/510691
+                - listitem:
+                  - link "실버스토어" [ref=f80e226] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/383370
+                - listitem:
+                  - link "출산/유아동" [ref=f80e228] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/221934
+                - listitem:
+                  - link "패션의류/잡화" [ref=f80e230] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/564653
+                - listitem:
+                  - link "홈인테리어" [ref=f80e232] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/184555
+                - listitem:
+                  - link "아트/공예" [ref=f80e234] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/410273
+                - listitem:
+                  - link "주방용품" [ref=f80e236] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/185669
+                - listitem:
+                  - link "완구/취미" [ref=f80e238] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/317779
+                - listitem:
+                  - link "생활용품" [ref=f80e240] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/115673
+                - listitem:
+                  - link "뷰티" [ref=f80e242] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/176522
+                - listitem:
+                  - link "반려동물용품" [ref=f80e244] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/115674
+                - listitem:
+                  - link "문구/오피스" [ref=f80e246] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/177295
+                - listitem:
+                  - link "R.LUX" [ref=f80e248] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/campaigns/18530
+                - listitem:
+                  - link "가전디지털" [ref=f80e250] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/178255
+                - listitem:
+                  - link "홈카페" [ref=f80e252] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/316168
+                - listitem:
+                  - link "미세먼지용품" [ref=f80e254] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/campaigns/17593
+                - listitem:
+                  - link "도서/음반/DVD" [ref=f80e256] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/317777
+                - listitem:
+                  - link "자동차용품" [ref=f80e258] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/184060
+                - listitem:
+                  - link "안전전문관" [ref=f80e260] [cursor=pointer]:
+                    - /url: https://www.coupang.com/np/categories/568926
+              - generic [ref=f80e261] [cursor=pointer]: + 더보기
+          - separator [ref=f80e262]
+          - generic [ref=f80e263]:
+            - heading "브랜드" [level=5] [ref=f80e264]
+            - generic [ref=f80e265]:
+              - list [ref=f80e266]:
+                - listitem [ref=f80e267]:
+                  - generic [ref=f80e268] [cursor=pointer]: 대구농산
+                - listitem [ref=f80e270]:
+                  - generic [ref=f80e271] [cursor=pointer]: 플라하반
+                - listitem [ref=f80e273]:
+                  - generic [ref=f80e274] [cursor=pointer]: 자연다움
+                - listitem [ref=f80e276]:
+                  - generic [ref=f80e277] [cursor=pointer]: 퀘이커
+                - listitem [ref=f80e279]:
+                  - generic [ref=f80e280] [cursor=pointer]: 모던구루
+                - listitem:
+                  - generic [ref=f80e282] [cursor=pointer]: 두보식품
+                - listitem:
+                  - generic [ref=f80e284] [cursor=pointer]: 건강곡간
+                - listitem:
+                  - generic [ref=f80e286] [cursor=pointer]: 퍼기
+                - listitem:
+                  - generic [ref=f80e288] [cursor=pointer]: 먹놀잼
+                - listitem:
+                  - generic [ref=f80e290] [cursor=pointer]: 프라임필드
+                - listitem:
+                  - generic [ref=f80e292] [cursor=pointer]: 헤이오트
+                - listitem:
+                  - generic [ref=f80e294] [cursor=pointer]: 구도
+                - listitem:
+                  - generic [ref=f80e296] [cursor=pointer]: gomgom
+                - listitem:
+                  - generic [ref=f80e298] [cursor=pointer]: 어메이징오트
+                - listitem:
+                  - generic [ref=f80e300] [cursor=pointer]: 파머스팬트리
+                - listitem:
+                  - generic [ref=f80e302] [cursor=pointer]: 팔도
+                - listitem:
+                  - generic [ref=f80e304] [cursor=pointer]: 리키
+              - generic [ref=f80e306] [cursor=pointer]: + 더보기
+          - separator [ref=f80e307]
+          - generic [ref=f80e308]:
+            - heading "상품 상태" [level=5] [ref=f80e309]
+            - list [ref=f80e311]:
+              - listitem [ref=f80e312]:
+                - generic [ref=f80e313] [cursor=pointer]: 새 상품
+              - listitem [ref=f80e315]:
+                - generic [ref=f80e316] [cursor=pointer]: 박스 훼손
+              - listitem [ref=f80e318]:
+                - generic [ref=f80e319] [cursor=pointer]: 재포장
+              - listitem [ref=f80e321]:
+                - generic [ref=f80e322] [cursor=pointer]: 반품
+              - listitem [ref=f80e324]:
+                - generic [ref=f80e325] [cursor=pointer]: 중고
+          - separator [ref=f80e327]
+          - generic [ref=f80e328]:
+            - heading "낱개상품 여부" [level=5] [ref=f80e329]
+            - list [ref=f80e331]:
+              - listitem [ref=f80e332]:
+                - generic [ref=f80e333] [cursor=pointer]: 낱개상품
+          - separator [ref=f80e335]
+          - generic [ref=f80e336]:
+            - heading "개당 중량" [level=5] [ref=f80e337]
+            - generic [ref=f80e338]:
+              - list [ref=f80e339]:
+                - listitem [ref=f80e340]:
+                  - generic [ref=f80e341] [cursor=pointer]: 50g 이하
+                - listitem [ref=f80e343]:
+                  - generic [ref=f80e344] [cursor=pointer]: 50~100g
+                - listitem [ref=f80e346]:
+                  - generic [ref=f80e347] [cursor=pointer]: 100~200g
+                - listitem [ref=f80e349]:
+                  - generic [ref=f80e350] [cursor=pointer]: 200~500g
+                - listitem [ref=f80e352]:
+                  - generic [ref=f80e353] [cursor=pointer]: 500g~1kg
+                - listitem:
+                  - generic [ref=f80e355] [cursor=pointer]: 1~1.5kg
+                - listitem:
+                  - generic [ref=f80e357] [cursor=pointer]: 1.5~3kg
+                - listitem:
+                  - generic [ref=f80e359] [cursor=pointer]: 3kg 이상
+              - generic [ref=f80e361] [cursor=pointer]: + 더보기
+          - separator [ref=f80e362]
+          - generic [ref=f80e363]:
+            - heading "총 중량" [level=5] [ref=f80e364]
+            - generic [ref=f80e365]:
+              - list [ref=f80e366]:
+                - listitem [ref=f80e367]:
+                  - generic [ref=f80e368] [cursor=pointer]: 50g 이하
+                - listitem [ref=f80e370]:
+                  - generic [ref=f80e371] [cursor=pointer]: 50~150g
+                - listitem [ref=f80e373]:
+                  - generic [ref=f80e374] [cursor=pointer]: 150~300g
+                - listitem [ref=f80e376]:
+                  - generic [ref=f80e377] [cursor=pointer]: 300~600g
+                - listitem [ref=f80e379]:
+                  - generic [ref=f80e380] [cursor=pointer]: 600g~1kg
+                - listitem:
+                  - generic [ref=f80e382] [cursor=pointer]: 1~3kg
+                - listitem:
+                  - generic [ref=f80e384] [cursor=pointer]: 3~5kg
+                - listitem:
+                  - generic [ref=f80e386] [cursor=pointer]: 5kg 이상
+              - generic [ref=f80e388] [cursor=pointer]: + 더보기
+          - separator [ref=f80e389]
+          - generic [ref=f80e390]:
+            - heading "총 수량" [level=5] [ref=f80e391]
+            - list [ref=f80e393]:
+              - listitem [ref=f80e394]:
+                - generic [ref=f80e395] [cursor=pointer]: 15개 이하
+              - listitem [ref=f80e397]:
+                - generic [ref=f80e398] [cursor=pointer]: 15~20개
+              - listitem [ref=f80e400]:
+                - generic [ref=f80e401] [cursor=pointer]: 20~50개
+              - listitem [ref=f80e403]:
+                - generic [ref=f80e404] [cursor=pointer]: 50~100개
+              - listitem [ref=f80e406]:
+                - generic [ref=f80e407] [cursor=pointer]: 100개 이상
+          - separator [ref=f80e409]
+          - generic [ref=f80e410]:
+            - heading "종류" [level=5] [ref=f80e411]
+            - generic [ref=f80e412]:
+              - list [ref=f80e413]:
+                - listitem [ref=f80e414]:
+                  - generic [ref=f80e415] [cursor=pointer]: 혼합
+                - listitem [ref=f80e417]:
+                  - generic [ref=f80e418] [cursor=pointer]: 귀리
+                - listitem [ref=f80e420]:
+                  - generic: 콩/팥
+                - listitem [ref=f80e421]:
+                  - generic [ref=f80e422] [cursor=pointer]: 깨
+                - listitem [ref=f80e424]:
+                  - generic [ref=f80e425] [cursor=pointer]: 보리
+                - listitem:
+                  - generic: 퀴노아
+                - listitem:
+                  - generic: 조/수수
+                - listitem:
+                  - generic [ref=f80e427] [cursor=pointer]: 병아리콩
+                - listitem:
+                  - generic [ref=f80e429] [cursor=pointer]: 씨드
+                - listitem:
+                  - generic [ref=f80e431] [cursor=pointer]: 기타
+              - generic [ref=f80e433] [cursor=pointer]: + 더보기
+          - separator [ref=f80e434]
+          - generic [ref=f80e435]:
+            - heading "포장형태" [level=5] [ref=f80e436]
+            - list [ref=f80e438]:
+              - listitem [ref=f80e439]:
+                - generic [ref=f80e440] [cursor=pointer]: 봉지/지퍼백
+              - listitem [ref=f80e442]:
+                - generic [ref=f80e443] [cursor=pointer]: 상자 (갑)
+              - listitem [ref=f80e445]:
+                - generic [ref=f80e446] [cursor=pointer]: 용기/통
+              - listitem [ref=f80e448]:
+                - generic [ref=f80e449] [cursor=pointer]: 컵/1회분
+          - separator [ref=f80e451]
+          - generic [ref=f80e452]:
+            - heading "구성" [level=5] [ref=f80e453]
+            - list [ref=f80e455]:
+              - listitem [ref=f80e456]:
+                - generic [ref=f80e457] [cursor=pointer]: 단품
+              - listitem [ref=f80e459]:
+                - generic [ref=f80e460] [cursor=pointer]: 단품세트
+              - listitem [ref=f80e462]:
+                - generic [ref=f80e463] [cursor=pointer]: 혼합세트
+          - separator [ref=f80e465]
+          - generic [ref=f80e466]:
+            - heading "가공 상태" [level=5] [ref=f80e467]
+            - list [ref=f80e469]:
+              - listitem [ref=f80e470]:
+                - generic [ref=f80e471] [cursor=pointer]: 생
+              - listitem [ref=f80e473]:
+                - generic [ref=f80e474] [cursor=pointer]: 볶음
+          - separator [ref=f80e476]
+          - generic [ref=f80e477]:
+            - heading "형태" [level=5] [ref=f80e478]
+            - list [ref=f80e480]:
+              - listitem [ref=f80e481]:
+                - generic [ref=f80e482] [cursor=pointer]: 통곡물
+              - listitem [ref=f80e484]:
+                - generic [ref=f80e485] [cursor=pointer]: 가루형
+          - separator [ref=f80e487]
+          - generic [ref=f80e488]:
+            - heading "생산지" [level=5] [ref=f80e489]
+            - list [ref=f80e491]:
+              - listitem [ref=f80e492]:
+                - generic [ref=f80e493] [cursor=pointer]: 강원도
+              - listitem [ref=f80e495]:
+                - generic [ref=f80e496] [cursor=pointer]: 전라도
+          - separator [ref=f80e498]
+          - generic [ref=f80e499]:
+            - heading "맛" [level=5] [ref=f80e500]
+            - generic [ref=f80e501]:
+              - list [ref=f80e502]:
+                - listitem [ref=f80e503]:
+                  - generic [ref=f80e504] [cursor=pointer]: 초코
+                - listitem [ref=f80e506]:
+                  - generic [ref=f80e507] [cursor=pointer]: 허니/메이플
+                - listitem [ref=f80e509]:
+                  - generic [ref=f80e510] [cursor=pointer]: 시나몬
+                - listitem [ref=f80e512]:
+                  - generic: 모카
+                - listitem [ref=f80e513]:
+                  - generic [ref=f80e514] [cursor=pointer]: 과일/야채
+                - listitem:
+                  - generic [ref=f80e516] [cursor=pointer]: 견과류/피넛버터
+                - listitem:
+                  - generic: 누룽지
+                - listitem:
+                  - generic [ref=f80e518] [cursor=pointer]: 기타맛
+              - generic [ref=f80e520] [cursor=pointer]: + 더보기
+          - separator [ref=f80e521]
+          - generic [ref=f80e522]:
+            - heading "곡물유형" [level=5] [ref=f80e523]
+            - list [ref=f80e525]:
+              - listitem [ref=f80e526]:
+                - generic [ref=f80e527] [cursor=pointer]: 옥수수/콘
+              - listitem [ref=f80e529]:
+                - generic [ref=f80e530] [cursor=pointer]: 귀리/오트
+              - listitem [ref=f80e532]:
+                - generic [ref=f80e533] [cursor=pointer]: 쌀/라이스
+              - listitem [ref=f80e535]:
+                - generic [ref=f80e536] [cursor=pointer]: 현미
+              - listitem [ref=f80e538]:
+                - generic: 퀴노아
+              - listitem [ref=f80e539]:
+                - generic [ref=f80e540] [cursor=pointer]: 혼합
+          - separator [ref=f80e542]
+          - generic [ref=f80e543]:
+            - heading "간편식" [level=5] [ref=f80e544]
+            - list [ref=f80e546]:
+              - listitem [ref=f80e547]:
+                - generic [ref=f80e548] [cursor=pointer]: 즉석섭취음료
+              - listitem [ref=f80e550]:
+                - generic [ref=f80e551] [cursor=pointer]: 즉석섭취식품
+              - listitem [ref=f80e553]:
+                - generic [ref=f80e554] [cursor=pointer]: 즉석조리식품
+              - listitem [ref=f80e556]:
+                - generic [ref=f80e557] [cursor=pointer]: 밀키트
+          - separator [ref=f80e559]
+          - generic [ref=f80e560]:
+            - heading "설탕함량" [level=5] [ref=f80e561]
+            - list [ref=f80e563]:
+              - listitem [ref=f80e564]:
+                - generic [ref=f80e565] [cursor=pointer]: 무설탕
+              - listitem [ref=f80e567]:
+                - generic [ref=f80e568] [cursor=pointer]: 저설탕
+              - listitem [ref=f80e570]:
+                - generic [ref=f80e571] [cursor=pointer]: 설탕첨가
+              - listitem [ref=f80e573]:
+                - generic [ref=f80e574] [cursor=pointer]: 당 첨가
+          - separator [ref=f80e576]
+          - generic [ref=f80e577]:
+            - heading "곡물 외 혼합물" [level=5] [ref=f80e578]
+            - list [ref=f80e580]:
+              - listitem [ref=f80e581]:
+                - generic [ref=f80e582] [cursor=pointer]: 과일/채소
+              - listitem [ref=f80e584]:
+                - generic [ref=f80e585] [cursor=pointer]: 견과/넛츠
+              - listitem [ref=f80e587]:
+                - generic [ref=f80e588] [cursor=pointer]: 단백질/프로틴
+          - separator [ref=f80e590]
+          - generic [ref=f80e591]:
+            - heading "별점" [level=5] [ref=f80e592]
+            - list [ref=f80e594]:
+              - listitem [ref=f80e595]:
+                - generic "전체" [ref=f80e596]: 별점전체
+              - listitem [ref=f80e597]:
+                - generic "4점 이상" [ref=f80e598]:
+                  - generic [ref=f80e599] [cursor=pointer]
+                  - text: 4점 이상
+              - listitem [ref=f80e600]:
+                - generic "3점 이상" [ref=f80e601]:
+                  - generic [ref=f80e602] [cursor=pointer]
+                  - text: 3점 이상
+              - listitem [ref=f80e603]:
+                - generic "2점 이상" [ref=f80e604]:
+                  - generic [ref=f80e605] [cursor=pointer]
+                  - text: 2점 이상
+              - listitem [ref=f80e606]:
+                - generic "1점 이상" [ref=f80e607]:
+                  - generic [ref=f80e608] [cursor=pointer]
+                  - text: 1점 이상
+          - separator [ref=f80e609]
+          - generic [ref=f80e610]:
+            - heading "가격" [level=5] [ref=f80e611]
+            - list [ref=f80e613]:
+              - listitem [ref=f80e614]:
+                - generic "priceFilter" [ref=f80e615]: 가격 전체
+              - listitem [ref=f80e616]:
+                - generic "priceFilter" [ref=f80e617]: 9천원 이하
+              - listitem [ref=f80e618]:
+                - generic "priceFilter" [ref=f80e619]: 9천원~1만 8천원
+              - listitem [ref=f80e620]:
+                - generic "priceFilter" [ref=f80e621]: 1만 8천원~2만 7천원
+              - listitem [ref=f80e622]:
+                - generic "priceFilter" [ref=f80e623]: 2만 7천원~3만 6천원
+              - listitem [ref=f80e624]:
+                - generic "priceFilter" [ref=f80e625]: 3만 6천원 이상
+            - generic [ref=f80e626]:
+              - generic [ref=f80e627]:
+                - textbox "minPrice" [ref=f80e628]
+                - generic [ref=f80e629]: ~
+                - textbox "maxPrice" [ref=f80e630]
+                - text: 원
+              - generic "priceFilter" [ref=f80e631]: 검색
+          - separator [ref=f80e632]
+        - generic [ref=f80e635]:
+          - generic [ref=f80e636]: 현재 검색 결과에 만족하셨나요?
+          - button [ref=f80e637] [cursor=pointer]
+          - button [ref=f80e638] [cursor=pointer]
+          - generic [ref=f80e639]:
+            - paragraph [ref=f80e640]: 어떤 문제가 있었나요?
+            - list [ref=f80e641]:
+              - listitem [ref=f80e642] [cursor=pointer]: 기타 원하는 옵션이 없어요
+      - generic [ref=f80e643]:
+        - generic [ref=f80e644]:
+          - heading [level=1] [ref=f80e645]:
+            - strong [ref=f80e646]: "'오트밀'"
+            - text: 에 대한 검색결과
+          - generic [ref=f80e647]:
+            - text: "선택한 필터:"
+            - link "로켓배송 삭제" [ref=f80e649] [cursor=pointer]:
+              - /url: "#"
+              - text: 로켓배송
+              - generic [ref=f80e650]: 삭제
+          - generic [ref=f80e651]:
+            - generic [ref=f80e654]:
+              - checkbox "배송비 포함" [ref=f80e655] [cursor=pointer]
+              - generic [ref=f80e658]: 배송비 포함
+            - list [ref=f80e662]:
+              - listitem [ref=f80e663]:
+                - radio "쿠팡 랭킹순" [ref=f80e664]
+                - generic [ref=f80e665] [cursor=pointer]: 쿠팡 랭킹순
+                - generic [ref=f80e666]: 설명
+              - listitem [ref=f80e667]:
+                - radio "낮은가격순" [checked] [ref=f80e668]
+                - generic [ref=f80e669] [cursor=pointer]: 낮은가격순
+              - listitem [ref=f80e670]:
+                - radio "높은가격순" [ref=f80e671]
+                - generic [ref=f80e672] [cursor=pointer]: 높은가격순
+              - listitem [ref=f80e673]:
+                - radio "판매량순" [ref=f80e674]
+                - generic [ref=f80e675] [cursor=pointer]: 판매량순
+              - listitem [ref=f80e676]:
+                - radio "최신순" [ref=f80e677]
+                - generic [ref=f80e678] [cursor=pointer]: 최신순
+        - generic [ref=f80e683]:
+          - link [ref=f80e685] [cursor=pointer]:
+            - /url: https://shop.coupang.com/maeil/239335?source=brandstore_display_ads&adType=DA&eventId=iGP5S1PwvLdQzslW
+            - img "11767991" [ref=f80e686]
+          - link [ref=f80e688] [cursor=pointer]:
+            - /url: https://shop.coupang.com/maeil/528164?source=brandstore_display_ads&adType=DA&eventId=htuAm906PLafYDrt
+            - img "11767993" [ref=f80e689]
+          - generic:
+            - link "11767999":
+              - /url: https://shop.coupang.com/maeil/244834?source=brandstore_display_ads&adType=DA&eventId=5oHexGfXXJJK3vTV
+              - img "11767999"
+          - generic:
+            - link "11767997":
+              - /url: https://shop.coupang.com/maeil/286189?source=brandstore_display_ads&adType=DA&eventId=0AaLPOEr1sxo6wDO
+              - img "11767997"
+        - generic [ref=f80e690]:
+          - list [ref=f80e692]:
+            - listitem [ref=f80e693] [cursor=pointer]:
+              - link "건강한밥상 간편하게 먹는 퀵 오트밀, 500g, 1개 2,790원 (100g당 558원) 내일(토) 새벽 도착 보장 4.5 (94) 최대 140원 적립 최대 140원 적립 1" [ref=f80e694]:
+                - /url: /vp/products/7973231097?itemId=22090624209&vendorItemId=89137624114&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=0&rank=0
+                - figure [ref=f80e695]:
+                  - img "건강한밥상 간편하게 먹는 퀵 오트밀, 500g, 1개" [ref=f80e696]
+                - generic [ref=f80e697]:
+                  - generic [ref=f80e699]: 건강한밥상 간편하게 먹는 퀵 오트밀, 500g, 1개
+                  - generic [ref=f80e702]:
+                    - generic [ref=f80e703]: 2,790원
+                    - generic [ref=f80e704]: (100g당 558원)
+                  - generic [ref=f80e705]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f80e711]:
+                    - generic "4.5" [ref=f80e712]
+                    - generic [ref=f80e718]: (94)
+                  - generic [ref=f80e721]:
+                    - img "최대 140원 적립" [ref=f80e722]
+                    - generic [ref=f80e723]: 최대 140원 적립
+                  - generic [ref=f80e724]: "1"
+            - listitem [ref=f80e725] [cursor=pointer]:
+              - link "건강곡간 부드러워 먹기편한 퀵 오트밀 통, 600g, 1개 2,980원 (100g당 497원) 내일(토) 새벽 도착 보장 4.5 (27) 최대 149원 적립 최대 149원 적립 2" [ref=f80e726]:
+                - /url: /vp/products/7973231050?itemId=22090624064&vendorItemId=89137624022&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=1&rank=1
+                - figure [ref=f80e727]:
+                  - img "건강곡간 부드러워 먹기편한 퀵 오트밀 통, 600g, 1개" [ref=f80e728]
+                - generic [ref=f80e729]:
+                  - generic [ref=f80e731]: 건강곡간 부드러워 먹기편한 퀵 오트밀 통, 600g, 1개
+                  - generic [ref=f80e734]:
+                    - generic [ref=f80e735]: 2,980원
+                    - generic [ref=f80e736]: (100g당 497원)
+                  - generic [ref=f80e737]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f80e743]:
+                    - generic "4.5" [ref=f80e744]
+                    - generic [ref=f80e750]: (27)
+                  - generic [ref=f80e753]:
+                    - img "최대 149원 적립" [ref=f80e754]
+                    - generic [ref=f80e755]: 최대 149원 적립
+                  - generic [ref=f80e756]: "2"
+            - listitem [ref=f80e757] [cursor=pointer]:
+              - link "냉장고쏙 롤드 오트, 600g, 1개 6,980원 48% 3,590원 (100g당 598원) 내일(토) 새벽 도착 보장 5 (5,291) 최대 180원 적립 최대 180원 적립 3" [ref=f80e758]:
+                - /url: /vp/products/6659211390?itemId=16754688645&vendorItemId=83936236375&pickType=COU_PICK&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=2&rank=2
+                - figure [ref=f80e759]:
+                  - img "냉장고쏙 롤드 오트, 600g, 1개" [ref=f80e760]
+                - generic [ref=f80e761]:
+                  - generic [ref=f80e766]: 냉장고쏙 롤드 오트, 600g, 1개
+                  - generic [ref=f80e767]:
+                    - deletion [ref=f80e769]: 6,980원
+                    - generic [ref=f80e771]:
+                      - generic [ref=f80e772]: 48%
+                      - generic [ref=f80e773]: 3,590원
+                      - generic [ref=f80e774]: (100g당 598원)
+                  - generic [ref=f80e775]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f80e781]:
+                    - generic "5" [ref=f80e782]
+                    - generic [ref=f80e788]: (5,291)
+                  - generic [ref=f80e791]:
+                    - img "최대 180원 적립" [ref=f80e792]
+                    - generic [ref=f80e793]: 최대 180원 적립
+                  - generic [ref=f80e794]: "3"
+            - listitem [ref=f80e795] [cursor=pointer]:
+              - link "노던 골드 오리지널 오트밀, 510g, 1개 9,900원 50% 4,900원 (100g당 961원) 내일(토) 도착 보장 4.5 (1,183) 최대 245원 적립 최대 245원 적립 4" [ref=f80e796]:
+                - /url: /vp/products/6290698187?itemId=12492575291&vendorItemId=95983110873&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=3&rank=3
+                - figure [ref=f80e797]:
+                  - img "노던 골드 오리지널 오트밀, 510g, 1개" [ref=f80e798]
+                - generic [ref=f80e799]:
+                  - generic [ref=f80e801]: 노던 골드 오리지널 오트밀, 510g, 1개
+                  - generic [ref=f80e802]:
+                    - deletion [ref=f80e804]: 9,900원
+                    - generic [ref=f80e806]:
+                      - generic [ref=f80e807]: 50%
+                      - generic [ref=f80e808]: 4,900원
+                      - generic [ref=f80e809]: (100g당 961원)
+                  - generic [ref=f80e810]: 내일(토) 도착 보장
+                  - generic [ref=f80e816]:
+                    - generic "4.5" [ref=f80e817]
+                    - generic [ref=f80e823]: (1,183)
+                  - generic [ref=f80e826]:
+                    - img "최대 245원 적립" [ref=f80e827]
+                    - generic [ref=f80e828]: 최대 245원 적립
+                  - generic [ref=f80e829]: "4"
+            - listitem [ref=f80e830] [cursor=pointer]:
+              - link "대구농산 건강한밥상 간편하게 먹는 영양한컵 롤드오트밀, 1kg, 1개 5,080원 (100g당 508원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (2,402) 최대 254원 적립 최대 254원 적립 5" [ref=f80e831]:
+                - /url: /vp/products/7883912455?itemId=21567448784&vendorItemId=88619329083&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=4&rank=4
+                - figure [ref=f80e832]:
+                  - img "대구농산 건강한밥상 간편하게 먹는 영양한컵 롤드오트밀, 1kg, 1개" [ref=f80e833]
+                - generic [ref=f80e834]:
+                  - generic [ref=f80e836]: 대구농산 건강한밥상 간편하게 먹는 영양한컵 롤드오트밀, 1kg, 1개
+                  - generic [ref=f80e839]:
+                    - generic [ref=f80e840]: 5,080원
+                    - generic [ref=f80e841]: (100g당 508원)
+                  - generic [ref=f80e842]:
+                    - generic [ref=f80e843]: 내일(토) 도착 보장
+                    - generic [ref=f80e847]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f80e849]:
+                    - generic "4.5" [ref=f80e850]
+                    - generic [ref=f80e856]: (2,402)
+                  - generic [ref=f80e859]:
+                    - img "최대 254원 적립" [ref=f80e860]
+                    - generic [ref=f80e861]: 최대 254원 적립
+                  - generic [ref=f80e862]: "5"
+            - listitem [ref=f80e863] [cursor=pointer]:
+              - link "프라임필드 캐나다 유기농 오트밀, 600g, 1개 5,080원 (100g당 847원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (1,059) 최대 254원 적립 최대 254원 적립 6" [ref=f80e864]:
+                - /url: /vp/products/7621225192?itemId=28397890247&vendorItemId=95349254993&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=5&rank=5
+                - figure [ref=f80e865]:
+                  - img "프라임필드 캐나다 유기농 오트밀, 600g, 1개" [ref=f80e866]
+                - generic [ref=f80e867]:
+                  - generic [ref=f80e869]: 프라임필드 캐나다 유기농 오트밀, 600g, 1개
+                  - generic [ref=f80e872]:
+                    - generic [ref=f80e873]: 5,080원
+                    - generic [ref=f80e874]: (100g당 847원)
+                  - generic [ref=f80e875]:
+                    - generic [ref=f80e876]: 내일(토) 도착 보장
+                    - generic [ref=f80e880]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f80e882]:
+                    - generic "4.5" [ref=f80e883]
+                    - generic [ref=f80e889]: (1,059)
+                  - generic [ref=f80e892]:
+                    - img "최대 254원 적립" [ref=f80e893]
+                    - generic [ref=f80e894]: 최대 254원 적립
+                  - generic [ref=f80e895]: "6"
+            - listitem [ref=f80e896] [cursor=pointer]:
+              - link "팔도 컵오트밀 소고기미역, 33g, 3개 7,200원 25% 5,340원 (100g당 5,394원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (1,604) 최대 267원 적립 최대 267원 적립 7" [ref=f80e897]:
+                - /url: /vp/products/8239509605?itemId=23713755081&vendorItemId=90738636428&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=6&rank=6
+                - figure [ref=f80e898]:
+                  - img "팔도 컵오트밀 소고기미역, 33g, 3개" [ref=f80e899]
+                - generic [ref=f80e900]:
+                  - generic [ref=f80e902]: 팔도 컵오트밀 소고기미역, 33g, 3개
+                  - generic [ref=f80e903]:
+                    - deletion [ref=f80e905]: 7,200원
+                    - generic [ref=f80e907]:
+                      - generic [ref=f80e908]: 25%
+                      - generic [ref=f80e909]: 5,340원
+                      - generic [ref=f80e910]: (100g당 5,394원)
+                  - generic [ref=f80e911]:
+                    - generic [ref=f80e912]: 내일(토) 도착 보장
+                    - generic [ref=f80e916]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f80e918]:
+                    - generic "4.5" [ref=f80e919]
+                    - generic [ref=f80e925]: (1,604)
+                  - generic [ref=f80e928]:
+                    - img "최대 267원 적립" [ref=f80e929]
+                    - generic [ref=f80e930]: 최대 267원 적립
+                  - generic [ref=f80e931]: "7"
+            - listitem [ref=f80e932] [cursor=pointer]:
+              - link "팔도 컵오트밀 치킨스프, 33g, 3개 7,200원 25% 5,340원 (100g당 5,394원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (919) 최대 267원 적립 최대 267원 적립 8" [ref=f80e933]:
+                - /url: /vp/products/8239518728?itemId=23765074327&vendorItemId=90738671355&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=7&rank=7
+                - figure [ref=f80e934]:
+                  - img "팔도 컵오트밀 치킨스프, 33g, 3개" [ref=f80e935]
+                - generic [ref=f80e936]:
+                  - generic [ref=f80e938]: 팔도 컵오트밀 치킨스프, 33g, 3개
+                  - generic [ref=f80e939]:
+                    - deletion [ref=f80e941]: 7,200원
+                    - generic [ref=f80e943]:
+                      - generic [ref=f80e944]: 25%
+                      - generic [ref=f80e945]: 5,340원
+                      - generic [ref=f80e946]: (100g당 5,394원)
+                  - generic [ref=f80e947]:
+                    - generic [ref=f80e948]: 내일(토) 도착 보장
+                    - generic [ref=f80e952]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f80e954]:
+                    - generic "4.5" [ref=f80e955]
+                    - generic [ref=f80e961]: (919)
+                  - generic [ref=f80e964]:
+                    - img "최대 267원 적립" [ref=f80e965]
+                    - generic [ref=f80e966]: 최대 267원 적립
+                  - generic [ref=f80e967]: "8"
+            - listitem [ref=f80e968] [cursor=pointer]:
+              - link "곰곰 바로 먹는 퀵오트밀, 50g, 10개 7,900원 31% 5,380원 (100g당 1,076원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (913) 최대 269원 적립 최대 269원 적립 9" [ref=f80e969]:
+                - /url: /vp/products/7941559997?itemId=21875084283&vendorItemId=88923210709&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=8&rank=8
+                - figure [ref=f80e970]:
+                  - img "곰곰 바로 먹는 퀵오트밀, 50g, 10개" [ref=f80e971]
+                - generic [ref=f80e972]:
+                  - generic [ref=f80e974]: 곰곰 바로 먹는 퀵오트밀, 50g, 10개
+                  - generic [ref=f80e975]:
+                    - deletion [ref=f80e977]: 7,900원
+                    - generic [ref=f80e979]:
+                      - generic [ref=f80e980]: 31%
+                      - generic [ref=f80e981]: 5,380원
+                      - generic [ref=f80e982]: (100g당 1,076원)
+                  - generic [ref=f80e983]:
+                    - generic [ref=f80e984]: 내일(토) 도착 보장
+                    - generic [ref=f80e988]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f80e990]:
+                    - generic "4.5" [ref=f80e991]
+                    - generic [ref=f80e997]: (913)
+                  - generic [ref=f80e1000]:
+                    - img "최대 269원 적립" [ref=f80e1001]
+                    - generic [ref=f80e1002]: 최대 269원 적립
+                  - generic [ref=f80e1003]: "9"
+            - listitem [ref=f80e1004] [cursor=pointer]:
+              - link "건강한밥상 간편하게 먹는 퀵 오트밀, 500g, 2개 5,580원 (100g당 558원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (1,658) 최대 279원 적립 최대 279원 적립 10" [ref=f80e1005]:
+                - /url: /vp/products/7883927692?itemId=21690123633&vendorItemId=88739959669&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=9&rank=9
+                - figure [ref=f80e1006]:
+                  - img "건강한밥상 간편하게 먹는 퀵 오트밀, 500g, 2개" [ref=f80e1007]
+                - generic [ref=f80e1008]:
+                  - generic [ref=f80e1010]: 건강한밥상 간편하게 먹는 퀵 오트밀, 500g, 2개
+                  - generic [ref=f80e1013]:
+                    - generic [ref=f80e1014]: 5,580원
+                    - generic [ref=f80e1015]: (100g당 558원)
+                  - generic [ref=f80e1016]:
+                    - generic [ref=f80e1017]: 내일(토) 도착 보장
+                    - generic [ref=f80e1021]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f80e1023]:
+                    - generic "4.5" [ref=f80e1024]
+                    - generic [ref=f80e1030]: (1,658)
+                  - generic [ref=f80e1033]:
+                    - img "최대 279원 적립" [ref=f80e1034]
+                    - generic [ref=f80e1035]: 최대 279원 적립
+                  - generic [ref=f80e1036]: "10"
+            - listitem [ref=f80e1037] [cursor=pointer]:
+              - link "대구농산 건강한밥상 간편하게 먹는 영양한컵 롤드오트밀, 500g, 2개 5,580원 (100g당 558원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 4.5 (2,402) 최대 279원 적립 최대 279원 적립" [ref=f80e1038]:
+                - /url: /vp/products/7883912455?itemId=21567625332&vendorItemId=88619494318&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=10&rank=10
+                - figure [ref=f80e1039]:
+                  - img "대구농산 건강한밥상 간편하게 먹는 영양한컵 롤드오트밀, 500g, 2개" [ref=f80e1040]
+                - generic [ref=f80e1041]:
+                  - generic [ref=f80e1043]: 대구농산 건강한밥상 간편하게 먹는 영양한컵 롤드오트밀, 500g, 2개
+                  - generic [ref=f80e1046]:
+                    - generic [ref=f80e1047]: 5,580원
+                    - generic [ref=f80e1048]: (100g당 558원)
+                  - generic [ref=f80e1049]:
+                    - generic [ref=f80e1050]: 내일(토) 도착 보장
+                    - generic [ref=f80e1054]: 와우는 무료배송 ∙ 무료반품
+                  - generic [ref=f80e1056]:
+                    - generic "4.5" [ref=f80e1057]
+                    - generic [ref=f80e1063]: (2,402)
+                  - generic [ref=f80e1066]:
+                    - img "최대 279원 적립" [ref=f80e1067]
+                    - generic [ref=f80e1068]: 최대 279원 적립
+            - listitem [ref=f80e1069] [cursor=pointer]:
+              - link "이든타운 오트밀 압착귀리, 1kg, 1개 5,700원 (100g당 570원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (6,365) 최대 285원 적립 최대 285원 적립" [ref=f80e1070]:
+                - /url: /vp/products/7154069519?itemId=17991819282&vendorItemId=71059864531&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=11&rank=11
+                - figure [ref=f80e1071]:
+                  - img "이든타운 오트밀 압착귀리, 1kg, 1개" [ref=f80e1072]
+                - generic [ref=f80e1073]:
+                  - generic [ref=f80e1075]: 이든타운 오트밀 압착귀리, 1kg, 1개
+                  - generic [ref=f80e1078]:
+                    - generic [ref=f80e1079]: 5,700원
+                    - generic [ref=f80e1080]: (100g당 570원)
+                  - generic [ref=f80e1081]:
+                    - generic [ref=f80e1082]: 내일(토) 도착 보장
+                    - generic [ref=f80e1086]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f80e1088]:
+                    - generic "5" [ref=f80e1089]
+                    - generic [ref=f80e1095]: (6,365)
+                  - generic [ref=f80e1098]:
+                    - img "최대 285원 적립" [ref=f80e1099]
+                    - generic [ref=f80e1100]: 최대 285원 적립
+            - listitem [ref=f80e1101] [cursor=pointer]:
+              - link "건강곡간 영양가득 롤드오트밀 통, 1.2kg, 1개 5,880원 (100g당 490원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (1,840) 최대 294원 적립 최대 294원 적립" [ref=f80e1102]:
+                - /url: /vp/products/7892244190?itemId=21610635463&vendorItemId=88661894773&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=12&rank=12
+                - figure [ref=f80e1103]:
+                  - img "건강곡간 영양가득 롤드오트밀 통, 1.2kg, 1개" [ref=f80e1104]
+                - generic [ref=f80e1105]:
+                  - generic [ref=f80e1107]: 건강곡간 영양가득 롤드오트밀 통, 1.2kg, 1개
+                  - generic [ref=f80e1110]:
+                    - generic [ref=f80e1111]: 5,880원
+                    - generic [ref=f80e1112]: (100g당 490원)
+                  - generic [ref=f80e1113]:
+                    - generic [ref=f80e1114]: 내일(토) 도착 보장
+                    - generic [ref=f80e1118]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f80e1120]:
+                    - generic "4.5" [ref=f80e1121]
+                    - generic [ref=f80e1127]: (1,840)
+                  - generic [ref=f80e1130]:
+                    - img "최대 294원 적립" [ref=f80e1131]
+                    - generic [ref=f80e1132]: 최대 294원 적립
+            - listitem [ref=f80e1133] [cursor=pointer]:
+              - link "건강곡간 부드러워 먹기편한 퀵 오트밀 통, 1.2kg, 1개 5,880원 (100g당 490원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 4.5 (1,812) 최대 294원 적립 최대 294원 적립" [ref=f80e1134]:
+                - /url: /vp/products/7892244227?itemId=21597333403&vendorItemId=88648859736&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=13&rank=13
+                - figure [ref=f80e1135]:
+                  - img "건강곡간 부드러워 먹기편한 퀵 오트밀 통, 1.2kg, 1개" [ref=f80e1136]
+                - generic [ref=f80e1137]:
+                  - generic [ref=f80e1139]: 건강곡간 부드러워 먹기편한 퀵 오트밀 통, 1.2kg, 1개
+                  - generic [ref=f80e1142]:
+                    - generic [ref=f80e1143]: 5,880원
+                    - generic [ref=f80e1144]: (100g당 490원)
+                  - generic [ref=f80e1145]:
+                    - generic [ref=f80e1146]: 내일(토) 도착 보장
+                    - generic [ref=f80e1150]: 와우는 무료배송 ∙ 무료반품
+                  - generic [ref=f80e1152]:
+                    - generic "4.5" [ref=f80e1153]
+                    - generic [ref=f80e1159]: (1,812)
+                  - generic [ref=f80e1162]:
+                    - img "최대 294원 적립" [ref=f80e1163]
+                    - generic [ref=f80e1164]: 최대 294원 적립
+            - listitem [ref=f80e1165] [cursor=pointer]:
+              - link "건강곡간 강진 귀리로 만든 국산 오트밀, 600g, 1개 5,900원 (100g당 983원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4 (118) 최대 295원 적립 최대 295원 적립" [ref=f80e1166]:
+                - /url: /vp/products/9562405149?itemId=28536427631&vendorItemId=95481567995&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=14&rank=14
+                - figure [ref=f80e1167]:
+                  - img "건강곡간 강진 귀리로 만든 국산 오트밀, 600g, 1개" [ref=f80e1168]
+                - generic [ref=f80e1169]:
+                  - generic [ref=f80e1171]: 건강곡간 강진 귀리로 만든 국산 오트밀, 600g, 1개
+                  - generic [ref=f80e1174]:
+                    - generic [ref=f80e1175]: 5,900원
+                    - generic [ref=f80e1176]: (100g당 983원)
+                  - generic [ref=f80e1177]:
+                    - generic [ref=f80e1178]: 내일(토) 도착 보장
+                    - generic [ref=f80e1182]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f80e1184]:
+                    - generic "4" [ref=f80e1185]
+                    - generic [ref=f80e1191]: (118)
+                  - generic [ref=f80e1194]:
+                    - img "최대 295원 적립" [ref=f80e1195]
+                    - generic [ref=f80e1196]: 최대 295원 적립
+            - listitem [ref=f80e1197] [cursor=pointer]:
+              - link "건강곡간 부드러워 먹기편한 퀵 오트밀 통, 600g, 2개 5,960원 (100g당 497원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (1,812) 최대 298원 적립 최대 298원 적립" [ref=f80e1198]:
+                - /url: /vp/products/7892244227?itemId=22773371925&vendorItemId=88662092563&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=15&rank=15
+                - figure [ref=f80e1199]:
+                  - img "건강곡간 부드러워 먹기편한 퀵 오트밀 통, 600g, 2개" [ref=f80e1200]
+                - generic [ref=f80e1201]:
+                  - generic [ref=f80e1203]: 건강곡간 부드러워 먹기편한 퀵 오트밀 통, 600g, 2개
+                  - generic [ref=f80e1206]:
+                    - generic [ref=f80e1207]: 5,960원
+                    - generic [ref=f80e1208]: (100g당 497원)
+                  - generic [ref=f80e1209]:
+                    - generic [ref=f80e1210]: 내일(토) 도착 보장
+                    - generic [ref=f80e1214]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f80e1216]:
+                    - generic "4.5" [ref=f80e1217]
+                    - generic [ref=f80e1223]: (1,812)
+                  - generic [ref=f80e1226]:
+                    - img "최대 298원 적립" [ref=f80e1227]
+                    - generic [ref=f80e1228]: 최대 298원 적립
+            - listitem [ref=f80e1229] [cursor=pointer]:
+              - link "건강곡간 영양가득 롤드오트밀 통, 600g, 2개 5,960원 (100g당 497원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 4.5 (1,840) 최대 298원 적립 최대 298원 적립" [ref=f80e1230]:
+                - /url: /vp/products/7892244190?itemId=21667483952&vendorItemId=88718066983&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=16&rank=16
+                - figure [ref=f80e1231]:
+                  - img "건강곡간 영양가득 롤드오트밀 통, 600g, 2개" [ref=f80e1232]
+                - generic [ref=f80e1233]:
+                  - generic [ref=f80e1235]: 건강곡간 영양가득 롤드오트밀 통, 600g, 2개
+                  - generic [ref=f80e1238]:
+                    - generic [ref=f80e1239]: 5,960원
+                    - generic [ref=f80e1240]: (100g당 497원)
+                  - generic [ref=f80e1241]:
+                    - generic [ref=f80e1242]: 내일(토) 도착 보장
+                    - generic [ref=f80e1246]: 와우는 무료배송 ∙ 무료반품
+                  - generic [ref=f80e1248]:
+                    - generic "4.5" [ref=f80e1249]
+                    - generic [ref=f80e1255]: (1,840)
+                  - generic [ref=f80e1258]:
+                    - img "최대 298원 적립" [ref=f80e1259]
+                    - generic [ref=f80e1260]: 최대 298원 적립
+            - listitem [ref=f80e1261] [cursor=pointer]:
+              - link "자연다움 바로 먹는 퀵오트밀, 50g, 10개 5,980원 (100g당 1,196원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (32,998) 최대 299원 적립 최대 299원 적립" [ref=f80e1262]:
+                - /url: /vp/products/6139202874?itemId=5132199869&vendorItemId=72441603418&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=17&rank=17
+                - figure [ref=f80e1263]:
+                  - img "자연다움 바로 먹는 퀵오트밀, 50g, 10개" [ref=f80e1264]
+                - generic [ref=f80e1265]:
+                  - generic [ref=f80e1267]: 자연다움 바로 먹는 퀵오트밀, 50g, 10개
+                  - generic [ref=f80e1270]:
+                    - generic [ref=f80e1271]: 5,980원
+                    - generic [ref=f80e1272]: (100g당 1,196원)
+                  - generic [ref=f80e1273]:
+                    - generic [ref=f80e1274]: 내일(토) 도착 보장
+                    - generic [ref=f80e1278]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f80e1280]:
+                    - generic "5" [ref=f80e1281]
+                    - generic [ref=f80e1287]: (32,998)
+                  - generic [ref=f80e1290]:
+                    - img "최대 299원 적립" [ref=f80e1291]
+                    - generic [ref=f80e1292]: 최대 299원 적립
+            - listitem [ref=f80e1293] [cursor=pointer]:
+              - link "두보식품 오트라이프 퀵오트밀, 600g, 1개 5,980원 (100g당 997원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (4,439) 최대 299원 적립 최대 299원 적립" [ref=f80e1294]:
+                - /url: /vp/products/7360068641?itemId=18960417519&vendorItemId=86086352863&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=18&rank=18
+                - figure [ref=f80e1295]:
+                  - img "두보식품 오트라이프 퀵오트밀, 600g, 1개" [ref=f80e1296]
+                - generic [ref=f80e1297]:
+                  - generic [ref=f80e1299]: 두보식품 오트라이프 퀵오트밀, 600g, 1개
+                  - generic [ref=f80e1302]:
+                    - generic [ref=f80e1303]: 5,980원
+                    - generic [ref=f80e1304]: (100g당 997원)
+                  - generic [ref=f80e1305]:
+                    - generic [ref=f80e1306]: 내일(토) 도착 보장
+                    - generic [ref=f80e1310]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f80e1312]:
+                    - generic "5" [ref=f80e1313]
+                    - generic [ref=f80e1319]: (4,439)
+                  - generic [ref=f80e1322]:
+                    - img "최대 299원 적립" [ref=f80e1323]
+                    - generic [ref=f80e1324]: 최대 299원 적립
+            - listitem [ref=f80e1325] [cursor=pointer]:
+              - link "바른곡물 오트밀 캐나다산, 820g, 1개 5,980원 (100g당 729원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (1,305) 최대 299원 적립 최대 299원 적립" [ref=f80e1326]:
+                - /url: /vp/products/8588683646?itemId=2494756724&vendorItemId=70487945850&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=19&rank=19
+                - figure [ref=f80e1327]:
+                  - img "바른곡물 오트밀 캐나다산, 820g, 1개" [ref=f80e1328]
+                - generic [ref=f80e1329]:
+                  - generic [ref=f80e1331]: 바른곡물 오트밀 캐나다산, 820g, 1개
+                  - generic [ref=f80e1334]:
+                    - generic [ref=f80e1335]: 5,980원
+                    - generic [ref=f80e1336]: (100g당 729원)
+                  - generic [ref=f80e1337]:
+                    - generic [ref=f80e1338]: 내일(토) 도착 보장
+                    - generic [ref=f80e1342]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f80e1344]:
+                    - generic "4.5" [ref=f80e1345]
+                    - generic [ref=f80e1351]: (1,305)
+                  - generic [ref=f80e1354]:
+                    - img "최대 299원 적립" [ref=f80e1355]
+                    - generic [ref=f80e1356]: 최대 299원 적립
+            - listitem [ref=f80e1357] [cursor=pointer]:
+              - link "라이트잇 바로먹는 퀵오트밀 눌린귀리, 1kg, 1통 9,000원 33% 5,980원 (100g당 598원) 내일(토) 새벽 도착 보장 5 (9,977) 최대 299원 적립 최대 299원 적립" [ref=f80e1358]:
+                - /url: /vp/products/6258501636?itemId=12729088799&vendorItemId=79995679002&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=20&rank=20
+                - figure [ref=f80e1359]:
+                  - img "라이트잇 바로먹는 퀵오트밀 눌린귀리, 1kg, 1통" [ref=f80e1360]
+                - generic [ref=f80e1361]:
+                  - generic [ref=f80e1363]: 라이트잇 바로먹는 퀵오트밀 눌린귀리, 1kg, 1통
+                  - generic [ref=f80e1364]:
+                    - deletion [ref=f80e1366]: 9,000원
+                    - generic [ref=f80e1368]:
+                      - generic [ref=f80e1369]: 33%
+                      - generic [ref=f80e1370]: 5,980원
+                      - generic [ref=f80e1371]: (100g당 598원)
+                  - generic [ref=f80e1372]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f80e1378]:
+                    - generic "5" [ref=f80e1379]
+                    - generic [ref=f80e1385]: (9,977)
+                  - generic [ref=f80e1388]:
+                    - img "최대 299원 적립" [ref=f80e1389]
+                    - generic [ref=f80e1390]: 최대 299원 적립
+            - listitem [ref=f80e1391] [cursor=pointer]:
+              - link "팔도 컵오트밀 치킨스프, 33g, 4개 9,600원 31% 6,620원 (100g당 5,015원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (919) 최대 331원 적립 최대 331원 적립" [ref=f80e1392]:
+                - /url: /vp/products/8239518728?itemId=23765200037&vendorItemId=90738671425&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=21&rank=21
+                - figure [ref=f80e1393]:
+                  - img "팔도 컵오트밀 치킨스프, 33g, 4개" [ref=f80e1394]
+                - generic [ref=f80e1395]:
+                  - generic [ref=f80e1397]: 팔도 컵오트밀 치킨스프, 33g, 4개
+                  - generic [ref=f80e1398]:
+                    - deletion [ref=f80e1400]: 9,600원
+                    - generic [ref=f80e1402]:
+                      - generic [ref=f80e1403]: 31%
+                      - generic [ref=f80e1404]: 6,620원
+                      - generic [ref=f80e1405]: (100g당 5,015원)
+                  - generic [ref=f80e1406]:
+                    - generic [ref=f80e1407]: 내일(토) 도착 보장
+                    - generic [ref=f80e1411]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f80e1413]:
+                    - generic "4.5" [ref=f80e1414]
+                    - generic [ref=f80e1420]: (919)
+                  - generic [ref=f80e1423]:
+                    - img "최대 331원 적립" [ref=f80e1424]
+                    - generic [ref=f80e1425]: 최대 331원 적립
+            - listitem [ref=f80e1426] [cursor=pointer]:
+              - link "팔도 컵오트밀 소고기미역, 33g, 4개 9,600원 31% 6,620원 (100g당 5,015원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (1,604) 최대 331원 적립 최대 331원 적립" [ref=f80e1427]:
+                - /url: /vp/products/8239509605?itemId=23713755071&vendorItemId=90738636427&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=22&rank=22
+                - figure [ref=f80e1428]:
+                  - img "팔도 컵오트밀 소고기미역, 33g, 4개" [ref=f80e1429]
+                - generic [ref=f80e1430]:
+                  - generic [ref=f80e1432]: 팔도 컵오트밀 소고기미역, 33g, 4개
+                  - generic [ref=f80e1433]:
+                    - deletion [ref=f80e1435]: 9,600원
+                    - generic [ref=f80e1437]:
+                      - generic [ref=f80e1438]: 31%
+                      - generic [ref=f80e1439]: 6,620원
+                      - generic [ref=f80e1440]: (100g당 5,015원)
+                  - generic [ref=f80e1441]:
+                    - generic [ref=f80e1442]: 내일(토) 도착 보장
+                    - generic [ref=f80e1446]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f80e1448]:
+                    - generic "4.5" [ref=f80e1449]
+                    - generic [ref=f80e1455]: (1,604)
+                  - generic [ref=f80e1458]:
+                    - img "최대 331원 적립" [ref=f80e1459]
+                    - generic [ref=f80e1460]: 최대 331원 적립
+            - listitem [ref=f80e1461] [cursor=pointer]:
+              - link "프라임필드 국내산 유기농 오트밀, 600g, 1개 6,900원 (100g당 1,150원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 4 (63) 최대 345원 적립 최대 345원 적립" [ref=f80e1462]:
+                - /url: /vp/products/9557947086?itemId=28520963275&vendorItemId=95468589953&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=23&rank=23
+                - figure [ref=f80e1463]:
+                  - img "프라임필드 국내산 유기농 오트밀, 600g, 1개" [ref=f80e1464]
+                - generic [ref=f80e1465]:
+                  - generic [ref=f80e1467]: 프라임필드 국내산 유기농 오트밀, 600g, 1개
+                  - generic [ref=f80e1470]:
+                    - generic [ref=f80e1471]: 6,900원
+                    - generic [ref=f80e1472]: (100g당 1,150원)
+                  - generic [ref=f80e1473]:
+                    - generic [ref=f80e1474]: 내일(토) 도착 보장
+                    - generic [ref=f80e1478]: 와우는 무료배송 ∙ 무료반품
+                  - generic [ref=f80e1480]:
+                    - generic "4" [ref=f80e1481]
+                    - generic [ref=f80e1487]: (63)
+                  - generic [ref=f80e1490]:
+                    - img "최대 345원 적립" [ref=f80e1491]
+                    - generic [ref=f80e1492]: 최대 345원 적립
+            - listitem [ref=f80e1493] [cursor=pointer]:
+              - link "오트라이프 캐나다 퀵 오트밀, 1kg, 1개 6,900원 (100g당 690원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 5 (4,439) 최대 345원 적립 최대 345원 적립" [ref=f80e1494]:
+                - /url: /vp/products/7360068641?itemId=18960309746&vendorItemId=86086249114&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=24&rank=24
+                - figure [ref=f80e1495]:
+                  - img "오트라이프 캐나다 퀵 오트밀, 1kg, 1개" [ref=f80e1496]
+                - generic [ref=f80e1497]:
+                  - generic [ref=f80e1499]: 오트라이프 캐나다 퀵 오트밀, 1kg, 1개
+                  - generic [ref=f80e1502]:
+                    - generic [ref=f80e1503]: 6,900원
+                    - generic [ref=f80e1504]: (100g당 690원)
+                  - generic [ref=f80e1505]:
+                    - generic [ref=f80e1506]: 내일(토) 도착 보장
+                    - generic [ref=f80e1510]: 와우는 무료배송 ∙ 무료반품
+                  - generic [ref=f80e1512]:
+                    - generic "5" [ref=f80e1513]
+                    - generic [ref=f80e1519]: (4,439)
+                  - generic [ref=f80e1522]:
+                    - img "최대 345원 적립" [ref=f80e1523]
+                    - generic [ref=f80e1524]: 최대 345원 적립
+            - listitem [ref=f80e1525] [cursor=pointer]:
+              - link "헤이오트 카카오프렌즈 현미누룽지 오트밀 12p, 384g, 1개 7,100원 2% 6,900원 (100g당 1,797원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 5 (781) 최대 345원 적립 최대 345원 적립" [ref=f80e1526]:
+                - /url: /vp/products/7493493051?itemId=22696190794&vendorItemId=89731876692&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=25&rank=25
+                - figure [ref=f80e1527]:
+                  - img "헤이오트 카카오프렌즈 현미누룽지 오트밀 12p, 384g, 1개" [ref=f80e1528]
+                - generic [ref=f80e1529]:
+                  - generic [ref=f80e1531]: 헤이오트 카카오프렌즈 현미누룽지 오트밀 12p, 384g, 1개
+                  - generic [ref=f80e1532]:
+                    - deletion [ref=f80e1534]: 7,100원
+                    - generic [ref=f80e1536]:
+                      - generic [ref=f80e1537]: 2%
+                      - generic [ref=f80e1538]: 6,900원
+                      - generic [ref=f80e1539]: (100g당 1,797원)
+                  - generic [ref=f80e1540]:
+                    - generic [ref=f80e1541]: 내일(토) 도착 보장
+                    - generic [ref=f80e1545]: 와우는 무료배송 ∙ 무료반품
+                  - generic [ref=f80e1547]:
+                    - generic "5" [ref=f80e1548]
+                    - generic [ref=f80e1554]: (781)
+                  - generic [ref=f80e1557]:
+                    - img "최대 345원 적립" [ref=f80e1558]
+                    - generic [ref=f80e1559]: 최대 345원 적립
+            - listitem [ref=f80e1560] [cursor=pointer]:
+              - link "헤이오트 카카오프렌즈 고대곡물 씨앗 오트밀 12p, 384g, 1개 7,100원 2% 6,900원 (100g당 1,797원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 5 (303) 최대 345원 적립 최대 345원 적립 품절임박" [ref=f80e1561]:
+                - /url: /vp/products/7494824805?itemId=22618319807&vendorItemId=89659889106&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=26&rank=26
+                - figure [ref=f80e1562]:
+                  - img "헤이오트 카카오프렌즈 고대곡물 씨앗 오트밀 12p, 384g, 1개" [ref=f80e1563]
+                - generic [ref=f80e1564]:
+                  - generic [ref=f80e1566]: 헤이오트 카카오프렌즈 고대곡물 씨앗 오트밀 12p, 384g, 1개
+                  - generic [ref=f80e1567]:
+                    - deletion [ref=f80e1569]: 7,100원
+                    - generic [ref=f80e1571]:
+                      - generic [ref=f80e1572]: 2%
+                      - generic [ref=f80e1573]: 6,900원
+                      - generic [ref=f80e1574]: (100g당 1,797원)
+                  - generic [ref=f80e1575]:
+                    - generic [ref=f80e1576]: 내일(토) 도착 보장
+                    - generic [ref=f80e1580]: 와우는 무료배송 ∙ 무료반품
+                  - generic [ref=f80e1582]:
+                    - generic "5" [ref=f80e1583]
+                    - generic [ref=f80e1589]: (303)
+                  - generic [ref=f80e1592]:
+                    - img "최대 345원 적립" [ref=f80e1593]
+                    - generic [ref=f80e1594]: 최대 345원 적립
+                  - generic [ref=f80e1595]: 품절임박
+            - listitem [ref=f80e1597] [cursor=pointer]:
+              - link "오트밀, 1kg, 1개 6,900원 (100g당 690원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4 (203) 최대 345원 적립 최대 345원 적립 단 4개 남음 빨리 주문하세요!" [ref=f80e1598]:
+                - /url: /vp/products/73906773?itemId=19455772601&vendorItemId=86566330012&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=27&rank=27
+                - figure [ref=f80e1599]:
+                  - img "오트밀, 1kg, 1개" [ref=f80e1600]
+                - generic [ref=f80e1601]:
+                  - generic [ref=f80e1603]: 오트밀, 1kg, 1개
+                  - generic [ref=f80e1606]:
+                    - generic [ref=f80e1607]: 6,900원
+                    - generic [ref=f80e1608]: (100g당 690원)
+                  - generic [ref=f80e1609]:
+                    - generic [ref=f80e1610]: 내일(토) 도착 보장
+                    - generic [ref=f80e1614]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f80e1616]:
+                    - generic "4" [ref=f80e1617]
+                    - generic [ref=f80e1623]: (203)
+                  - generic [ref=f80e1626]:
+                    - img "최대 345원 적립" [ref=f80e1627]
+                    - generic [ref=f80e1628]: 최대 345원 적립
+                  - generic [ref=f80e1629]:
+                    - strong [ref=f80e1630]: 단 4개 남음
+                    - generic [ref=f80e1631]: 빨리 주문하세요!
+            - listitem [ref=f80e1632] [cursor=pointer]:
+              - link "두보식품 오트라이프 국산 오트밀, 600g, 1개 6,900원 (100g당 1,150원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (558) 최대 345원 적립 최대 345원 적립" [ref=f80e1633]:
+                - /url: /vp/products/8180361999?itemId=18815957336&vendorItemId=85946409691&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=28&rank=28
+                - figure [ref=f80e1634]:
+                  - img "두보식품 오트라이프 국산 오트밀, 600g, 1개" [ref=f80e1635]
+                - generic [ref=f80e1636]:
+                  - generic [ref=f80e1638]: 두보식품 오트라이프 국산 오트밀, 600g, 1개
+                  - generic [ref=f80e1641]:
+                    - generic [ref=f80e1642]: 6,900원
+                    - generic [ref=f80e1643]: (100g당 1,150원)
+                  - generic [ref=f80e1644]:
+                    - generic [ref=f80e1645]: 내일(토) 도착 보장
+                    - generic [ref=f80e1649]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f80e1651]:
+                    - generic "4.5" [ref=f80e1652]
+                    - generic [ref=f80e1658]: (558)
+                  - generic [ref=f80e1661]:
+                    - img "최대 345원 적립" [ref=f80e1662]
+                    - generic [ref=f80e1663]: 최대 345원 적립
+            - listitem [ref=f80e1664] [cursor=pointer]:
+              - link "대구농산 냉장고 쏙 롤드 오트, 1.2kg, 1개 9,900원 29% 6,980원 (100g당 582원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 4.5 (39,556) 최대 349원 적립 최대 349원 적립" [ref=f80e1665]:
+                - /url: /vp/products/6386799209?itemId=13595060983&vendorItemId=80848192583&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=29&rank=29
+                - figure [ref=f80e1666]:
+                  - img "대구농산 냉장고 쏙 롤드 오트, 1.2kg, 1개" [ref=f80e1667]
+                - generic [ref=f80e1668]:
+                  - generic [ref=f80e1670]: 대구농산 냉장고 쏙 롤드 오트, 1.2kg, 1개
+                  - generic [ref=f80e1671]:
+                    - deletion [ref=f80e1673]: 9,900원
+                    - generic [ref=f80e1675]:
+                      - generic [ref=f80e1676]: 29%
+                      - generic [ref=f80e1677]: 6,980원
+                      - generic [ref=f80e1678]: (100g당 582원)
+                  - generic [ref=f80e1679]:
+                    - generic [ref=f80e1680]: 내일(토) 도착 보장
+                    - generic [ref=f80e1684]: 와우는 무료배송 ∙ 무료반품
+                  - generic [ref=f80e1686]:
+                    - generic "4.5" [ref=f80e1687]
+                    - generic [ref=f80e1693]: (39,556)
+                  - generic [ref=f80e1696]:
+                    - img "최대 349원 적립" [ref=f80e1697]
+                    - generic [ref=f80e1698]: 최대 349원 적립
+            - listitem [ref=f80e1699] [cursor=pointer]:
+              - link "대구농산 건강한밥상 간편하게 먹는 영양한컵 롤드오트밀, 2kg, 1개 6,980원 (100g당 349원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (2,402) 최대 349원 적립 최대 349원 적립" [ref=f80e1700]:
+                - /url: /vp/products/7883912455?itemId=21610599601&vendorItemId=88661862227&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=30&rank=30
+                - figure [ref=f80e1701]:
+                  - img "대구농산 건강한밥상 간편하게 먹는 영양한컵 롤드오트밀, 2kg, 1개" [ref=f80e1702]
+                - generic [ref=f80e1703]:
+                  - generic [ref=f80e1705]: 대구농산 건강한밥상 간편하게 먹는 영양한컵 롤드오트밀, 2kg, 1개
+                  - generic [ref=f80e1708]:
+                    - generic [ref=f80e1709]: 6,980원
+                    - generic [ref=f80e1710]: (100g당 349원)
+                  - generic [ref=f80e1711]:
+                    - generic [ref=f80e1712]: 내일(토) 도착 보장
+                    - generic [ref=f80e1716]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f80e1718]:
+                    - generic "4.5" [ref=f80e1719]
+                    - generic [ref=f80e1725]: (2,402)
+                  - generic [ref=f80e1728]:
+                    - img "최대 349원 적립" [ref=f80e1729]
+                    - generic [ref=f80e1730]: 최대 349원 적립
+            - listitem [ref=f80e1731] [cursor=pointer]:
+              - link "월드그린 퀵오트밀, 2kg, 1개 6,980원 (100g당 349원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (45) 최대 349원 적립 최대 349원 적립" [ref=f80e1732]:
+                - /url: /vp/products/9519529774?itemId=28376807724&vendorItemId=95329042515&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=31&rank=31
+                - figure [ref=f80e1733]:
+                  - img "월드그린 퀵오트밀, 2kg, 1개" [ref=f80e1734]
+                - generic [ref=f80e1735]:
+                  - generic [ref=f80e1737]: 월드그린 퀵오트밀, 2kg, 1개
+                  - generic [ref=f80e1740]:
+                    - generic [ref=f80e1741]: 6,980원
+                    - generic [ref=f80e1742]: (100g당 349원)
+                  - generic [ref=f80e1743]:
+                    - generic [ref=f80e1744]: 내일(토) 도착 보장
+                    - generic [ref=f80e1748]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f80e1750]:
+                    - generic "4.5" [ref=f80e1751]
+                    - generic [ref=f80e1757]: (45)
+                  - generic [ref=f80e1760]:
+                    - img "최대 349원 적립" [ref=f80e1761]
+                    - generic [ref=f80e1762]: 최대 349원 적립
+            - listitem [ref=f80e1763] [cursor=pointer]:
+              - link "건강한밥상 간편하게 먹는 퀵 오트밀, 2kg, 1개 6,980원 (100g당 349원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (1,658) 최대 349원 적립 최대 349원 적립" [ref=f80e1764]:
+                - /url: /vp/products/7883927692?itemId=21610724384&vendorItemId=88661983291&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=32&rank=32
+                - figure [ref=f80e1765]:
+                  - img "건강한밥상 간편하게 먹는 퀵 오트밀, 2kg, 1개" [ref=f80e1766]
+                - generic [ref=f80e1767]:
+                  - generic [ref=f80e1769]: 건강한밥상 간편하게 먹는 퀵 오트밀, 2kg, 1개
+                  - generic [ref=f80e1772]:
+                    - generic [ref=f80e1773]: 6,980원
+                    - generic [ref=f80e1774]: (100g당 349원)
+                  - generic [ref=f80e1775]:
+                    - generic [ref=f80e1776]: 내일(토) 도착 보장
+                    - generic [ref=f80e1780]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f80e1782]:
+                    - generic "4.5" [ref=f80e1783]
+                    - generic [ref=f80e1789]: (1,658)
+                  - generic [ref=f80e1792]:
+                    - img "최대 349원 적립" [ref=f80e1793]
+                    - generic [ref=f80e1794]: 최대 349원 적립
+            - listitem [ref=f80e1795] [cursor=pointer]:
+              - link "대구농산 냉장고쏙 퀵 롤드 오트, 1.2kg, 1개 9,900원 29% 6,980원 (100g당 582원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (9,905) 최대 349원 적립 최대 349원 적립" [ref=f80e1796]:
+                - /url: /vp/products/8243652362?itemId=24299808224&vendorItemId=80848183872&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=33&rank=33
+                - figure [ref=f80e1797]:
+                  - img "대구농산 냉장고쏙 퀵 롤드 오트, 1.2kg, 1개" [ref=f80e1798]
+                - generic [ref=f80e1799]:
+                  - generic [ref=f80e1801]: 대구농산 냉장고쏙 퀵 롤드 오트, 1.2kg, 1개
+                  - generic [ref=f80e1802]:
+                    - deletion [ref=f80e1804]: 9,900원
+                    - generic [ref=f80e1806]:
+                      - generic [ref=f80e1807]: 29%
+                      - generic [ref=f80e1808]: 6,980원
+                      - generic [ref=f80e1809]: (100g당 582원)
+                  - generic [ref=f80e1810]:
+                    - generic [ref=f80e1811]: 내일(토) 도착 보장
+                    - generic [ref=f80e1815]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f80e1817]:
+                    - generic "4.5" [ref=f80e1818]
+                    - generic [ref=f80e1824]: (9,905)
+                  - generic [ref=f80e1827]:
+                    - img "최대 349원 적립" [ref=f80e1828]
+                    - generic [ref=f80e1829]: 최대 349원 적립
+            - listitem [ref=f80e1830] [cursor=pointer]:
+              - link "오트라이프 유기농 오트밀, 600g, 1개 7,980원 12% 6,980원 (100g당 1,163원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (145) 최대 349원 적립 최대 349원 적립" [ref=f80e1831]:
+                - /url: /vp/products/8219682340?itemId=23621719548&vendorItemId=90647319671&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=34&rank=34
+                - figure [ref=f80e1832]:
+                  - img "오트라이프 유기농 오트밀, 600g, 1개" [ref=f80e1833]
+                - generic [ref=f80e1834]:
+                  - generic [ref=f80e1836]: 오트라이프 유기농 오트밀, 600g, 1개
+                  - generic [ref=f80e1837]:
+                    - deletion [ref=f80e1839]: 7,980원
+                    - generic [ref=f80e1841]:
+                      - generic [ref=f80e1842]: 12%
+                      - generic [ref=f80e1843]: 6,980원
+                      - generic [ref=f80e1844]: (100g당 1,163원)
+                  - generic [ref=f80e1845]:
+                    - generic [ref=f80e1846]: 내일(토) 도착 보장
+                    - generic [ref=f80e1850]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f80e1852]:
+                    - generic "5" [ref=f80e1853]
+                    - generic [ref=f80e1859]: (145)
+                  - generic [ref=f80e1862]:
+                    - img "최대 349원 적립" [ref=f80e1863]
+                    - generic [ref=f80e1864]: 최대 349원 적립
+            - listitem [ref=f80e1865] [cursor=pointer]:
+              - link "냉장고쏙 롤드 오트, 600g, 2개 13,960원 48% 7,180원 (100g당 598원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (39,556) 최대 359원 적립 최대 359원 적립" [ref=f80e1866]:
+                - /url: /vp/products/6386799209?itemId=23789434836&vendorItemId=86387833680&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=35&rank=35
+                - figure [ref=f80e1867]:
+                  - img "냉장고쏙 롤드 오트, 600g, 2개" [ref=f80e1868]
+                - generic [ref=f80e1869]:
+                  - generic [ref=f80e1871]: 냉장고쏙 롤드 오트, 600g, 2개
+                  - generic [ref=f80e1872]:
+                    - deletion [ref=f80e1874]: 13,960원
+                    - generic [ref=f80e1876]:
+                      - generic [ref=f80e1877]: 48%
+                      - generic [ref=f80e1878]: 7,180원
+                      - generic [ref=f80e1879]: (100g당 598원)
+                  - generic [ref=f80e1880]:
+                    - generic [ref=f80e1881]: 내일(토) 도착 보장
+                    - generic [ref=f80e1885]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f80e1887]:
+                    - generic "4.5" [ref=f80e1888]
+                    - generic [ref=f80e1894]: (39,556)
+                  - generic [ref=f80e1897]:
+                    - img "최대 359원 적립" [ref=f80e1898]
+                    - generic [ref=f80e1899]: 최대 359원 적립
+            - listitem [ref=f80e1900] [cursor=pointer]:
+              - link "플라하반 아이리쉬 포리지 오트밀, 500g, 1개 10,800원 32% 7,300원 (100g당 1,460원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (25,564) 최대 365원 적립 최대 365원 적립" [ref=f80e1901]:
+                - /url: /vp/products/986283?itemId=19241617&vendorItemId=3000239955&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=36&rank=36
+                - figure [ref=f80e1902]:
+                  - img "플라하반 아이리쉬 포리지 오트밀, 500g, 1개" [ref=f80e1903]
+                - generic [ref=f80e1904]:
+                  - generic [ref=f80e1906]: 플라하반 아이리쉬 포리지 오트밀, 500g, 1개
+                  - generic [ref=f80e1907]:
+                    - deletion [ref=f80e1909]: 10,800원
+                    - generic [ref=f80e1911]:
+                      - generic [ref=f80e1912]: 32%
+                      - generic [ref=f80e1913]: 7,300원
+                      - generic [ref=f80e1914]: (100g당 1,460원)
+                  - generic [ref=f80e1915]:
+                    - generic [ref=f80e1916]: 내일(토) 도착 보장
+                    - generic [ref=f80e1920]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f80e1922]:
+                    - generic "5" [ref=f80e1923]
+                    - generic [ref=f80e1929]: (25,564)
+                  - generic [ref=f80e1932]:
+                    - img "최대 365원 적립" [ref=f80e1933]
+                    - generic [ref=f80e1934]: 최대 365원 적립
+            - listitem [ref=f80e1935] [cursor=pointer]:
+              - link "대구농산 간편한 부드러운 오트밀, 1.4kg, 1개 7,480원 (100g당 534원) 내일(토) 새벽 도착 보장 4.5 (27,735) 최대 374원 적립 최대 374원 적립" [ref=f80e1936]:
+                - /url: /vp/products/1290679936?itemId=2426562434&vendorItemId=70420570741&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=37&rank=37
+                - figure [ref=f80e1937]:
+                  - img "대구농산 간편한 부드러운 오트밀, 1.4kg, 1개" [ref=f80e1938]
+                - generic [ref=f80e1939]:
+                  - generic [ref=f80e1941]: 대구농산 간편한 부드러운 오트밀, 1.4kg, 1개
+                  - generic [ref=f80e1944]:
+                    - generic [ref=f80e1945]: 7,480원
+                    - generic [ref=f80e1946]: (100g당 534원)
+                  - generic [ref=f80e1947]: 내일(토) 새벽 도착 보장
+                  - generic [ref=f80e1953]:
+                    - generic "4.5" [ref=f80e1954]
+                    - generic [ref=f80e1960]: (27,735)
+                  - generic [ref=f80e1963]:
+                    - img "최대 374원 적립" [ref=f80e1964]
+                    - generic [ref=f80e1965]: 최대 374원 적립
+            - listitem [ref=f80e1966] [cursor=pointer]:
+              - link "이든타운 유기농 오트밀 퀵롤드오츠, 1kg, 1개 7,500원 (100g당 750원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (7,514) 최대 375원 적립 최대 375원 적립" [ref=f80e1967]:
+                - /url: /vp/products/1805422452?itemId=3071951283&vendorItemId=71059864738&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=38&rank=38
+                - figure [ref=f80e1968]:
+                  - img "이든타운 유기농 오트밀 퀵롤드오츠, 1kg, 1개" [ref=f80e1969]
+                - generic [ref=f80e1970]:
+                  - generic [ref=f80e1972]: 이든타운 유기농 오트밀 퀵롤드오츠, 1kg, 1개
+                  - generic [ref=f80e1975]:
+                    - generic [ref=f80e1976]: 7,500원
+                    - generic [ref=f80e1977]: (100g당 750원)
+                  - generic [ref=f80e1978]:
+                    - generic [ref=f80e1979]: 내일(토) 도착 보장
+                    - generic [ref=f80e1983]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f80e1985]:
+                    - generic "5" [ref=f80e1986]
+                    - generic [ref=f80e1992]: (7,514)
+                  - generic [ref=f80e1995]:
+                    - img "최대 375원 적립" [ref=f80e1996]
+                    - generic [ref=f80e1997]: 최대 375원 적립
+            - listitem [ref=f80e1998] [cursor=pointer]:
+              - link "팔도 컵오트밀 소고기미역, 33g, 5개 12,000원 34% 7,900원 (100g당 4,788원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (1,604) 최대 395원 적립 최대 395원 적립" [ref=f80e1999]:
+                - /url: /vp/products/8239509605?itemId=23713755171&vendorItemId=90738636641&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=39&rank=39
+                - figure [ref=f80e2000]:
+                  - img "팔도 컵오트밀 소고기미역, 33g, 5개" [ref=f80e2001]
+                - generic [ref=f80e2002]:
+                  - generic [ref=f80e2004]: 팔도 컵오트밀 소고기미역, 33g, 5개
+                  - generic [ref=f80e2005]:
+                    - deletion [ref=f80e2007]: 12,000원
+                    - generic [ref=f80e2009]:
+                      - generic [ref=f80e2010]: 34%
+                      - generic [ref=f80e2011]: 7,900원
+                      - generic [ref=f80e2012]: (100g당 4,788원)
+                  - generic [ref=f80e2013]:
+                    - generic [ref=f80e2014]: 내일(토) 도착 보장
+                    - generic [ref=f80e2018]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f80e2020]:
+                    - generic "4.5" [ref=f80e2021]
+                    - generic [ref=f80e2027]: (1,604)
+                  - generic [ref=f80e2030]:
+                    - img "최대 395원 적립" [ref=f80e2031]
+                    - generic [ref=f80e2032]: 최대 395원 적립
+            - listitem [ref=f80e2033] [cursor=pointer]:
+              - link "팔도 컵오트밀 치킨스프, 33g, 5개 12,000원 34% 7,900원 (100g당 4,788원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (919) 최대 395원 적립 최대 395원 적립" [ref=f80e2034]:
+                - /url: /vp/products/8239518728?itemId=23713790769&vendorItemId=90738671537&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=40&rank=40
+                - figure [ref=f80e2035]:
+                  - img "팔도 컵오트밀 치킨스프, 33g, 5개" [ref=f80e2036]
+                - generic [ref=f80e2037]:
+                  - generic [ref=f80e2039]: 팔도 컵오트밀 치킨스프, 33g, 5개
+                  - generic [ref=f80e2040]:
+                    - deletion [ref=f80e2042]: 12,000원
+                    - generic [ref=f80e2044]:
+                      - generic [ref=f80e2045]: 34%
+                      - generic [ref=f80e2046]: 7,900원
+                      - generic [ref=f80e2047]: (100g당 4,788원)
+                  - generic [ref=f80e2048]:
+                    - generic [ref=f80e2049]: 내일(토) 도착 보장
+                    - generic [ref=f80e2053]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f80e2055]:
+                    - generic "4.5" [ref=f80e2056]
+                    - generic [ref=f80e2062]: (919)
+                  - generic [ref=f80e2065]:
+                    - img "최대 395원 적립" [ref=f80e2066]
+                    - generic [ref=f80e2067]: 최대 395원 적립
+            - listitem [ref=f80e2068] [cursor=pointer]:
+              - link "헤이오트 더부드러운 유기농 오트밀 포리지+계량스푼 세트, 420g, 1개 11,000원 28% 7,900원 (100g당 1,881원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (900) 최대 395원 적립 최대 395원 적립" [ref=f80e2069]:
+                - /url: /vp/products/8276917199?itemId=23859188957&vendorItemId=90882441010&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=41&rank=41
+                - figure [ref=f80e2070]:
+                  - img "헤이오트 더부드러운 유기농 오트밀 포리지+계량스푼 세트, 420g, 1개" [ref=f80e2071]
+                - generic [ref=f80e2072]:
+                  - generic [ref=f80e2074]: 헤이오트 더부드러운 유기농 오트밀 포리지+계량스푼 세트, 420g, 1개
+                  - generic [ref=f80e2075]:
+                    - deletion [ref=f80e2077]: 11,000원
+                    - generic [ref=f80e2079]:
+                      - generic [ref=f80e2080]: 28%
+                      - generic [ref=f80e2081]: 7,900원
+                      - generic [ref=f80e2082]: (100g당 1,881원)
+                  - generic [ref=f80e2083]:
+                    - generic [ref=f80e2084]: 내일(토) 도착 보장
+                    - generic [ref=f80e2088]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f80e2090]:
+                    - generic "5" [ref=f80e2091]
+                    - generic [ref=f80e2097]: (900)
+                  - generic [ref=f80e2100]:
+                    - img "최대 395원 적립" [ref=f80e2101]
+                    - generic [ref=f80e2102]: 최대 395원 적립
+            - listitem [ref=f80e2103] [cursor=pointer]:
+              - link "토종마을 오트밀, 500g, 1개 7,920원 (100g당 1,584원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 4 (31) 최대 396원 적립 최대 396원 적립" [ref=f80e2104]:
+                - /url: /vp/products/6123855643?itemId=11627177019&vendorItemId=78901796525&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=42&rank=42
+                - figure [ref=f80e2105]:
+                  - img "토종마을 오트밀, 500g, 1개" [ref=f80e2106]
+                - generic [ref=f80e2107]:
+                  - generic [ref=f80e2109]: 토종마을 오트밀, 500g, 1개
+                  - generic [ref=f80e2112]:
+                    - generic [ref=f80e2113]: 7,920원
+                    - generic [ref=f80e2114]: (100g당 1,584원)
+                  - generic [ref=f80e2115]:
+                    - generic [ref=f80e2116]: 내일(토) 도착 보장
+                    - generic [ref=f80e2120]: 와우는 무료배송 ∙ 무료반품
+                  - generic [ref=f80e2122]:
+                    - generic "4" [ref=f80e2123]
+                    - generic [ref=f80e2129]: (31)
+                  - generic [ref=f80e2132]:
+                    - img "최대 396원 적립" [ref=f80e2133]
+                    - generic [ref=f80e2134]: 최대 396원 적립
+            - listitem [ref=f80e2135] [cursor=pointer]:
+              - link "대구농산 냉장고쏙 퀵 롤드 오트, 600g, 2개 13,960원 42% 7,960원 (100g당 663원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (9,905) 최대 398원 적립 최대 398원 적립" [ref=f80e2136]:
+                - /url: /vp/products/8243652362?itemId=22733252953&vendorItemId=86387829381&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=43&rank=43
+                - figure [ref=f80e2137]:
+                  - img "대구농산 냉장고쏙 퀵 롤드 오트, 600g, 2개" [ref=f80e2138]
+                - generic [ref=f80e2139]:
+                  - generic [ref=f80e2141]: 대구농산 냉장고쏙 퀵 롤드 오트, 600g, 2개
+                  - generic [ref=f80e2142]:
+                    - deletion [ref=f80e2144]: 13,960원
+                    - generic [ref=f80e2146]:
+                      - generic [ref=f80e2147]: 42%
+                      - generic [ref=f80e2148]: 7,960원
+                      - generic [ref=f80e2149]: (100g당 663원)
+                  - generic [ref=f80e2150]:
+                    - generic [ref=f80e2151]: 내일(토) 도착 보장
+                    - generic [ref=f80e2155]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f80e2157]:
+                    - generic "4.5" [ref=f80e2158]
+                    - generic [ref=f80e2164]: (9,905)
+                  - generic [ref=f80e2167]:
+                    - img "최대 398원 적립" [ref=f80e2168]
+                    - generic [ref=f80e2169]: 최대 398원 적립
+            - listitem [ref=f80e2170] [cursor=pointer]:
+              - link "오트라이프 퀵오트밀, 2kg, 1개 11,900원 32% 7,980원 (100g당 399원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (4,439) 최대 399원 적립 최대 399원 적립" [ref=f80e2171]:
+                - /url: /vp/products/7360068641?itemId=23958382353&vendorItemId=90979885467&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=44&rank=44
+                - figure [ref=f80e2172]:
+                  - img "오트라이프 퀵오트밀, 2kg, 1개" [ref=f80e2173]
+                - generic [ref=f80e2174]:
+                  - generic [ref=f80e2176]: 오트라이프 퀵오트밀, 2kg, 1개
+                  - generic [ref=f80e2177]:
+                    - deletion [ref=f80e2179]: 11,900원
+                    - generic [ref=f80e2181]:
+                      - generic [ref=f80e2182]: 32%
+                      - generic [ref=f80e2183]: 7,980원
+                      - generic [ref=f80e2184]: (100g당 399원)
+                  - generic [ref=f80e2185]:
+                    - generic [ref=f80e2186]: 내일(토) 도착 보장
+                    - generic [ref=f80e2190]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f80e2192]:
+                    - generic "5" [ref=f80e2193]
+                    - generic [ref=f80e2199]: (4,439)
+                  - generic [ref=f80e2202]:
+                    - img "최대 399원 적립" [ref=f80e2203]
+                    - generic [ref=f80e2204]: 최대 399원 적립
+            - listitem [ref=f80e2205] [cursor=pointer]:
+              - link "건강곡간 부드러워 먹기편한 퀵 오트밀 통, 2kg, 1개 7,980원 (100g당 399원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (1,812) 최대 399원 적립 최대 399원 적립" [ref=f80e2206]:
+                - /url: /vp/products/7892244227?itemId=21610635581&vendorItemId=88661894849&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=45&rank=45
+                - figure [ref=f80e2207]:
+                  - img "건강곡간 부드러워 먹기편한 퀵 오트밀 통, 2kg, 1개" [ref=f80e2208]
+                - generic [ref=f80e2209]:
+                  - generic [ref=f80e2211]: 건강곡간 부드러워 먹기편한 퀵 오트밀 통, 2kg, 1개
+                  - generic [ref=f80e2214]:
+                    - generic [ref=f80e2215]: 7,980원
+                    - generic [ref=f80e2216]: (100g당 399원)
+                  - generic [ref=f80e2217]:
+                    - generic [ref=f80e2218]: 내일(토) 도착 보장
+                    - generic [ref=f80e2222]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f80e2224]:
+                    - generic "4.5" [ref=f80e2225]
+                    - generic [ref=f80e2231]: (1,812)
+                  - generic [ref=f80e2234]:
+                    - img "최대 399원 적립" [ref=f80e2235]
+                    - generic [ref=f80e2236]: 최대 399원 적립
+            - listitem [ref=f80e2237] [cursor=pointer]:
+              - link "건강곡간 영양가득 롤드오트밀 통, 2kg, 1개 7,980원 (100g당 399원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (1,840) 최대 399원 적립 최대 399원 적립" [ref=f80e2238]:
+                - /url: /vp/products/7892244190?itemId=21689808661&vendorItemId=88739648799&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=46&rank=46
+                - figure [ref=f80e2239]:
+                  - img "건강곡간 영양가득 롤드오트밀 통, 2kg, 1개" [ref=f80e2240]
+                - generic [ref=f80e2241]:
+                  - generic [ref=f80e2243]: 건강곡간 영양가득 롤드오트밀 통, 2kg, 1개
+                  - generic [ref=f80e2246]:
+                    - generic [ref=f80e2247]: 7,980원
+                    - generic [ref=f80e2248]: (100g당 399원)
+                  - generic [ref=f80e2249]:
+                    - generic [ref=f80e2250]: 내일(토) 도착 보장
+                    - generic [ref=f80e2254]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f80e2256]:
+                    - generic "4.5" [ref=f80e2257]
+                    - generic [ref=f80e2263]: (1,840)
+                  - generic [ref=f80e2266]:
+                    - img "최대 399원 적립" [ref=f80e2267]
+                    - generic [ref=f80e2268]: 최대 399원 적립
+            - listitem [ref=f80e2269] [cursor=pointer]:
+              - link "자연다움 바로먹는 퀵 오트밀, 1kg, 1개 7,980원 (100g당 798원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 5 (32,998) 최대 399원 적립 최대 399원 적립" [ref=f80e2270]:
+                - /url: /vp/products/6139202874?itemId=5130750987&vendorItemId=72440166261&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=47&rank=47
+                - figure [ref=f80e2271]:
+                  - img "자연다움 바로먹는 퀵 오트밀, 1kg, 1개" [ref=f80e2272]
+                - generic [ref=f80e2273]:
+                  - generic [ref=f80e2275]: 자연다움 바로먹는 퀵 오트밀, 1kg, 1개
+                  - generic [ref=f80e2278]:
+                    - generic [ref=f80e2279]: 7,980원
+                    - generic [ref=f80e2280]: (100g당 798원)
+                  - generic [ref=f80e2281]:
+                    - generic [ref=f80e2282]: 내일(토) 도착 보장
+                    - generic [ref=f80e2286]: 와우는 무료배송 ∙ 무료반품
+                  - generic [ref=f80e2288]:
+                    - generic "5" [ref=f80e2289]
+                    - generic [ref=f80e2295]: (32,998)
+                  - generic [ref=f80e2298]:
+                    - img "최대 399원 적립" [ref=f80e2299]
+                    - generic [ref=f80e2300]: 최대 399원 적립
+            - listitem [ref=f80e2301] [cursor=pointer]:
+              - link "헤이오트 국산 귀리 100% 퀵오트밀, 600g, 1개 9,200원 13% 7,980원 (100g당 1,330원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (70) 최대 399원 적립 최대 399원 적립" [ref=f80e2302]:
+                - /url: /vp/products/8554909227?itemId=24772357448&vendorItemId=91780444665&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=48&rank=48
+                - figure [ref=f80e2303]:
+                  - img "헤이오트 국산 귀리 100% 퀵오트밀, 600g, 1개" [ref=f80e2304]
+                - generic [ref=f80e2305]:
+                  - generic [ref=f80e2307]: 헤이오트 국산 귀리 100% 퀵오트밀, 600g, 1개
+                  - generic [ref=f80e2308]:
+                    - deletion [ref=f80e2310]: 9,200원
+                    - generic [ref=f80e2312]:
+                      - generic [ref=f80e2313]: 13%
+                      - generic [ref=f80e2314]: 7,980원
+                      - generic [ref=f80e2315]: (100g당 1,330원)
+                  - generic [ref=f80e2316]:
+                    - generic [ref=f80e2317]: 내일(토) 도착 보장
+                    - generic [ref=f80e2321]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f80e2323]:
+                    - generic "4.5" [ref=f80e2324]
+                    - generic [ref=f80e2330]: (70)
+                  - generic [ref=f80e2333]:
+                    - img "최대 399원 적립" [ref=f80e2334]
+                    - generic [ref=f80e2335]: 최대 399원 적립
+            - listitem [ref=f80e2336] [cursor=pointer]:
+              - link "건강한밥상 간편하게 먹는 퀵 오트밀, 500g, 3개 8,370원 (100g당 558원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (1,658) 최대 419원 적립 최대 419원 적립" [ref=f80e2337]:
+                - /url: /vp/products/7883927692?itemId=21690123635&vendorItemId=88739959677&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=49&rank=49
+                - figure [ref=f80e2338]:
+                  - img "건강한밥상 간편하게 먹는 퀵 오트밀, 500g, 3개" [ref=f80e2339]
+                - generic [ref=f80e2340]:
+                  - generic [ref=f80e2342]: 건강한밥상 간편하게 먹는 퀵 오트밀, 500g, 3개
+                  - generic [ref=f80e2345]:
+                    - generic [ref=f80e2346]: 8,370원
+                    - generic [ref=f80e2347]: (100g당 558원)
+                  - generic [ref=f80e2348]:
+                    - generic [ref=f80e2349]: 내일(토) 도착 보장
+                    - generic [ref=f80e2353]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f80e2355]:
+                    - generic "4.5" [ref=f80e2356]
+                    - generic [ref=f80e2362]: (1,658)
+                  - generic [ref=f80e2365]:
+                    - img "최대 419원 적립" [ref=f80e2366]
+                    - generic [ref=f80e2367]: 최대 419원 적립
+            - listitem [ref=f80e2368] [cursor=pointer]:
+              - link "헤이오트 카카오프렌즈 현미누룽지 오트밀 20p, 640g, 1개 8,550원 (100g당 1,336원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (781) 최대 428원 적립 최대 428원 적립" [ref=f80e2369]:
+                - /url: /vp/products/7493493051?itemId=19599093825&vendorItemId=86810188749&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=50&rank=50
+                - figure [ref=f80e2370]:
+                  - img "헤이오트 카카오프렌즈 현미누룽지 오트밀 20p, 640g, 1개" [ref=f80e2371]
+                - generic [ref=f80e2372]:
+                  - generic [ref=f80e2374]: 헤이오트 카카오프렌즈 현미누룽지 오트밀 20p, 640g, 1개
+                  - generic [ref=f80e2377]:
+                    - generic [ref=f80e2378]: 8,550원
+                    - generic [ref=f80e2379]: (100g당 1,336원)
+                  - generic [ref=f80e2380]:
+                    - generic [ref=f80e2381]: 내일(토) 도착 보장
+                    - generic [ref=f80e2385]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f80e2387]:
+                    - generic "5" [ref=f80e2388]
+                    - generic [ref=f80e2394]: (781)
+                  - generic [ref=f80e2397]:
+                    - img "최대 428원 적립" [ref=f80e2398]
+                    - generic [ref=f80e2399]: 최대 428원 적립
+            - listitem [ref=f80e2400] [cursor=pointer]:
+              - link "헤이오트 카카오프렌즈 고대곡물 씨앗 오트밀 20p, 640g, 1개 8,720원 (100g당 1,363원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 5 (303) 최대 436원 적립 최대 436원 적립" [ref=f80e2401]:
+                - /url: /vp/products/7494824805?itemId=19606289194&vendorItemId=86809811648&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=51&rank=51
+                - figure [ref=f80e2402]:
+                  - img "헤이오트 카카오프렌즈 고대곡물 씨앗 오트밀 20p, 640g, 1개" [ref=f80e2403]
+                - generic [ref=f80e2404]:
+                  - generic [ref=f80e2406]: 헤이오트 카카오프렌즈 고대곡물 씨앗 오트밀 20p, 640g, 1개
+                  - generic [ref=f80e2409]:
+                    - generic [ref=f80e2410]: 8,720원
+                    - generic [ref=f80e2411]: (100g당 1,363원)
+                  - generic [ref=f80e2412]:
+                    - generic [ref=f80e2413]: 내일(토) 도착 보장
+                    - generic [ref=f80e2417]: 와우는 무료배송 ∙ 무료반품
+                  - generic [ref=f80e2419]:
+                    - generic "5" [ref=f80e2420]
+                    - generic [ref=f80e2426]: (303)
+                  - generic [ref=f80e2429]:
+                    - img "최대 436원 적립" [ref=f80e2430]
+                    - generic [ref=f80e2431]: 최대 436원 적립
+            - listitem [ref=f80e2432] [cursor=pointer]:
+              - link "베리네이처 잡곡 유기농 오트밀 퀵오트, 200g, 1개 8,800원 (100g당 4,400원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4 (5) 최대 440원 적립 최대 440원 적립" [ref=f80e2433]:
+                - /url: /vp/products/9607520348?itemId=28682245588&vendorItemId=95623865942&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=52&rank=52
+                - figure [ref=f80e2434]:
+                  - img "베리네이처 잡곡 유기농 오트밀 퀵오트, 200g, 1개" [ref=f80e2435]
+                - generic [ref=f80e2436]:
+                  - generic [ref=f80e2438]: 베리네이처 잡곡 유기농 오트밀 퀵오트, 200g, 1개
+                  - generic [ref=f80e2441]:
+                    - generic [ref=f80e2442]: 8,800원
+                    - generic [ref=f80e2443]: (100g당 4,400원)
+                  - generic [ref=f80e2444]:
+                    - generic [ref=f80e2445]: 내일(토) 도착 보장
+                    - generic [ref=f80e2449]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f80e2451]:
+                    - generic "4" [ref=f80e2452]
+                    - generic [ref=f80e2458]: (5)
+                  - generic [ref=f80e2461]:
+                    - img "최대 440원 적립" [ref=f80e2462]
+                    - generic [ref=f80e2463]: 최대 440원 적립
+            - listitem [ref=f80e2464] [cursor=pointer]:
+              - link "올가닉팜 국산 유기농 오트밀, 1개, 500g 할인 10,900원 19% 8,820원 (100g당 1,764원) 내일(토) 도착 보장 4.5 (15) 최대 441원 적립 최대 441원 적립" [ref=f80e2465]:
+                - /url: /vp/products/9640555267?itemId=28805242783&vendorItemId=95740802905&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=53&rank=53
+                - figure [ref=f80e2466]:
+                  - img "올가닉팜 국산 유기농 오트밀, 1개, 500g" [ref=f80e2467]
+                - generic [ref=f80e2468]:
+                  - generic [ref=f80e2470]: 올가닉팜 국산 유기농 오트밀, 1개, 500g
+                  - generic [ref=f80e2471]:
+                    - generic [ref=f80e2472]:
+                      - generic [ref=f80e2473]: 할인
+                      - deletion [ref=f80e2474]: 10,900원
+                    - generic [ref=f80e2476]:
+                      - generic [ref=f80e2477]: 19%
+                      - generic [ref=f80e2482]: 8,820원
+                      - generic [ref=f80e2483]: (100g당 1,764원)
+                  - generic [ref=f80e2484]: 내일(토) 도착 보장
+                  - generic [ref=f80e2490]:
+                    - generic "4.5" [ref=f80e2491]
+                    - generic [ref=f80e2497]: (15)
+                  - generic [ref=f80e2500]:
+                    - img "최대 441원 적립" [ref=f80e2501]
+                    - generic [ref=f80e2502]: 최대 441원 적립
+            - listitem [ref=f80e2503] [cursor=pointer]:
+              - link "건강곡간 강진 귀리로 만든 국산 오트밀, 1.2kg, 1개 8,900원 (100g당 742원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 4 (118) 최대 445원 적립 최대 445원 적립" [ref=f80e2504]:
+                - /url: /vp/products/9562405149?itemId=28536427632&vendorItemId=95481567993&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=54&rank=54
+                - figure [ref=f80e2505]:
+                  - img "건강곡간 강진 귀리로 만든 국산 오트밀, 1.2kg, 1개" [ref=f80e2506]
+                - generic [ref=f80e2507]:
+                  - generic [ref=f80e2509]: 건강곡간 강진 귀리로 만든 국산 오트밀, 1.2kg, 1개
+                  - generic [ref=f80e2512]:
+                    - generic [ref=f80e2513]: 8,900원
+                    - generic [ref=f80e2514]: (100g당 742원)
+                  - generic [ref=f80e2515]:
+                    - generic [ref=f80e2516]: 내일(토) 도착 보장
+                    - generic [ref=f80e2520]: 와우는 무료배송 ∙ 무료반품
+                  - generic [ref=f80e2522]:
+                    - generic "4" [ref=f80e2523]
+                    - generic [ref=f80e2529]: (118)
+                  - generic [ref=f80e2532]:
+                    - img "최대 445원 적립" [ref=f80e2533]
+                    - generic [ref=f80e2534]: 최대 445원 적립
+            - listitem [ref=f80e2535] [cursor=pointer]:
+              - link "퀵오트밀, 1kg, 1개 8,900원 (100g당 890원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (733) 최대 445원 적립 최대 445원 적립 단 5개 남음 빨리 주문하세요!" [ref=f80e2536]:
+                - /url: /vp/products/215018220?itemId=656871700&vendorItemId=4703155329&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=55&rank=55
+                - figure [ref=f80e2537]:
+                  - img "퀵오트밀, 1kg, 1개" [ref=f80e2538]
+                - generic [ref=f80e2539]:
+                  - generic [ref=f80e2541]: 퀵오트밀, 1kg, 1개
+                  - generic [ref=f80e2544]:
+                    - generic [ref=f80e2545]: 8,900원
+                    - generic [ref=f80e2546]: (100g당 890원)
+                  - generic [ref=f80e2547]:
+                    - generic [ref=f80e2548]: 내일(토) 도착 보장
+                    - generic [ref=f80e2552]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f80e2554]:
+                    - generic "4.5" [ref=f80e2555]
+                    - generic [ref=f80e2561]: (733)
+                  - generic [ref=f80e2564]:
+                    - img "최대 445원 적립" [ref=f80e2565]
+                    - generic [ref=f80e2566]: 최대 445원 적립
+                  - generic [ref=f80e2567]:
+                    - strong [ref=f80e2568]: 단 5개 남음
+                    - generic [ref=f80e2569]: 빨리 주문하세요!
+            - listitem [ref=f80e2570] [cursor=pointer]:
+              - link "건강곡간 부드러워 먹기편한 퀵 오트밀 통, 600g, 3개 8,940원 (100g당 497원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (1,812) 최대 447원 적립 최대 447원 적립" [ref=f80e2571]:
+                - /url: /vp/products/7892244227?itemId=23207493971&vendorItemId=88662092555&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=56&rank=56
+                - figure [ref=f80e2572]:
+                  - img "건강곡간 부드러워 먹기편한 퀵 오트밀 통, 600g, 3개" [ref=f80e2573]
+                - generic [ref=f80e2574]:
+                  - generic [ref=f80e2576]: 건강곡간 부드러워 먹기편한 퀵 오트밀 통, 600g, 3개
+                  - generic [ref=f80e2579]:
+                    - generic [ref=f80e2580]: 8,940원
+                    - generic [ref=f80e2581]: (100g당 497원)
+                  - generic [ref=f80e2582]:
+                    - generic [ref=f80e2583]: 내일(토) 도착 보장
+                    - generic [ref=f80e2587]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f80e2589]:
+                    - generic "4.5" [ref=f80e2590]
+                    - generic [ref=f80e2596]: (1,812)
+                  - generic [ref=f80e2599]:
+                    - img "최대 447원 적립" [ref=f80e2600]
+                    - generic [ref=f80e2601]: 최대 447원 적립
+            - listitem [ref=f80e2602] [cursor=pointer]:
+              - link "건강곡간 영양가득 롤드오트밀 통, 600g, 3개 8,940원 (100g당 497원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 4.5 (1,840) 최대 447원 적립 최대 447원 적립" [ref=f80e2603]:
+                - /url: /vp/products/7892244190?itemId=21667483978&vendorItemId=88718067027&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=57&rank=57
+                - figure [ref=f80e2604]:
+                  - img "건강곡간 영양가득 롤드오트밀 통, 600g, 3개" [ref=f80e2605]
+                - generic [ref=f80e2606]:
+                  - generic [ref=f80e2608]: 건강곡간 영양가득 롤드오트밀 통, 600g, 3개
+                  - generic [ref=f80e2611]:
+                    - generic [ref=f80e2612]: 8,940원
+                    - generic [ref=f80e2613]: (100g당 497원)
+                  - generic [ref=f80e2614]:
+                    - generic [ref=f80e2615]: 내일(토) 도착 보장
+                    - generic [ref=f80e2619]: 와우는 무료배송 ∙ 무료반품
+                  - generic [ref=f80e2621]:
+                    - generic "4.5" [ref=f80e2622]
+                    - generic [ref=f80e2628]: (1,840)
+                  - generic [ref=f80e2631]:
+                    - img "최대 447원 적립" [ref=f80e2632]
+                    - generic [ref=f80e2633]: 최대 447원 적립
+            - listitem [ref=f80e2634] [cursor=pointer]:
+              - link "바른곡물 퀵 오트밀, 2kg, 1개 10,900원 17% 8,980원 (100g당 449원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (160) 최대 449원 적립 최대 449원 적립" [ref=f80e2635]:
+                - /url: /vp/products/8287564075?itemId=23899143633&vendorItemId=90921714858&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=58&rank=58
+                - figure [ref=f80e2636]:
+                  - img "바른곡물 퀵 오트밀, 2kg, 1개" [ref=f80e2637]
+                - generic [ref=f80e2638]:
+                  - generic [ref=f80e2640]: 바른곡물 퀵 오트밀, 2kg, 1개
+                  - generic [ref=f80e2641]:
+                    - deletion [ref=f80e2643]: 10,900원
+                    - generic [ref=f80e2645]:
+                      - generic [ref=f80e2646]: 17%
+                      - generic [ref=f80e2647]: 8,980원
+                      - generic [ref=f80e2648]: (100g당 449원)
+                  - generic [ref=f80e2649]:
+                    - generic [ref=f80e2650]: 내일(토) 도착 보장
+                    - generic [ref=f80e2654]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                  - generic [ref=f80e2656]:
+                    - generic "4.5" [ref=f80e2657]
+                    - generic [ref=f80e2663]: (160)
+                  - generic [ref=f80e2666]:
+                    - img "최대 449원 적립" [ref=f80e2667]
+                    - generic [ref=f80e2668]: 최대 449원 적립
+            - listitem [ref=f80e2669] [cursor=pointer]:
+              - link "맘이오트 국산 유기농 100% 오트밀 포리지, 1개, 200g 9,800원 19% 7,900원 (100g당 3,950원) 품절 5 (39)" [ref=f80e2670]:
+                - /url: /vp/products/9649691628?itemId=28841053571&vendorItemId=95775216436&q=오트밀&searchId=6a66055c33964095&sourceType=search&itemsCount=60&searchRank=59&rank=59
+                - figure [ref=f80e2671]:
+                  - img "맘이오트 국산 유기농 100% 오트밀 포리지, 1개, 200g" [ref=f80e2672]
+                - generic [ref=f80e2673]:
+                  - generic [ref=f80e2675]: 맘이오트 국산 유기농 100% 오트밀 포리지, 1개, 200g
+                  - generic [ref=f80e2676]:
+                    - deletion [ref=f80e2678]: 9,800원
+                    - generic [ref=f80e2680]:
+                      - generic [ref=f80e2681]: 19%
+                      - generic [ref=f80e2682]: 7,900원
+                      - generic [ref=f80e2683]: (100g당 3,950원)
+                  - generic [ref=f80e2688]: 품절
+                  - generic [ref=f80e2690]:
+                    - generic "5" [ref=f80e2691]
+                    - generic [ref=f80e2697]: (39)
+          - region "찾는 상품이 없나요?" [ref=f80e2699]:
+            - generic [ref=f80e2700]:
+              - heading "찾는 상품이 없나요?" [level=2] [ref=f80e2701]
+              - paragraph [ref=f80e2702]: 로그인하고 더 많은 상품을 확인해보세요
+            - button "로그인" [ref=f80e2703] [cursor=pointer]
+  - contentinfo [ref=f80e2705]:
+    - generic [ref=f80e2706]:
+      - generic [ref=f80e2707]:
+        - link "회사소개" [ref=f80e2708] [cursor=pointer]:
+          - /url: https://news.coupang.com/
+        - link "Investor Relations" [ref=f80e2709] [cursor=pointer]:
+          - /url: https://ir.aboutcoupang.com/overview/default.aspx
+        - link "인재채용" [ref=f80e2710] [cursor=pointer]:
+          - /url: https://rocketyourcareer.kr.coupang.com
+        - link "입점/제휴문의" [ref=f80e2711] [cursor=pointer]:
+          - /url: https://marketplace.coupangcorp.com/s/?utm_source=button_pc&utm_medium=non_paid&utm_campaign=onsite_ca&utm_id=coupang_app?inflow=WEB_FOOTER_B
+        - link "공지사항" [ref=f80e2712] [cursor=pointer]:
+          - /url: https://mc.coupang.com/ssr/desktop/contact/notice
+        - link "고객의 소리" [ref=f80e2713] [cursor=pointer]:
+          - /url: https://mc.coupang.com/ssr/desktop/contact/voc
+        - link "이용약관" [ref=f80e2714] [cursor=pointer]:
+          - /url: https://www.coupang.com/np/policies/terms
+        - link [ref=f80e2715] [cursor=pointer]:
+          - /url: https://privacy.coupang.com/ko/center/coupang
+          - strong [ref=f80e2716]: 개인정보 처리방침
+        - link "정보보호/개인정보보호 인증" [ref=f80e2717] [cursor=pointer]:
+          - /url: https://privacy.coupang.com/ko/security/status
+        - link "쿠팡페이 이용약관" [ref=f80e2718] [cursor=pointer]:
+          - /url: https://rocketpay.coupang.com/rocketpay/operationTerms/coupangPcFooter
+        - link "신뢰관리센터" [ref=f80e2719] [cursor=pointer]:
+          - /url: https://www.coupang.com/np/safety
+        - link "제휴마케팅" [ref=f80e2720] [cursor=pointer]:
+          - /url: https://partners.coupang.com/
+        - link "광고안내" [ref=f80e2721] [cursor=pointer]:
+          - /url: https://ads.coupang.com
+      - paragraph [ref=f80e2725] [cursor=pointer]: Global Site
+    - generic [ref=f80e2727]:
+      - generic [ref=f80e2728]:
+        - link "COUPANG" [ref=f80e2729] [cursor=pointer]:
+          - /url: https://www.coupang.com/
+        - generic [ref=f80e2730]:
+          - text: "상호명 및 호스팅 서비스 제공 : 쿠팡(주) 대표이사 : 로저스 해롤드 린(Rogers Harold Lynn) (05050) 서울시 광진구 아차산로 412, 2층 사업자 등록번호 : 120-88-00767 통신판매업신고 : 2026-서울광진-1253"
+          - link "사업자정보 확인 >" [ref=f80e2731] [cursor=pointer]:
+            - /url: http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=1208800767
+      - link [ref=f80e2733] [cursor=pointer]:
+        - /url: https://mc.coupang.com/ssr/desktop/contact/inquiry
+        - strong [ref=f80e2734]: 365고객센터
+        - text: "| 전자금융거래분쟁처리담당"
+        - emphasis [ref=f80e2735]: 1577-7011 (유료)
+        - text: "(05050) 서울시 광진구 아차산로 412, 2층 email : help@coupang.com"
+      - paragraph [ref=f80e2736]:
+        - strong [ref=f80e2737]: 채무지급보증 안내
+        - generic [ref=f80e2738]: 당사는 고객님이 현금 결제한 금액에 대해 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.
+        - link "서비스 가입사실 확인 >" [ref=f80e2739] [cursor=pointer]:
+          - /url: https://www.coupang.com/np/etc/popWooriService
+    - generic [ref=f80e2745]:
+      - paragraph [ref=f80e2746]: 사이버몰 내 판매되는 상품 중에는 쿠팡에 등록한 개별 판매자가 판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다. 마켓플레이스(오픈마켓) 상품의 경우 쿠팡은 통신판매중개자이며 통신판매의 당사자가 아닙니다. 쿠팡은 마켓플레이스(오픈마켓) 상품, 거래정보 및 거래 등에 대하여 책임을 지지 않습니다. 쿠팡은 소비자 보호와 안전거래를 위해 신뢰관리센터(CM112@coupang.com)를 운영하고 있으며, 관련 분쟁이 발생할 경우 별도의 분쟁 처리절차에 의거 분쟁이 처리됩니다. Copyright © Coupang Corp. 2010-2025 All Rights Reserved.
+      - list [ref=f80e2747]:
+        - listitem [ref=f80e2748]:
+          - link [ref=f80e2749] [cursor=pointer]:
+            - /url: https://www.facebook.com/Coupang.korea
+        - listitem [ref=f80e2750]:
+          - link [ref=f80e2751] [cursor=pointer]:
+            - /url: https://news.coupang.com/
+        - listitem [ref=f80e2752]:
+          - link [ref=f80e2753] [cursor=pointer]:
+            - /url: https://www.instagram.com/coupang

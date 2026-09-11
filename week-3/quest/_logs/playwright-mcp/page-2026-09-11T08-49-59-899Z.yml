@@ -1,0 +1,2042 @@
+- generic [active] [ref=f117e1]:
+  - generic [ref=f117e5]:
+    - link [ref=f117e6] [cursor=pointer]:
+      - /url: /np/campaigns/82?adType=DA&eventId=98NiAy1knhq1DzLB
+    - link [ref=f117e7] [cursor=pointer]:
+      - /url: https://shop.coupang.com/sajodaerim/268667?source=brandstore_display_ads&adType=DA&eventId=NdUvufgkSwisQ5KJ
+  - generic [ref=f117e8]:
+    - generic [ref=f117e10]:
+      - list [ref=f117e11]:
+        - listitem [ref=f117e12]:
+          - link "판매자 가입" [ref=f117e13] [cursor=pointer]:
+            - /url: https://wing.coupang.com/tenants/vendor-signup/signup?utm_source=button_pc_coupang_top_right_cta&utm_medium=non_paid&utm_campaign=seller_registration
+        - listitem [ref=f117e14]:
+          - link "고객센터" [ref=f117e15] [cursor=pointer]:
+            - /url: https://mc.coupang.com/ssr/desktop/contact/faq
+        - listitem [ref=f117e16]:
+          - link "회원가입" [ref=f117e17] [cursor=pointer]:
+            - /url: https://login.coupang.com/login/memberJoinFrm.pang
+        - listitem [ref=f117e18]:
+          - link "로그인" [ref=f117e19] [cursor=pointer]:
+            - /url: https://login.coupang.com/login/login.pang?rtnUrl=https%3A%2F%2Fwww.coupang.com%2Fnp%2Fpost%2Flogin%3Fr%3Dhttp%253A%252F%252Fwww.coupang.com%252Fnp%252Fsearch%253Fq%253D%2525EA%2525B7%2525B8%2525EB%25259E%252598%2525EB%252586%252580%2525EB%25259D%2525BC%2526filterType%253Drocket%2526sorter%253DsalePriceAsc
+      - list [ref=f117e20]:
+        - listitem [ref=f117e21]: 즐겨찾기
+        - listitem [ref=f117e22]:
+          - generic [ref=f117e23] [cursor=pointer]: 입점신청
+    - generic [ref=f117e26]:
+      - generic [ref=f117e27] [cursor=pointer]: 카테고리
+      - generic [ref=f117e33]:
+        - generic [ref=f117e34]:
+          - link [ref=f117e35] [cursor=pointer]:
+            - /url: https://www.coupang.com
+            - img "Coupang" [ref=f117e36]
+          - generic [ref=f117e37]:
+            - link "전체" [ref=f117e40] [cursor=pointer]:
+              - /url: "#"
+            - textbox "쿠팡 상품 검색" [ref=f117e42]:
+              - /placeholder: 찾고 싶은 상품을 검색해보세요!
+              - text: 그래놀라
+            - generic [ref=f117e43] [cursor=pointer]
+            - button "검색" [ref=f117e44] [cursor=pointer]
+          - list [ref=f117e45]:
+            - listitem [ref=f117e46]:
+              - link "마이쿠팡" [ref=f117e47] [cursor=pointer]:
+                - /url: https://mc.coupang.com/ssr/desktop/order/list
+            - listitem [ref=f117e49]:
+              - link "3 장바구니" [ref=f117e50] [cursor=pointer]:
+                - /url: //cart.coupang.com/cartView.pang
+                - emphasis [ref=f117e51]: "3"
+                - generic [ref=f117e52]: 장바구니
+        - generic [ref=f117e54]:
+          - list [ref=f117e57]:
+            - listitem [ref=f117e58]:
+              - link "쿠팡플레이 쿠팡플레이" [ref=f117e59] [cursor=pointer]:
+                - /url: https://www.coupangplay.com/catalog
+                - img "쿠팡플레이" [ref=f117e60]
+                - generic [ref=f117e61]: 쿠팡플레이
+            - listitem [ref=f117e62]:
+              - link "로켓배송 로켓배송" [ref=f117e63] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/campaigns/82
+                - img "로켓배송" [ref=f117e64]
+                - generic [ref=f117e65]: 로켓배송
+            - listitem [ref=f117e66]:
+              - link "로켓프레시 로켓프레시" [ref=f117e67] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/categories/393760
+                - img "로켓프레시" [ref=f117e68]
+                - generic [ref=f117e69]: 로켓프레시
+            - listitem [ref=f117e70]:
+              - link "2026 추석 2026 추석" [ref=f117e71] [cursor=pointer]:
+                - /url: https://www.coupang.com/mlp/web/mlp-landing-page?landingId=4800
+                - img "2026 추석" [ref=f117e72]
+                - generic [ref=f117e73]: 2026 추석
+            - listitem [ref=f117e75]:
+              - link "다시 구매 다시 구매" [ref=f117e76] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/fbi?sourceType=home_section_fbi
+                - img "다시 구매" [ref=f117e77]
+                - generic [ref=f117e78]: 다시 구매
+            - listitem [ref=f117e80]:
+              - link "쿠팡비즈 쿠팡비즈" [ref=f117e81] [cursor=pointer]:
+                - /url: https://login.coupang.com/corporation/member/landing-page
+                - img "쿠팡비즈" [ref=f117e82]
+                - generic [ref=f117e83]: 쿠팡비즈
+            - listitem [ref=f117e84]:
+              - link "로켓직구 로켓직구" [ref=f117e85] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/coupangglobal
+                - img "로켓직구" [ref=f117e86]
+                - generic [ref=f117e87]: 로켓직구
+            - listitem [ref=f117e88]:
+              - link "골드박스 골드박스" [ref=f117e89] [cursor=pointer]:
+                - /url: https://www.coupang.com/mlp/web/mlp-landing-page?landingId=3712&sourceType=gm_crm_goldbox&subSourceType=gm_crm_gwsrtcut
+                - img "골드박스" [ref=f117e90]
+                - generic [ref=f117e91]: 골드박스
+            - listitem [ref=f117e92]:
+              - link "이달의신상 이달의신상" [ref=f117e93] [cursor=pointer]:
+                - /url: https://pages.coupang.com/p/136938
+                - img "이달의신상" [ref=f117e94]
+                - generic [ref=f117e95]: 이달의신상
+            - listitem [ref=f117e96]:
+              - link "입점신청 입점신청" [ref=f117e97] [cursor=pointer]:
+                - /url: https://wing.coupang.com/tenants/vendor-signup/signup?utm_source=button_pc_coupang_shortcut_1&utm_medium=non_paid&utm_id=onsite_ca&utm_content=202411
+                - img "입점신청" [ref=f117e98]
+                - generic [ref=f117e99]: 입점신청
+            - listitem [ref=f117e100]:
+              - link "판매자특가 판매자특가" [ref=f117e101] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/omp
+                - img "판매자특가" [ref=f117e102]
+                - generic [ref=f117e103]: 판매자특가
+            - listitem [ref=f117e104]:
+              - link "와우회원할인 와우회원할인" [ref=f117e105] [cursor=pointer]:
+                - /url: https://www.coupang.com/np/campaigns/83
+                - img "와우회원할인" [ref=f117e106]
+                - generic [ref=f117e107]: 와우회원할인
+            - listitem [ref=f117e108]:
+              - link "반품마켓 반품마켓" [ref=f117e109] [cursor=pointer]:
+                - /url: https://pages.coupang.com/p/54908
+                - img "반품마켓" [ref=f117e110]
+                - generic [ref=f117e111]: 반품마켓
+            - listitem [ref=f117e112]:
+              - link "착한상점 착한상점" [ref=f117e113] [cursor=pointer]:
+                - /url: https://pages.coupang.com/p/63240
+                - img "착한상점" [ref=f117e114]
+                - generic [ref=f117e115]: 착한상점
+            - listitem [ref=f117e117]:
+              - link "기획전 기획전" [ref=f117e118] [cursor=pointer]:
+                - /url: https://pages.coupang.com/p/bep?sourceType=gm_crm_oms&subSourceType=gm_crm_gwsrtcut
+                - img "기획전" [ref=f117e119]
+                - generic [ref=f117e120]: 기획전
+            - listitem [ref=f117e121]:
+              - link "쿠팡트래블 쿠팡트래블" [ref=f117e122] [cursor=pointer]:
+                - /url: https://trip.coupang.com/?channel=gnb
+                - img "쿠팡트래블" [ref=f117e123]
+                - generic [ref=f117e124]: 쿠팡트래블
+          - generic [ref=f117e126] [cursor=pointer]
+  - article [ref=f117e128]:
+    - link "그라놀로지 Gr플러스 저당 프로틴 그래놀라 카카오, 340g, 1개 광고 Ad information 더 알아보기" [ref=f117e132] [cursor=pointer]:
+      - /url: /vp/products/9326211797?itemId=27645753558&vendorItemId=94608310436&sourceType=srp_top_banner_ads&clickEventId=d1c10c70-adbd-11f1-8613-10ee9f6a07e7&korePlacement=19
+      - generic [ref=f117e133]:
+        - generic [ref=f117e135]: 그라놀로지 Gr플러스 저당 프로틴 그래놀라 카카오, 340g, 1개
+        - generic [ref=f117e139]:
+          - generic [ref=f117e140]: 광고
+          - button "Ad information" [ref=f117e141]
+      - generic [ref=f117e142]: 더 알아보기
+    - generic:
+      - link "장바구니 3" [ref=f117e144] [cursor=pointer]:
+        - /url: //cart.coupang.com/cartView.pang
+        - generic [ref=f117e145]: 장바구니
+        - emphasis [ref=f117e146]: "3"
+      - generic [ref=f117e147]:
+        - generic [ref=f117e148]: 최근본상품
+        - emphasis [ref=f117e149]: "0"
+      - generic [ref=f117e150]:
+        - list [ref=f117e151]
+        - paragraph [ref=f117e152]:
+          - generic [ref=f117e153]:
+            - strong
+            - text: /
+            - emphasis
+          - generic [ref=f117e154]:
+            - link "prev" [ref=f117e155] [cursor=pointer]:
+              - /url: 이전 페이지 보기
+            - link "next" [ref=f117e156] [cursor=pointer]:
+              - /url: 다음 페이지 보기
+  - generic [ref=f117e158]:
+    - generic [ref=f117e161]:
+      - list [ref=f117e162]:
+        - listitem [ref=f117e163]:
+          - link "전체" [ref=f117e164] [cursor=pointer]:
+            - /url: /np/search?q=%EA%B7%B8%EB%9E%98%EB%86%80%EB%9D%BC&filterType=rocket&sorter=salePriceAsc
+      - strong [ref=f117e168]: "'그래놀라'"
+    - generic [ref=f117e170]:
+      - generic [ref=f117e171]:
+        - generic [ref=f117e172]:
+          - generic [ref=f117e175]:
+            - generic [ref=f117e176]:
+              - heading "필터" [level=4] [ref=f117e177]
+              - button "전체해제" [ref=f117e179] [cursor=pointer]
+            - list [ref=f117e182]:
+              - listitem [ref=f117e183]:
+                - img "rocket_luxury,rocket,coupang_global" [ref=f117e187] [cursor=pointer]
+                - list [ref=f117e189]:
+                  - listitem [ref=f117e190]:
+                    - generic [ref=f117e191] [cursor=pointer]:
+                      - img "rocket_luxury" [ref=f117e194]
+                      - text: 만 보기
+                  - listitem [ref=f117e195]:
+                    - generic [ref=f117e196] [cursor=pointer]:
+                      - img "rocket" [ref=f117e199]
+                      - text: 만 보기
+                  - listitem [ref=f117e200]:
+                    - generic [ref=f117e201] [cursor=pointer]:
+                      - img "coupang_global" [ref=f117e204]
+                      - text: 만 보기
+              - listitem [ref=f117e205]:
+                - img "top_brand" [ref=f117e209] [cursor=pointer]
+              - listitem [ref=f117e210]:
+                - generic [ref=f117e211] [cursor=pointer]: 무료배송
+            - separator [ref=f117e213]
+            - generic [ref=f117e214]:
+              - heading "카테고리" [level=5] [ref=f117e215]
+              - generic [ref=f117e216]:
+                - list [ref=f117e217]:
+                  - listitem [ref=f117e218]:
+                    - link "전체" [ref=f117e220] [cursor=pointer]:
+                      - /url: https://www.coupang.com
+                  - listitem [ref=f117e221]:
+                    - link "식품" [ref=f117e223] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/categories/194276
+                  - listitem [ref=f117e224]:
+                    - link "로켓직구" [ref=f117e226] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/coupangglobal
+                  - listitem [ref=f117e227]:
+                    - link "쿠팡수입" [ref=f117e229] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/categories/510691
+                  - listitem [ref=f117e230]:
+                    - link "싱글라이프" [ref=f117e232] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/categories/433784
+                  - listitem:
+                    - link "결혼준비" [ref=f117e234] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/categories/416130
+                  - listitem:
+                    - link "헬스/건강식품" [ref=f117e236] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/categories/305798
+                  - listitem:
+                    - link "주방용품" [ref=f117e238] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/categories/185669
+                  - listitem:
+                    - link "생활용품" [ref=f117e240] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/categories/115673
+                  - listitem:
+                    - link "홈인테리어" [ref=f117e242] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/categories/184555
+                  - listitem:
+                    - link "스포츠/레저" [ref=f117e244] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/categories/317778
+                  - listitem:
+                    - link "패션의류/잡화" [ref=f117e246] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/categories/564653
+                  - listitem:
+                    - link "문구/오피스" [ref=f117e248] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/categories/177295
+                  - listitem:
+                    - link "출산/유아동" [ref=f117e250] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/categories/221934
+                  - listitem:
+                    - link "아트/공예" [ref=f117e252] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/categories/410273
+                  - listitem:
+                    - link "홈카페" [ref=f117e254] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/categories/316168
+                  - listitem:
+                    - link "완구/취미" [ref=f117e256] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/categories/317779
+                  - listitem:
+                    - link "실버스토어" [ref=f117e258] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/categories/383370
+                  - listitem:
+                    - link "반려동물용품" [ref=f117e260] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/categories/115674
+                  - listitem:
+                    - link "미세먼지용품" [ref=f117e262] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/campaigns/17593
+                  - listitem:
+                    - link "도서/음반/DVD" [ref=f117e264] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/categories/317777
+                  - listitem:
+                    - link "뷰티" [ref=f117e266] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/categories/176522
+                  - listitem:
+                    - link "R.LUX" [ref=f117e268] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/campaigns/18530
+                  - listitem:
+                    - link "가전디지털" [ref=f117e270] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/categories/178255
+                  - listitem:
+                    - link "안전전문관" [ref=f117e272] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/categories/568926
+                  - listitem:
+                    - link "자동차용품" [ref=f117e274] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/categories/184060
+                  - listitem:
+                    - link "국내여행" [ref=f117e276] [cursor=pointer]:
+                      - /url: https://www.coupang.com/np/categories/396463
+                - generic [ref=f117e277] [cursor=pointer]: + 더보기
+            - separator [ref=f117e278]
+            - generic [ref=f117e279]:
+              - heading "브랜드" [level=5] [ref=f117e280]
+              - generic [ref=f117e281]:
+                - list [ref=f117e282]:
+                  - listitem [ref=f117e283]:
+                    - generic [ref=f117e284] [cursor=pointer]: 켈로그
+                  - listitem [ref=f117e286]:
+                    - generic [ref=f117e287] [cursor=pointer]: 포스트
+                  - listitem [ref=f117e289]:
+                    - generic [ref=f117e290] [cursor=pointer]: 마켓오네이처
+                  - listitem [ref=f117e292]:
+                    - generic [ref=f117e293] [cursor=pointer]: 그래놀라하우스
+                  - listitem [ref=f117e295]:
+                    - generic [ref=f117e296] [cursor=pointer]: 동서
+                  - listitem:
+                    - generic [ref=f117e298] [cursor=pointer]: 퀘이커
+                  - listitem:
+                    - generic [ref=f117e300] [cursor=pointer]: 룩트
+                  - listitem:
+                    - generic [ref=f117e302] [cursor=pointer]: 그릭데이
+                  - listitem:
+                    - generic [ref=f117e304] [cursor=pointer]: 그라놀로지
+                  - listitem:
+                    - generic [ref=f117e306] [cursor=pointer]: 무화당
+                  - listitem:
+                    - generic [ref=f117e308] [cursor=pointer]: 마켓오
+                  - listitem:
+                    - generic [ref=f117e310] [cursor=pointer]: 크놀라
+                  - listitem:
+                    - generic [ref=f117e312] [cursor=pointer]: 네이쳐스패스
+                  - listitem:
+                    - generic [ref=f117e314] [cursor=pointer]: 키토제니
+                  - listitem:
+                    - generic [ref=f117e316] [cursor=pointer]: 모던구루
+                  - listitem:
+                    - generic [ref=f117e318] [cursor=pointer]: 러브크런치
+                  - listitem:
+                    - generic [ref=f117e320] [cursor=pointer]: 씨알로
+                - generic [ref=f117e322] [cursor=pointer]: + 더보기
+            - separator [ref=f117e323]
+            - generic [ref=f117e324]:
+              - heading "상품 상태" [level=5] [ref=f117e325]
+              - list [ref=f117e327]:
+                - listitem [ref=f117e328]:
+                  - generic [ref=f117e329] [cursor=pointer]: 새 상품
+                - listitem [ref=f117e331]:
+                  - generic [ref=f117e332] [cursor=pointer]: 박스 훼손
+                - listitem [ref=f117e334]:
+                  - generic [ref=f117e335] [cursor=pointer]: 재포장
+                - listitem [ref=f117e337]:
+                  - generic [ref=f117e338] [cursor=pointer]: 반품
+                - listitem [ref=f117e340]:
+                  - generic [ref=f117e341] [cursor=pointer]: 중고
+            - separator [ref=f117e343]
+            - generic [ref=f117e344]:
+              - heading "개당 중량" [level=5] [ref=f117e345]
+              - list [ref=f117e347]:
+                - listitem [ref=f117e348]:
+                  - generic [ref=f117e349] [cursor=pointer]: 500g 이하
+                - listitem [ref=f117e351]:
+                  - generic [ref=f117e352] [cursor=pointer]: 500g~1kg
+                - listitem [ref=f117e354]:
+                  - generic [ref=f117e355] [cursor=pointer]: 1~2kg
+                - listitem [ref=f117e357]:
+                  - generic [ref=f117e358] [cursor=pointer]: 2kg 이상
+            - separator [ref=f117e360]
+            - generic [ref=f117e361]:
+              - heading "낱개상품 여부" [level=5] [ref=f117e362]
+              - list [ref=f117e364]:
+                - listitem [ref=f117e365]:
+                  - generic [ref=f117e366] [cursor=pointer]: 낱개상품
+            - separator [ref=f117e368]
+            - generic [ref=f117e369]:
+              - heading "총 수량" [level=5] [ref=f117e370]
+              - list [ref=f117e372]:
+                - listitem [ref=f117e373]:
+                  - generic [ref=f117e374] [cursor=pointer]: 5개 이하
+                - listitem [ref=f117e376]:
+                  - generic [ref=f117e377] [cursor=pointer]: 5~15개
+                - listitem [ref=f117e379]:
+                  - generic [ref=f117e380] [cursor=pointer]: 15~30개
+                - listitem [ref=f117e382]:
+                  - generic [ref=f117e383] [cursor=pointer]: 30개 이상
+            - separator [ref=f117e385]
+            - generic [ref=f117e386]:
+              - heading "총 중량" [level=5] [ref=f117e387]
+              - list [ref=f117e389]:
+                - listitem [ref=f117e390]:
+                  - generic [ref=f117e391] [cursor=pointer]: 500g 이하
+                - listitem [ref=f117e393]:
+                  - generic [ref=f117e394] [cursor=pointer]: 500g~1kg
+                - listitem [ref=f117e396]:
+                  - generic [ref=f117e397] [cursor=pointer]: 1~2kg
+                - listitem [ref=f117e399]:
+                  - generic [ref=f117e400] [cursor=pointer]: 2kg 이상
+            - separator [ref=f117e402]
+            - generic [ref=f117e403]:
+              - heading "종류" [level=5] [ref=f117e404]
+              - list [ref=f117e406]:
+                - listitem [ref=f117e407]:
+                  - generic [ref=f117e408] [cursor=pointer]: 봉지과자
+                - listitem [ref=f117e410]:
+                  - generic [ref=f117e411] [cursor=pointer]: 과자/쿠키/비스킷
+                - listitem [ref=f117e413]:
+                  - generic [ref=f117e414] [cursor=pointer]: 시리얼/바
+                - listitem [ref=f117e416]:
+                  - generic [ref=f117e417] [cursor=pointer]: 파이/케이크/카스타드
+                - listitem [ref=f117e419]:
+                  - generic [ref=f117e420] [cursor=pointer]: 유아/어린이 과자
+            - separator [ref=f117e422]
+            - generic [ref=f117e423]:
+              - heading "설탕함량" [level=5] [ref=f117e424]
+              - list [ref=f117e426]:
+                - listitem [ref=f117e427]:
+                  - generic [ref=f117e428] [cursor=pointer]: 무설탕
+                - listitem [ref=f117e430]:
+                  - generic [ref=f117e431] [cursor=pointer]: 저설탕
+                - listitem [ref=f117e433]:
+                  - generic [ref=f117e434] [cursor=pointer]: 설탕첨가
+                - listitem [ref=f117e436]:
+                  - generic [ref=f117e437] [cursor=pointer]: 당 첨가
+            - separator [ref=f117e439]
+            - generic [ref=f117e440]:
+              - heading "포장형태" [level=5] [ref=f117e441]
+              - list [ref=f117e443]:
+                - listitem [ref=f117e444]:
+                  - generic [ref=f117e445] [cursor=pointer]: 봉지/지퍼백
+                - listitem [ref=f117e447]:
+                  - generic [ref=f117e448] [cursor=pointer]: 상자 (갑)
+                - listitem [ref=f117e450]:
+                  - generic [ref=f117e451] [cursor=pointer]: 용기/통
+                - listitem [ref=f117e453]:
+                  - generic [ref=f117e454] [cursor=pointer]: 컵/1회분
+            - separator [ref=f117e456]
+            - generic [ref=f117e457]:
+              - heading "간편식" [level=5] [ref=f117e458]
+              - list [ref=f117e460]:
+                - listitem [ref=f117e461]:
+                  - generic [ref=f117e462] [cursor=pointer]: 즉석섭취음료
+                - listitem [ref=f117e464]:
+                  - generic [ref=f117e465] [cursor=pointer]: 즉석섭취식품
+                - listitem [ref=f117e467]:
+                  - generic [ref=f117e468] [cursor=pointer]: 즉석조리식품
+                - listitem [ref=f117e470]:
+                  - generic [ref=f117e471] [cursor=pointer]: 밀키트
+            - separator [ref=f117e473]
+            - generic [ref=f117e474]:
+              - heading "맛" [level=5] [ref=f117e475]
+              - generic [ref=f117e476]:
+                - list [ref=f117e477]:
+                  - listitem [ref=f117e478]:
+                    - generic [ref=f117e479] [cursor=pointer]: 초코
+                  - listitem [ref=f117e481]:
+                    - generic [ref=f117e482] [cursor=pointer]: 허니/메이플
+                  - listitem [ref=f117e484]:
+                    - generic [ref=f117e485] [cursor=pointer]: 시나몬
+                  - listitem [ref=f117e487]:
+                    - generic [ref=f117e488] [cursor=pointer]: 모카
+                  - listitem [ref=f117e490]:
+                    - generic [ref=f117e491] [cursor=pointer]: 과일/야채
+                  - listitem:
+                    - generic [ref=f117e493] [cursor=pointer]: 견과류/피넛버터
+                  - listitem:
+                    - generic [ref=f117e495] [cursor=pointer]: 누룽지
+                  - listitem:
+                    - generic [ref=f117e497] [cursor=pointer]: 기타맛
+                - generic [ref=f117e499] [cursor=pointer]: + 더보기
+            - separator [ref=f117e500]
+            - generic [ref=f117e501]:
+              - heading "곡물유형" [level=5] [ref=f117e502]
+              - list [ref=f117e504]:
+                - listitem [ref=f117e505]:
+                  - generic [ref=f117e506] [cursor=pointer]: 옥수수/콘
+                - listitem [ref=f117e508]:
+                  - generic [ref=f117e509] [cursor=pointer]: 귀리/오트
+                - listitem [ref=f117e511]:
+                  - generic [ref=f117e512] [cursor=pointer]: 쌀/라이스
+                - listitem [ref=f117e514]:
+                  - generic [ref=f117e515] [cursor=pointer]: 현미
+                - listitem [ref=f117e517]:
+                  - generic [ref=f117e518] [cursor=pointer]: 퀴노아
+                - listitem [ref=f117e520]:
+                  - generic [ref=f117e521] [cursor=pointer]: 혼합
+            - separator [ref=f117e523]
+            - generic [ref=f117e524]:
+              - heading "곡물 외 혼합물" [level=5] [ref=f117e525]
+              - list [ref=f117e527]:
+                - listitem [ref=f117e528]:
+                  - generic [ref=f117e529] [cursor=pointer]: 과일/채소
+                - listitem [ref=f117e531]:
+                  - generic [ref=f117e532] [cursor=pointer]: 견과/넛츠
+                - listitem [ref=f117e534]:
+                  - generic [ref=f117e535] [cursor=pointer]: 단백질/프로틴
+            - separator [ref=f117e537]
+            - generic [ref=f117e538]:
+              - heading "통곡물 여부" [level=5] [ref=f117e539]
+              - list [ref=f117e541]:
+                - listitem [ref=f117e542]:
+                  - generic [ref=f117e543] [cursor=pointer]: 통곡물
+            - separator [ref=f117e545]
+            - generic [ref=f117e546]:
+              - heading "비건 여부" [level=5] [ref=f117e547]
+              - list [ref=f117e549]:
+                - listitem [ref=f117e550]:
+                  - generic [ref=f117e551] [cursor=pointer]: 비건
+            - separator [ref=f117e553]
+            - generic [ref=f117e554]:
+              - heading "대상" [level=5] [ref=f117e555]
+              - list [ref=f117e557]:
+                - listitem [ref=f117e558]:
+                  - generic [ref=f117e559] [cursor=pointer]: 여성용
+                - listitem [ref=f117e561]:
+                  - generic [ref=f117e562] [cursor=pointer]: 남녀공용
+            - separator [ref=f117e564]
+            - generic [ref=f117e565]:
+              - heading "1회 제공량당 열량" [level=5] [ref=f117e566]
+              - generic [ref=f117e567]:
+                - list [ref=f117e568]:
+                  - listitem [ref=f117e569]:
+                    - generic [ref=f117e570] [cursor=pointer]: 0Kcal
+                  - listitem [ref=f117e572]:
+                    - generic: 1Kcal 이상 ~ 20Kcal 이하
+                  - listitem [ref=f117e573]:
+                    - generic [ref=f117e574] [cursor=pointer]: 20Kcal 이상 ~ 40Kcal 이하
+                  - listitem [ref=f117e576]:
+                    - generic [ref=f117e577] [cursor=pointer]: 40Kcal 이상 ~ 100Kcal 이하
+                  - listitem [ref=f117e579]:
+                    - generic [ref=f117e580] [cursor=pointer]: 100Kcal 이상 ~ 200Kcal 이하
+                  - listitem:
+                    - generic [ref=f117e582] [cursor=pointer]: 200Kcal 이상 ~ 300Kcal 이하
+                  - listitem:
+                    - generic [ref=f117e584] [cursor=pointer]: 300Kcal 이상
+                - generic [ref=f117e586] [cursor=pointer]: + 더보기
+            - separator [ref=f117e587]
+            - generic [ref=f117e588]:
+              - heading "별점" [level=5] [ref=f117e589]
+              - list [ref=f117e591]:
+                - listitem [ref=f117e592]:
+                  - generic "전체" [ref=f117e593]: 별점전체
+                - listitem [ref=f117e594]:
+                  - generic "4점 이상" [ref=f117e595]:
+                    - generic [ref=f117e596] [cursor=pointer]
+                    - text: 4점 이상
+                - listitem [ref=f117e597]:
+                  - generic "3점 이상" [ref=f117e598]:
+                    - generic [ref=f117e599] [cursor=pointer]
+                    - text: 3점 이상
+                - listitem [ref=f117e600]:
+                  - generic "2점 이상" [ref=f117e601]:
+                    - generic [ref=f117e602] [cursor=pointer]
+                    - text: 2점 이상
+                - listitem [ref=f117e603]:
+                  - generic "1점 이상" [ref=f117e604]:
+                    - generic [ref=f117e605] [cursor=pointer]
+                    - text: 1점 이상
+            - separator [ref=f117e606]
+            - generic [ref=f117e607]:
+              - heading "가격" [level=5] [ref=f117e608]
+              - list [ref=f117e610]:
+                - listitem [ref=f117e611]:
+                  - generic "priceFilter" [ref=f117e612]: 가격 전체
+                - listitem [ref=f117e613]:
+                  - generic "priceFilter" [ref=f117e614]: 8천원 이하
+                - listitem [ref=f117e615]:
+                  - generic "priceFilter" [ref=f117e616]: 8천원~1만 6천원
+                - listitem [ref=f117e617]:
+                  - generic "priceFilter" [ref=f117e618]: 1만 6천원~2만 4천원
+                - listitem [ref=f117e619]:
+                  - generic "priceFilter" [ref=f117e620]: 2만 4천원~3만 2천원
+                - listitem [ref=f117e621]:
+                  - generic "priceFilter" [ref=f117e622]: 3만 2천원 이상
+              - generic [ref=f117e623]:
+                - generic [ref=f117e624]:
+                  - textbox "minPrice" [ref=f117e625]
+                  - generic [ref=f117e626]: ~
+                  - textbox "maxPrice" [ref=f117e627]
+                  - text: 원
+                - generic "priceFilter" [ref=f117e628]: 검색
+            - separator [ref=f117e629]
+          - generic [ref=f117e632]:
+            - generic [ref=f117e633]: 현재 검색 결과에 만족하셨나요?
+            - button [ref=f117e634] [cursor=pointer]
+            - button [ref=f117e635] [cursor=pointer]
+            - generic [ref=f117e636]:
+              - paragraph [ref=f117e637]: 어떤 문제가 있었나요?
+              - list [ref=f117e638]:
+                - listitem [ref=f117e639] [cursor=pointer]: 이미지나 정보가 부정확해요
+                - listitem [ref=f117e640] [cursor=pointer]: 필터가 도움이 안 돼요
+                - listitem [ref=f117e641] [cursor=pointer]: 관련 없는 상품이 있어요
+                - listitem [ref=f117e642] [cursor=pointer]: 추천해준 검색어가 도움이 안 돼요
+                - listitem [ref=f117e643] [cursor=pointer]: 기타 원하는 옵션이 없어요
+        - generic [ref=f117e644]:
+          - generic [ref=f117e645]:
+            - heading [level=1] [ref=f117e646]:
+              - strong [ref=f117e647]: "'그래놀라'"
+              - text: 에 대한 검색결과
+            - generic [ref=f117e648]:
+              - text: "선택한 필터:"
+              - link "로켓배송 삭제" [ref=f117e650] [cursor=pointer]:
+                - /url: "#"
+                - text: 로켓배송
+                - generic [ref=f117e651]: 삭제
+            - generic [ref=f117e652]:
+              - generic [ref=f117e655]:
+                - checkbox "배송비 포함" [ref=f117e656] [cursor=pointer]
+                - generic [ref=f117e659]: 배송비 포함
+              - list [ref=f117e663]:
+                - listitem [ref=f117e664]:
+                  - radio "쿠팡 랭킹순" [ref=f117e665]
+                  - generic [ref=f117e666] [cursor=pointer]: 쿠팡 랭킹순
+                  - generic [ref=f117e667]: 설명
+                - listitem [ref=f117e668]:
+                  - radio "낮은가격순" [checked] [ref=f117e669]
+                  - generic [ref=f117e670] [cursor=pointer]: 낮은가격순
+                - listitem [ref=f117e671]:
+                  - radio "높은가격순" [ref=f117e672]
+                  - generic [ref=f117e673] [cursor=pointer]: 높은가격순
+                - listitem [ref=f117e674]:
+                  - radio "판매량순" [ref=f117e675]
+                  - generic [ref=f117e676] [cursor=pointer]: 판매량순
+                - listitem [ref=f117e677]:
+                  - radio "최신순" [ref=f117e678]
+                  - generic [ref=f117e679] [cursor=pointer]: 최신순
+          - generic [ref=f117e684]:
+            - link [ref=f117e686] [cursor=pointer]:
+              - /url: https://shop.coupang.com/kelloggxpringles/236366?source=brandstore_display_ads&adType=DA&eventId=AHlDFdSoMxWo7hbT
+              - img "11764879" [ref=f117e687]
+            - link [ref=f117e689] [cursor=pointer]:
+              - /url: https://shop.coupang.com/namyang/481147?source=brandstore_display_ads&adType=DA&eventId=fNxcIbGARMycZtIa
+              - img "11765679" [ref=f117e690]
+          - generic [ref=f117e694]:
+            - list [ref=f117e696]:
+              - listitem [ref=f117e697] [cursor=pointer]:
+                - link "동화약품 배러 그래놀라 프로틴볼, 1개, 50g 할인 · 07:10:00 4,900원 25% 3,660원 (100g당 7,320원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 4.5 (151) 최대 183원 적립 최대 183원 적립 1" [ref=f117e698]:
+                  - /url: /vp/products/8778220254?itemId=25611507305&vendorItemId=92602006199&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=0&rank=0
+                  - figure [ref=f117e699]:
+                    - img "동화약품 배러 그래놀라 프로틴볼, 1개, 50g" [ref=f117e700]
+                  - generic [ref=f117e701]:
+                    - generic [ref=f117e703]: 동화약품 배러 그래놀라 프로틴볼, 1개, 50g
+                    - generic [ref=f117e704]:
+                      - generic [ref=f117e705]:
+                        - generic [ref=f117e706]: 할인
+                        - generic [ref=f117e707]: · 07:10:00
+                        - deletion [ref=f117e708]: 4,900원
+                      - generic [ref=f117e710]:
+                        - generic [ref=f117e711]: 25%
+                        - generic [ref=f117e716]: 3,660원
+                        - generic [ref=f117e717]: (100g당 7,320원)
+                    - generic [ref=f117e718]:
+                      - generic [ref=f117e719]: 내일(토) 도착 보장
+                      - generic [ref=f117e723]: 와우는 무료배송 ∙ 무료반품
+                    - generic [ref=f117e725]:
+                      - generic "4.5" [ref=f117e726]
+                      - generic [ref=f117e732]: (151)
+                    - generic [ref=f117e735]:
+                      - img "최대 183원 적립" [ref=f117e736]
+                      - generic [ref=f117e737]: 최대 183원 적립
+                    - generic [ref=f117e738]: "1"
+              - listitem [ref=f117e739] [cursor=pointer]:
+                - link "포스트 그래놀라 제로슈거 파로 통보리, 220g, 1개 5,180원 (100g당 2,355원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (114) 최대 207원 적립 최대 207원 적립 2" [ref=f117e740]:
+                  - /url: /vp/products/9672218766?itemId=28919557433&vendorItemId=95851195994&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=1&rank=1
+                  - figure [ref=f117e741]:
+                    - img "포스트 그래놀라 제로슈거 파로 통보리, 220g, 1개" [ref=f117e742]
+                  - generic [ref=f117e743]:
+                    - generic [ref=f117e745]: 포스트 그래놀라 제로슈거 파로 통보리, 220g, 1개
+                    - generic [ref=f117e748]:
+                      - generic [ref=f117e749]: 5,180원
+                      - generic [ref=f117e750]: (100g당 2,355원)
+                    - generic [ref=f117e751]:
+                      - generic [ref=f117e752]: 내일(토) 도착 보장
+                      - generic [ref=f117e756]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e758]:
+                      - generic "4.5" [ref=f117e759]
+                      - generic [ref=f117e765]: (114)
+                    - generic [ref=f117e768]:
+                      - img "최대 207원 적립" [ref=f117e769]
+                      - generic [ref=f117e770]: 최대 207원 적립
+                    - generic [ref=f117e771]: "2"
+              - listitem [ref=f117e772] [cursor=pointer]:
+                - link "포스트 크랜베리 아몬드 그래놀라, 500g, 1개 8,900원 45% 4,840원 (10g당 97원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (104,696) 최대 218원 적립 최대 218원 적립 3" [ref=f117e773]:
+                  - /url: /vp/products/257055522?itemId=24080693679&vendorItemId=93073553319&pickType=COU_PICK&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=2&rank=2
+                  - figure [ref=f117e774]:
+                    - img "포스트 크랜베리 아몬드 그래놀라, 500g, 1개" [ref=f117e775]
+                  - generic [ref=f117e776]:
+                    - generic [ref=f117e781]: 포스트 크랜베리 아몬드 그래놀라, 500g, 1개
+                    - generic [ref=f117e782]:
+                      - deletion [ref=f117e784]: 8,900원
+                      - generic [ref=f117e786]:
+                        - generic [ref=f117e787]: 45%
+                        - generic [ref=f117e788]: 4,840원
+                        - generic [ref=f117e789]: (10g당 97원)
+                    - generic [ref=f117e790]:
+                      - generic [ref=f117e791]: 내일(토) 도착 보장
+                      - generic [ref=f117e795]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e797]:
+                      - generic "5" [ref=f117e798]
+                      - generic [ref=f117e804]: (104,696)
+                    - generic [ref=f117e807]:
+                      - img "최대 218원 적립" [ref=f117e808]
+                      - generic [ref=f117e809]: 최대 218원 적립
+                    - generic [ref=f117e810]: "3"
+              - listitem [ref=f117e811] [cursor=pointer]:
+                - link "마켓오네이처 오!그래놀라 저당, 255g, 1개 4,510원 (100g당 1,769원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (11,069) 최대 225원 적립 최대 225원 적립 4" [ref=f117e812]:
+                  - /url: /vp/products/8562175754?itemId=28657902088&vendorItemId=95600147575&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=3&rank=3
+                  - figure [ref=f117e813]:
+                    - img "마켓오네이처 오!그래놀라 저당, 255g, 1개" [ref=f117e814]
+                  - generic [ref=f117e815]:
+                    - generic [ref=f117e817]: 마켓오네이처 오!그래놀라 저당, 255g, 1개
+                    - generic [ref=f117e820]:
+                      - generic [ref=f117e821]: 4,510원
+                      - generic [ref=f117e822]: (100g당 1,769원)
+                    - generic [ref=f117e823]:
+                      - generic [ref=f117e824]: 내일(토) 도착 보장
+                      - generic [ref=f117e828]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e830]:
+                      - generic "5" [ref=f117e831]
+                      - generic [ref=f117e837]: (11,069)
+                    - generic [ref=f117e840]:
+                      - img "최대 225원 적립" [ref=f117e841]
+                      - generic [ref=f117e842]: 최대 225원 적립
+                    - generic [ref=f117e843]: "4"
+              - listitem [ref=f117e844] [cursor=pointer]:
+                - link "올가홀푸드 그래놀라 Oat Cacao, 25g, 2개 할인 · 07:10:00 5,800원 16% 4,870원 (100g당 9,740원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 4 (29) 최대 244원 적립 최대 244원 적립 5" [ref=f117e845]:
+                  - /url: /vp/products/8289706879?itemId=27991778606&vendorItemId=94949371801&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=4&rank=4
+                  - figure [ref=f117e846]:
+                    - img "올가홀푸드 그래놀라 Oat Cacao, 25g, 2개" [ref=f117e847]
+                  - generic [ref=f117e848]:
+                    - generic [ref=f117e850]: 올가홀푸드 그래놀라 Oat Cacao, 25g, 2개
+                    - generic [ref=f117e851]:
+                      - generic [ref=f117e852]:
+                        - generic [ref=f117e853]: 할인
+                        - generic [ref=f117e854]: · 07:10:00
+                        - deletion [ref=f117e855]: 5,800원
+                      - generic [ref=f117e857]:
+                        - generic [ref=f117e858]: 16%
+                        - generic [ref=f117e863]: 4,870원
+                        - generic [ref=f117e864]: (100g당 9,740원)
+                    - generic [ref=f117e865]:
+                      - generic [ref=f117e866]: 내일(토) 도착 보장
+                      - generic [ref=f117e870]: 와우는 무료배송 ∙ 무료반품
+                    - generic [ref=f117e872]:
+                      - generic "4" [ref=f117e873]
+                      - generic [ref=f117e879]: (29)
+                    - generic [ref=f117e882]:
+                      - img "최대 244원 적립" [ref=f117e883]
+                      - generic [ref=f117e884]: 최대 244원 적립
+                    - generic [ref=f117e885]: "5"
+              - listitem [ref=f117e886] [cursor=pointer]:
+                - link "포스트 그래놀라 피칸 시리얼, 310g, 1개 8,480원 41% 4,990원 (100g당 1,610원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 4.5 (229) 최대 250원 적립 최대 250원 적립 6" [ref=f117e887]:
+                  - /url: /vp/products/9198557887?itemId=27156103360&vendorItemId=94123885332&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=5&rank=5
+                  - figure [ref=f117e888]:
+                    - img "포스트 그래놀라 피칸 시리얼, 310g, 1개" [ref=f117e889]
+                  - generic [ref=f117e890]:
+                    - generic [ref=f117e892]: 포스트 그래놀라 피칸 시리얼, 310g, 1개
+                    - generic [ref=f117e893]:
+                      - deletion [ref=f117e895]: 8,480원
+                      - generic [ref=f117e897]:
+                        - generic [ref=f117e898]: 41%
+                        - generic [ref=f117e899]: 4,990원
+                        - generic [ref=f117e900]: (100g당 1,610원)
+                    - generic [ref=f117e901]:
+                      - generic [ref=f117e902]: 내일(토) 도착 보장
+                      - generic [ref=f117e906]: 와우는 무료배송 ∙ 무료반품
+                    - generic [ref=f117e908]:
+                      - generic "4.5" [ref=f117e909]
+                      - generic [ref=f117e915]: (229)
+                    - generic [ref=f117e918]:
+                      - img "최대 250원 적립" [ref=f117e919]
+                      - generic [ref=f117e920]: 최대 250원 적립
+                    - generic [ref=f117e921]: "6"
+              - listitem [ref=f117e922] [cursor=pointer]:
+                - link "포스트 그래놀라 살구 아몬드, 310g, 1개 8,480원 41% 4,990원 (100g당 1,610원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 4.5 (314) 최대 250원 적립 최대 250원 적립 7" [ref=f117e923]:
+                  - /url: /vp/products/9198424891?itemId=27155657143&vendorItemId=94123442953&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=6&rank=6
+                  - figure [ref=f117e924]:
+                    - img "포스트 그래놀라 살구 아몬드, 310g, 1개" [ref=f117e925]
+                  - generic [ref=f117e926]:
+                    - generic [ref=f117e928]: 포스트 그래놀라 살구 아몬드, 310g, 1개
+                    - generic [ref=f117e929]:
+                      - deletion [ref=f117e931]: 8,480원
+                      - generic [ref=f117e933]:
+                        - generic [ref=f117e934]: 41%
+                        - generic [ref=f117e935]: 4,990원
+                        - generic [ref=f117e936]: (100g당 1,610원)
+                    - generic [ref=f117e937]:
+                      - generic [ref=f117e938]: 내일(토) 도착 보장
+                      - generic [ref=f117e942]: 와우는 무료배송 ∙ 무료반품
+                    - generic [ref=f117e944]:
+                      - generic "4.5" [ref=f117e945]
+                      - generic [ref=f117e951]: (314)
+                    - generic [ref=f117e954]:
+                      - img "최대 250원 적립" [ref=f117e955]
+                      - generic [ref=f117e956]: 최대 250원 적립
+                    - generic [ref=f117e957]: "7"
+              - listitem [ref=f117e958] [cursor=pointer]:
+                - link "마켓오네이처 오 그래놀라 다이제 시리얼, 250g, 1개 5,130원 (100g당 2,052원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (13,590) 최대 256원 적립 최대 256원 적립 8" [ref=f117e959]:
+                  - /url: /vp/products/5800828570?itemId=17743510127&vendorItemId=84908107332&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=7&rank=7
+                  - figure [ref=f117e960]:
+                    - img "마켓오네이처 오 그래놀라 다이제 시리얼, 250g, 1개" [ref=f117e961]
+                  - generic [ref=f117e962]:
+                    - generic [ref=f117e964]: 마켓오네이처 오 그래놀라 다이제 시리얼, 250g, 1개
+                    - generic [ref=f117e967]:
+                      - generic [ref=f117e968]: 5,130원
+                      - generic [ref=f117e969]: (100g당 2,052원)
+                    - generic [ref=f117e970]:
+                      - generic [ref=f117e971]: 내일(토) 도착 보장
+                      - generic [ref=f117e975]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e977]:
+                      - generic "5" [ref=f117e978]
+                      - generic [ref=f117e984]: (13,590)
+                    - generic [ref=f117e987]:
+                      - img "최대 256원 적립" [ref=f117e988]
+                      - generic [ref=f117e989]: 최대 256원 적립
+                    - generic [ref=f117e990]: "8"
+              - listitem [ref=f117e991] [cursor=pointer]:
+                - link "포스트 현미 그래놀라, 310g, 1개 5,230원 (100g당 1,687원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (23,578) 최대 261원 적립 최대 261원 적립 9" [ref=f117e992]:
+                  - /url: /vp/products/2019993459?itemId=28695533841&vendorItemId=95636723763&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=8&rank=8
+                  - figure [ref=f117e993]:
+                    - img "포스트 현미 그래놀라, 310g, 1개" [ref=f117e994]
+                  - generic [ref=f117e995]:
+                    - generic [ref=f117e997]: 포스트 현미 그래놀라, 310g, 1개
+                    - generic [ref=f117e1000]:
+                      - generic [ref=f117e1001]: 5,230원
+                      - generic [ref=f117e1002]: (100g당 1,687원)
+                    - generic [ref=f117e1003]:
+                      - generic [ref=f117e1004]: 내일(토) 도착 보장
+                      - generic [ref=f117e1008]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e1010]:
+                      - generic "5" [ref=f117e1011]
+                      - generic [ref=f117e1017]: (23,578)
+                    - generic [ref=f117e1020]:
+                      - img "최대 261원 적립" [ref=f117e1021]
+                      - generic [ref=f117e1022]: 최대 261원 적립
+                    - generic [ref=f117e1023]: "9"
+              - listitem [ref=f117e1024] [cursor=pointer]:
+                - link "마켓오네이처 오 그래놀라 다이제 시리얼, 300g, 1개 5,390원 (100g당 1,797원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (13,590) 최대 270원 적립 최대 270원 적립 10" [ref=f117e1025]:
+                  - /url: /vp/products/5800828570?itemId=18332486183&vendorItemId=77232047334&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=9&rank=9
+                  - figure [ref=f117e1026]:
+                    - img "마켓오네이처 오 그래놀라 다이제 시리얼, 300g, 1개" [ref=f117e1027]
+                  - generic [ref=f117e1028]:
+                    - generic [ref=f117e1030]: 마켓오네이처 오 그래놀라 다이제 시리얼, 300g, 1개
+                    - generic [ref=f117e1033]:
+                      - generic [ref=f117e1034]: 5,390원
+                      - generic [ref=f117e1035]: (100g당 1,797원)
+                    - generic [ref=f117e1036]:
+                      - generic [ref=f117e1037]: 내일(토) 도착 보장
+                      - generic [ref=f117e1041]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e1043]:
+                      - generic "5" [ref=f117e1044]
+                      - generic [ref=f117e1050]: (13,590)
+                    - generic [ref=f117e1053]:
+                      - img "최대 270원 적립" [ref=f117e1054]
+                      - generic [ref=f117e1055]: 최대 270원 적립
+                    - generic [ref=f117e1056]: "10"
+              - listitem [ref=f117e1057] [cursor=pointer]:
+                - link "켈로그 저당 그래놀라, 300g, 1개 7,180원 23% 5,480원 (100g당 1,827원) 120원 와우 가입 쿠폰 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (5,605) 최대 268원 적립 최대 268원 적립" [ref=f117e1058]:
+                  - /url: /vp/products/9422409524?itemId=28005886594&vendorItemId=94963327020&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=10&rank=10
+                  - figure [ref=f117e1059]:
+                    - img "켈로그 저당 그래놀라, 300g, 1개" [ref=f117e1060]
+                  - generic [ref=f117e1061]:
+                    - generic [ref=f117e1063]: 켈로그 저당 그래놀라, 300g, 1개
+                    - generic [ref=f117e1064]:
+                      - deletion [ref=f117e1066]: 7,180원
+                      - generic [ref=f117e1067]:
+                        - generic [ref=f117e1068]:
+                          - generic [ref=f117e1069]: 23%
+                          - generic [ref=f117e1070]: 5,480원
+                          - generic [ref=f117e1071]: (100g당 1,827원)
+                        - generic [ref=f117e1072]:
+                          - generic [ref=f117e1073]: 120원
+                          - generic [ref=f117e1078]: 와우 가입 쿠폰
+                    - generic [ref=f117e1079]:
+                      - generic [ref=f117e1080]: 내일(토) 도착 보장
+                      - generic [ref=f117e1084]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e1086]:
+                      - generic "4.5" [ref=f117e1087]
+                      - generic [ref=f117e1093]: (5,605)
+                    - generic [ref=f117e1096]:
+                      - img "최대 268원 적립" [ref=f117e1097]
+                      - generic [ref=f117e1098]: 최대 268원 적립
+              - listitem [ref=f117e1099] [cursor=pointer]:
+                - link "포스트 그래놀라 크랜베리 아몬드 시리얼, 570g, 1개 5,520원 (10g당 97원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (104,696) 최대 276원 적립 최대 276원 적립" [ref=f117e1100]:
+                  - /url: /vp/products/257055522?itemId=808589090&vendorItemId=3000821216&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=11&rank=11
+                  - figure [ref=f117e1101]:
+                    - img "포스트 그래놀라 크랜베리 아몬드 시리얼, 570g, 1개" [ref=f117e1102]
+                  - generic [ref=f117e1103]:
+                    - generic [ref=f117e1105]: 포스트 그래놀라 크랜베리 아몬드 시리얼, 570g, 1개
+                    - generic [ref=f117e1108]:
+                      - generic [ref=f117e1109]: 5,520원
+                      - generic [ref=f117e1110]: (10g당 97원)
+                    - generic [ref=f117e1111]:
+                      - generic [ref=f117e1112]: 내일(토) 도착 보장
+                      - generic [ref=f117e1116]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e1118]:
+                      - generic "5" [ref=f117e1119]
+                      - generic [ref=f117e1125]: (104,696)
+                    - generic [ref=f117e1128]:
+                      - img "최대 276원 적립" [ref=f117e1129]
+                      - generic [ref=f117e1130]: 최대 276원 적립
+              - listitem [ref=f117e1131] [cursor=pointer]:
+                - link "룩트 초코 클러스터 그래놀라, 25g, 2개 5,560원 (100g당 11,120원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (860) 최대 278원 적립 최대 278원 적립" [ref=f117e1132]:
+                  - /url: /vp/products/7762633247?itemId=25374495829&vendorItemId=92368593720&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=12&rank=12
+                  - figure [ref=f117e1133]:
+                    - img "룩트 초코 클러스터 그래놀라, 25g, 2개" [ref=f117e1134]
+                  - generic [ref=f117e1135]:
+                    - generic [ref=f117e1137]: 룩트 초코 클러스터 그래놀라, 25g, 2개
+                    - generic [ref=f117e1140]:
+                      - generic [ref=f117e1141]: 5,560원
+                      - generic [ref=f117e1142]: (100g당 11,120원)
+                    - generic [ref=f117e1143]:
+                      - generic [ref=f117e1144]: 내일(토) 도착 보장
+                      - generic [ref=f117e1148]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e1150]:
+                      - generic "5" [ref=f117e1151]
+                      - generic [ref=f117e1157]: (860)
+                    - generic [ref=f117e1160]:
+                      - img "최대 278원 적립" [ref=f117e1161]
+                      - generic [ref=f117e1162]: 최대 278원 적립
+              - listitem [ref=f117e1163] [cursor=pointer]:
+                - link "룩트 황치즈 소보로 그래놀라, 2개, 25g 5,560원 (100g당 11,120원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (265) 최대 278원 적립 최대 278원 적립" [ref=f117e1164]:
+                  - /url: /vp/products/8437004621?itemId=25375395956&vendorItemId=92369478113&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=13&rank=13
+                  - figure [ref=f117e1165]:
+                    - img "룩트 황치즈 소보로 그래놀라, 2개, 25g" [ref=f117e1166]
+                  - generic [ref=f117e1167]:
+                    - generic [ref=f117e1169]: 룩트 황치즈 소보로 그래놀라, 2개, 25g
+                    - generic [ref=f117e1172]:
+                      - generic [ref=f117e1173]: 5,560원
+                      - generic [ref=f117e1174]: (100g당 11,120원)
+                    - generic [ref=f117e1175]:
+                      - generic [ref=f117e1176]: 내일(토) 도착 보장
+                      - generic [ref=f117e1180]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e1182]:
+                      - generic "4.5" [ref=f117e1183]
+                      - generic [ref=f117e1189]: (265)
+                    - generic [ref=f117e1192]:
+                      - img "최대 278원 적립" [ref=f117e1193]
+                      - generic [ref=f117e1194]: 최대 278원 적립
+              - listitem [ref=f117e1195] [cursor=pointer]:
+                - link "룩트 소보로 그래놀라, 25g, 2개 5,560원 (100g당 11,120원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (835) 최대 278원 적립 최대 278원 적립" [ref=f117e1196]:
+                  - /url: /vp/products/8080667237?itemId=24175413031&vendorItemId=92369173716&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=14&rank=14
+                  - figure [ref=f117e1197]:
+                    - img "룩트 소보로 그래놀라, 25g, 2개" [ref=f117e1198]
+                  - generic [ref=f117e1199]:
+                    - generic [ref=f117e1201]: 룩트 소보로 그래놀라, 25g, 2개
+                    - generic [ref=f117e1204]:
+                      - generic [ref=f117e1205]: 5,560원
+                      - generic [ref=f117e1206]: (100g당 11,120원)
+                    - generic [ref=f117e1207]:
+                      - generic [ref=f117e1208]: 내일(토) 도착 보장
+                      - generic [ref=f117e1212]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e1214]:
+                      - generic "5" [ref=f117e1215]
+                      - generic [ref=f117e1221]: (835)
+                    - generic [ref=f117e1224]:
+                      - img "최대 278원 적립" [ref=f117e1225]
+                      - generic [ref=f117e1226]: 최대 278원 적립
+              - listitem [ref=f117e1227] [cursor=pointer]:
+                - link "룩트 피스타치오 소보로 그래놀라, 25g, 2개 5,560원 (100g당 11,120원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (350) 최대 278원 적립 최대 278원 적립" [ref=f117e1228]:
+                  - /url: /vp/products/8239285807?itemId=25375527393&vendorItemId=92369608077&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=15&rank=15
+                  - figure [ref=f117e1229]:
+                    - img "룩트 피스타치오 소보로 그래놀라, 25g, 2개" [ref=f117e1230]
+                  - generic [ref=f117e1231]:
+                    - generic [ref=f117e1233]: 룩트 피스타치오 소보로 그래놀라, 25g, 2개
+                    - generic [ref=f117e1236]:
+                      - generic [ref=f117e1237]: 5,560원
+                      - generic [ref=f117e1238]: (100g당 11,120원)
+                    - generic [ref=f117e1239]:
+                      - generic [ref=f117e1240]: 내일(토) 도착 보장
+                      - generic [ref=f117e1244]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e1246]:
+                      - generic "5" [ref=f117e1247]
+                      - generic [ref=f117e1253]: (350)
+                    - generic [ref=f117e1256]:
+                      - img "최대 278원 적립" [ref=f117e1257]
+                      - generic [ref=f117e1258]: 최대 278원 적립
+              - listitem [ref=f117e1259] [cursor=pointer]:
+                - link "룩트 그래놀라 클러스터 시리얼, 25g, 2개 5,560원 (100g당 11,120원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (548) 최대 278원 적립 최대 278원 적립" [ref=f117e1260]:
+                  - /url: /vp/products/6051597877?itemId=24175393279&vendorItemId=92367922147&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=16&rank=16
+                  - figure [ref=f117e1261]:
+                    - img "룩트 그래놀라 클러스터 시리얼, 25g, 2개" [ref=f117e1262]
+                  - generic [ref=f117e1263]:
+                    - generic [ref=f117e1265]: 룩트 그래놀라 클러스터 시리얼, 25g, 2개
+                    - generic [ref=f117e1268]:
+                      - generic [ref=f117e1269]: 5,560원
+                      - generic [ref=f117e1270]: (100g당 11,120원)
+                    - generic [ref=f117e1271]:
+                      - generic [ref=f117e1272]: 내일(토) 도착 보장
+                      - generic [ref=f117e1276]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e1278]:
+                      - generic "5" [ref=f117e1279]
+                      - generic [ref=f117e1285]: (548)
+                    - generic [ref=f117e1288]:
+                      - img "최대 278원 적립" [ref=f117e1289]
+                      - generic [ref=f117e1290]: 최대 278원 적립
+              - listitem [ref=f117e1291] [cursor=pointer]:
+                - link "룩트 인절미 소보로 그래놀라, 2개, 25g 5,560원 (100g당 11,120원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (106) 최대 278원 적립 최대 278원 적립" [ref=f117e1292]:
+                  - /url: /vp/products/8367052749?itemId=24175610784&vendorItemId=92368594021&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=17&rank=17
+                  - figure [ref=f117e1293]:
+                    - img "룩트 인절미 소보로 그래놀라, 2개, 25g" [ref=f117e1294]
+                  - generic [ref=f117e1295]:
+                    - generic [ref=f117e1297]: 룩트 인절미 소보로 그래놀라, 2개, 25g
+                    - generic [ref=f117e1300]:
+                      - generic [ref=f117e1301]: 5,560원
+                      - generic [ref=f117e1302]: (100g당 11,120원)
+                    - generic [ref=f117e1303]:
+                      - generic [ref=f117e1304]: 내일(토) 도착 보장
+                      - generic [ref=f117e1308]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e1310]:
+                      - generic "4.5" [ref=f117e1311]
+                      - generic [ref=f117e1317]: (106)
+                    - generic [ref=f117e1320]:
+                      - img "최대 278원 적립" [ref=f117e1321]
+                      - generic [ref=f117e1322]: 최대 278원 적립
+              - listitem [ref=f117e1323] [cursor=pointer]:
+                - link "마켓오네이처 오그래놀라 오리지널 시리얼, 280g, 1개 7,800원 (100g당 2,786원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (63) 최대 331원 적립 최대 331원 적립" [ref=f117e1324]:
+                  - /url: /vp/products/9554937000?itemId=28510635985&vendorItemId=95459719723&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=18&rank=18
+                  - figure [ref=f117e1325]:
+                    - img "마켓오네이처 오그래놀라 오리지널 시리얼, 280g, 1개" [ref=f117e1326]
+                  - generic [ref=f117e1327]:
+                    - generic [ref=f117e1329]: 마켓오네이처 오그래놀라 오리지널 시리얼, 280g, 1개
+                    - generic [ref=f117e1332]:
+                      - generic [ref=f117e1333]: 7,800원
+                      - generic [ref=f117e1334]: (100g당 2,786원)
+                    - generic [ref=f117e1335]:
+                      - generic [ref=f117e1336]: 내일(토) 도착 보장
+                      - generic [ref=f117e1340]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e1342]:
+                      - generic "4.5" [ref=f117e1343]
+                      - generic [ref=f117e1349]: (63)
+                    - generic [ref=f117e1352]:
+                      - img "최대 331원 적립" [ref=f117e1353]
+                      - generic [ref=f117e1354]: 최대 331원 적립
+              - listitem [ref=f117e1355] [cursor=pointer]:
+                - link "동화약품 배러 그래놀라 프로틴볼, 2개, 50g 할인 · 07:10:00 9,800원 42% 5,640원 (100g당 5,640원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 4.5 (151) 최대 282원 적립 최대 282원 적립" [ref=f117e1356]:
+                  - /url: /vp/products/8778220254?itemId=25560626421&vendorItemId=92609654887&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=19&rank=19
+                  - figure [ref=f117e1357]:
+                    - img "동화약품 배러 그래놀라 프로틴볼, 2개, 50g" [ref=f117e1358]
+                  - generic [ref=f117e1359]:
+                    - generic [ref=f117e1361]: 동화약품 배러 그래놀라 프로틴볼, 2개, 50g
+                    - generic [ref=f117e1362]:
+                      - generic [ref=f117e1363]:
+                        - generic [ref=f117e1364]: 할인
+                        - generic [ref=f117e1365]: · 07:10:00
+                        - deletion [ref=f117e1366]: 9,800원
+                      - generic [ref=f117e1368]:
+                        - generic [ref=f117e1369]: 42%
+                        - generic [ref=f117e1374]: 5,640원
+                        - generic [ref=f117e1375]: (100g당 5,640원)
+                    - generic [ref=f117e1376]:
+                      - generic [ref=f117e1377]: 내일(토) 도착 보장
+                      - generic [ref=f117e1381]: 와우는 무료배송 ∙ 무료반품
+                    - generic [ref=f117e1383]:
+                      - generic "4.5" [ref=f117e1384]
+                      - generic [ref=f117e1390]: (151)
+                    - generic [ref=f117e1393]:
+                      - img "최대 282원 적립" [ref=f117e1394]
+                      - generic [ref=f117e1395]: 최대 282원 적립
+              - listitem [ref=f117e1396] [cursor=pointer]:
+                - link "마켓오네이처 오그래놀라 오트 통넛츠 시리얼, 360g, 1개 5,760원 (100g당 1,600원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (2,747) 최대 288원 적립 최대 288원 적립" [ref=f117e1397]:
+                  - /url: /vp/products/7843301484?itemId=21356961413&vendorItemId=88255719656&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=20&rank=20
+                  - figure [ref=f117e1398]:
+                    - img "마켓오네이처 오그래놀라 오트 통넛츠 시리얼, 360g, 1개" [ref=f117e1399]
+                  - generic [ref=f117e1400]:
+                    - generic [ref=f117e1402]: 마켓오네이처 오그래놀라 오트 통넛츠 시리얼, 360g, 1개
+                    - generic [ref=f117e1405]:
+                      - generic [ref=f117e1406]: 5,760원
+                      - generic [ref=f117e1407]: (100g당 1,600원)
+                    - generic [ref=f117e1408]:
+                      - generic [ref=f117e1409]: 내일(토) 도착 보장
+                      - generic [ref=f117e1413]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e1415]:
+                      - generic "5" [ref=f117e1416]
+                      - generic [ref=f117e1422]: (2,747)
+                    - generic [ref=f117e1425]:
+                      - img "최대 288원 적립" [ref=f117e1426]
+                      - generic [ref=f117e1427]: 최대 288원 적립
+              - listitem [ref=f117e1428] [cursor=pointer]:
+                - link "마켓오네이처 오그래놀라 오리온 미쯔 스모어, 260g, 1개 5,870원 (100g당 2,258원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (181) 최대 294원 적립 최대 294원 적립" [ref=f117e1429]:
+                  - /url: /vp/products/9688266539?itemId=28974341565&vendorItemId=95903959157&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=21&rank=21
+                  - figure [ref=f117e1430]:
+                    - img "마켓오네이처 오그래놀라 오리온 미쯔 스모어, 260g, 1개" [ref=f117e1431]
+                  - generic [ref=f117e1432]:
+                    - generic [ref=f117e1434]: 마켓오네이처 오그래놀라 오리온 미쯔 스모어, 260g, 1개
+                    - generic [ref=f117e1437]:
+                      - generic [ref=f117e1438]: 5,870원
+                      - generic [ref=f117e1439]: (100g당 2,258원)
+                    - generic [ref=f117e1440]:
+                      - generic [ref=f117e1441]: 내일(토) 도착 보장
+                      - generic [ref=f117e1445]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e1447]:
+                      - generic "5" [ref=f117e1448]
+                      - generic [ref=f117e1454]: (181)
+                    - generic [ref=f117e1457]:
+                      - img "최대 294원 적립" [ref=f117e1458]
+                      - generic [ref=f117e1459]: 최대 294원 적립
+              - listitem [ref=f117e1460] [cursor=pointer]:
+                - link "마켓오네이처 오 그래놀라 저당 통보리 시리얼, 360g, 1개 5,980원 (100g당 1,661원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (11,069) 최대 299원 적립 최대 299원 적립" [ref=f117e1461]:
+                  - /url: /vp/products/8562175754?itemId=24666769439&vendorItemId=91737670170&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=22&rank=22
+                  - figure [ref=f117e1462]:
+                    - img "마켓오네이처 오 그래놀라 저당 통보리 시리얼, 360g, 1개" [ref=f117e1463]
+                  - generic [ref=f117e1464]:
+                    - generic [ref=f117e1466]: 마켓오네이처 오 그래놀라 저당 통보리 시리얼, 360g, 1개
+                    - generic [ref=f117e1469]:
+                      - generic [ref=f117e1470]: 5,980원
+                      - generic [ref=f117e1471]: (100g당 1,661원)
+                    - generic [ref=f117e1472]:
+                      - generic [ref=f117e1473]: 내일(토) 도착 보장
+                      - generic [ref=f117e1477]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e1479]:
+                      - generic "5" [ref=f117e1480]
+                      - generic [ref=f117e1486]: (11,069)
+                    - generic [ref=f117e1489]:
+                      - img "최대 299원 적립" [ref=f117e1490]
+                      - generic [ref=f117e1491]: 최대 299원 적립
+              - listitem [ref=f117e1492] [cursor=pointer]:
+                - link "켈로그 넛츠 앤 씨드 그래놀라 시리얼, 500g, 1개 9,680원 36% 6,140원 (100g당 1,228원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (6,848) 최대 307원 적립 최대 307원 적립" [ref=f117e1493]:
+                  - /url: /vp/products/8215335334?itemId=23596185718&vendorItemId=90622036850&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=23&rank=23
+                  - figure [ref=f117e1494]:
+                    - img "켈로그 넛츠 앤 씨드 그래놀라 시리얼, 500g, 1개" [ref=f117e1495]
+                  - generic [ref=f117e1496]:
+                    - generic [ref=f117e1498]: 켈로그 넛츠 앤 씨드 그래놀라 시리얼, 500g, 1개
+                    - generic [ref=f117e1499]:
+                      - deletion [ref=f117e1501]: 9,680원
+                      - generic [ref=f117e1503]:
+                        - generic [ref=f117e1504]: 36%
+                        - generic [ref=f117e1505]: 6,140원
+                        - generic [ref=f117e1506]: (100g당 1,228원)
+                    - generic [ref=f117e1507]:
+                      - generic [ref=f117e1508]: 내일(토) 도착 보장
+                      - generic [ref=f117e1512]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e1514]:
+                      - generic "5" [ref=f117e1515]
+                      - generic [ref=f117e1521]: (6,848)
+                    - generic [ref=f117e1524]:
+                      - img "최대 307원 적립" [ref=f117e1525]
+                      - generic [ref=f117e1526]: 최대 307원 적립
+              - listitem [ref=f117e1527] [cursor=pointer]:
+                - link "야바 그래놀라 초콜릿 바닐라 시리얼, 1개, 400g 11,000원 43% 6,200원 (100g당 1,550원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (656) 최대 310원 적립 최대 310원 적립" [ref=f117e1528]:
+                  - /url: /vp/products/8011847546?itemId=22602465235&vendorItemId=89644101829&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=24&rank=24
+                  - figure [ref=f117e1529]:
+                    - img "야바 그래놀라 초콜릿 바닐라 시리얼, 1개, 400g" [ref=f117e1530]
+                  - generic [ref=f117e1531]:
+                    - generic [ref=f117e1533]: 야바 그래놀라 초콜릿 바닐라 시리얼, 1개, 400g
+                    - generic [ref=f117e1534]:
+                      - deletion [ref=f117e1536]: 11,000원
+                      - generic [ref=f117e1538]:
+                        - generic [ref=f117e1539]: 43%
+                        - generic [ref=f117e1540]: 6,200원
+                        - generic [ref=f117e1541]: (100g당 1,550원)
+                    - generic [ref=f117e1542]:
+                      - generic [ref=f117e1543]: 내일(토) 도착 보장
+                      - generic [ref=f117e1547]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e1549]:
+                      - generic "5" [ref=f117e1550]
+                      - generic [ref=f117e1556]: (656)
+                    - generic [ref=f117e1559]:
+                      - img "최대 310원 적립" [ref=f117e1560]
+                      - generic [ref=f117e1561]: 최대 310원 적립
+              - listitem [ref=f117e1562] [cursor=pointer]:
+                - link "포스트 현미 그래놀라 시리얼, 500g, 1개 6,230원 (100g당 1,246원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (23,578) 최대 311원 적립 최대 311원 적립" [ref=f117e1563]:
+                  - /url: /vp/products/2019993459?itemId=3436309821&vendorItemId=71422803467&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=25&rank=25
+                  - figure [ref=f117e1564]:
+                    - img "포스트 현미 그래놀라 시리얼, 500g, 1개" [ref=f117e1565]
+                  - generic [ref=f117e1566]:
+                    - generic [ref=f117e1568]: 포스트 현미 그래놀라 시리얼, 500g, 1개
+                    - generic [ref=f117e1571]:
+                      - generic [ref=f117e1572]: 6,230원
+                      - generic [ref=f117e1573]: (100g당 1,246원)
+                    - generic [ref=f117e1574]:
+                      - generic [ref=f117e1575]: 내일(토) 도착 보장
+                      - generic [ref=f117e1579]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e1581]:
+                      - generic "5" [ref=f117e1582]
+                      - generic [ref=f117e1588]: (23,578)
+                    - generic [ref=f117e1591]:
+                      - img "최대 311원 적립" [ref=f117e1592]
+                      - generic [ref=f117e1593]: 최대 311원 적립
+              - listitem [ref=f117e1594] [cursor=pointer]:
+                - link "켈로그 고소한 현미 그래놀라 사르르 큐브 시리얼, 500g, 1개 쿠폰할인 9,680원 38% 5,960원 (100g당 1,192원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (62,086) 최대 298원 적립 최대 298원 적립" [ref=f117e1595]:
+                  - /url: /vp/products/5890638597?itemId=20865843333&vendorItemId=3965506379&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=26&rank=26
+                  - figure [ref=f117e1596]:
+                    - img "켈로그 고소한 현미 그래놀라 사르르 큐브 시리얼, 500g, 1개" [ref=f117e1597]
+                  - generic [ref=f117e1598]:
+                    - generic [ref=f117e1600]: 켈로그 고소한 현미 그래놀라 사르르 큐브 시리얼, 500g, 1개
+                    - generic [ref=f117e1601]:
+                      - generic [ref=f117e1602]:
+                        - generic [ref=f117e1603]: 쿠폰할인
+                        - deletion [ref=f117e1604]: 9,680원
+                      - generic [ref=f117e1606]:
+                        - generic [ref=f117e1607]: 38%
+                        - generic [ref=f117e1612]: 5,960원
+                        - generic [ref=f117e1613]: (100g당 1,192원)
+                    - generic [ref=f117e1614]:
+                      - generic [ref=f117e1615]: 내일(토) 도착 보장
+                      - generic [ref=f117e1619]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e1621]:
+                      - generic "5" [ref=f117e1622]
+                      - generic [ref=f117e1628]: (62,086)
+                    - generic [ref=f117e1631]:
+                      - img "최대 298원 적립" [ref=f117e1632]
+                      - generic [ref=f117e1633]: 최대 298원 적립
+              - listitem [ref=f117e1634] [cursor=pointer]:
+                - link "포스트 골든그래놀라 후르츠 시리얼, 360g, 1개 6,300원 (100g당 1,750원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (8,899) 최대 315원 적립 최대 315원 적립" [ref=f117e1635]:
+                  - /url: /vp/products/6145384684?itemId=21098697632&vendorItemId=3087164458&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=27&rank=27
+                  - figure [ref=f117e1636]:
+                    - img "포스트 골든그래놀라 후르츠 시리얼, 360g, 1개" [ref=f117e1637]
+                  - generic [ref=f117e1638]:
+                    - generic [ref=f117e1640]: 포스트 골든그래놀라 후르츠 시리얼, 360g, 1개
+                    - generic [ref=f117e1643]:
+                      - generic [ref=f117e1644]: 6,300원
+                      - generic [ref=f117e1645]: (100g당 1,750원)
+                    - generic [ref=f117e1646]:
+                      - generic [ref=f117e1647]: 내일(토) 도착 보장
+                      - generic [ref=f117e1651]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e1653]:
+                      - generic "5" [ref=f117e1654]
+                      - generic [ref=f117e1660]: (8,899)
+                    - generic [ref=f117e1663]:
+                      - img "최대 315원 적립" [ref=f117e1664]
+                      - generic [ref=f117e1665]: 최대 315원 적립
+              - listitem [ref=f117e1666] [cursor=pointer]:
+                - link "포스트 골든 그래놀라 아몬드 빈 시리얼, 360g, 1개 6,300원 (100g당 1,750원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (7,143) 최대 315원 적립 최대 315원 적립" [ref=f117e1667]:
+                  - /url: /vp/products/136659157?itemId=400477168&vendorItemId=3975720085&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=28&rank=28
+                  - figure [ref=f117e1668]:
+                    - img "포스트 골든 그래놀라 아몬드 빈 시리얼, 360g, 1개" [ref=f117e1669]
+                  - generic [ref=f117e1670]:
+                    - generic [ref=f117e1672]: 포스트 골든 그래놀라 아몬드 빈 시리얼, 360g, 1개
+                    - generic [ref=f117e1675]:
+                      - generic [ref=f117e1676]: 6,300원
+                      - generic [ref=f117e1677]: (100g당 1,750원)
+                    - generic [ref=f117e1678]:
+                      - generic [ref=f117e1679]: 내일(토) 도착 보장
+                      - generic [ref=f117e1683]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e1685]:
+                      - generic "5" [ref=f117e1686]
+                      - generic [ref=f117e1692]: (7,143)
+                    - generic [ref=f117e1695]:
+                      - img "최대 315원 적립" [ref=f117e1696]
+                      - generic [ref=f117e1697]: 최대 315원 적립
+              - listitem [ref=f117e1698] [cursor=pointer]:
+                - link "포스트 골든 그래놀라 크런치 시리얼, 360g, 1개 6,300원 (100g당 1,750원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 5 (11,014) 최대 315원 적립 최대 315원 적립" [ref=f117e1699]:
+                  - /url: /vp/products/7420364003?itemId=19247263462&vendorItemId=3126228699&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=29&rank=29
+                  - figure [ref=f117e1700]:
+                    - img "포스트 골든 그래놀라 크런치 시리얼, 360g, 1개" [ref=f117e1701]
+                  - generic [ref=f117e1702]:
+                    - generic [ref=f117e1704]: 포스트 골든 그래놀라 크런치 시리얼, 360g, 1개
+                    - generic [ref=f117e1707]:
+                      - generic [ref=f117e1708]: 6,300원
+                      - generic [ref=f117e1709]: (100g당 1,750원)
+                    - generic [ref=f117e1710]:
+                      - generic [ref=f117e1711]: 내일(토) 도착 보장
+                      - generic [ref=f117e1715]: 와우는 무료배송 ∙ 무료반품
+                    - generic [ref=f117e1717]:
+                      - generic "5" [ref=f117e1718]
+                      - generic [ref=f117e1724]: (11,014)
+                    - generic [ref=f117e1727]:
+                      - img "최대 315원 적립" [ref=f117e1728]
+                      - generic [ref=f117e1729]: 최대 315원 적립
+              - listitem [ref=f117e1730] [cursor=pointer]:
+                - link "포스트 카카오 호두 그래놀라, 510g, 1개 6,400원 (100g당 1,255원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (22,982) 최대 320원 적립 최대 320원 적립" [ref=f117e1731]:
+                  - /url: /vp/products/8290018763?itemId=21152591540&vendorItemId=3000687596&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=30&rank=30
+                  - figure [ref=f117e1732]:
+                    - img "포스트 카카오 호두 그래놀라, 510g, 1개" [ref=f117e1733]
+                  - generic [ref=f117e1734]:
+                    - generic [ref=f117e1736]: 포스트 카카오 호두 그래놀라, 510g, 1개
+                    - generic [ref=f117e1739]:
+                      - generic [ref=f117e1740]: 6,400원
+                      - generic [ref=f117e1741]: (100g당 1,255원)
+                    - generic [ref=f117e1742]:
+                      - generic [ref=f117e1743]: 내일(토) 도착 보장
+                      - generic [ref=f117e1747]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e1749]:
+                      - generic "5" [ref=f117e1750]
+                      - generic [ref=f117e1756]: (22,982)
+                    - generic [ref=f117e1759]:
+                      - img "최대 320원 적립" [ref=f117e1760]
+                      - generic [ref=f117e1761]: 최대 320원 적립
+              - listitem [ref=f117e1762] [cursor=pointer]:
+                - link "포스트 통보리 그래놀라 시리얼, 500g, 1개 6,550원 (100g당 1,310원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (3,488) 최대 328원 적립 최대 328원 적립" [ref=f117e1763]:
+                  - /url: /vp/products/6953984545?itemId=16906028664&vendorItemId=84084140991&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=31&rank=31
+                  - figure [ref=f117e1764]:
+                    - img "포스트 통보리 그래놀라 시리얼, 500g, 1개" [ref=f117e1765]
+                  - generic [ref=f117e1766]:
+                    - generic [ref=f117e1768]: 포스트 통보리 그래놀라 시리얼, 500g, 1개
+                    - generic [ref=f117e1771]:
+                      - generic [ref=f117e1772]: 6,550원
+                      - generic [ref=f117e1773]: (100g당 1,310원)
+                    - generic [ref=f117e1774]:
+                      - generic [ref=f117e1775]: 내일(토) 도착 보장
+                      - generic [ref=f117e1779]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e1781]:
+                      - generic "5" [ref=f117e1782]
+                      - generic [ref=f117e1788]: (3,488)
+                    - generic [ref=f117e1791]:
+                      - img "최대 328원 적립" [ref=f117e1792]
+                      - generic [ref=f117e1793]: 최대 328원 적립
+              - listitem [ref=f117e1794] [cursor=pointer]:
+                - link "포스트 그래놀라 시리얼 블루베리, 500g, 1개 6,600원 (100g당 1,320원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (22,756) 최대 330원 적립 최대 330원 적립" [ref=f117e1795]:
+                  - /url: /vp/products/256739565?itemId=808461527&vendorItemId=3042577782&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=32&rank=32
+                  - figure [ref=f117e1796]:
+                    - img "포스트 그래놀라 시리얼 블루베리, 500g, 1개" [ref=f117e1797]
+                  - generic [ref=f117e1798]:
+                    - generic [ref=f117e1800]: 포스트 그래놀라 시리얼 블루베리, 500g, 1개
+                    - generic [ref=f117e1803]:
+                      - generic [ref=f117e1804]: 6,600원
+                      - generic [ref=f117e1805]: (100g당 1,320원)
+                    - generic [ref=f117e1806]:
+                      - generic [ref=f117e1807]: 내일(토) 도착 보장
+                      - generic [ref=f117e1811]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e1813]:
+                      - generic "5" [ref=f117e1814]
+                      - generic [ref=f117e1820]: (22,756)
+                    - generic [ref=f117e1823]:
+                      - img "최대 330원 적립" [ref=f117e1824]
+                      - generic [ref=f117e1825]: 최대 330원 적립
+              - listitem [ref=f117e1826] [cursor=pointer]:
+                - link "마켓오네이처 오그래놀라 오트 리얼 초콜릿 시리얼, 360g, 1개 6,630원 (100g당 1,842원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (3,109) 최대 331원 적립 최대 331원 적립" [ref=f117e1827]:
+                  - /url: /vp/products/7804187734?itemId=21143961902&vendorItemId=88255719615&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=33&rank=33
+                  - figure [ref=f117e1828]:
+                    - img "마켓오네이처 오그래놀라 오트 리얼 초콜릿 시리얼, 360g, 1개" [ref=f117e1829]
+                  - generic [ref=f117e1830]:
+                    - generic [ref=f117e1832]: 마켓오네이처 오그래놀라 오트 리얼 초콜릿 시리얼, 360g, 1개
+                    - generic [ref=f117e1835]:
+                      - generic [ref=f117e1836]: 6,630원
+                      - generic [ref=f117e1837]: (100g당 1,842원)
+                    - generic [ref=f117e1838]:
+                      - generic [ref=f117e1839]: 내일(토) 도착 보장
+                      - generic [ref=f117e1843]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e1845]:
+                      - generic "5" [ref=f117e1846]
+                      - generic [ref=f117e1852]: (3,109)
+                    - generic [ref=f117e1855]:
+                      - img "최대 331원 적립" [ref=f117e1856]
+                      - generic [ref=f117e1857]: 최대 331원 적립
+              - listitem [ref=f117e1858] [cursor=pointer]:
+                - link "켈로그 리얼 그래놀라 오리지널 시리얼, 350g, 1개 6,700원 (100g당 1,914원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (64,500) 최대 335원 적립 최대 335원 적립" [ref=f117e1859]:
+                  - /url: /vp/products/7012375223?itemId=27830931304&vendorItemId=94790519284&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=34&rank=34
+                  - figure [ref=f117e1860]:
+                    - img "켈로그 리얼 그래놀라 오리지널 시리얼, 350g, 1개" [ref=f117e1861]
+                  - generic [ref=f117e1862]:
+                    - generic [ref=f117e1864]: 켈로그 리얼 그래놀라 오리지널 시리얼, 350g, 1개
+                    - generic [ref=f117e1867]:
+                      - generic [ref=f117e1868]: 6,700원
+                      - generic [ref=f117e1869]: (100g당 1,914원)
+                    - generic [ref=f117e1870]:
+                      - generic [ref=f117e1871]: 내일(토) 도착 보장
+                      - generic [ref=f117e1875]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e1877]:
+                      - generic "5" [ref=f117e1878]
+                      - generic [ref=f117e1884]: (64,500)
+                    - generic [ref=f117e1887]:
+                      - img "최대 335원 적립" [ref=f117e1888]
+                      - generic [ref=f117e1889]: 최대 335원 적립
+              - listitem [ref=f117e1890] [cursor=pointer]:
+                - link "포스트 그래놀라 크랜베리 아몬드 식사간식 시리얼, 350g, 2개 6,780원 (10g당 97원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (104,696) 최대 339원 적립 최대 339원 적립" [ref=f117e1891]:
+                  - /url: /vp/products/257055522?itemId=1007688209&vendorItemId=3020496436&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=35&rank=35
+                  - figure [ref=f117e1892]:
+                    - img "포스트 그래놀라 크랜베리 아몬드 식사간식 시리얼, 350g, 2개" [ref=f117e1893]
+                  - generic [ref=f117e1894]:
+                    - generic [ref=f117e1896]: 포스트 그래놀라 크랜베리 아몬드 식사간식 시리얼, 350g, 2개
+                    - generic [ref=f117e1899]:
+                      - generic [ref=f117e1900]: 6,780원
+                      - generic [ref=f117e1901]: (10g당 97원)
+                    - generic [ref=f117e1902]:
+                      - generic [ref=f117e1903]: 내일(토) 도착 보장
+                      - generic [ref=f117e1907]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e1909]:
+                      - generic "5" [ref=f117e1910]
+                      - generic [ref=f117e1916]: (104,696)
+                    - generic [ref=f117e1919]:
+                      - img "최대 339원 적립" [ref=f117e1920]
+                      - generic [ref=f117e1921]: 최대 339원 적립
+              - listitem [ref=f117e1922] [cursor=pointer]:
+                - link "동서 초코 그래놀라, 300g, 1개 6,880원 (100g당 2,293원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 4.5 (5,917) 최대 344원 적립 최대 344원 적립" [ref=f117e1923]:
+                  - /url: /vp/products/6438911539?itemId=26732298218&vendorItemId=93703687440&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=36&rank=36
+                  - figure [ref=f117e1924]:
+                    - img "동서 초코 그래놀라, 300g, 1개" [ref=f117e1925]
+                  - generic [ref=f117e1926]:
+                    - generic [ref=f117e1928]: 동서 초코 그래놀라, 300g, 1개
+                    - generic [ref=f117e1931]:
+                      - generic [ref=f117e1932]: 6,880원
+                      - generic [ref=f117e1933]: (100g당 2,293원)
+                    - generic [ref=f117e1934]:
+                      - generic [ref=f117e1935]: 내일(토) 도착 보장
+                      - generic [ref=f117e1939]: 와우는 무료배송 ∙ 무료반품
+                    - generic [ref=f117e1941]:
+                      - generic "4.5" [ref=f117e1942]
+                      - generic [ref=f117e1948]: (5,917)
+                    - generic [ref=f117e1951]:
+                      - img "최대 344원 적립" [ref=f117e1952]
+                      - generic [ref=f117e1953]: 최대 344원 적립
+              - listitem [ref=f117e1954] [cursor=pointer]:
+                - link "퀘이커 오트 그래놀라 시리얼 골든넛츠, 350g, 1개 8,380원 (100g당 2,394원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (17,374) 최대 344원 적립 최대 344원 적립" [ref=f117e1955]:
+                  - /url: /vp/products/199764313?itemId=579248935&vendorItemId=94941383313&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=37&rank=37
+                  - figure [ref=f117e1956]:
+                    - img "퀘이커 오트 그래놀라 시리얼 골든넛츠, 350g, 1개" [ref=f117e1957]
+                  - generic [ref=f117e1958]:
+                    - generic [ref=f117e1960]: 퀘이커 오트 그래놀라 시리얼 골든넛츠, 350g, 1개
+                    - generic [ref=f117e1963]:
+                      - generic [ref=f117e1964]: 8,380원
+                      - generic [ref=f117e1965]: (100g당 2,394원)
+                    - generic [ref=f117e1966]:
+                      - generic [ref=f117e1967]: 내일(토) 도착 보장
+                      - generic [ref=f117e1971]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e1973]:
+                      - generic "5" [ref=f117e1974]
+                      - generic [ref=f117e1980]: (17,374)
+                    - generic [ref=f117e1983]:
+                      - img "최대 344원 적립" [ref=f117e1984]
+                      - generic [ref=f117e1985]: 최대 344원 적립
+              - listitem [ref=f117e1986] [cursor=pointer]:
+                - link "우리가스토리 귀리 83% 오리지날 그래놀라, 500g, 1개 6,900원 (100g당 1,380원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 4.5 (9) 최대 345원 적립 최대 345원 적립" [ref=f117e1987]:
+                  - /url: /vp/products/9524960812?itemId=28398247599&vendorItemId=95349605506&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=38&rank=38
+                  - figure [ref=f117e1988]:
+                    - img "우리가스토리 귀리 83% 오리지날 그래놀라, 500g, 1개" [ref=f117e1989]
+                  - generic [ref=f117e1990]:
+                    - generic [ref=f117e1992]: 우리가스토리 귀리 83% 오리지날 그래놀라, 500g, 1개
+                    - generic [ref=f117e1995]:
+                      - generic [ref=f117e1996]: 6,900원
+                      - generic [ref=f117e1997]: (100g당 1,380원)
+                    - generic [ref=f117e1998]:
+                      - generic [ref=f117e1999]: 내일(토) 도착 보장
+                      - generic [ref=f117e2003]: 와우는 무료배송 ∙ 무료반품
+                    - generic [ref=f117e2005]:
+                      - generic "4.5" [ref=f117e2006]
+                      - generic [ref=f117e2012]: (9)
+                    - generic [ref=f117e2015]:
+                      - img "최대 345원 적립" [ref=f117e2016]
+                      - generic [ref=f117e2017]: 최대 345원 적립
+              - listitem [ref=f117e2018] [cursor=pointer]:
+                - link "네이쳐스패스 러브 크런치 다크초코 앤 피넛버터 그래놀라 시리얼, 325g, 1개 9,860원 (100g당 3,034원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 5 (3,727) 최대 493원 적립 최대 493원 적립" [ref=f117e2019]:
+                  - /url: /vp/products/29533293?itemId=112897101&vendorItemId=3222738675&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=39&rank=39
+                  - figure [ref=f117e2020]:
+                    - img "네이쳐스패스 러브 크런치 다크초코 앤 피넛버터 그래놀라 시리얼, 325g, 1개" [ref=f117e2021]
+                  - generic [ref=f117e2022]:
+                    - generic [ref=f117e2024]: 네이쳐스패스 러브 크런치 다크초코 앤 피넛버터 그래놀라 시리얼, 325g, 1개
+                    - generic [ref=f117e2027]:
+                      - generic [ref=f117e2028]: 9,860원
+                      - generic [ref=f117e2029]: (100g당 3,034원)
+                    - generic [ref=f117e2030]:
+                      - generic [ref=f117e2031]: 내일(토) 도착 보장
+                      - generic [ref=f117e2035]: 와우는 무료배송 ∙ 무료반품
+                    - generic [ref=f117e2037]:
+                      - generic "5" [ref=f117e2038]
+                      - generic [ref=f117e2044]: (3,727)
+                    - generic [ref=f117e2047]:
+                      - img "최대 493원 적립" [ref=f117e2048]
+                      - generic [ref=f117e2049]: 최대 493원 적립
+              - listitem [ref=f117e2050] [cursor=pointer]:
+                - link "산테 후르츠 그래놀라, 350g, 1개 6,980원 (100g당 1,994원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4 (11) 최대 349원 적립 최대 349원 적립" [ref=f117e2051]:
+                  - /url: /vp/products/2035045828?itemId=27241629583&vendorItemId=94208601126&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=40&rank=40
+                  - figure [ref=f117e2052]:
+                    - img "산테 후르츠 그래놀라, 350g, 1개" [ref=f117e2053]
+                  - generic [ref=f117e2054]:
+                    - generic [ref=f117e2056]: 산테 후르츠 그래놀라, 350g, 1개
+                    - generic [ref=f117e2059]:
+                      - generic [ref=f117e2060]: 6,980원
+                      - generic [ref=f117e2061]: (100g당 1,994원)
+                    - generic [ref=f117e2062]:
+                      - generic [ref=f117e2063]: 내일(토) 도착 보장
+                      - generic [ref=f117e2067]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e2069]:
+                      - generic "4" [ref=f117e2070]
+                      - generic [ref=f117e2076]: (11)
+                    - generic [ref=f117e2079]:
+                      - img "최대 349원 적립" [ref=f117e2080]
+                      - generic [ref=f117e2081]: 최대 349원 적립
+              - listitem [ref=f117e2082] [cursor=pointer]:
+                - link "켈로그 크랜베리 아몬드 그래놀라 시리얼, 550g, 1개 쿠폰할인 9,280원 27% 6,740원 (100g당 1,225원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (79,386) 최대 337원 적립 최대 337원 적립" [ref=f117e2083]:
+                  - /url: /vp/products/8281248462?itemId=10357476583&vendorItemId=4347631114&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=41&rank=41
+                  - figure [ref=f117e2084]:
+                    - img "켈로그 크랜베리 아몬드 그래놀라 시리얼, 550g, 1개" [ref=f117e2085]
+                  - generic [ref=f117e2086]:
+                    - generic [ref=f117e2088]: 켈로그 크랜베리 아몬드 그래놀라 시리얼, 550g, 1개
+                    - generic [ref=f117e2089]:
+                      - generic [ref=f117e2090]:
+                        - generic [ref=f117e2091]: 쿠폰할인
+                        - deletion [ref=f117e2092]: 9,280원
+                      - generic [ref=f117e2094]:
+                        - generic [ref=f117e2095]: 27%
+                        - generic [ref=f117e2100]: 6,740원
+                        - generic [ref=f117e2101]: (100g당 1,225원)
+                    - generic [ref=f117e2102]:
+                      - generic [ref=f117e2103]: 내일(토) 도착 보장
+                      - generic [ref=f117e2107]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e2109]:
+                      - generic "5" [ref=f117e2110]
+                      - generic [ref=f117e2116]: (79,386)
+                    - generic [ref=f117e2119]:
+                      - img "최대 337원 적립" [ref=f117e2120]
+                      - generic [ref=f117e2121]: 최대 337원 적립
+              - listitem [ref=f117e2122] [cursor=pointer]:
+                - link "오그래놀라 오리온 저당 카카오 시리얼, 1개, 330g 7,200원 (100g당 2,182원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (296) 최대 360원 적립 최대 360원 적립" [ref=f117e2123]:
+                  - /url: /vp/products/9651640247?itemId=28811543800&vendorItemId=95746551905&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=42&rank=42
+                  - figure [ref=f117e2124]:
+                    - img "오그래놀라 오리온 저당 카카오 시리얼, 1개, 330g" [ref=f117e2125]
+                  - generic [ref=f117e2126]:
+                    - generic [ref=f117e2128]: 오그래놀라 오리온 저당 카카오 시리얼, 1개, 330g
+                    - generic [ref=f117e2131]:
+                      - generic [ref=f117e2132]: 7,200원
+                      - generic [ref=f117e2133]: (100g당 2,182원)
+                    - generic [ref=f117e2134]:
+                      - generic [ref=f117e2135]: 내일(토) 도착 보장
+                      - generic [ref=f117e2139]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e2141]:
+                      - generic "5" [ref=f117e2142]
+                      - generic [ref=f117e2148]: (296)
+                    - generic [ref=f117e2151]:
+                      - img "최대 360원 적립" [ref=f117e2152]
+                      - generic [ref=f117e2153]: 최대 360원 적립
+              - listitem [ref=f117e2154] [cursor=pointer]:
+                - link "키토제니 파머스 솔티드버터 그래놀라 시리얼, 150g, 1개 7,210원 (100g당 4,807원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (1,207) 최대 360원 적립 최대 360원 적립" [ref=f117e2155]:
+                  - /url: /vp/products/6354999427?itemId=13389198968&vendorItemId=80644042062&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=43&rank=43
+                  - figure [ref=f117e2156]:
+                    - img "키토제니 파머스 솔티드버터 그래놀라 시리얼, 150g, 1개" [ref=f117e2157]
+                  - generic [ref=f117e2158]:
+                    - generic [ref=f117e2160]: 키토제니 파머스 솔티드버터 그래놀라 시리얼, 150g, 1개
+                    - generic [ref=f117e2163]:
+                      - generic [ref=f117e2164]: 7,210원
+                      - generic [ref=f117e2165]: (100g당 4,807원)
+                    - generic [ref=f117e2166]:
+                      - generic [ref=f117e2167]: 내일(토) 도착 보장
+                      - generic [ref=f117e2171]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e2173]:
+                      - generic "5" [ref=f117e2174]
+                      - generic [ref=f117e2180]: (1,207)
+                    - generic [ref=f117e2183]:
+                      - img "최대 360원 적립" [ref=f117e2184]
+                      - generic [ref=f117e2185]: 최대 360원 적립
+              - listitem [ref=f117e2186] [cursor=pointer]:
+                - link "키토제니 저당 파머스그래놀라 초콜릿넛츠 시리얼, 150g, 1개 12,000원 39% 7,210원 (100g당 4,807원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (268) 최대 360원 적립 최대 360원 적립" [ref=f117e2187]:
+                  - /url: /vp/products/7755319863?itemId=25229898236&vendorItemId=87992473360&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=44&rank=44
+                  - figure [ref=f117e2188]:
+                    - img "키토제니 저당 파머스그래놀라 초콜릿넛츠 시리얼, 150g, 1개" [ref=f117e2189]
+                  - generic [ref=f117e2190]:
+                    - generic [ref=f117e2192]: 키토제니 저당 파머스그래놀라 초콜릿넛츠 시리얼, 150g, 1개
+                    - generic [ref=f117e2193]:
+                      - deletion [ref=f117e2195]: 12,000원
+                      - generic [ref=f117e2197]:
+                        - generic [ref=f117e2198]: 39%
+                        - generic [ref=f117e2199]: 7,210원
+                        - generic [ref=f117e2200]: (100g당 4,807원)
+                    - generic [ref=f117e2201]:
+                      - generic [ref=f117e2202]: 내일(토) 도착 보장
+                      - generic [ref=f117e2206]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e2208]:
+                      - generic "4.5" [ref=f117e2209]
+                      - generic [ref=f117e2215]: (268)
+                    - generic [ref=f117e2218]:
+                      - img "최대 360원 적립" [ref=f117e2219]
+                      - generic [ref=f117e2220]: 최대 360원 적립
+              - listitem [ref=f117e2221] [cursor=pointer]:
+                - link "키토제니 파머스 무화과홀그레인 그래놀라 시리얼, 150g, 1개 12,000원 39% 7,210원 (100g당 4,807원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 4.5 (193) 최대 360원 적립 최대 360원 적립" [ref=f117e2222]:
+                  - /url: /vp/products/6645899572?itemId=15209521327&vendorItemId=82430562481&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=45&rank=45
+                  - figure [ref=f117e2223]:
+                    - img "키토제니 파머스 무화과홀그레인 그래놀라 시리얼, 150g, 1개" [ref=f117e2224]
+                  - generic [ref=f117e2225]:
+                    - generic [ref=f117e2227]: 키토제니 파머스 무화과홀그레인 그래놀라 시리얼, 150g, 1개
+                    - generic [ref=f117e2228]:
+                      - deletion [ref=f117e2230]: 12,000원
+                      - generic [ref=f117e2232]:
+                        - generic [ref=f117e2233]: 39%
+                        - generic [ref=f117e2234]: 7,210원
+                        - generic [ref=f117e2235]: (100g당 4,807원)
+                    - generic [ref=f117e2236]:
+                      - generic [ref=f117e2237]: 내일(토) 도착 보장
+                      - generic [ref=f117e2241]: 와우는 무료배송 ∙ 무료반품
+                    - generic [ref=f117e2243]:
+                      - generic "4.5" [ref=f117e2244]
+                      - generic [ref=f117e2250]: (193)
+                    - generic [ref=f117e2253]:
+                      - img "최대 360원 적립" [ref=f117e2254]
+                      - generic [ref=f117e2255]: 최대 360원 적립
+              - listitem [ref=f117e2256] [cursor=pointer]:
+                - link "키토제니 파머스 베리시나몬 그래놀라 시리얼, 150g, 1개 7,210원 (100g당 4,807원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (407) 최대 360원 적립 최대 360원 적립" [ref=f117e2257]:
+                  - /url: /vp/products/6355015119?itemId=13389312101&vendorItemId=80644153196&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=46&rank=46
+                  - figure [ref=f117e2258]:
+                    - img "키토제니 파머스 베리시나몬 그래놀라 시리얼, 150g, 1개" [ref=f117e2259]
+                  - generic [ref=f117e2260]:
+                    - generic [ref=f117e2262]: 키토제니 파머스 베리시나몬 그래놀라 시리얼, 150g, 1개
+                    - generic [ref=f117e2265]:
+                      - generic [ref=f117e2266]: 7,210원
+                      - generic [ref=f117e2267]: (100g당 4,807원)
+                    - generic [ref=f117e2268]:
+                      - generic [ref=f117e2269]: 내일(토) 도착 보장
+                      - generic [ref=f117e2273]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e2275]:
+                      - generic "5" [ref=f117e2276]
+                      - generic [ref=f117e2282]: (407)
+                    - generic [ref=f117e2285]:
+                      - img "최대 360원 적립" [ref=f117e2286]
+                      - generic [ref=f117e2287]: 최대 360원 적립
+              - listitem [ref=f117e2288] [cursor=pointer]:
+                - link "켈로그 프로틴 그래놀라 제로슈거, 350g, 1개 9,580원 24% 7,280원 (100g당 2,080원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (26,077) 최대 364원 적립 최대 364원 적립" [ref=f117e2289]:
+                  - /url: /vp/products/8730800274?itemId=25368561952&vendorItemId=92362745533&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=47&rank=47
+                  - figure [ref=f117e2290]:
+                    - img "켈로그 프로틴 그래놀라 제로슈거, 350g, 1개" [ref=f117e2291]
+                  - generic [ref=f117e2292]:
+                    - generic [ref=f117e2294]: 켈로그 프로틴 그래놀라 제로슈거, 350g, 1개
+                    - generic [ref=f117e2295]:
+                      - deletion [ref=f117e2297]: 9,580원
+                      - generic [ref=f117e2299]:
+                        - generic [ref=f117e2300]: 24%
+                        - generic [ref=f117e2301]: 7,280원
+                        - generic [ref=f117e2302]: (100g당 2,080원)
+                    - generic [ref=f117e2303]:
+                      - generic [ref=f117e2304]: 내일(토) 도착 보장
+                      - generic [ref=f117e2308]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e2310]:
+                      - generic "5" [ref=f117e2311]
+                      - generic [ref=f117e2317]: (26,077)
+                    - generic [ref=f117e2320]:
+                      - img "최대 364원 적립" [ref=f117e2321]
+                      - generic [ref=f117e2322]: 최대 364원 적립
+              - listitem [ref=f117e2323] [cursor=pointer]:
+                - link "켈로그 프로틴 그래놀라 제로슈거, 350g, 1개 9,580원 24% 7,280원 (100g당 2,080원) 내일(토) 새벽 도착 보장 5 (199) 최대 364원 적립 최대 364원 적립" [ref=f117e2324]:
+                  - /url: /vp/products/8885191817?itemId=25936518030&vendorItemId=92919854027&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=48&rank=48
+                  - figure [ref=f117e2325]:
+                    - img "켈로그 프로틴 그래놀라 제로슈거, 350g, 1개" [ref=f117e2326]
+                  - generic [ref=f117e2327]:
+                    - generic [ref=f117e2329]: 켈로그 프로틴 그래놀라 제로슈거, 350g, 1개
+                    - generic [ref=f117e2330]:
+                      - deletion [ref=f117e2332]: 9,580원
+                      - generic [ref=f117e2334]:
+                        - generic [ref=f117e2335]: 24%
+                        - generic [ref=f117e2336]: 7,280원
+                        - generic [ref=f117e2337]: (100g당 2,080원)
+                    - generic [ref=f117e2338]: 내일(토) 새벽 도착 보장
+                    - generic [ref=f117e2344]:
+                      - generic "5" [ref=f117e2345]
+                      - generic [ref=f117e2351]: (199)
+                    - generic [ref=f117e2354]:
+                      - img "최대 364원 적립" [ref=f117e2355]
+                      - generic [ref=f117e2356]: 최대 364원 적립
+              - listitem [ref=f117e2357] [cursor=pointer]:
+                - link "서울팩토리 그래놀라 믹스, 200g, 1개 7,340원 (100g당 3,670원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 4.5 (88) 최대 367원 적립 최대 367원 적립" [ref=f117e2358]:
+                  - /url: /vp/products/5790284155?itemId=9897421492&vendorItemId=77180777638&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=49&rank=49
+                  - figure [ref=f117e2359]:
+                    - img "서울팩토리 그래놀라 믹스, 200g, 1개" [ref=f117e2360]
+                  - generic [ref=f117e2361]:
+                    - generic [ref=f117e2363]: 서울팩토리 그래놀라 믹스, 200g, 1개
+                    - generic [ref=f117e2366]:
+                      - generic [ref=f117e2367]: 7,340원
+                      - generic [ref=f117e2368]: (100g당 3,670원)
+                    - generic [ref=f117e2369]:
+                      - generic [ref=f117e2370]: 내일(토) 도착 보장
+                      - generic [ref=f117e2374]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e2376]:
+                      - generic "4.5" [ref=f117e2377]
+                      - generic [ref=f117e2383]: (88)
+                    - generic [ref=f117e2386]:
+                      - img "최대 367원 적립" [ref=f117e2387]
+                      - generic [ref=f117e2388]: 최대 367원 적립
+              - listitem [ref=f117e2389] [cursor=pointer]:
+                - link "켈로그 통귀리 그래놀라 시리얼, 500g, 1개 9,680원 22% 7,480원 (100g당 1,496원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (41,292) 최대 374원 적립 최대 374원 적립" [ref=f117e2390]:
+                  - /url: /vp/products/6902753458?itemId=16607381545&vendorItemId=5288741799&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=50&rank=50
+                  - figure [ref=f117e2391]:
+                    - img "켈로그 통귀리 그래놀라 시리얼, 500g, 1개" [ref=f117e2392]
+                  - generic [ref=f117e2393]:
+                    - generic [ref=f117e2395]: 켈로그 통귀리 그래놀라 시리얼, 500g, 1개
+                    - generic [ref=f117e2396]:
+                      - deletion [ref=f117e2398]: 9,680원
+                      - generic [ref=f117e2400]:
+                        - generic [ref=f117e2401]: 22%
+                        - generic [ref=f117e2402]: 7,480원
+                        - generic [ref=f117e2403]: (100g당 1,496원)
+                    - generic [ref=f117e2404]:
+                      - generic [ref=f117e2405]: 내일(토) 도착 보장
+                      - generic [ref=f117e2409]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e2411]:
+                      - generic "5" [ref=f117e2412]
+                      - generic [ref=f117e2418]: (41,292)
+                    - generic [ref=f117e2421]:
+                      - img "최대 374원 적립" [ref=f117e2422]
+                      - generic [ref=f117e2423]: 최대 374원 적립
+              - listitem [ref=f117e2424] [cursor=pointer]:
+                - link "켈로그 프로틴 그래놀라 시리얼 다크초코볼, 450g, 1개 9,280원 18% 7,590원 (100g당 1,687원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (17,534) 최대 380원 적립 최대 380원 적립" [ref=f117e2425]:
+                  - /url: /vp/products/6516080410?itemId=18294658377&vendorItemId=81659211826&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=51&rank=51
+                  - figure [ref=f117e2426]:
+                    - img "켈로그 프로틴 그래놀라 시리얼 다크초코볼, 450g, 1개" [ref=f117e2427]
+                  - generic [ref=f117e2428]:
+                    - generic [ref=f117e2430]: 켈로그 프로틴 그래놀라 시리얼 다크초코볼, 450g, 1개
+                    - generic [ref=f117e2431]:
+                      - deletion [ref=f117e2433]: 9,280원
+                      - generic [ref=f117e2435]:
+                        - generic [ref=f117e2436]: 18%
+                        - generic [ref=f117e2437]: 7,590원
+                        - generic [ref=f117e2438]: (100g당 1,687원)
+                    - generic [ref=f117e2439]:
+                      - generic [ref=f117e2440]: 내일(토) 도착 보장
+                      - generic [ref=f117e2444]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e2446]:
+                      - generic "5" [ref=f117e2447]
+                      - generic [ref=f117e2453]: (17,534)
+                    - generic [ref=f117e2456]:
+                      - img "최대 380원 적립" [ref=f117e2457]
+                      - generic [ref=f117e2458]: 최대 380원 적립
+              - listitem [ref=f117e2459] [cursor=pointer]:
+                - link "블루프로그 그래놀라 토스티드 씨드 위드 바닐라 & 씨솔트, 1개, 350g 7,600원 (100g당 2,171원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 5 (13) 최대 380원 적립 최대 380원 적립" [ref=f117e2460]:
+                  - /url: /vp/products/8956427369?itemId=26523269660&vendorItemId=93497583822&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=52&rank=52
+                  - figure [ref=f117e2461]:
+                    - img "블루프로그 그래놀라 토스티드 씨드 위드 바닐라 & 씨솔트, 1개, 350g" [ref=f117e2462]
+                  - generic [ref=f117e2463]:
+                    - generic [ref=f117e2465]: 블루프로그 그래놀라 토스티드 씨드 위드 바닐라 & 씨솔트, 1개, 350g
+                    - generic [ref=f117e2468]:
+                      - generic [ref=f117e2469]: 7,600원
+                      - generic [ref=f117e2470]: (100g당 2,171원)
+                    - generic [ref=f117e2471]:
+                      - generic [ref=f117e2472]: 내일(토) 도착 보장
+                      - generic [ref=f117e2476]: 와우는 무료배송 ∙ 무료반품
+                    - generic [ref=f117e2478]:
+                      - generic "5" [ref=f117e2479]
+                      - generic [ref=f117e2485]: (13)
+                    - generic [ref=f117e2488]:
+                      - img "최대 380원 적립" [ref=f117e2489]
+                      - generic [ref=f117e2490]: 최대 380원 적립
+              - listitem [ref=f117e2491] [cursor=pointer]:
+                - link "블루프로그 그래놀라 진저넛츠 크런치, 1개, 350g 7,600원 (100g당 2,171원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 4.5 (12) 최대 380원 적립 최대 380원 적립" [ref=f117e2492]:
+                  - /url: /vp/products/8956433934?itemId=26523269775&vendorItemId=93497583821&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=53&rank=53
+                  - figure [ref=f117e2493]:
+                    - img "블루프로그 그래놀라 진저넛츠 크런치, 1개, 350g" [ref=f117e2494]
+                  - generic [ref=f117e2495]:
+                    - generic [ref=f117e2497]: 블루프로그 그래놀라 진저넛츠 크런치, 1개, 350g
+                    - generic [ref=f117e2500]:
+                      - generic [ref=f117e2501]: 7,600원
+                      - generic [ref=f117e2502]: (100g당 2,171원)
+                    - generic [ref=f117e2503]:
+                      - generic [ref=f117e2504]: 내일(토) 도착 보장
+                      - generic [ref=f117e2508]: 와우는 무료배송 ∙ 무료반품
+                    - generic [ref=f117e2510]:
+                      - generic "4.5" [ref=f117e2511]
+                      - generic [ref=f117e2517]: (12)
+                    - generic [ref=f117e2520]:
+                      - img "최대 380원 적립" [ref=f117e2521]
+                      - generic [ref=f117e2522]: 최대 380원 적립
+              - listitem [ref=f117e2523] [cursor=pointer]:
+                - link "포스트 그래놀라 카카오호두 시리얼, 300g, 2개 7,660원 (100g당 1,277원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (22,982) 최대 383원 적립 최대 383원 적립" [ref=f117e2524]:
+                  - /url: /vp/products/8290018763?itemId=21406225765&vendorItemId=85068265566&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=54&rank=54
+                  - figure [ref=f117e2525]:
+                    - img "포스트 그래놀라 카카오호두 시리얼, 300g, 2개" [ref=f117e2526]
+                  - generic [ref=f117e2527]:
+                    - generic [ref=f117e2529]: 포스트 그래놀라 카카오호두 시리얼, 300g, 2개
+                    - generic [ref=f117e2532]:
+                      - generic [ref=f117e2533]: 7,660원
+                      - generic [ref=f117e2534]: (100g당 1,277원)
+                    - generic [ref=f117e2535]:
+                      - generic [ref=f117e2536]: 내일(토) 도착 보장
+                      - generic [ref=f117e2540]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e2542]:
+                      - generic "5" [ref=f117e2543]
+                      - generic [ref=f117e2549]: (22,982)
+                    - generic [ref=f117e2552]:
+                      - img "최대 383원 적립" [ref=f117e2553]
+                      - generic [ref=f117e2554]: 최대 383원 적립
+              - listitem [ref=f117e2555] [cursor=pointer]:
+                - link "룩트 소보로 그래놀라, 25g, 3개 7,760원 (100g당 10,347원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (835) 최대 388원 적립 최대 388원 적립" [ref=f117e2556]:
+                  - /url: /vp/products/8080667237?itemId=25375085041&vendorItemId=92369173718&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=55&rank=55
+                  - figure [ref=f117e2557]:
+                    - img "룩트 소보로 그래놀라, 25g, 3개" [ref=f117e2558]
+                  - generic [ref=f117e2559]:
+                    - generic [ref=f117e2561]: 룩트 소보로 그래놀라, 25g, 3개
+                    - generic [ref=f117e2564]:
+                      - generic [ref=f117e2565]: 7,760원
+                      - generic [ref=f117e2566]: (100g당 10,347원)
+                    - generic [ref=f117e2567]:
+                      - generic [ref=f117e2568]: 내일(토) 도착 보장
+                      - generic [ref=f117e2572]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e2574]:
+                      - generic "5" [ref=f117e2575]
+                      - generic [ref=f117e2581]: (835)
+                    - generic [ref=f117e2584]:
+                      - img "최대 388원 적립" [ref=f117e2585]
+                      - generic [ref=f117e2586]: 최대 388원 적립
+              - listitem [ref=f117e2587] [cursor=pointer]:
+                - link "룩트 초코 클러스터 그래놀라, 25g, 3개 7,760원 (100g당 10,347원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (860) 최대 388원 적립 최대 388원 적립" [ref=f117e2588]:
+                  - /url: /vp/products/7762633247?itemId=25374495926&vendorItemId=92368593805&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=56&rank=56
+                  - figure [ref=f117e2589]:
+                    - img "룩트 초코 클러스터 그래놀라, 25g, 3개" [ref=f117e2590]
+                  - generic [ref=f117e2591]:
+                    - generic [ref=f117e2593]: 룩트 초코 클러스터 그래놀라, 25g, 3개
+                    - generic [ref=f117e2596]:
+                      - generic [ref=f117e2597]: 7,760원
+                      - generic [ref=f117e2598]: (100g당 10,347원)
+                    - generic [ref=f117e2599]:
+                      - generic [ref=f117e2600]: 내일(토) 도착 보장
+                      - generic [ref=f117e2604]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e2606]:
+                      - generic "5" [ref=f117e2607]
+                      - generic [ref=f117e2613]: (860)
+                    - generic [ref=f117e2616]:
+                      - img "최대 388원 적립" [ref=f117e2617]
+                      - generic [ref=f117e2618]: 최대 388원 적립
+              - listitem [ref=f117e2619] [cursor=pointer]:
+                - link "모던하우스 오트크런치 그래놀라 시리얼 카카오, 150g, 1개 7,900원 (100g당 5,267원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 5 (41) 최대 395원 적립 최대 395원 적립" [ref=f117e2620]:
+                  - /url: /vp/products/8562380117?itemId=24797817946&vendorItemId=91805570720&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=57&rank=57
+                  - figure [ref=f117e2621]:
+                    - img "모던하우스 오트크런치 그래놀라 시리얼 카카오, 150g, 1개" [ref=f117e2622]
+                  - generic [ref=f117e2623]:
+                    - generic [ref=f117e2625]: 모던하우스 오트크런치 그래놀라 시리얼 카카오, 150g, 1개
+                    - generic [ref=f117e2628]:
+                      - generic [ref=f117e2629]: 7,900원
+                      - generic [ref=f117e2630]: (100g당 5,267원)
+                    - generic [ref=f117e2631]:
+                      - generic [ref=f117e2632]: 내일(토) 도착 보장
+                      - generic [ref=f117e2636]: 와우는 무료배송 ∙ 무료반품
+                    - generic [ref=f117e2638]:
+                      - generic "5" [ref=f117e2639]
+                      - generic [ref=f117e2645]: (41)
+                    - generic [ref=f117e2648]:
+                      - img "최대 395원 적립" [ref=f117e2649]
+                      - generic [ref=f117e2650]: 최대 395원 적립
+              - listitem [ref=f117e2651] [cursor=pointer]:
+                - link "마켓오네이처 오!그래놀라 저당, 255g, 2개 8,020원 (100g당 1,573원) 내일(토) 도착 보장 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착 5 (11,069) 최대 401원 적립 최대 401원 적립" [ref=f117e2652]:
+                  - /url: /vp/products/8562175754?itemId=24664068441&vendorItemId=95604882452&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=58&rank=58
+                  - figure [ref=f117e2653]:
+                    - img "마켓오네이처 오!그래놀라 저당, 255g, 2개" [ref=f117e2654]
+                  - generic [ref=f117e2655]:
+                    - generic [ref=f117e2657]: 마켓오네이처 오!그래놀라 저당, 255g, 2개
+                    - generic [ref=f117e2660]:
+                      - generic [ref=f117e2661]: 8,020원
+                      - generic [ref=f117e2662]: (100g당 1,573원)
+                    - generic [ref=f117e2663]:
+                      - generic [ref=f117e2664]: 내일(토) 도착 보장
+                      - generic [ref=f117e2668]: 와우는 무료배송 ∙ 무료반품 ∙ 새벽도착
+                    - generic [ref=f117e2670]:
+                      - generic "5" [ref=f117e2671]
+                      - generic [ref=f117e2677]: (11,069)
+                    - generic [ref=f117e2680]:
+                      - img "최대 401원 적립" [ref=f117e2681]
+                      - generic [ref=f117e2682]: 최대 401원 적립
+              - listitem [ref=f117e2683] [cursor=pointer]:
+                - link "동서 그래놀라 시리얼, 1kg, 1개 7,660원 (100g당 766원) 품절 5 (26,593)" [ref=f117e2684]:
+                  - /url: /vp/products/1909946?itemId=8448254&vendorItemId=88684905963&q=그래놀라&searchId=5b990b4010102616&sourceType=search&itemsCount=60&searchRank=59&rank=59
+                  - figure [ref=f117e2685]:
+                    - img "동서 그래놀라 시리얼, 1kg, 1개" [ref=f117e2686]
+                  - generic [ref=f117e2687]:
+                    - generic [ref=f117e2689]: 동서 그래놀라 시리얼, 1kg, 1개
+                    - generic [ref=f117e2692]:
+                      - generic [ref=f117e2693]: 7,660원
+                      - generic [ref=f117e2694]: (100g당 766원)
+                    - generic [ref=f117e2699]: 품절
+                    - generic [ref=f117e2701]:
+                      - generic "5" [ref=f117e2702]
+                      - generic [ref=f117e2708]: (26,593)
+            - region "찾는 상품이 없나요?" [ref=f117e2710]:
+              - generic [ref=f117e2711]:
+                - heading "찾는 상품이 없나요?" [level=2] [ref=f117e2712]
+                - paragraph [ref=f117e2713]: 로그인하고 더 많은 상품을 확인해보세요
+              - button "로그인" [ref=f117e2714] [cursor=pointer]
+      - generic [ref=f117e2717]:
+        - heading "이 상품을 검색한 다른 분들이 함께 본 상품" [level=2] [ref=f117e2718]
+        - generic [ref=f117e2720]:
+          - list [ref=f117e2722]:
+            - listitem [ref=f117e2723]:
+              - link "이롬 WHOLE GRAIN 저당 그래놀라, 7개, 20g 이롬 WHOLE GRAIN 저당 그래놀라, 7개, 20g 10,420원 (100g당 7,443원) 4.5 (43)" [ref=f117e2724] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/9089760554?vendorItemId=95521991820&sourceType=srp_also_viewed_item&rmdId=ea7216a6a8f248af8298aadf47192205&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_A&rmdValue=p8778220254:vt-1.0.0:p9089760554
+                - img "이롬 WHOLE GRAIN 저당 그래놀라, 7개, 20g"
+                - generic [ref=f117e2726]: 이롬 WHOLE GRAIN 저당 그래놀라, 7개, 20g
+                - generic [ref=f117e2727]:
+                  - strong [ref=f117e2729]: 10,420원
+                  - generic [ref=f117e2730]: (100g당 7,443원)
+                - generic [ref=f117e2734]:
+                  - generic "4.5" [ref=f117e2735]
+                  - generic [ref=f117e2741]: (43)
+            - listitem [ref=f117e2743]:
+              - link "포스트 그래놀라 저당 렌틸오트, 3개, 220g 포스트 그래놀라 저당 렌틸오트, 3개, 220g 19,990원 (100g당 3,029원) 4.5 (430)" [ref=f117e2744] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/9496801070?vendorItemId=95509281552&sourceType=srp_also_viewed_item&rmdId=ea7216a6a8f248af8298aadf47192205&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_A&rmdValue=p8778220254:vt-1.0.0:p9496801070
+                - img "포스트 그래놀라 저당 렌틸오트, 3개, 220g"
+                - generic [ref=f117e2746]: 포스트 그래놀라 저당 렌틸오트, 3개, 220g
+                - generic [ref=f117e2747]:
+                  - strong [ref=f117e2749]: 19,990원
+                  - generic [ref=f117e2750]: (100g당 3,029원)
+                - generic [ref=f117e2753]:
+                  - generic "4.5" [ref=f117e2754]
+                  - generic [ref=f117e2760]: (430)
+            - listitem [ref=f117e2762]:
+              - link "씨알로 당제로 통곡물 시리얼, 300g, 1개 씨알로 당제로 통곡물 시리얼, 300g, 1개 9,900원 (100g당 3,300원) 4.5 (3,400)" [ref=f117e2763] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/8056243495?vendorItemId=92377289726&sourceType=srp_also_viewed_item&rmdId=ea7216a6a8f248af8298aadf47192205&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_A&rmdValue=p8778220254:vt-1.0.0:p8056243495
+                - img "씨알로 당제로 통곡물 시리얼, 300g, 1개"
+                - generic [ref=f117e2765]: 씨알로 당제로 통곡물 시리얼, 300g, 1개
+                - generic [ref=f117e2766]:
+                  - strong [ref=f117e2768]: 9,900원
+                  - generic [ref=f117e2769]: (100g당 3,300원)
+                - generic [ref=f117e2773]:
+                  - generic "4.5" [ref=f117e2774]
+                  - generic [ref=f117e2780]: (3,400)
+            - listitem [ref=f117e2782]:
+              - link "켈로그 저당 그래놀라, 300g, 2개 켈로그 저당 그래놀라, 300g, 2개 9,740원 (100g당 1,623원) 4.5 (5,605)" [ref=f117e2783] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/9422409524?vendorItemId=94973125045&sourceType=srp_also_viewed_item&rmdId=ea7216a6a8f248af8298aadf47192205&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_A&rmdValue=p8778220254:vt-1.0.0:p9422409524
+                - img "켈로그 저당 그래놀라, 300g, 2개"
+                - generic [ref=f117e2785]: 켈로그 저당 그래놀라, 300g, 2개
+                - generic [ref=f117e2786]:
+                  - strong [ref=f117e2788]: 9,740원
+                  - generic [ref=f117e2789]: (100g당 1,623원)
+                - generic [ref=f117e2793]:
+                  - generic "4.5" [ref=f117e2794]
+                  - generic [ref=f117e2800]: (5,605)
+            - listitem [ref=f117e2802]:
+              - link "동서 그래놀라 시리얼, 1kg, 1개 동서 그래놀라 시리얼, 1kg, 1개 7,860원 (100g당 786원) 5 (26,593)" [ref=f117e2803] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/1909946?vendorItemId=3000094712&sourceType=srp_also_viewed_item&rmdId=ea7216a6a8f248af8298aadf47192205&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_A&rmdValue=p8778220254:vt-1.0.0:p1909946
+                - img "동서 그래놀라 시리얼, 1kg, 1개"
+                - generic [ref=f117e2805]: 동서 그래놀라 시리얼, 1kg, 1개
+                - generic [ref=f117e2806]:
+                  - strong [ref=f117e2808]: 7,860원
+                  - generic [ref=f117e2809]: (100g당 786원)
+                - generic [ref=f117e2813]:
+                  - generic "5" [ref=f117e2814]
+                  - generic [ref=f117e2820]: (26,593)
+            - listitem [ref=f117e2822]:
+              - link "켈로그 프로틴 그래놀라 제로슈거, 350g, 2개 켈로그 프로틴 그래놀라 제로슈거, 350g, 2개 11,840원 (100g당 1,691원) 5 (26,077)" [ref=f117e2823] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/8730800274?vendorItemId=92370381940&sourceType=srp_also_viewed_item&rmdId=ea7216a6a8f248af8298aadf47192205&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_A&rmdValue=p8778220254:vt-1.0.0:p8730800274
+                - img "켈로그 프로틴 그래놀라 제로슈거, 350g, 2개"
+                - generic [ref=f117e2825]: 켈로그 프로틴 그래놀라 제로슈거, 350g, 2개
+                - generic [ref=f117e2826]:
+                  - strong [ref=f117e2828]: 11,840원
+                  - generic [ref=f117e2829]: (100g당 1,691원)
+                - generic [ref=f117e2833]:
+                  - generic "5" [ref=f117e2834]
+                  - generic [ref=f117e2840]: (26,077)
+            - listitem [ref=f117e2842]:
+              - link "포스트 그래놀라 피칸 시리얼, 310g, 2개 포스트 그래놀라 피칸 시리얼, 310g, 2개 8,980원 (100g당 1,448원) 4.5 (229)" [ref=f117e2843] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/9198557887?vendorItemId=94132534797&sourceType=srp_also_viewed_item&rmdId=ea7216a6a8f248af8298aadf47192205&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_A&rmdValue=p8778220254:vt-1.0.0:p9198557887
+                - img "포스트 그래놀라 피칸 시리얼, 310g, 2개"
+                - generic [ref=f117e2845]: 포스트 그래놀라 피칸 시리얼, 310g, 2개
+                - generic [ref=f117e2846]:
+                  - strong [ref=f117e2848]: 8,980원
+                  - generic [ref=f117e2849]: (100g당 1,448원)
+                - generic [ref=f117e2853]:
+                  - generic "4.5" [ref=f117e2854]
+                  - generic [ref=f117e2860]: (229)
+            - listitem [ref=f117e2862]:
+              - link "퀘이커 오트 그래놀라 시리얼 골든넛츠, 350g, 1개 퀘이커 오트 그래놀라 시리얼 골든넛츠, 350g, 1개 8,380원 (100g당 2,394원) 5 (17,374)" [ref=f117e2863] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/199764313?vendorItemId=94941383313&sourceType=srp_also_viewed_item&rmdId=ea7216a6a8f248af8298aadf47192205&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_A&rmdValue=p8778220254:vt-1.0.0:p199764313
+                - img "퀘이커 오트 그래놀라 시리얼 골든넛츠, 350g, 1개"
+                - generic [ref=f117e2865]: 퀘이커 오트 그래놀라 시리얼 골든넛츠, 350g, 1개
+                - generic [ref=f117e2866]:
+                  - strong [ref=f117e2868]: 8,380원
+                  - generic [ref=f117e2869]: (100g당 2,394원)
+                - generic [ref=f117e2873]:
+                  - generic "5" [ref=f117e2874]
+                  - generic [ref=f117e2880]: (17,374)
+            - listitem [ref=f117e2882]:
+              - link "켈로그 리얼 그래놀라 오리지널 시리얼, 350g, 2개 켈로그 리얼 그래놀라 오리지널 시리얼, 350g, 2개 12,900원 (100g당 1,843원) 5 (64,500)" [ref=f117e2883] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/7012375223?vendorItemId=94797655420&sourceType=srp_also_viewed_item&rmdId=ea7216a6a8f248af8298aadf47192205&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_A&rmdValue=p8778220254:vt-1.0.0:p7012375223
+                - img "켈로그 리얼 그래놀라 오리지널 시리얼, 350g, 2개"
+                - generic [ref=f117e2885]: 켈로그 리얼 그래놀라 오리지널 시리얼, 350g, 2개
+                - generic [ref=f117e2886]:
+                  - strong [ref=f117e2888]: 12,900원
+                  - generic [ref=f117e2889]: (100g당 1,843원)
+                - generic [ref=f117e2893]:
+                  - generic "5" [ref=f117e2894]
+                  - generic [ref=f117e2900]: (64,500)
+            - listitem [ref=f117e2902]:
+              - link "마켓오네이처 오 그래놀라 저당 통보리 시리얼, 360g, 1개 마켓오네이처 오 그래놀라 저당 통보리 시리얼, 360g, 1개 5,980원 (100g당 1,661원) 5 (5,530)" [ref=f117e2903] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/8814767031?vendorItemId=92672210931&sourceType=srp_also_viewed_item&rmdId=ea7216a6a8f248af8298aadf47192205&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_A&rmdValue=p8778220254:vt-1.0.0:p8814767031
+                - img "마켓오네이처 오 그래놀라 저당 통보리 시리얼, 360g, 1개"
+                - generic [ref=f117e2905]: 마켓오네이처 오 그래놀라 저당 통보리 시리얼, 360g, 1개
+                - generic [ref=f117e2906]:
+                  - strong [ref=f117e2908]: 5,980원
+                  - generic [ref=f117e2909]: (100g당 1,661원)
+                - generic [ref=f117e2913]:
+                  - generic "5" [ref=f117e2914]
+                  - generic [ref=f117e2920]: (5,530)
+            - listitem [ref=f117e2922]:
+              - link "산과들에 원데이 그래놀라 블랙, 30개 산과들에 원데이 그래놀라 블랙, 30개 11,780원 (1세트당 393원) 5 (1,218)" [ref=f117e2923] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/7650740200?vendorItemId=87440173291&sourceType=srp_also_viewed_item&rmdId=ea7216a6a8f248af8298aadf47192205&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_A&rmdValue=p8778220254:vt-1.0.0:p7650740200
+                - img "산과들에 원데이 그래놀라 블랙, 30개"
+                - generic [ref=f117e2925]: 산과들에 원데이 그래놀라 블랙, 30개
+                - generic [ref=f117e2926]:
+                  - strong [ref=f117e2928]: 11,780원
+                  - generic [ref=f117e2929]: (1세트당 393원)
+                - generic [ref=f117e2932]:
+                  - generic "5" [ref=f117e2933]
+                  - generic [ref=f117e2939]: (1,218)
+            - listitem [ref=f117e2941]:
+              - link "포스트 그래놀라 살구 아몬드, 310g, 1개 포스트 그래놀라 살구 아몬드, 310g, 1개 4,990원 (100g당 1,610원) 4.5 (314)" [ref=f117e2942] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/9198424891?vendorItemId=94123442953&sourceType=srp_also_viewed_item&rmdId=ea7216a6a8f248af8298aadf47192205&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_A&rmdValue=p8778220254:vt-1.0.0:p9198424891
+                - img "포스트 그래놀라 살구 아몬드, 310g, 1개"
+                - generic [ref=f117e2944]: 포스트 그래놀라 살구 아몬드, 310g, 1개
+                - generic [ref=f117e2945]:
+                  - strong [ref=f117e2947]: 4,990원
+                  - generic [ref=f117e2948]: (100g당 1,610원)
+                - generic [ref=f117e2952]:
+                  - generic "4.5" [ref=f117e2953]
+                  - generic [ref=f117e2959]: (314)
+            - listitem [ref=f117e2961]:
+              - link "마켓오네이처 오 그래놀라 다이제 시리얼, 250g, 2개 마켓오네이처 오 그래놀라 다이제 시리얼, 250g, 2개 8,760원 (100g당 1,752원) 5 (13,590)" [ref=f117e2962] [cursor=pointer]:
+                - /url: //www.coupang.com/vp/products/5800828570?vendorItemId=85321289776&sourceType=srp_also_viewed_item&rmdId=ea7216a6a8f248af8298aadf47192205&eventLabel=recommendation_widget_pc_srp_001&platform=web&rmdABTestInfo=88611_A,14554_C,88610_B,106751_A&rmdValue=p8778220254:vt-1.0.0:p5800828570
+                - img "마켓오네이처 오 그래놀라 다이제 시리얼, 250g, 2개"
+                - generic [ref=f117e2964]: 마켓오네이처 오 그래놀라 다이제 시리얼, 250g, 2개
+                - generic [ref=f117e2965]:
+                  - strong [ref=f117e2967]: 8,760원
+                  - generic [ref=f117e2968]: (100g당 1,752원)
+                - generic [ref=f117e2972]:
+                  - generic "5" [ref=f117e2973]
+                  - generic [ref=f117e2979]: (13,590)
+          - button "다음 상품 보기" [ref=f117e2981] [cursor=pointer]
+  - contentinfo [ref=f117e2982]:
+    - generic [ref=f117e2983]:
+      - generic [ref=f117e2984]:
+        - link "회사소개" [ref=f117e2985] [cursor=pointer]:
+          - /url: https://news.coupang.com/
+        - link "Investor Relations" [ref=f117e2986] [cursor=pointer]:
+          - /url: https://ir.aboutcoupang.com/overview/default.aspx
+        - link "인재채용" [ref=f117e2987] [cursor=pointer]:
+          - /url: https://rocketyourcareer.kr.coupang.com
+        - link "입점/제휴문의" [ref=f117e2988] [cursor=pointer]:
+          - /url: https://marketplace.coupangcorp.com/s/?utm_source=button_pc&utm_medium=non_paid&utm_campaign=onsite_ca&utm_id=coupang_app?inflow=WEB_FOOTER_B
+        - link "공지사항" [ref=f117e2989] [cursor=pointer]:
+          - /url: https://mc.coupang.com/ssr/desktop/contact/notice
+        - link "고객의 소리" [ref=f117e2990] [cursor=pointer]:
+          - /url: https://mc.coupang.com/ssr/desktop/contact/voc
+        - link "이용약관" [ref=f117e2991] [cursor=pointer]:
+          - /url: https://www.coupang.com/np/policies/terms
+        - link [ref=f117e2992] [cursor=pointer]:
+          - /url: https://privacy.coupang.com/ko/center/coupang
+          - strong [ref=f117e2993]: 개인정보 처리방침
+        - link "정보보호/개인정보보호 인증" [ref=f117e2994] [cursor=pointer]:
+          - /url: https://privacy.coupang.com/ko/security/status
+        - link "쿠팡페이 이용약관" [ref=f117e2995] [cursor=pointer]:
+          - /url: https://rocketpay.coupang.com/rocketpay/operationTerms/coupangPcFooter
+        - link "신뢰관리센터" [ref=f117e2996] [cursor=pointer]:
+          - /url: https://www.coupang.com/np/safety
+        - link "제휴마케팅" [ref=f117e2997] [cursor=pointer]:
+          - /url: https://partners.coupang.com/
+        - link "광고안내" [ref=f117e2998] [cursor=pointer]:
+          - /url: https://ads.coupang.com
+      - paragraph [ref=f117e3002] [cursor=pointer]: Global Site
+    - generic [ref=f117e3004]:
+      - generic [ref=f117e3005]:
+        - link "COUPANG" [ref=f117e3006] [cursor=pointer]:
+          - /url: https://www.coupang.com/
+        - generic [ref=f117e3007]:
+          - text: "상호명 및 호스팅 서비스 제공 : 쿠팡(주) 대표이사 : 로저스 해롤드 린(Rogers Harold Lynn) (05050) 서울시 광진구 아차산로 412, 2층 사업자 등록번호 : 120-88-00767 통신판매업신고 : 2026-서울광진-1253"
+          - link "사업자정보 확인 >" [ref=f117e3008] [cursor=pointer]:
+            - /url: http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=1208800767
+      - link [ref=f117e3010] [cursor=pointer]:
+        - /url: https://mc.coupang.com/ssr/desktop/contact/inquiry
+        - strong [ref=f117e3011]: 365고객센터
+        - text: "| 전자금융거래분쟁처리담당"
+        - emphasis [ref=f117e3012]: 1577-7011 (유료)
+        - text: "(05050) 서울시 광진구 아차산로 412, 2층 email : help@coupang.com"
+      - paragraph [ref=f117e3013]:
+        - strong [ref=f117e3014]: 채무지급보증 안내
+        - generic [ref=f117e3015]: 당사는 고객님이 현금 결제한 금액에 대해 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.
+        - link "서비스 가입사실 확인 >" [ref=f117e3016] [cursor=pointer]:
+          - /url: https://www.coupang.com/np/etc/popWooriService
+    - generic [ref=f117e3022]:
+      - paragraph [ref=f117e3023]: 사이버몰 내 판매되는 상품 중에는 쿠팡에 등록한 개별 판매자가 판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다. 마켓플레이스(오픈마켓) 상품의 경우 쿠팡은 통신판매중개자이며 통신판매의 당사자가 아닙니다. 쿠팡은 마켓플레이스(오픈마켓) 상품, 거래정보 및 거래 등에 대하여 책임을 지지 않습니다. 쿠팡은 소비자 보호와 안전거래를 위해 신뢰관리센터(CM112@coupang.com)를 운영하고 있으며, 관련 분쟁이 발생할 경우 별도의 분쟁 처리절차에 의거 분쟁이 처리됩니다. Copyright © Coupang Corp. 2010-2025 All Rights Reserved.
+      - list [ref=f117e3024]:
+        - listitem [ref=f117e3025]:
+          - link [ref=f117e3026] [cursor=pointer]:
+            - /url: https://www.facebook.com/Coupang.korea
+        - listitem [ref=f117e3027]:
+          - link [ref=f117e3028] [cursor=pointer]:
+            - /url: https://news.coupang.com/
+        - listitem [ref=f117e3029]:
+          - link [ref=f117e3030] [cursor=pointer]:
+            - /url: https://www.instagram.com/coupang
+  - alert [ref=f117e3031]

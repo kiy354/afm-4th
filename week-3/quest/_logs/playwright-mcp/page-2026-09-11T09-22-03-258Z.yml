@@ -1,0 +1,799 @@
+- generic [ref=f2e1]:
+  - generic [active] [ref=f2e3]: 데이터 로딩중입니다.
+  - generic [ref=f2e9]:
+    - generic [ref=f2e10]:
+      - generic [ref=f2e13]:
+        - link [ref=f2e15] [cursor=pointer]:
+          - /url: /area/area01.asp
+        - link "LOGIN" [ref=f2e17] [cursor=pointer]:
+          - /url: javascript:void(0);
+        - link "전체보기" [ref=f2e20] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=f2e21]:
+        - link [ref=f2e23] [cursor=pointer]:
+          - /url: /
+        - generic [ref=f2e24]:
+          - link "대한안과의사회 소개" [ref=f2e25] [cursor=pointer]:
+            - /url: /company/greeting.asp
+          - link "눈 건강 정보" [ref=f2e26] [cursor=pointer]:
+            - /url: javascript:void(0);
+          - link "우리동네 안과 찾기" [ref=f2e27] [cursor=pointer]:
+            - /url: /area/area01.asp
+    - generic [ref=f2e28]:
+      - generic [ref=f2e31]:
+        - link "안과찾기" [ref=f2e32] [cursor=pointer]:
+          - /url: area01.asp
+        - link "라식수술위원회 회원병원찾기" [ref=f2e33] [cursor=pointer]:
+          - /url: area02.asp
+      - generic [ref=f2e34]: 안과 찾기
+      - generic [ref=f2e36]:
+        - generic [ref=f2e37]:
+          - generic [ref=f2e38]:
+            - paragraph [ref=f2e39]: 지도로 찾기
+            - list [ref=f2e40]:
+              - listitem [ref=f2e41] [cursor=pointer]: 서울
+              - listitem [ref=f2e42] [cursor=pointer]: 경기
+              - listitem [ref=f2e43] [cursor=pointer]: 인천
+              - listitem [ref=f2e44] [cursor=pointer]: 강원
+              - listitem [ref=f2e45] [cursor=pointer]: 경남
+              - listitem [ref=f2e46] [cursor=pointer]: 경북
+              - listitem [ref=f2e47] [cursor=pointer]: 광주
+              - listitem [ref=f2e48] [cursor=pointer]: 대구
+              - listitem [ref=f2e49] [cursor=pointer]: 대전
+              - listitem [ref=f2e50] [cursor=pointer]: 부산
+              - listitem [ref=f2e51] [cursor=pointer]: 울산
+              - listitem [ref=f2e52] [cursor=pointer]: 전남
+              - listitem [ref=f2e53] [cursor=pointer]: 전북
+              - listitem [ref=f2e54] [cursor=pointer]: 제주
+              - listitem [ref=f2e55] [cursor=pointer]: 충남
+              - listitem [ref=f2e56] [cursor=pointer]: 충북
+              - listitem [ref=f2e57] [cursor=pointer]: 세종
+          - generic [ref=f2e60]:
+            - link "세종특별자치시" [ref=f2e64] [cursor=pointer]:
+              - /url: javascript:void(0);
+            - generic [ref=f2e67]:
+              - generic:
+                - link "강서구" [ref=f2e68] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "양천구" [ref=f2e69] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "구로구" [ref=f2e70] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "은평구" [ref=f2e71] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "서대문구" [ref=f2e72] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "마포구" [ref=f2e73] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "영등포구" [ref=f2e74] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "금천구" [ref=f2e75] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "종로구" [ref=f2e76] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "중구" [ref=f2e77] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "용산구" [ref=f2e78] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "동작구" [ref=f2e79] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "관악구" [ref=f2e80] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "도봉구" [ref=f2e81] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "강북구" [ref=f2e82] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "성북구" [ref=f2e83] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "동대문구" [ref=f2e84] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "성동구" [ref=f2e85] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "서초구" [ref=f2e86] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "노원구" [ref=f2e87] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "중랑구" [ref=f2e88] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "광진구" [ref=f2e89] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "강남구" [ref=f2e90] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "강동구" [ref=f2e91] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "송파구" [ref=f2e92] [cursor=pointer]:
+                  - /url: javascript:void(0);
+            - generic [ref=f2e95]:
+              - generic:
+                - link "김포시" [ref=f2e96] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "파주시" [ref=f2e97] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "고양시" [ref=f2e98] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "연천군" [ref=f2e99] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "동두천" [ref=f2e100] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "양주시" [ref=f2e101] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "의정부" [ref=f2e102] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "포천시" [ref=f2e103] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "구리" [ref=f2e104] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "남양주시" [ref=f2e105] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "가평군" [ref=f2e106] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "하남" [ref=f2e107] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "부천" [ref=f2e108] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "광명" [ref=f2e109] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "시흥" [ref=f2e110] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "안양" [ref=f2e111] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "안산" [ref=f2e112] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "군포" [ref=f2e113] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "과천" [ref=f2e114] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "의왕" [ref=f2e115] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "성남" [ref=f2e116] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "수원시" [ref=f2e117] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "화성시" [ref=f2e118] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "오산" [ref=f2e119] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "광주시" [ref=f2e120] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "용인시" [ref=f2e121] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "이천시" [ref=f2e122] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "양평군" [ref=f2e123] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "여주시" [ref=f2e124] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "평택시" [ref=f2e125] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "안성시" [ref=f2e126] [cursor=pointer]:
+                  - /url: javascript:void(0);
+            - generic [ref=f2e129]:
+              - generic:
+                - link "강화군" [ref=f2e130] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "서구" [ref=f2e131] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "계양구" [ref=f2e132] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "부평구" [ref=f2e133] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "남동구" [ref=f2e134] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "남구" [ref=f2e135] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "동구" [ref=f2e136] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "중구" [ref=f2e137] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "옹진군" [ref=f2e138] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "연수구" [ref=f2e139] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "중구" [ref=f2e140] [cursor=pointer]:
+                  - /url: javascript:void(0);
+            - generic [ref=f2e143]:
+              - generic:
+                - link "강릉시" [ref=f2e144] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "고성군" [ref=f2e145] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "동해" [ref=f2e146] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "삼척시" [ref=f2e147] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "속초" [ref=f2e148] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "양구군" [ref=f2e149] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "양양군" [ref=f2e150] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "영월군" [ref=f2e151] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "원주시" [ref=f2e152] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "인제군" [ref=f2e153] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "정선군" [ref=f2e154] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "철원군" [ref=f2e155] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "춘천시" [ref=f2e156] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "태백" [ref=f2e157] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "평창군" [ref=f2e158] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "화천군" [ref=f2e159] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "횡성군" [ref=f2e160] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "홍천군" [ref=f2e161] [cursor=pointer]:
+                  - /url: javascript:void(0);
+            - generic [ref=f2e164]:
+              - generic:
+                - link "거제시" [ref=f2e165] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "거창군" [ref=f2e166] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "고성군" [ref=f2e167] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "김해시" [ref=f2e168] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "남해군" [ref=f2e169] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "밀양시" [ref=f2e170] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "사천시" [ref=f2e171] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "산청군" [ref=f2e172] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "양산시" [ref=f2e173] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "의령군" [ref=f2e174] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "진주시" [ref=f2e175] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "창녕군" [ref=f2e176] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "창원시" [ref=f2e177] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "통영" [ref=f2e178] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "하동군" [ref=f2e179] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "함안군" [ref=f2e180] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "함양군" [ref=f2e181] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "합천군" [ref=f2e182] [cursor=pointer]:
+                  - /url: javascript:void(0);
+            - generic [ref=f2e185]:
+              - generic:
+                - link "경산시" [ref=f2e186] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "경주시" [ref=f2e187] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "고령군" [ref=f2e188] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "구미시" [ref=f2e189] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "군위군" [ref=f2e190] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "김천시" [ref=f2e191] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "문경시" [ref=f2e192] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "봉화군" [ref=f2e193] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "상주시" [ref=f2e194] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "성주군" [ref=f2e195] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "안동시" [ref=f2e196] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "영덕군" [ref=f2e197] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "영양군" [ref=f2e198] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "영주시" [ref=f2e199] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "영천시" [ref=f2e200] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "예천군" [ref=f2e201] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "울릉군" [ref=f2e202] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "울진군" [ref=f2e203] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "의성군" [ref=f2e204] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "청도군" [ref=f2e205] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "청송군" [ref=f2e206] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "칠곡군" [ref=f2e207] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "포항시" [ref=f2e208] [cursor=pointer]:
+                  - /url: javascript:void(0);
+            - generic [ref=f2e211]:
+              - generic:
+                - link "광산구" [ref=f2e212] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "남구" [ref=f2e213] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "동구" [ref=f2e214] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "북구" [ref=f2e215] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "서구" [ref=f2e216] [cursor=pointer]:
+                  - /url: javascript:void(0);
+            - generic [ref=f2e219]:
+              - generic:
+                - link "남구" [ref=f2e220] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "달서구" [ref=f2e221] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "달성군" [ref=f2e222] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "동구" [ref=f2e223] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "북구" [ref=f2e224] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "서구" [ref=f2e225] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "수성구" [ref=f2e226] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "중구" [ref=f2e227] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "달성군" [ref=f2e228] [cursor=pointer]:
+                  - /url: javascript:void(0);
+            - generic [ref=f2e231]:
+              - generic:
+                - link "대덕구" [ref=f2e232] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "동구" [ref=f2e233] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "서구" [ref=f2e234] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "유성구" [ref=f2e235] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "중구" [ref=f2e236] [cursor=pointer]:
+                  - /url: javascript:void(0);
+            - generic [ref=f2e239]:
+              - generic:
+                - link "강서구" [ref=f2e240] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "금정구" [ref=f2e241] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "기장군" [ref=f2e242] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "남구" [ref=f2e243] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "동구" [ref=f2e244] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "동래구" [ref=f2e245] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "부산진구" [ref=f2e246] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "북구" [ref=f2e247] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "사상구" [ref=f2e248] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "사하구" [ref=f2e249] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "서구" [ref=f2e250] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "수영구" [ref=f2e251] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "연제구" [ref=f2e252] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "영도구" [ref=f2e253] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "중구" [ref=f2e254] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "해운대구" [ref=f2e255] [cursor=pointer]:
+                  - /url: javascript:void(0);
+            - generic [ref=f2e258]:
+              - generic:
+                - link "남구" [ref=f2e259] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "동구" [ref=f2e260] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "북구" [ref=f2e261] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "울주군" [ref=f2e262] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "중구" [ref=f2e263] [cursor=pointer]:
+                  - /url: javascript:void(0);
+            - generic [ref=f2e266]:
+              - generic:
+                - link "강진군" [ref=f2e267] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "고흥군" [ref=f2e268] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "곡성군" [ref=f2e269] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "광양시" [ref=f2e270] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "구례군" [ref=f2e271] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "나주시" [ref=f2e272] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "담양군" [ref=f2e273] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "목포" [ref=f2e274] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "무안군" [ref=f2e275] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "보성군" [ref=f2e276] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "순천시" [ref=f2e277] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "신안군" [ref=f2e278] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "여수시" [ref=f2e279] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "영광군" [ref=f2e280] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "영암군" [ref=f2e281] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "완도" [ref=f2e282] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "장성군" [ref=f2e283] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "장흥군" [ref=f2e284] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "진도군" [ref=f2e285] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "함평군" [ref=f2e286] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "해남군" [ref=f2e287] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "화순군" [ref=f2e288] [cursor=pointer]:
+                  - /url: javascript:void(0);
+            - generic [ref=f2e291]:
+              - generic:
+                - link "고창군" [ref=f2e292] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "군산시" [ref=f2e293] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "김제시" [ref=f2e294] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "남원시" [ref=f2e295] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "무주군" [ref=f2e296] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "부안군" [ref=f2e297] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "순창군" [ref=f2e298] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "완주군" [ref=f2e299] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "익산시" [ref=f2e300] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "임실군" [ref=f2e301] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "장수군" [ref=f2e302] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "전주시" [ref=f2e303] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "정읍시" [ref=f2e304] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "진안군" [ref=f2e305] [cursor=pointer]:
+                  - /url: javascript:void(0);
+            - generic [ref=f2e308]:
+              - generic:
+                - link "서귀포시" [ref=f2e309] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "제주시" [ref=f2e310] [cursor=pointer]:
+                  - /url: javascript:void(0);
+            - generic [ref=f2e313]:
+              - generic:
+                - link "계룡" [ref=f2e314] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "공주시" [ref=f2e315] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "금산군" [ref=f2e316] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "논산시" [ref=f2e317] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "당진시" [ref=f2e318] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "보령시" [ref=f2e319] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "부여군" [ref=f2e320] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "서산시" [ref=f2e321] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "서천군" [ref=f2e322] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "아산시" [ref=f2e323] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "예산군" [ref=f2e324] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "천안시" [ref=f2e325] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "청양군" [ref=f2e326] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "태안군" [ref=f2e327] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "홍성군" [ref=f2e328] [cursor=pointer]:
+                  - /url: javascript:void(0);
+            - generic [ref=f2e331]:
+              - generic:
+                - link "괴산군" [ref=f2e332] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "단양군" [ref=f2e333] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "보은군" [ref=f2e334] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "영동군" [ref=f2e335] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "옥천군" [ref=f2e336] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "음성군" [ref=f2e337] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "제천시" [ref=f2e338] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "증평군" [ref=f2e339] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "진천군" [ref=f2e340] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "청주시" [ref=f2e341] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "충주시" [ref=f2e342] [cursor=pointer]:
+                  - /url: javascript:void(0);
+            - link "세종특별자치시" [ref=f2e346] [cursor=pointer]:
+              - /url: javascript:void(0);
+            - generic [ref=f2e349]:
+              - generic:
+                - link "강서구" [ref=f2e350] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "양천구" [ref=f2e351] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "구로구" [ref=f2e352] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "은평구" [ref=f2e353] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "서대문구" [ref=f2e354] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "마포구" [ref=f2e355] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "영등포구" [ref=f2e356] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "금천구" [ref=f2e357] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "종로구" [ref=f2e358] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "중구" [ref=f2e359] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "용산구" [ref=f2e360] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "동작구" [ref=f2e361] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "관악구" [ref=f2e362] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "도봉구" [ref=f2e363] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "강북구" [ref=f2e364] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "성북구" [ref=f2e365] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "동대문구" [ref=f2e366] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "성동구" [ref=f2e367] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "서초구" [ref=f2e368] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "노원구" [ref=f2e369] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "중랑구" [ref=f2e370] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "광진구" [ref=f2e371] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "강남구" [ref=f2e372] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "강동구" [ref=f2e373] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - link "송파구" [ref=f2e374] [cursor=pointer]:
+                  - /url: javascript:void(0);
+          - generic [ref=f2e375]:
+            - paragraph [ref=f2e376]: 분류로 찾기
+            - combobox [ref=f2e378]:
+              - option "전체" [selected]
+              - option "라식위원회 소속 병의원"
+            - generic [ref=f2e379]:
+              - textbox "의료진" [ref=f2e380]
+              - textbox "병원명" [ref=f2e381]
+            - link "검색" [ref=f2e383] [cursor=pointer]:
+              - /url: javascript:void(0);
+        - generic [ref=f2e385]:
+          - generic [ref=f2e387]:
+            - text: "서울특별시 : 265개의 병원이 검색되었습니다."
+            - generic [ref=f2e388]: 일반안과 라식위원회 소속 병의원
+          - table "news" [ref=f2e392]:
+            - rowgroup [ref=f2e399]:
+              - row [ref=f2e400]:
+                - columnheader "번호" [ref=f2e401]
+                - columnheader "병원명" [ref=f2e402]
+                - columnheader "주소" [ref=f2e403]
+                - columnheader "연락처" [ref=f2e404]
+                - columnheader "위치" [ref=f2e405]
+            - rowgroup [ref=f2e406]:
+              - row [ref=f2e407]:
+                - cell "265" [ref=f2e408]
+                - cell "삼성미래안과" [ref=f2e409]
+                - cell [ref=f2e410]:
+                  - link "서울특별시 서초구 방배로 178 (방배동,유중아트센터) 2층" [ref=f2e411] [cursor=pointer]:
+                    - /url: "#"
+                - cell "02-599-3650" [ref=f2e412]
+                - cell [ref=f2e413]
+              - row [ref=f2e414]:
+                - cell "264" [ref=f2e415]
+                - cell "서울아산병원" [ref=f2e416]
+                - cell [ref=f2e417]:
+                  - link "서울특별시 송파구 올림픽로43길 88 (풍납동) 안과외래" [ref=f2e418] [cursor=pointer]:
+                    - /url: "#"
+                - cell "010-3411-7465" [ref=f2e419]
+                - cell [ref=f2e420]:
+                  - link [ref=f2e421] [cursor=pointer]:
+                    - /url: "#"
+                    - img "위치" [ref=f2e422]
+              - row [ref=f2e423]:
+                - cell "263" [ref=f2e424]
+                - cell "매일연안과" [ref=f2e425]
+                - cell [ref=f2e426]:
+                  - link "서울특별시 중랑구 사가정로 386 (면목동) 6층,7층,8층 매일연안과" [ref=f2e427] [cursor=pointer]:
+                    - /url: "#"
+                - cell "02-6956-3658" [ref=f2e428]
+                - cell [ref=f2e429]:
+                  - link [ref=f2e430] [cursor=pointer]:
+                    - /url: "#"
+                    - img "위치" [ref=f2e431]
+              - row [ref=f2e432]:
+                - cell "262" [ref=f2e433]
+                - cell "시야 안과의원" [ref=f2e434]
+                - cell [ref=f2e435]:
+                  - link "서울특별시 동작구 상도로 379 (상도동) 5층 시야안과" [ref=f2e436] [cursor=pointer]:
+                    - /url: "#"
+                - cell "02-825-7007" [ref=f2e437]
+                - cell [ref=f2e438]
+              - row [ref=f2e439]:
+                - cell "261" [ref=f2e440]
+                - cell "아이유안과" [ref=f2e441]
+                - cell [ref=f2e442]:
+                  - link "서울특별시 송파구 삼전로 84 (삼전동) 아이유빌딩" [ref=f2e443] [cursor=pointer]:
+                    - /url: "#"
+                - cell "02" [ref=f2e444]
+                - cell [ref=f2e445]:
+                  - link [ref=f2e446] [cursor=pointer]:
+                    - /url: "#"
+                    - img "위치" [ref=f2e447]
+              - row [ref=f2e448]:
+                - cell "260" [ref=f2e449]
+                - cell "삼성아이안과" [ref=f2e450]
+                - cell [ref=f2e451]:
+                  - link "서울특별시 강남구 테헤란로 105 (역삼동) a 타워 5층 삼성아이안과" [ref=f2e452] [cursor=pointer]:
+                    - /url: "#"
+                - cell "02-535-0075" [ref=f2e453]
+                - cell [ref=f2e454]
+              - row [ref=f2e455]:
+                - cell "259" [ref=f2e456]
+                - cell "이을안과의원" [ref=f2e457]
+                - cell [ref=f2e458]:
+                  - link "서울특별시 서초구 서래로 49 (반포동) 3층" [ref=f2e459] [cursor=pointer]:
+                    - /url: "#"
+                - cell "02-596-0801" [ref=f2e460]
+                - cell [ref=f2e461]
+              - row [ref=f2e462]:
+                - cell "258" [ref=f2e463]
+                - cell "테스트안과_홈코" [ref=f2e464]
+                - cell [ref=f2e465]:
+                  - link "서울특별시 영등포구 경인로 775 (문래동3가) 홈코테스트" [ref=f2e466] [cursor=pointer]:
+                    - /url: "#"
+                - cell "0000-0000-0000" [ref=f2e467]
+                - cell [ref=f2e468]:
+                  - link [ref=f2e469] [cursor=pointer]:
+                    - /url: "#"
+                    - img "위치" [ref=f2e470]
+              - row [ref=f2e471]:
+                - cell "257" [ref=f2e472]
+                - cell "강남현안과" [ref=f2e473]
+                - cell [ref=f2e474]:
+                  - link "서울특별시 강남구 강남대로 246 (도곡동) 3층" [ref=f2e475] [cursor=pointer]:
+                    - /url: "#"
+                - cell "0507-1302-3028" [ref=f2e476]
+                - cell [ref=f2e477]:
+                  - link [ref=f2e478] [cursor=pointer]:
+                    - /url: "#"
+                    - img "위치" [ref=f2e479]
+              - row [ref=f2e480]:
+                - cell "256" [ref=f2e481]
+                - cell "강남그랜드안과" [ref=f2e482]
+                - cell [ref=f2e483]:
+                  - link "서울특별시 서초구 강남대로 363 (서초동,363강남타워) 4층 5층" [ref=f2e484] [cursor=pointer]:
+                    - /url: "#"
+                - cell "02-3487-7582" [ref=f2e485]
+                - cell [ref=f2e486]
+          - generic [ref=f2e487]:
+            - link [ref=f2e488] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - img "more prev page" [ref=f2e489]
+            - link [ref=f2e490] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - img "prev page" [ref=f2e491]
+            - generic [ref=f2e492]:
+              - link "1" [ref=f2e493] [cursor=pointer]:
+                - /url: javascript:void(0);
+              - link "2" [ref=f2e494] [cursor=pointer]:
+                - /url: javascript:void(0);
+              - link "3" [ref=f2e495] [cursor=pointer]:
+                - /url: javascript:void(0);
+              - link "4" [ref=f2e496] [cursor=pointer]:
+                - /url: javascript:void(0);
+              - link "5" [ref=f2e497] [cursor=pointer]:
+                - /url: javascript:void(0);
+              - link "6" [ref=f2e498] [cursor=pointer]:
+                - /url: javascript:void(0);
+              - link "7" [ref=f2e499] [cursor=pointer]:
+                - /url: javascript:void(0);
+              - link "8" [ref=f2e500] [cursor=pointer]:
+                - /url: javascript:void(0);
+              - link "9" [ref=f2e501] [cursor=pointer]:
+                - /url: javascript:void(0);
+              - link "10" [ref=f2e502] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - link [ref=f2e503] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - img "next page" [ref=f2e504]
+            - link [ref=f2e505] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - img "more next page" [ref=f2e506]
+    - generic [ref=f2e510]:
+      - generic [ref=f2e512]:
+        - list [ref=f2e514]:
+          - listitem [ref=f2e515]:
+            - link "안과의사회 소개" [ref=f2e516] [cursor=pointer]:
+              - /url: /company/greeting.asp
+          - listitem [ref=f2e517]:
+            - link "사이트맵" [ref=f2e518] [cursor=pointer]:
+              - /url: /company/sitemap.asp
+          - listitem [ref=f2e519]:
+            - link "개인정보취급방침" [ref=f2e520] [cursor=pointer]:
+              - /url: /company/personal.asp
+          - listitem [ref=f2e521]:
+            - link "이용약관" [ref=f2e522] [cursor=pointer]:
+              - /url: /company/agree.asp
+          - listitem [ref=f2e523]:
+            - link "오시는길" [ref=f2e524] [cursor=pointer]:
+              - /url: /company/location.asp
+        - list [ref=f2e526]:
+          - listitem [ref=f2e527]:
+            - link "페이스북" [ref=f2e528] [cursor=pointer]:
+              - /url: https://www.facebook.com/pages/%EB%8C%80%ED%95%9C%EC%95%88%EA%B3%BC%EC%9D%98%EC%82%AC%ED%9A%8C/164682356905741
+          - listitem [ref=f2e529]:
+            - link "트위터" [ref=f2e530] [cursor=pointer]:
+              - /url: https://twitter.com/koaoffice
+      - generic [ref=f2e531]:
+        - generic [ref=f2e532]:
+          - text: "주소 : (06626) 서울 서초구 서초대로 78길 44 나산스위트 402호(서울특별시 서초구 서초동 1330-16) 대한안과의사회 전화 : 02-516-1241 팩스 : 02-516-1242 사업자번호 : 211-08-23588 고유번호 : 211-80-02046 대표자 : 정혜욱 개인정보책임자 : 정혜욱 *사무국 근무시간 및 점심시간 안내 | 근무시간: 9:30~18:00 | 점심시간: 12:30~13:00"
+          - paragraph [ref=f2e533]: Copyright © Korean Ophthalmologists Association All rights reserved.
+        - generic [ref=f2e535]:
+          - generic [ref=f2e536]:
+            - list:
+              - listitem [ref=f2e537]:
+                - link [ref=f2e538] [cursor=pointer]:
+                  - /url: https://www.kmama.org/main/sub02_02_01.asp?adbanner=xmusFpc0wFW7
+              - listitem [ref=f2e539]:
+                - link [ref=f2e540] [cursor=pointer]:
+                  - /url: https://www.kmama.org/main/sub02_02_01.asp?adbanner=xmusFpc0wFW7
+              - listitem [ref=f2e541]:
+                - link [ref=f2e542] [cursor=pointer]:
+                  - /url: https://www.kmama.org/main/sub02_02_01.asp?adbanner=xmusFpc0wFW7
+          - generic:
+            - generic:
+              - link "Prev" [ref=f2e543] [cursor=pointer]:
+                - /url: ""
+              - link "Next" [ref=f2e544] [cursor=pointer]:
+                - /url: ""
+  - iframe

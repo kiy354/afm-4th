@@ -1,0 +1,447 @@
+- generic [active] [ref=f22e1]:
+  - generic:
+    - link "게시판 목록 바로가기" [ref=f22e2] [cursor=pointer]:
+      - /url: "#cafe-menu"
+    - link "본문 바로가기" [ref=f22e3] [cursor=pointer]:
+      - /url: "#main-area"
+    - link "웹 접근성이 좋은 모바일 웹에서 사용하겠습니까?" [ref=f22e4] [cursor=pointer]:
+      - /url: https://m.cafe.naver.com/costco12
+  - heading "코사모(코스트코를 사랑하는 이들의 모임)" [level=1] [ref=f22e5]
+  - generic [ref=f22e6]:
+    - generic [ref=f22e7]:
+      - generic [ref=f22e8]:
+        - link [ref=f22e9] [cursor=pointer]:
+          - /url: http://www.naver.com
+          - img "NAVER" [ref=f22e10]
+        - generic [ref=f22e11]:
+          - paragraph [ref=f22e12]:
+            - link "카페홈" [ref=f22e13] [cursor=pointer]:
+              - /url: https://section.cafe.naver.com
+          - link "이웃" [ref=f22e15] [cursor=pointer]:
+            - /url: https://cafe.naver.com/ca-fe/home/town
+          - generic [ref=f22e16]:
+            - link "가입카페" [ref=f22e17] [cursor=pointer]:
+              - /url: "#"
+            - link [ref=f22e18] [cursor=pointer]:
+              - /url: "#"
+              - img "가입카페" [ref=f22e19]
+          - link "새글" [ref=f22e21] [cursor=pointer]:
+            - /url: "#"
+          - link "내소식" [ref=f22e23] [cursor=pointer]:
+            - /url: "#"
+          - link "채팅" [ref=f22e25] [cursor=pointer]:
+            - /url: "#"
+          - generic [ref=f22e26]:
+            - strong [ref=f22e27]: 사용자 링크
+            - list [ref=f22e28]:
+              - listitem [ref=f22e29]:
+                - link "로그인" [ref=f22e30] [cursor=pointer]:
+                  - /url: https://nid.naver.com/nidlogin.login
+              - listitem [ref=f22e34]:
+                - link "서비스 더보기" [ref=f22e35] [cursor=pointer]:
+                  - /url: javascript:;
+      - link [ref=f22e40] [cursor=pointer]:
+        - /url: /MyCafeIntro.nhn?clubid=25559875
+        - img "코사모(코스트코를 사랑하는 이들의 모임)" [ref=f22e41]
+      - list [ref=f22e44]:
+        - listitem [ref=f22e45]:
+          - link "인기글" [ref=f22e46] [cursor=pointer]:
+            - /url: /f-e/cafes/25559875/popular
+        - listitem [ref=f22e47]:
+          - link "체험단 이벤트" [ref=f22e48] [cursor=pointer]:
+            - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=181&search.boardtype=L
+        - listitem [ref=f22e49]:
+          - link "코스트코 상품후기" [ref=f22e50] [cursor=pointer]:
+            - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=14&search.boardtype=L
+        - listitem [ref=f22e51]:
+          - link "코스트코실시간(질문/.." [ref=f22e52] [cursor=pointer]:
+            - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=124&search.boardtype=L
+      - generic [ref=f22e53]:
+        - generic [ref=f22e54]:
+          - generic [ref=f22e56]:
+            - list [ref=f22e57]:
+              - listitem [ref=f22e58] [cursor=pointer]:
+                - button "카페정보" [disabled] [ref=f22e59]
+              - listitem [ref=f22e60] [cursor=pointer]:
+                - button "나의활동" [ref=f22e61]
+            - generic [ref=f22e62]:
+              - heading "카페정보" [level=4] [ref=f22e63]
+              - list [ref=f22e65]:
+                - listitem [ref=f22e66]:
+                  - link [ref=f22e67] [cursor=pointer]:
+                    - /url: /MyCafeIntro.nhn?clubid=25559875
+                    - img "카페아이콘" [ref=f22e68]
+                - listitem [ref=f22e69]:
+                  - link "코사모 매니저" [ref=f22e70] [cursor=pointer]:
+                    - /url: /f-e/cafes/25559875/members/pPhjYxVZQA_8QEZ1G-mF-ROqm1b5vTtfZ0in0ZI2uMM
+                  - emphasis [ref=f22e73]: 매니저
+                  - link "2012.12.21. 개설" [ref=f22e75] [cursor=pointer]:
+                    - /url: "#"
+                  - link "카페소개" [ref=f22e77] [cursor=pointer]:
+                    - /url: "#"
+              - list [ref=f22e79]:
+                - link [ref=f22e81] [cursor=pointer]:
+                  - /url: "#"
+                  - img "AI MATE" [ref=f22e82]
+                  - emphasis [ref=f22e83]: 736만 인용
+                  - img "상세보기" [ref=f22e84]
+                - listitem [ref=f22e85]:
+                  - link [ref=f22e86] [cursor=pointer]:
+                    - /url: "#"
+                    - strong [ref=f22e87]: 카페등급
+                    - emphasis [ref=f22e89]: 숲
+                - listitem [ref=f22e90] [cursor=pointer]:
+                  - strong [ref=f22e91]: 카페멤버수
+                  - link "멤버수 207,466 비공개" [ref=f22e92]:
+                    - /url: "#"
+                    - img "멤버수" [ref=f22e93]
+                    - emphasis [ref=f22e94]:
+                      - text: 207,466
+                      - generic [ref=f22e95]: 비공개
+                  - link "닫기":
+                    - /url: "#"
+                  - link "초대" [ref=f22e97]:
+                    - /url: "#"
+            - generic [ref=f22e98]:
+              - strong [ref=f22e99]: 대표 인기카페
+              - img "NAVER 대표카페" [ref=f22e100]
+            - link "카페 가입하기" [ref=f22e102] [cursor=pointer]:
+              - /url: "#"
+            - list [ref=f22e104]:
+              - listitem [ref=f22e105]:
+                - link "카페 채팅" [ref=f22e106] [cursor=pointer]:
+                  - /url: "#"
+          - generic [ref=f22e108]:
+            - textbox "카페글 검색어 입력" [ref=f22e109]
+            - button "검색" [ref=f22e110] [cursor=pointer]
+          - generic [ref=f22e112]:
+            - list [ref=f22e113]:
+              - listitem [ref=f22e114]:
+                - link "전체글보기" [ref=f22e115] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.boardtype=L
+                - generic [ref=f22e116]: 651,038
+              - listitem [ref=f22e117]:
+                - link "인기글" [ref=f22e118] [cursor=pointer]:
+                  - /url: /f-e/cafes/25559875/popular
+                - img "새 게시글" [ref=f22e119]
+            - heading "▶ 카페안내(입문↑)50자미만글 삭제" [level=3] [ref=f22e121]:
+              - generic "▶ 카페안내(입문&uarr;)50자미만글 삭제" [ref=f22e122]: ▶ 카페안내(입문↑)50자미만글 삭제
+            - list [ref=f22e124]:
+              - listitem [ref=f22e125]:
+                - link "★규정&공지(신입회원필독)★" [ref=f22e126] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=1&search.boardtype=L
+              - listitem [ref=f22e127]:
+                - link "가입인사 [50자이상 필수]" [ref=f22e128] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=205&search.boardtype=L
+                - img "새 게시글" [ref=f22e129]
+              - listitem [ref=f22e130]:
+                - link "규정위반게시(삭제)" [ref=f22e131] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=120&search.boardtype=L
+              - listitem [ref=f22e132]:
+                - link "코사모 출석체크" [ref=f22e133] [cursor=pointer]:
+                  - /url: /AttendanceView.nhn?search.clubid=25559875&search.menuid=164
+                - img "새 게시글" [ref=f22e134]
+              - listitem [ref=f22e135]:
+                - link "끝말잇기" [ref=f22e136] [cursor=pointer]:
+                  - /url: /MemoList.nhn?search.clubid=25559875&search.menuid=174&viewType=pc
+                - img "새 게시글" [ref=f22e137]
+              - listitem [ref=f22e138]:
+                - link "카페건의/신고/질문" [ref=f22e139] [cursor=pointer]:
+                  - /url: /MemoList.nhn?search.clubid=25559875&search.menuid=58&viewType=pc
+                - img "새 게시글" [ref=f22e140]
+              - listitem [ref=f22e141]:
+                - link "등업신청게시판" [ref=f22e142] [cursor=pointer]:
+                  - /url: /LevelUpApplyList.nhn?search.clubid=25559875
+                - img "새 게시글" [ref=f22e143]
+              - listitem [ref=f22e144]:
+                - link "코사모 PC버전 보기" [ref=f22e145] [cursor=pointer]:
+                  - /url: https://cafe.naver.com/costco12?viewType=pc
+            - heading "▶ 코사모 아우성(신입↑)50자미만삭제" [level=3] [ref=f22e147]
+            - list [ref=f22e149]:
+              - listitem [ref=f22e150]:
+                - link "신입회원 등업 상품후기" [ref=f22e151] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=213&search.boardtype=L
+                - img "새 게시글" [ref=f22e152]
+              - listitem [ref=f22e153]:
+                - link "코스트코 상품후기" [ref=f22e154] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=14&search.boardtype=L
+                - img "새 게시글" [ref=f22e155]
+              - listitem [ref=f22e156]:
+                - link "이마트 트레이더스 상품후기" [ref=f22e157] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=224&search.boardtype=L
+              - listitem [ref=f22e158]:
+                - link "코스트코 Q&A" [ref=f22e159] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=204&search.boardtype=L
+                - img "새 게시글" [ref=f22e160]
+              - listitem [ref=f22e161]:
+                - link "코스트코 온라인몰" [ref=f22e162] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=163&search.boardtype=L
+                - img "새 게시글" [ref=f22e163]
+              - listitem [ref=f22e164]:
+                - link "코스트코 로드쇼" [ref=f22e165] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=172&search.boardtype=L
+                - img "새 게시글" [ref=f22e166]
+              - listitem [ref=f22e167]:
+                - link "코스트코실시간(질문/정보) 영업내 이용" [ref=f22e168] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=124&search.boardtype=L
+                - img "새 게시글" [ref=f22e169]
+              - listitem [ref=f22e170]:
+                - link "일상이야기[만보인증 등업카운트제외]" [ref=f22e171] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=5&search.boardtype=L
+                - img "새 게시글" [ref=f22e172]
+              - listitem [ref=f22e173]:
+                - link "신입코스트코수다(제목에 지점명 필수)" [ref=f22e174] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=196&search.boardtype=L
+                - img "새 게시글" [ref=f22e175]
+              - listitem [ref=f22e176]:
+                - link "삼시세끼(사진필수)" [ref=f22e177] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=156&search.boardtype=I
+                - img "새 게시글" [ref=f22e178]
+              - listitem [ref=f22e179]:
+                - link "주부9단(요리레시피/살림)(사진필수)" [ref=f22e180] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=121&search.boardtype=I
+                - img "새 게시글" [ref=f22e181]
+              - listitem [ref=f22e182]:
+                - link "맛집추천(지역+상호명)사진필수" [ref=f22e183] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=152&search.boardtype=I
+              - listitem [ref=f22e184]:
+                - link "구석구석 여행(국내/해외)(사진필수)" [ref=f22e185] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=154&search.boardtype=L
+              - listitem [ref=f22e186]:
+                - link "TV/영화/음악/도서/취미/문화행사정보" [ref=f22e187] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=155&search.boardtype=L
+            - list [ref=f22e189]:
+              - listitem [ref=f22e190]:
+                - link "코스트코 주류 이야기" [ref=f22e191] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=198&search.boardtype=L
+              - listitem [ref=f22e192]:
+                - link "코스트코 반품샵" [ref=f22e193] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=194&search.boardtype=W
+              - listitem [ref=f22e194]:
+                - link "이마트 트레이더스" [ref=f22e195] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=176&search.boardtype=L
+                - img "새 게시글" [ref=f22e196]
+              - listitem [ref=f22e197]:
+                - link "타마트정보" [ref=f22e198] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=35&search.boardtype=L
+                - img "새 게시글" [ref=f22e199]
+              - listitem [ref=f22e200]:
+                - link "빅마켓" [ref=f22e201] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=177&search.boardtype=L
+              - listitem [ref=f22e202]:
+                - link "이케아" [ref=f22e203] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=175&search.boardtype=L
+              - listitem [ref=f22e204]:
+                - link "코스트코 할인쿠폰정보" [ref=f22e205] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=44&search.boardtype=L
+              - listitem [ref=f22e206]:
+                - link "코코VS이트" [ref=f22e207] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=217&search.boardtype=L
+              - listitem [ref=f22e208]:
+                - link "☆베스트 쇼핑후기☆" [ref=f22e209] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=126&search.boardtype=L
+              - listitem [ref=f22e210]:
+                - link "☆베스트 상품후기☆" [ref=f22e211] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=127&search.boardtype=L
+              - listitem [ref=f22e212]:
+                - link "코코수다(신상/정보)제목에 지점명 필수" [ref=f22e213] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=151&search.boardtype=L
+                - img "새 게시글" [ref=f22e214]
+              - listitem [ref=f22e215]:
+                - link "코스트코 지점 세일정보" [ref=f22e216] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=46&search.boardtype=L
+                - img "새 게시글" [ref=f22e217]
+              - listitem [ref=f22e218]:
+                - link "코스트코 글로벌 세일정보" [ref=f22e219] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=214&search.boardtype=L
+                - img "새 게시글" [ref=f22e220]
+              - listitem [ref=f22e221]:
+                - link "강등회원 등업 쇼핑후기" [ref=f22e222] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=110&search.boardtype=L
+              - listitem [ref=f22e223]:
+                - link "강등회원 등업 상품후기" [ref=f22e224] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=212&search.boardtype=L
+              - listitem [ref=f22e225]:
+                - link "트레이더스 핫딜" [ref=f22e226] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=173&search.boardtype=L
+            - heading "▶코스트코 정보(하수↑)50자미만 삭제" [level=3] [ref=f22e228]
+            - heading "▶코스트코 링크" [level=3] [ref=f22e231]
+            - list [ref=f22e233]:
+              - listitem [ref=f22e234]:
+                - link "코스트코 커넥션 잡지" [ref=f22e235] [cursor=pointer]:
+                  - /url: https://www.costco.co.kr/costco-connection
+              - listitem [ref=f22e236]:
+                - link "코스트코 온라인몰" [ref=f22e237] [cursor=pointer]:
+                  - /url: https://www.costco.co.kr/
+            - heading "▶코스트코 정보(중수↑)50자미만삭제" [level=3] [ref=f22e239]:
+              - generic "▶코스트코 정보(중수&uarr;)50자미만삭제" [ref=f22e240]: ▶코스트코 정보(중수↑)50자미만삭제
+            - list [ref=f22e241]:
+              - listitem [ref=f22e242]:
+                - link "코스트코 쇼핑후기" [ref=f22e243] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=12&search.boardtype=L
+                - img "새 게시글" [ref=f22e244]
+              - listitem [ref=f22e245]:
+                - link "코스트코 글로벌 쇼핑후기" [ref=f22e246] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=215&search.boardtype=L
+              - listitem [ref=f22e247]:
+                - link "중수방" [ref=f22e248] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=182&search.boardtype=L
+                - img "새 게시글" [ref=f22e249]
+              - listitem [ref=f22e250]:
+                - link "구매대행" [ref=f22e251] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=86&search.boardtype=L
+            - heading "▶ 드림" [level=3] [ref=f22e253]
+            - list [ref=f22e255]:
+              - listitem [ref=f22e256]:
+                - link "드림" [ref=f22e257] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=65&search.boardtype=L
+            - heading "▶ 핫딜게시판(고수↑)" [level=3] [ref=f22e259]
+            - list [ref=f22e261]:
+              - listitem [ref=f22e262]:
+                - link "코스트코 핫딜" [ref=f22e263] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=33&search.boardtype=L
+                - img "새 게시글" [ref=f22e264]
+              - listitem [ref=f22e265]:
+                - link "고수이야기방" [ref=f22e266] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=184&search.boardtype=L
+            - heading "▶ 달인방" [level=3] [ref=f22e268]
+            - list [ref=f22e270]:
+              - listitem [ref=f22e271]:
+                - link "달인방" [ref=f22e272] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=165&search.boardtype=L
+              - listitem [ref=f22e273]:
+                - link "장터" [ref=f22e274] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=111&search.boardtype=L
+              - listitem [ref=f22e275]:
+                - link "공동구매" [ref=f22e276] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=179&search.boardtype=W
+            - heading "▶ 체험단 /이벤트" [level=3] [ref=f22e278]
+            - list [ref=f22e280]:
+              - listitem [ref=f22e281]:
+                - link "체험단 이벤트" [ref=f22e282] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=181&search.boardtype=L
+              - listitem [ref=f22e283]:
+                - link "체험단 리뷰" [ref=f22e284] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=98&search.boardtype=L
+                - img "새 게시글" [ref=f22e285]
+            - list [ref=f22e287]:
+              - listitem [ref=f22e288]:
+                - link "이벤트 공지" [ref=f22e289] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=76&search.boardtype=L
+                - img "새 게시글" [ref=f22e290]
+              - listitem [ref=f22e291]:
+                - link "이벤트 참여" [ref=f22e292] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=159&search.boardtype=L
+              - listitem [ref=f22e293]:
+                - link "이벤트 당첨후기" [ref=f22e294] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=161&search.boardtype=L
+                - img "새 게시글" [ref=f22e295]
+              - listitem [ref=f22e296]:
+                - link "명절 이벤트(2026설날)" [ref=f22e297] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=225&search.boardtype=L
+              - listitem [ref=f22e298]:
+                - link "💬티키타카페 게시판 💬 마감" [ref=f22e299] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=227&search.boardtype=L
+            - heading "▶ 스탭전용게시판" [level=3] [ref=f22e301]
+            - list [ref=f22e303]:
+              - listitem [ref=f22e304]:
+                - link "스탭게시판" [ref=f22e305] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=226&search.boardtype=L
+              - listitem [ref=f22e306]:
+                - link "스탭게시판" [ref=f22e307] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=20&search.boardtype=L
+              - listitem [ref=f22e308]:
+                - link "=등급심사" [ref=f22e309] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=132&search.boardtype=L
+              - listitem [ref=f22e310]:
+                - link "=지난공지" [ref=f22e311] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=131&search.boardtype=L
+              - listitem [ref=f22e312]:
+                - link "=업무메뉴얼" [ref=f22e313] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=130&search.boardtype=L
+              - listitem [ref=f22e314]:
+                - link "임시(구 닉네임 변경합니다)" [ref=f22e315] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=146&search.boardtype=L
+              - listitem [ref=f22e316]:
+                - link "지난 가입인사" [ref=f22e317] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=133&search.boardtype=L
+              - listitem [ref=f22e318]:
+                - link "지난 이벤트" [ref=f22e319] [cursor=pointer]:
+                  - /url: /ArticleList.nhn?search.clubid=25559875&search.menuid=191&search.boardtype=L
+              - listitem [ref=f22e320]:
+                - link "지구의 날 당첨 신청" [ref=f22e321] [cursor=pointer]:
+                  - /url: /MemoList.nhn?search.clubid=25559875&search.menuid=207&viewType=pc
+              - listitem [ref=f22e322]:
+                - link "닉네임 변경 불가" [ref=f22e323] [cursor=pointer]:
+                  - /url: /MemoList.nhn?search.clubid=25559875&search.menuid=186&viewType=pc
+              - listitem [ref=f22e324]:
+                - link "링크" [ref=f22e325] [cursor=pointer]:
+                  - /url: https://mail.naver.com/?n=1531558765091&v=f#%7B%22fClass%22%3A%22write%22%2C%22oParameter%22%3A%7B%22orderType%22%3A%22new%22%2C%22sMailList%22%3A
+              - listitem [ref=f22e326]:
+                - link "체험단/이벤트 업체문의" [ref=f22e327] [cursor=pointer]:
+                  - /url: https://note.naver.com/note/sendForm.nhn?popup=1&svcType=2&targetUserId=coco7102coco
+            - list
+            - list
+            - list
+            - list
+            - list
+            - list
+            - list
+            - list
+            - list
+          - list [ref=f22e337]:
+            - listitem [ref=f22e338]:
+              - generic [ref=f22e339]:
+                - generic [ref=f22e340]:
+                  - heading "카페 인기 태그" [level=4] [ref=f22e341]
+                  - paragraph [ref=f22e342]:
+                    - link "more" [ref=f22e343] [cursor=pointer]:
+                      - /url: /CafeTagCloudList.nhn?search.clubId=25559875&search.sortType=tagCount
+                - list [ref=f22e345]:
+                  - listitem [ref=f22e346]:
+                    - text: "1."
+                    - link "코스트코추천템" [ref=f22e348] [cursor=pointer]:
+                      - /url: /CafeTagArticleList.nhn?search.clubId=25559875&search.tagName=%C4%DA%BD%BA%C6%AE%C4%DA%C3%DF%C3%B5%C5%DB
+                  - listitem [ref=f22e349]:
+                    - text: "2."
+                    - link "코스트코" [ref=f22e351] [cursor=pointer]:
+                      - /url: /CafeTagArticleList.nhn?search.clubId=25559875&search.tagName=%C4%DA%BD%BA%C6%AE%C4%DA
+                  - listitem [ref=f22e352]:
+                    - text: "3."
+                    - link "코스트코추천상품" [ref=f22e354] [cursor=pointer]:
+                      - /url: /CafeTagArticleList.nhn?search.clubId=25559875&search.tagName=%C4%DA%BD%BA%C6%AE%C4%DA%C3%DF%C3%B5%BB%F3%C7%B0
+                  - listitem [ref=f22e355]:
+                    - text: "4."
+                    - link "코스트코신상" [ref=f22e357] [cursor=pointer]:
+                      - /url: /CafeTagArticleList.nhn?search.clubId=25559875&search.tagName=%C4%DA%BD%BA%C6%AE%C4%DA%BD%C5%BB%F3
+                  - listitem [ref=f22e358]:
+                    - text: "5."
+                    - link "코스트코세종점" [ref=f22e360] [cursor=pointer]:
+                      - /url: /CafeTagArticleList.nhn?search.clubId=25559875&search.tagName=%C4%DA%BD%BA%C6%AE%C4%DA%BC%BC%C1%BE%C1%A1
+            - listitem [ref=f22e361]:
+              - generic [ref=f22e362]:
+                - heading "사기피해사례 조회" [level=4] [ref=f22e364]
+                - generic [ref=f22e365]:
+                  - generic:
+                    - textbox "전화 또는 계좌번호 입력" [ref=f22e366]: 전화, 계좌번호
+                    - link "검색" [ref=f22e367] [cursor=pointer]:
+                      - /url: "#"
+                  - paragraph [ref=f22e368]: 더치트는 범죄피해 방지를 위해2006년부터 운영되고 있습니다.
+                  - paragraph [ref=f22e369]: 최근 6개월내 1회 이상 등록된정보를 확인 할 수 있습니다.
+                  - generic [ref=f22e370]: "제공: 더치트(TheCheat.co.kr)"
+            - listitem [ref=f22e371]:
+              - generic [ref=f22e372] [cursor=pointer]
+          - link [ref=f22e374] [cursor=pointer]:
+            - /url: https://talk.naver.com/ct/w4nd8o
+            - img "궁금한게 있을 땐 카페 스마트봇" [ref=f22e375]
+        - iframe [ref=f22e377]
+      - contentinfo [ref=f22e378]:
+        - heading "코사모(코스트코를 사랑하는 이들의 모임)" [level=2] [ref=f22e379]
+        - link "https://cafe.naver.com/costco12" [ref=f22e380] [cursor=pointer]:
+          - /url: "#"
+        - heading "NAVER 카페" [level=2]:
+          - link "NAVER 카페" [ref=f22e381] [cursor=pointer]:
+            - /url: "#"
+    - link "콘텐츠 상단" [ref=f22e383] [cursor=pointer]:
+      - /url: "#"
+  - iframe

@@ -1,0 +1,82 @@
+- generic [active] [ref=f28e1]:
+  - generic [ref=f28e3]:
+    - generic [ref=f28e4]:
+      - banner [ref=f28e5]:
+        - generic [ref=f28e6]:
+          - link [ref=f28e7] [cursor=pointer]:
+            - /url: https://www.naver.com
+          - generic [ref=f28e8]:
+            - link "카페홈" [ref=f28e10] [cursor=pointer]:
+              - /url: https://section.cafe.naver.com
+            - link "이웃" [ref=f28e12] [cursor=pointer]:
+              - /url: https://cafe.naver.com/ca-fe/home/town
+            - button "가입카페" [ref=f28e14] [cursor=pointer]
+            - link "새글" [ref=f28e16] [cursor=pointer]:
+              - /url: https://section.cafe.naver.com/ca-fe/home/feed
+            - button "내소식" [ref=f28e18] [cursor=pointer]
+            - button "채팅" [ref=f28e20] [cursor=pointer]
+        - link [ref=f28e23] [cursor=pointer]:
+          - /url: https://cafe.naver.com/joonggonara
+          - img "중고나라" [ref=f28e24]
+      - list [ref=f28e26]:
+        - listitem [ref=f28e27]:
+          - link "이벤트" [ref=f28e28] [cursor=pointer]:
+            - /url: /f-e/cafes/10050146/menus/1257
+        - listitem [ref=f28e29]:
+          - link "공지사항" [ref=f28e30] [cursor=pointer]:
+            - /url: /f-e/cafes/10050146/menus/1256
+        - listitem [ref=f28e31]:
+          - link "이용정책" [ref=f28e32] [cursor=pointer]:
+            - /url: /f-e/cafes/10050146/menus/1805
+        - listitem [ref=f28e33]:
+          - link "★셀러 회원 신청★" [ref=f28e34] [cursor=pointer]:
+            - /url: /f-e/cafes/10050146/menus/2446
+    - generic [ref=f28e35]:
+      - complementary [ref=f28e37]:
+        - generic [ref=f28e39]:
+          - tablist [ref=f28e41]:
+            - tab "카페정보" [selected] [ref=f28e42] [cursor=pointer]
+            - tab "나의활동" [ref=f28e43] [cursor=pointer]
+          - tabpanel [ref=f28e44]:
+            - generic [ref=f28e46]:
+              - link [ref=f28e48] [cursor=pointer]:
+                - /url: https://cafe.naver.com/joonggonara
+                - img "카페아이콘" [ref=f28e50]
+              - generic [ref=f28e51]:
+                - generic [ref=f28e52]:
+                  - link "중고나라운영진1" [ref=f28e53] [cursor=pointer]:
+                    - /url: https://cafe.naver.com/f-e/cafes/10050146/members/MokGI1z_orABW9EK8LpfFo6WVvnUzJvKl-gGIbFuTRw
+                  - emphasis [ref=f28e54]: 매니저
+                - link "2003.12.10. 개설" [ref=f28e56] [cursor=pointer]:
+                  - /url: https://cafe.naver.com/f-e/cafes/10050146/introduction/history
+                - link "카페소개" [ref=f28e58] [cursor=pointer]:
+                  - /url: https://cafe.naver.com/CafeProfileView.nhn?clubid=10050146
+            - list [ref=f28e60]:
+              - listitem [ref=f28e61]:
+                - link [ref=f28e62] [cursor=pointer]:
+                  - /url: https://cafe.naver.com/f-e/cafes/10050146/introduction/ranking
+                  - strong [ref=f28e63]: 카페등급
+                  - emphasis [ref=f28e65]: 숲
+              - listitem [ref=f28e66]:
+                - button "카페멤버수 19,320,440" [ref=f28e67] [cursor=pointer]:
+                  - generic: 카페멤버수
+                  - emphasis [ref=f28e69]: 19,320,440
+                - link "초대" [ref=f28e70] [cursor=pointer]:
+                  - /url: https://cafe.naver.com/joonggonara?iframe_url=/CafeInviteCheck.nhn?m=check&clubid=10050146
+              - listitem [ref=f28e71]:
+                - strong [ref=f28e73]: 대표 인기카페
+        - button [ref=f28e75] [cursor=pointer]
+        - button "카페 채팅" [ref=f28e77] [cursor=pointer]
+        - generic [ref=f28e79]:
+          - textbox "카페글 검색어 입력" [ref=f28e80]
+          - button "검색" [ref=f28e81] [cursor=pointer]
+        - complementary [ref=f28e82]
+      - generic:
+        - main
+    - contentinfo [ref=f28e93]:
+      - heading "중고나라" [level=2] [ref=f28e94]
+      - link "https://cafe.naver.com/joonggonara" [ref=f28e95] [cursor=pointer]:
+        - /url: https://cafe.naver.com/joonggonara
+      - link "NAVER 카페" [ref=f28e96] [cursor=pointer]:
+        - /url: https://cafe.naver.com/joonggonara
+  - alert [ref=f28e98]

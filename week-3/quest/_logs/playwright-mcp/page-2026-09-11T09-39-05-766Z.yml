@@ -1,0 +1,67 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - heading [level=1] [ref=e4]:
+      - img "HARA 건강지도" [ref=e5]
+    - list [ref=e6]:
+      - listitem [ref=e7]:
+        - link "건강지도 홈" [ref=e8] [cursor=pointer]:
+          - /url: "#a"
+      - listitem [ref=e9]:
+        - link [ref=e10] [cursor=pointer]:
+          - /url: "#a"
+          - strong [ref=e11]: 병원·약국
+          - text: 종류별 찾기
+      - listitem [ref=e12]:
+        - link [ref=e13] [cursor=pointer]:
+          - /url: "#a"
+          - text: 우리지역 좋은병원
+          - strong [ref=e14]: 찾기
+      - listitem [ref=e15]:
+        - link [ref=e16] [cursor=pointer]:
+          - /url: "#a"
+          - text: 전문병원
+          - strong [ref=e17]: 찾기
+      - listitem:
+        - link "임시지도":
+          - /url: "#a"
+  - generic [ref=e18]:
+    - generic:
+      - generic:
+        - generic [ref=e19]:
+          - heading "건강지도 홈" [level=2] [ref=e20]
+          - generic [ref=e21]:
+            - textbox "병원명 또는 약국명 입력" [ref=e22]
+            - link "검색" [ref=e23] [cursor=pointer]:
+              - /url: "#none"
+          - generic [ref=e25]:
+            - text: 검색결과 (0건)
+            - paragraph [ref=e26]: ※ 내 위치와 가까운 병원 또는 약국의 검색결과입니다.
+          - list [ref=e28]
+          - link "다운로드" [ref=e31] [cursor=pointer]:
+            - /url: "#a"
+        - link "창 닫기" [ref=e33] [cursor=pointer]:
+          - /url: "#a"
+    - link "시/도 시/군/구 읍/면/동" [ref=e35] [cursor=pointer]:
+      - /url: "#a"
+      - generic [ref=e36]: 시/도
+      - generic [ref=e37]: 시/군/구
+      - generic [ref=e38]: 읍/면/동
+    - generic [ref=e39]:
+      - generic:
+        - generic [ref=e41]:
+          - link "주변병원" [ref=e42] [cursor=pointer]:
+            - /url: javascript:void(0);
+          - link "주변약국" [ref=e43] [cursor=pointer]:
+            - /url: javascript:void(0);
+          - link "응급실" [ref=e44] [cursor=pointer]:
+            - /url: javascript:void(0);
+        - generic [ref=e45]:
+          - link "확대보기" [ref=e46] [cursor=pointer]:
+            - /url: javascript:void(0);
+          - link "축소보기" [ref=e47] [cursor=pointer]:
+            - /url: javascript:void(0);
+        - link "현재위치" [ref=e49] [cursor=pointer]:
+          - /url: javascript:void(0);
+        - link "현지도 검색" [ref=e51] [cursor=pointer]:
+          - /url: javascript:void(0);
+          - text: 현지도검색

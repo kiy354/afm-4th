@@ -1,0 +1,332 @@
+- generic [ref=f6e3]:
+  - generic:
+    - link "메인 메뉴로 바로가기" [ref=f6e4] [cursor=pointer]:
+      - /url: "#gnbMenu"
+    - link "본문 바로가기" [ref=f6e5] [cursor=pointer]:
+      - /url: "#mainContainer"
+    - link "웹 접근성이 좋은 모바일 웹에서 사용하겠습니까?" [ref=f6e6] [cursor=pointer]:
+      - /url: https://m.cafe.naver.com/
+  - banner [ref=f6e7]:
+    - generic [ref=f6e8]:
+      - heading [level=1] [ref=f6e9]:
+        - link "NAVER" [ref=f6e10] [cursor=pointer]:
+          - /url: https://www.naver.com
+        - link "카페" [ref=f6e12] [cursor=pointer]:
+          - /url: https://section.cafe.naver.com
+        - link "플리마켓" [ref=f6e15] [cursor=pointer]:
+          - /url: https://fleamarket.naver.com
+      - search [ref=f6e17]:
+        - textbox "원하는 카페, 글을 찾아보세요" [ref=f6e18]: 스팸 6호
+        - button "삭제" [ref=f6e19] [cursor=pointer]
+        - button "자동완성 펼침" [ref=f6e20] [cursor=pointer]
+        - button "검색" [ref=f6e21] [cursor=pointer]
+      - generic [ref=f6e23]:
+        - strong [ref=f6e24]: 사용자 링크
+        - list [ref=f6e25]:
+          - listitem [ref=f6e26]:
+            - link "내 프로필 이미지 kiy35.. 내정보 보기" [ref=f6e28] [cursor=pointer]:
+              - /url: javascript:;
+              - img "내 프로필 이미지" [ref=f6e29]
+              - generic [ref=f6e31]: kiy35..
+              - emphasis [ref=f6e32]: 내정보 보기
+          - listitem [ref=f6e33]:
+            - link "네이버톡 새 창 알림" [ref=f6e34] [cursor=pointer]:
+              - /url: https://talks.naver.com/?frm=pcgnb&anchor=&category=
+          - listitem [ref=f6e37]:
+            - link "알림 새 창 알림 99 +" [ref=f6e38] [cursor=pointer]:
+              - /url: https://m.notify.naver.com/?from=pcmain
+              - generic [ref=f6e39]: 알림 새 창 알림
+              - emphasis [ref=f6e41]:
+                - generic [ref=f6e43]:
+                  - text: "99"
+                  - generic [ref=f6e44]: +
+          - listitem [ref=f6e45]:
+            - link "메일 99 +" [ref=f6e46] [cursor=pointer]:
+              - /url: https://mail.naver.com
+              - generic [ref=f6e47]: 메일
+              - emphasis [ref=f6e49]:
+                - generic [ref=f6e51]:
+                  - text: "99"
+                  - generic [ref=f6e52]: +
+          - listitem [ref=f6e53]:
+            - link "서비스 더보기" [ref=f6e54] [cursor=pointer]:
+              - /url: javascript:;
+    - generic [ref=f6e57]:
+      - generic [ref=f6e58]: 믿고 쓰는 중고거래, 지금 시작하세요
+      - link "플리마켓" [ref=f6e59] [cursor=pointer]:
+        - /url: https://fleamarket.naver.com
+  - main [ref=f6e61]:
+    - menu [ref=f6e62]:
+      - generic [ref=f6e63]:
+        - generic [ref=f6e64]:
+          - link "카페홈" [ref=f6e65] [cursor=pointer]:
+            - /url: /ca-fe/home
+          - link "이웃 Beta (새 창에서 열림)" [ref=f6e67] [cursor=pointer]:
+            - /url: /ca-fe/home/town
+            - generic [ref=f6e68]: 이웃
+            - img "Beta"
+            - generic [ref=f6e69]: (새 창에서 열림)
+          - link "구독" [ref=f6e70] [cursor=pointer]:
+            - /url: /ca-fe/home/feed
+          - link "인기글 New" [ref=f6e72] [cursor=pointer]:
+            - /url: /ca-fe/home/cafe-hots
+            - generic [ref=f6e73]: 인기글
+            - img "New"
+          - link "내소식" [ref=f6e74] [cursor=pointer]:
+            - /url: /ca-fe/home/my-news
+          - link "채팅 (새 창에서 열림)" [ref=f6e77] [cursor=pointer]:
+            - /url: ""
+            - generic [ref=f6e78]: 채팅
+            - generic [ref=f6e79]: (새 창에서 열림)
+        - generic [ref=f6e80]:
+          - link "주제별 카페" [ref=f6e81] [cursor=pointer]:
+            - /url: /ca-fe/home/themes
+          - link "지역별 카페" [ref=f6e82] [cursor=pointer]:
+            - /url: /ca-fe/home/areas
+          - link "인기 팬카페" [ref=f6e83] [cursor=pointer]:
+            - /url: /ca-fe/home/fans
+          - link "대표 카페" [ref=f6e84] [cursor=pointer]:
+            - /url: /ca-fe/home/powers/popular
+          - link "카페 랭킹" [ref=f6e85] [cursor=pointer]:
+            - /url: /ca-fe/home/rankings
+    - generic [ref=f6e360]:
+      - generic [ref=f6e361]:
+        - heading "‘스팸 6호’ 검색결과" [level=3] [ref=f6e362]:
+          - strong [ref=f6e363]: ‘스팸 6호’
+          - generic [ref=f6e364]: 검색결과
+        - tablist [ref=f6e365]:
+          - tab "전체글" [ref=f6e366] [cursor=pointer]
+          - tab "카페명" [ref=f6e368] [cursor=pointer]
+          - tab "이웃글" [ref=f6e370] [cursor=pointer]
+          - tab "중고거래" [selected] [ref=f6e372] [cursor=pointer]
+        - generic [ref=f6e374]:
+          - generic [ref=f6e375]:
+            - heading "중고거래" [level=3] [ref=f6e376]
+            - generic [ref=f6e377]:
+              - list [ref=f6e378]:
+                - listitem [ref=f6e379]:
+                  - button "정확도순" [ref=f6e380] [cursor=pointer]
+                - listitem [ref=f6e381]:
+                  - button "최신순" [ref=f6e382] [cursor=pointer]
+                - listitem [ref=f6e383]:
+                  - button "낮은 가격순" [ref=f6e384] [cursor=pointer]
+                - listitem [ref=f6e385]:
+                  - button "높은 가격순" [ref=f6e386] [cursor=pointer]
+              - button "필터" [ref=f6e387] [cursor=pointer]
+          - paragraph [ref=f6e390]: 검색결과가 없습니다. 다른 검색어를 입력하거나 필터를 조절해보세요.
+      - iframe [ref=f6e394]:
+        - generic [ref=f14e3]:
+          - generic [ref=f14e4]:
+            - heading "파워링크" [level=2] [ref=f14e5]
+            - link "광고" [ref=f14e6] [cursor=pointer]:
+              - /url: https://help.naver.com/service/5622/contents/4299?lang=ko&osType=COMMONOS
+          - list [ref=f14e11]:
+            - listitem [ref=f14e12]:
+              - generic [ref=f14e13]:
+                - generic [ref=f14e14]:
+                  - link [ref=f14e15] [cursor=pointer]:
+                    - /url: https://ader.naver.com/v1/Yf8EKELEhtOsiU_TNMFFRqhlT3gVgom-zFEULfR_UFZkoGapoySpr7iIuzcNPm2yrMXV7Uv5to7naSPVz7bj8lGT7juG8FkquOwb7IUVMbUqELaL2oOz8VBu8jP0DldNP9jnYByoO_9eXfNgck8i3JzBRGKAZ_96ixaDPy0s1OIzZ2vFTyuwWs9248ircLcZll1O-6aL5IoAehbMlRaYV20HkXf6suBcf892JIcSNQp5GW6MzWco7_NgwrePJEfuz2tqZr4uZHk4BLjXF_A_xZ3hfaXm_VbAJ_Ex8n2vGfbkghRRPCl16cBBIRSg9TqTLxwrFtE4z0E_-L6kEAVpUuUBuCp12NcFSPbOwbjO9bfZe7t8UMGnFUQkpY73crDbLz4E7V69WMohZ98igzmxexrqm38gWJG_Q1WKURML1FAEbqsY_7cHTNwXV9xJ0CzBAkwRTyEYOlZAjf-ujYQ3Q5XF9OY7dlxzEpZceKK6UR7_sUrrJnRbi-Oe_AmV5SvTM2S_kC3TyiPWRimW6COdb3ybeU_e3Z_X1g6iAteOH_kaZCAJFjP1drPi7tJGDbCybC6-yZZ-T5vkkYs3zwfvQQ==?c=pncafe.new&t=0
+                    - img "favicon" [ref=f14e16]
+                  - link "한나웨딩 · hannawedding.co.kr/" [ref=f14e17] [cursor=pointer]:
+                    - /url: https://ader.naver.com/v1/Yf8EKELEhtOsiU_TNMFFRqhlT3gVgom-zFEULfR_UFZkoGapoySpr7iIuzcNPm2yrMXV7Uv5to7naSPVz7bj8lGT7juG8FkquOwb7IUVMbUqELaL2oOz8VBu8jP0DldNP9jnYByoO_9eXfNgck8i3JzBRGKAZ_96ixaDPy0s1OIzZ2vFTyuwWs9248ircLcZll1O-6aL5IoAehbMlRaYV20HkXf6suBcf892JIcSNQp5GW6MzWco7_NgwrePJEfuz2tqZr4uZHk4BLjXF_A_xZ3hfaXm_VbAJ_Ex8n2vGfbkghRRPCl16cBBIRSg9TqTLxwrFtE4z0E_-L6kEAVpUuUBuCp12NcFSPbOwbjO9bfZe7t8UMGnFUQkpY73crDbLz4E7V69WMohZ98igzmxexrqm38gWJG_Q1WKURML1FAEbqsY_7cHTNwXV9xJ0CzBAkwRTyEYOlZAjf-ujYQ3Q5XF9OY7dlxzEpZceKK6UR7_sUrrJnRbi-Oe_AmV5SvTM2S_kC3TyiPWRimW6COdb3ybeU_e3Z_X1g6iAteOH_kaZCAJFjP1drPi7tJGDbCybC6-yZZ-T5vkkYs3zwfvQQ==?c=pncafe.new&t=0&p=1
+                  - button "네이버 로그인" [ref=f14e20] [cursor=pointer]
+                - link [ref=f14e22] [cursor=pointer]:
+                  - /url: https://ader.naver.com/v1/Yf8EKELEhtOsiU_TNMFFRqhlT3gVgom-zFEULfR_UFZkoGapoySpr7iIuzcNPm2yrMXV7Uv5to7naSPVz7bj8lGT7juG8FkquOwb7IUVMbUqELaL2oOz8VBu8jP0DldNP9jnYByoO_9eXfNgck8i3JzBRGKAZ_96ixaDPy0s1OIzZ2vFTyuwWs9248ircLcZll1O-6aL5IoAehbMlRaYV20HkXf6suBcf892JIcSNQp5GW6MzWco7_NgwrePJEfuz2tqZr4uZHk4BLjXF_A_xZ3hfaXm_VbAJ_Ex8n2vGfbkghRRPCl16cBBIRSg9TqTLxwrFtE4z0E_-L6kEAVpUuUBuCp12NcFSPbOwbjO9bfZe7t8UMGnFUQkpY73crDbLz4E7V69WMohZ98igzmxexrqm38gWJG_Q1WKURML1FAEbqsY_7cHTNwXV9xJ0CzBAkwRTyEYOlZAjf-ujYQ3Q5XF9OY7dlxzEpZceKK6UR7_sUrrJnRbi-Oe_AmV5SvTM2S_kC3TyiPWRimW6COdb3ybeU_e3Z_X1g6iAteOH_kaZCAJFjP1drPi7tJGDbCybC6-yZZ-T5vkkYs3zwfvQQ==?c=pncafe.new&t=0&p=0
+                  - generic [ref=f14e23]:
+                    - generic [ref=f14e24]:
+                      - strong [ref=f14e25]: 교회결혼식
+                      - text: 스드메, 출장뷔페
+                    - text: · 출장뷔페 업체 3곳 비교시식 · 스드메12만포인트 추가할인
+                - link [ref=f14e27] [cursor=pointer]:
+                  - /url: https://ader.naver.com/v1/Yf8EKELEhtOsiU_TNMFFRqhlT3gVgom-zFEULfR_UFZkoGapoySpr7iIuzcNPm2yrMXV7Uv5to7naSPVz7bj8lGT7juG8FkquOwb7IUVMbUqELaL2oOz8VBu8jP0DldNP9jnYByoO_9eXfNgck8i3JzBRGKAZ_96ixaDPy0s1OIzZ2vFTyuwWs9248ircLcZll1O-6aL5IoAehbMlRaYV20HkXf6suBcf892JIcSNQp5GW6MzWco7_NgwrePJEfuz2tqZr4uZHk4BLjXF_A_xZ3hfaXm_VbAJ_Ex8n2vGfbkghRRPCl16cBBIRSg9TqTLxwrFtE4z0E_-L6kEAVpUuUBuCp12NcFSPbOwbjO9bfZe7t8UMGnFUQkpY73crDbLz4E7V69WMohZ98igzmxexrqm38gWJG_Q1WKURML1FAEbqsY_7cHTNwXV9xJ0CzBAkwRTyEYOlZAjf-ujYQ3Q5XF9OY7dlxzEpZceKK6UR7_sUrrJnRbi-Oe_AmV5SvTM2S_kC3TyiPWRimW6COdb3ybeU_e3Z_X1g6iAteOH_kaZCAJFjP1drPi7tJGDbCybC6-yZZ-T5vkkYs3zwfvQQ==?c=pncafe.new&t=0
+                  - text: 드메 특가 60만원,
+                  - strong [ref=f14e28]: 교회
+                  - text: 꽃길장식SET 가격할인, 출장뷔페 견적상담및 시식가능.
+                - generic [ref=f14e30]:
+                  - link [ref=f14e31] [cursor=pointer]:
+                    - /url: https://ader.naver.com/v1/e_hPwIoGGgfR4iFRXk_KDa-7LlLXMj2lr1bn8erjE1SyXCWPhQu57998dkdVAp7xrzwcchEz5fBJJAOiDHWI95RD90gZ0QFPKzgsrksz-7S72nz3Ti_JH8anq5RuOTX-D319tTIsQBmsjwQnRCdcVBrWKrlzwxyGBQxfl7wko-F6_1sTpVsYFBNwHDhMLfsV0ptRUllARjdUDdCB_5VeLzDb-R040D78zfZhH3GoR7MlpS7i4u2mnd0ph8IBcFIbAEapL0buL1yUpfOwA6h6k237_kwKVo8_j2ii21ADfx78f3xPWj5z87p342quWDODjKIT01TY_d5QiXe_H08j_oF3bFI38tBtExX_K94olhGKBiY_hU4FBGHFGDc9VHDS5pgetYd5m35hLSvoZ5l_N-X-Idx4F1csFqWU-a3UHXVWA8e23bgi3o-S8DfIbrR917ya9N0wnjDvXH2ZZSWELDBXgFNlRPRy0hjWWiLpUFW35xIWBBPoN5S1EwTGtSy_Qp4nFCp69JGANlWkoBSiwvnZBi3AwEnQw7LIPkWXQ2Nxi1xaCVglKHi_eRZHxQ8m?c=pncafe.new&t=0
+                    - img "플레이스 이미지" [ref=f14e32]
+                  - link [ref=f14e33] [cursor=pointer]:
+                    - /url: https://ader.naver.com/v1/e_hPwIoGGgfR4iFRXk_KDa-7LlLXMj2lr1bn8erjE1SyXCWPhQu57998dkdVAp7xrzwcchEz5fBJJAOiDHWI95RD90gZ0QFPKzgsrksz-7S72nz3Ti_JH8anq5RuOTX-D319tTIsQBmsjwQnRCdcVBrWKrlzwxyGBQxfl7wko-F6_1sTpVsYFBNwHDhMLfsV0ptRUllARjdUDdCB_5VeLzDb-R040D78zfZhH3GoR7MlpS7i4u2mnd0ph8IBcFIbAEapL0buL1yUpfOwA6h6k237_kwKVo8_j2ii21ADfx78f3xPWj5z87p342quWDODjKIT01TY_d5QiXe_H08j_oF3bFI38tBtExX_K94olhGKBiY_hU4FBGHFGDc9VHDS5pgetYd5m35hLSvoZ5l_N-X-Idx4F1csFqWU-a3UHXVWA8e23bgi3o-S8DfIbrR917ya9N0wnjDvXH2ZZSWELDBXgFNlRPRy0hjWWiLpUFW35xIWBBPoN5S1EwTGtSy_Qp4nFCp69JGANlWkoBSiwvnZBi3AwEnQw7LIPkWXQ2Nxi1xaCVglKHi_eRZHxQ8m?c=pncafe.new&t=0
+                    - img "플레이스 이미지" [ref=f14e34]
+                  - link [ref=f14e35] [cursor=pointer]:
+                    - /url: https://ader.naver.com/v1/e_hPwIoGGgfR4iFRXk_KDa-7LlLXMj2lr1bn8erjE1SyXCWPhQu57998dkdVAp7xrzwcchEz5fBJJAOiDHWI95RD90gZ0QFPKzgsrksz-7S72nz3Ti_JH8anq5RuOTX-D319tTIsQBmsjwQnRCdcVBrWKrlzwxyGBQxfl7wko-F6_1sTpVsYFBNwHDhMLfsV0ptRUllARjdUDdCB_5VeLzDb-R040D78zfZhH3GoR7MlpS7i4u2mnd0ph8IBcFIbAEapL0buL1yUpfOwA6h6k237_kwKVo8_j2ii21ADfx78f3xPWj5z87p342quWDODjKIT01TY_d5QiXe_H08j_oF3bFI38tBtExX_K94olhGKBiY_hU4FBGHFGDc9VHDS5pgetYd5m35hLSvoZ5l_N-X-Idx4F1csFqWU-a3UHXVWA8e23bgi3o-S8DfIbrR917ya9N0wnjDvXH2ZZSWELDBXgFNlRPRy0hjWWiLpUFW35xIWBBPoN5S1EwTGtSy_Qp4nFCp69JGANlWkoBSiwvnZBi3AwEnQw7LIPkWXQ2Nxi1xaCVglKHi_eRZHxQ8m?c=pncafe.new&t=0
+                    - img "플레이스 이미지" [ref=f14e36]
+                  - link [ref=f14e37] [cursor=pointer]:
+                    - /url: https://ader.naver.com/v1/e_hPwIoGGgfR4iFRXk_KDa-7LlLXMj2lr1bn8erjE1SyXCWPhQu57998dkdVAp7xrzwcchEz5fBJJAOiDHWI95RD90gZ0QFPKzgsrksz-7S72nz3Ti_JH8anq5RuOTX-D319tTIsQBmsjwQnRCdcVBrWKrlzwxyGBQxfl7wko-F6_1sTpVsYFBNwHDhMLfsV0ptRUllARjdUDdCB_5VeLzDb-R040D78zfZhH3GoR7MlpS7i4u2mnd0ph8IBcFIbAEapL0buL1yUpfOwA6h6k237_kwKVo8_j2ii21ADfx78f3xPWj5z87p342quWDODjKIT01TY_d5QiXe_H08j_oF3bFI38tBtExX_K94olhGKBiY_hU4FBGHFGDc9VHDS5pgetYd5m35hLSvoZ5l_N-X-Idx4F1csFqWU-a3UHXVWA8e23bgi3o-S8DfIbrR917ya9N0wnjDvXH2ZZSWELDBXgFNlRPRy0hjWWiLpUFW35xIWBBPoN5S1EwTGtSy_Qp4nFCp69JGANlWkoBSiwvnZBi3AwEnQw7LIPkWXQ2Nxi1xaCVglKHi_eRZHxQ8m?c=pncafe.new&t=0
+                    - img "플레이스 이미지" [ref=f14e38]
+                  - link [ref=f14e39] [cursor=pointer]:
+                    - /url: https://ader.naver.com/v1/e_hPwIoGGgfR4iFRXk_KDa-7LlLXMj2lr1bn8erjE1SyXCWPhQu57998dkdVAp7xrzwcchEz5fBJJAOiDHWI95RD90gZ0QFPKzgsrksz-7S72nz3Ti_JH8anq5RuOTX-D319tTIsQBmsjwQnRCdcVBrWKrlzwxyGBQxfl7wko-F6_1sTpVsYFBNwHDhMLfsV0ptRUllARjdUDdCB_5VeLzDb-R040D78zfZhH3GoR7MlpS7i4u2mnd0ph8IBcFIbAEapL0buL1yUpfOwA6h6k237_kwKVo8_j2ii21ADfx78f3xPWj5z87p342quWDODjKIT01TY_d5QiXe_H08j_oF3bFI38tBtExX_K94olhGKBiY_hU4FBGHFGDc9VHDS5pgetYd5m35hLSvoZ5l_N-X-Idx4F1csFqWU-a3UHXVWA8e23bgi3o-S8DfIbrR917ya9N0wnjDvXH2ZZSWELDBXgFNlRPRy0hjWWiLpUFW35xIWBBPoN5S1EwTGtSy_Qp4nFCp69JGANlWkoBSiwvnZBi3AwEnQw7LIPkWXQ2Nxi1xaCVglKHi_eRZHxQ8m?c=pncafe.new&t=0
+                    - img "플레이스 이미지" [ref=f14e40]
+                  - link [ref=f14e41] [cursor=pointer]:
+                    - /url: https://ader.naver.com/v1/e_hPwIoGGgfR4iFRXk_KDa-7LlLXMj2lr1bn8erjE1SyXCWPhQu57998dkdVAp7xrzwcchEz5fBJJAOiDHWI95RD90gZ0QFPKzgsrksz-7S72nz3Ti_JH8anq5RuOTX-D319tTIsQBmsjwQnRCdcVBrWKrlzwxyGBQxfl7wko-F6_1sTpVsYFBNwHDhMLfsV0ptRUllARjdUDdCB_5VeLzDb-R040D78zfZhH3GoR7MlpS7i4u2mnd0ph8IBcFIbAEapL0buL1yUpfOwA6h6k237_kwKVo8_j2ii21ADfx78f3xPWj5z87p342quWDODjKIT01TY_d5QiXe_H08j_oF3bFI38tBtExX_K94olhGKBiY_hU4FBGHFGDc9VHDS5pgetYd5m35hLSvoZ5l_N-X-Idx4F1csFqWU-a3UHXVWA8e23bgi3o-S8DfIbrR917ya9N0wnjDvXH2ZZSWELDBXgFNlRPRy0hjWWiLpUFW35xIWBBPoN5S1EwTGtSy_Qp4nFCp69JGANlWkoBSiwvnZBi3AwEnQw7LIPkWXQ2Nxi1xaCVglKHi_eRZHxQ8m?c=pncafe.new&t=0
+                    - img "플레이스 이미지" [ref=f14e42]
+                  - link [ref=f14e43] [cursor=pointer]:
+                    - /url: https://ader.naver.com/v1/e_hPwIoGGgfR4iFRXk_KDa-7LlLXMj2lr1bn8erjE1SyXCWPhQu57998dkdVAp7xrzwcchEz5fBJJAOiDHWI95RD90gZ0QFPKzgsrksz-7S72nz3Ti_JH8anq5RuOTX-D319tTIsQBmsjwQnRCdcVBrWKrlzwxyGBQxfl7wko-F6_1sTpVsYFBNwHDhMLfsV0ptRUllARjdUDdCB_5VeLzDb-R040D78zfZhH3GoR7MlpS7i4u2mnd0ph8IBcFIbAEapL0buL1yUpfOwA6h6k237_kwKVo8_j2ii21ADfx78f3xPWj5z87p342quWDODjKIT01TY_d5QiXe_H08j_oF3bFI38tBtExX_K94olhGKBiY_hU4FBGHFGDc9VHDS5pgetYd5m35hLSvoZ5l_N-X-Idx4F1csFqWU-a3UHXVWA8e23bgi3o-S8DfIbrR917ya9N0wnjDvXH2ZZSWELDBXgFNlRPRy0hjWWiLpUFW35xIWBBPoN5S1EwTGtSy_Qp4nFCp69JGANlWkoBSiwvnZBi3AwEnQw7LIPkWXQ2Nxi1xaCVglKHi_eRZHxQ8m?c=pncafe.new&t=0
+                    - img "플레이스 이미지" [ref=f14e44]
+                  - link "플레이스 이미지" [ref=f14e45] [cursor=pointer]:
+                    - /url: https://ader.naver.com/v1/e_hPwIoGGgfR4iFRXk_KDa-7LlLXMj2lr1bn8erjE1SyXCWPhQu57998dkdVAp7xrzwcchEz5fBJJAOiDHWI95RD90gZ0QFPKzgsrksz-7S72nz3Ti_JH8anq5RuOTX-D319tTIsQBmsjwQnRCdcVBrWKrlzwxyGBQxfl7wko-F6_1sTpVsYFBNwHDhMLfsV0ptRUllARjdUDdCB_5VeLzDb-R040D78zfZhH3GoR7MlpS7i4u2mnd0ph8IBcFIbAEapL0buL1yUpfOwA6h6k237_kwKVo8_j2ii21ADfx78f3xPWj5z87p342quWDODjKIT01TY_d5QiXe_H08j_oF3bFI38tBtExX_K94olhGKBiY_hU4FBGHFGDc9VHDS5pgetYd5m35hLSvoZ5l_N-X-Idx4F1csFqWU-a3UHXVWA8e23bgi3o-S8DfIbrR917ya9N0wnjDvXH2ZZSWELDBXgFNlRPRy0hjWWiLpUFW35xIWBBPoN5S1EwTGtSy_Qp4nFCp69JGANlWkoBSiwvnZBi3AwEnQw7LIPkWXQ2Nxi1xaCVglKHi_eRZHxQ8m?c=pncafe.new&t=0
+                    - img "플레이스 이미지" [ref=f14e46]
+                  - button "다음으로 이동" [ref=f14e48] [cursor=pointer]
+                - link "웨딩 스드메 교회결혼식 웨딩드레스 웨딩플래너 방문자리뷰 3 드메특가(피팅비포함) 600,000원~" [ref=f14e50] [cursor=pointer]:
+                  - /url: https://ader.naver.com/v1/e_hPwIoGGgfR4iFRXk_KDa-7LlLXMj2lr1bn8erjE1SyXCWPhQu57998dkdVAp7xrzwcchEz5fBJJAOiDHWI95RD90gZ0QFPKzgsrksz-7S72nz3Ti_JH8anq5RuOTX-D319tTIsQBmsjwQnRCdcVBrWKrlzwxyGBQxfl7wko-F6_1sTpVsYFBNwHDhMLfsV0ptRUllARjdUDdCB_5VeLzDb-R040D78zfZhH3GoR7MlpS7i4u2mnd0ph8IBcFIbAEapL0buL1yUpfOwA6h6k237_kwKVo8_j2ii21ADfx78f3xPWj5z87p342quWDODjKIT01TY_d5QiXe_H08j_oF3bFI38tBtExX_K94olhGKBiY_hU4FBGHFGDc9VHDS5pgetYd5m35hLSvoZ5l_N-X-Idx4F1csFqWU-a3UHXVWA8e23bgi3o-S8DfIbrR917ya9N0wnjDvXH2ZZSWELDBXgFNlRPRy0hjWWiLpUFW35xIWBBPoN5S1EwTGtSy_Qp4nFCp69JGANlWkoBSiwvnZBi3AwEnQw7LIPkWXQ2Nxi1xaCVglKHi_eRZHxQ8m?c=pncafe.new&t=0
+                  - generic [ref=f14e51]:
+                    - generic [ref=f14e52]: 웨딩
+                    - generic [ref=f14e53]: 스드메
+                    - generic [ref=f14e54]: 교회결혼식
+                    - generic [ref=f14e55]: 웨딩드레스
+                    - generic [ref=f14e56]: 웨딩플래너
+                  - generic [ref=f14e57]:
+                    - generic [ref=f14e58]: 방문자리뷰 3
+                    - generic [ref=f14e59]: 드메특가(피팅비포함) 600,000원~
+            - listitem [ref=f14e60]:
+              - link [ref=f14e61] [cursor=pointer]:
+                - /url: https://ader.naver.com/v1/QqUY9Mtv21_j1gDXxcQ0ojpGrZgwPjxzlOBFMZJ2DRjA2mXwbRjfwvP39la63InKly--F82rd4BX17uryjxfjZRAtAH-0Bt4VWNcbmUJkYyQJorznlVxJ0TaoMKju50XGYburoHipdB2glmQjppkamQBvHoiDGAR9P02e8BS24puK9DpsAiGuDhE48RLG0ir2fMxW-dhmSAyoHnO73EGFzFieGSqB33L7g7Xf7jerl4KFuDu4avd3UOf-Q53U9uv2-SjOBzipoyAx4fu5gkY6PX3rmhgZ4iuJaIaMbQ5FyY8I8ES447HJcezgh-9AXGlLMHX4deFo3Nk2v72NoJT8m23IKathsln2WxsuiJUyw0BgRSMWWlpd1LcpdIT4X1LPzBowVKeBYiUilbu82YPznw9Um3CpH2phXB7y8X3OUYo7-4FFNruyLaxh38zOvZfwNZXKiPAQn-bAEJiYVv25xZnAYCTOxTiAnrbnI3C9T7B-zJ6anOjwcBwybZGL20ydKQ0j7TF02gW3EQ_AWbFvDg91hFrZmdYEUDn5SP9kh8=?c=pncafe.new&t=0
+              - generic [ref=f14e62]:
+                - generic [ref=f14e63]:
+                  - link [ref=f14e64] [cursor=pointer]:
+                    - /url: https://ader.naver.com/v1/wzW9TXFIMROZte7gdUA71wEfr5lVYRoyzqDIi1JJtpVVZ7PDlHjRp4WyY7mA9pd_oxHl3ZDWcI5s_e2Oh6Y7GF79_DSa1O3Ja_F-L7yGJbe2yplo8sjsOaIpX38NaMswXG_9YfnGe3-Vqjg0qC3r7hVDy8hiMBMUHR_gFUm_1tZM187gMpyqUxZ1KPw-iYlbaOYkelg9zKAE7jLJxSgen4wi5P57cd_ep0OFX58h5UxlsGG0hGeWvU90-zzgGIVxge0rcCvpFTcvLEbjpUpEeUB59q7608rHpfOcf8mGacXsjbJU8bsTRA_uyvo9AX3LYkHesA9PR35Zi40xnzRw9ZKGU9Y9JKGTp7VQoAt_n9-GQlxfDRoLEF06kZIJMfuIWsvyT6hxuvhf4co7R4humyzMjn8VbXgE5W0e3cRq9XlLEKtaRcViKPbv0PVU1UUjCEV-0hf3eq1vy6sxmnQHpsvRpcKPM-r6eVHqKymuAfFOH5eSTXs0TF0Vqxfx7RNZgVhbs4INecviYitzS7AmvQ==?c=pncafe.new&t=0
+                    - img "favicon" [ref=f14e65]
+                  - link "서울웨딩홀박람회 · hallexpo.iniwedding.com" [ref=f14e66] [cursor=pointer]:
+                    - /url: https://ader.naver.com/v1/wzW9TXFIMROZte7gdUA71wEfr5lVYRoyzqDIi1JJtpVVZ7PDlHjRp4WyY7mA9pd_oxHl3ZDWcI5s_e2Oh6Y7GF79_DSa1O3Ja_F-L7yGJbe2yplo8sjsOaIpX38NaMswXG_9YfnGe3-Vqjg0qC3r7hVDy8hiMBMUHR_gFUm_1tZM187gMpyqUxZ1KPw-iYlbaOYkelg9zKAE7jLJxSgen4wi5P57cd_ep0OFX58h5UxlsGG0hGeWvU90-zzgGIVxge0rcCvpFTcvLEbjpUpEeUB59q7608rHpfOcf8mGacXsjbJU8bsTRA_uyvo9AX3LYkHesA9PR35Zi40xnzRw9ZKGU9Y9JKGTp7VQoAt_n9-GQlxfDRoLEF06kZIJMfuIWsvyT6hxuvhf4co7R4humyzMjn8VbXgE5W0e3cRq9XlLEKtaRcViKPbv0PVU1UUjCEV-0hf3eq1vy6sxmnQHpsvRpcKPM-r6eVHqKymuAfFOH5eSTXs0TF0Vqxfx7RNZgVhbs4INecviYitzS7AmvQ==?c=pncafe.new&t=0&p=1
+                - link [ref=f14e67] [cursor=pointer]:
+                  - /url: https://ader.naver.com/v1/wzW9TXFIMROZte7gdUA71wEfr5lVYRoyzqDIi1JJtpVVZ7PDlHjRp4WyY7mA9pd_oxHl3ZDWcI5s_e2Oh6Y7GF79_DSa1O3Ja_F-L7yGJbe2yplo8sjsOaIpX38NaMswXG_9YfnGe3-Vqjg0qC3r7hVDy8hiMBMUHR_gFUm_1tZM187gMpyqUxZ1KPw-iYlbaOYkelg9zKAE7jLJxSgen4wi5P57cd_ep0OFX58h5UxlsGG0hGeWvU90-zzgGIVxge0rcCvpFTcvLEbjpUpEeUB59q7608rHpfOcf8mGacXsjbJU8bsTRA_uyvo9AX3LYkHesA9PR35Zi40xnzRw9ZKGU9Y9JKGTp7VQoAt_n9-GQlxfDRoLEF06kZIJMfuIWsvyT6hxuvhf4co7R4humyzMjn8VbXgE5W0e3cRq9XlLEKtaRcViKPbv0PVU1UUjCEV-0hf3eq1vy6sxmnQHpsvRpcKPM-r6eVHqKymuAfFOH5eSTXs0TF0Vqxfx7RNZgVhbs4INecviYitzS7AmvQ==?c=pncafe.new&t=0&p=0
+                  - generic [ref=f14e68]:
+                    - generic [ref=f14e69]:
+                      - text: 서울
+                      - strong [ref=f14e70]: 웨딩홀
+                      - text: 페스타 in 코엑스
+                    - generic [ref=f14e71]:
+                      - text: ·
+                      - strong [ref=f14e72]: 웨딩홀
+                      - text: 예약실과 다이렉트상담
+                - link [ref=f14e74] [cursor=pointer]:
+                  - /url: https://ader.naver.com/v1/wzW9TXFIMROZte7gdUA71wEfr5lVYRoyzqDIi1JJtpVVZ7PDlHjRp4WyY7mA9pd_oxHl3ZDWcI5s_e2Oh6Y7GF79_DSa1O3Ja_F-L7yGJbe2yplo8sjsOaIpX38NaMswXG_9YfnGe3-Vqjg0qC3r7hVDy8hiMBMUHR_gFUm_1tZM187gMpyqUxZ1KPw-iYlbaOYkelg9zKAE7jLJxSgen4wi5P57cd_ep0OFX58h5UxlsGG0hGeWvU90-zzgGIVxge0rcCvpFTcvLEbjpUpEeUB59q7608rHpfOcf8mGacXsjbJU8bsTRA_uyvo9AX3LYkHesA9PR35Zi40xnzRw9ZKGU9Y9JKGTp7VQoAt_n9-GQlxfDRoLEF06kZIJMfuIWsvyT6hxuvhf4co7R4humyzMjn8VbXgE5W0e3cRq9XlLEKtaRcViKPbv0PVU1UUjCEV-0hf3eq1vy6sxmnQHpsvRpcKPM-r6eVHqKymuAfFOH5eSTXs0TF0Vqxfx7RNZgVhbs4INecviYitzS7AmvQ==?c=pncafe.new&t=0
+                  - text: 2026상반기결산박람회! 서울/경기/인천 인기
+                  - strong [ref=f14e75]: 웨딩홀
+                  - text: 27년 예정자 대관료&식대할인
+                - list [ref=f14e76]:
+                  - listitem [ref=f14e77]:
+                    - link "웨딩홀견적" [ref=f14e78] [cursor=pointer]:
+                      - /url: https://ader.naver.com/v1/Y9kWCEWG-pTPywgUDX_rKMW69DtZSTkfUHWmFSit-Kn1P9iwki1lX47acxwvC5dv9JrRQrzIvFS7oeFjUdVrGEzEs7S2V52R_Jkix8Xnnu55VhwuXvJ60ykzaO7ygGV_j54aF6dWjjD3KM-dqtMQdwI3cHFDC_kI_-_gSqYdJWiuUF2lgzLE9NnMH1X1xpMr3Xuu3XpdCxm7UOPx-4GeB3n0CxJTPwHGOvh1QhhBC4KMwL2ppQggyLxtPJH8fVfjDtLR9owuiQ8P65IeFINKP2XGgoqufk3m5ohxFhbzFarFh7nArXJtehLowHkvwYw-Eidish67wElRiq7xvAXOZAPvgoe3ZYJkVDKkodP_wG_TDSLWpMHLRAQK8lapu6nvH0WPjHw_LMoI36x67Up0FLYCo3t_ptOatqmdzSVSzlpuyfB1sLSCPP8dkCp_36j-SdiPkXU0wc4rzJ7N2UUr1ViYJMSgcLsuNUSDhrU_V3G7PQmzPNKxlm7ixF0w0ZK-YvW9B751giuVDIxu6xxhSOJCnn62c7m2UQ8TQu2vDik=?c=pncafe.new&t=0
+                  - listitem [ref=f14e79]:
+                    - link "현장특별혜택" [ref=f14e80] [cursor=pointer]:
+                      - /url: https://ader.naver.com/v1/Y9kWCEWG-pTPywgUDX_rKMW69DtZSTkfUHWmFSit-Kn1P9iwki1lX47acxwvC5dv9JrRQrzIvFS7oeFjUdVrGEzEs7S2V52R_Jkix8Xnnu55VhwuXvJ60ykzaO7ygGV_j54aF6dWjjD3KM-dqtMQdwI3cHFDC_kI_-_gSqYdJWiuUF2lgzLE9NnMH1X1xpMr3Xuu3XpdCxm7UOPx-4GeB3n0CxJTPwHGOvh1QhhBC4KMwL2ppQggyLxtPJH8fVfjDtLR9owuiQ8P65IeFINKP2XGgoqufk3m5ohxFhbzFarFh7nArXJtehLowHkvwYw-Eidish67wElRiq7xvAXOZAPvgoe3ZYJkVDKkodP_wG_TDSLWpMHLRAQK8lapu6nvH0WPjHw_LMoI36x67Up0FLYCo3t_ptOatqmdzSVSzlpuyfB1sLSCPP8dkCp_36j-SdiPkXU0wc4rzJ7N2UUr1ViYJMSgcLsuNUSDhrU_V3G7PQmzPNKxlm7ixF0w0ZK-YvW9B751giuVDIxu6xxhSOJCnn62c7m2UQ8TQu2vDik=?c=pncafe.new&t=0
+                  - listitem [ref=f14e81]:
+                    - link "인기웨딩홀" [ref=f14e82] [cursor=pointer]:
+                      - /url: https://ader.naver.com/v1/Y9kWCEWG-pTPywgUDX_rKMW69DtZSTkfUHWmFSit-Kn1P9iwki1lX47acxwvC5dv9JrRQrzIvFS7oeFjUdVrGEzEs7S2V52R_Jkix8Xnnu55VhwuXvJ60ykzaO7ygGV_j54aF6dWjjD3KM-dqtMQdwI3cHFDC_kI_-_gSqYdJWiuUF2lgzLE9NnMH1X1xpMr3Xuu3XpdCxm7UOPx-4GeB3n0CxJTPwHGOvh1QhhBC4KMwL2ppQggyLxtPJH8fVfjDtLR9owuiQ8P65IeFINKP2XGgoqufk3m5ohxFhbzFarFh7nArXJtehLowHkvwYw-Eidish67wElRiq7xvAXOZAPvgoe3ZYJkVDKkodP_wG_TDSLWpMHLRAQK8lapu6nvH0WPjHw_LMoI36x67Up0FLYCo3t_ptOatqmdzSVSzlpuyfB1sLSCPP8dkCp_36j-SdiPkXU0wc4rzJ7N2UUr1ViYJMSgcLsuNUSDhrU_V3G7PQmzPNKxlm7ixF0w0ZK-YvW9B751giuVDIxu6xxhSOJCnn62c7m2UQ8TQu2vDik=?c=pncafe.new&t=0
+                  - listitem [ref=f14e83]:
+                    - link "잔여타임공개" [ref=f14e84] [cursor=pointer]:
+                      - /url: https://ader.naver.com/v1/Y9kWCEWG-pTPywgUDX_rKMW69DtZSTkfUHWmFSit-Kn1P9iwki1lX47acxwvC5dv9JrRQrzIvFS7oeFjUdVrGEzEs7S2V52R_Jkix8Xnnu55VhwuXvJ60ykzaO7ygGV_j54aF6dWjjD3KM-dqtMQdwI3cHFDC_kI_-_gSqYdJWiuUF2lgzLE9NnMH1X1xpMr3Xuu3XpdCxm7UOPx-4GeB3n0CxJTPwHGOvh1QhhBC4KMwL2ppQggyLxtPJH8fVfjDtLR9owuiQ8P65IeFINKP2XGgoqufk3m5ohxFhbzFarFh7nArXJtehLowHkvwYw-Eidish67wElRiq7xvAXOZAPvgoe3ZYJkVDKkodP_wG_TDSLWpMHLRAQK8lapu6nvH0WPjHw_LMoI36x67Up0FLYCo3t_ptOatqmdzSVSzlpuyfB1sLSCPP8dkCp_36j-SdiPkXU0wc4rzJ7N2UUr1ViYJMSgcLsuNUSDhrU_V3G7PQmzPNKxlm7ixF0w0ZK-YvW9B751giuVDIxu6xxhSOJCnn62c7m2UQ8TQu2vDik=?c=pncafe.new&t=0
+            - listitem [ref=f14e85]:
+              - link [ref=f14e86] [cursor=pointer]:
+                - /url: https://ader.naver.com/v1/CdHApYr4RzVdqz_-e61vAeKYwmGglYiGhn7A7wBGcqGq_I3hoTxhIytsfwDpS_s3J9Bfnk6N50ksbk2w64ofefAuJfBc-yATQH5dxKR2FgQ8mIno1mdgkHtehS6HZAdgfmSasU0AnTuaX4cLbaXpfIqqfQQiSz6eDM9fxQypTdkfOSfun49qNnANUphAyO5h__boL8MP3tbYDk11OIheZkC7RnyVeEevScmwvoQoevmY6bYkHca0_u3AFdmsVbj-cw9gUO0TQfUFBDbMJTcE3HXUs3-dG--Tnq0As6VeSvfpA_bvAXuZow5i8vhGjf5mpKcj9bhgoWz8v8iQLOKHGZb3n4AWXrFiFtWFi8YI_busl_B3abK43fIg2bn-cBdpLDWTsq1cbW0jhGtICX1zjMnspC6CIzoJ_Hig0q-ZmN19OdIQtrAHHTyrrvNvigJeqjaOurPIlPryIatd-q3EnRqs_RCPZpmHt4eVZlDMKNjzW6qaO4wt16gSP3M1JAZiTDGe3r1sYHTwUCXk3IEEFYkHCNCBKfGN0fzVuLISDdAe8c_Ky7gDf26EdPPzuz3rD9Z0Leo14GhriS03UJq8BR1O2RAwHE1zIYqGGeyaKbqh31VcWprLkXiJ_B51rK5s?c=pncafe.new&t=0
+              - generic [ref=f14e87]:
+                - generic [ref=f14e88]:
+                  - link [ref=f14e89] [cursor=pointer]:
+                    - /url: https://ader.naver.com/v1/h4R3dE2bRu452p68nUmei4McGkA2yIami1yQuK2HOpG4itW7GLztSLcZqdPzoMgmvRubSKpzCNchzen4jmc0_S9KQbX5Iqq4CPAvsFMoCvV0PHeAOfNwmYmVIEP_ad-Kd69ZMWq5C9UAvGiNeDyhgyKYty519g1uJNU8zor86uw7y99q08CiYZM9as8ymBobulIv3_9nTietGqRwJ49Yp9oyZGIpV4l4jcQ6_5A_ib8sjkpmH2EcEllJBgHPTRsDpuNFmrWDEgzMHr4lgvk_Mcq7PWQL5VZIqibsFk5qrAdikVdafvBgA0S_4u4zIgJwtqbo54ypJ4GMFijHMX4TjUK4A_9dFLZZb2p-zBRsUioCujF61APg6OuLvT8Ss8iOR2x0BCaxFjuP6wLoBlQL0Qxi8CTI8KU4B4Nh6UGurgVfuDZXkbuoa9kr-XppU2HNpkB2csYqs0CzJl23AdFquoaMozaMTVJBvjYd7c8ZgjKXwoyWyMQl9UFCfKYyBRFkrh5u4WQwxqVt6rGbReB0BdaNWfww0mVg9tVwuaY9PABvqRsFGvzI8yUfdfje1mFKmqIu179-5n-NYTiDDcV3sUzZWJTnHAZa4uDU-_odohsZp6zBY-bg-WLns7ios9d4?c=pncafe.new&t=0
+                    - img "favicon" [ref=f14e90]
+                  - link "미스터블루 · mrblue.com/" [ref=f14e91] [cursor=pointer]:
+                    - /url: https://ader.naver.com/v1/h4R3dE2bRu452p68nUmei4McGkA2yIami1yQuK2HOpG4itW7GLztSLcZqdPzoMgmvRubSKpzCNchzen4jmc0_S9KQbX5Iqq4CPAvsFMoCvV0PHeAOfNwmYmVIEP_ad-Kd69ZMWq5C9UAvGiNeDyhgyKYty519g1uJNU8zor86uw7y99q08CiYZM9as8ymBobulIv3_9nTietGqRwJ49Yp9oyZGIpV4l4jcQ6_5A_ib8sjkpmH2EcEllJBgHPTRsDpuNFmrWDEgzMHr4lgvk_Mcq7PWQL5VZIqibsFk5qrAdikVdafvBgA0S_4u4zIgJwtqbo54ypJ4GMFijHMX4TjUK4A_9dFLZZb2p-zBRsUioCujF61APg6OuLvT8Ss8iOR2x0BCaxFjuP6wLoBlQL0Qxi8CTI8KU4B4Nh6UGurgVfuDZXkbuoa9kr-XppU2HNpkB2csYqs0CzJl23AdFquoaMozaMTVJBvjYd7c8ZgjKXwoyWyMQl9UFCfKYyBRFkrh5u4WQwxqVt6rGbReB0BdaNWfww0mVg9tVwuaY9PABvqRsFGvzI8yUfdfje1mFKmqIu179-5n-NYTiDDcV3sUzZWJTnHAZa4uDU-_odohsZp6zBY-bg-WLns7ios9d4?c=pncafe.new&t=0&p=1
+                  - button "네이버페이" [ref=f14e94] [cursor=pointer]
+                - link [ref=f14e96] [cursor=pointer]:
+                  - /url: https://ader.naver.com/v1/h4R3dE2bRu452p68nUmei4McGkA2yIami1yQuK2HOpG4itW7GLztSLcZqdPzoMgmvRubSKpzCNchzen4jmc0_S9KQbX5Iqq4CPAvsFMoCvV0PHeAOfNwmYmVIEP_ad-Kd69ZMWq5C9UAvGiNeDyhgyKYty519g1uJNU8zor86uw7y99q08CiYZM9as8ymBobulIv3_9nTietGqRwJ49Yp9oyZGIpV4l4jcQ6_5A_ib8sjkpmH2EcEllJBgHPTRsDpuNFmrWDEgzMHr4lgvk_Mcq7PWQL5VZIqibsFk5qrAdikVdafvBgA0S_4u4zIgJwtqbo54ypJ4GMFijHMX4TjUK4A_9dFLZZb2p-zBRsUioCujF61APg6OuLvT8Ss8iOR2x0BCaxFjuP6wLoBlQL0Qxi8CTI8KU4B4Nh6UGurgVfuDZXkbuoa9kr-XppU2HNpkB2csYqs0CzJl23AdFquoaMozaMTVJBvjYd7c8ZgjKXwoyWyMQl9UFCfKYyBRFkrh5u4WQwxqVt6rGbReB0BdaNWfww0mVg9tVwuaY9PABvqRsFGvzI8yUfdfje1mFKmqIu179-5n-NYTiDDcV3sUzZWJTnHAZa4uDU-_odohsZp6zBY-bg-WLns7ios9d4?c=pncafe.new&t=0&p=0
+                  - generic [ref=f14e97]:
+                    - strong [ref=f14e99]: 재벌집 막내아들 미스터블루
+                    - text: · 들어오세요! 인기소설 맛집
+                - link [ref=f14e101] [cursor=pointer]:
+                  - /url: https://ader.naver.com/v1/h4R3dE2bRu452p68nUmei4McGkA2yIami1yQuK2HOpG4itW7GLztSLcZqdPzoMgmvRubSKpzCNchzen4jmc0_S9KQbX5Iqq4CPAvsFMoCvV0PHeAOfNwmYmVIEP_ad-Kd69ZMWq5C9UAvGiNeDyhgyKYty519g1uJNU8zor86uw7y99q08CiYZM9as8ymBobulIv3_9nTietGqRwJ49Yp9oyZGIpV4l4jcQ6_5A_ib8sjkpmH2EcEllJBgHPTRsDpuNFmrWDEgzMHr4lgvk_Mcq7PWQL5VZIqibsFk5qrAdikVdafvBgA0S_4u4zIgJwtqbo54ypJ4GMFijHMX4TjUK4A_9dFLZZb2p-zBRsUioCujF61APg6OuLvT8Ss8iOR2x0BCaxFjuP6wLoBlQL0Qxi8CTI8KU4B4Nh6UGurgVfuDZXkbuoa9kr-XppU2HNpkB2csYqs0CzJl23AdFquoaMozaMTVJBvjYd7c8ZgjKXwoyWyMQl9UFCfKYyBRFkrh5u4WQwxqVt6rGbReB0BdaNWfww0mVg9tVwuaY9PABvqRsFGvzI8yUfdfje1mFKmqIu179-5n-NYTiDDcV3sUzZWJTnHAZa4uDU-_odohsZp6zBY-bg-WLns7ios9d4?c=pncafe.new&t=0
+                  - text: 화제의 드라마 원작소설,
+                  - strong [ref=f14e102]: 재벌집막내아들미스터블루
+                  - text: 1화 무료로 보기.
+                - list [ref=f14e103]:
+                  - listitem [ref=f14e104]:
+                    - link "1일마다무료" [ref=f14e105] [cursor=pointer]:
+                      - /url: https://ader.naver.com/v1/aGSFeI0QbIEWdSgneyELkYqrtMIQGili05SxQehvcApoMZrHAnHBYasGnHdP_fxZCLDMZzuIS-FDF9WzcNUo8WFjviEUiC3E1ZURjij6Karn9E8no9cb-Jko0U2_zGJGzz3JRz4Ghw4yf_Go4LJ9QKesTz6PFslz2xedxqC7aSBHkDBUFj7yJAVtdzyN8MbFWIFm8qpVgv4t4ZP7-9gzsZz58MxVMYpevkqhiLYtbVn8aYWCLX_ih8pHWxb27kgfa3X1pYMeSQFEnpe6_3OXoLZ1MY6CSA09aUPXw5e1R2Sn7p_PPrkv8T4G30S28xPm1z9Y7mxdGjQOJ0sUjbcCIXw9nF1z-JCq-IQDyfa2cZJANDROCILrDhF366Z_ynC4VhA_yPDKZcKvJKGcfxEnWEPmPB8BR0gL5W-6CXU-oggzQTB6WtUKVZYaOfKu616-ckSQPJCpsRbG8aYe2EjPsKD1JpZ_Q4Awqc9ulkk0C3uj2leQwnB9Xvys1xdH1ypfkKP22MQr9AjpPB53MZRqM99wOtNvFGUKkgMrrbJypwDPoqVktRWlMqllDQNsb4Qq3ema1wpo1J8v3AEWYgkxFL_evtbwwL3VdsgUcIWcH8eC4kD4itcDNeOl12CBMqOGB7qf8Z5n1H33yjPK0Ax7Cw==?c=pncafe.new&t=0
+                  - listitem [ref=f14e106]:
+                    - link "첫방문 혜택" [ref=f14e107] [cursor=pointer]:
+                      - /url: https://ader.naver.com/v1/40eA3C11ZmhtPiauxytmAKDGo_1CPikqzy2t4ZHGl_WSgvq8bp83i2i3_QWqzdZRSHmGM7fbFln8_2ho-5pJvdhIumdpzrYIsz_X63s5v-ltv6UTbLHxg9eq6ITb79etGgiSP3Vn24okcMs7TykpCe1t5wEHVTLcK1AvZv9ED2MpVkOe47bYKPMrHdofOhhhKIkmkJu-u2lIFytbz50IEfhcPq6shkvJ9bG45VZNK_1lJ_kzrDPdBSDS0DJmg5qEN0i4HGKWjQ0IyNOBaK4Y9Jr2ELNh4OrP1PAD9ljqI9Gr7okJKrC4HLB9XF0Z5W8OMJt3M-EnmLzLNzuO_4yGD4kh0r2q5zQwkV3RYaNJ7N1OyfglLdAMk_Y-ROYBpH8-56qfQTigVyHYitSsPffHDyzY2dfUDycq910NYaeb8Zdv9p1jWFnvm-t0QpbWKkT405sRwV-OAKQEE2EhUqACFBQBln1rfFfsVEj-U_6Yija3xTuPgEEzrAaj8N89xL7Bam7j2ENPEUnLM9VDjTBvjepj2pfpQA5eJJDdSW91ytcyzBtSfgxd2szDVhOL0ZlBQS5X76roZ38_w5vE9udNn2pndoBRP6n-7ANJ0R9VWYMhbDaGirT78zOdx6x-PSjR?c=pncafe.new&t=0
+                  - listitem [ref=f14e108]:
+                    - link "할인 이벤트" [ref=f14e109] [cursor=pointer]:
+                      - /url: https://ader.naver.com/v1/A3kJ8lFg6AcJnXXM6eWhKW8kqlAlvCPnuafxY2pon1w5-7d5xI7hjvte4az15-a-g6HCZCM8SlA3gPSM1rgdhkZVKj-tItHcs-SobS6Bp2nI1ZhU5B15DqI5Rs5hmSguFDhX0FCtsyN5Lhg-xNZm021BQX1-qAzmp9rq-Qxt4Y0hMyyOFKEvyfSVLtkG8KH3883i3twLWMI95PvCOS4Zms8KFPZemJwLBWUp4zBaFDwtSUeHfhVZol1HeUak1_GXklPM0o7or9hWkRiABJTlvARsidYE8idIs93y0KsM_s1DB2cYMNf63zROxLZVD94picBcdC3Aa_2P7djswP-Rt54vvDk50HwQaXnVF5NxNBhwsHbuIdk6ArTcAd540GvbKf6bQzDTje32zT83rbosCd5ZjpYkN1xnOwSG0dnoVu_CanaUtMsC5e5zzcsViXjakuGa9IMNLb6z_K5KItahCR-SH8fDOwqL9epF4YvVyNB9Bq1P2zYs1VC5d3v1KFQ1CR6tTfwEogX1PyUpCaN0D58T-si9pySiUP0iZM7NaQ4na4dLPfsSNjSbLoGi8qDjpcxOPfQbrC_UbLaWL2qE3Uuu48Ac8X4Z5fS9NUq4nQM=?c=pncafe.new&t=0
+                  - listitem [ref=f14e110]:
+                    - link "실시간 랭킹" [ref=f14e111] [cursor=pointer]:
+                      - /url: https://ader.naver.com/v1/c_GJxeeaza1tUk4oyEY3McDJ8SX543rXKZcTGVT3UW4ModT6qr5eiw2oTy53GFbjKn_uIRWAU1ac4Lyj2ubPw4UdeYktPrAQ3VWYUgR-PebJLc27fjHl1GYppztXgg-2B0qGZkgLNurPGkwkFo5A-cB5BHa1VgEsTuDmiEN2HfPtJ_F54iwbRQQTOZH4ne1cGknjZ7q5GfcwgLtp5SrSf0sN92GYIItHcy8SELhvx--kpAGivrq2R_i9iAFTYSz3Ypzw-9jHAh3YjfRMCsszwOU0QXooSBIglVO2m6pzXTPk2oNssEVRmUKDVs-9ZM33CjIK1KZ4ijtJV_28x5tDuei_ls8ESLiJlYDqoQuiixmCRpDV9tiO9JaLW3yZpr5Bj3Pfc9zLGxzs8IMsdtL-_sdcbt-fV3wNee8XBDo4RHVPh15KGrEDd-n66dcb8yivYyDr9Wa3SMYwlDM5aN-hVil3qURI4AFYTeMlaY2Ib_6l7cTSE9KMb9g8phtb4nLrvQTtMICHG1wG5HiA6Hu7a3sf7ck7NdKg1-y_pIMvuWvskkrOsnWTyBbgwkWjSbMm7CqkOrjwoXsMX7Q2jBdsh-Mo030FelakkNYRd2PZyQDXUocGaG2t2_Sxl-qL2DgR?c=pncafe.new&t=0
+    - banner [ref=f6e395]:
+      - generic [ref=f6e396]:
+        - generic [ref=f6e397]:
+          - generic [ref=f6e398]:
+            - strong [ref=f6e399]: 함께 많이 찾는
+            - button "함께 많이 찾는 설명" [ref=f6e400] [cursor=pointer]
+          - list [ref=f6e401]:
+            - listitem [ref=f6e402]:
+              - button "스팸 6호 세트" [ref=f6e403] [cursor=pointer]
+            - listitem [ref=f6e404]:
+              - button "스팸 6호 최저가" [ref=f6e405] [cursor=pointer]
+            - listitem [ref=f6e406]:
+              - button "스팸 선물세트 6호" [ref=f6e407] [cursor=pointer]
+            - listitem [ref=f6e408]:
+              - button "스팸 6호 4개" [ref=f6e409] [cursor=pointer]
+            - listitem [ref=f6e410]:
+              - button "스팸클래식6호" [ref=f6e411] [cursor=pointer]
+            - listitem [ref=f6e412]:
+              - button "스팸 6호 네이버에디션" [ref=f6e413] [cursor=pointer]
+            - listitem [ref=f6e414]:
+              - button "스팸6호 가격비교" [ref=f6e415] [cursor=pointer]
+            - listitem [ref=f6e416]:
+              - button "스팸6호 구성" [ref=f6e417] [cursor=pointer]
+            - listitem [ref=f6e418]:
+              - button "스팸 6호 가격" [ref=f6e419] [cursor=pointer]
+        - iframe [ref=f6e423]:
+          - heading [level=5] [ref=f13e2]:
+            - link "[광고]취향 따라 식감 픽! 제주 감귤말랭이 새 창" [ref=f13e3] [cursor=pointer]:
+              - /url: https://siape.veta.naver.com/fxclick?eu=EU10041116&calp=-&oj=xc0H4Zkpi62juG1bC%2F8ktEFynLmj1frYkNr41S4Tqn5pce95bLF8oqr4YIA7zFPE9bVgSpXC5uYBAwIy6E8Q3VoETrSmsayDvYgfpUpsvONhdbM832uHQxV65mEQO7Id1v9wROO2H48k0f3YuO7%2F4A%2FFQ%2BX%2FG3%2B0&ac=9320317&src=8233525&br=4984468&evtcd=P901&x_ti=1108&tb=&oid=&sid1=&sid2=&rk=8DgNExVNMUNWXexHW1TIFQ&eltts=SonIpejdA%2BFwGg78pmXXLw%3D%3D&brs=Y&
+              - img "[광고]취향 따라 식감 픽! 제주 감귤말랭이" [ref=f13e4]
+              - generic [ref=f13e5]: 새 창
+        - link "카페 서비스에 궁금한 점이 있을 때 카페 스마트봇 (새 창에서 열림)" [ref=f6e425] [cursor=pointer]:
+          - /url: https://talk.naver.com/ct/w4nd8o
+          - generic [ref=f6e426]:
+            - paragraph [ref=f6e427]: 카페 서비스에 궁금한 점이 있을 때
+            - strong [ref=f6e428]: 카페 스마트봇
+            - generic [ref=f6e429]: (새 창에서 열림)
+        - link "신고센터 (새 창에서 열림)" [ref=f6e431] [cursor=pointer]:
+          - /url: https://help.naver.com/support/reportCenter/home.nhn
+          - strong [ref=f6e432]: 신고센터
+          - generic [ref=f6e433]: (새 창에서 열림)
+        - contentinfo [ref=f6e434]:
+          - list [ref=f6e435]:
+            - listitem [ref=f6e436]:
+              - link "카페 이용약관 (새 창에서 열림)" [ref=f6e437] [cursor=pointer]:
+                - /url: /ca-fe/home/terms/latest
+                - text: 카페 이용약관
+                - generic [ref=f6e438]: (새 창에서 열림)
+            - listitem [ref=f6e439]:
+              - link "카페 운영원칙 (새 창에서 열림)" [ref=f6e440] [cursor=pointer]:
+                - /url: /ca-fe/home/operating-rules/1
+                - text: 카페 운영원칙
+                - generic [ref=f6e441]: (새 창에서 열림)
+            - listitem [ref=f6e442]:
+              - link "개인정보처리방침 (새 창에서 열림)" [ref=f6e443] [cursor=pointer]:
+                - /url: https://policy.naver.com/rules/privacy.html
+                - strong [ref=f6e444]: 개인정보처리방침
+                - generic [ref=f6e445]: (새 창에서 열림)
+            - listitem [ref=f6e446]:
+              - link "책임의 한계와 법적고지 (새 창에서 열림)" [ref=f6e447] [cursor=pointer]:
+                - /url: https://policy.naver.com/rules/disclaimer.html
+                - text: 책임의 한계와 법적고지
+                - generic [ref=f6e448]: (새 창에서 열림)
+            - listitem [ref=f6e449]:
+              - link "권리보호센터 (새 창에서 열림)" [ref=f6e450] [cursor=pointer]:
+                - /url: https://right.naver.com
+                - text: 권리보호센터
+                - generic [ref=f6e451]: (새 창에서 열림)
+            - listitem [ref=f6e452]:
+              - link "카페 고객센터 (새 창에서 열림)" [ref=f6e453] [cursor=pointer]:
+                - /url: https://help.naver.com/alias/cafe/cafe_code_01.naver
+                - text: 카페 고객센터
+                - generic [ref=f6e454]: (새 창에서 열림)
+            - listitem [ref=f6e455]:
+              - link "ⓒ NAVER Corp. (새 창에서 열림)" [ref=f6e456] [cursor=pointer]:
+                - /url: http://www.navercorp.com
+                - strong [ref=f6e457]: ⓒ NAVER Corp.
+                - generic [ref=f6e458]: (새 창에서 열림)

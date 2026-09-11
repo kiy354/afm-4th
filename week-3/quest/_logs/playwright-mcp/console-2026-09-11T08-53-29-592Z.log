@@ -1,0 +1,12 @@
+[     918ms] [LOG] [weblog] FCP {name: FCP, value: 772, rating: good, delta: 772, entries: Array(1)} @ https://assets.coupangcdn.com/front/purchase-next/_next/static/chunks/2562-eff7a80ce3f624b8.js:3
+[     919ms] [LOG] [weblog] LCP {name: LCP, value: 772, rating: good, delta: 772, entries: Array(1)} @ https://assets.coupangcdn.com/front/purchase-next/_next/static/chunks/2562-eff7a80ce3f624b8.js:3
+[    1744ms] [LOG] [weblog] tti: 881, serverTime: 403, domReady: 881, imageLoadingTime: 0 @ https://assets.coupangcdn.com/front/purchase-next/_next/static/chunks/2562-eff7a80ce3f624b8.js:3
+[    1974ms] [ERROR] Access to fetch at 'https://ljc.coupang.com/api/v3/web/submit?appCode=coupang&market=KR' from origin 'https://cart.coupang.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ https://cart.coupang.com/cartView.pang:0
+[    1975ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://ljc.coupang.com/api/v3/web/submit?appCode=coupang&market=KR:0
+[    2007ms] [ERROR] Access to fetch at 'https://ljc.coupang.com/api/v3/web/submit?appCode=coupang&market=KR' from origin 'https://cart.coupang.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ https://cart.coupang.com/cartView.pang:0
+[    2007ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://ljc.coupang.com/api/v3/web/submit?appCode=coupang&market=KR:0
+[    3989ms] [ERROR] Access to fetch at 'https://ljc.coupang.com/api/v3/web/submit?appCode=coupang&market=KR' from origin 'https://cart.coupang.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ https://cart.coupang.com/cartView.pang:0
+[    3989ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://ljc.coupang.com/api/v3/web/submit?appCode=coupang&market=KR:0
+[   13390ms] [LOG] call once for useThrottle @ https://assets.coupangcdn.com/front/purchase-next/_next/static/chunks/app/cart/page-15e155205b25f633.js:0
+[   13432ms] [LOG] [weblog] LCP {name: LCP, value: 13420, rating: poor, delta: 12648, entries: Array(1)} @ https://assets.coupangcdn.com/front/purchase-next/_next/static/chunks/2562-eff7a80ce3f624b8.js:3
+[   26216ms] [LOG] call once for useThrottle @ https://assets.coupangcdn.com/front/purchase-next/_next/static/chunks/app/cart/page-15e155205b25f633.js:0
