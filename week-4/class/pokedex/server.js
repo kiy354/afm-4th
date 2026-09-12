@@ -135,7 +135,7 @@ async function serveStatic(res, urlPath) {
 // 라우팅
 // ------------------------------------------------------------
 
-const server = http.createServer(async (req, res) => {
+async function handleRequest(req, res) {
   const { pathname } = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
 
   if (req.method === 'OPTIONS') {
@@ -170,9 +170,15 @@ const server = http.createServer(async (req, res) => {
   }
 
   return serveStatic(res, pathname);
-});
+}
 
-server.listen(PORT, () => {
-  console.log(`포켓몬 도감 서버 실행 중 → http://localhost:${PORT}`);
-  console.log(`등록된 포켓몬 ${sortedPokemon.length}마리 · API: /api/pokemon`);
-});
+// 로컬에서 `node server.js` 로 직접 실행할 때만 포트를 연다.
+// Vercel 에서는 api/[...path].js 가 이 핸들러만 가져다 쓴다(서버리스라 listen 불필요).
+if (require.main === module) {
+  http.createServer(handleRequest).listen(PORT, () => {
+    console.log(`포켓몬 도감 서버 실행 중 → http://localhost:${PORT}`);
+    console.log(`등록된 포켓몬 ${sortedPokemon.length}마리 · API: /api/pokemon`);
+  });
+}
+
+module.exports = handleRequest;

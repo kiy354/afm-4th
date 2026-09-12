@@ -1,11 +1,23 @@
 {
   "types": {
-    "normal":   "노말",   "fighting": "격투",   "flying": "비행",
-    "poison":   "독",     "ground":   "땅",     "rock":   "바위",
-    "bug":      "벌레",   "ghost":    "고스트", "steel":  "강철",
-    "fire":     "불꽃",   "water":    "물",     "grass":  "풀",
-    "electric": "전기",   "psychic":  "에스퍼", "ice":    "얼음",
-    "dragon":   "드래곤", "dark":     "악",     "fairy":  "페어리"
+    "normal": "노말",
+    "fighting": "격투",
+    "flying": "비행",
+    "poison": "독",
+    "ground": "땅",
+    "rock": "바위",
+    "bug": "벌레",
+    "ghost": "고스트",
+    "steel": "강철",
+    "fire": "불꽃",
+    "water": "물",
+    "grass": "풀",
+    "electric": "전기",
+    "psychic": "에스퍼",
+    "ice": "얼음",
+    "dragon": "드래곤",
+    "dark": "악",
+    "fairy": "페어리"
   },
   "generations": {
     "1": "1세대 · 관동",
@@ -23,84 +35,157 @@
   },
   "pokemon": [
     {
-      "id": 1, "enName": "bulbasaur", "koName": "덩굴씨", "genus": "씨앗포켓몬",
-      "generationId": 1, "types": ["grass", "poison"],
-      "height": 7, "weight": 69,
+      "id": 1,
+      "enName": "bulbasaur",
+      "koName": "덩굴씨",
+      "genus": "씨앗포켓몬",
+      "generationId": 1,
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "height": 7,
+      "weight": 69,
       "description": "태어났을 때부터 등에 씨앗이 있다. 햇빛을 받으며 씨앗과 함께 조금씩 자라난다.",
-      "abilities": [{ "name": "신록", "hidden": false }, { "name": "엽록소", "hidden": true }],
-      "stats": { "hp": 45, "attack": 49, "defense": 49, "special-attack": 65, "special-defense": 65, "speed": 45 }
+      "abilities": [
+        {
+          "name": "신록",
+          "hidden": false
+        },
+        {
+          "name": "엽록소",
+          "hidden": true
+        }
+      ],
+      "stats": {
+        "hp": 45,
+        "attack": 49,
+        "defense": 49,
+        "special-attack": 65,
+        "special-defense": 65,
+        "speed": 45
+      }
     },
     {
-      "id": 4, "enName": "charmander", "koName": "불꼬리", "genus": "도마뱀포켓몬",
-      "generationId": 1, "types": ["fire"],
-      "height": 6, "weight": 85,
+      "id": 4,
+      "enName": "charmander",
+      "koName": "불꼬리",
+      "genus": "도마뱀포켓몬",
+      "generationId": 1,
+      "types": [
+        "fire"
+      ],
+      "height": 6,
+      "weight": 85,
       "description": "꼬리에 타오르는 불꽃은 생명력의 표시다. 건강할수록 불꽃이 밝고 크게 타오른다.",
-      "abilities": [{ "name": "맹화", "hidden": false }, { "name": "태양의힘", "hidden": true }],
-      "stats": { "hp": 39, "attack": 52, "defense": 43, "special-attack": 60, "special-defense": 50, "speed": 65 }
+      "abilities": [
+        {
+          "name": "맹화",
+          "hidden": false
+        },
+        {
+          "name": "태양의힘",
+          "hidden": true
+        }
+      ],
+      "stats": {
+        "hp": 39,
+        "attack": 52,
+        "defense": 43,
+        "special-attack": 60,
+        "special-defense": 50,
+        "speed": 65
+      }
     },
     {
-      "id": 7, "enName": "squirtle", "koName": "거품북", "genus": "꼬마거북포켓몬",
-      "generationId": 1, "types": ["water"],
-      "height": 5, "weight": 90,
+      "id": 7,
+      "enName": "squirtle",
+      "koName": "거품북",
+      "genus": "꼬마거북포켓몬",
+      "generationId": 1,
+      "types": [
+        "water"
+      ],
+      "height": 5,
+      "weight": 90,
       "description": "등껍질에 몸을 숨겨 몸을 보호한다. 반격할 때는 입에서 강한 물줄기를 내뿜는다.",
-      "abilities": [{ "name": "급류", "hidden": false }, { "name": "비받이", "hidden": true }],
-      "stats": { "hp": 44, "attack": 48, "defense": 65, "special-attack": 50, "special-defense": 64, "speed": 43 }
+      "abilities": [
+        {
+          "name": "급류",
+          "hidden": false
+        },
+        {
+          "name": "비받이",
+          "hidden": true
+        }
+      ],
+      "stats": {
+        "hp": 44,
+        "attack": 48,
+        "defense": 65,
+        "special-attack": 50,
+        "special-defense": 64,
+        "speed": 43
+      }
     },
     {
-      "id": 25, "enName": "pikachu", "koName": "번개볼", "genus": "쥐포켓몬",
-      "generationId": 1, "types": ["electric"],
-      "height": 4, "weight": 60,
+      "id": 25,
+      "enName": "pikachu",
+      "koName": "번개볼",
+      "genus": "쥐포켓몬",
+      "generationId": 1,
+      "types": [
+        "electric"
+      ],
+      "height": 4,
+      "weight": 60,
       "description": "볼에 있는 작은 전기 주머니에 전기를 모아 둔다. 놀라면 모아 둔 전기를 한 번에 방출한다.",
-      "abilities": [{ "name": "정전기", "hidden": false }, { "name": "피뢰침", "hidden": true }],
-      "stats": { "hp": 35, "attack": 55, "defense": 40, "special-attack": 50, "special-defense": 50, "speed": 90 }
+      "abilities": [
+        {
+          "name": "정전기",
+          "hidden": false
+        },
+        {
+          "name": "피뢰침",
+          "hidden": true
+        }
+      ],
+      "stats": {
+        "hp": 35,
+        "attack": 55,
+        "defense": 40,
+        "special-attack": 50,
+        "special-defense": 50,
+        "speed": 90
+      }
     },
     {
-      "id": 94, "enName": "gengar", "koName": "어둑령", "genus": "그림자포켓몬",
-      "generationId": 1, "types": ["ghost", "poison"],
-      "height": 15, "weight": 405,
+      "id": 94,
+      "enName": "gengar",
+      "koName": "어둑령",
+      "genus": "그림자포켓몬",
+      "generationId": 1,
+      "types": [
+        "ghost",
+        "poison"
+      ],
+      "height": 15,
+      "weight": 405,
       "description": "그림자에 숨어 상대를 노린다. 주변 온도가 5도 가까이 내려가면 가까이 있다는 신호다.",
-      "abilities": [{ "name": "저주받은바디", "hidden": false }],
-      "stats": { "hp": 60, "attack": 65, "defense": 60, "special-attack": 130, "special-defense": 75, "speed": 110 }
-    },
-    {
-      "id": 143, "enName": "snorlax", "koName": "먹잠보", "genus": "잠꾸러기포켓몬",
-      "generationId": 1, "types": ["normal"],
-      "height": 21, "weight": 4600,
-      "description": "하루의 대부분을 먹고 자는 데 쓴다. 배 위에서 아이들이 뛰어놀아도 깨지 않는다.",
-      "abilities": [{ "name": "면역", "hidden": false }, { "name": "두꺼운지방", "hidden": false }, { "name": "밑준비", "hidden": true }],
-      "stats": { "hp": 160, "attack": 110, "defense": 65, "special-attack": 65, "special-defense": 110, "speed": 30 }
-    },
-    {
-      "id": 150, "enName": "mewtwo", "koName": "초능뮤", "genus": "유전포켓몬",
-      "generationId": 1, "types": ["psychic"],
-      "height": 20, "weight": 1220,
-      "description": "유전자 조작으로 만들어진 포켓몬. 강력한 초능력을 지녔지만 마음은 거칠고 차갑다.",
-      "abilities": [{ "name": "프레셔", "hidden": false }, { "name": "불굴의마음", "hidden": true }],
-      "stats": { "hp": 106, "attack": 110, "defense": 90, "special-attack": 154, "special-defense": 90, "speed": 130 }
-    },
-    {
-      "id": 248, "enName": "tyranitar", "koName": "암흑왕", "genus": "갑옷포켓몬",
-      "generationId": 2, "types": ["rock", "dark"],
-      "height": 20, "weight": 2020,
-      "description": "산을 무너뜨릴 만큼의 힘을 지녔다. 나타나기만 해도 주변에 모래바람이 일어난다.",
-      "abilities": [{ "name": "모래날림", "hidden": false }, { "name": "불굴의마음", "hidden": true }],
-      "stats": { "hp": 100, "attack": 134, "defense": 110, "special-attack": 95, "special-defense": 100, "speed": 61 }
-    },
-    {
-      "id": 445, "enName": "garchomp", "koName": "제트룡", "genus": "마하포켓몬",
-      "generationId": 4, "types": ["dragon", "ground"],
-      "height": 19, "weight": 950,
-      "description": "날개를 접고 하늘을 달리면 제트기와 맞먹는 속도가 된다. 먹잇감을 놓치는 일이 거의 없다.",
-      "abilities": [{ "name": "모래숨기", "hidden": false }, { "name": "거친피부", "hidden": true }],
-      "stats": { "hp": 108, "attack": 130, "defense": 95, "special-attack": 80, "special-defense": 85, "speed": 102 }
-    },
-    {
-      "id": 658, "enName": "greninja", "koName": "물닌자", "genus": "닌자포켓몬",
-      "generationId": 6, "types": ["water", "dark"],
-      "height": 15, "weight": 400,
-      "description": "물을 압축해 만든 수리검을 던진다. 상대가 눈을 깜빡이는 사이에 등 뒤로 돌아갈 만큼 빠르다.",
-      "abilities": [{ "name": "급류", "hidden": false }, { "name": "변환자재", "hidden": true }],
-      "stats": { "hp": 72, "attack": 95, "defense": 67, "special-attack": 103, "special-defense": 71, "speed": 122 }
+      "abilities": [
+        {
+          "name": "저주받은바디",
+          "hidden": false
+        }
+      ],
+      "stats": {
+        "hp": 60,
+        "attack": 65,
+        "defense": 60,
+        "special-attack": 130,
+        "special-defense": 75,
+        "speed": 110
+      }
     }
   ]
 }
