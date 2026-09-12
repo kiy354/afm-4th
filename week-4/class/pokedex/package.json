@@ -1,0 +1,10 @@
+{
+  "name": "pokedex-server",
+  "version": "1.0.0",
+  "description": "포켓몬 도감 자체 API 서버 (외부 의존성 없음)",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
