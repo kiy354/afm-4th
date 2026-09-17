@@ -1,0 +1,13 @@
+{
+  "name": "pokedex",
+  "version": "1.0.0",
+  "description": "포켓몬 도감 — 자체 Express API 서버 (포켓몬 10마리, 인메모리)",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
