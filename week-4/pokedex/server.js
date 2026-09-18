@@ -55,46 +55,11 @@ const pokemons = [
     stats: { hp: 35, attack: 55, defense: 40, specialAttack: 50, specialDefense: 50, speed: 90 },
   },
   {
-    id: 94, enName: 'gengar', koName: '그늘령', genus: '그림자포켓몬', generationId: 1,
-    types: ['ghost', 'poison'], height: 15, weight: 405,
-    description: '어둠 속 그림자에 숨어 지낸다. 갑자기 오싹한 한기가 느껴진다면 팬텀이 가까이 있다는 신호다.',
-    abilities: [{ name: '저주받은바디', hidden: false }],
-    stats: { hp: 60, attack: 65, defense: 60, specialAttack: 130, specialDefense: 75, speed: 110 },
-  },
-  {
-    id: 143, enName: 'snorlax', koName: '먹잠보', genus: '졸음포켓몬', generationId: 1,
-    types: ['normal'], height: 21, weight: 4600,
-    description: '하루에 음식을 400kg 먹지 않으면 만족하지 못한다. 먹고 나면 그대로 잠들어 버린다.',
-    abilities: [{ name: '면역', hidden: false }, { name: '두꺼운지방', hidden: false }, { name: '먹보', hidden: true }],
-    stats: { hp: 160, attack: 110, defense: 65, specialAttack: 65, specialDefense: 110, speed: 30 },
-  },
-  {
     id: 150, enName: 'mewtwo', koName: '초능뮤', genus: '유전포켓몬', generationId: 1,
     types: ['psychic'], height: 20, weight: 1220,
     description: '유전자 조작으로 만들어진 포켓몬. 인간의 과학력으로 몸은 만들었지만 상냥한 마음은 만들지 못했다.',
     abilities: [{ name: '프레셔', hidden: false }, { name: '긴장감', hidden: true }],
     stats: { hp: 106, attack: 110, defense: 90, specialAttack: 154, specialDefense: 90, speed: 130 },
-  },
-  {
-    id: 248, enName: 'tyranitar', koName: '모래왕', genus: '갑옷포켓몬', generationId: 2,
-    types: ['rock', 'dark'], height: 20, weight: 2020,
-    description: '산 하나를 무너뜨려 지형을 바꿀 만큼 힘이 세다. 싸울 상대를 찾아 산을 돌아다닌다.',
-    abilities: [{ name: '모래날림', hidden: false }, { name: '긴장감', hidden: true }],
-    stats: { hp: 100, attack: 134, defense: 110, specialAttack: 95, specialDefense: 100, speed: 61 },
-  },
-  {
-    id: 445, enName: 'garchomp', koName: '제트룡', genus: '마하포켓몬', generationId: 4,
-    types: ['dragon', 'ground'], height: 19, weight: 950,
-    description: '날개를 접고 몸을 굽히면 제트기처럼 빠르게 날 수 있다. 노린 먹이는 절대 놓치지 않는다.',
-    abilities: [{ name: '모래숨기', hidden: false }, { name: '까칠한피부', hidden: true }],
-    stats: { hp: 108, attack: 130, defense: 95, specialAttack: 80, specialDefense: 85, speed: 102 },
-  },
-  {
-    id: 658, enName: 'greninja', koName: '물닌자', genus: '닌자포켓몬', generationId: 6,
-    types: ['water', 'dark'], height: 15, weight: 400,
-    description: '물을 압축해 수리검을 만들어 던진다. 닌자처럼 신출귀몰한 움직임으로 상대를 농락한다.',
-    abilities: [{ name: '급류', hidden: false }, { name: '변환자재', hidden: true }],
-    stats: { hp: 72, attack: 95, defense: 67, specialAttack: 103, specialDefense: 71, speed: 122 },
   },
 ];
 

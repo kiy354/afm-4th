@@ -1,0 +1,5 @@
+# API 키
+.env
+.env.local
+
+node_modules/

@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>라이카 스튜디오 · fal.ai</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231c1917'/%3E%3Ccircle cx='16' cy='17' r='7.5' fill='none' stroke='%23fff' stroke-width='2'/%3E%3Ccircle cx='16' cy='17' r='3' fill='%23dc2626'/%3E%3Crect x='9' y='7' width='7' height='3' rx='1.5' fill='%23fff'/%3E%3C/svg%3E">
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <!-- ⚠️ CDN 은 모두 버전 고정. Babel 은 반드시 7.x (8.x 는 인라인 text/babel 미지원) -->
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone@7.25.9/babel.min.js"></script>
+  <style>
+    /* 필름 현상되듯 떠오르는 등장 효과 (Tailwind 유틸리티로 표현 불가) */
+    @keyframes develop {
+      from { opacity: 0; filter: contrast(0.6) brightness(1.25); transform: scale(0.985); }
+      to   { opacity: 1; filter: none; transform: scale(1); }
+    }
+    .animate-develop { animation: develop 0.7s ease-out both; }
+
+    /* 셔터가 열리는 듯한 로딩 펄스 */
+    @keyframes shutter {
+      0%, 100% { opacity: 0.25; }
+      50%      { opacity: 0.7; }
+    }
+    .animate-shutter { animation: shutter 1.4s ease-in-out infinite; }
+  </style>
+</head>
+<body class="bg-stone-100 text-stone-900 antialiased">
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState, useEffect, useMemo, useCallback } = React;
+
+    // ========================================
+    // ⚙️ Config
+    // ========================================
+
+    // API 키는 서버(.env 의 FAL_KEY)에만 있고, 브라우저는 이 프록시만 호출한다.
+    const API_BASE_URL = '/api';
+    const LS_KEY_HISTORY = 'leica.history';
+
+    // 프리셋·모델·화면비는 서버(/api/options)가 내려준다.
+    // 서버 응답이 오기 전에도 UI 가 그려지도록 같은 순서의 기본값을 둔다.
+    const FALLBACK_OPTIONS = {
+      presets: [
+        { id: 'classic', label: '클래식 컬러', gear: 'M6 · Summicron 35mm · Portra 400', hint: '따뜻한 피부톤, 부드러운 하이라이트' },
+        { id: 'mono', label: '모노크롬', gear: 'M10 Monochrom · Tri-X 400', hint: '깊은 흑백, 강한 명암' },
+        { id: 'night', label: '야간 스냅', gear: 'M11 · Noctilux 50mm f/0.95', hint: '네온, 얕은 심도, 저광량' },
+        { id: 'street', label: '거리 스냅', gear: 'Q2 · Summilux 28mm', hint: '넓은 화각, 생활의 순간' },
+        { id: 'portrait', label: '인물', gear: 'M11 · APO-Summicron 75mm', hint: '인물 중심, 배경 정리' },
+        { id: 'travel', label: '여행 필름', gear: 'M-A · Ektar 100', hint: '쨍한 색, 맑은 대낮' },
+      ],
+      models: [
+        { id: 'schnell', label: '빠른 생성 (Flux Schnell)', desc: '1~3초 · 구도 탐색용' },
+        { id: 'dev', label: '고품질 (Flux Dev)', desc: '10초 내외 · 마무리용' },
+      ],
+      ratios: [
+        { id: '3:2', label: '3:2 가로' },
+        { id: '2:3', label: '2:3 세로' },
+        { id: '1:1', label: '1:1 정방' },
+        { id: '16:9', label: '16:9 와이드' },
+      ],
+    };
+
+    const SAMPLE_SUBJECTS = [
+      '비 온 뒤 저녁 골목을 걷는 노인',
+      '창가 카페에서 책 읽는 여자',
+      '새벽 시장 생선 좌판의 상인',
+      '한강 다리 위를 달리는 자전거',
+    ];
+
+    // ========================================
+    // 🛠️ Utils & fal.ai API
+    // ========================================
+
+    function loadJSON(key, fallback) {
+      try {
+        const raw = localStorage.getItem(key);
+        return raw ? JSON.parse(raw) : fallback;
+      } catch {
+        return fallback;
+      }
+    }
+
+    function saveJSON(key, value) {
+      try {
+        localStorage.setItem(key, JSON.stringify(value));
+      } catch {
+        /* 저장 공간이 없으면 조용히 넘어간다 */
+      }
+    }
+
+    const hasKorean = (text) => /[가-힣]/.test(text);
+
+    // 서버 응답은 항상 { success, data?, message? } 구조.
+    async function api(endpoint, options = {}) {
+      const res = await fetch(`${API_BASE_URL}${endpoint}`, {
+        headers: options.body ? { 'Content-Type': 'application/json' } : undefined,
+        ...options,
+      });
+      const json = await res.json().catch(() => ({}));
+      if (!res.ok || !json.success) throw new Error(json.message || '요청을 처리하지 못했습니다.');
+      return json.data;
+    }
+
+    // 한국어 장면을 영어 묘사로 옮긴다. 실패하면 원문을 그대로 쓴다.
+    async function translateSubject(text) {
+      try {
+        const data = await api('/translate', { method: 'POST', body: JSON.stringify({ text }) });
+        return data.text || text;
+      } catch {
+        return text;
+      }
+    }
+
+    const generateImages = (payload) =>
+      api('/generate', { method: 'POST', body: JSON.stringify(payload) });
+
+    async function downloadImage(url, filename) {
+      try {
+        const res = await fetch(url);
+        const blob = await res.blob();
+        const objectUrl = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = objectUrl;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        setTimeout(() => URL.revokeObjectURL(objectUrl), 2000);
+      } catch {
+        window.open(url, '_blank', 'noopener');
+      }
+    }
+
+    // ========================================
+    // 🎨 Design System Components
+    // ========================================
+
+    function Button({ variant = 'primary', size = 'md', type = 'button', disabled = false, onClick, className = '', children, ...rest }) {
+      const variants = {
+        primary: 'bg-stone-900 text-white hover:bg-stone-800 focus-visible:outline-stone-900',
+        secondary: 'bg-white text-stone-700 ring-1 ring-stone-300 hover:bg-stone-50 focus-visible:outline-stone-400',
+        danger: 'bg-white text-red-600 ring-1 ring-red-200 hover:bg-red-50 focus-visible:outline-red-500',
+        ghost: 'bg-transparent text-stone-500 hover:bg-stone-200/70 focus-visible:outline-stone-400',
+      };
+      const sizes = { sm: 'px-2.5 py-1.5 text-xs', md: 'px-4 py-2 text-sm', lg: 'px-6 py-3 text-sm' };
+
+      return (
+        <button
+          type={type}
+          onClick={onClick}
+          disabled={disabled}
+          className={`inline-flex items-center justify-center gap-1.5 rounded-lg font-semibold transition
+            focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
+            disabled:cursor-not-allowed disabled:opacity-40 ${variants[variant]} ${sizes[size]} ${className}`}
+          {...rest}
+        >
+          {children}
+        </button>
+      );
+    }
+
+    function Label({ htmlFor, children, hint }) {
+      return (
+        <div className="mb-1.5 flex items-baseline justify-between gap-2">
+          <label htmlFor={htmlFor} className="text-xs font-bold uppercase tracking-widest text-stone-500">
+            {children}
+          </label>
+          {hint && <span className="text-xs text-stone-400">{hint}</span>}
+        </div>
+      );
+    }
+
+    const fieldClass =
+      'w-full rounded-lg border border-stone-300 bg-white px-3.5 py-2.5 text-sm outline-none transition ' +
+      'placeholder:text-stone-400 focus:border-stone-900 focus:ring-2 focus:ring-stone-900/10 disabled:bg-stone-100';
+
+    function Input({ id, value, onChange, placeholder, disabled, type = 'text', className = '', ...rest }) {
+      return (
+        <input id={id} type={type} value={value} onChange={onChange} placeholder={placeholder}
+          disabled={disabled} className={`${fieldClass} ${className}`} {...rest} />
+      );
+    }
+
+    function Textarea({ id, value, onChange, placeholder, disabled, rows = 3, maxLength }) {
+      return (
+        <textarea id={id} value={value} onChange={onChange} placeholder={placeholder} disabled={disabled}
+          rows={rows} maxLength={maxLength} className={`${fieldClass} resize-y`} />
+      );
+    }
+
+    function Select({ id, value, onChange, options, disabled }) {
+      return (
+        <select id={id} value={value} onChange={onChange} disabled={disabled} className={fieldClass}>
+          {options.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
+        </select>
+      );
+    }
+
+    function Card({ className = '', children }) {
+      return <div className={`rounded-2xl bg-white ring-1 ring-stone-200 ${className}`}>{children}</div>;
+    }
+
+    function Badge({ children, className = '' }) {
+      return (
+        <span className={`inline-flex items-center rounded-full bg-stone-100 px-2.5 py-0.5 text-xs font-medium text-stone-600 ${className}`}>
+          {children}
+        </span>
+      );
+    }
+
+    function Spinner({ className = 'h-4 w-4' }) {
+      return (
+        <svg className={`animate-spin ${className}`} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" className="opacity-25" />
+          <path d="M4 12a8 8 0 0 1 8-8" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
+        </svg>
+      );
+    }
+
+    function Modal({ isOpen, onClose, title, children }) {
+      useEffect(() => {
+        if (!isOpen) return;
+        const onKey = (e) => { if (e.key === 'Escape') onClose(); };
+        document.addEventListener('keydown', onKey);
+        return () => document.removeEventListener('keydown', onKey);
+      }, [isOpen, onClose]);
+
+      if (!isOpen) return null;
+
+      return (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-label={title}>
+          <div className="absolute inset-0 bg-stone-900/60 backdrop-blur-sm" onClick={onClose} />
+          <Card className="relative w-full max-w-lg p-6 shadow-xl">
+            <div className="mb-4 flex items-start justify-between gap-4">
+              <h2 className="text-lg font-bold text-stone-900">{title}</h2>
+              <Button variant="ghost" size="sm" onClick={onClose} aria-label="닫기">✕</Button>
+            </div>
+            {children}
+          </Card>
+        </div>
+      );
+    }
+
+    // ========================================
+    // 🧩 App Components
+    // ========================================
+
+    function Header({ keyStatus }) {
+      const badge = {
+        checking: { dot: 'bg-stone-300', text: '서버 확인 중' },
+        configured: { dot: 'bg-emerald-500', text: 'API 키 서버 보관 중' },
+        missing: { dot: 'bg-red-500', text: 'FAL_KEY 미설정' },
+        offline: { dot: 'bg-red-500', text: '서버 응답 없음' },
+      }[keyStatus];
+
+      return (
+        <header className="border-b border-stone-200 bg-white/80 backdrop-blur">
+          <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6">
+            <div className="flex items-center gap-3">
+              <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-stone-900" aria-hidden="true">
+                <span className="block h-4 w-4 rounded-full bg-red-600 ring-2 ring-white" />
+              </span>
+              <div>
+                <h1 className="text-lg font-extrabold tracking-tight text-stone-900">라이카 스튜디오</h1>
+                <p className="text-xs text-stone-500">한 줄만 적으면 라이카로 찍은 듯한 사진을 만들어 드립니다</p>
+              </div>
+            </div>
+            <span
+              className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-stone-100 px-3 py-1.5 text-[11px] font-medium text-stone-600"
+              title="fal.ai 키는 서버 환경변수에만 있고 브라우저로 내려오지 않습니다"
+            >
+              <span className={`h-1.5 w-1.5 rounded-full ${badge.dot}`} aria-hidden="true" />
+              {badge.text}
+            </span>
+          </div>
+        </header>
+      );
+    }
+
+    function PresetPicker({ presets, value, onChange, disabled }) {
+      return (
+        <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+          {presets.map((p) => {
+            const active = p.id === value;
+            return (
+              <button
+                key={p.id}
+                type="button"
+                onClick={() => onChange(p.id)}
+                disabled={disabled}
+                aria-pressed={active}
+                className={`rounded-xl border p-3 text-left transition disabled:opacity-50
+                  ${active
+                    ? 'border-stone-900 bg-stone-900 text-white shadow-sm'
+                    : 'border-stone-200 bg-white text-stone-700 hover:border-stone-400'}`}
+              >
+                <p className="text-sm font-bold">{p.label}</p>
+                <p className={`mt-1 text-[11px] leading-snug ${active ? 'text-stone-300' : 'text-stone-500'}`}>{p.gear}</p>
+                <p className={`mt-0.5 text-[11px] leading-snug ${active ? 'text-stone-400' : 'text-stone-400'}`}>{p.hint}</p>
+              </button>
+            );
+          })}
+        </div>
+      );
+    }
+
+    function PhotoCard({ photo, onOpen }) {
+      const [loaded, setLoaded] = useState(false);
+
+      return (
+        <figure className="group relative overflow-hidden rounded-xl bg-stone-200 ring-1 ring-stone-300">
+          {!loaded && <div className="animate-shutter absolute inset-0 bg-stone-300" aria-hidden="true" />}
+          <img
+            src={photo.url}
+            alt={photo.subject}
+            loading="lazy"
+            onLoad={() => setLoaded(true)}
+            className={`w-full cursor-zoom-in object-cover transition duration-300 group-hover:scale-[1.01]
+              ${loaded ? 'animate-develop' : 'opacity-0'}`}
+            onClick={() => onOpen(photo)}
+          />
+          <figcaption className="pointer-events-none absolute inset-x-0 bottom-0 flex items-center justify-between gap-2 bg-gradient-to-t from-stone-900/80 to-transparent p-3 opacity-0 transition group-hover:opacity-100">
+            <span className="truncate text-xs font-medium text-white">{photo.presetLabel}</span>
+            <span className="shrink-0 text-[11px] text-stone-300">seed {photo.seed ?? '—'}</span>
+          </figcaption>
+        </figure>
+      );
+    }
+
+    function EmptyState() {
+      return (
+        <div className="rounded-2xl border-2 border-dashed border-stone-300 px-6 py-20 text-center">
+          <div className="text-4xl" aria-hidden="true">📷</div>
+          <p className="mt-4 text-sm font-semibold text-stone-700">아직 찍은 사진이 없습니다</p>
+          <p className="mt-1 text-sm text-stone-500">
+            왼쪽에 찍고 싶은 장면을 한 줄로 적고 <strong className="font-semibold text-stone-700">셔터</strong>를 눌러 보세요.
+          </p>
+        </div>
+      );
+    }
+
+    function LoadingGrid({ count }) {
+      return (
+        <div className="grid gap-4 sm:grid-cols-2">
+          {Array.from({ length: count }).map((_, i) => (
+            <div key={i} className="animate-shutter aspect-[3/2] rounded-xl bg-stone-300" aria-hidden="true" />
+          ))}
+        </div>
+      );
+    }
+
+    function LightboxModal({ photo, onClose }) {
+      const [copied, setCopied] = useState(false);
+
+      useEffect(() => { setCopied(false); }, [photo]);
+
+      if (!photo) return null;
+
+      async function copyPrompt() {
+        try {
+          await navigator.clipboard.writeText(photo.prompt);
+          setCopied(true);
+        } catch {
+          setCopied(false);
+        }
+      }
+
+      return (
+        <Modal isOpen={Boolean(photo)} onClose={onClose} title={photo.subject}>
+          <img src={photo.url} alt={photo.subject} className="w-full rounded-lg ring-1 ring-stone-200" />
+
+          <dl className="mt-4 space-y-1.5 text-xs text-stone-600">
+            <div className="flex gap-2"><dt className="w-16 shrink-0 font-semibold text-stone-500">장비</dt><dd>{photo.gear}</dd></div>
+            <div className="flex gap-2"><dt className="w-16 shrink-0 font-semibold text-stone-500">시드</dt><dd>{photo.seed ?? '—'}</dd></div>
+            <div className="flex gap-2">
+              <dt className="w-16 shrink-0 font-semibold text-stone-500">프롬프트</dt>
+              <dd className="max-h-24 overflow-y-auto leading-relaxed text-stone-500">{photo.prompt}</dd>
+            </div>
+          </dl>
+
+          <div className="mt-5 flex flex-wrap gap-2">
+            <Button onClick={() => downloadImage(photo.url, `leica-${photo.id}.jpg`)}>내려받기</Button>
+            <Button variant="secondary" onClick={copyPrompt}>{copied ? '복사됨 ✓' : '프롬프트 복사'}</Button>
+            <Button variant="ghost" onClick={() => window.open(photo.url, '_blank', 'noopener')}>원본 열기</Button>
+          </div>
+        </Modal>
+      );
+    }
+
+    // ========================================
+    // 🚀 App
+    // ========================================
+
+    function App() {
+      const [options, setOptions] = useState(FALLBACK_OPTIONS);
+      const [keyStatus, setKeyStatus] = useState('checking');
+
+      const [subject, setSubject] = useState('');
+      const [presetId, setPresetId] = useState(FALLBACK_OPTIONS.presets[0].id);
+      const [model, setModel] = useState(FALLBACK_OPTIONS.models[0].id);
+      const [ratioId, setRatioId] = useState(FALLBACK_OPTIONS.ratios[0].id);
+      const [numImages, setNumImages] = useState(2);
+      const [seed, setSeed] = useState('');
+      const [translate, setTranslate] = useState(true);
+
+      const [photos, setPhotos] = useState(() => loadJSON(LS_KEY_HISTORY, []));
+      const [loading, setLoading] = useState(false);
+      const [status, setStatus] = useState('');
+      const [error, setError] = useState('');
+      const [lightbox, setLightbox] = useState(null);
+
+      // 히스토리는 최근 24장까지만 남긴다 (localStorage 용량 보호).
+      useEffect(() => { saveJSON(LS_KEY_HISTORY, photos.slice(0, 24)); }, [photos]);
+
+      // 서버가 가진 촬영 옵션과 키 설정 상태를 받아 온다.
+      useEffect(() => {
+        let alive = true;
+
+        api('/options')
+          .then((data) => { if (alive) setOptions(data); })
+          .catch(() => { /* 기본값으로 계속 동작한다 */ });
+
+        api('/health')
+          .then((data) => { if (alive) setKeyStatus(data.falKey); })
+          .catch(() => { if (alive) setKeyStatus('offline'); });
+
+        return () => { alive = false; };
+      }, []);
+
+      const preset = useMemo(
+        () => options.presets.find((p) => p.id === presetId) || options.presets[0],
+        [options, presetId],
+      );
+
+      const shoot = useCallback(async () => {
+        const value = subject.trim();
+        if (!value) { setError('찍고 싶은 장면을 한 줄 적어 주세요.'); return; }
+
+        setLoading(true);
+        setError('');
+
+        try {
+          let sceneText = value;
+          if (translate && hasKorean(value)) {
+            setStatus('장면을 영어로 옮기는 중…');
+            sceneText = await translateSubject(value);
+          }
+
+          setStatus('셔터를 누르는 중…');
+          const data = await generateImages({
+            subject: sceneText,
+            preset: presetId,
+            model,
+            ratio: ratioId,
+            numImages,
+            seed,
+          });
+
+          const shots = data.images.map((img, i) => ({
+            id: `${Date.now()}-${i}`,
+            url: img.url,
+            subject: value,
+            prompt: data.prompt,
+            seed: data.seed,
+            presetLabel: data.preset.label,
+            gear: data.preset.gear,
+          }));
+
+          setPhotos((prev) => [...shots, ...prev]);
+        } catch (err) {
+          setError(err.message);
+        } finally {
+          setLoading(false);
+          setStatus('');
+        }
+      }, [subject, translate, presetId, model, ratioId, numImages, seed]);
+
+      function handleKeyDown(e) {
+        // Ctrl/Cmd + Enter 로도 촬영
+        if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') shoot();
+      }
+
+      return (
+        <div className="min-h-screen">
+          <Header keyStatus={keyStatus} />
+
+          <main className="mx-auto grid max-w-6xl gap-6 px-4 py-6 sm:px-6 lg:grid-cols-[360px_1fr] lg:py-10">
+            {/* 촬영 설정 */}
+            <Card className="h-fit p-5 lg:sticky lg:top-6">
+              <div>
+                <Label htmlFor="subject" hint={`${subject.length}/200`}>무엇을 찍을까요</Label>
+                <Textarea
+                  id="subject"
+                  value={subject}
+                  onChange={(e) => setSubject(e.target.value)}
+                  onKeyDown={handleKeyDown}
+                  placeholder="예) 비 온 뒤 저녁 골목을 걷는 노인"
+                  disabled={loading}
+                  maxLength={200}
+                />
+                <div className="mt-2 flex flex-wrap gap-1.5">
+                  {SAMPLE_SUBJECTS.map((s) => (
+                    <button
+                      key={s}
+                      type="button"
+                      onClick={() => setSubject(s)}
+                      disabled={loading}
+                      className="rounded-full bg-stone-100 px-2.5 py-1 text-[11px] text-stone-600 transition hover:bg-stone-200 disabled:opacity-50"
+                    >
+                      {s}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-5">
+                <Label>룩 프리셋</Label>
+                <PresetPicker presets={options.presets} value={presetId} onChange={setPresetId} disabled={loading} />
+              </div>
+
+              <div className="mt-5 grid grid-cols-2 gap-3">
+                <div>
+                  <Label htmlFor="ratio">화면비</Label>
+                  <Select id="ratio" value={ratioId} onChange={(e) => setRatioId(e.target.value)} disabled={loading}
+                    options={options.ratios.map((r) => ({ value: r.id, label: r.label }))} />
+                </div>
+                <div>
+                  <Label htmlFor="count">장수</Label>
+                  <Select id="count" value={String(numImages)} onChange={(e) => setNumImages(Number(e.target.value))} disabled={loading}
+                    options={[1, 2, 3, 4].map((n) => ({ value: String(n), label: `${n}장` }))} />
+                </div>
+              </div>
+
+              <div className="mt-3 grid grid-cols-2 gap-3">
+                <div>
+                  <Label htmlFor="model">화질</Label>
+                  <Select id="model" value={model} onChange={(e) => setModel(e.target.value)} disabled={loading}
+                    options={options.models.map((m) => ({ value: m.id, label: m.label }))} />
+                </div>
+                <div>
+                  <Label htmlFor="seed" hint="선택">시드</Label>
+                  <Input id="seed" value={seed} onChange={(e) => setSeed(e.target.value.replace(/\D/g, ''))}
+                    placeholder="비우면 무작위" disabled={loading} inputMode="numeric" />
+                </div>
+              </div>
+
+              <label className="mt-4 flex items-center gap-2 text-xs text-stone-600">
+                <input
+                  type="checkbox"
+                  checked={translate}
+                  onChange={(e) => setTranslate(e.target.checked)}
+                  disabled={loading}
+                  className="h-4 w-4 rounded border-stone-300 text-stone-900 focus:ring-stone-500"
+                />
+                한글 입력을 영어 묘사로 자동 변환
+              </label>
+
+              <Button size="lg" onClick={shoot} disabled={loading || !subject.trim()} className="mt-5 w-full">
+                {loading ? <><Spinner /> {status || '작업 중…'}</> : '📸 셔터'}
+              </Button>
+              <p className="mt-2 text-center text-[11px] text-stone-400">Ctrl/⌘ + Enter 로도 촬영됩니다</p>
+
+              {error && (
+                <p role="alert" className="mt-3 rounded-lg bg-red-50 px-3 py-2 text-xs leading-relaxed text-red-700 ring-1 ring-red-100">
+                  {error}
+                </p>
+              )}
+            </Card>
+
+            {/* 결과 */}
+            <section aria-label="생성된 사진">
+              <div className="mb-4 flex items-center justify-between gap-3">
+                <div className="flex items-center gap-2">
+                  <h2 className="text-sm font-bold uppercase tracking-widest text-stone-500">컨택트 시트</h2>
+                  <Badge>{photos.length}장</Badge>
+                </div>
+                {photos.length > 0 && (
+                  <Button variant="danger" size="sm" onClick={() => setPhotos([])}>전부 비우기</Button>
+                )}
+              </div>
+
+              {loading && <div className="mb-4"><LoadingGrid count={numImages} /></div>}
+
+              {photos.length === 0 && !loading ? (
+                <EmptyState />
+              ) : (
+                <div className="grid gap-4 sm:grid-cols-2">
+                  {photos.map((photo) => (
+                    <PhotoCard key={photo.id} photo={photo} onOpen={setLightbox} />
+                  ))}
+                </div>
+              )}
+
+              {photos.length > 0 && (
+                <p className="mt-6 text-center text-xs leading-relaxed text-stone-400">
+                  이미지는 fal.ai 서버에 보관되며 시간이 지나면 링크가 만료될 수 있습니다. 마음에 드는 컷은 내려받아 두세요.
+                </p>
+              )}
+            </section>
+          </main>
+
+          <LightboxModal photo={lightbox} onClose={() => setLightbox(null)} />
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>

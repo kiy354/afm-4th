@@ -1,0 +1,12 @@
+# DB 접속 정보
+.env
+.env.local
+.env*.local
+
+node_modules/
+
+# Vercel
+.vercel
+
+.vercel
+.env*

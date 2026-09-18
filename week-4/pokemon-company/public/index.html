@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>포켓몬 컴퍼니</title>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <!-- ⚠️ 모든 CDN 버전 고정. Babel 은 반드시 7.x (8.x 는 인라인 text/babel 미지원) -->
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone@7.25.9/babel.min.js"></script>
+  <style>
+    /* Tailwind 유틸리티로 표현 불가한 것만 커스텀 CSS 로 처리 */
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes popIn { from { opacity: 0; transform: translateY(12px) scale(.96); } to { opacity: 1; transform: none; } }
+    @keyframes floatY { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    .anim-fade { animation: fadeIn .18s ease-out both; }
+    .anim-pop { animation: popIn .22s cubic-bezier(.2,.9,.3,1.2) both; }
+    .anim-float { animation: floatY 3.5s ease-in-out infinite; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .anim-fade, .anim-pop, .anim-float { animation: none !important; }
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState, useEffect, useCallback, useRef } = React;
+
+    // ========================================
+    // ⚙️ Config & Constants
+    // ========================================
+
+    // 같은 서버(server.js)가 이 페이지를 서빙하므로 상대 경로로 호출한다.
+    const API_BASE_URL = '/api';
+
+    const FALLBACK_CATEGORIES = ['제휴 문의', '채용 문의', '제품 문의', '기타'];
+
+    const BUSINESSES = [
+      { emoji: '🎮', title: '게임 사업', desc: '본편 RPG부터 모바일까지, 세대를 잇는 포켓몬 게임을 기획하고 서비스합니다.', tag: '게임' },
+      { emoji: '🃏', title: '카드 게임', desc: '전 세계 100개국에서 즐기는 트레이딩 카드 게임을 개발·유통합니다.', tag: 'TCG' },
+      { emoji: '📺', title: '영상 콘텐츠', desc: '애니메이션과 극장판, 웹 시리즈로 포켓몬의 이야기를 넓혀 갑니다.', tag: '미디어' },
+      { emoji: '🧸', title: '라이선스 사업', desc: '완구, 패션, 식음료까지 파트너사와 함께 일상 속 포켓몬을 만듭니다.', tag: '라이선스' },
+    ];
+
+    const STATS = [
+      { value: '1,025+', label: '등록된 포켓몬' },
+      { value: '100+', label: '서비스 국가' },
+      { value: '30년', label: '함께한 시간' },
+      { value: '4.8억', label: '누적 게임 판매' },
+    ];
+
+    const NAV_LINKS = [
+      { href: '#about', label: '회사 소개' },
+      { href: '#business', label: '사업 영역' },
+      { href: '#contact', label: '문의하기' },
+    ];
+
+    // ========================================
+    // 🎨 Design System Components
+    // ========================================
+
+    function Button({ variant = 'primary', size = 'md', type = 'button', disabled = false, onClick, className = '', children, ...rest }) {
+      const base =
+        'inline-flex items-center justify-center gap-1.5 font-semibold rounded-xl transition ' +
+        'focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500 ' +
+        'disabled:opacity-50 disabled:cursor-not-allowed';
+      const variants = {
+        primary: 'bg-amber-400 text-slate-900 hover:bg-amber-300 active:bg-amber-500 shadow-sm',
+        secondary: 'bg-white text-slate-700 ring-1 ring-slate-300 hover:bg-slate-50 active:bg-slate-100',
+        danger: 'bg-rose-600 text-white hover:bg-rose-700 active:bg-rose-800 shadow-sm',
+        ghost: 'bg-transparent text-slate-600 hover:bg-slate-200/70 active:bg-slate-300/70',
+      };
+      const sizes = { sm: 'text-xs px-2.5 py-1.5', md: 'text-sm px-4 py-2.5', lg: 'text-base px-6 py-3' };
+
+      return (
+        <button
+          type={type}
+          className={`${base} ${variants[variant] || variants.primary} ${sizes[size] || sizes.md} ${className}`}
+          disabled={disabled}
+          onClick={onClick}
+          {...rest}
+        >
+          {children}
+        </button>
+      );
+    }
+
+    function Input({ type = 'text', label, value, onChange, placeholder = '', error = '', disabled = false, required = false, className = '', ...rest }) {
+      const id = useRef(`input-${Math.random().toString(36).slice(2, 9)}`).current;
+      return (
+        <div className={className}>
+          {label && (
+            <label htmlFor={id} className="block mb-1.5 text-sm font-medium text-slate-700">
+              {label}{required && <span className="ml-0.5 text-rose-500">*</span>}
+            </label>
+          )}
+          <input
+            id={id}
+            type={type}
+            value={value}
+            onChange={onChange}
+            placeholder={placeholder}
+            disabled={disabled}
+            aria-invalid={error ? 'true' : undefined}
+            className={
+              'w-full rounded-xl bg-white px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 ' +
+              'ring-1 transition focus:outline-none focus:ring-2 disabled:bg-slate-100 disabled:text-slate-400 ' +
+              (error ? 'ring-rose-400 focus:ring-rose-500' : 'ring-slate-300 focus:ring-amber-500')
+            }
+            {...rest}
+          />
+          {error && <p className="mt-1.5 text-xs text-rose-600">{error}</p>}
+        </div>
+      );
+    }
+
+    function Textarea({ label, value, onChange, placeholder = '', error = '', disabled = false, required = false, rows = 5, maxLength, className = '' }) {
+      const id = useRef(`textarea-${Math.random().toString(36).slice(2, 9)}`).current;
+      return (
+        <div className={className}>
+          {label && (
+            <div className="mb-1.5 flex items-baseline justify-between">
+              <label htmlFor={id} className="text-sm font-medium text-slate-700">
+                {label}{required && <span className="ml-0.5 text-rose-500">*</span>}
+              </label>
+              {maxLength && <span className="text-xs tabular-nums text-slate-400">{value.length} / {maxLength}</span>}
+            </div>
+          )}
+          <textarea
+            id={id}
+            value={value}
+            onChange={onChange}
+            placeholder={placeholder}
+            disabled={disabled}
+            rows={rows}
+            maxLength={maxLength}
+            aria-invalid={error ? 'true' : undefined}
+            className={
+              'w-full resize-y rounded-xl bg-white px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 ' +
+              'ring-1 transition focus:outline-none focus:ring-2 disabled:bg-slate-100 disabled:text-slate-400 ' +
+              (error ? 'ring-rose-400 focus:ring-rose-500' : 'ring-slate-300 focus:ring-amber-500')
+            }
+          />
+          {error && <p className="mt-1.5 text-xs text-rose-600">{error}</p>}
+        </div>
+      );
+    }
+
+    function Select({ label, value, onChange, options, disabled = false, required = false, className = '' }) {
+      const id = useRef(`select-${Math.random().toString(36).slice(2, 9)}`).current;
+      return (
+        <div className={className}>
+          {label && (
+            <label htmlFor={id} className="block mb-1.5 text-sm font-medium text-slate-700">
+              {label}{required && <span className="ml-0.5 text-rose-500">*</span>}
+            </label>
+          )}
+          <select
+            id={id}
+            value={value}
+            onChange={onChange}
+            disabled={disabled}
+            className="w-full rounded-xl bg-white px-3 py-2.5 text-sm text-slate-900 ring-1 ring-slate-300 transition focus:outline-none focus:ring-2 focus:ring-amber-500 disabled:bg-slate-100 disabled:text-slate-400"
+          >
+            {options.map((opt) => (
+              <option key={opt} value={opt}>{opt}</option>
+            ))}
+          </select>
+        </div>
+      );
+    }
+
+    function Card({ className = '', children, ...rest }) {
+      return (
+        <div className={`rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200/80 ${className}`} {...rest}>
+          {children}
+        </div>
+      );
+    }
+
+    function Badge({ className = '', children }) {
+      return (
+        <span className={`inline-flex items-center rounded-full px-2.5 py-1 text-xs font-semibold ring-1 ring-inset ${className}`}>
+          {children}
+        </span>
+      );
+    }
+
+    function Spinner({ className = 'h-5 w-5 text-slate-900' }) {
+      return (
+        <svg className={`animate-spin ${className}`} viewBox="0 0 24 24" fill="none" role="status" aria-label="처리 중">
+          <circle className="opacity-20" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+          <path className="opacity-90" fill="currentColor" d="M4 12a8 8 0 0 1 8-8v4a4 4 0 0 0-4 4H4z" />
+        </svg>
+      );
+    }
+
+    function Modal({ isOpen, onClose, title, size = 'md', children }) {
+      const panelRef = useRef(null);
+
+      // ESC 로 닫기 + 배경 스크롤 잠금 (cleanup 포함)
+      useEffect(() => {
+        if (!isOpen) return;
+        const onKeyDown = (e) => { if (e.key === 'Escape') onClose(); };
+        const prevOverflow = document.body.style.overflow;
+        document.body.style.overflow = 'hidden';
+        window.addEventListener('keydown', onKeyDown);
+        if (panelRef.current) panelRef.current.focus();
+        return () => {
+          window.removeEventListener('keydown', onKeyDown);
+          document.body.style.overflow = prevOverflow;
+        };
+      }, [isOpen, onClose]);
+
+      if (!isOpen) return null;
+
+      const sizes = { sm: 'max-w-sm', md: 'max-w-lg', lg: 'max-w-2xl' };
+
+      return (
+        <div
+          className="fixed inset-0 z-50 flex items-end justify-center bg-slate-900/50 p-0 backdrop-blur-sm sm:items-center sm:p-4 anim-fade"
+          onClick={onClose}
+        >
+          <div
+            ref={panelRef}
+            tabIndex={-1}
+            role="dialog"
+            aria-modal="true"
+            aria-label={title}
+            onClick={(e) => e.stopPropagation()}
+            className={`w-full ${sizes[size] || sizes.md} max-h-[92vh] overflow-y-auto rounded-t-3xl bg-white p-6 shadow-2xl focus:outline-none sm:rounded-3xl anim-pop`}
+          >
+            {children}
+          </div>
+        </div>
+      );
+    }
+
+    // ========================================
+    // 🧩 Common / Layout Components
+    // ========================================
+
+    function Header() {
+      return (
+        <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/85 backdrop-blur">
+          <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
+            <a href="#top" className="flex items-center gap-2">
+              <span className="grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-rose-500 to-red-600 text-lg shadow-inner" aria-hidden="true">🔴</span>
+              <span className="text-lg font-extrabold tracking-tight text-slate-900">포켓몬 컴퍼니</span>
+            </a>
+            <nav className="flex items-center gap-1" aria-label="주요 메뉴">
+              {NAV_LINKS.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="rounded-lg px-3 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-slate-900"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </nav>
+          </div>
+        </header>
+      );
+    }
+
+    // 이모지 대신 CSS 로 그린 몬스터볼 (환경마다 이모지 모양이 달라지는 것을 피한다)
+    function PokeBall({ className = '' }) {
+      return (
+        <div
+          className={`anim-float relative h-52 w-52 overflow-hidden rounded-full bg-white shadow-2xl ring-4 ring-slate-900 sm:h-64 sm:w-64 ${className}`}
+          role="img"
+          aria-label="몬스터볼"
+        >
+          <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-rose-500 to-red-600" />
+          <div className="absolute inset-x-0 top-1/2 h-4 -translate-y-1/2 bg-slate-900 sm:h-5" />
+          <div className="absolute left-1/2 top-1/2 h-16 w-16 -translate-x-1/2 -translate-y-1/2 rounded-full bg-slate-900 sm:h-20 sm:w-20" />
+          <div className="absolute left-1/2 top-1/2 h-11 w-11 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white sm:h-14 sm:w-14" />
+          <div className="absolute left-1/2 top-1/2 h-6 w-6 -translate-x-1/2 -translate-y-1/2 rounded-full bg-slate-200 ring-2 ring-slate-300 sm:h-8 sm:w-8" />
+        </div>
+      );
+    }
+
+    function Hero() {
+      return (
+        <section id="top" className="bg-gradient-to-br from-rose-500 via-red-500 to-amber-400 text-white">
+          <div className="mx-auto grid max-w-6xl gap-8 px-4 py-16 sm:py-24 lg:grid-cols-2 lg:items-center">
+            <div>
+              <Badge className="bg-white/20 text-white ring-white/30">Since 1996</Badge>
+              <h1 className="mt-4 text-3xl font-extrabold leading-tight tracking-tight sm:text-5xl">
+                모두의 곁에<br />포켓몬이 있도록
+              </h1>
+              <p className="mt-4 max-w-md text-sm leading-relaxed text-white/90 sm:text-base">
+                포켓몬 컴퍼니는 게임, 카드, 애니메이션, 라이선스 사업을 통해
+                전 세계 팬들이 포켓몬과 함께하는 일상을 만듭니다.
+              </p>
+              <div className="mt-7 flex flex-wrap gap-3">
+                <Button size="lg" onClick={() => { window.location.hash = '#contact'; }}>문의하기</Button>
+                <Button
+                  variant="secondary"
+                  size="lg"
+                  onClick={() => { window.location.hash = '#business'; }}
+                  className="bg-white/15 text-white ring-white/40 hover:bg-white/25 active:bg-white/30"
+                >
+                  사업 영역 보기
+                </Button>
+              </div>
+            </div>
+            <div className="grid place-items-center">
+              <PokeBall />
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    function StatsBar() {
+      return (
+        <section className="border-b border-slate-200 bg-white">
+          <dl className="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-4 py-8 sm:grid-cols-4">
+            {STATS.map((s) => (
+              <div key={s.label} className="text-center">
+                <dt className="text-xs text-slate-500">{s.label}</dt>
+                <dd className="mt-1 text-2xl font-extrabold tabular-nums text-slate-900">{s.value}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
+      );
+    }
+
+    function About() {
+      return (
+        <section id="about" className="mx-auto max-w-6xl scroll-mt-20 px-4 py-16">
+          <h2 className="text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl">회사 소개</h2>
+          <div className="mt-6 grid gap-6 lg:grid-cols-3">
+            <Card className="lg:col-span-2">
+              <p className="text-sm leading-relaxed text-slate-700">
+                1996년 첫 게임이 나온 이후, 포켓몬은 세대를 넘어 사랑받는 이야기가 되었습니다.
+                포켓몬 컴퍼니는 이 세계관을 지키면서도 새로운 방식으로 확장하는 일을 합니다.
+                게임 개발사, 출판사, 완구사 등 전 세계 파트너와 함께 일하며,
+                어린이부터 어른까지 누구나 안심하고 즐길 수 있는 콘텐츠를 만드는 것을 원칙으로 삼습니다.
+              </p>
+              <p className="mt-4 text-sm leading-relaxed text-slate-700">
+                우리가 가장 중요하게 생각하는 것은 <strong className="font-semibold text-slate-900">팬과의 약속</strong>입니다.
+                한 번 만든 포켓몬은 사라지지 않고, 언제든 다시 만날 수 있어야 한다고 믿습니다.
+              </p>
+            </Card>
+            <Card className="bg-slate-900 text-white ring-slate-900">
+              <h3 className="text-sm font-bold text-amber-300">우리의 약속</h3>
+              <ul className="mt-4 space-y-3 text-sm text-slate-200">
+                <li className="flex gap-2"><span aria-hidden="true">✔</span> 모든 연령이 안전하게 즐기는 콘텐츠</li>
+                <li className="flex gap-2"><span aria-hidden="true">✔</span> 세계 어디서나 같은 품질의 경험</li>
+                <li className="flex gap-2"><span aria-hidden="true">✔</span> 파트너와 함께 만드는 지속 가능한 사업</li>
+              </ul>
+            </Card>
+          </div>
+        </section>
+      );
+    }
+
+    function Business() {
+      return (
+        <section id="business" className="scroll-mt-20 bg-white py-16">
+          <div className="mx-auto max-w-6xl px-4">
+            <h2 className="text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl">사업 영역</h2>
+            <p className="mt-2 text-sm text-slate-500">네 개의 축으로 포켓몬 세계를 넓혀 갑니다.</p>
+            <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+              {BUSINESSES.map((b) => (
+                <Card key={b.title} className="transition hover:-translate-y-1 hover:shadow-lg">
+                  <span className="text-3xl" aria-hidden="true">{b.emoji}</span>
+                  <h3 className="mt-3 text-base font-bold text-slate-900">{b.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600">{b.desc}</p>
+                  <Badge className="mt-4 bg-amber-100 text-amber-800 ring-amber-200">{b.tag}</Badge>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    function Footer() {
+      return (
+        <footer className="border-t border-slate-200 bg-slate-900 py-8 text-center text-xs text-slate-400">
+          <p className="font-semibold text-slate-200">포켓몬 컴퍼니</p>
+          <p className="mt-1">서울특별시 관동구 상록로 25 · contact@pokemon-company.example</p>
+          <p className="mt-3">수업 실습용으로 만든 가상의 회사 홈페이지입니다.</p>
+        </footer>
+      );
+    }
+
+    // ========================================
+    // 📄 Page Section — 문의 폼
+    // ========================================
+
+    const EMPTY_FORM = { name: '', email: '', category: '', message: '' };
+
+    function validate(form) {
+      const errors = {};
+      if (!form.name.trim()) errors.name = '이름을 입력해 주세요';
+      if (!form.email.trim()) errors.email = '이메일을 입력해 주세요';
+      else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) errors.email = '이메일 형식이 올바르지 않습니다';
+      if (!form.message.trim()) errors.message = '문의 내용을 입력해 주세요';
+      else if (form.message.trim().length < 10) errors.message = '문의 내용을 10자 이상 적어 주세요';
+      return errors;
+    }
+
+    function ContactForm() {
+      const [categories, setCategories] = useState(FALLBACK_CATEGORIES);
+      const [form, setForm] = useState({ ...EMPTY_FORM, category: FALLBACK_CATEGORIES[0] });
+      const [errors, setErrors] = useState({});
+      const [submitting, setSubmitting] = useState(false);
+      const [serverError, setServerError] = useState('');
+      const [result, setResult] = useState(null);
+
+      // 문의 유형은 서버가 인정하는 값과 맞춰야 400 이 나지 않는다.
+      useEffect(() => {
+        let cancelled = false;
+        fetch(`${API_BASE_URL}/categories`)
+          .then((res) => res.json())
+          .then((json) => {
+            if (cancelled || !json.success || !json.data.length) return;
+            setCategories(json.data);
+            setForm((f) => ({ ...f, category: json.data.includes(f.category) ? f.category : json.data[0] }));
+          })
+          .catch(() => { /* 실패 시 기본 목록을 그대로 쓴다 */ });
+        return () => { cancelled = true; };
+      }, []);
+
+      const setField = useCallback((key) => (e) => {
+        const value = e.target.value;
+        setForm((f) => ({ ...f, [key]: value }));
+        setErrors((prev) => (prev[key] ? { ...prev, [key]: '' } : prev));
+      }, []);
+
+      const handleSubmit = async (e) => {
+        e.preventDefault();
+        setServerError('');
+
+        const nextErrors = validate(form);
+        setErrors(nextErrors);
+        if (Object.keys(nextErrors).length > 0) return;
+
+        setSubmitting(true);
+        try {
+          const res = await fetch(`${API_BASE_URL}/contacts`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              name: form.name.trim(),
+              email: form.email.trim(),
+              category: form.category,
+              message: form.message.trim(),
+            }),
+          });
+          const json = await res.json().catch(() => null);
+          if (!res.ok || !json || !json.success) {
+            throw new Error((json && json.message) || `접수에 실패했습니다 (${res.status})`);
+          }
+          setResult(json.data);
+          setForm({ ...EMPTY_FORM, category: categories[0] });
+        } catch (err) {
+          setServerError(err.message === 'Failed to fetch'
+            ? '서버에 연결할 수 없습니다 (node server.js 실행 여부 확인)'
+            : err.message);
+        } finally {
+          setSubmitting(false);
+        }
+      };
+
+      const closeResult = useCallback(() => setResult(null), []);
+
+      return (
+        <section id="contact" className="scroll-mt-20 bg-slate-100 py-16">
+          <div className="mx-auto max-w-3xl px-4">
+            <h2 className="text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl">문의하기</h2>
+            <p className="mt-2 text-sm text-slate-500">
+              보내주신 내용은 담당자에게 전달되며, 영업일 기준 3일 이내에 답변드립니다.
+            </p>
+
+            <Card className="mt-6">
+              <form onSubmit={handleSubmit} noValidate>
+                <div className="grid gap-5 sm:grid-cols-2">
+                  <Input
+                    label="이름"
+                    required
+                    value={form.name}
+                    onChange={setField('name')}
+                    placeholder="홍길동"
+                    error={errors.name}
+                    disabled={submitting}
+                  />
+                  <Input
+                    label="이메일"
+                    type="email"
+                    required
+                    value={form.email}
+                    onChange={setField('email')}
+                    placeholder="you@example.com"
+                    error={errors.email}
+                    disabled={submitting}
+                  />
+                </div>
+
+                <Select
+                  label="문의 유형"
+                  required
+                  value={form.category}
+                  onChange={setField('category')}
+                  options={categories}
+                  disabled={submitting}
+                  className="mt-5"
+                />
+
+                <Textarea
+                  label="문의 내용"
+                  required
+                  value={form.message}
+                  onChange={setField('message')}
+                  placeholder="문의하실 내용을 자세히 적어 주세요."
+                  error={errors.message}
+                  disabled={submitting}
+                  rows={6}
+                  maxLength={2000}
+                  className="mt-5"
+                />
+
+                {serverError && (
+                  <p className="mt-4 rounded-xl bg-rose-50 px-4 py-3 text-sm text-rose-700 ring-1 ring-rose-200" role="alert">
+                    {serverError}
+                  </p>
+                )}
+
+                <div className="mt-6 flex items-center justify-end gap-3">
+                  <span className="text-xs text-slate-400">접수 내용은 txt 파일로 보관됩니다</span>
+                  <Button type="submit" size="lg" disabled={submitting}>
+                    {submitting ? <React.Fragment><Spinner className="h-4 w-4 text-slate-900" /> 보내는 중…</React.Fragment> : '문의 보내기'}
+                  </Button>
+                </div>
+              </form>
+            </Card>
+          </div>
+
+          <Modal isOpen={!!result} onClose={closeResult} title="문의 접수 완료" size="sm">
+            <div className="text-center">
+              <div className="text-5xl" aria-hidden="true">✅</div>
+              <h3 className="mt-4 text-lg font-bold text-slate-900">문의가 접수되었습니다</h3>
+              {result && (
+                <dl className="mt-4 space-y-1 text-sm text-slate-600">
+                  <div><dt className="inline font-medium text-slate-500">접수 번호 </dt><dd className="inline tabular-nums">{result.id}</dd></div>
+                  <div><dt className="inline font-medium text-slate-500">접수 일시 </dt><dd className="inline">{result.receivedAt}</dd></div>
+                  <div className="break-all"><dt className="inline font-medium text-slate-500">저장 파일 </dt><dd className="inline">{result.file}</dd></div>
+                </dl>
+              )}
+              <Button variant="secondary" size="md" onClick={closeResult} className="mt-6 w-full">닫기</Button>
+            </div>
+          </Modal>
+        </section>
+      );
+    }
+
+    // ========================================
+    // 🚀 App Component
+    // ========================================
+
+    function App() {
+      return (
+        <div className="flex min-h-screen flex-col">
+          <Header />
+          <main className="flex-1">
+            <Hero />
+            <StatsBar />
+            <About />
+            <Business />
+            <ContactForm />
+          </main>
+          <Footer />
+        </div>
+      );
+    }
+
+    // ========================================
+    // Rendering
+    // ========================================
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>

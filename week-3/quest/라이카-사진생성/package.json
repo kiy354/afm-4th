@@ -1,0 +1,10 @@
+{
+  "name": "leica-studio",
+  "version": "1.0.0",
+  "description": "라이카 느낌 사진 생성 — fal.ai 프록시 서버 + React 단일 파일 UI",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

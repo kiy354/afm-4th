@@ -1,0 +1,13 @@
+{
+  "name": "memo-app",
+  "version": "1.0.0",
+  "description": "메모 앱 — React 단일 파일 + Node 서버 + Supabase(PostgreSQL)",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "pg": "8.13.1"
+  }
+}
