@@ -1,0 +1,5 @@
+# 업로드에서 제외 — DB 접속 정보는 Vercel 환경변수로만 전달한다
+.env
+.env.*
+node_modules
+.vercel

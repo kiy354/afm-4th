@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>밸런스 게임</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234f46e5'/%3E%3Cpath d='M16 6v20M8 12H5l3-5 3 5H8zm16 8h-3l3-5 3 5h-3z' fill='none' stroke='%23fff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <!-- CDN 은 모두 버전 고정. Babel 은 반드시 7.x (8.x 는 인라인 text/babel 미지원) -->
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone@7.25.9/babel.min.js"></script>
+  <style>
+    /* 새 질문이 목록에 들어올 때의 등장 효과 (Tailwind 유틸리티로 불가) */
+    @keyframes slide-in {
+      from { opacity: 0; transform: translateY(-6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .animate-slide-in { animation: slide-in 0.18s ease-out; }
+
+    /* 퍼센트가 바뀔 때 막대가 부드럽게 움직이도록 */
+    .bar-fill { transition: width 0.5s cubic-bezier(0.22, 1, 0.36, 1); }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-800">
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState, useEffect, useRef, useCallback } = React;
+
+    // 상대 경로 — 포트가 바뀌어도 그대로 동작한다.
+    const API_BASE_URL = '/api';
+
+    const MAX_TITLE_LENGTH = 100;
+    const MAX_OPTION_LENGTH = 100;
+    const POLL_INTERVAL_MS = 4000;
+
+    // 투표자 식별자 — 브라우저마다 한 번 만들어 localStorage 에 둔다.
+    // 이 값으로 "한 질문당 한 표"와 "내가 고른 쪽"을 구분한다.
+    const VOTER_KEY = 'balance-game-voter-id';
+    const voterId = (() => {
+      try {
+        const saved = localStorage.getItem(VOTER_KEY);
+        if (saved) return saved;
+        const created = crypto.randomUUID();
+        localStorage.setItem(VOTER_KEY, created);
+        return created;
+      } catch {
+        // 시크릿 모드 등으로 저장이 막히면 이번 세션에서만 쓰는 값으로 대체한다.
+        return crypto.randomUUID();
+      }
+    })();
+
+    // 서버 응답은 항상 { success, data?, message? } 구조.
+    async function api(endpoint, options = {}) {
+      const res = await fetch(`${API_BASE_URL}${endpoint}`, {
+        ...options,
+        headers: {
+          'x-voter-id': voterId,
+          ...(options.body ? { 'Content-Type': 'application/json' } : null),
+        },
+      });
+      const json = await res.json().catch(() => ({}));
+      if (!res.ok || !json.success) {
+        throw new Error(json.message || '요청을 처리하지 못했습니다.');
+      }
+      return json.data;
+    }
+
+    // 표가 하나도 없으면 50:50 으로 그린다.
+    function percent(part, total) {
+      if (!total) return 50;
+      return Math.round((part / total) * 100);
+    }
+
+    // 2026. 9. 18. 오후 3:04 형태로 보여 준다.
+    function formatDate(value) {
+      const date = new Date(value);
+      if (Number.isNaN(date.getTime())) return '';
+      return date.toLocaleString('ko-KR', {
+        year: 'numeric', month: 'long', day: 'numeric',
+        hour: '2-digit', minute: '2-digit',
+      });
+    }
+
+    // ========================================
+    // 🎨 Design System Components
+    // ========================================
+
+    function Button({ variant = 'primary', size = 'md', type = 'button', disabled = false, onClick, className = '', children, ...rest }) {
+      const variants = {
+        primary: 'bg-indigo-600 text-white hover:bg-indigo-700 focus-visible:outline-indigo-600',
+        secondary: 'bg-white text-slate-700 ring-1 ring-slate-300 hover:bg-slate-50 focus-visible:outline-slate-400',
+        ghost: 'bg-transparent text-slate-500 hover:bg-slate-100 focus-visible:outline-slate-400',
+      };
+      const sizes = { sm: 'px-2.5 py-1.5 text-xs', md: 'px-4 py-2 text-sm', lg: 'px-5 py-2.5 text-base' };
+
+      return (
+        <button
+          type={type}
+          onClick={onClick}
+          disabled={disabled}
+          className={`inline-flex items-center justify-center gap-1.5 rounded-lg font-semibold transition
+            focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
+            disabled:cursor-not-allowed disabled:opacity-50 ${variants[variant]} ${sizes[size]} ${className}`}
+          {...rest}
+        >
+          {children}
+        </button>
+      );
+    }
+
+    function Input({ value, onChange, placeholder, disabled, className = '', inputRef, ...rest }) {
+      return (
+        <input
+          ref={inputRef}
+          type="text"
+          value={value}
+          onChange={onChange}
+          placeholder={placeholder}
+          disabled={disabled}
+          className={`w-full rounded-lg border border-slate-300 bg-white px-3.5 py-2.5 text-sm outline-none transition
+            placeholder:text-slate-400 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100
+            disabled:bg-slate-100 ${className}`}
+          {...rest}
+        />
+      );
+    }
+
+    function Card({ className = '', children }) {
+      return (
+        <div className={`rounded-2xl bg-white shadow-sm ring-1 ring-slate-200/70 ${className}`}>
+          {children}
+        </div>
+      );
+    }
+
+    function Badge({ tone = 'slate', children }) {
+      const tones = {
+        slate: 'bg-slate-100 text-slate-600',
+        indigo: 'bg-indigo-50 text-indigo-700',
+        rose: 'bg-rose-50 text-rose-700',
+      };
+      return (
+        <span className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold ${tones[tone]}`}>
+          {children}
+        </span>
+      );
+    }
+
+    function Spinner({ className = 'h-4 w-4' }) {
+      return (
+        <svg className={`animate-spin ${className}`} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" className="opacity-25" />
+          <path d="M4 12a8 8 0 0 1 8-8" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
+        </svg>
+      );
+    }
+
+    // ========================================
+    // 🧩 Balance Game Components
+    // ========================================
+
+    // 질문 등록 폼. 두 선택지는 필수, 제목은 선택.
+    function QuestionForm({ saving, onSubmit }) {
+      const [title, setTitle] = useState('');
+      const [optionA, setOptionA] = useState('');
+      const [optionB, setOptionB] = useState('');
+      const firstRef = useRef(null);
+
+      const ready = optionA.trim() && optionB.trim();
+
+      async function handleSubmit(e) {
+        e.preventDefault();
+        if (!ready || saving) return;
+        const created = await onSubmit({
+          title: title.trim(),
+          optionA: optionA.trim(),
+          optionB: optionB.trim(),
+        });
+        // 등록에 성공했을 때만 폼을 비운다.
+        if (created) {
+          setTitle('');
+          setOptionA('');
+          setOptionB('');
+          if (firstRef.current) firstRef.current.focus();
+        }
+      }
+
+      return (
+        <Card className="mb-6 p-4 sm:p-5">
+          <form onSubmit={handleSubmit}>
+            <h2 className="text-sm font-bold text-slate-900">밸런스 질문 등록</h2>
+            <p className="mt-1 text-xs text-slate-500">둘 중 하나를 고르게 할 선택지를 적어 주세요.</p>
+
+            <div className="mt-4 space-y-3">
+              <Input
+                inputRef={firstRef}
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+                placeholder="제목 (선택) — 예: 평생 하나만 먹기"
+                disabled={saving}
+                maxLength={MAX_TITLE_LENGTH}
+                aria-label="질문 제목"
+              />
+
+              <div className="grid grid-cols-1 items-center gap-3 sm:grid-cols-[1fr_auto_1fr]">
+                <Input
+                  value={optionA}
+                  onChange={(e) => setOptionA(e.target.value)}
+                  placeholder="A: 첫 번째 선택지"
+                  disabled={saving}
+                  maxLength={MAX_OPTION_LENGTH}
+                  aria-label="첫 번째 선택지"
+                  className="focus:border-indigo-400 focus:ring-indigo-100"
+                />
+                <span className="hidden text-xs font-bold text-slate-400 sm:block">VS</span>
+                <Input
+                  value={optionB}
+                  onChange={(e) => setOptionB(e.target.value)}
+                  placeholder="B: 두 번째 선택지"
+                  disabled={saving}
+                  maxLength={MAX_OPTION_LENGTH}
+                  aria-label="두 번째 선택지"
+                  className="focus:border-rose-400 focus:ring-rose-100"
+                />
+              </div>
+            </div>
+
+            <div className="mt-4 flex justify-end">
+              <Button type="submit" size="lg" disabled={saving || !ready}>
+                {saving ? <Spinner /> : '⚖️ 질문 등록'}
+              </Button>
+            </div>
+          </form>
+        </Card>
+      );
+    }
+
+    // 한쪽 선택지 버튼 — 클릭하면 투표하고, 막대 너비로 퍼센트를 보여 준다.
+    function ChoiceButton({ side, label, votes, ratio, chosen, disabled, onVote }) {
+      const tone = side === 'A'
+        ? { fill: 'bg-indigo-500', ring: 'ring-indigo-500', text: 'text-indigo-700', tag: 'bg-indigo-600' }
+        : { fill: 'bg-rose-500', ring: 'ring-rose-500', text: 'text-rose-700', tag: 'bg-rose-600' };
+
+      return (
+        <button
+          type="button"
+          onClick={() => onVote(side)}
+          disabled={disabled}
+          aria-pressed={chosen}
+          className={`relative w-full overflow-hidden rounded-xl bg-slate-100 px-4 py-4 text-left transition
+            ring-2 ${chosen ? tone.ring : 'ring-transparent hover:ring-slate-300'}
+            disabled:cursor-not-allowed disabled:opacity-70`}
+        >
+          {/* 득표율만큼 채워지는 막대 */}
+          <div
+            className={`bar-fill absolute inset-y-0 left-0 ${tone.fill} ${chosen ? 'opacity-30' : 'opacity-[0.18]'}`}
+            style={{ width: `${ratio}%` }}
+            aria-hidden="true"
+          />
+
+          <div className="relative flex items-center justify-between gap-3">
+            <span className="flex min-w-0 items-center gap-2">
+              <span className={`shrink-0 rounded-md px-1.5 py-0.5 text-[11px] font-bold text-white ${tone.tag}`}>
+                {side}
+              </span>
+              <span className="truncate text-sm font-semibold text-slate-800">{label}</span>
+              {chosen && <span className={`shrink-0 text-xs font-bold ${tone.text}`}>내 선택</span>}
+            </span>
+            <span className="shrink-0 text-right">
+              <span className={`block text-lg font-extrabold leading-none ${tone.text}`}>{ratio}%</span>
+              <span className="text-[11px] text-slate-500">{votes}표</span>
+            </span>
+          </div>
+        </button>
+      );
+    }
+
+    function QuestionCard({ question, busy, onVote, onCancel }) {
+      const { votesA, votesB, totalVotes, myChoice } = question;
+      const ratioA = percent(votesA, totalVotes);
+      // 반올림 오차로 합이 101% 가 되지 않도록 B 는 나머지로 계산한다.
+      const ratioB = totalVotes ? 100 - ratioA : 50;
+
+      return (
+        <li className="animate-slide-in">
+          <Card className="p-4 transition hover:shadow-md sm:p-5">
+            <div className="flex flex-wrap items-start justify-between gap-2">
+              <h3 className="text-base font-bold text-slate-900">
+                {question.title || `${question.optionA} vs ${question.optionB}`}
+              </h3>
+              <time className="text-xs text-slate-400" dateTime={question.createdAt}>
+                {formatDate(question.createdAt)}
+              </time>
+            </div>
+
+            <div className="mt-4 space-y-2.5">
+              <ChoiceButton
+                side="A" label={question.optionA} votes={votesA} ratio={ratioA}
+                chosen={myChoice === 'A'} disabled={busy} onVote={() => onVote(question, 'A')}
+              />
+              <ChoiceButton
+                side="B" label={question.optionB} votes={votesB} ratio={ratioB}
+                chosen={myChoice === 'B'} disabled={busy} onVote={() => onVote(question, 'B')}
+              />
+            </div>
+
+            <div className="mt-3 flex flex-wrap items-center justify-between gap-2 border-t border-slate-100 pt-3">
+              <span className="flex items-center gap-2 text-xs text-slate-500">
+                <Badge>참여 {totalVotes}명</Badge>
+                {totalVotes === 0
+                  ? '아직 투표가 없습니다. 첫 표를 던져 보세요.'
+                  : myChoice
+                    ? '다른 쪽을 누르면 선택을 바꿀 수 있습니다.'
+                    : '둘 중 하나를 골라 주세요.'}
+              </span>
+              {myChoice && (
+                <Button variant="ghost" size="sm" disabled={busy} onClick={() => onCancel(question)}>
+                  {busy ? <Spinner className="h-3.5 w-3.5" /> : '투표 취소'}
+                </Button>
+              )}
+            </div>
+          </Card>
+        </li>
+      );
+    }
+
+    function EmptyState() {
+      return (
+        <div className="px-5 py-16 text-center">
+          <div className="text-4xl" aria-hidden="true">⚖️</div>
+          <p className="mt-3 text-sm text-slate-500">
+            아직 질문이 없습니다. 위에서 첫 밸런스 질문을 등록해 보세요.
+          </p>
+        </div>
+      );
+    }
+
+    // ========================================
+    // 🚀 App
+    // ========================================
+
+    function App() {
+      const [questions, setQuestions] = useState([]);
+      const [stats, setStats] = useState({ questionCount: 0, participantCount: 0, voteCount: 0 });
+      const [loading, setLoading] = useState(true);
+      const [error, setError] = useState('');
+      const [saving, setSaving] = useState(false);
+      const [busyId, setBusyId] = useState(null);
+
+      // 첫 로딩만 스피너를 띄우고, 폴링 갱신은 조용히 반영한다.
+      const load = useCallback(async ({ silent = false } = {}) => {
+        if (!silent) setLoading(true);
+        try {
+          const data = await api('/questions');
+          setQuestions(data.questions);
+          setStats(data.stats);
+          setError('');
+        } catch (err) {
+          if (!silent) setError(err.message);
+        } finally {
+          if (!silent) setLoading(false);
+        }
+      }, []);
+
+      useEffect(() => { load(); }, [load]);
+
+      // 다른 사람이 던진 표도 화면에 반영되도록 주기적으로 다시 읽는다.
+      // 탭이 백그라운드일 때는 쉬고, 돌아오면 즉시 한 번 갱신한다.
+      useEffect(() => {
+        const tick = () => { if (!document.hidden) load({ silent: true }); };
+        const timer = setInterval(tick, POLL_INTERVAL_MS);
+        document.addEventListener('visibilitychange', tick);
+        return () => {
+          clearInterval(timer);
+          document.removeEventListener('visibilitychange', tick);
+        };
+      }, [load]);
+
+      // 투표·취소 응답에는 그 질문의 최신 집계가 들어 있다.
+      function applyResult(data) {
+        setQuestions((prev) => prev.map((q) => (q.id === data.question.id ? data.question : q)));
+        setStats(data.stats);
+      }
+
+      async function handleCreate({ title, optionA, optionB }) {
+        setSaving(true);
+        try {
+          const data = await api('/questions', {
+            method: 'POST',
+            body: JSON.stringify({ title, optionA, optionB }),
+          });
+          setQuestions((prev) => [data.question, ...prev]);
+          setStats(data.stats);
+          setError('');
+          return true;
+        } catch (err) {
+          setError(err.message);
+          return false;
+        } finally {
+          setSaving(false);
+        }
+      }
+
+      async function handleVote(question, choice) {
+        if (question.myChoice === choice) return; // 같은 쪽을 다시 눌렀으면 그대로 둔다.
+        setBusyId(question.id);
+
+        // 서버 응답을 기다리지 않고 막대를 먼저 움직여 즉시 반응하게 한다.
+        setQuestions((prev) => prev.map((q) => {
+          if (q.id !== question.id) return q;
+          const next = { ...q, myChoice: choice };
+          if (q.myChoice === 'A') next.votesA -= 1;
+          if (q.myChoice === 'B') next.votesB -= 1;
+          if (choice === 'A') next.votesA += 1; else next.votesB += 1;
+          next.totalVotes = next.votesA + next.votesB;
+          return next;
+        }));
+
+        try {
+          applyResult(await api(`/questions/${question.id}/vote`, {
+            method: 'POST',
+            body: JSON.stringify({ choice }),
+          }));
+          setError('');
+        } catch (err) {
+          setError(err.message);
+          await load({ silent: true }); // 실패했으면 서버 값으로 되돌린다.
+        } finally {
+          setBusyId(null);
+        }
+      }
+
+      async function handleCancel(question) {
+        setBusyId(question.id);
+        try {
+          applyResult(await api(`/questions/${question.id}/vote`, { method: 'DELETE' }));
+          setError('');
+        } catch (err) {
+          setError(err.message);
+          await load({ silent: true });
+        } finally {
+          setBusyId(null);
+        }
+      }
+
+      return (
+        <div className="mx-auto flex min-h-screen max-w-3xl flex-col px-4 py-10 sm:py-16">
+          <header className="mb-6">
+            <h1 className="text-3xl font-extrabold tracking-tight text-slate-900">밸런스 게임</h1>
+            <p className="mt-1.5 text-sm text-slate-500">
+              질문을 등록하고 둘 중 하나에 투표하세요. 결과는 Supabase 데이터베이스에 저장되고
+              {' '}{POLL_INTERVAL_MS / 1000}초마다 다른 사람의 표까지 반영됩니다.
+            </p>
+
+            <div className="mt-4 flex flex-wrap gap-2">
+              <Badge tone="indigo">총 참여자 {stats.participantCount}명</Badge>
+              <Badge tone="rose">누적 투표 {stats.voteCount}표</Badge>
+              <Badge>질문 {stats.questionCount}개</Badge>
+            </div>
+          </header>
+
+          <QuestionForm saving={saving} onSubmit={handleCreate} />
+
+          {error && (
+            <p role="alert" className="mb-4 rounded-xl border border-rose-100 bg-rose-50 px-5 py-3 text-sm text-rose-700">
+              {error}
+            </p>
+          )}
+
+          {loading ? (
+            <div className="flex items-center justify-center gap-2 py-20 text-sm text-slate-400">
+              <Spinner /> 불러오는 중…
+            </div>
+          ) : questions.length === 0 ? (
+            <Card><EmptyState /></Card>
+          ) : (
+            <ul className="space-y-4">
+              {questions.map((question) => (
+                <QuestionCard
+                  key={question.id}
+                  question={question}
+                  busy={busyId === question.id}
+                  onVote={handleVote}
+                  onCancel={handleCancel}
+                />
+              ))}
+            </ul>
+          )}
+
+          <p className="mt-6 text-center text-xs text-slate-400">
+            투표는 브라우저마다 질문당 한 표 · 다른 쪽을 누르면 선택이 바뀝니다
+          </p>
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>
