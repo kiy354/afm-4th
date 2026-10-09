@@ -1,0 +1,9 @@
+{
+  "name": "coin-research",
+  "version": "1.0.0",
+  "private": true,
+  "description": "코인 시장 리서치 대시보드 - 백엔드 없는 단일 index.html (CDN React + Tailwind)",
+  "scripts": {
+    "start": "npx --yes serve . -l 6007"
+  }
+}

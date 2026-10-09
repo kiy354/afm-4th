@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>코인 시장 리서치 — 2026년 10월</title>
+
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <!-- ⚠️ 모든 CDN 버전 고정. Babel 은 반드시 7.x (8.x 는 인라인 text/babel 미지원) -->
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone@7.25.9/babel.min.js"></script>
+
+  <style>
+    /* 숫자가 세로로 정렬되도록 — 표와 지표 카드 전부 */
+    .nums { font-variant-numeric: tabular-nums; font-feature-settings: "tnum"; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-up { animation: fadeUp .2s ease-out both; }
+
+    @keyframes pulseDot {
+      0%, 100% { opacity: 1; }
+      50%      { opacity: .35; }
+    }
+    .live-dot { animation: pulseDot 1.8s ease-in-out infinite; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .animate-fade-up, .live-dot { animation: none; }
+    }
+
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-900 antialiased">
+  <div id="root"></div>
+
+  <script type="text/babel">
+const { useState, useEffect, useMemo, useCallback, useRef } = React;
+
+
+// ============================================================
+// 📌 수집 스냅숏 (2026-10-05 17:35 KST, Playwright 직접 수집)
+//
+// 실시간 API 로 가져올 수 없는 항목만 여기 둔다.
+// 금리·고용·이동평균·고래 포지션은 공개 API 가 없어서 기사 본문에서 수집했다.
+// 시세·도미넌스·공포탐욕·김치프리미엄은 전부 실시간으로 다시 계산한다.
+// ============================================================
+const SNAPSHOT = {
+  collectedAt: '2026-10-05 17:35 KST',
+
+  // 매크로 — CME 페드워치(10/04 기준) + 미 노동부 9월 고용보고서
+  fed: [
+    { label: '10월 FOMC(27~28일) 금리 동결', pct: 83.0, tone: 'accent' },
+    { label: '12월까지 누적 25bp 인상',       pct: 62.3, tone: 'warn' },
+    { label: '12월까지 누적 50bp 인상',       pct: 24.3, tone: 'warn' },
+  ],
+  jobs: [
+    { label: '9월 비농업 고용', value: '+2.9만명', dir: 'down',
+      note: '예상 9만 · 8월 13.3만(16.2만에서 하향 수정). 7월은 +2.1만 → −1.0만으로 수정' },
+    { label: '실업률', value: '4.2%', dir: 'down',
+      note: '예상 4.1% · 8월 4.1%' },
+    { label: '시간당 임금 (전년비)', value: '+3.0%', dir: 'flat',
+      note: '예상 3.2% · 월간 +0.1%(예상 0.3%)' },
+    { label: '미 국채 10년물', value: '5.17%', dir: 'flat',
+      note: '전일 대비 −7bp · 2년물 4.71%. 달러지수는 상승 추세 유지' },
+  ],
+
+  // 추세 — 이동평균 (CoinDesk, 2026-10-05)
+  ma: [
+    { label: '50일 이동평균',  value: 79495, note: '현재가가 이 선 위 — 조정 시 사수 여부가 관건' },
+    { label: '100일 이동평균', value: 79493, note: '상승 중, 200일선 돌파 직전' },
+    { label: '200일 이동평균', value: 79539, note: '100일선이 여기를 넘으면 2025년 이후 첫 완전 배열' },
+  ],
+  maPrecedents: [
+    { when: '2020-10-27', outcome: 'good', text: '$13,600 → 2021년 5월 $64,000 돌파' },
+    { when: '2023-11 초', outcome: 'good', text: '$35,000 → 2024년 5월 $73,000' },
+    { when: '2025-06',    outcome: 'bad',  text: '97일 유지, $106,000 → $112,000 소폭' },
+    { when: '2024-06',    outcome: 'bad',  text: '20일만 유지, −10%' },
+  ],
+
+  // 포지셔닝 — 하이퍼리퀴드 상위 1,000 계좌 추적 (블록미디어, 2026-10-05)
+  levels: [
+    { price: 95000, upper: 96000, kind: 'up',   label: '상방 트리거',
+      what: '고래 숏 청산가 밀집. 수천만 달러 규모. 돌파 시 강제 청산이 추가 매수 압력으로' },
+    { price: 87000, kind: 'flat', label: '직전 고점',
+      what: '8개월 최고가. 10월 2일 터치 후 반락' },
+    { price: 82000, kind: 'warn', label: '1차 지지',
+      what: '안착 실패 시 1차 타깃으로 거론되는 구간' },
+    { price: 79495, kind: 'warn', label: '50일선',
+      what: '추세 유지 여부의 기준선' },
+    { price: 77000, kind: 'down', label: '하방 트리거',
+      what: '$8,000만 이상 대형 롱 청산가 밀집. 빠르게 깨면 추가 하락 유발' },
+  ],
+  whales: [
+    { label: 'BTC 롱 / 숏 (금액)', value: '$798M / $906M',
+      note: '순숏 $108M. 계좌 수는 롱 62 vs 숏 58로 롱 우세' },
+    { label: 'ETH 롱 / 숏 (금액)', value: '$1.04B / $1.12B',
+      note: '순숏 $80M. 계좌 수는 롱 64 vs 숏 49' },
+    { label: '최대 숏 계좌', value: '$527M',
+      note: '0x5b5d…c060 — BTC $241M + ETH $286M. BTC 숏 청산가는 $135,000대 중반' },
+    { label: '2위 숏 계좌', value: '$368M',
+      note: '0xb83d…6e36 — BTC $156M + ETH $212M' },
+  ],
+
+  // 수급 — ETF (CoinMarketCap, 2026-10-02 집계)
+  etf: [
+    { label: '전체 암호화폐 ETF 운용자산', value: '$125.74B', note: 'BTC $111.10B · ETH $14.64B' },
+    { label: '시가총액 대비 ETF 보유 비중', value: '6.07%',   note: 'BTC 6.39% · ETH 4.40%' },
+    { label: '순유입 (10/2)', value: '+$13.8M',               note: '1주 +$296.2M · 1달 −$22.6M' },
+    { label: '연중 최강 / 최약 월', value: '+$5.48B / −$5.08B', note: '2026년 8월 / 2026년 6월. 월 단위 스윙이 크다' },
+  ],
+  etfFlows: [
+    { name: 'BTC', scope: '전체', flow: '+$30M', dir: 'up',   aum: '$111.10B', fee: null, prem: null },
+    { name: 'ETH', scope: '전체', flow: '−$17M', dir: 'down', aum: '$14.64B',  fee: null, prem: null },
+    { name: 'SOL', scope: '전체', flow: '+$1M',  dir: 'up',   aum: null,       fee: null, prem: null },
+    { name: 'XRP', scope: '전체', flow: '−$3M',  dir: 'down', aum: null,       fee: null, prem: null },
+    { name: 'HYPE', scope: '전체', flow: '+$3M', dir: 'up',   aum: null,       fee: null, prem: null },
+    { name: 'IBIT', scope: '블랙록',     flow: null, dir: null, aum: '$68.67B', fee: '0.25%', prem: '+0.19%' },
+    { name: 'FBTC', scope: '피델리티',   flow: null, dir: null, aum: '$15.66B', fee: '0.25%', prem: '+0.43%' },
+    { name: 'GBTC', scope: '그레이스케일', flow: null, dir: null, aum: '$10.67B', fee: '1.50%', prem: '−0.03%' },
+  ],
+
+  // 구조 변화 — 규제·제도
+  structure: [
+    { head: 'SEC가 투자자문사·펀드 대상 암호화폐 커스터디 규칙을 새로 제안했다.',
+      body: '기관 자금이 들어오는 데 필요한 배관 작업이다. 동시에 SEC는 명의개서 대리인 규정 현대화도 추진 중이다.' },
+    { head: '시장구조법(Clarity Act)은 교착 상태.',
+      body: '그럼에도 은행권의 암호화폐 관련 M&A는 멈추지 않고 있다. 반면 은행 단체는 암호화폐 신탁 인가를 내준 규제기관을 제소했다 — 제도권 내부에서도 노선이 갈린다.' },
+    { head: '토큰화가 올해의 실질 테마다.',
+      body: 'OKX와 뉴욕증권거래소 모회사 ICE의 합작사가 24시간 토큰화 미국 주식 거래를 신청했고, 블랙록은 토큰화가 포트폴리오를 어떻게 바꿀지 제시했다. 다만 토큰화 자산의 70%가 투명성 기준에 미달한다는 조사도 같이 나왔다.' },
+    { head: '아시아 규제도 움직인다.',
+      body: '홍콩이 연내 암호화폐 거래·커스터디 라이선스 법안을 제출할 예정이다.' },
+    { head: '11월 미국 선거가 정책 변수로 남아 있다.',
+      body: '암호화폐 정책 노선과 교착된 시장구조법의 향방에 영향을 준다.' },
+  ],
+
+  // 리스크
+  risks: [
+    { sev: 'high', head: '"빠지면 연준이 받쳐준다"는 전제로 매수하는 것',
+      body: '12월 25bp 인상 확률 62.3%, 10년물 5.17%. 2024~25년의 완화 기대 국면과 정반대다. 실질금리가 계속 오르면 $80,000~82,000 재테스트가 $90,000 돌파보다 유력하다는 게 현재 시장의 중론이다.' },
+    { sev: 'high', head: '$77,000~$95,000 사이에서 레버리지를 쓰는 것',
+      body: '양쪽 끝에 청산 물량이 밀집해 있다. 아래로 $77,000을 빠르게 깨면 $8,000만 이상 롱이 강제 청산되고, 위로 $95,000을 넘으면 중형 숏이 먼저 청산된다. 어느 방향이든 레버리지 포지션은 변동성 증폭의 재료가 된다.' },
+    { sev: 'mid', head: '90일 +150~290% 오른 알트를 지금 추격하는 것',
+      body: '알트코인 시즌 지수가 이미 60(1달 전 39)으로 알트 쪽에 기울었다. 90일 상위 성과는 PUMP·QNT·ENA·ZEC·UNI·RAY·VVV·ARB가 +150~290% 구간. 진입 타이밍으로는 늦은 자리다. ZEC는 7일 −14%로 이미 되돌림이 시작됐다.' },
+    { sev: 'mid', head: '이더리움을 비트코인과 같은 자산으로 취급하는 것',
+      body: 'ETH는 고점 대비 낙폭이 BTC보다 10%p 이상 깊고, ETF에서는 자금이 빠지고 있다. 3분기 랠리는 유동성 축소를 동반했고, 스테이킹 출금 대기 물량이 150만 개로 진입까지 약 25일이 걸린다 — 급락 시 빠져나올 수 없는 구조다.' },
+    { sev: 'mid', head: '신규 프로토콜·파생 플랫폼에 집중 투자하는 것',
+      body: '한때 TVL 20억 달러였던 이더리움 L2 Blast는 자산이 98% 급감한 뒤 서비스를 종료했다. 갤럭시 리서치에 따르면 폴리마켓 개인 투자자의 70%가 손실을 봤다. 플랫폼 자체의 생존 리스크와 개인의 승률을 함께 봐야 한다.' },
+    { sev: 'mid', head: 'SNS 루머로 매매를 결정하는 것',
+      body: '"10월 5일 폭락설"(베너 사이클·40조 달러 부채)이 X에서 확산됐다. 근거 없는 날짜 예측이다. 이런 서사는 위험선호 국면 후반에 양방향으로 늘어난다 — 공포도 탐욕도 같은 방식으로 퍼진다.' },
+  ],
+
+  // 변곡점 일정
+  timeline: [
+    { when: '수시',          head: '100일선이 200일선을 넘는지', body: '현재 $79,493 vs $79,539. 46달러 차이. 확정되면 2025년 이후 첫 완전 강세 배열.' },
+    { when: '10월 14일',     head: '미국 소비자물가지수(CPI)',   body: '장기 금리와 실질금리의 방향을 결정한다. 10년물 실질금리 3% 상회 여부가 감시선.' },
+    { when: '10월 27~28일',  head: '10월 FOMC',                 body: '동결 확률 83%. 동결 자체보다 성명서·기자회견의 12월 시그널이 중요하다.' },
+    { when: '11월',          head: '미국 선거',                 body: '암호화폐 정책 노선과 교착된 시장구조법의 향방에 영향.' },
+    { when: '12월 FOMC',     head: '25bp 인상 여부',            body: '현재 누적 확률 62.3%. 실현되면 유동성 환경이 한 단계 더 조여진다.' },
+    { when: '상시',          head: '김치 프리미엄 3% 돌파',      body: '3%를 넘으면 국내 개인 과열 경보로 읽는다.' },
+  ],
+
+  sources: [
+    ['CoinGecko API', '시세 · 시가총액 · 도미넌스 · 고점 대비 낙폭 (실시간)'],
+    ['Upbit API', '원화 체결가 · 52주 범위 (실시간)'],
+    ['open.er-api.com', '원/달러 환율 (실시간)'],
+    ['alternative.me', '공포·탐욕 지수 (실시간)'],
+    ['CoinMarketCap', '알트코인 시즌 지수 · ETF 자금 흐름 (수집 스냅숏)'],
+    ['CoinDesk', '이동평균 · 고용지표 · 실질금리 (수집 스냅숏)'],
+    ['블록미디어', '페드워치 · 하이퍼리퀴드 포지션 추적 (수집 스냅숏)'],
+  ],
+
+  // 실시간 호출이 전부 실패했을 때 쓰는 폴백 값
+  fallback: {
+    btcUsd: 86420, mcapUsd: 2.94e12, mcapChg: 1.23,
+    dom: { btc: 59.1, eth: 11.3, usdt: 6.3 },
+    fng: 68, fngPrev: 70, fx: 1344.61,
+  },
+
+  altSeason: { now: 60, prev: 60, week: 63, month: 39, high: 64, highAt: '2026-09-27', low: 14, lowAt: '2025-12-19' },
+};
+
+// 화면에 올릴 종목 — CoinGecko id ↔ 심볼 ↔ 한국어 이름
+const COINS = [
+  { id: 'bitcoin',     sym: 'BTC',  ko: '비트코인' },
+  { id: 'ethereum',    sym: 'ETH',  ko: '이더리움' },
+  { id: 'tether',      sym: 'USDT', ko: '테더', stable: true },
+  { id: 'binancecoin', sym: 'BNB',  ko: '비앤비' },
+  { id: 'ripple',      sym: 'XRP',  ko: '엑스알피' },
+  { id: 'usd-coin',    sym: 'USDC', ko: '유에스디코인', stable: true },
+  { id: 'solana',      sym: 'SOL',  ko: '솔라나' },
+  { id: 'tron',        sym: 'TRX',  ko: '트론' },
+  { id: 'dogecoin',    sym: 'DOGE', ko: '도지코인' },
+  { id: 'cardano',     sym: 'ADA',  ko: '카르다노' },
+  { id: 'chainlink',   sym: 'LINK', ko: '체인링크' },
+  { id: 'avalanche-2', sym: 'AVAX', ko: '아발란체' },
+];
+
+// 사이클 위치 바에 올릴 종목 (업비트 52주 범위가 있는 것만)
+const CYCLE_SYMS = ['BTC', 'ETH', 'XRP', 'SOL'];
+
+
+// ============================================================
+// 🔢 표시 서식
+// ============================================================
+const nf = (n, d = 0) =>
+  n == null || Number.isNaN(n) ? '—' : n.toLocaleString('ko-KR', { minimumFractionDigits: d, maximumFractionDigits: d });
+
+/** 달러 가격 — 자릿수에 따라 소수점 개수를 바꾼다 */
+function usd(n) {
+  if (n == null || Number.isNaN(n)) return '—';
+  if (n >= 1000) return '$' + nf(n, 2);
+  if (n >= 1)    return '$' + nf(n, 2);
+  if (n >= 0.01) return '$' + n.toFixed(4);
+  return '$' + n.toFixed(6);
+}
+
+/** 큰 달러 금액 — $1.73T / $332.9B / $22.1M */
+function usdBig(n) {
+  if (n == null || Number.isNaN(n)) return '—';
+  const abs = Math.abs(n);
+  if (abs >= 1e12) return '$' + (n / 1e12).toFixed(2) + 'T';
+  if (abs >= 1e9)  return '$' + (n / 1e9).toFixed(1) + 'B';
+  if (abs >= 1e6)  return '$' + (n / 1e6).toFixed(1) + 'M';
+  return '$' + nf(n);
+}
+
+/** 원화 금액 — 1억 1,655만원 / 3,676,000원 */
+function krw(n) {
+  if (n == null || Number.isNaN(n)) return '—';
+  if (n >= 1e8) {
+    const eok = Math.floor(n / 1e8);
+    const man = Math.floor((n % 1e8) / 1e4);
+    return `${nf(eok)}억 ${nf(man)}만원`;
+  }
+  return nf(Math.round(n)) + '원';
+}
+
+/** 퍼센트 — 색과 함께 부호·화살표를 같이 넣는다 (색만으로 방향을 표현하지 않기 위해) */
+function pctParts(n) {
+  if (n == null || Number.isNaN(n)) return { text: '—', dir: 'flat' };
+  const dir = n > 0.005 ? 'up' : n < -0.005 ? 'down' : 'flat';
+  const arrow = dir === 'up' ? '▲ +' : dir === 'down' ? '▼ −' : '';
+  return { text: arrow + Math.abs(n).toFixed(2) + '%', dir };
+}
+
+const DIR_TEXT = { up: 'text-emerald-700', down: 'text-rose-700', flat: 'text-slate-500' };
+const DIR_CHIP = {
+  up:   'bg-emerald-50 text-emerald-800 ring-emerald-200',
+  down: 'bg-rose-50 text-rose-800 ring-rose-200',
+  warn: 'bg-amber-50 text-amber-800 ring-amber-200',
+  flat: 'bg-slate-100 text-slate-600 ring-slate-300',
+};
+
+/** 공포·탐욕 지수 → 구간 이름 */
+function fngLabel(v) {
+  if (v == null) return { ko: '—', chip: 'flat' };
+  if (v >= 76) return { ko: '극단적 탐욕', chip: 'warn' };
+  if (v >= 56) return { ko: '탐욕',        chip: 'warn' };
+  if (v >= 46) return { ko: '중립',        chip: 'flat' };
+  if (v >= 26) return { ko: '공포',        chip: 'down' };
+  return { ko: '극단적 공포', chip: 'down' };
+}
+
+
+// ============================================================
+// 📡 실시간 데이터
+//
+// 전부 CORS 가 열려 있어서 브라우저에서 직접 부른다 (백엔드 없음).
+// 업비트 KRW 마켓 목록은 한 번만 받아서 모듈 변수에 캐시한다 —
+// 상장 안 된 심볼을 ticker 에 섞으면 요청 전체가 실패하기 때문.
+// ============================================================
+const GECKO = 'https://api.coingecko.com/api/v3';
+let krwMarketCache = null;
+
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+async function getJson(url, label) {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`${label} ${res.status}`);
+  return res.json();
+}
+
+async function getJsonRetry(url, label, tries = 2) {
+  let last;
+  for (let i = 0; i < tries; i++) {
+    try {
+      return await getJson(url, label);
+    } catch (e) {
+      last = e;
+      if (i < tries - 1) await sleep(500);
+    }
+  }
+  throw last;
+}
+
+/**
+ * 업비트만 서버를 한 번 거친다.
+ *
+ * 업비트는 `*.vercel.app` 출처의 브라우저 요청에 CORS 헤더를 주지 않는다.
+ * (똑같은 요청이 localhost 와 example.com 에서는 200 으로 돌아온다 — 출처로 막는 것이다.)
+ * 그래서 배포본에서는 같은 오리진의 `/api/upbit` 프록시를 쓴다.
+ *
+ * 다만 정적 서버로 로컬 실행하면 `/api/upbit` 가 없다. 그때는 업비트를 직접 부른다 —
+ * localhost 출처는 업비트가 허용하므로 이쪽이 그대로 동작한다.
+ */
+async function fetchUpbit(path, params = {}) {
+  const qs = new URLSearchParams({ path, ...params }).toString();
+  try {
+    return await getJsonRetry(`/api/upbit?${qs}`, '업비트 프록시');
+  } catch (e) {
+    const direct =
+      path === 'market/all'
+        ? 'https://api.upbit.com/v1/market/all?isDetails=false'
+        : `https://api.upbit.com/v1/ticker?markets=${params.markets}`;
+    return getJsonRetry(direct, '업비트 직접');
+  }
+}
+
+/**
+ * KRW 마켓 목록 — 자주 바뀌지 않으므로 하루 동안 localStorage 에 둔다.
+ * 매 로드마다 받으면 업비트를 연달아 두 번(목록 + 시세) 때리게 되고,
+ * 그 두 번째가 레이트리밋에 걸려 김치 프리미엄이 통째로 비었다.
+ */
+const KRW_CACHE_KEY = 'coin-research.krwMarkets.v1';
+const KRW_CACHE_TTL = 24 * 60 * 60 * 1000;
+
+function readKrwCache() {
+  try {
+    const raw = localStorage.getItem(KRW_CACHE_KEY);
+    if (!raw) return null;
+    const { at, syms } = JSON.parse(raw);
+    if (!Array.isArray(syms) || Date.now() - at > KRW_CACHE_TTL) return null;
+    return new Set(syms);
+  } catch { return null; }
+}
+
+function writeKrwCache(set) {
+  try {
+    localStorage.setItem(KRW_CACHE_KEY, JSON.stringify({ at: Date.now(), syms: [...set] }));
+  } catch { /* 시크릿 모드 등 — 캐시 없이도 동작한다 */ }
+}
+
+async function fetchKrwMarkets() {
+  if (krwMarketCache) return krwMarketCache;
+
+  const cached = readKrwCache();
+  if (cached) { krwMarketCache = cached; return cached; }
+
+  const list = await fetchUpbit('market/all');
+  krwMarketCache = new Set(
+    list.filter((m) => m.market.startsWith('KRW-')).map((m) => m.market.slice(4))
+  );
+  writeKrwCache(krwMarketCache);
+  return krwMarketCache;
+}
+
+async function fetchLive() {
+  const ids = COINS.map((c) => c.id).join(',');
+
+  // 업비트 ticker 는 마켓 목록을 먼저 알아야 하므로 2단계로 나눈다
+  const krwSet = await fetchKrwMarkets().catch(() => null);
+  const wanted = COINS.filter((c) => krwSet && krwSet.has(c.sym)).map((c) => 'KRW-' + c.sym);
+
+  const jobs = [
+    getJson(`${GECKO}/coins/markets?vs_currency=usd&ids=${ids}&order=market_cap_desc&price_change_percentage=1h,24h,7d`, '시세'),
+    getJson(`${GECKO}/global`, '글로벌'),
+    getJson('https://api.alternative.me/fng/?limit=2', '공포탐욕'),
+    getJson('https://open.er-api.com/v6/latest/USD', '환율'),
+    wanted.length
+      ? fetchUpbit('ticker', { markets: wanted.join(',') })
+      : Promise.resolve([]),
+  ];
+
+  const [mk, gl, fg, fx, up] = await Promise.allSettled(jobs);
+  const val = (r) => (r.status === 'fulfilled' ? r.value : null);
+  const failed = ['시세', '글로벌', '공포탐욕', '환율', '업비트']
+    .filter((_, i) => [mk, gl, fg, fx, up][i].status === 'rejected');
+
+  const markets = val(mk) || [];
+  const upbit = val(up) || [];
+  const global = val(gl) && val(gl).data;
+  const fng = val(fg) && val(fg).data;
+  const rates = val(fx) && val(fx).rates;
+
+  // 심볼 기준으로 해외/국내 시세를 합친다
+  const bySym = {};
+  for (const c of COINS) {
+    const m = markets.find((x) => x.id === c.id);
+    const u = upbit.find((x) => x.market === 'KRW-' + c.sym);
+    if (!m && !u) continue;
+    bySym[c.sym] = {
+      ...c,
+      usd: m ? m.current_price : null,
+      chg1h: m ? m.price_change_percentage_1h_in_currency : null,
+      chg24h: m ? m.price_change_percentage_24h_in_currency : null,
+      chg7d: m ? m.price_change_percentage_7d_in_currency : null,
+      mcap: m ? m.market_cap : null,
+      vol: m ? m.total_volume : null,
+      athPct: m ? m.ath_change_percentage : null,
+      ath: m ? m.ath : null,
+      krwNow: u ? u.trade_price : null,
+      krwChg: u ? u.signed_change_rate * 100 : null,
+      krwVol24h: u ? u.acc_trade_price_24h : null,
+      krwHigh52: u ? u.highest_52_week_price : null,
+      krwHigh52At: u ? u.highest_52_week_date : null,
+      krwLow52: u ? u.lowest_52_week_price : null,
+      krwLow52At: u ? u.lowest_52_week_date : null,
+    };
+  }
+
+  const fxKrw = rates ? rates.KRW : null;
+
+  // 김치 프리미엄 = 업비트 원화가 ÷ (해외 달러가 × 환율) − 1
+  for (const s of Object.keys(bySym)) {
+    const c = bySym[s];
+    c.abroadKrw = c.usd != null && fxKrw ? c.usd * fxKrw : null;
+    c.kimchi = c.krwNow != null && c.abroadKrw ? (c.krwNow / c.abroadKrw - 1) * 100 : null;
+  }
+
+  return {
+    bySym,
+    fx: fxKrw,
+    mcap: global ? global.total_market_cap.usd : null,
+    mcapChg: global ? global.market_cap_change_percentage_24h_usd : null,
+    dom: global ? global.market_cap_percentage : null,
+    fng: fng && fng[0] ? Number(fng[0].value) : null,
+    fngPrev: fng && fng[1] ? Number(fng[1].value) : null,
+    failed,
+    at: new Date(),
+  };
+}
+
+
+// ============================================================
+// 🧩 공통 컴포넌트
+// ============================================================
+
+function Chip({ tone = 'flat', children }) {
+  return (
+    <span className={`inline-flex items-center rounded px-1.5 py-0.5 text-[11px] font-medium ring-1 ring-inset ${DIR_CHIP[tone]}`}>
+      {children}
+    </span>
+  );
+}
+
+function Pct({ value, className = '' }) {
+  const { text, dir } = pctParts(value);
+  return <span className={`nums ${DIR_TEXT[dir]} ${className}`}>{text}</span>;
+}
+
+function Kpi({ label, value, sub, dim }) {
+  return (
+    <div className="bg-white p-4">
+      <div className="text-[10.5px] font-medium uppercase tracking-[0.1em] text-slate-500">{label}</div>
+      <div className={`nums mt-1.5 text-2xl font-semibold tracking-tight ${dim ? 'text-slate-400' : 'text-slate-900'}`}>
+        {value}
+      </div>
+      {sub && <div className="mt-1 text-xs text-slate-600">{sub}</div>}
+    </div>
+  );
+}
+
+function SectionHead({ eyebrow, title, children }) {
+  return (
+    <div className="mb-5">
+      <div className="text-[11px] font-semibold uppercase tracking-[0.14em] text-sky-800">{eyebrow}</div>
+      <h2 className="mt-1 text-xl font-semibold tracking-tight text-slate-900">{title}</h2>
+      {children && <p className="mt-2 max-w-[70ch] text-sm leading-relaxed text-slate-600">{children}</p>}
+    </div>
+  );
+}
+
+function Card({ className = '', children }) {
+  return <div className={`border border-slate-300 bg-white ${className}`}>{children}</div>;
+}
+
+/** 라벨 + 큰 숫자 + 설명 — 격자 */
+function StatGrid({ items, cols = 2 }) {
+  return (
+    <div className={`grid gap-px border border-slate-300 bg-slate-300 sm:grid-cols-${cols}`}>
+      {items.map((it) => (
+        <div key={it.label} className="bg-white p-4">
+          <div className="text-[10.5px] font-medium uppercase tracking-[0.09em] text-slate-500">{it.label}</div>
+          <div className={`nums mt-1 text-lg font-semibold ${it.dir ? DIR_TEXT[it.dir] : 'text-slate-900'}`}>
+            {it.value}
+          </div>
+          {it.note && <p className="mt-1 text-xs leading-relaxed text-slate-600">{it.note}</p>}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+/** 52주 저점↔고점 사이에서 현재가가 어디인지 */
+function RangeBar({ coin }) {
+  const { krwLow52: lo, krwHigh52: hi, krwNow: now } = coin;
+  if (lo == null || hi == null || now == null || hi <= lo) return null;
+
+  const pos = Math.min(100, Math.max(0, ((now - lo) / (hi - lo)) * 100));
+  const fromHigh = (now / hi - 1) * 100;
+  const fromLow = (now / lo - 1) * 100;
+
+  return (
+    <div>
+      <div className="mb-2 flex items-baseline justify-between gap-3">
+        <div className="text-sm font-semibold text-slate-900">
+          {coin.ko} <span className="nums ml-1 text-[11px] font-normal text-slate-500">{coin.sym}</span>
+        </div>
+        <div className="nums text-sm font-semibold text-slate-900">{krw(now)}</div>
+      </div>
+
+      <div className="relative h-2.5 rounded-sm border border-slate-300 bg-slate-200">
+        <div className="absolute inset-y-0 left-0 rounded-l-sm bg-sky-800/85" style={{ width: pos + '%' }} />
+        <div
+          className="absolute -top-1 -bottom-1 w-[3px] -translate-x-1/2 bg-slate-900"
+          style={{ left: pos + '%' }}
+          aria-hidden="true"
+        />
+      </div>
+
+      <div className="nums mt-2 flex flex-wrap justify-between gap-x-3 gap-y-1 text-[11px] text-slate-500">
+        <span>저점 {krw(lo)} <span className="opacity-60">{coin.krwLow52At}</span></span>
+        <span className="font-medium text-slate-700">
+          구간 내 {pos.toFixed(1)}% · 52주 고점 대비{' '}
+          <span className={DIR_TEXT[fromHigh < 0 ? 'down' : 'up']}>
+            {fromHigh < 0 ? '▼ −' : '▲ +'}{Math.abs(fromHigh).toFixed(1)}%
+          </span>
+          {' · '}52주 저점 대비{' '}
+          <span className={DIR_TEXT[fromLow > 0 ? 'up' : 'down']}>
+            {fromLow > 0 ? '▲ +' : '▼ −'}{Math.abs(fromLow).toFixed(1)}%
+          </span>
+        </span>
+        <span>고점 {krw(hi)} <span className="opacity-60">{coin.krwHigh52At}</span></span>
+      </div>
+    </div>
+  );
+}
+
+/** 확률 막대 (페드워치) */
+function ProbBar({ label, pct, tone }) {
+  const fill = tone === 'warn' ? 'bg-amber-600' : 'bg-sky-800';
+  return (
+    <div>
+      <div className="mb-1.5 flex items-baseline justify-between gap-3">
+        <span className="text-sm text-slate-700">{label}</span>
+        <span className="nums text-sm font-semibold text-slate-900">{pct.toFixed(1)}%</span>
+      </div>
+      <div className="h-2 overflow-hidden rounded-sm bg-slate-200">
+        <div className={`h-full ${fill}`} style={{ width: pct + '%' }} />
+      </div>
+    </div>
+  );
+}
+
+/** 청산 레벨 사다리 — $74K~$98K 축에 현재가를 꽂는다 */
+function LevelLadder({ btcUsd }) {
+  const LO = 74000, HI = 98000;
+  const at = (p) => ((Math.min(HI, Math.max(LO, p)) - LO) / (HI - LO)) * 100;
+  const nowPos = btcUsd ? at(btcUsd) : null;
+
+  return (
+    <div>
+      <div className="relative mt-7 h-12 border border-slate-300 bg-white">
+        <div className="absolute inset-y-0 bg-rose-50"   style={{ left: 0, width: at(79495) + '%' }} />
+        <div className="absolute inset-y-0 bg-slate-100" style={{ left: at(79495) + '%', width: at(95000) - at(79495) + '%' }} />
+        <div className="absolute inset-y-0 bg-emerald-50" style={{ left: at(95000) + '%', right: 0 }} />
+
+        <span className="absolute left-1.5 top-1/2 -translate-y-1/2 text-[10px] font-medium leading-tight text-rose-700">
+          롱 청산<br />밀집
+        </span>
+        {/* 가운데 라벨은 두지 않는다 — 현재가 핀이 대체로 중앙에 와서 글자와 겹친다 */}
+        <span className="absolute right-1.5 top-1/2 -translate-y-1/2 text-right text-[10px] font-medium leading-tight text-emerald-700">
+          숏 압박<br />시작
+        </span>
+
+        {nowPos != null && (
+          <div className="absolute -top-3.5 bottom-0 z-10 w-[3px] -translate-x-1/2 bg-slate-900" style={{ left: nowPos + '%' }}>
+            <span className="nums absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap text-[11px] font-semibold text-slate-900">
+              현재 {usd(btcUsd)}
+            </span>
+          </div>
+        )}
+      </div>
+
+      <div className="nums relative h-5 text-[11px] text-slate-500">
+        {[75000, 80000, 85000, 90000, 95000].map((p) => (
+          <span key={p} className="absolute top-0.5 -translate-x-1/2" style={{ left: at(p) + '%' }}>
+            ${p / 1000}K
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+/** 가로 스크롤 되는 표 껍데기 */
+function TableWrap({ caption, children }) {
+  return (
+    <div>
+      {caption && <p className="mb-2 text-xs text-slate-500">{caption}</p>}
+      <div className="overflow-x-auto border border-slate-300 bg-white">{children}</div>
+    </div>
+  );
+}
+
+const TH = ({ children, align = 'right' }) => (
+  <th className={`whitespace-nowrap border-b border-slate-400 bg-slate-100 px-3 py-2 text-${align} text-[10.5px] font-medium uppercase tracking-[0.08em] text-slate-500`}>
+    {children}
+  </th>
+);
+const TD = ({ children, align = 'right', className = '' }) => (
+  <td className={`nums whitespace-nowrap border-b border-slate-200 px-3 py-2 text-${align} text-[13px] ${className}`}>
+    {children}
+  </td>
+);
+
+
+// ============================================================
+// 📄 페이지 — 개요
+// ============================================================
+function Overview({ live }) {
+  const btc = live.bySym.BTC;
+  const fng = live.fng ?? SNAPSHOT.fallback.fng;
+  const fngPrev = live.fngPrev ?? SNAPSHOT.fallback.fngPrev;
+  const fl = fngLabel(fng);
+  const dom = live.dom || SNAPSHOT.fallback.dom;
+  const kimchi = btc && btc.kimchi;
+
+  const cycle = CYCLE_SYMS.map((s) => live.bySym[s]).filter((c) => c && c.krwHigh52 && c.krwLow52);
+  const avgPos = cycle.length
+    ? cycle.reduce((a, c) => a + ((c.krwNow - c.krwLow52) / (c.krwHigh52 - c.krwLow52)) * 100, 0) / cycle.length
+    : null;
+
+  return (
+    <div className="space-y-12 animate-fade-up">
+      {/* 핵심 판단 */}
+      <section>
+        <div className="border border-slate-300 border-l-[3px] border-l-sky-800 bg-white p-6 sm:p-7">
+          <h2 className="text-sm font-semibold uppercase tracking-[0.08em] text-sky-800">핵심 판단</h2>
+          <div className="mt-3 space-y-3 text-[15.5px] leading-relaxed text-slate-800">
+            <p>
+              비트코인은 2025년 10월 7일 사상 최고가 <b className="font-semibold">{usd(btc && btc.ath)}</b>에서{' '}
+              <b className="font-semibold text-rose-700">{btc && btc.athPct != null ? btc.athPct.toFixed(1) + '%' : '약 −32%'}</b>{' '}
+              내려온 자리에 있다. 2026년 6~8월에 바닥을 찍고 3분기에 40% 넘게 올라온{' '}
+              <b className="font-semibold">회복 국면</b>이며, 주요 종목이 52주 저점에서 고점까지의 구간 중{' '}
+              <b className="font-semibold">평균 {avgPos != null ? avgPos.toFixed(0) : '28'}% 지점</b>에 몰려 있다. 회복은 아직 초·중반이다.
+            </p>
+            <p>
+              추세 지표는 확실히 돌아섰다. 50·100·200일 이동평균이 2025년 이후 처음으로 완전 강세 배열에{' '}
+              <b className="font-semibold">46달러 차이</b>로 다가섰고, 공포·탐욕 지수 {fng}({fl.ko}), 알트코인 시즌 지수{' '}
+              {SNAPSHOT.altSeason.now}, USDT 도미넌스 {dom.usdt ? dom.usdt.toFixed(1) : '6.3'}%로 하락, ETF 3주 연속 순유입이 모두 같은 방향을 가리킨다.
+            </p>
+            <p>
+              문제는 매크로다. 지금은 <b className="font-semibold">금리 인하가 아니라 인상 사이클</b>이다. 12월까지 25bp 인상
+              확률이 62.3%, 10년물은 5.17%. "빠지면 연준이 받쳐준다"는 2024~25년의 전제가 성립하지 않는다. 여기에 레버리지
+              시장에서는 고래가 <b className="font-semibold">순숏</b>이라, 위로는 $95,000 숏 스퀴즈, 아래로는 $77,000 롱
+              청산이 각각 증폭 장치로 깔려 있다. 방향이 아니라 <b className="font-semibold">변동성</b>에 대비할 국면이다.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 지표 스트립 */}
+      <section>
+        <SectionHead eyebrow="지표" title="한눈에 보는 현재 상태" />
+        <div className="grid grid-cols-2 gap-px border border-slate-300 bg-slate-300 sm:grid-cols-3">
+          <Kpi
+            label="BTC"
+            value={usd(btc && btc.usd)}
+            sub={<><Pct value={btc && btc.chg24h} /> 24h · {krw(btc && btc.krwNow)}</>}
+          />
+          <Kpi
+            label="전체 시가총액"
+            value={usdBig(live.mcap ?? SNAPSHOT.fallback.mcapUsd)}
+            sub={<><Pct value={live.mcapChg ?? SNAPSHOT.fallback.mcapChg} /> 24h</>}
+          />
+          <Kpi
+            label="공포·탐욕 지수"
+            value={fng}
+            sub={<><Chip tone={fl.chip}>{fl.ko}</Chip> <span className="nums">전일 {fngPrev}</span></>}
+          />
+          <Kpi
+            label="BTC 도미넌스"
+            value={(dom.btc ?? 59.1).toFixed(1) + '%'}
+            sub="60% 복귀 임박 · 위험선호 신호"
+          />
+          <Kpi
+            label="알트코인 시즌 지수"
+            value={SNAPSHOT.altSeason.now}
+            sub={<><Chip tone="warn">알트 우위</Chip> <span className="nums">1달 전 {SNAPSHOT.altSeason.month}</span></>}
+          />
+          <Kpi
+            label="김치 프리미엄 (BTC)"
+            value={kimchi != null ? (kimchi >= 0 ? '+' : '−') + Math.abs(kimchi).toFixed(2) + '%' : '—'}
+            sub={
+              kimchi == null ? '계산 불가'
+              : <><Chip tone={kimchi >= 3 ? 'warn' : 'flat'}>{kimchi >= 3 ? '국내 과열' : '중립'}</Chip> 환율 {nf(live.fx ?? SNAPSHOT.fallback.fx, 2)}원</>
+            }
+          />
+        </div>
+      </section>
+
+      {/* 사이클 위치 */}
+      <section>
+        <SectionHead eyebrow="사이클" title="52주 범위에서 지금 어디인가">
+          52주 저점(왼쪽)과 52주 최고가(오른쪽) 사이에서 현재가의 위치. 업비트 원화 체결가 기준. 주요 종목이 모두 하단
+          1/4~1/3 구간에 몰려 있다 — 개별 종목 이슈가 아니라 사이클 전체가 같은 자리에 있다는 뜻이다.
+        </SectionHead>
+
+        {cycle.length ? (
+          <div className="space-y-6">
+            {cycle.map((c) => <RangeBar key={c.sym} coin={c} />)}
+          </div>
+        ) : (
+          <Card className="p-5 text-sm text-slate-500">업비트 52주 데이터를 불러오지 못했습니다.</Card>
+        )}
+
+        <ul className="mt-6 space-y-2.5 text-sm leading-relaxed text-slate-600">
+          <li className="relative pl-4 before:absolute before:left-0 before:top-[9px] before:h-1 before:w-1 before:bg-slate-400">
+            <b className="font-semibold text-slate-900">고점은 2025년 10월 초, 저점은 2026년 6~8월.</b>{' '}
+            주요 종목의 52주 최고가 날짜가 2025-10-07~09에 겹친다. 직전 사이클 고점이 정확히 1년 전이다.
+          </li>
+          <li className="relative pl-4 before:absolute before:left-0 before:top-[9px] before:h-1 before:w-1 before:bg-slate-400">
+            <b className="font-semibold text-slate-900">반등 탄력은 알트가 크고, 손실 복구 난이도도 알트가 높다.</b>{' '}
+            고점 대비 낙폭은 BTC가 가장 작지만, 저점 대비 상승률은 알트가 크다. 같은 회복이 아니다.
+          </li>
+        </ul>
+      </section>
+
+      {/* 추세 */}
+      <section>
+        <SectionHead eyebrow="추세" title="1년 만의 이동평균 완전 강세 배열, 하루 차이">
+          50일선이 100일선 위, 100일선이 200일선 위에 놓이면 단기·중기·장기 추세가 동시에 상승을 가리킨다. 지금 100일선이
+          200일선을 46달러 차이로 쫓고 있다.
+        </SectionHead>
+
+        <StatGrid
+          cols={3}
+          items={SNAPSHOT.ma.map((m) => ({ label: m.label, value: usd(m.value), note: m.note }))}
+        />
+
+        <Card className="mt-5 p-5">
+          <p className="text-sm font-semibold text-slate-900">이 신호의 과거 성적은 반반이다</p>
+          <div className="mt-3 grid gap-px bg-slate-300 sm:grid-cols-2">
+            {SNAPSHOT.maPrecedents.map((p) => (
+              <div key={p.when} className="bg-white p-3">
+                <div className="flex items-center gap-2">
+                  <Chip tone={p.outcome === 'good' ? 'up' : 'down'}>{p.outcome === 'good' ? '성공' : '실패'}</Chip>
+                  <span className="nums text-xs font-medium text-slate-700">{p.when}</span>
+                </div>
+                <p className="nums mt-1.5 text-[13px] text-slate-600">{p.text}</p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-4 text-sm leading-relaxed text-slate-600">
+            배열 자체보다 <b className="font-semibold text-slate-900">조정 때 50일선($79,495)을 지키는지</b>가 실제 판단
+            기준이다.
+          </p>
+        </Card>
+      </section>
+    </div>
+  );
+}
+
+
+// ============================================================
+// 📄 페이지 — 시세
+// ============================================================
+function Market({ live }) {
+  const rows = COINS.map((c) => live.bySym[c.sym]).filter(Boolean);
+  const kimchiRows = rows.filter((c) => c.kimchi != null && !c.stable);
+
+  return (
+    <div className="space-y-12 animate-fade-up">
+      <section>
+        <SectionHead eyebrow="시세" title="시가총액 상위 종목">
+          등락은 색과 함께 부호·화살표로 표시했다 (색만으로 방향을 구분하지 않기 위해). CoinGecko 실시간.
+        </SectionHead>
+
+        <TableWrap>
+          <table className="w-full min-w-[720px]">
+            <thead>
+              <tr>
+                <TH align="left">종목</TH>
+                <TH>가격</TH>
+                <TH>24시간</TH>
+                <TH>7일</TH>
+                <TH>사상 최고 대비</TH>
+                <TH>시가총액</TH>
+                <TH>24시간 거래대금</TH>
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map((c) => (
+                <tr key={c.sym} className="hover:bg-slate-50">
+                  <TD align="left" className="font-sans font-medium">
+                    {c.ko} <span className="nums ml-1 text-[11px] font-normal text-slate-500">{c.sym}</span>
+                  </TD>
+                  <TD>{usd(c.usd)}</TD>
+                  <TD><Pct value={c.chg24h} /></TD>
+                  <TD><Pct value={c.chg7d} /></TD>
+                  <TD><Pct value={c.athPct} /></TD>
+                  <TD>{usdBig(c.mcap)}</TD>
+                  <TD>{usdBig(c.vol)}</TD>
+                </tr>
+              ))}
+              {!rows.length && (
+                <tr><TD align="left" className="text-slate-500">시세를 불러오지 못했습니다.</TD></tr>
+              )}
+            </tbody>
+          </table>
+        </TableWrap>
+      </section>
+
+      <section>
+        <SectionHead eyebrow="국내외" title="김치 프리미엄">
+          업비트 원화 체결가 ÷ (해외 달러가 × 환율 {nf(live.fx ?? SNAPSHOT.fallback.fx, 2)}원). 스테이블코인은 제외했다.
+        </SectionHead>
+
+        <TableWrap>
+          <table className="w-full min-w-[640px]">
+            <thead>
+              <tr>
+                <TH align="left">종목</TH>
+                <TH>업비트</TH>
+                <TH>해외 환산</TH>
+                <TH>프리미엄</TH>
+                <TH>업비트 24시간 거래대금</TH>
+              </tr>
+            </thead>
+            <tbody>
+              {kimchiRows.map((c) => (
+                <tr key={c.sym} className="hover:bg-slate-50">
+                  <TD align="left" className="font-sans font-medium">
+                    {c.ko} <span className="nums ml-1 text-[11px] font-normal text-slate-500">{c.sym}</span>
+                  </TD>
+                  <TD>{nf(c.krwNow)}원</TD>
+                  <TD className="text-slate-500">{nf(Math.round(c.abroadKrw))}원</TD>
+                  <TD><Pct value={c.kimchi} className="font-semibold" /></TD>
+                  <TD>{c.krwVol24h ? nf(Math.round(c.krwVol24h / 1e8), 0) + '억원' : '—'}</TD>
+                </tr>
+              ))}
+              {!kimchiRows.length && (
+                <tr><TD align="left" className="text-slate-500">업비트 시세를 불러오지 못했습니다.</TD></tr>
+              )}
+            </tbody>
+          </table>
+        </TableWrap>
+
+        <Card className="mt-4 bg-slate-50 p-4">
+          <p className="text-sm leading-relaxed text-slate-700">
+            <b className="font-semibold">프리미엄 0.3% 수준은 사실상 중립이다.</b> 국내 개인 자금이 과열됐던 국면에서는
+            3~10%까지 벌어졌다. 지금의 상승은 국내 개인이 아니라 해외·기관 쪽에서 만들어지고 있다는 뜻이다. 역으로
+            프리미엄이 <b className="font-semibold">3%를 넘기 시작하면 국내 과열 경보</b>로 읽어야 한다.
+          </p>
+        </Card>
+      </section>
+
+      <section>
+        <SectionHead eyebrow="수급" title="ETF는 들어오지만 비트코인에만">
+          CoinMarketCap 2026-10-02 집계 기준 수집 스냅숏. ETF 자금 흐름은 공개 실시간 API가 없다.
+        </SectionHead>
+
+        <StatGrid items={SNAPSHOT.etf} />
+
+        <TableWrap caption="코인별 ETF 순유입 및 주요 비트코인 ETF">
+          <table className="w-full min-w-[600px]">
+            <thead>
+              <tr>
+                <TH align="left">구분</TH>
+                <TH>순유입</TH>
+                <TH>운용자산</TH>
+                <TH>보수</TH>
+                <TH>프리미엄</TH>
+              </tr>
+            </thead>
+            <tbody>
+              {SNAPSHOT.etfFlows.map((f) => (
+                <tr key={f.name + f.scope} className="hover:bg-slate-50">
+                  <TD align="left" className="font-sans font-medium">
+                    {f.name} <span className="nums ml-1 text-[11px] font-normal text-slate-500">{f.scope}</span>
+                  </TD>
+                  <TD className={f.dir ? DIR_TEXT[f.dir] : ''}>
+                    {f.flow ? (f.dir === 'up' ? '▲ ' : '▼ ') + f.flow.replace(/^[+−]/, '') : '—'}
+                  </TD>
+                  <TD>{f.aum || '—'}</TD>
+                  <TD>{f.fee || '—'}</TD>
+                  <TD className={f.prem ? (f.prem.startsWith('−') ? DIR_TEXT.down : DIR_TEXT.up) : ''}>{f.prem || '—'}</TD>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </TableWrap>
+
+        <ul className="mt-5 space-y-2.5 text-sm leading-relaxed text-slate-600">
+          <li className="relative pl-4 before:absolute before:left-0 before:top-[9px] before:h-1 before:w-1 before:bg-slate-400">
+            <b className="font-semibold text-slate-900">자금은 비트코인으로 선별적으로 들어온다.</b> 미국 비트코인 ETF는
+            3주 연속 순유입(블랙록 주도)인 반면 이더리움·솔라나에서는 자금이 빠졌다. BTC 도미넌스 상승이 이 흐름의 결과다.
+          </li>
+          <li className="relative pl-4 before:absolute before:left-0 before:top-[9px] before:h-1 before:w-1 before:bg-slate-400">
+            <b className="font-semibold text-slate-900">GBTC의 1.50% 보수는 IBIT·FBTC의 6배다.</b> 같은 비트코인 노출을
+            사는 데 보수 차이가 연 1.25%p. 미국 ETF에 접근할 수 있다면 비교해볼 지점이다.
+          </li>
+        </ul>
+      </section>
+    </div>
+  );
+}
+
+
+// ============================================================
+// 📄 페이지 — 매크로
+// ============================================================
+function Macro() {
+  return (
+    <div className="space-y-12 animate-fade-up">
+      <section>
+        <SectionHead eyebrow="매크로" title="인하가 아니라 인상 사이클">
+          9월 고용이 급격히 둔화하면서 10월 인상 기대는 꺾였지만, 12월 인상 기대는 여전히 높다. 이번 완화는 "인상 중단"이
+          아니라 "인상 연기"로 읽히고 있다.
+        </SectionHead>
+
+        <Card className="p-5">
+          <div className="space-y-4">
+            {SNAPSHOT.fed.map((f) => <ProbBar key={f.label} {...f} />)}
+          </div>
+          <p className="mt-4 border-t border-slate-200 pt-3 text-xs leading-relaxed text-slate-500">
+            CME 페드워치 2026-10-04 기준. 몇 주 전 70%를 넘던 10월 인상 확률이 윌리엄스 뉴욕 연은 총재("서두를 필요 없다",
+            9/29)와 제퍼슨 부의장의 신중론 이후 28% 수준까지 후퇴했다.
+          </p>
+        </Card>
+      </section>
+
+      <section>
+        <SectionHead eyebrow="지표" title="9월 고용보고서와 금리" />
+        <StatGrid items={SNAPSHOT.jobs} />
+      </section>
+
+      <section>
+        <SectionHead eyebrow="해석" title="무엇이 가격을 누르고 있나" />
+        <ul className="space-y-3 text-sm leading-relaxed text-slate-600">
+          <li className="relative pl-4 before:absolute before:left-0 before:top-[9px] before:h-1 before:w-1 before:bg-slate-400">
+            <b className="font-semibold text-slate-900">고용은 식고 물가는 높다.</b> 연준이 최대 고용과 물가 안정 사이에서
+            균형을 다시 잡아야 하는 상황이고, 이게 10월 동결 기대의 근거다. 하지만 성명서 기조는 매파적이라는 평가(골드만삭스
+            메리클)가 남아 있다.
+          </li>
+          <li className="relative pl-4 before:absolute before:left-0 before:top-[9px] before:h-1 before:w-1 before:bg-slate-400">
+            <b className="font-semibold text-slate-900">실질금리가 진짜 변수다.</b> Tesseract Group의 올리버 카딩은 10년물
+            실질금리 3%를 감시선으로 제시하며, 이를 지속적으로 웃돌면 <b className="font-semibold text-slate-900">$90,000
+            돌파보다 $80,000~82,000 재테스트가 더 유력</b>하다고 봤다. 10월 14일 CPI가 다음 분기점이다.
+          </li>
+          <li className="relative pl-4 before:absolute before:left-0 before:top-[9px] before:h-1 before:w-1 before:bg-slate-400">
+            <b className="font-semibold text-slate-900">10년물 5.17%는 결코 낮은 금리가 아니다.</b> 무위험 수익률이 5%를
+            넘는 환경에서 무수익 자산이 받는 할인율 압박은 2020~21년과 비교할 수 없다.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <SectionHead eyebrow="구조" title="제도권 편입은 계속, 입법은 교착" />
+        <div className="grid gap-px border border-slate-300 bg-slate-300">
+          {SNAPSHOT.structure.map((s) => (
+            <div key={s.head} className="bg-white p-4">
+              <p className="text-sm font-semibold text-slate-900">{s.head}</p>
+              <p className="mt-1 max-w-[76ch] text-[13px] leading-relaxed text-slate-600">{s.body}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    </div>
+  );
+}
+
+
+// ============================================================
+// 📄 페이지 — 포지셔닝
+// ============================================================
+function Levels({ live }) {
+  const btc = live.bySym.BTC;
+  const now = btc && btc.usd;
+
+  return (
+    <div className="space-y-12 animate-fade-up">
+      <section>
+        <SectionHead eyebrow="포지셔닝" title="위아래로 청산 구간이 깔려 있다">
+          하이퍼리퀴드 순자산 상위 1,000개 계좌 중 레버리지 포지션 보유 300여 개를 추적한 결과(블록미디어). 계좌 수로는
+          롱이 많지만 금액으로는 숏이 우위다 — 소수 초대형 계좌의 규모가 압도적이기 때문이다.
+        </SectionHead>
+
+        <Card className="px-5 pb-4 pt-2">
+          <LevelLadder btcUsd={now} />
+        </Card>
+
+        <TableWrap caption="가격대별로 무엇이 깔려 있는지 (현재가 대비 거리는 실시간 계산)">
+          <table className="w-full min-w-[720px]">
+            <thead>
+              <tr>
+                <TH align="left">가격대</TH>
+                <TH align="left">성격</TH>
+                <TH align="left">무엇이 있나</TH>
+                <TH>현재가 대비</TH>
+              </tr>
+            </thead>
+            <tbody>
+              {SNAPSHOT.levels.map((l) => {
+                const gap = now ? (l.price / now - 1) * 100 : null;
+                return (
+                  <tr key={l.price} className="hover:bg-slate-50">
+                    <TD align="left" className="font-medium">
+                      ${nf(l.price)}{l.upper ? ` ~ ${nf(l.upper)}` : ''}
+                    </TD>
+                    <TD align="left"><Chip tone={l.kind}>{l.label}</Chip></TD>
+                    <TD align="left" className="whitespace-normal font-sans text-slate-600">{l.what}</TD>
+                    <TD><Pct value={gap} /></TD>
+                  </tr>
+                );
+              })}
+              {now && (
+                <tr className="bg-sky-50">
+                  <TD align="left" className="font-semibold">${nf(Math.round(now))}</TD>
+                  <TD align="left"><Chip tone="flat">현재</Chip></TD>
+                  <TD align="left" className="whitespace-normal font-sans text-slate-600">실시간 시세</TD>
+                  <TD className="text-slate-500">—</TD>
+                </tr>
+              )}
+            </tbody>
+          </table>
+        </TableWrap>
+      </section>
+
+      <section>
+        <SectionHead eyebrow="고래" title="상위 계좌의 포지션" />
+        <StatGrid items={SNAPSHOT.whales} />
+        <Card className="mt-4 bg-slate-50 p-4">
+          <p className="text-sm leading-relaxed text-slate-700">
+            두 계좌 합계 약 <b className="font-semibold">9억 달러</b> 숏이다. 다만 최대 계좌의 청산가가 $135,000대라
+            $95,000 돌파만으로 즉시 청산되지는 않는다. 레버리지가 높은 중형 숏이 먼저 압박받고, 가격이 더 오를수록 초대형
+            고래의 평가손실이 커지는 구조다.
+          </p>
+        </Card>
+        <p className="mt-3 text-xs leading-relaxed text-slate-500">
+          청산가와 고래 포지션은 제3자가 온체인 데이터를 추정한 값으로, 실제와 다를 수 있습니다.
+        </p>
+      </section>
+    </div>
+  );
+}
+
+
+// ============================================================
+// 📄 페이지 — 리스크
+// ============================================================
+function Risk() {
+  const SEV = { high: { ko: '높음', cls: 'text-rose-700' }, mid: { ko: '중간', cls: 'text-amber-700' } };
+
+  return (
+    <div className="space-y-12 animate-fade-up">
+      <section>
+        <SectionHead eyebrow="리스크" title="지금 국면에서 실제로 돈을 잃는 경로">
+          "이 코인이 떨어진다"가 아니라 "이런 행동이 손실로 이어진다"로 정리했다.
+        </SectionHead>
+
+        <div className="grid gap-px border border-slate-300 bg-slate-300">
+          {SNAPSHOT.risks.map((r) => (
+            <div key={r.head} className="grid gap-x-4 gap-y-1 bg-white p-4 sm:grid-cols-[72px_1fr]">
+              <div className={`pt-0.5 text-[11px] font-semibold tracking-wide ${SEV[r.sev].cls}`}>
+                {SEV[r.sev].ko}
+              </div>
+              <div>
+                <h3 className="text-sm font-semibold text-slate-900">{r.head}</h3>
+                <p className="mt-1 max-w-[74ch] text-[13px] leading-relaxed text-slate-600">{r.body}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section>
+        <SectionHead eyebrow="일정" title="확인해야 할 변곡점">
+          판단을 지금 다 내릴 필요는 없다. 아래 시점들에서 데이터가 갱신되고, 그때 가설을 수정하면 된다.
+        </SectionHead>
+
+        <ul className="border-t border-slate-300">
+          {SNAPSHOT.timeline.map((t) => (
+            <li key={t.head} className="grid gap-x-5 gap-y-1 border-b border-slate-300 py-3.5 sm:grid-cols-[110px_1fr]">
+              <time className="nums pt-0.5 text-xs font-medium text-sky-800">{t.when}</time>
+              <div>
+                <h3 className="text-sm font-semibold text-slate-900">{t.head}</h3>
+                <p className="mt-0.5 max-w-[74ch] text-[13px] leading-relaxed text-slate-600">{t.body}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
+    </div>
+  );
+}
+
+
+// ============================================================
+// 🧭 앱 — 해시 라우팅 + 실시간 갱신
+// ============================================================
+const PAGES = [
+  { path: '/',        label: '개요',      el: Overview },
+  { path: '/market',  label: '시세',      el: Market },
+  { path: '/macro',   label: '매크로',    el: Macro },
+  { path: '/levels',  label: '포지셔닝',  el: Levels },
+  { path: '/risk',    label: '리스크',    el: Risk },
+];
+
+const REFRESH_MS = 90_000; // CoinGecko 무료 티어 레이트리밋을 고려해 90초
+
+function useHashRoute() {
+  const read = () => (window.location.hash.replace(/^#/, '') || '/');
+  const [path, setPath] = useState(read);
+  useEffect(() => {
+    const on = () => { setPath(read()); window.scrollTo({ top: 0, behavior: 'instant' }); };
+    window.addEventListener('hashchange', on);
+    return () => window.removeEventListener('hashchange', on);
+  }, []);
+  return path;
+}
+
+function App() {
+  const path = useHashRoute();
+  const page = PAGES.find((p) => p.path === path) || PAGES[0];
+
+  const [live, setLive] = useState({ bySym: {}, failed: [], at: null });
+  const [state, setState] = useState('loading'); // loading | ok | stale
+  const timer = useRef(null);
+
+  const load = useCallback(async () => {
+    try {
+      const data = await fetchLive();
+      setLive(data);
+      // 일부만 실패하면 그 부분만 스냅숏으로 떨어뜨리고 배너로 알린다
+      setState(data.failed.length ? 'stale' : 'ok');
+    } catch (e) {
+      console.error('[실시간 수집 실패]', e);
+      setState('stale');
+      setLive((prev) => ({ ...prev, failed: ['전체'] }));
+    }
+  }, []);
+
+  useEffect(() => {
+    load();
+    const tick = () => { if (!document.hidden) load(); };
+    timer.current = setInterval(tick, REFRESH_MS);
+    // 탭으로 돌아오면 바로 한 번 갱신
+    const onVis = () => { if (!document.hidden) load(); };
+    document.addEventListener('visibilitychange', onVis);
+    return () => { clearInterval(timer.current); document.removeEventListener('visibilitychange', onVis); };
+  }, [load]);
+
+  const Page = page.el;
+  const stamp = live.at
+    ? live.at.toLocaleTimeString('ko-KR', { hour: '2-digit', minute: '2-digit', second: '2-digit' })
+    : '—';
+
+  return (
+    <div className="min-h-screen">
+      {/* 헤더 */}
+      <header className="bg-slate-900 text-slate-100">
+        <div className="mx-auto max-w-5xl px-5 pb-5 pt-8 sm:pt-10">
+          <div className="text-[11px] font-semibold uppercase tracking-[0.16em] text-sky-300">
+            암호화폐 시장 리서치
+          </div>
+          <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">코인 시장 리서치</h1>
+          <p className="mt-3 max-w-[62ch] text-[15px] font-light leading-relaxed text-slate-300">
+            추세·심리·수급은 모두 위험선호로 돌아섰는데, 금리는 내려가는 게 아니라 올라갈 차례다. 이 어긋남이 지금 시장의
+            전부다.
+          </p>
+
+          <div className="nums mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-slate-400">
+            <span className="inline-flex items-center gap-1.5">
+              <span
+                className={`live-dot inline-block h-1.5 w-1.5 rounded-full ${
+                  state === 'ok' ? 'bg-emerald-400' : state === 'loading' ? 'bg-sky-400' : 'bg-amber-400'
+                }`}
+              />
+              {state === 'loading' ? '불러오는 중' : state === 'ok' ? `실시간 ${stamp}` : `일부 지연 ${stamp}`}
+            </span>
+            <span>스냅숏 기준 <b className="font-medium text-slate-200">{SNAPSHOT.collectedAt}</b></span>
+            <button
+              type="button"
+              onClick={load}
+              className="rounded border border-slate-600 px-2 py-0.5 font-sans text-slate-200 transition hover:border-slate-400 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-400"
+            >
+              새로 고치기
+            </button>
+          </div>
+        </div>
+
+        {/* 탭 */}
+        <nav className="border-t border-slate-700/60">
+          <div className="no-scrollbar mx-auto max-w-5xl overflow-x-auto px-5">
+            <ul className="flex gap-1">
+              {PAGES.map((p) => {
+                const on = p.path === page.path;
+                return (
+                  <li key={p.path}>
+                    <a
+                      href={'#' + p.path}
+                      aria-current={on ? 'page' : undefined}
+                      className={`inline-block whitespace-nowrap border-b-2 px-3 py-2.5 text-sm transition ${
+                        on
+                          ? 'border-sky-400 font-semibold text-white'
+                          : 'border-transparent text-slate-400 hover:text-slate-100'
+                      }`}
+                    >
+                      {p.label}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      {/* 지연 배너 */}
+      {state === 'stale' && (
+        <div className="border-b border-amber-300 bg-amber-50">
+          <div className="mx-auto max-w-5xl px-5 py-2.5 text-[13px] text-amber-900">
+            실시간 호출이 일부 실패했습니다 ({live.failed.join(', ')}). 해당 항목은 <b>수집 스냅숏 값</b>으로 표시됩니다.
+            잠시 뒤 자동으로 다시 시도합니다.
+          </div>
+        </div>
+      )}
+
+      {/* 본문 */}
+      <main className="mx-auto max-w-5xl px-5 py-10">
+        <Page live={live} />
+      </main>
+
+      {/* 푸터 */}
+      <footer className="border-t border-slate-300 bg-white">
+        <div className="mx-auto max-w-5xl px-5 py-8">
+          <h2 className="text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-500">데이터 출처</h2>
+          <dl className="mt-3 grid gap-x-8 gap-y-1.5 text-[13px] sm:grid-cols-2">
+            {SNAPSHOT.sources.map(([name, what]) => (
+              <div key={name} className="flex gap-2">
+                <dt className="shrink-0 font-medium text-slate-800">{name}</dt>
+                <dd className="text-slate-500">{what}</dd>
+              </div>
+            ))}
+          </dl>
+
+          <p className="mt-6 max-w-[78ch] border border-slate-300 bg-slate-50 p-4 text-[13px] leading-relaxed text-slate-600">
+            이 사이트는 공개 웹페이지와 공개 API에서 수집한 데이터를 정리한 <b className="font-semibold">리서치 노트</b>이며,
+            투자 권유나 자문이 아닙니다. 2차 가공된 항목(김치 프리미엄, 구간 내 위치, 청산가 추정)은 환율·호가 반올림·추적
+            방법에 따라 오차가 있습니다. 특히 청산가와 고래 포지션은 제3자 추정값입니다. 투자 판단과 그 결과는 투자자 본인의
+            책임입니다.
+          </p>
+        </div>
+      </footer>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>
