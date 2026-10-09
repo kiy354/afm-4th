@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>과자상점</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍪</text></svg>" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Noto Sans KR', system-ui, sans-serif; }
+    /* 카테고리 칩은 손가락으로 밀어서 넘기므로 스크롤바는 숨긴다 */
+    .no-scrollbar { scrollbar-width: none; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+  </style>
+</head>
+<body class="bg-orange-50/40 text-stone-800 min-h-screen">
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState, useEffect, useCallback, useMemo } = React;
+
+    // ── 로그인 토큰 저장 ───────────────────────────────────────
+    // 학습용으로 localStorage 에 둔다. (XSS 에 노출될 수 있어 실서비스는 httpOnly 쿠키를 쓴다)
+    const TOKEN_KEY = 'snack_token';
+    const tokenStore = {
+      get: () => { try { return localStorage.getItem(TOKEN_KEY); } catch { return null; } },
+      set: (t) => { try { localStorage.setItem(TOKEN_KEY, t); } catch {} },
+      clear: () => { try { localStorage.removeItem(TOKEN_KEY); } catch {} },
+    };
+
+    // ── API ────────────────────────────────────────────────────
+    async function api(path, { method = 'GET', body } = {}) {
+      const headers = { 'Content-Type': 'application/json' };
+      const token = tokenStore.get();
+      if (token) headers.Authorization = `Bearer ${token}`;
+      let res;
+      try {
+        res = await fetch(path, { method, headers, body: body && JSON.stringify(body) });
+      } catch {
+        throw new Error('서버에 연결할 수 없습니다.');
+      }
+      const json = await res.json().catch(() => ({}));
+      if (!res.ok || !json.success) {
+        throw Object.assign(new Error(json.message || '요청에 실패했습니다.'), { status: res.status });
+      }
+      return json.data;
+    }
+
+    // ── 해시 라우터 ────────────────────────────────────────────
+    function useHashRoute() {
+      const read = () => window.location.hash.replace(/^#/, '') || '/';
+      const [route, setRoute] = useState(read);
+      useEffect(() => {
+        const onChange = () => { setRoute(read()); window.scrollTo(0, 0); };
+        window.addEventListener('hashchange', onChange);
+        return () => window.removeEventListener('hashchange', onChange);
+      }, []);
+      return route;
+    }
+    const go = (path) => { window.location.hash = path; };
+
+    // 로그인·회원가입을 마친 뒤 돌아갈 곳 (예: 주문서에서 로그인하면 다시 주문서로).
+    // 실제 이동은 App 의 라우트 가드 한 곳에서만 한다 — 두 곳에서 go() 하면 나중 것이 덮어쓴다.
+    let returnTo = '/';
+    function goLogin(from) {
+      returnTo = from || '/';
+      go('/login');
+    }
+
+    // ── 장바구니 (브라우저에 상품 id·수량만 저장) ──────────────
+    // 가격·재고는 저장하지 않는다 — 바뀔 수 있으니 볼 때마다 서버에 물어본다.
+    const CART_KEY = 'snack_cart';
+    const loadCart = () => {
+      try {
+        const v = JSON.parse(localStorage.getItem(CART_KEY));
+        return Array.isArray(v) ? v.filter((i) => Number.isInteger(i.productId) && i.quantity > 0) : [];
+      } catch { return []; }
+    };
+    const saveCart = (cart) => { try { localStorage.setItem(CART_KEY, JSON.stringify(cart)); } catch {} };
+
+    function useCart() {
+      const [cart, setCart] = useState(loadCart);
+      useEffect(() => saveCart(cart), [cart]);
+
+      const add = useCallback((productId, quantity = 1) => setCart((c) => {
+        const found = c.find((i) => i.productId === productId);
+        return found
+          ? c.map((i) => (i.productId === productId ? { ...i, quantity: Math.min(99, i.quantity + quantity) } : i))
+          : [...c, { productId, quantity }];
+      }), []);
+      const setQty = useCallback((productId, quantity) =>
+        setCart((c) => c.map((i) => (i.productId === productId ? { ...i, quantity: Math.max(1, Math.min(99, quantity)) } : i))), []);
+      const remove = useCallback((productId) => setCart((c) => c.filter((i) => i.productId !== productId)), []);
+      const clear = useCallback(() => setCart([]), []);
+      const count = cart.reduce((n, i) => n + i.quantity, 0);
+      return { cart, add, setQty, remove, clear, count };
+    }
+
+    // ── 공통 ───────────────────────────────────────────────────
+    const won = (n) => `${n.toLocaleString('ko-KR')}원`;
+    const FREE_SHIPPING_OVER = 30000;
+
+    function ProductArt({ product, size = 'md' }) {
+      const box = {
+        sm: 'aspect-square text-4xl rounded-xl',
+        md: 'aspect-square text-7xl sm:text-8xl rounded-2xl',
+        lg: 'aspect-square text-[9rem] rounded-2xl',
+      }[size];
+      return (
+        <div className={`${box} flex items-center justify-center relative overflow-hidden select-none`}
+          style={{ background: `linear-gradient(135deg, ${product.color}, #fff7ed)` }}>
+          <span className={product.stock === 0 ? 'opacity-40 grayscale' : 'drop-shadow-md'}>{product.emoji}</span>
+          {product.stock === 0 && (
+            <span className="absolute inset-0 flex items-center justify-center">
+              <span className="rounded-full bg-stone-900/80 text-white text-sm font-bold px-4 py-1.5">품절</span>
+            </span>
+          )}
+        </div>
+      );
+    }
+
+    function QtyStepper({ value, onChange, max = 99 }) {
+      const btn = 'h-9 w-9 flex items-center justify-center text-lg text-stone-600 hover:bg-stone-100 disabled:opacity-30';
+      return (
+        <div className="inline-flex items-center rounded-xl border border-stone-300 bg-white overflow-hidden">
+          <button type="button" className={btn} onClick={() => onChange(value - 1)} disabled={value <= 1} aria-label="수량 줄이기">−</button>
+          <span className="w-10 text-center font-semibold tabular-nums">{value}</span>
+          <button type="button" className={btn} onClick={() => onChange(value + 1)} disabled={value >= Math.min(99, max)} aria-label="수량 늘리기">＋</button>
+        </div>
+      );
+    }
+
+    function Loading() {
+      return <div className="py-24 text-center text-stone-400">불러오는 중…</div>;
+    }
+
+    function ErrorBox({ message, onRetry }) {
+      return (
+        <div className="py-20 text-center">
+          <p className="text-stone-600 whitespace-pre-line">{message}</p>
+          <div className="mt-4 flex justify-center gap-2">
+            {onRetry && <button onClick={onRetry} className="rounded-lg border border-stone-300 px-4 py-2 text-sm hover:bg-white">다시 시도</button>}
+            <a href="#/" className="rounded-lg border border-stone-300 px-4 py-2 text-sm hover:bg-white">쇼핑 계속하기</a>
+          </div>
+        </div>
+      );
+    }
+
+    function Toast({ toast }) {
+      if (!toast) return null;
+      return (
+        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 rounded-xl bg-stone-900 text-white text-sm px-4 py-3 shadow-lg flex items-center gap-3">
+          <span>{toast.message}</span>
+          {toast.action && <a href={toast.action.href} className="font-bold text-amber-300 hover:underline">{toast.action.label}</a>}
+        </div>
+      );
+    }
+
+    function Header({ count, user, onLogout }) {
+      const link = 'rounded-lg px-2 sm:px-3 py-2 text-stone-600 hover:bg-orange-50 whitespace-nowrap';
+      return (
+        <header className="bg-white/90 backdrop-blur border-b border-orange-100 sticky top-0 z-20">
+          <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between gap-2">
+            <a href="#/" className="flex items-center gap-2 shrink-0">
+              <span className="text-2xl">🍪</span>
+              <span className="font-black text-xl text-stone-900 tracking-tight hidden sm:inline">과자상점</span>
+            </a>
+            <nav className="flex items-center gap-0.5 sm:gap-1 text-sm">
+              {user ? (
+                <>
+                  <a href="#/mypage" className={link}><b className="text-stone-900">{user.name}</b>님</a>
+                  <button onClick={onLogout} className={link}>로그아웃</button>
+                </>
+              ) : (
+                <>
+                  <a href="#/login" className={link}>로그인</a>
+                  <a href="#/signup" className={link}>회원가입</a>
+                  <a href="#/lookup" className={link + ' hidden sm:inline'}>주문조회</a>
+                </>
+              )}
+              <a href="#/cart" className="relative rounded-lg px-2 sm:px-3 py-2 font-semibold text-stone-800 hover:bg-orange-50 whitespace-nowrap">
+                🛒<span className="hidden sm:inline"> 장바구니</span>
+                {count > 0 && (
+                  <span className="absolute -top-0.5 -right-0.5 min-w-5 h-5 px-1 rounded-full bg-orange-500 text-white text-[11px] font-bold flex items-center justify-center">{count}</span>
+                )}
+              </a>
+            </nav>
+          </div>
+        </header>
+      );
+    }
+
+    // ── 상품 목록 ──────────────────────────────────────────────
+    function ShopPage({ onAdd }) {
+      const [categories, setCategories] = useState([]);
+      const [category, setCategory] = useState('all');
+      const [query, setQuery] = useState('');
+      const [search, setSearch] = useState('');     // 실제로 요청에 쓰는 검색어 (입력 후 잠깐 기다렸다 반영)
+      const [sort, setSort] = useState('popular');
+      const [products, setProducts] = useState(null);
+      const [error, setError] = useState('');
+
+      useEffect(() => { api('/api/categories').then(setCategories).catch(() => {}); }, []);
+
+      // 글자를 칠 때마다 요청하지 않도록 300ms 동안 입력이 멈추면 검색한다.
+      useEffect(() => {
+        const t = setTimeout(() => setSearch(query.trim()), 300);
+        return () => clearTimeout(t);
+      }, [query]);
+
+      const load = useCallback(() => {
+        setError('');
+        const qs = new URLSearchParams({ category, sort, ...(search && { q: search }) });
+        api(`/api/products?${qs}`).then(setProducts).catch((err) => setError(err.message));
+      }, [category, sort, search]);
+      useEffect(load, [load]);
+
+      // 지금 살 수 있는 상품 중 판매량 상위 3개에 BEST 배지
+      const best = useMemo(() => {
+        if (!products) return new Set();
+        return new Set(products.filter((p) => p.stock > 0).sort((a, b) => b.sold - a.sold).slice(0, 3).map((p) => p.id));
+      }, [products]);
+
+      const total = categories.reduce((n, c) => n + c.count, 0);
+      const chip = (active) => `shrink-0 rounded-full px-4 py-2 text-sm font-semibold transition border ${
+        active ? 'bg-stone-900 text-white border-stone-900' : 'bg-white text-stone-600 border-stone-200 hover:border-stone-400'}`;
+
+      return (
+        <main className="max-w-6xl mx-auto px-4 pb-16">
+          <section className="mt-6 rounded-3xl bg-gradient-to-br from-orange-400 via-amber-400 to-yellow-300 px-6 py-8 sm:px-10 sm:py-10 text-stone-900 relative overflow-hidden">
+            <div className="relative z-10">
+            <p className="text-sm font-bold opacity-80">오늘도 바삭하게</p>
+            <h1 className="text-3xl sm:text-4xl font-black mt-1 leading-tight">출출할 땐,<br />과자상점 🍪</h1>
+            <p className="mt-3 text-sm font-medium">{won(FREE_SHIPPING_OVER)} 이상 주문하면 <b>무료배송</b></p>
+            </div>
+            <span className="absolute -right-6 -bottom-8 sm:-right-4 sm:-bottom-6 text-[6rem] sm:text-[10rem] opacity-60 sm:opacity-90 rotate-12 select-none pointer-events-none">🥨</span>
+          </section>
+
+          <div className="mt-6 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
+            <div className="relative sm:w-80">
+              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-stone-400">🔍</span>
+              <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="과자 이름으로 검색"
+                className="w-full rounded-xl border border-stone-200 bg-white pl-10 pr-4 py-2.5 outline-none focus:border-orange-400 focus:ring-4 focus:ring-orange-100" />
+            </div>
+            <select value={sort} onChange={(e) => setSort(e.target.value)}
+              className="rounded-xl border border-stone-200 bg-white px-3 py-2.5 text-sm outline-none focus:border-orange-400">
+              <option value="popular">인기순</option>
+              <option value="new">신상품순</option>
+              <option value="price_asc">낮은 가격순</option>
+              <option value="price_desc">높은 가격순</option>
+            </select>
+          </div>
+
+          <div className="mt-4 flex gap-2 overflow-x-auto no-scrollbar pb-1 -mx-4 px-4">
+            <button className={chip(category === 'all')} onClick={() => setCategory('all')}>전체 {total > 0 && total}</button>
+            {categories.map((c) => (
+              <button key={c.id} className={chip(category === c.id)} onClick={() => setCategory(c.id)}>
+                {c.emoji} {c.name} <span className="opacity-60">{c.count}</span>
+              </button>
+            ))}
+          </div>
+
+          {error ? <ErrorBox message={error} onRetry={load} />
+            : !products ? <Loading />
+            : products.length === 0 ? (
+              <div className="py-24 text-center text-stone-500">
+                <p className="text-4xl mb-3">🤔</p>
+                {search ? <>'{search}'에 맞는 과자가 없어요.</> : '이 카테고리에는 아직 상품이 없어요.'}
+              </div>
+            ) : (
+              <ul className="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-8">
+                {products.map((p) => (
+                  <li key={p.id} className="group">
+                    <a href={`#/products/${p.id}`} className="block">
+                      <div className="relative transition group-hover:-translate-y-1">
+                        <ProductArt product={p} />
+                        <div className="absolute top-2 left-2 flex gap-1">
+                          {best.has(p.id) && p.stock > 0 && <span className="rounded-md bg-orange-500 text-white text-[11px] font-black px-1.5 py-0.5">BEST</span>}
+                          {p.stock > 0 && p.stock <= 10 && <span className="rounded-md bg-rose-500 text-white text-[11px] font-bold px-1.5 py-0.5">{p.stock}개 남음</span>}
+                        </div>
+                      </div>
+                      <h3 className="mt-3 font-semibold text-stone-900 leading-snug">{p.name}</h3>
+                      <p className="text-xs text-stone-400 mt-0.5">{p.weight}</p>
+                      <p className="mt-1 font-black text-lg">{won(p.price)}</p>
+                    </a>
+                    <button onClick={() => onAdd(p)} disabled={p.stock === 0}
+                      className="mt-2 w-full rounded-xl border border-stone-300 bg-white py-2 text-sm font-semibold hover:border-orange-400 hover:text-orange-600 disabled:opacity-40 disabled:hover:border-stone-300 disabled:hover:text-stone-800">
+                      {p.stock === 0 ? '품절' : '🛒 담기'}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            )}
+        </main>
+      );
+    }
+
+    // ── 상품 상세 ──────────────────────────────────────────────
+    function ProductPage({ id, onAdd, cart }) {
+      const [product, setProduct] = useState(null);
+      const [error, setError] = useState('');
+      const [qty, setQty] = useState(1);
+
+      const load = useCallback(() => {
+        setError('');
+        api(`/api/products/${id}`).then(setProduct).catch((err) => setError(err.message));
+      }, [id]);
+      useEffect(load, [load]);
+
+      if (error) return <main className="max-w-5xl mx-auto px-4"><ErrorBox message={error} onRetry={load} /></main>;
+      if (!product) return <Loading />;
+
+      const soldOut = product.stock === 0;
+      const inCart = cart.find((i) => i.productId === product.id)?.quantity || 0;
+      // 장바구니에 이미 담긴 수량까지 합쳐 재고를 넘지 않게 한다.
+      const canAdd = Math.max(0, product.stock - inCart);
+
+      return (
+        <main className="max-w-5xl mx-auto px-4 py-8">
+          <a href="#/" className="text-sm text-stone-500 hover:text-stone-800">← 쇼핑 계속하기</a>
+          <div className="mt-4 grid md:grid-cols-2 gap-8 md:gap-12">
+            <ProductArt product={product} size="lg" />
+            <div className="flex flex-col">
+              <p className="text-sm text-orange-600 font-bold">{product.weight}</p>
+              <h1 className="text-2xl sm:text-3xl font-black text-stone-900 mt-1">{product.name}</h1>
+              <p className="text-3xl font-black mt-4">{won(product.price)}</p>
+              <p className="text-stone-600 leading-7 mt-5">{product.description}</p>
+
+              <dl className="mt-6 grid grid-cols-[5rem_1fr] gap-y-2 text-sm border-t border-stone-200 pt-5">
+                <dt className="text-stone-400">배송</dt>
+                <dd>{won(3000)} <span className="text-stone-400">({won(FREE_SHIPPING_OVER)} 이상 무료)</span></dd>
+                <dt className="text-stone-400">재고</dt>
+                <dd className={product.stock <= 10 ? 'text-rose-600 font-semibold' : ''}>
+                  {soldOut ? '품절' : product.stock <= 10 ? `${product.stock}개 남음` : '넉넉해요'}
+                </dd>
+                <dt className="text-stone-400">누적 판매</dt>
+                <dd>{product.sold.toLocaleString()}개</dd>
+              </dl>
+
+              <div className="mt-auto pt-8">
+                {!soldOut && canAdd > 0 && (
+                  <div className="flex items-center justify-between rounded-2xl bg-white border border-stone-200 p-4">
+                    <QtyStepper value={qty} onChange={setQty} max={canAdd} />
+                    <span className="text-xl font-black">{won(product.price * qty)}</span>
+                  </div>
+                )}
+                {inCart > 0 && <p className="text-sm text-stone-500 mt-2">장바구니에 {inCart}개 담겨 있어요.</p>}
+                <div className="mt-3 grid grid-cols-2 gap-2">
+                  <button onClick={() => { onAdd(product, qty); setQty(1); }} disabled={soldOut || canAdd === 0}
+                    className="rounded-2xl border-2 border-stone-900 py-3.5 font-bold hover:bg-stone-100 disabled:opacity-40">
+                    장바구니 담기
+                  </button>
+                  <button onClick={() => { onAdd(product, qty, true); go('/cart'); }} disabled={soldOut || canAdd === 0}
+                    className="rounded-2xl bg-orange-500 text-white py-3.5 font-bold hover:bg-orange-600 disabled:opacity-40">
+                    {soldOut ? '품절' : canAdd === 0 ? '재고만큼 담았어요' : '바로 구매'}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      );
+    }
+
+    // ── 장바구니 ───────────────────────────────────────────────
+    // 서버가 현재 가격·재고로 계산한 견적. 장바구니가 바뀔 때마다 다시 받는다.
+    function useQuote(cart) {
+      const [quote, setQuote] = useState(null);
+      const [error, setError] = useState('');
+      const key = JSON.stringify(cart);
+      const load = useCallback(() => {
+        setError('');
+        api('/api/cart/quote', { method: 'POST', body: { items: cart } })
+          .then(setQuote).catch((err) => setError(err.message));
+      }, [key]);
+      useEffect(load, [load]);
+      return { quote, error, reload: load };
+    }
+
+    function OrderSummary({ quote, children }) {
+      const remain = quote.freeShippingOver - quote.itemsTotal;
+      return (
+        <aside className="rounded-2xl bg-white border border-stone-200 p-5 h-fit lg:sticky lg:top-24">
+          <h2 className="font-bold text-lg">결제 금액</h2>
+          <dl className="mt-4 space-y-2 text-sm">
+            <div className="flex justify-between"><dt className="text-stone-500">상품 금액</dt><dd>{won(quote.itemsTotal)}</dd></div>
+            <div className="flex justify-between"><dt className="text-stone-500">배송비</dt><dd>{quote.shippingFee ? won(quote.shippingFee) : '무료'}</dd></div>
+          </dl>
+          {quote.itemsTotal > 0 && (
+            <div className="mt-4">
+              <div className="h-2 rounded-full bg-stone-100 overflow-hidden">
+                <div className="h-full bg-orange-400 transition-all" style={{ width: `${Math.min(100, (quote.itemsTotal / quote.freeShippingOver) * 100)}%` }} />
+              </div>
+              <p className="text-xs mt-1.5 text-stone-500">
+                {remain > 0 ? <><b className="text-orange-600">{won(remain)}</b> 더 담으면 무료배송!</> : '🎉 무료배송이에요'}
+              </p>
+            </div>
+          )}
+          <div className="flex justify-between items-baseline border-t border-stone-200 mt-4 pt-4">
+            <span className="font-bold">총 결제 금액</span>
+            <span className="text-2xl font-black text-orange-600">{won(quote.total)}</span>
+          </div>
+          {children}
+        </aside>
+      );
+    }
+
+    function CartPage({ cartApi }) {
+      const { cart, setQty, remove } = cartApi;
+      const { quote, error, reload } = useQuote(cart);
+
+      // 판매가 끝나 서버에서 사라진 상품은 장바구니에서도 정리한다.
+      useEffect(() => {
+        if (!quote) return;
+        const alive = new Set(quote.lines.map((l) => l.product.id));
+        cart.filter((i) => !alive.has(i.productId)).forEach((i) => remove(i.productId));
+      }, [quote]);
+
+      if (cart.length === 0) {
+        return (
+          <main className="max-w-6xl mx-auto px-4 py-24 text-center">
+            <p className="text-6xl">🛒</p>
+            <p className="mt-4 text-stone-600">장바구니가 비어 있어요.</p>
+            <a href="#/" className="inline-block mt-6 rounded-2xl bg-orange-500 text-white font-bold px-6 py-3 hover:bg-orange-600">과자 고르러 가기</a>
+          </main>
+        );
+      }
+      if (error) return <main className="max-w-6xl mx-auto px-4"><ErrorBox message={error} onRetry={reload} /></main>;
+      if (!quote) return <Loading />;
+
+      const blocked = quote.lines.some((l) => !l.enough);
+
+      return (
+        <main className="max-w-6xl mx-auto px-4 py-8">
+          <h1 className="text-2xl font-black">장바구니</h1>
+          <div className="mt-6 grid lg:grid-cols-[1fr_320px] gap-6">
+            <ul className="rounded-2xl bg-white border border-stone-200 divide-y divide-stone-100">
+              {quote.lines.map(({ product: p, quantity, subtotal, enough }) => (
+                <li key={p.id} className="p-4 flex gap-4">
+                  <a href={`#/products/${p.id}`} className="w-20 shrink-0"><ProductArt product={p} size="sm" /></a>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex justify-between gap-2">
+                      <a href={`#/products/${p.id}`} className="font-semibold hover:underline">{p.name}</a>
+                      <button onClick={() => remove(p.id)} className="text-stone-400 hover:text-rose-600 text-sm shrink-0" aria-label="삭제">✕</button>
+                    </div>
+                    <p className="text-sm text-stone-400">{won(p.price)} · {p.weight}</p>
+                    {!enough && (
+                      <p className="text-sm text-rose-600 font-semibold mt-1">
+                        {p.stock === 0 ? '품절되었어요. 삭제해 주세요.' : `재고가 ${p.stock}개뿐이에요.`}
+                        {p.stock > 0 && <button onClick={() => setQty(p.id, p.stock)} className="ml-2 underline">{p.stock}개로 맞추기</button>}
+                      </p>
+                    )}
+                    <div className="mt-2 flex items-center justify-between">
+                      <QtyStepper value={quantity} onChange={(q) => setQty(p.id, q)} max={Math.max(p.stock, 1)} />
+                      <span className="font-bold">{won(subtotal)}</span>
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+            <OrderSummary quote={quote}>
+              <button onClick={() => go('/checkout')} disabled={blocked}
+                className="mt-5 w-full rounded-2xl bg-orange-500 text-white font-bold py-3.5 hover:bg-orange-600 disabled:opacity-40">
+                {blocked ? '재고를 확인해 주세요' : '주문하기'}
+              </button>
+            </OrderSummary>
+          </div>
+        </main>
+      );
+    }
+
+    // ── 주문서 ─────────────────────────────────────────────────
+    const PHONE_RE = /^01[016789]-?\d{3,4}-?\d{4}$/;
+    // 숫자만 입력해도 010-1234-5678 형태로 보이게
+    const formatPhone = (v) => {
+      const d = v.replace(/\D/g, '').slice(0, 11);
+      if (d.length < 4) return d;
+      if (d.length < 8) return `${d.slice(0, 3)}-${d.slice(3)}`;
+      return `${d.slice(0, 3)}-${d.slice(3, d.length - 4)}-${d.slice(-4)}`;
+    };
+
+    function CheckoutPage({ cartApi, onOrdered, user, onUnauthorized }) {
+      const { cart } = cartApi;
+      const { quote, error: quoteError, reload } = useQuote(cart);
+      // 회원이면 가입할 때 적은 이름·전화번호를 미리 채운다 (받는 사람이 다르면 고치면 된다).
+      const [form, setForm] = useState({
+        name: user?.name || '', phone: user ? formatPhone(user.phone) : '', address: '', memo: '',
+      });
+      const [touched, setTouched] = useState({});
+      const [error, setError] = useState('');
+      const [placing, setPlacing] = useState(false);
+
+      // 빈 장바구니로 주문서에 "들어온" 경우만 돌려보낸다. cart 를 의존성에 넣으면
+      // 주문 성공 후 장바구니를 비우는 순간에도 실행되어 완료 화면 이동을 덮어써 버린다.
+      useEffect(() => { if (cart.length === 0) go('/cart'); }, []);
+
+      const errors = {
+        name: (form.name.trim().length < 2) && '받는 분 이름을 입력해 주세요.',
+        phone: !PHONE_RE.test(form.phone) && '휴대폰 번호를 확인해 주세요.',
+        address: (form.address.trim().length < 5) && '배송 주소를 입력해 주세요.',
+      };
+      const shown = (k) => touched[k] && errors[k];
+      const field = (k) => ({
+        value: form[k],
+        onChange: (e) => setForm((f) => ({ ...f, [k]: k === 'phone' ? formatPhone(e.target.value) : e.target.value })),
+        onBlur: () => setTouched((t) => ({ ...t, [k]: true })),
+        className: `w-full rounded-xl border px-4 py-3 outline-none bg-white ${shown(k) ? 'border-rose-400' : 'border-stone-300 focus:border-orange-400 focus:ring-4 focus:ring-orange-100'}`,
+      });
+
+      async function placeOrder(e) {
+        e.preventDefault();
+        setTouched({ name: true, phone: true, address: true });
+        if (Object.values(errors).some(Boolean)) return;
+        setPlacing(true);
+        setError('');
+        try {
+          const result = await api('/api/orders', { method: 'POST', body: { items: cart, customer: form } });
+          onOrdered({ ...result, phone: form.phone });
+        } catch (err) {
+          // 로그인이 만료됐으면 다시 로그인시킨 뒤 주문서로 돌려보낸다 (장바구니는 그대로 남아 있다).
+          if (err.status === 401) return onUnauthorized('/checkout');
+          setError(err.message);
+          reload();   // 재고가 바뀌었을 수 있으니 금액·재고를 다시 받아온다
+          setPlacing(false);
+        }
+      }
+
+      if (quoteError) return <main className="max-w-6xl mx-auto px-4"><ErrorBox message={quoteError} onRetry={reload} /></main>;
+      if (!quote) return <Loading />;
+
+      const label = 'block text-sm font-semibold text-stone-700 mb-1.5';
+      return (
+        <main className="max-w-6xl mx-auto px-4 py-8">
+          <a href="#/cart" className="text-sm text-stone-500 hover:text-stone-800">← 장바구니로</a>
+          <h1 className="text-2xl font-black mt-2">주문서</h1>
+          <form onSubmit={placeOrder} noValidate className="mt-6 grid lg:grid-cols-[1fr_320px] gap-6">
+            <div className="space-y-6">
+              <section className="rounded-2xl bg-white border border-stone-200 p-5 space-y-4">
+                <h2 className="font-bold text-lg">배송 정보</h2>
+                {!user && (
+                  <p className="rounded-xl bg-orange-50 text-sm text-stone-600 px-4 py-3">
+                    비회원으로 주문 중이에요.{' '}
+                    <button type="button" onClick={() => goLogin('/checkout')} className="font-bold text-orange-600 underline">로그인</button>
+                    하면 주문내역을 마이페이지에서 모아볼 수 있어요.
+                  </p>
+                )}
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <label><span className={label}>받는 분</span><input {...field('name')} placeholder="홍길동" autoComplete="name" maxLength={20} />
+                    {shown('name') && <span className="text-xs text-rose-600 mt-1 block">{errors.name}</span>}</label>
+                  <label><span className={label}>휴대폰 번호</span><input {...field('phone')} placeholder="010-1234-5678" autoComplete="tel" inputMode="numeric" />
+                    {shown('phone') && <span className="text-xs text-rose-600 mt-1 block">{errors.phone}</span>}</label>
+                </div>
+                <label className="block"><span className={label}>주소</span><input {...field('address')} placeholder="서울시 ○○구 ○○로 12, 101동 202호" autoComplete="street-address" maxLength={200} />
+                  {shown('address') && <span className="text-xs text-rose-600 mt-1 block">{errors.address}</span>}</label>
+                <label className="block"><span className={label}>배송 메모 <span className="text-stone-400 font-normal">(선택)</span></span>
+                  <input {...field('memo')} placeholder="문 앞에 놓아 주세요" maxLength={100} /></label>
+                <p className="text-xs text-stone-400">주문 조회 때 이 휴대폰 번호가 필요해요.</p>
+              </section>
+
+              <section className="rounded-2xl bg-white border border-stone-200 p-5">
+                <h2 className="font-bold text-lg">주문 상품 {quote.lines.length}종</h2>
+                <ul className="mt-3 divide-y divide-stone-100">
+                  {quote.lines.map(({ product: p, quantity, subtotal, enough }) => (
+                    <li key={p.id} className="py-2.5 flex items-center gap-3 text-sm">
+                      <span className="text-2xl">{p.emoji}</span>
+                      <span className="flex-1">{p.name} <span className="text-stone-400">× {quantity}</span>
+                        {!enough && <span className="text-rose-600 font-semibold ml-2">재고 부족</span>}</span>
+                      <span className="font-semibold">{won(subtotal)}</span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            </div>
+
+            <OrderSummary quote={quote}>
+              {error && <p role="alert" className="mt-4 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-sm px-3 py-2 whitespace-pre-line">{error}</p>}
+              <button type="submit" disabled={placing || quote.lines.some((l) => !l.enough)}
+                className="mt-5 w-full rounded-2xl bg-orange-500 text-white font-bold py-3.5 hover:bg-orange-600 disabled:opacity-40">
+                {placing ? '주문 중…' : `${won(quote.total)} 결제하기`}
+              </button>
+              <p className="text-[11px] text-stone-400 mt-2 text-center">실습용 쇼핑몰이라 실제 결제는 이뤄지지 않아요.</p>
+            </OrderSummary>
+          </form>
+        </main>
+      );
+    }
+
+    // ── 주문 완료 / 조회 ───────────────────────────────────────
+    function OrderDetail({ order }) {
+      return (
+        <div className="rounded-2xl bg-white border border-stone-200 p-5 text-sm">
+          <div className="flex justify-between items-center">
+            <span className="text-stone-500">주문번호</span>
+            <span className="font-mono font-bold">{order.orderNo}</span>
+          </div>
+          <div className="flex justify-between mt-1">
+            <span className="text-stone-500">주문일시</span>
+            <span>{new Date(order.createdAt).toLocaleString('ko-KR')}</span>
+          </div>
+          <ul className="mt-4 border-t border-stone-100 pt-3 space-y-2">
+            {order.items.map((i) => (
+              <li key={i.productId} className="flex items-center gap-2">
+                <span className="text-xl">{i.emoji}</span>
+                <span className="flex-1">{i.name} <span className="text-stone-400">× {i.quantity}</span></span>
+                <span>{won(i.price * i.quantity)}</span>
+              </li>
+            ))}
+          </ul>
+          <dl className="mt-4 border-t border-stone-100 pt-3 space-y-1">
+            <div className="flex justify-between"><dt className="text-stone-500">배송비</dt><dd>{order.shippingFee ? won(order.shippingFee) : '무료'}</dd></div>
+            <div className="flex justify-between font-bold text-base"><dt>결제 금액</dt><dd className="text-orange-600">{won(order.total)}</dd></div>
+          </dl>
+          <dl className="mt-4 border-t border-stone-100 pt-3 grid grid-cols-[4.5rem_1fr] gap-y-1">
+            <dt className="text-stone-500">받는 분</dt><dd>{order.customer.name} · {formatPhone(order.customer.phone)}</dd>
+            <dt className="text-stone-500">주소</dt><dd>{order.customer.address}</dd>
+            {order.customer.memo && <><dt className="text-stone-500">메모</dt><dd>{order.customer.memo}</dd></>}
+          </dl>
+        </div>
+      );
+    }
+
+    function CompletePage({ orderNo, phone, user }) {
+      const [order, setOrder] = useState(null);
+      const [error, setError] = useState('');
+      useEffect(() => {
+        if (!phone) return;   // 새로고침 등으로 전화번호를 모르면 조회 화면으로 안내
+        api(`/api/orders/${orderNo}?phone=${encodeURIComponent(phone)}`).then(setOrder).catch((err) => setError(err.message));
+      }, [orderNo, phone]);
+
+      return (
+        <main className="max-w-xl mx-auto px-4 py-12">
+          <div className="text-center">
+            <p className="text-6xl">🎉</p>
+            <h1 className="text-2xl font-black mt-4">주문이 완료되었어요!</h1>
+            <p className="text-stone-500 mt-2">주문번호 <b className="font-mono text-stone-800">{orderNo}</b></p>
+          </div>
+          <div className="mt-8">
+            {!phone ? (
+              <p className="text-center text-sm text-stone-500">주문 내역은 <a href="#/lookup" className="text-orange-600 font-semibold underline">주문조회</a>에서 볼 수 있어요.</p>
+            ) : error ? <ErrorBox message={error} /> : !order ? <Loading /> : <OrderDetail order={order} />}
+          </div>
+          {user && <a href="#/mypage" className="block mt-8 text-center rounded-2xl border-2 border-stone-900 font-bold py-3 hover:bg-white">내 주문내역 보기</a>}
+          <a href="#/" className={`block ${user ? 'mt-2' : 'mt-8'} text-center rounded-2xl bg-stone-900 text-white font-bold py-3.5 hover:bg-stone-700`}>쇼핑 계속하기</a>
+        </main>
+      );
+    }
+
+    function LookupPage() {
+      const [orderNo, setOrderNo] = useState('');
+      const [phone, setPhone] = useState('');
+      const [order, setOrder] = useState(null);
+      const [error, setError] = useState('');
+      const [loading, setLoading] = useState(false);
+
+      async function submit(e) {
+        e.preventDefault();
+        if (!orderNo.trim() || !phone) return setError('주문번호와 휴대폰 번호를 입력해 주세요.');
+        setLoading(true);
+        setError('');
+        setOrder(null);
+        try {
+          setOrder(await api(`/api/orders/${encodeURIComponent(orderNo.trim())}?phone=${encodeURIComponent(phone)}`));
+        } catch (err) {
+          setError(err.message);
+        } finally {
+          setLoading(false);
+        }
+      }
+
+      const input = 'w-full rounded-xl border border-stone-300 px-4 py-3 outline-none bg-white focus:border-orange-400 focus:ring-4 focus:ring-orange-100';
+      return (
+        <main className="max-w-xl mx-auto px-4 py-10">
+          <h1 className="text-2xl font-black">주문조회</h1>
+          <p className="text-sm text-stone-500 mt-1">주문할 때 받은 주문번호와 휴대폰 번호를 입력하세요.</p>
+          <form onSubmit={submit} className="mt-6 space-y-3">
+            <input value={orderNo} onChange={(e) => setOrderNo(e.target.value)} placeholder="주문번호 (예: 20261006-123456)" className={input + ' font-mono'} />
+            <input value={phone} onChange={(e) => setPhone(formatPhone(e.target.value))} placeholder="010-1234-5678" inputMode="numeric" className={input} />
+            <button disabled={loading} className="w-full rounded-2xl bg-orange-500 text-white font-bold py-3.5 hover:bg-orange-600 disabled:opacity-50">
+              {loading ? '조회 중…' : '조회하기'}
+            </button>
+          </form>
+          {error && <p role="alert" className="mt-4 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-sm px-4 py-3">{error}</p>}
+          {order && <div className="mt-6"><OrderDetail order={order} /></div>}
+        </main>
+      );
+    }
+
+    // ── 회원가입 / 로그인 ──────────────────────────────────────
+    const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const passwordRules = (pw) => [
+      { label: '8자 이상', ok: pw.length >= 8 },
+      { label: '영문 포함', ok: /[A-Za-z]/.test(pw) },
+      { label: '숫자 포함', ok: /\d/.test(pw) },
+    ];
+
+    function AuthCard({ title, subtitle, children, footer }) {
+      return (
+        <main className="max-w-md mx-auto px-4 py-10">
+          <div className="text-center mb-6">
+            <p className="text-5xl">🍪</p>
+            <h1 className="text-2xl font-black mt-3">{title}</h1>
+            <p className="text-stone-500 mt-1">{subtitle}</p>
+          </div>
+          <div className="rounded-3xl bg-white border border-stone-200 p-6 sm:p-8">{children}</div>
+          <p className="text-center text-sm text-stone-600 mt-5">{footer}</p>
+        </main>
+      );
+    }
+
+    function TextField({ label, error, hint, ...props }) {
+      return (
+        <label className="block">
+          <span className="block text-sm font-semibold text-stone-700 mb-1.5">{label}</span>
+          <input {...props} className={`w-full rounded-xl border px-4 py-3 outline-none bg-white ${
+            error ? 'border-rose-400 focus:ring-4 focus:ring-rose-100' : 'border-stone-300 focus:border-orange-400 focus:ring-4 focus:ring-orange-100'}`} />
+          {error ? <span className="block text-xs text-rose-600 mt-1.5">{error}</span>
+            : hint && <span className="block text-xs text-stone-400 mt-1.5">{hint}</span>}
+        </label>
+      );
+    }
+
+    function AlertBox({ message }) {
+      if (!message) return null;
+      return <p role="alert" className="rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-sm px-4 py-3">{message}</p>;
+    }
+
+    function SignupPage({ onAuth }) {
+      const [form, setForm] = useState({ email: '', password: '', confirm: '', name: '', phone: '' });
+      const [touched, setTouched] = useState({});
+      const [error, setError] = useState('');
+      const [loading, setLoading] = useState(false);
+
+      const rules = passwordRules(form.password);
+      const errors = {
+        email: !EMAIL_RE.test(form.email.trim()) && '올바른 이메일 주소를 입력해 주세요.',
+        password: !rules.every((r) => r.ok) && '비밀번호 조건을 모두 만족해야 합니다.',
+        confirm: form.confirm !== form.password && '비밀번호가 일치하지 않습니다.',
+        name: form.name.trim().length < 2 && '이름을 2자 이상 입력해 주세요.',
+        phone: !PHONE_RE.test(form.phone) && '휴대폰 번호를 확인해 주세요.',
+      };
+      // 오류는 한 번 건드린 칸(또는 제출 시도 후)에만 보여준다.
+      const bind = (k) => ({
+        value: form[k],
+        onChange: (e) => setForm((f) => ({ ...f, [k]: k === 'phone' ? formatPhone(e.target.value) : e.target.value })),
+        onBlur: () => setTouched((t) => ({ ...t, [k]: true })),
+        error: touched[k] && errors[k],
+      });
+
+      async function submit(e) {
+        e.preventDefault();
+        setTouched({ email: true, password: true, confirm: true, name: true, phone: true });
+        if (Object.values(errors).some(Boolean)) return;
+        setLoading(true);
+        setError('');
+        try {
+          const { email, password, name, phone } = form;
+          onAuth(await api('/api/auth/signup', { method: 'POST', body: { email, password, name, phone } }), true);
+        } catch (err) {
+          setError(err.message);
+          setLoading(false);
+        }
+      }
+
+      return (
+        <AuthCard title="과자상점 회원가입" subtitle="가입하면 주문내역을 모아볼 수 있어요"
+          footer={<>이미 회원이신가요? <a href="#/login" className="font-bold text-orange-600 hover:underline">로그인</a></>}>
+          <form onSubmit={submit} noValidate className="space-y-4">
+            <AlertBox message={error} />
+            <TextField label="이메일" type="email" autoComplete="email" placeholder="you@example.com" autoFocus {...bind('email')} />
+            <div>
+              <TextField label="비밀번호" type="password" autoComplete="new-password" placeholder="비밀번호" {...bind('password')} />
+              <ul className="flex gap-3 mt-2 text-xs">
+                {rules.map((r) => (
+                  <li key={r.label} className={r.ok ? 'text-emerald-600' : 'text-stone-400'}>{r.ok ? '✓' : '○'} {r.label}</li>
+                ))}
+              </ul>
+            </div>
+            <TextField label="비밀번호 확인" type="password" autoComplete="new-password" placeholder="비밀번호를 한 번 더" {...bind('confirm')} />
+            <div className="grid grid-cols-2 gap-3">
+              <TextField label="이름" autoComplete="name" placeholder="홍길동" maxLength={20} {...bind('name')} />
+              <TextField label="휴대폰 번호" autoComplete="tel" inputMode="numeric" placeholder="010-1234-5678" {...bind('phone')} />
+            </div>
+            <p className="text-xs text-stone-400 -mt-1">이름·휴대폰 번호는 주문서에 자동으로 채워져요.</p>
+            <button disabled={loading} className="w-full rounded-2xl bg-orange-500 text-white font-bold py-3.5 hover:bg-orange-600 disabled:opacity-50">
+              {loading ? '가입 중…' : '가입하기'}
+            </button>
+          </form>
+        </AuthCard>
+      );
+    }
+
+    function LoginPage({ onAuth, notice }) {
+      const [email, setEmail] = useState('');
+      const [password, setPassword] = useState('');
+      const [error, setError] = useState('');
+      const [loading, setLoading] = useState(false);
+
+      async function submit(e) {
+        e.preventDefault();
+        if (!email.trim() || !password) return setError('이메일과 비밀번호를 입력해 주세요.');
+        setLoading(true);
+        setError('');
+        try {
+          onAuth(await api('/api/auth/login', { method: 'POST', body: { email, password } }));
+        } catch (err) {
+          setError(err.message);
+          setLoading(false);
+        }
+      }
+
+      return (
+        <AuthCard title="로그인" subtitle="다시 오신 걸 환영해요"
+          footer={<>아직 회원이 아니신가요? <a href="#/signup" className="font-bold text-orange-600 hover:underline">회원가입</a></>}>
+          <form onSubmit={submit} noValidate className="space-y-4">
+            {notice && <p className="rounded-xl bg-amber-50 border border-amber-200 text-amber-800 text-sm px-4 py-3">{notice}</p>}
+            <AlertBox message={error} />
+            <TextField label="이메일" type="email" autoComplete="email" placeholder="you@example.com" autoFocus
+              value={email} onChange={(e) => setEmail(e.target.value)} />
+            <TextField label="비밀번호" type="password" autoComplete="current-password" placeholder="비밀번호"
+              value={password} onChange={(e) => setPassword(e.target.value)} />
+            <button disabled={loading} className="w-full rounded-2xl bg-orange-500 text-white font-bold py-3.5 hover:bg-orange-600 disabled:opacity-50">
+              {loading ? '로그인 중…' : '로그인'}
+            </button>
+          </form>
+          <p className="text-center text-xs text-stone-400 mt-4">회원가입 없이도 주문할 수 있어요. <a href="#/" className="underline">쇼핑하러 가기</a></p>
+        </AuthCard>
+      );
+    }
+
+    // ── 마이페이지 ─────────────────────────────────────────────
+    function MyPage({ user, onUnauthorized }) {
+      const [orders, setOrders] = useState(null);
+      const [error, setError] = useState('');
+      const [open, setOpen] = useState(null);   // 펼쳐 본 주문번호
+
+      const load = useCallback(() => {
+        setError('');
+        api('/api/me/orders').then(setOrders).catch((err) => {
+          if (err.status === 401) return onUnauthorized('/mypage');
+          setError(err.message);
+        });
+      }, []);
+      useEffect(load, [load]);
+
+      const spent = orders?.reduce((n, o) => n + o.total, 0) || 0;
+
+      return (
+        <main className="max-w-3xl mx-auto px-4 py-8">
+          <h1 className="text-2xl font-black">마이페이지</h1>
+          <section className="mt-5 rounded-3xl bg-gradient-to-br from-orange-400 to-amber-300 p-6 text-stone-900">
+            <p className="text-sm font-semibold opacity-80">반가워요!</p>
+            <p className="text-2xl font-black mt-1">{user.name}님 🍪</p>
+            <p className="text-sm mt-2">{user.email} · {formatPhone(user.phone)}</p>
+            <p className="text-xs mt-1 opacity-70">{new Date(user.createdAt).toLocaleDateString('ko-KR')} 가입</p>
+            {orders && (
+              <div className="mt-4 flex gap-6 text-sm">
+                <div><p className="opacity-70">주문</p><p className="text-xl font-black">{orders.length}건</p></div>
+                <div><p className="opacity-70">총 구매</p><p className="text-xl font-black">{won(spent)}</p></div>
+              </div>
+            )}
+          </section>
+
+          <h2 className="font-bold text-lg mt-8">주문내역</h2>
+          {error ? <ErrorBox message={error} onRetry={load} />
+            : !orders ? <Loading />
+            : orders.length === 0 ? (
+              <div className="mt-3 rounded-2xl bg-white border border-stone-200 py-14 text-center">
+                <p className="text-stone-500">아직 주문한 과자가 없어요.</p>
+                <a href="#/" className="inline-block mt-4 rounded-xl bg-orange-500 text-white font-bold px-5 py-2.5 hover:bg-orange-600">과자 고르러 가기</a>
+              </div>
+            ) : (
+              <ul className="mt-3 space-y-3">
+                {orders.map((o) => (
+                  <li key={o.orderNo}>
+                    {open === o.orderNo ? (
+                      <div>
+                        <OrderDetail order={o} />
+                        <button onClick={() => setOpen(null)} className="w-full text-sm text-stone-500 py-2 hover:text-stone-800">접기 ▲</button>
+                      </div>
+                    ) : (
+                      <button onClick={() => setOpen(o.orderNo)}
+                        className="w-full text-left rounded-2xl bg-white border border-stone-200 p-4 hover:border-orange-300 flex items-center gap-4">
+                        <span className="text-3xl">{o.items[0]?.emoji}</span>
+                        <span className="flex-1 min-w-0">
+                          <span className="block font-semibold truncate">
+                            {o.items[0]?.name}{o.items.length > 1 && ` 외 ${o.items.length - 1}건`}
+                          </span>
+                          <span className="block text-xs text-stone-400 mt-0.5">
+                            {new Date(o.createdAt).toLocaleDateString('ko-KR')} · <span className="font-mono">{o.orderNo}</span>
+                          </span>
+                        </span>
+                        <span className="font-black">{won(o.total)}</span>
+                      </button>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            )}
+        </main>
+      );
+    }
+
+    // ── App ────────────────────────────────────────────────────
+    function App() {
+      const route = useHashRoute();
+      const cartApi = useCart();
+      const [toast, setToast] = useState(null);
+      const [lastOrder, setLastOrder] = useState(null);   // 완료 화면에서 주문을 보여주려고 전화번호를 잠깐 기억
+      const [user, setUser] = useState(null);
+      const [checking, setChecking] = useState(() => Boolean(tokenStore.get()));   // 저장된 토큰 확인 중
+      const [notice, setNotice] = useState('');
+
+      // 새로고침해도 로그인이 유지되도록, 저장된 토큰으로 내 정보를 다시 받아온다.
+      useEffect(() => {
+        if (!tokenStore.get()) return;
+        api('/api/me')
+          .then(({ user }) => setUser(user))
+          .catch((err) => {
+            // 401 일 때만 토큰을 지운다 — 서버가 잠깐 응답하지 않는다고 로그아웃시키지 않는다.
+            if (err.status === 401) tokenStore.clear();
+          })
+          .finally(() => setChecking(false));
+      }, []);
+
+      const showToast = useCallback((message, action) => {
+        setToast({ message, action });
+        clearTimeout(showToast.timer);
+        showToast.timer = setTimeout(() => setToast(null), 2500);
+      }, []);
+
+      const onAdd = useCallback((product, qty = 1, silent = false) => {
+        cartApi.add(product.id, qty);
+        if (!silent) showToast(`${product.emoji} ${product.name} ${qty}개를 담았어요`, { href: '#/cart', label: '장바구니 보기' });
+      }, [cartApi.add]);
+
+      const onOrdered = useCallback((result) => {
+        setLastOrder(result);
+        cartApi.clear();
+        go(`/orders/${result.orderNo}/complete`);
+      }, [cartApi.clear]);
+
+      const onAuth = useCallback(({ token, user }, isNew) => {
+        tokenStore.set(token);
+        setUser(user);
+        setNotice('');
+        showToast(isNew ? `🎉 ${user.name}님, 가입을 환영해요!` : `${user.name}님, 반가워요!`);
+        // 이동은 아래 라우트 가드가 맡는다.
+      }, []);
+
+      const onLogout = useCallback(() => {
+        tokenStore.clear();
+        setUser(null);
+        showToast('로그아웃했어요.');
+        if (route === '/mypage') go('/');
+      }, [route]);
+
+      // 로그인이 만료됐으면 다시 로그인시킨 뒤 원래 화면으로 돌려보낸다.
+      const onUnauthorized = useCallback((from) => {
+        tokenStore.clear();
+        setUser(null);
+        setNotice('로그인이 만료되었습니다. 다시 로그인해 주세요.');
+        goLogin(from);
+      }, []);
+
+      // 라우트 가드: 로그인 상태에 따라 갈 수 있는 화면을 정리한다.
+      useEffect(() => {
+        if (checking) return;
+        if (!user && route === '/mypage') goLogin('/mypage');
+        if (user && (route === '/login' || route === '/signup')) {
+          go(returnTo);          // 로그인 직후라면 로그인 전에 가려던 곳으로
+          returnTo = '/';
+        }
+      }, [checking, user, route]);
+
+      if (checking) return <Loading />;
+
+      let page;
+      let m;
+      if ((m = route.match(/^\/products\/(\d+)$/))) page = <ProductPage key={route} id={m[1]} onAdd={onAdd} cart={cartApi.cart} />;
+      else if (route === '/cart') page = <CartPage cartApi={cartApi} />;
+      // key 에 user 를 넣어, 주문서에서 로그인하고 돌아오면 이름·전화번호가 새로 채워지게 한다.
+      else if (route === '/checkout') page = <CheckoutPage key={user?.id || 'guest'} cartApi={cartApi} onOrdered={onOrdered} user={user} onUnauthorized={onUnauthorized} />;
+      else if ((m = route.match(/^\/orders\/([\w-]+)\/complete$/))) {
+        page = <CompletePage orderNo={m[1]} phone={lastOrder?.orderNo === m[1] ? lastOrder.phone : null} user={user} />;
+      }
+      else if (route === '/lookup') page = <LookupPage />;
+      else if (route === '/signup') page = <SignupPage onAuth={onAuth} />;
+      else if (route === '/login') page = <LoginPage onAuth={onAuth} notice={notice} />;
+      else if (route === '/mypage') page = user ? <MyPage user={user} onUnauthorized={onUnauthorized} /> : null;
+      else page = <ShopPage onAdd={onAdd} />;
+
+      return (
+        <div className="min-h-screen">
+          <Header count={cartApi.count} user={user} onLogout={onLogout} />
+          {page}
+          <footer className="border-t border-orange-100 py-8 text-center text-xs text-stone-400">
+            과자상점 · AFM 4기 실습용 쇼핑몰 (실제 판매·결제 없음)
+          </footer>
+          <Toast toast={toast} />
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>

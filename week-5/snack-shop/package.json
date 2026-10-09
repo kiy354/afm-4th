@@ -1,0 +1,17 @@
+{
+  "name": "snack-shop",
+  "version": "1.0.0",
+  "private": true,
+  "description": "과자 쇼핑몰 — 상품·장바구니·주문 (Express 5 + Supabase Postgres)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.3",
+    "pg": "^8.13.1"
+  }
+}
