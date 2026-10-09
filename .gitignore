@@ -21,9 +21,6 @@ build/
 __pycache__/
 *.pyc
 
-# 로컬 전용 (API 키 포함)
-week-1/quest/CLAUDE.md
-
 # 다운로드한 미디어 파일 (용량이 커서 커밋 제외)
 week-4/class/**/*.mp4
 week-4/class/**/*.webm
@@ -33,3 +30,6 @@ week-4/class/**/*.mp3
 
 # Playwright MCP 실행 시 생성되는 로그·스냅샷 (툴 산출물)
 .playwright-mcp/
+
+# Vercel
+.vercel/
