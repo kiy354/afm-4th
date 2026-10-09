@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>커뮤니티</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💬</text></svg>" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>body { font-family: 'Noto Sans KR', system-ui, sans-serif; }</style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen">
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState, useEffect, useCallback } = React;
+
+    // ── 토큰 저장 ──────────────────────────────────────────────
+    // 학습용으로 localStorage 에 둔다. (XSS 에 노출될 수 있어 실서비스는 httpOnly 쿠키를 쓴다)
+    const TOKEN_KEY = 'community_token';
+    const tokenStore = {
+      get: () => { try { return localStorage.getItem(TOKEN_KEY); } catch { return null; } },
+      set: (t) => { try { localStorage.setItem(TOKEN_KEY, t); } catch {} },
+      clear: () => { try { localStorage.removeItem(TOKEN_KEY); } catch {} },
+    };
+
+    // ── API ────────────────────────────────────────────────────
+    // body 가 Blob(이미지 파일)이면 JSON 으로 감싸지 않고 바이트 그대로 보낸다.
+    async function api(path, { method = 'GET', body } = {}) {
+      const isFile = body instanceof Blob;
+      const headers = { 'Content-Type': isFile ? body.type : 'application/json' };
+      const token = tokenStore.get();
+      if (token) headers.Authorization = `Bearer ${token}`;
+
+      let res;
+      try {
+        res = await fetch(path, { method, headers, body: isFile ? body : body && JSON.stringify(body) });
+      } catch {
+        throw Object.assign(new Error('서버에 연결할 수 없습니다.'), { status: 0 });
+      }
+      const json = await res.json().catch(() => ({}));
+      if (!res.ok || !json.success) {
+        throw Object.assign(new Error(json.message || '요청에 실패했습니다.'), { status: res.status });
+      }
+      return json.data;
+    }
+
+    // ── 해시 라우터 ────────────────────────────────────────────
+    function useHashRoute() {
+      const read = () => window.location.hash.replace(/^#/, '') || '/';
+      const [route, setRoute] = useState(read);
+      useEffect(() => {
+        const onChange = () => setRoute(read());
+        window.addEventListener('hashchange', onChange);
+        return () => window.removeEventListener('hashchange', onChange);
+      }, []);
+      return route;
+    }
+    const go = (path) => { window.location.hash = path; };
+
+    // ── 입력 규칙 (서버 검증과 같은 기준) ──────────────────────
+    const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const passwordRules = (pw) => [
+      { label: '8자 이상', ok: pw.length >= 8 },
+      { label: '영문 포함', ok: /[A-Za-z]/.test(pw) },
+      { label: '숫자 포함', ok: /\d/.test(pw) },
+    ];
+
+    // ── 공통 UI ────────────────────────────────────────────────
+    function Field({ label, error, hint, children }) {
+      return (
+        <label className="block">
+          <span className="block text-sm font-medium text-slate-700 mb-1.5">{label}</span>
+          {children}
+          {error
+            ? <span className="block text-xs text-rose-600 mt-1.5">{error}</span>
+            : hint && <span className="block text-xs text-slate-500 mt-1.5">{hint}</span>}
+        </label>
+      );
+    }
+
+    function inputClass(hasError) {
+      return 'w-full rounded-xl border px-4 py-3 text-[15px] outline-none transition bg-white ' +
+        (hasError
+          ? 'border-rose-400 focus:ring-4 focus:ring-rose-100'
+          : 'border-slate-300 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100');
+    }
+
+    function PasswordInput({ value, onChange, hasError, autoComplete, placeholder }) {
+      const [show, setShow] = useState(false);
+      return (
+        <div className="relative">
+          <input
+            type={show ? 'text' : 'password'}
+            value={value}
+            onChange={(e) => onChange(e.target.value)}
+            autoComplete={autoComplete}
+            placeholder={placeholder}
+            className={inputClass(hasError) + ' pr-16'}
+          />
+          <button
+            type="button"
+            onClick={() => setShow((s) => !s)}
+            className="absolute right-2 top-1/2 -translate-y-1/2 text-xs font-medium text-slate-500 hover:text-slate-800 px-2 py-1 rounded-md"
+            aria-label={show ? '비밀번호 숨기기' : '비밀번호 보기'}
+          >
+            {show ? '숨기기' : '보기'}
+          </button>
+        </div>
+      );
+    }
+
+    function SubmitButton({ loading, children }) {
+      return (
+        <button
+          type="submit"
+          disabled={loading}
+          className="w-full rounded-xl bg-indigo-600 py-3 font-semibold text-white transition hover:bg-indigo-700 disabled:opacity-60 disabled:cursor-not-allowed"
+        >
+          {loading ? '처리 중…' : children}
+        </button>
+      );
+    }
+
+    function Banner({ message }) {
+      if (!message) return null;
+      return (
+        <div role="alert" className="rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-sm px-4 py-3">
+          {message}
+        </div>
+      );
+    }
+
+    function AuthLayout({ title, subtitle, children, footer }) {
+      return (
+        <div className="min-h-screen flex items-center justify-center px-4 py-10">
+          <div className="w-full max-w-md">
+            <div className="text-center mb-8">
+              <a href="#/" className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-indigo-600 text-white text-2xl mb-4" title="게시판으로">💬</a>
+              <h1 className="text-2xl font-bold text-slate-900">{title}</h1>
+              <p className="text-slate-500 mt-1.5">{subtitle}</p>
+            </div>
+            <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">{children}</div>
+            <p className="text-center text-sm text-slate-600 mt-6">{footer}</p>
+            <p className="text-center text-sm mt-3"><a href="#/" className="text-slate-400 hover:text-slate-600">← 로그인 없이 게시판 둘러보기</a></p>
+          </div>
+        </div>
+      );
+    }
+
+    // ── 로그인 ─────────────────────────────────────────────────
+    function LoginPage({ onAuth, notice }) {
+      const [email, setEmail] = useState('');
+      const [password, setPassword] = useState('');
+      const [error, setError] = useState('');
+      const [loading, setLoading] = useState(false);
+
+      async function submit(e) {
+        e.preventDefault();
+        if (!email.trim() || !password) return setError('이메일과 비밀번호를 입력해 주세요.');
+        setLoading(true);
+        setError('');
+        try {
+          onAuth(await api('/api/auth/login', { method: 'POST', body: { email, password } }));
+        } catch (err) {
+          setError(err.message);
+        } finally {
+          setLoading(false);
+        }
+      }
+
+      return (
+        <AuthLayout
+          title="다시 오신 걸 환영해요"
+          subtitle="커뮤니티에 로그인하세요"
+          footer={<>아직 회원이 아니신가요? <a href="#/signup" className="font-semibold text-indigo-600 hover:underline">회원가입</a></>}
+        >
+          <form onSubmit={submit} className="space-y-5" noValidate>
+            {notice && <div className="rounded-xl bg-amber-50 border border-amber-200 text-amber-800 text-sm px-4 py-3">{notice}</div>}
+            <Banner message={error} />
+            <Field label="이메일">
+              <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}
+                autoComplete="email" placeholder="you@example.com" className={inputClass(false)} autoFocus />
+            </Field>
+            <Field label="비밀번호">
+              <PasswordInput value={password} onChange={setPassword} autoComplete="current-password" placeholder="비밀번호" />
+            </Field>
+            <SubmitButton loading={loading}>로그인</SubmitButton>
+          </form>
+        </AuthLayout>
+      );
+    }
+
+    // ── 회원가입 ───────────────────────────────────────────────
+    function SignupPage({ onAuth }) {
+      const [form, setForm] = useState({ email: '', nickname: '', password: '', confirm: '' });
+      const [touched, setTouched] = useState({});
+      const [serverError, setServerError] = useState('');
+      const [loading, setLoading] = useState(false);
+
+      const set = (key) => (value) => setForm((f) => ({ ...f, [key]: value }));
+      const rules = passwordRules(form.password);
+      const nick = form.nickname.trim();
+
+      // 필드별 오류 — 사용자가 한 번 건드린 칸(또는 제출 시도 후)에만 보여준다.
+      const errors = {
+        email: !EMAIL_RE.test(form.email.trim()) && '올바른 이메일 주소를 입력해 주세요.',
+        nickname: (nick.length < 2 || nick.length > 20) && '닉네임은 2~20자로 입력해 주세요.',
+        password: !rules.every((r) => r.ok) && '비밀번호 조건을 모두 만족해야 합니다.',
+        confirm: form.confirm !== form.password && '비밀번호가 일치하지 않습니다.',
+      };
+      const shown = (key) => touched[key] && errors[key];
+
+      async function submit(e) {
+        e.preventDefault();
+        setTouched({ email: true, nickname: true, password: true, confirm: true });
+        if (Object.values(errors).some(Boolean)) return;
+        setLoading(true);
+        setServerError('');
+        try {
+          const { email, nickname, password } = form;
+          onAuth(await api('/api/auth/signup', { method: 'POST', body: { email, nickname, password } }));
+        } catch (err) {
+          setServerError(err.message);
+        } finally {
+          setLoading(false);
+        }
+      }
+
+      const blur = (key) => () => setTouched((t) => ({ ...t, [key]: true }));
+
+      return (
+        <AuthLayout
+          title="커뮤니티에 가입하세요"
+          subtitle="1분이면 끝나요"
+          footer={<>이미 계정이 있으신가요? <a href="#/login" className="font-semibold text-indigo-600 hover:underline">로그인</a></>}
+        >
+          <form onSubmit={submit} className="space-y-5" noValidate>
+            <Banner message={serverError} />
+            <Field label="이메일" error={shown('email')}>
+              <input type="email" value={form.email} onChange={(e) => set('email')(e.target.value)} onBlur={blur('email')}
+                autoComplete="email" placeholder="you@example.com" className={inputClass(shown('email'))} autoFocus />
+            </Field>
+            <Field label="닉네임" error={shown('nickname')} hint="게시글과 댓글에 표시되는 이름이에요 (2~20자)">
+              <input type="text" value={form.nickname} onChange={(e) => set('nickname')(e.target.value)} onBlur={blur('nickname')}
+                autoComplete="nickname" placeholder="닉네임" maxLength={20} className={inputClass(shown('nickname'))} />
+            </Field>
+            <div onBlur={blur('password')}>
+              <Field label="비밀번호" error={shown('password')}>
+                <PasswordInput value={form.password} onChange={set('password')} hasError={shown('password')}
+                  autoComplete="new-password" placeholder="비밀번호" />
+              </Field>
+              <ul className="flex gap-3 mt-2 text-xs">
+                {rules.map((r) => (
+                  <li key={r.label} className={r.ok ? 'text-emerald-600' : 'text-slate-400'}>
+                    {r.ok ? '✓' : '○'} {r.label}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div onBlur={blur('confirm')}>
+              <Field label="비밀번호 확인" error={shown('confirm')}>
+                <PasswordInput value={form.confirm} onChange={set('confirm')} hasError={shown('confirm')}
+                  autoComplete="new-password" placeholder="비밀번호를 한 번 더 입력" />
+              </Field>
+            </div>
+            <SubmitButton loading={loading}>가입하기</SubmitButton>
+          </form>
+        </AuthLayout>
+      );
+    }
+
+    // ── 게시판 공통 ────────────────────────────────────────────
+    // 방금 전 / 5분 전 / 3시간 전 / 2일 전, 일주일이 넘으면 날짜로.
+    function timeAgo(iso) {
+      const sec = (Date.now() - new Date(iso).getTime()) / 1000;
+      if (sec < 60) return '방금 전';
+      if (sec < 3600) return `${Math.floor(sec / 60)}분 전`;
+      if (sec < 86400) return `${Math.floor(sec / 3600)}시간 전`;
+      if (sec < 86400 * 7) return `${Math.floor(sec / 86400)}일 전`;
+      return new Date(iso).toLocaleDateString('ko-KR');
+    }
+
+    // 로그인·회원가입을 마친 뒤 돌아갈 곳. (비회원이 글쓰기를 누르면 로그인 → 글쓰기로)
+    let returnTo = '/';
+    function goLogin(from) {
+      returnTo = from || '/';
+      go('/login');
+    }
+
+    function Toast({ toast }) {
+      if (!toast) return null;
+      return (
+        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 rounded-xl bg-slate-900 text-white text-sm px-4 py-3 shadow-lg">
+          {toast}
+        </div>
+      );
+    }
+
+    function Header({ user, onLogout }) {
+      return (
+        <header className="bg-white border-b border-slate-200 sticky top-0 z-10">
+          <div className="max-w-3xl mx-auto px-4 h-14 flex items-center justify-between">
+            <a href="#/" className="font-bold text-slate-900">💬 커뮤니티</a>
+            {user ? (
+              <div className="flex items-center gap-3 text-sm">
+                <span className="text-slate-600 hidden sm:inline"><b className="text-slate-900">{user.nickname}</b>님</span>
+                <button onClick={onLogout} className="rounded-lg border border-slate-300 px-3 py-1.5 hover:bg-slate-100">로그아웃</button>
+              </div>
+            ) : (
+              <div className="flex items-center gap-2 text-sm">
+                <button onClick={() => goLogin(window.location.hash.slice(1))} className="rounded-lg px-3 py-1.5 hover:bg-slate-100">로그인</button>
+                <a href="#/signup" className="rounded-lg bg-indigo-600 text-white px-3 py-1.5 hover:bg-indigo-700">회원가입</a>
+              </div>
+            )}
+          </div>
+        </header>
+      );
+    }
+
+    function Loading() {
+      return <div className="py-20 text-center text-slate-400">불러오는 중…</div>;
+    }
+
+    function ErrorBox({ message, onRetry }) {
+      return (
+        <div className="py-16 text-center">
+          <p className="text-slate-600">{message}</p>
+          <div className="mt-4 flex justify-center gap-2">
+            {onRetry && <button onClick={onRetry} className="rounded-lg border border-slate-300 px-4 py-2 text-sm hover:bg-slate-100">다시 시도</button>}
+            <a href="#/" className="rounded-lg border border-slate-300 px-4 py-2 text-sm hover:bg-slate-100">목록으로</a>
+          </div>
+        </div>
+      );
+    }
+
+    // ── 글 목록 ────────────────────────────────────────────────
+    function PostListPage({ user, page }) {
+      const [data, setData] = useState(null);
+      const [error, setError] = useState('');
+
+      const load = useCallback(() => {
+        setError('');
+        api(`/api/posts?page=${page}`).then(setData).catch((err) => setError(err.message));
+      }, [page]);
+      useEffect(load, [load]);
+
+      const write = () => (user ? go('/write') : goLogin('/write'));
+
+      return (
+        <main className="max-w-3xl mx-auto px-4 py-8">
+          <div className="flex items-end justify-between mb-5">
+            <div>
+              <h1 className="text-2xl font-bold text-slate-900">자유게시판</h1>
+              {data && <p className="text-sm text-slate-500 mt-1">전체 {data.total}개의 글</p>}
+            </div>
+            <button onClick={write} className="rounded-xl bg-indigo-600 text-white font-semibold px-4 py-2.5 hover:bg-indigo-700">✏️ 글쓰기</button>
+          </div>
+
+          {error ? <ErrorBox message={error} onRetry={load} />
+            : !data ? <Loading />
+            : data.posts.length === 0 ? (
+              <div className="bg-white rounded-2xl border border-slate-200 py-16 text-center">
+                <p className="text-slate-500">아직 글이 없어요.</p>
+                <button onClick={write} className="mt-3 text-indigo-600 font-semibold hover:underline">첫 글을 남겨 보세요</button>
+              </div>
+            ) : (
+              <>
+                <ul className="bg-white rounded-2xl border border-slate-200 divide-y divide-slate-100 overflow-hidden">
+                  {data.posts.map((p) => (
+                    <li key={p.id}>
+                      <a href={`#/posts/${p.id}`} className="flex gap-4 px-5 py-4 hover:bg-slate-50 transition">
+                        <div className="min-w-0 flex-1">
+                          <div className="flex items-start justify-between gap-3">
+                            <h2 className="font-semibold text-slate-900 truncate">{p.title}</h2>
+                            {p.commentCount > 0 && (
+                              <span className="shrink-0 rounded-full bg-indigo-50 text-indigo-600 text-xs font-semibold px-2 py-0.5">💬 {p.commentCount}</span>
+                            )}
+                          </div>
+                          <p className="text-sm text-slate-500 mt-1 truncate">{p.content}</p>
+                          <p className="text-xs text-slate-400 mt-2">{p.author} · {timeAgo(p.createdAt)}</p>
+                        </div>
+                        {p.images[0] && (
+                          <img src={p.images[0].url} alt="" loading="lazy"
+                            className="shrink-0 h-16 w-16 rounded-lg object-cover bg-slate-100 border border-slate-200" />
+                        )}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+                <Pagination page={data.page} totalPages={data.totalPages} />
+              </>
+            )}
+        </main>
+      );
+    }
+
+    function Pagination({ page, totalPages }) {
+      if (totalPages <= 1) return null;
+      const link = (p) => (p === 1 ? '#/' : `#/page/${p}`);
+      const btn = 'min-w-9 h-9 px-2 inline-flex items-center justify-center rounded-lg text-sm';
+      return (
+        <nav className="flex justify-center gap-1 mt-6">
+          {page > 1 && <a href={link(page - 1)} className={`${btn} hover:bg-slate-200`}>‹</a>}
+          {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
+            <a key={p} href={link(p)}
+              className={`${btn} ${p === page ? 'bg-indigo-600 text-white font-semibold' : 'text-slate-600 hover:bg-slate-200'}`}>{p}</a>
+          ))}
+          {page < totalPages && <a href={link(page + 1)} className={`${btn} hover:bg-slate-200`}>›</a>}
+        </nav>
+      );
+    }
+
+    // ── 글 상세 + 댓글 ─────────────────────────────────────────
+    function PostDetailPage({ id, user, showToast, onUnauthorized }) {
+      const [data, setData] = useState(null);
+      const [error, setError] = useState('');
+      const [comment, setComment] = useState('');
+      const [sending, setSending] = useState(false);
+
+      const load = useCallback(() => {
+        setError('');
+        api(`/api/posts/${id}`).then(setData).catch((err) => setError(err.message));
+      }, [id]);
+      useEffect(load, [load]);
+
+      // 로그인이 풀린(토큰 만료) 경우는 로그인 화면으로, 나머지는 토스트로 알린다.
+      const fail = (err) => (err.status === 401 ? onUnauthorized(`/posts/${id}`) : showToast(err.message));
+
+      async function deletePost() {
+        if (!confirm('이 글을 삭제할까요? 댓글도 함께 지워집니다.')) return;
+        try {
+          await api(`/api/posts/${id}`, { method: 'DELETE' });
+          showToast('글을 삭제했습니다.');
+          go('/');
+        } catch (err) { fail(err); }
+      }
+
+      async function addComment(e) {
+        e.preventDefault();
+        if (!comment.trim()) return;
+        setSending(true);
+        try {
+          const { comment: created } = await api(`/api/posts/${id}/comments`, { method: 'POST', body: { content: comment } });
+          setData((d) => ({ ...d, comments: [...d.comments, created] }));
+          setComment('');
+        } catch (err) { fail(err); }
+        finally { setSending(false); }
+      }
+
+      // 낙관적 삭제 — 화면에서 먼저 지우고, 실패하면 원래 목록으로 되돌린다.
+      async function deleteComment(commentId) {
+        if (!confirm('댓글을 삭제할까요?')) return;
+        const before = data.comments;
+        setData((d) => ({ ...d, comments: d.comments.filter((c) => c.id !== commentId) }));
+        try {
+          await api(`/api/comments/${commentId}`, { method: 'DELETE' });
+        } catch (err) {
+          setData((d) => ({ ...d, comments: before }));
+          fail(err);
+        }
+      }
+
+      if (error) return <main className="max-w-3xl mx-auto px-4"><ErrorBox message={error} onRetry={load} /></main>;
+      if (!data) return <Loading />;
+
+      const { post, comments } = data;
+      const mine = user && user.id === post.authorId;
+      const edited = new Date(post.updatedAt) - new Date(post.createdAt) > 1000;
+
+      return (
+        <main className="max-w-3xl mx-auto px-4 py-8">
+          <a href="#/" className="text-sm text-slate-500 hover:text-slate-800">← 목록으로</a>
+
+          <article className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 mt-3">
+            <h1 className="text-2xl font-bold text-slate-900 break-words">{post.title}</h1>
+            <div className="flex items-center justify-between mt-3 pb-5 border-b border-slate-100">
+              <p className="text-sm text-slate-500">
+                <b className="text-slate-700">{post.author}</b> · {timeAgo(post.createdAt)}{edited && ' · 수정됨'}
+              </p>
+              {mine && (
+                <div className="flex gap-1 text-sm">
+                  <a href={`#/posts/${post.id}/edit`} className="rounded-lg px-3 py-1.5 text-slate-600 hover:bg-slate-100">수정</a>
+                  <button onClick={deletePost} className="rounded-lg px-3 py-1.5 text-rose-600 hover:bg-rose-50">삭제</button>
+                </div>
+              )}
+            </div>
+            {/* 본문은 React 가 문자열로 넣으므로 HTML 이 실행되지 않는다. 줄바꿈만 살린다. */}
+            <div className="pt-5 text-[15px] leading-7 text-slate-800 whitespace-pre-wrap break-words">{post.content}</div>
+            {post.images.length > 0 && (
+              <div className={`mt-6 grid gap-2 ${post.images.length > 1 ? 'grid-cols-2' : ''}`}>
+                {post.images.map((img) => (
+                  <a key={img.path} href={img.url} target="_blank" rel="noopener" title="원본 보기">
+                    <img src={img.url} alt="" loading="lazy"
+                      className="w-full max-h-[480px] object-contain rounded-xl bg-slate-100 border border-slate-200" />
+                  </a>
+                ))}
+              </div>
+            )}
+          </article>
+
+          <section className="mt-6">
+            <h2 className="font-semibold text-slate-900 mb-3">댓글 {comments.length}</h2>
+
+            {comments.length > 0 && (
+              <ul className="bg-white rounded-2xl border border-slate-200 divide-y divide-slate-100 mb-4">
+                {comments.map((c) => (
+                  <li key={c.id} className="px-5 py-4">
+                    <div className="flex items-center justify-between">
+                      <p className="text-sm"><b className="text-slate-800">{c.author}</b>
+                        {c.authorId === post.authorId && <span className="ml-1.5 text-xs text-indigo-600 font-semibold">작성자</span>}
+                        <span className="text-slate-400"> · {timeAgo(c.createdAt)}</span>
+                      </p>
+                      {user && user.id === c.authorId && (
+                        <button onClick={() => deleteComment(c.id)} className="text-xs text-slate-400 hover:text-rose-600">삭제</button>
+                      )}
+                    </div>
+                    <p className="text-[15px] text-slate-700 mt-1 whitespace-pre-wrap break-words">{c.content}</p>
+                  </li>
+                ))}
+              </ul>
+            )}
+
+            {user ? (
+              <form onSubmit={addComment} className="bg-white rounded-2xl border border-slate-200 p-4">
+                <textarea value={comment} onChange={(e) => setComment(e.target.value)} maxLength={1000} rows={3}
+                  placeholder="댓글을 남겨 보세요" className="w-full resize-none outline-none text-[15px]" />
+                <div className="flex items-center justify-between mt-2">
+                  <span className="text-xs text-slate-400">{comment.length} / 1000</span>
+                  <button type="submit" disabled={sending || !comment.trim()}
+                    className="rounded-lg bg-indigo-600 text-white text-sm font-semibold px-4 py-2 hover:bg-indigo-700 disabled:opacity-50">
+                    {sending ? '등록 중…' : '등록'}
+                  </button>
+                </div>
+              </form>
+            ) : (
+              <button onClick={() => goLogin(`/posts/${id}`)}
+                className="w-full bg-white rounded-2xl border border-dashed border-slate-300 py-5 text-sm text-slate-500 hover:bg-slate-50">
+                댓글을 쓰려면 <b className="text-indigo-600">로그인</b>하세요
+              </button>
+            )}
+          </section>
+        </main>
+      );
+    }
+
+    // ── 글쓰기 / 수정 ──────────────────────────────────────────
+    // ── 이미지 준비 ────────────────────────────────────────────
+    // 휴대폰 사진은 5~10MB 가 흔하다. Vercel 함수는 요청 본문이 4.5MB 를 넘으면 거절하므로,
+    // 올리기 전에 브라우저에서 긴 변을 1600px 로 줄이고 다시 압축한다.
+    const MAX_IMAGES = 4;
+    const MAX_SIDE = 1600;
+    const MAX_UPLOAD = 4 * 1024 * 1024;
+
+    async function prepareImage(file) {
+      if (!/^image\/(jpeg|png|webp|gif)$/.test(file.type)) {
+        throw new Error('JPG·PNG·GIF·WEBP 이미지만 올릴 수 있습니다.');
+      }
+      // GIF 는 캔버스로 그리면 애니메이션이 사라지므로 그대로 보낸다.
+      if (file.type === 'image/gif') {
+        if (file.size > MAX_UPLOAD) throw new Error('GIF 는 4MB 이하만 올릴 수 있습니다.');
+        return file;
+      }
+      const bitmap = await createImageBitmap(file);
+      const scale = Math.min(1, MAX_SIDE / Math.max(bitmap.width, bitmap.height));
+      // 이미 작고 가벼운 이미지는 손대지 않는다 (재압축하면 화질만 떨어진다).
+      if (scale === 1 && file.size <= 1024 * 1024) return file;
+
+      const canvas = document.createElement('canvas');
+      canvas.width = Math.round(bitmap.width * scale);
+      canvas.height = Math.round(bitmap.height * scale);
+      const ctx = canvas.getContext('2d');
+      const toBlob = (type) => new Promise((r) => canvas.toBlob(r, type, 0.85));
+
+      ctx.drawImage(bitmap, 0, 0, canvas.width, canvas.height);
+      // WEBP 는 투명 배경을 유지한다. 지원하지 않는 브라우저는 PNG 를 돌려주므로 그때는 JPEG 로.
+      let blob = await toBlob('image/webp');
+      if (!blob || blob.type !== 'image/webp') {
+        ctx.globalCompositeOperation = 'destination-over';   // JPEG 는 투명이 없어 흰 배경을 깐다
+        ctx.fillStyle = '#fff';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        blob = await toBlob('image/jpeg');
+      }
+      if (blob.size > MAX_UPLOAD) throw new Error('이미지가 너무 큽니다.');
+      return blob;
+    }
+
+    function ImagePicker({ images, setImages, uploading, setUploading, onError }) {
+      const inputRef = React.useRef(null);
+      const left = MAX_IMAGES - images.length - uploading;
+
+      async function pick(e) {
+        const files = [...e.target.files].slice(0, Math.max(0, left));
+        e.target.value = '';   // 같은 파일을 다시 고를 수 있게
+        if (e.target.files.length > files.length) onError(`이미지는 ${MAX_IMAGES}장까지 붙일 수 있습니다.`);
+        // 여러 장을 동시에 올린다. 화면에는 업로드가 먼저 끝난 순서대로 붙는다.
+        setUploading((n) => n + files.length);
+        await Promise.all(files.map(async (file) => {
+          try {
+            const uploaded = await api('/api/uploads', { method: 'POST', body: await prepareImage(file) });
+            setImages((list) => [...list, uploaded]);
+          } catch (err) {
+            onError(err);
+          } finally {
+            setUploading((n) => n - 1);
+          }
+        }));
+      }
+
+      return (
+        <div>
+          <div className="flex flex-wrap gap-2">
+            {images.map((img) => (
+              <div key={img.path} className="relative h-24 w-24">
+                <img src={img.url} alt="" className="h-24 w-24 rounded-xl object-cover border border-slate-200" />
+                <button type="button" onClick={() => setImages((list) => list.filter((x) => x.path !== img.path))}
+                  className="absolute -top-2 -right-2 h-6 w-6 rounded-full bg-slate-800 text-white text-xs leading-6 hover:bg-rose-600"
+                  aria-label="이미지 빼기">✕</button>
+              </div>
+            ))}
+            {Array.from({ length: uploading }, (_, i) => (
+              <div key={`u${i}`} className="h-24 w-24 rounded-xl border border-slate-200 bg-slate-100 animate-pulse flex items-center justify-center text-xs text-slate-400">올리는 중…</div>
+            ))}
+            {left > 0 && (
+              <button type="button" onClick={() => inputRef.current.click()}
+                className="h-24 w-24 rounded-xl border-2 border-dashed border-slate-300 text-slate-400 hover:border-indigo-400 hover:text-indigo-500 flex flex-col items-center justify-center text-xs gap-1">
+                <span className="text-2xl leading-none">＋</span>사진 추가
+              </button>
+            )}
+          </div>
+          <p className="text-xs text-slate-400 mt-2">사진 {images.length} / {MAX_IMAGES} · JPG·PNG·GIF·WEBP</p>
+          <input ref={inputRef} type="file" accept="image/jpeg,image/png,image/webp,image/gif" multiple hidden onChange={pick} />
+        </div>
+      );
+    }
+
+    function PostFormPage({ id, onUnauthorized }) {
+      const editing = Boolean(id);
+      const [title, setTitle] = useState('');
+      const [content, setContent] = useState('');
+      const [images, setImages] = useState([]);       // [{ path, url }]
+      const [uploading, setUploading] = useState(0);  // 올리는 중인 장 수
+      const [loaded, setLoaded] = useState(!editing);
+      const [error, setError] = useState('');
+      const [saving, setSaving] = useState(false);
+
+      // 수정이면 기존 내용을 불러와 채운다.
+      useEffect(() => {
+        if (!editing) return;
+        api(`/api/posts/${id}`)
+          .then(({ post }) => { setTitle(post.title); setContent(post.content); setImages(post.images); setLoaded(true); })
+          .catch((err) => { setError(err.message); setLoaded(true); });
+      }, [id]);
+
+      const onUploadError = (err) => {
+        if (err?.status === 401) return onUnauthorized(editing ? `/posts/${id}/edit` : '/write');
+        setError(err.message || err);
+      };
+
+      async function submit(e) {
+        e.preventDefault();
+        if (!title.trim() || !content.trim()) return setError('제목과 내용을 모두 입력해 주세요.');
+        if (uploading) return setError('사진을 올리는 중입니다. 잠시만 기다려 주세요.');
+        setSaving(true);
+        setError('');
+        try {
+          const body = { title, content, images: images.map((img) => img.path) };
+          const { id: savedId } = editing
+            ? await api(`/api/posts/${id}`, { method: 'PATCH', body })
+            : await api('/api/posts', { method: 'POST', body });
+          go(`/posts/${savedId}`);
+        } catch (err) {
+          if (err.status === 401) return onUnauthorized(editing ? `/posts/${id}/edit` : '/write');
+          setError(err.message);
+          setSaving(false);
+        }
+      }
+
+      if (!loaded) return <Loading />;
+
+      return (
+        <main className="max-w-3xl mx-auto px-4 py-8">
+          <h1 className="text-2xl font-bold text-slate-900 mb-5">{editing ? '글 수정' : '새 글 쓰기'}</h1>
+          <form onSubmit={submit} className="bg-white rounded-2xl border border-slate-200 p-6 space-y-4">
+            <Banner message={error} />
+            <input value={title} onChange={(e) => setTitle(e.target.value)} maxLength={100} placeholder="제목"
+              className={inputClass(false) + ' text-lg font-semibold'} autoFocus />
+            <div>
+              <textarea value={content} onChange={(e) => setContent(e.target.value)} maxLength={5000} rows={14}
+                placeholder="내용을 입력하세요" className={inputClass(false) + ' resize-y leading-7'} />
+              <p className="text-right text-xs text-slate-400 mt-1">{content.length} / 5000</p>
+            </div>
+            <ImagePicker images={images} setImages={setImages} uploading={uploading} setUploading={setUploading} onError={onUploadError} />
+            <div className="flex justify-end gap-2">
+              <button type="button" onClick={() => history.back()} className="rounded-xl border border-slate-300 px-5 py-2.5 hover:bg-slate-100">취소</button>
+              <button type="submit" disabled={saving || uploading > 0}
+                className="rounded-xl bg-indigo-600 text-white font-semibold px-5 py-2.5 hover:bg-indigo-700 disabled:opacity-60">
+                {saving ? '저장 중…' : uploading ? '사진 올리는 중…' : editing ? '수정 완료' : '등록'}
+              </button>
+            </div>
+          </form>
+        </main>
+      );
+    }
+
+    // ── App ────────────────────────────────────────────────────
+    function App() {
+      const route = useHashRoute();
+      const [user, setUser] = useState(null);
+      const [checking, setChecking] = useState(true);   // 저장된 토큰 확인 중
+      const [notice, setNotice] = useState('');
+      const [toast, setToast] = useState('');
+
+      const showToast = useCallback((msg) => {
+        setToast(msg);
+        clearTimeout(showToast.timer);
+        showToast.timer = setTimeout(() => setToast(''), 2500);
+      }, []);
+
+      // 새로고침해도 로그인이 유지되도록, 저장된 토큰으로 내 정보를 다시 받아온다.
+      useEffect(() => {
+        if (!tokenStore.get()) { setChecking(false); return; }
+        api('/api/auth/me')
+          .then(({ user }) => setUser(user))
+          .catch((err) => {
+            // 401 일 때만 토큰을 지운다 — 서버가 잠깐 죽었다고 로그아웃시키지 않는다.
+            if (err.status === 401) { tokenStore.clear(); setNotice(err.message); }
+          })
+          .finally(() => setChecking(false));
+      }, []);
+
+      const onAuth = useCallback(({ token, user }) => {
+        tokenStore.set(token);
+        setUser(user);
+        setNotice('');
+        // 이동은 아래 라우트 가드가 맡는다. 여기서도 go() 하면 가드의 이동과 겹쳐 덮어써진다.
+      }, []);
+
+      const onLogout = useCallback(() => {
+        tokenStore.clear();
+        setUser(null);
+        showToast('로그아웃했습니다.');
+        go('/');
+      }, []);
+
+      // 글을 쓰다가 토큰이 만료되면 로그인시킨 뒤 원래 화면으로 돌려보낸다.
+      const onUnauthorized = useCallback((from) => {
+        tokenStore.clear();
+        setUser(null);
+        setNotice('로그인이 만료되었습니다. 다시 로그인해 주세요.');
+        goLogin(from);
+      }, []);
+
+      // 라우트 가드: 로그인 상태에 따라 갈 수 있는 화면을 제한한다.
+      const needsLogin = route === '/write' || /^\/posts\/\d+\/edit$/.test(route);
+      useEffect(() => {
+        if (checking) return;
+        if (!user && needsLogin) goLogin(route);
+        if (user && (route === '/login' || route === '/signup')) {
+          go(returnTo);          // 로그인 직후라면 로그인 전에 가려던 곳으로
+          returnTo = '/';
+        }
+      }, [checking, user, route]);
+
+      if (checking) {
+        return <div className="min-h-screen flex items-center justify-center text-slate-400">불러오는 중…</div>;
+      }
+      if (route === '/signup') return <SignupPage onAuth={onAuth} />;
+      if (route === '/login') return <LoginPage onAuth={onAuth} notice={notice} />;
+
+      let page;
+      let m;
+      if ((m = route.match(/^\/posts\/(\d+)\/edit$/))) page = user && <PostFormPage key={route} id={m[1]} onUnauthorized={onUnauthorized} />;
+      else if ((m = route.match(/^\/posts\/(\d+)$/))) page = <PostDetailPage key={route} id={m[1]} user={user} showToast={showToast} onUnauthorized={onUnauthorized} />;
+      else if (route === '/write') page = user && <PostFormPage key={route} onUnauthorized={onUnauthorized} />;
+      else if ((m = route.match(/^\/page\/(\d+)$/))) page = <PostListPage user={user} page={Number(m[1])} />;
+      else page = <PostListPage user={user} page={1} />;
+
+      return (
+        <div className="min-h-screen">
+          <Header user={user} onLogout={onLogout} />
+          {page}
+          <Toast toast={toast} />
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>
