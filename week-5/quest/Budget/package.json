@@ -1,0 +1,16 @@
+{
+  "name": "budget-book",
+  "version": "1.0.0",
+  "private": true,
+  "description": "가계부 — 카테고리별 합계 (Express 5 + Supabase Postgres)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node server.js --seed"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "pg": "^8.13.1"
+  }
+}

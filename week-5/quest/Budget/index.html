@@ -1,0 +1,1568 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가계부 — 카테고리별 합계</title>
+
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <!-- ⚠️ 모든 CDN 버전 고정. Babel 은 반드시 7.x (8.x 는 인라인 text/babel 미지원) -->
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone@7.25.9/babel.min.js"></script>
+
+  <style>
+    /* Tailwind 유틸리티로 표현 불가한 부분만 */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-up { animation: fadeUp .22s ease-out both; }
+
+    /* 합계 막대가 0 에서 자기 비율까지 자라는 연출 */
+    @keyframes growBar { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+    .animate-bar { animation: growBar .5s cubic-bezier(.2,.8,.2,1) both; transform-origin: left; }
+
+    /* 숫자는 표처럼 자리가 맞아야 읽기 쉽다 */
+    .tnum { font-variant-numeric: tabular-nums; }
+
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+    /* ──────────────────────────────────────────────────────────
+       차트 토큰 — 색은 눈대중이 아니라 검증을 거친 값만 쓴다.
+       수입/지출 두 계열은 범주형 슬롯 1·2 (파랑/주황).
+       가계부 관행인 녹색/빨강은 적록색각이상에서 ΔE 5.8 로
+       사실상 구분되지 않아(검증 FAIL) 쓰지 않는다. 파랑/주황은 ΔE 24.7.
+       ────────────────────────────────────────────────────────── */
+    .viz {
+      --viz-surface:  #ffffff;
+      --viz-grid:     #e1e0d9;   /* 눈금선 — 표면에서 한 단계 */
+      --viz-axis:     #c3c2b7;   /* 기준선 */
+      --viz-muted:    #898781;   /* 축 글자 */
+      --viz-ink:      #0b0b0b;
+      --viz-ink-2:    #52514e;
+      --viz-income:   #2a78d6;   /* 슬롯 1 파랑 */
+      --viz-expense:  #eb6834;   /* 슬롯 2 주황 */
+      --viz-pos:      #2a78d6;   /* 발산 + (흑자) */
+      --viz-neg:      #e34948;   /* 발산 − (적자) */
+      --viz-zero:     #f0efec;   /* 발산 중앙 — 중립 회색 */
+    }
+    /* 막대에 포인터를 올리면 살짝 밝아져 반응이 보인다 */
+    .viz-col { transition: opacity .12s ease; }
+    .viz-band:hover .viz-col { opacity: .82; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+  <div id="root"></div>
+
+  <script type="text/babel">
+// ========================================
+// React Hooks
+// ========================================
+const { useState, useEffect, useMemo, useCallback, useRef } = React;
+
+// ========================================
+// 📡 API Client
+// ========================================
+const API_BASE_URL = '/api';
+
+/** 모든 응답은 { success, data, message? } 구조. 실패 시 Error 를 던진다. */
+async function api(endpoint, options = {}) {
+  const res = await fetch(`${API_BASE_URL}${endpoint}`, {
+    headers: { 'Content-Type': 'application/json' },
+    ...options,
+  });
+
+  let payload = null;
+  try {
+    payload = await res.json();
+  } catch {
+    // 서버가 JSON 이 아닌 걸 돌려준 경우 (프록시 오류 페이지 등)
+    throw new Error('서버 응답을 읽을 수 없습니다.');
+  }
+
+  if (!res.ok || payload.success === false) {
+    throw new Error(payload?.message || '요청에 실패했습니다.');
+  }
+  return payload.data;
+}
+
+// ========================================
+// 🧮 포맷 & 날짜 유틸
+// ========================================
+
+// 금액은 원 단위 정수. 1,234,567 형태로 보여준다.
+const won = (n) => `${Math.round(n).toLocaleString('ko-KR')}원`;
+
+// 축약 표기 — 막대 옆 좁은 자리에 쓴다.
+function wonShort(n) {
+  const v = Math.round(Math.abs(n));
+  const sign = n < 0 ? '-' : '';
+  if (v >= 100_000_000) return `${sign}${(v / 100_000_000).toFixed(1).replace(/\.0$/, '')}억`;
+  if (v >= 10_000) return `${sign}${(v / 10_000).toFixed(1).replace(/\.0$/, '')}만`;
+  return `${sign}${v.toLocaleString('ko-KR')}`;
+}
+
+const pct = (ratio) => `${(ratio * 100).toFixed(1)}%`;
+
+/**
+ * 오늘 날짜를 YYYY-MM-DD 로. toISOString() 은 UTC 로 바꾸므로
+ * KST 자정~오전 9시 사이에 하루 전 날짜가 나온다. 로컬 기준으로 직접 만든다.
+ */
+function todayLocal() {
+  const d = new Date();
+  const p = (n) => String(n).padStart(2, '0');
+  return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
+}
+
+const thisMonth = () => todayLocal().slice(0, 7);
+
+// '2026-10' → '2026년 10월'
+function monthLabel(month) {
+  if (!month) return '전체 기간';
+  const [y, m] = month.split('-');
+  return `${y}년 ${Number(m)}월`;
+}
+
+// '2026-10-06' → '10.06 (월)'
+const WEEKDAYS = ['일', '월', '화', '수', '목', '금', '토'];
+function dayLabel(date) {
+  const [y, m, d] = date.split('-').map(Number);
+  const wd = WEEKDAYS[new Date(y, m - 1, d).getDay()];
+  return `${String(m).padStart(2, '0')}.${String(d).padStart(2, '0')} (${wd})`;
+}
+
+// 월을 앞뒤로 옮긴다. ('2026-01' 에서 -1 → '2025-12')
+function shiftMonth(month, delta) {
+  const [y, m] = month.split('-').map(Number);
+  const d = new Date(y, m - 1 + delta, 1);
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`;
+}
+
+const KIND_LABEL = { expense: '지출', income: '수입' };
+
+// ========================================
+// 🍞 Toast
+// ========================================
+function Toast({ toast }) {
+  if (!toast) return null;
+  const tone = toast.type === 'error'
+    ? 'bg-rose-600'
+    : toast.type === 'success' ? 'bg-emerald-600' : 'bg-slate-800';
+
+  return (
+    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 animate-fade-up" role="status" aria-live="polite">
+      <div className={`${tone} text-white text-sm px-4 py-2.5 rounded-xl shadow-lg max-w-[90vw]`}>
+        {toast.message}
+      </div>
+    </div>
+  );
+}
+
+function useToast() {
+  const [toast, setToast] = useState(null);
+  const timer = useRef(null);
+
+  const show = useCallback((message, type = 'info') => {
+    clearTimeout(timer.current);
+    setToast({ message, type });
+    timer.current = setTimeout(() => setToast(null), 2600);
+  }, []);
+
+  // 언마운트 시 타이머를 정리해 경고를 막는다.
+  useEffect(() => () => clearTimeout(timer.current), []);
+
+  return { toast, show };
+}
+
+// ========================================
+// 🧩 공통 조각
+// ========================================
+function Spinner({ label = '불러오는 중…' }) {
+  return (
+    <div className="flex items-center justify-center gap-2 py-12 text-slate-400 text-sm">
+      <span className="w-4 h-4 border-2 border-slate-300 border-t-slate-500 rounded-full animate-spin" />
+      {label}
+    </div>
+  );
+}
+
+function ErrorBox({ message, onRetry }) {
+  return (
+    <div className="bg-rose-50 border border-rose-200 rounded-2xl p-5 text-center">
+      <p className="text-rose-700 text-sm">{message}</p>
+      {onRetry && (
+        <button
+          onClick={onRetry}
+          className="mt-3 px-4 py-1.5 text-sm rounded-lg bg-rose-600 text-white hover:bg-rose-700 transition"
+        >
+          다시 시도
+        </button>
+      )}
+    </div>
+  );
+}
+
+function Empty({ icon = '📭', title, hint }) {
+  return (
+    <div className="text-center py-14">
+      <div className="text-4xl mb-3">{icon}</div>
+      <p className="text-slate-600 font-medium">{title}</p>
+      {hint && <p className="text-slate-400 text-sm mt-1">{hint}</p>}
+    </div>
+  );
+}
+
+// ========================================
+// 📅 월 선택기
+// ========================================
+function MonthPicker({ month, onChange, months }) {
+  const isAll = month === '';
+
+  return (
+    <div className="flex items-center gap-1.5">
+      <button
+        onClick={() => onChange(shiftMonth(month || thisMonth(), -1))}
+        disabled={isAll}
+        className="w-9 h-9 rounded-lg border border-slate-200 bg-white text-slate-500
+                   hover:bg-slate-50 disabled:opacity-40 disabled:cursor-not-allowed transition"
+        aria-label="이전 달"
+      >
+        ‹
+      </button>
+
+      <select
+        value={month}
+        onChange={(e) => onChange(e.target.value)}
+        className="h-9 px-3 rounded-lg border border-slate-200 bg-white text-sm font-medium
+                   text-slate-700 focus:ring-2 focus:ring-slate-300 focus:outline-none"
+      >
+        {/* 거래가 있는 월 + 이번 달은 항상 선택할 수 있게 넣어둔다 */}
+        {months.map((m) => (
+          <option key={m} value={m}>{monthLabel(m)}</option>
+        ))}
+        <option value="">전체 기간</option>
+      </select>
+
+      <button
+        onClick={() => onChange(shiftMonth(month || thisMonth(), 1))}
+        disabled={isAll}
+        className="w-9 h-9 rounded-lg border border-slate-200 bg-white text-slate-500
+                   hover:bg-slate-50 disabled:opacity-40 disabled:cursor-not-allowed transition"
+        aria-label="다음 달"
+      >
+        ›
+      </button>
+    </div>
+  );
+}
+
+// ========================================
+// 💳 요약 카드 (수입 / 지출 / 잔액)
+// ========================================
+function TotalCards({ summary }) {
+  const { incomeTotal, expenseTotal, balance } = summary;
+  const positive = balance >= 0;
+
+  const cards = [
+    { label: '수입', value: incomeTotal, cls: 'text-emerald-600', bg: 'bg-emerald-50', icon: '📥' },
+    { label: '지출', value: expenseTotal, cls: 'text-rose-600', bg: 'bg-rose-50', icon: '📤' },
+    {
+      label: positive ? '남은 돈' : '초과 지출',
+      value: Math.abs(balance),
+      cls: positive ? 'text-slate-900' : 'text-amber-600',
+      bg: positive ? 'bg-slate-100' : 'bg-amber-50',
+      icon: positive ? '🪙' : '⚠️',
+    },
+  ];
+
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+      {cards.map((c) => (
+        <div key={c.label} className={`${c.bg} rounded-2xl p-4`}>
+          <p className="text-xs text-slate-500 font-medium flex items-center gap-1">
+            <span>{c.icon}</span>{c.label}
+          </p>
+          <p className={`mt-1.5 text-xl sm:text-2xl font-bold tnum ${c.cls}`}>{won(c.value)}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+// ========================================
+// 🍩 도넛 차트 (라이브러리 없이 SVG 로)
+// ========================================
+// conic-gradient 가 더 짧지만, 각 조각에 hover·접근성 레이블을 붙이려면
+// 조각이 각각 엘리먼트여야 해서 SVG stroke-dasharray 방식을 쓴다.
+function Donut({ slices, total, size = 168, thickness = 22 }) {
+  const radius = (size - thickness) / 2;
+  const circumference = 2 * Math.PI * radius;
+
+  // 누적 각도를 돌며 각 조각의 시작 위치(offset)를 잡는다.
+  let acc = 0;
+  const arcs = slices.map((s) => {
+    const ratio = total > 0 ? s.total / total : 0;
+    const arc = { ...s, ratio, dash: ratio * circumference, offset: acc * circumference };
+    acc += ratio;
+    return arc;
+  });
+
+  return (
+    <div className="relative shrink-0" style={{ width: size, height: size }}>
+      <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} className="-rotate-90">
+        <circle
+          cx={size / 2} cy={size / 2} r={radius}
+          fill="none" stroke="#e2e8f0" strokeWidth={thickness}
+        />
+        {arcs.map((a) => (
+          <circle
+            key={a.id}
+            cx={size / 2} cy={size / 2} r={radius}
+            fill="none"
+            stroke={a.color}
+            strokeWidth={thickness}
+            strokeDasharray={`${a.dash} ${circumference - a.dash}`}
+            strokeDashoffset={-a.offset}
+            className="transition-[stroke-width] hover:brightness-110"
+          >
+            <title>{`${a.name} ${won(a.total)} (${pct(a.ratio)})`}</title>
+          </circle>
+        ))}
+      </svg>
+
+      {/* 가운데 총액 */}
+      <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+        <span className="text-[11px] text-slate-400">합계</span>
+        <span className="text-lg font-bold tnum text-slate-800">{wonShort(total)}</span>
+      </div>
+    </div>
+  );
+}
+
+// ========================================
+// 📊 카테고리별 합계 — 이 앱의 핵심 화면
+// ========================================
+function CategoryBreakdown({ summary, kind, onPickCategory }) {
+  // 집계는 서버가 끝내서 보내준다. 여기서는 0원짜리를 접는 정도만 한다.
+  const all = summary.categories.filter((c) => c.kind === kind);
+  const used = all.filter((c) => c.count > 0);
+  const unused = all.filter((c) => c.count === 0);
+
+  const total = kind === 'expense' ? summary.expenseTotal : summary.incomeTotal;
+  const [showUnused, setShowUnused] = useState(false);
+
+  if (used.length === 0) {
+    return (
+      <Empty
+        icon={kind === 'expense' ? '🧾' : '📥'}
+        title={`${monthLabel(summary.month)}에 기록된 ${KIND_LABEL[kind]}이 없습니다.`}
+        hint="아래 '거래 추가'로 첫 기록을 남겨보세요."
+      />
+    );
+  }
+
+  return (
+    <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-center lg:items-start">
+      <Donut slices={used} total={total} />
+
+      <div className="flex-1 w-full space-y-2.5">
+        {used.map((c, i) => (
+          <button
+            key={c.id}
+            onClick={() => onPickCategory(c)}
+            className="w-full text-left group"
+            title={`${c.name} 거래 ${c.count}건 보기`}
+          >
+            <div className="flex items-baseline justify-between gap-3 mb-1">
+              <span className="text-sm font-medium text-slate-700 flex items-center gap-1.5 min-w-0">
+                <span className="shrink-0">{c.emoji}</span>
+                <span className="truncate group-hover:underline">{c.name}</span>
+                <span className="text-[11px] text-slate-400 shrink-0 tnum">{c.count}건</span>
+              </span>
+              <span className="text-sm shrink-0 tnum">
+                <span className="font-semibold text-slate-900">{won(c.total)}</span>
+                <span className="text-slate-400 ml-1.5 text-xs">{pct(c.ratio)}</span>
+              </span>
+            </div>
+
+            {/* 비율 막대 — 순서대로 조금씩 늦게 자라게 해서 흐름이 보이게 한다 */}
+            <div className="h-2 rounded-full bg-slate-100 overflow-hidden">
+              <div
+                className="h-full rounded-full animate-bar"
+                style={{
+                  width: `${Math.max(c.ratio * 100, 1.5)}%`,
+                  backgroundColor: c.color,
+                  animationDelay: `${i * 45}ms`,
+                }}
+              />
+            </div>
+          </button>
+        ))}
+
+        {unused.length > 0 && (
+          <div className="pt-1">
+            <button
+              onClick={() => setShowUnused((v) => !v)}
+              className="text-xs text-slate-400 hover:text-slate-600 transition"
+            >
+              {showUnused ? '▴ 기록 없는 카테고리 숨기기' : `▾ 기록 없는 카테고리 ${unused.length}개 보기`}
+            </button>
+            {showUnused && (
+              <div className="mt-2 flex flex-wrap gap-1.5">
+                {unused.map((c) => (
+                  <span
+                    key={c.id}
+                    className="text-xs text-slate-400 bg-slate-100 rounded-full px-2.5 py-1"
+                  >
+                    {c.emoji} {c.name} 0원
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// ========================================
+// ✏️ 거래 추가 폼
+// ========================================
+function EntryForm({ categories, onCreated, show }) {
+  const [kind, setKind] = useState('expense');
+  const [categoryId, setCategoryId] = useState('');
+  const [amount, setAmount] = useState('');
+  const [memo, setMemo] = useState('');
+  const [spentOn, setSpentOn] = useState(todayLocal());
+  const [saving, setSaving] = useState(false);
+
+  const options = useMemo(
+    () => categories.filter((c) => c.kind === kind),
+    [categories, kind],
+  );
+
+  // 구분을 바꾸면 선택된 카테고리가 반대편일 수 있으므로 첫 항목으로 되돌린다.
+  useEffect(() => {
+    setCategoryId(options.length ? String(options[0].id) : '');
+  }, [options]);
+
+  async function submit(e) {
+    e.preventDefault();
+    if (saving) return;
+
+    if (!categoryId) return show('카테고리를 먼저 추가해 주세요.', 'error');
+
+    setSaving(true);
+    try {
+      const created = await api('/entries', {
+        method: 'POST',
+        body: JSON.stringify({ categoryId: Number(categoryId), amount, memo, spentOn }),
+      });
+      // 금액·메모만 비우고 날짜와 카테고리는 남겨 연속 입력이 편하게 한다.
+      setAmount('');
+      setMemo('');
+      onCreated(created);
+      show(`${created.categoryName} ${won(created.amount)} 기록했습니다.`, 'success');
+    } catch (err) {
+      show(err.message, 'error');
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  return (
+    <form onSubmit={submit} className="space-y-3">
+      {/* 지출/수입 토글 */}
+      <div className="grid grid-cols-2 gap-1 p-1 bg-slate-100 rounded-xl">
+        {['expense', 'income'].map((k) => (
+          <button
+            key={k}
+            type="button"
+            onClick={() => setKind(k)}
+            className={`py-2 text-sm font-semibold rounded-lg transition ${
+              kind === k
+                ? k === 'expense' ? 'bg-white text-rose-600 shadow-sm' : 'bg-white text-emerald-600 shadow-sm'
+                : 'text-slate-400 hover:text-slate-600'
+            }`}
+          >
+            {KIND_LABEL[k]}
+          </button>
+        ))}
+      </div>
+
+      <div className="grid grid-cols-2 gap-2">
+        <label className="block">
+          <span className="text-xs text-slate-500 font-medium">날짜</span>
+          <input
+            type="date"
+            value={spentOn}
+            onChange={(e) => setSpentOn(e.target.value)}
+            required
+            className="mt-1 w-full h-10 px-3 rounded-lg border border-slate-200 text-sm
+                       focus:ring-2 focus:ring-slate-300 focus:outline-none"
+          />
+        </label>
+
+        <label className="block">
+          <span className="text-xs text-slate-500 font-medium">카테고리</span>
+          <select
+            value={categoryId}
+            onChange={(e) => setCategoryId(e.target.value)}
+            className="mt-1 w-full h-10 px-2 rounded-lg border border-slate-200 text-sm bg-white
+                       focus:ring-2 focus:ring-slate-300 focus:outline-none"
+          >
+            {options.length === 0 && <option value="">(없음)</option>}
+            {options.map((c) => (
+              <option key={c.id} value={c.id}>{c.emoji} {c.name}</option>
+            ))}
+          </select>
+        </label>
+      </div>
+
+      <label className="block">
+        <span className="text-xs text-slate-500 font-medium">금액</span>
+        <div className="relative mt-1">
+          <input
+            // number 대신 text + inputMode — 콤마를 섞어 쳐도 서버가 받아준다.
+            type="text"
+            inputMode="numeric"
+            value={amount}
+            onChange={(e) => setAmount(e.target.value)}
+            placeholder="0"
+            required
+            className="w-full h-11 pl-3 pr-10 rounded-lg border border-slate-200 text-right text-lg
+                       font-semibold tnum focus:ring-2 focus:ring-slate-300 focus:outline-none"
+          />
+          <span className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">원</span>
+        </div>
+      </label>
+
+      <label className="block">
+        <span className="text-xs text-slate-500 font-medium">메모 <span className="text-slate-300">(선택)</span></span>
+        <input
+          type="text"
+          value={memo}
+          onChange={(e) => setMemo(e.target.value)}
+          placeholder="예: 점심 김치찌개"
+          maxLength={200}
+          className="mt-1 w-full h-10 px-3 rounded-lg border border-slate-200 text-sm
+                     focus:ring-2 focus:ring-slate-300 focus:outline-none"
+        />
+      </label>
+
+      <button
+        type="submit"
+        disabled={saving}
+        className="w-full h-11 rounded-xl bg-slate-900 text-white text-sm font-semibold
+                   hover:bg-slate-800 disabled:opacity-50 transition"
+      >
+        {saving ? '저장 중…' : '거래 추가'}
+      </button>
+    </form>
+  );
+}
+
+// ========================================
+// 📜 거래 목록
+// ========================================
+function EntryList({ entries, filterCategory, onClearFilter, onDelete }) {
+  // 같은 날짜끼리 묶어 날짜 소계를 보여준다.
+  const groups = useMemo(() => {
+    const map = new Map();
+    for (const e of entries) {
+      if (!map.has(e.spentOn)) map.set(e.spentOn, []);
+      map.get(e.spentOn).push(e);
+    }
+    return [...map.entries()];
+  }, [entries]);
+
+  if (entries.length === 0) {
+    return (
+      <Empty
+        icon="🧾"
+        title={filterCategory ? `${filterCategory.name} 거래가 없습니다.` : '아직 기록이 없습니다.'}
+        hint="오른쪽 폼으로 첫 거래를 남겨보세요."
+      />
+    );
+  }
+
+  return (
+    <div className="space-y-5">
+      {filterCategory && (
+        <div className="flex items-center justify-between bg-slate-100 rounded-xl px-3.5 py-2">
+          <span className="text-sm text-slate-600">
+            <span className="font-semibold">{filterCategory.emoji} {filterCategory.name}</span>
+            <span className="text-slate-400"> 만 보는 중</span>
+          </span>
+          <button onClick={onClearFilter} className="text-xs text-slate-500 hover:text-slate-800 transition">
+            ✕ 필터 해제
+          </button>
+        </div>
+      )}
+
+      {groups.map(([date, items]) => {
+        // 날짜 소계는 지출을 음수로 쳐서 그날의 순증감을 보여준다.
+        const net = items.reduce((acc, e) => acc + (e.kind === 'income' ? e.amount : -e.amount), 0);
+
+        return (
+          <div key={date}>
+            <div className="flex items-center justify-between mb-1.5 px-1">
+              <span className="text-xs font-semibold text-slate-400">{dayLabel(date)}</span>
+              <span className={`text-xs font-medium tnum ${net >= 0 ? 'text-emerald-600' : 'text-slate-400'}`}>
+                {net >= 0 ? '+' : '−'}{won(Math.abs(net))}
+              </span>
+            </div>
+
+            <ul className="bg-white rounded-xl border border-slate-100 divide-y divide-slate-50 overflow-hidden">
+              {items.map((e) => (
+                <li key={e.id} className="flex items-center gap-3 px-3.5 py-2.5 group hover:bg-slate-50 transition">
+                  <span
+                    className="w-8 h-8 shrink-0 rounded-lg grid place-items-center text-base"
+                    style={{ backgroundColor: `${e.categoryColor}1a` }}
+                  >
+                    {e.categoryEmoji}
+                  </span>
+
+                  <div className="min-w-0 flex-1">
+                    <p className="text-sm font-medium text-slate-800 truncate">
+                      {e.memo || e.categoryName}
+                    </p>
+                    <p className="text-xs text-slate-400 truncate">{e.categoryName}</p>
+                  </div>
+
+                  <span className={`text-sm font-semibold tnum shrink-0 ${
+                    e.kind === 'income' ? 'text-emerald-600' : 'text-slate-900'
+                  }`}>
+                    {e.kind === 'income' ? '+' : '−'}{won(e.amount)}
+                  </span>
+
+                  <button
+                    onClick={() => onDelete(e)}
+                    className="shrink-0 w-7 h-7 rounded-lg text-slate-300 hover:text-rose-600
+                               hover:bg-rose-50 opacity-0 group-hover:opacity-100 focus:opacity-100 transition"
+                    aria-label={`${e.memo || e.categoryName} 삭제`}
+                    title="삭제"
+                  >
+                    ✕
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+// ========================================
+// 🏷 카테고리 관리
+// ========================================
+const PALETTE = [
+  '#f97316', '#ef4444', '#ec4899', '#8b5cf6', '#6366f1',
+  '#3b82f6', '#14b8a6', '#22c55e', '#84cc16', '#64748b',
+];
+
+function CategoryManager({ categories, summary, onChanged, show }) {
+  const [name, setName] = useState('');
+  const [emoji, setEmoji] = useState('🏷');
+  const [kind, setKind] = useState('expense');
+  const [color, setColor] = useState(PALETTE[0]);
+  const [saving, setSaving] = useState(false);
+
+  // 삭제 가능 여부를 알려주려고 카테고리별 건수를 꺼내 쓴다 (전체 기간 기준).
+  const countById = useMemo(() => {
+    const m = new Map();
+    for (const c of summary?.categories || []) m.set(c.id, c.count);
+    return m;
+  }, [summary]);
+
+  async function add(e) {
+    e.preventDefault();
+    if (saving) return;
+    setSaving(true);
+    try {
+      await api('/categories', {
+        method: 'POST',
+        body: JSON.stringify({ name, emoji, kind, color }),
+      });
+      setName('');
+      await onChanged();
+      show(`'${name}' 카테고리를 추가했습니다.`, 'success');
+    } catch (err) {
+      show(err.message, 'error');
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  async function remove(c) {
+    const used = countById.get(c.id) || 0;
+    if (used > 0) {
+      return show(`${c.name}에 거래 ${used}건이 있어 삭제할 수 없습니다.`, 'error');
+    }
+    if (!confirm(`'${c.name}' 카테고리를 삭제할까요?`)) return;
+
+    try {
+      await api(`/categories/${c.id}`, { method: 'DELETE' });
+      await onChanged();
+      show('삭제했습니다.', 'success');
+    } catch (err) {
+      show(err.message, 'error');
+    }
+  }
+
+  return (
+    <div className="space-y-6">
+      <form onSubmit={add} className="bg-white rounded-2xl border border-slate-100 p-4 space-y-3">
+        <h3 className="text-sm font-bold text-slate-800">카테고리 추가</h3>
+
+        <div className="grid grid-cols-2 gap-1 p-1 bg-slate-100 rounded-xl">
+          {['expense', 'income'].map((k) => (
+            <button
+              key={k} type="button" onClick={() => setKind(k)}
+              className={`py-1.5 text-sm font-semibold rounded-lg transition ${
+                kind === k ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-400 hover:text-slate-600'
+              }`}
+            >
+              {KIND_LABEL[k]}
+            </button>
+          ))}
+        </div>
+
+        <div className="flex gap-2">
+          <input
+            type="text" value={emoji}
+            onChange={(e) => setEmoji(e.target.value)}
+            maxLength={4}
+            className="w-14 h-10 text-center text-lg rounded-lg border border-slate-200
+                       focus:ring-2 focus:ring-slate-300 focus:outline-none"
+            aria-label="이모지"
+          />
+          <input
+            type="text" value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder="카테고리 이름"
+            required maxLength={20}
+            className="flex-1 h-10 px-3 rounded-lg border border-slate-200 text-sm
+                       focus:ring-2 focus:ring-slate-300 focus:outline-none"
+          />
+        </div>
+
+        <div>
+          <span className="text-xs text-slate-500 font-medium">색</span>
+          <div className="mt-1.5 flex flex-wrap gap-1.5">
+            {PALETTE.map((p) => (
+              <button
+                key={p} type="button" onClick={() => setColor(p)}
+                className={`w-7 h-7 rounded-full transition ${
+                  color === p ? 'ring-2 ring-offset-2 ring-slate-400 scale-110' : 'hover:scale-110'
+                }`}
+                style={{ backgroundColor: p }}
+                aria-label={`색 ${p}`}
+              />
+            ))}
+          </div>
+        </div>
+
+        <button
+          type="submit" disabled={saving}
+          className="w-full h-10 rounded-xl bg-slate-900 text-white text-sm font-semibold
+                     hover:bg-slate-800 disabled:opacity-50 transition"
+        >
+          {saving ? '추가 중…' : '추가'}
+        </button>
+      </form>
+
+      {['expense', 'income'].map((k) => {
+        const list = categories.filter((c) => c.kind === k);
+        if (list.length === 0) return null;
+
+        return (
+          <div key={k}>
+            <h3 className="text-sm font-bold text-slate-800 mb-2">{KIND_LABEL[k]} 카테고리</h3>
+            <ul className="bg-white rounded-2xl border border-slate-100 divide-y divide-slate-50 overflow-hidden">
+              {list.map((c) => {
+                const used = countById.get(c.id) || 0;
+                return (
+                  <li key={c.id} className="flex items-center gap-3 px-3.5 py-2.5 group">
+                    <span className="w-2.5 h-2.5 rounded-full shrink-0" style={{ backgroundColor: c.color }} />
+                    <span className="text-sm text-slate-800">{c.emoji} {c.name}</span>
+                    <span className="text-xs text-slate-400 tnum ml-auto">
+                      {used > 0 ? `${used}건` : '미사용'}
+                    </span>
+                    <button
+                      onClick={() => remove(c)}
+                      disabled={used > 0}
+                      className="w-7 h-7 rounded-lg text-slate-300 hover:text-rose-600 hover:bg-rose-50
+                                 disabled:opacity-20 disabled:hover:bg-transparent disabled:cursor-not-allowed transition"
+                      aria-label={`${c.name} 삭제`}
+                      title={used > 0 ? '거래가 있어 삭제할 수 없습니다' : '삭제'}
+                    >
+                      ✕
+                    </button>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+// ========================================
+// 📈 월별 집계 — 차트 공용 유틸
+// ========================================
+
+/** 컨테이너의 실제 픽셀 폭을 잰다.
+ *  viewBox 로 늘리면 글자까지 같이 줄어 모바일에서 축 글자가 읽히지 않는다.
+ *  그래서 SVG 를 실제 폭으로 그리고, 글자 크기는 고정한다. */
+function useElementWidth() {
+  const ref = useRef(null);
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const ro = new ResizeObserver(([entry]) => setWidth(entry.contentRect.width));
+    ro.observe(el);
+    setWidth(el.getBoundingClientRect().width);
+    return () => ro.disconnect();
+  }, []);
+
+  return [ref, width];
+}
+
+/** 축 눈금을 1/2/2.5/5 × 10ⁿ 의 깔끔한 수로 끊는다. */
+function niceTicks(max, count = 4) {
+  if (!(max > 0)) return { ticks: [0], max: 1 };
+  const rough = max / count;
+  const mag = 10 ** Math.floor(Math.log10(rough));
+  const step = [1, 2, 2.5, 5, 10].find((m) => m * mag >= rough) * mag;
+  const top = Math.ceil(max / step) * step;
+  const ticks = [];
+  for (let v = 0; v <= top + step / 2; v += step) ticks.push(v);
+  return { ticks, max: top };
+}
+
+/** 세로 막대 경로 — 기준선 쪽은 각지게, 데이터 끝만 4px 둥글게. */
+function columnPath(x, y, w, h, r = 4) {
+  if (h <= 0) return '';
+  const rr = Math.min(r, w / 2, h);
+  return `M${x},${y + h} L${x},${y + rr} Q${x},${y} ${x + rr},${y}`
+       + ` L${x + w - rr},${y} Q${x + w},${y} ${x + w},${y + rr} L${x + w},${y + h} Z`;
+}
+
+// '2026-09' → '9월' (해가 바뀌는 첫 달만 연도를 같이 보여준다)
+function axisMonthLabel(month, prev) {
+  const [y, m] = month.split('-');
+  return prev && prev.slice(0, 4) === y ? `${Number(m)}월` : `${y.slice(2)}.${m}`;
+}
+
+// ========================================
+// 📊 월별 수입·지출 막대 차트
+// ========================================
+function MonthlyBarChart({ rows }) {
+  const [wrapRef, width] = useElementWidth();
+  const [hover, setHover] = useState(null);     // { index, x }
+
+  const height = 280;
+  const PAD = { top: 26, right: 12, bottom: 38, left: 60 };
+  const innerW = Math.max(width - PAD.left - PAD.right, 10);
+  const innerH = height - PAD.top - PAD.bottom;
+
+  const peak = Math.max(0, ...rows.flatMap((r) => [r.income, r.expense]));
+  const { ticks, max } = niceTicks(peak);
+  const y = (v) => PAD.top + innerH - (v / max) * innerH;
+
+  // 달이 두세 개뿐일 때 띠를 화면 폭대로 벌리면 막대가 허허벌판에 떠 보인다.
+  // 띠 폭에 상한을 두고, 남는 자리는 양옆 여백으로 돌려 가운데로 모은다.
+  const bandW = Math.min(innerW / Math.max(rows.length, 1), 104);
+  const plotW = bandW * rows.length;
+  const plotX = PAD.left + (innerW - plotW) / 2;
+
+  // 막대는 24px 를 넘지 않게 묶고, 띠의 남는 자리는 여백으로 둔다.
+  // 두 막대 사이 2px 는 표면색 간격 — 테두리를 그리지 않고 떼어 놓는 장치.
+  const GAP = 2;
+  const barW = Math.max(3, Math.min(24, (bandW * 0.62 - GAP) / 2));
+
+  const SERIES = [
+    { key: 'income', label: '수입', color: 'var(--viz-income)' },
+    { key: 'expense', label: '지출', color: 'var(--viz-expense)' },
+  ];
+
+  const hovered = hover == null ? null : rows[hover];
+  // 달 수가 적을 땐 전부, 많아지면 건너뛰며 축 글자가 겹치지 않게 한다.
+  const labelEvery = bandW < 44 ? Math.ceil(44 / bandW) : 1;
+
+  return (
+    <div className="viz">
+      {/* 계열이 둘이면 범례는 항상 둔다 — 색만으로 정체를 알게 하지 않는다 */}
+      <div className="flex items-center gap-4 mb-1 px-1">
+        {SERIES.map((s) => (
+          <span key={s.key} className="flex items-center gap-1.5 text-xs" style={{ color: 'var(--viz-ink-2)' }}>
+            <span className="w-3 h-2.5 rounded-sm" style={{ backgroundColor: s.color }} />
+            {s.label}
+          </span>
+        ))}
+        <span className="ml-auto text-[11px]" style={{ color: 'var(--viz-muted)' }}>
+          단위 원 · 막대에 올리면 상세
+        </span>
+      </div>
+
+      <div ref={wrapRef} className="relative">
+        {width > 0 && (
+          <svg
+            width={width} height={height}
+            role="img"
+            aria-label={`월별 수입·지출 막대 차트. ${rows.length}개월. 자세한 값은 아래 월별 집계표에 있습니다.`}
+            onMouseLeave={() => setHover(null)}
+          >
+            {/* 눈금선 — 실선 헤어라인, 표면에서 한 단계만 */}
+            {ticks.map((t) => (
+              <g key={t}>
+                <line
+                  x1={PAD.left} x2={PAD.left + innerW} y1={y(t)} y2={y(t)}
+                  stroke={t === 0 ? 'var(--viz-axis)' : 'var(--viz-grid)'} strokeWidth="1"
+                />
+                <text
+                  x={PAD.left - 8} y={y(t) + 4} textAnchor="end"
+                  className="tnum" fontSize="11" fill="var(--viz-muted)"
+                >
+                  {t === 0 ? '0' : wonShort(t)}
+                </text>
+              </g>
+            ))}
+
+            {rows.map((r, i) => {
+              const bandX = plotX + i * bandW;
+              const groupX = bandX + (bandW - (barW * 2 + GAP)) / 2;
+
+              return (
+                <g key={r.month} className="viz-band">
+                  {/* 히트 영역은 마크보다 넓게 — 띠 전체가 타깃 */}
+                  <rect
+                    x={bandX} y={PAD.top} width={bandW} height={innerH}
+                    fill="transparent"
+                    onMouseEnter={() => setHover(i)}
+                    onFocus={() => setHover(i)}
+                    tabIndex={0}
+                    role="button"
+                    aria-label={`${monthLabel(r.month)} 수입 ${won(r.income)}, 지출 ${won(r.expense)}`}
+                    style={{ outline: 'none' }}
+                  />
+                  {hover === i && (
+                    <rect
+                      x={bandX} y={PAD.top} width={bandW} height={innerH}
+                      fill="var(--viz-ink)" opacity="0.04" pointerEvents="none"
+                    />
+                  )}
+
+                  {SERIES.map((s, si) => {
+                    const v = r[s.key];
+                    const h = (v / max) * innerH;
+                    const x = groupX + si * (barW + GAP);
+                    return (
+                      <path
+                        key={s.key}
+                        className="viz-col"
+                        d={columnPath(x, y(v), barW, h)}
+                        fill={s.color}
+                        pointerEvents="none"
+                      />
+                    );
+                  })}
+
+                  {/* 직접 레이블은 아껴서 쓴다. 두 계열에 모두 붙이면 24px 막대 위에
+                      40px 짜리 글자가 둘 나란히 서서 옆 막대를 덮는다. 낮은 쪽 막대의
+                      캡은 옆 막대에 가려지는 자리라 레이블이 겹친다.
+                      그래서 마지막 달의 '더 큰 쪽' — 캡 위가 비어 있는 막대 — 에만 붙이고,
+                      띠가 좁아 글자가 옆 띠까지 번질 때는 아예 생략한다.
+                      나머지 값은 축·범례·툴팁·아래 집계표가 받으므로 가려지는 값은 없다. */}
+                  {i === rows.length - 1 && bandW >= 56 && (() => {
+                    const top = r.income >= r.expense
+                      ? { v: r.income, si: 0 }
+                      : { v: r.expense, si: 1 };
+                    if (top.v <= 0) return null;
+                    return (
+                      <text
+                        x={groupX + top.si * (barW + GAP) + barW / 2}
+                        y={y(top.v) - 6}
+                        textAnchor="middle" className="tnum" fontSize="10.5"
+                        fill="var(--viz-ink-2)" pointerEvents="none"
+                      >
+                        {wonShort(top.v)}
+                      </text>
+                    );
+                  })()}
+
+                  {/* 레이블 간격은 '마지막 달'을 기준으로 거꾸로 센다.
+                      앞에서부터 세고 마지막을 따로 끼워 넣으면, 마지막 두 개가
+                      바싹 붙어 '9월0월'처럼 겹쳐 버린다. */}
+                  {(rows.length - 1 - i) % labelEvery === 0 && (
+                    <text
+                      x={bandX + bandW / 2} y={PAD.top + innerH + 18}
+                      textAnchor="middle" fontSize="11" fill="var(--viz-muted)"
+                      pointerEvents="none"
+                    >
+                      {/* 연도는 '직전에 표시된 달'과 비교해 붙인다. 바로 앞 달과 비교하면
+                          해가 바뀌는 달이 건너뛰어진 자리일 때 연도가 아예 안 나온다. */}
+                      {axisMonthLabel(r.month, i - labelEvery >= 0 ? rows[i - labelEvery].month : null)}
+                    </text>
+                  )}
+                </g>
+              );
+            })}
+          </svg>
+        )}
+
+        {/* 툴팁 — 값이 먼저, 계열 이름은 보조 */}
+        {hovered && (
+          <div
+            className="absolute pointer-events-none bg-white rounded-xl shadow-lg px-3 py-2 text-xs"
+            style={{
+              border: '1px solid rgba(11,11,11,0.10)',
+              top: PAD.top,
+              left: Math.min(
+                Math.max(plotX + hover * bandW + bandW / 2 - 70, 0),
+                Math.max(width - 140, 0),
+              ),
+              width: 140,
+            }}
+          >
+            <p className="font-semibold mb-1" style={{ color: 'var(--viz-ink)' }}>
+              {monthLabel(hovered.month)}
+            </p>
+            {SERIES.map((s) => (
+              <p key={s.key} className="flex items-center gap-1.5 leading-5">
+                <span className="w-2.5 h-0.5 rounded-full shrink-0" style={{ backgroundColor: s.color }} />
+                <span className="tnum font-semibold" style={{ color: 'var(--viz-ink)' }}>{won(hovered[s.key])}</span>
+                <span style={{ color: 'var(--viz-muted)' }}>{s.label}</span>
+              </p>
+            ))}
+            <p className="mt-1 pt-1 leading-5" style={{ borderTop: '1px solid var(--viz-grid)' }}>
+              <span className="tnum font-semibold" style={{ color: 'var(--viz-ink)' }}>
+                {hovered.balance >= 0 ? '+' : '−'}{won(Math.abs(hovered.balance))}
+              </span>
+              <span className="ml-1.5" style={{ color: 'var(--viz-muted)' }}>잔액</span>
+            </p>
+            <p className="leading-5" style={{ color: 'var(--viz-muted)' }}>거래 {hovered.count}건</p>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// ========================================
+// 📋 월별 집계표
+// ========================================
+function MonthlyTable({ data, onPickMonth }) {
+  const { rows, totals, averages } = data;
+  // 잔액 칸의 발산 막대는 절대값이 가장 큰 달을 기준으로 길이를 잡는다.
+  const peak = Math.max(1, ...rows.map((r) => Math.abs(r.balance)));
+
+  return (
+    <div className="viz overflow-x-auto">
+      <table className="w-full text-sm min-w-[520px]">
+        <thead>
+          <tr style={{ color: 'var(--viz-muted)' }} className="text-xs">
+            <th className="text-left font-medium py-2 px-2">월</th>
+            <th className="text-right font-medium py-2 px-2">수입</th>
+            <th className="text-right font-medium py-2 px-2">지출</th>
+            <th className="text-right font-medium py-2 px-2">잔액</th>
+            <th className="text-right font-medium py-2 px-2 w-24">흑자/적자</th>
+            <th className="text-right font-medium py-2 px-2">건수</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {rows.map((r) => (
+            <tr
+              key={r.month}
+              onClick={() => onPickMonth(r.month)}
+              className="cursor-pointer hover:bg-slate-50 transition"
+              style={{ borderTop: '1px solid var(--viz-grid)' }}
+              title={`${monthLabel(r.month)} 보기`}
+            >
+              <td className="py-2 px-2 font-medium whitespace-nowrap" style={{ color: 'var(--viz-ink)' }}>
+                {monthLabel(r.month)}
+              </td>
+              <td className="py-2 px-2 text-right tnum whitespace-nowrap" style={{ color: 'var(--viz-ink-2)' }}>
+                {r.income ? won(r.income) : '–'}
+              </td>
+              <td className="py-2 px-2 text-right tnum whitespace-nowrap" style={{ color: 'var(--viz-ink-2)' }}>
+                {r.expense ? won(r.expense) : '–'}
+              </td>
+              <td className="py-2 px-2 text-right tnum font-semibold whitespace-nowrap" style={{ color: 'var(--viz-ink)' }}>
+                {r.balance >= 0 ? '+' : '−'}{won(Math.abs(r.balance))}
+              </td>
+              {/* 0 을 가운데 둔 발산 막대 — 어느 달이 적자인지 한눈에 */}
+              <td className="py-2 px-2">
+                <div className="relative h-2.5 rounded-full" style={{ backgroundColor: 'var(--viz-zero)' }}>
+                  <span className="absolute inset-y-0 left-1/2 w-px" style={{ backgroundColor: 'var(--viz-axis)' }} />
+                  <span
+                    className="absolute inset-y-0 rounded-full"
+                    style={{
+                      backgroundColor: r.balance >= 0 ? 'var(--viz-pos)' : 'var(--viz-neg)',
+                      left: r.balance >= 0 ? '50%' : `${50 - (Math.abs(r.balance) / peak) * 50}%`,
+                      width: `${(Math.abs(r.balance) / peak) * 50}%`,
+                    }}
+                  />
+                </div>
+              </td>
+              <td className="py-2 px-2 text-right tnum whitespace-nowrap" style={{ color: 'var(--viz-muted)' }}>{r.count}</td>
+            </tr>
+          ))}
+        </tbody>
+
+        <tfoot>
+          <tr style={{ borderTop: '2px solid var(--viz-axis)' }} className="font-semibold">
+            <td className="py-2 px-2" style={{ color: 'var(--viz-ink)' }}>합계</td>
+            <td className="py-2 px-2 text-right tnum whitespace-nowrap" style={{ color: 'var(--viz-ink)' }}>{won(totals.income)}</td>
+            <td className="py-2 px-2 text-right tnum whitespace-nowrap" style={{ color: 'var(--viz-ink)' }}>{won(totals.expense)}</td>
+            <td className="py-2 px-2 text-right tnum whitespace-nowrap" style={{ color: 'var(--viz-ink)' }}>
+              {totals.balance >= 0 ? '+' : '−'}{won(Math.abs(totals.balance))}
+            </td>
+            <td />
+            <td className="py-2 px-2 text-right tnum whitespace-nowrap" style={{ color: 'var(--viz-ink-2)' }}>{totals.count}</td>
+          </tr>
+          <tr style={{ color: 'var(--viz-muted)' }} className="text-xs">
+            <td className="py-2 px-2">월평균</td>
+            <td className="py-2 px-2 text-right tnum whitespace-nowrap">{won(averages.income)}</td>
+            <td className="py-2 px-2 text-right tnum whitespace-nowrap">{won(averages.expense)}</td>
+            <td className="py-2 px-2 text-right tnum whitespace-nowrap">
+              {averages.balance >= 0 ? '+' : '−'}{won(Math.abs(averages.balance))}
+            </td>
+            <td colSpan={2} className="py-2 px-2 text-right">{totals.monthCount}개월 기준</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  );
+}
+
+// ========================================
+// 🔥 카테고리 × 월 교차표 (히트맵)
+// ========================================
+// 크기를 나타내는 격자라 순차 램프(한 색상, 밝음→어두움)를 쓴다.
+// 지출은 주황, 수입은 파랑 — 위 차트에서 그 계열이 쓰는 색과 같게 맞춘다.
+// (색이 가리키는 대상이 화면마다 달라지면 안 된다.)
+const RAMPS = {
+  expense: {
+    steps: ['#fbdcc9', '#f6b48d', '#f08a56', '#eb6834', '#b84a1c'],
+    // 각 단계에서 대비 4.5:1 을 넘는 글자색 — 눈대중이 아니라 계산해서 고른 값
+    inks:  ['#0b0b0b', '#0b0b0b', '#0b0b0b', '#0b0b0b', '#ffffff'],
+  },
+  income: {
+    steps: ['#cde2fb', '#9ec5f4', '#6da7ec', '#256abf', '#104281'],
+    inks:  ['#0b0b0b', '#0b0b0b', '#0b0b0b', '#ffffff', '#ffffff'],
+  },
+};
+
+function CategoryMonthMatrix({ data, kind }) {
+  const { months } = data;
+  const [hover, setHover] = useState(null);
+
+  const rows = data.categories.filter((c) => c.kind === kind && c.total > 0);
+  const peak = Math.max(1, ...rows.flatMap((c) => months.map((m) => c.byMonth[m] || 0)));
+  const ramp = RAMPS[kind];
+
+  // 값 → 램프 칸. 0 은 램프를 쓰지 않고 표면으로 둔다 ("없음"은 "아주 작음"과 다르다).
+  const binOf = (v) => (v <= 0 ? -1 : Math.min(ramp.steps.length - 1, Math.floor((v / peak) * ramp.steps.length)));
+
+  if (rows.length === 0) {
+    return <Empty icon="📭" title={`기록된 ${KIND_LABEL[kind]}이 없습니다.`} />;
+  }
+
+  const colTotals = months.map((m) => rows.reduce((a, c) => a + (c.byMonth[m] || 0), 0));
+
+  return (
+    <div className="viz">
+      <div className="overflow-x-auto">
+        <table className="text-xs" style={{ borderCollapse: 'separate', borderSpacing: 2 }}>
+          <thead>
+            <tr style={{ color: 'var(--viz-muted)' }}>
+              <th className="text-left font-medium px-2 sticky left-0 bg-white z-10">카테고리</th>
+              {months.map((m, i) => (
+                <th key={m} className="font-medium px-1 min-w-[58px]">
+                  {axisMonthLabel(m, i > 0 ? months[i - 1] : null)}
+                </th>
+              ))}
+              {/* 달이 많아지면 가로로 넘치는데, 그때 제일 보고 싶은 열이 합계다.
+                  카테고리 이름(왼쪽)과 합계(오른쪽)를 양끝에 고정해 둔다. */}
+              <th className="font-medium px-2 min-w-[96px] text-right whitespace-nowrap sticky right-0 bg-white z-10">합계</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {rows.map((c) => (
+              <tr key={c.id}>
+                <td className="px-2 whitespace-nowrap sticky left-0 bg-white z-10" style={{ color: 'var(--viz-ink)' }}>
+                  {c.emoji} {c.name}
+                </td>
+
+                {months.map((m) => {
+                  const v = c.byMonth[m] || 0;
+                  const bin = binOf(v);
+                  const on = hover && hover.id === c.id && hover.month === m;
+                  return (
+                    <td
+                      key={m}
+                      className="text-center tnum rounded-md relative"
+                      style={{
+                        backgroundColor: bin < 0 ? '#f8fafc' : ramp.steps[bin],
+                        color: bin < 0 ? 'var(--viz-muted)' : ramp.inks[bin],
+                        padding: '6px 4px',
+                        // 2px 표면 간격(borderSpacing)이 칸을 떼어 놓는다. 테두리는 그리지 않는다.
+                        boxShadow: on ? '0 0 0 2px var(--viz-ink)' : 'none',
+                      }}
+                      onMouseEnter={() => setHover({ id: c.id, month: m })}
+                      onMouseLeave={() => setHover(null)}
+                      title={`${c.name} · ${monthLabel(m)} · ${won(v)}`}
+                    >
+                      {v > 0 ? wonShort(v) : '–'}
+                    </td>
+                  );
+                })}
+
+                <td
+                  className="text-right tnum font-semibold px-2 whitespace-nowrap sticky right-0 bg-white z-10"
+                  style={{ color: 'var(--viz-ink)' }}
+                >
+                  {won(c.total)}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+
+          <tfoot>
+            <tr style={{ color: 'var(--viz-ink-2)' }} className="font-semibold">
+              <td className="px-2 sticky left-0 bg-white z-10">합계</td>
+              {colTotals.map((t, i) => (
+                <td key={months[i]} className="text-center tnum px-1" style={{ paddingTop: 6 }}>
+                  {t > 0 ? wonShort(t) : '–'}
+                </td>
+              ))}
+              <td className="text-right tnum px-2 whitespace-nowrap sticky right-0 bg-white z-10">
+                {won(colTotals.reduce((a, b) => a + b, 0))}
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+      {/* 색 눈금 — 연속 색을 썼으면 범례가 있어야 값을 읽을 수 있다 */}
+      <div className="flex items-center gap-2 mt-3 px-1">
+        <span className="text-[11px]" style={{ color: 'var(--viz-muted)' }}>적음</span>
+        <div className="flex gap-0.5">
+          {ramp.steps.map((s) => (
+            <span key={s} className="w-6 h-2.5 rounded-sm" style={{ backgroundColor: s }} />
+          ))}
+        </div>
+        <span className="text-[11px]" style={{ color: 'var(--viz-muted)' }}>많음 (최대 {won(peak)})</span>
+      </div>
+    </div>
+  );
+}
+
+// ========================================
+// 📆 월별 집계 화면
+// ========================================
+function MonthlyView({ data, onPickMonth }) {
+  const [kind, setKind] = useState('expense');
+
+  if (!data || data.rows.length === 0) {
+    return <Empty icon="📊" title="아직 집계할 거래가 없습니다." hint="거래를 추가하면 월별 추이가 쌓입니다." />;
+  }
+
+  return (
+    <div className="space-y-5">
+      <section className="bg-white rounded-2xl border border-slate-100 p-5">
+        <h2 className="font-bold text-slate-900">월별 수입·지출</h2>
+        <p className="text-xs text-slate-400 mt-0.5 mb-4">
+          {data.totals.monthCount}개월 · 거래 {data.totals.count}건
+        </p>
+        <MonthlyBarChart rows={data.rows} />
+      </section>
+
+      <section className="bg-white rounded-2xl border border-slate-100 p-5">
+        <h2 className="font-bold text-slate-900">월별 집계표</h2>
+        <p className="text-xs text-slate-400 mt-0.5 mb-3">행을 누르면 그 달로 이동합니다</p>
+        <MonthlyTable data={data} onPickMonth={onPickMonth} />
+      </section>
+
+      <section className="bg-white rounded-2xl border border-slate-100 p-5">
+        <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
+          <div>
+            <h2 className="font-bold text-slate-900">카테고리 × 월</h2>
+            <p className="text-xs text-slate-400 mt-0.5">진할수록 많이 쓴 달입니다</p>
+          </div>
+          <div className="flex gap-1 p-1 bg-slate-100 rounded-lg">
+            {['expense', 'income'].map((k) => (
+              <button
+                key={k}
+                onClick={() => setKind(k)}
+                className={`px-3 py-1.5 text-xs font-semibold rounded-md transition ${
+                  kind === k ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-400 hover:text-slate-600'
+                }`}
+              >
+                {KIND_LABEL[k]}
+              </button>
+            ))}
+          </div>
+        </div>
+        <CategoryMonthMatrix data={data} kind={kind} />
+      </section>
+    </div>
+  );
+}
+
+// ========================================
+// 🧭 해시 라우터 (라이브러리 없이)
+// ========================================
+const ROUTES = [
+  { path: '/', label: '카테고리별 합계', icon: '📊' },
+  { path: '/monthly', label: '월별 집계', icon: '📆' },
+  { path: '/entries', label: '거래 내역', icon: '🧾' },
+  { path: '/categories', label: '카테고리 관리', icon: '🏷' },
+];
+
+function useHashRoute() {
+  const read = () => window.location.hash.replace(/^#/, '') || '/';
+  const [route, setRoute] = useState(read);
+
+  useEffect(() => {
+    const onChange = () => setRoute(read());
+    window.addEventListener('hashchange', onChange);
+    return () => window.removeEventListener('hashchange', onChange);
+  }, []);
+
+  return route;
+}
+
+function Nav({ route }) {
+  return (
+    <nav className="flex gap-1 p-1 bg-slate-100 rounded-xl overflow-x-auto no-scrollbar">
+      {ROUTES.map((r) => (
+        <a
+          key={r.path}
+          href={`#${r.path}`}
+          className={`px-3.5 py-2 text-sm font-semibold rounded-lg whitespace-nowrap transition ${
+            route === r.path ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-800'
+          }`}
+        >
+          <span className="mr-1">{r.icon}</span>{r.label}
+        </a>
+      ))}
+    </nav>
+  );
+}
+
+// ========================================
+// 🏠 App
+// ========================================
+function App() {
+  const route = useHashRoute();
+  const { toast, show } = useToast();
+
+  const [month, setMonth] = useState(thisMonth);
+  const [kind, setKind] = useState('expense');          // 합계 화면의 지출/수입 탭
+  const [filterCategory, setFilterCategory] = useState(null);
+
+  const [categories, setCategories] = useState([]);
+  const [summary, setSummary] = useState(null);
+  const [allTimeSummary, setAllTimeSummary] = useState(null);  // 카테고리 관리의 '미사용' 판정용
+  const [monthly, setMonthly] = useState(null);                // 월별 집계 화면
+  const [entries, setEntries] = useState([]);
+  const [monthsWithData, setMonthsWithData] = useState([]);
+
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  // 월이 바뀌면 합계·목록을 같이 다시 읽는다.
+  const load = useCallback(async () => {
+    setLoading(true);
+    setError(null);
+    try {
+      const q = month ? `?month=${month}` : '';
+      const [cats, sum, allSum, list, months, monthlyData] = await Promise.all([
+        api('/categories'),
+        api(`/summary${q}`),
+        api('/summary'),
+        api(`/entries${q}`),
+        api('/months'),
+        api('/monthly'),
+      ]);
+      setCategories(cats);
+      setSummary(sum);
+      setAllTimeSummary(allSum);
+      setMonthly(monthlyData);
+      setEntries(list);
+      // 거래가 있는 월 + 이번 달을 합쳐 최신순으로. 이번 달이 비어도 선택할 수 있어야 한다.
+      setMonthsWithData([...new Set([thisMonth(), ...months.map((m) => m.month)])].sort().reverse());
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  }, [month]);
+
+  useEffect(() => { load(); }, [load]);
+
+  // 거래를 하나 추가하면 합계가 달라지므로 전체를 다시 읽는다.
+  // (합계를 화면에서 더해 맞추면 서버 집계와 어긋날 수 있어 믿을 수 있는 쪽을 택한다.)
+  const onEntryCreated = useCallback((created) => {
+    if (!month || created.spentOn.startsWith(month)) {
+      load();
+    } else {
+      // 다른 달에 기록한 경우 — 지금 화면은 그대로 두고 어디에 들어갔는지 알려준다.
+      show(`${monthLabel(created.spentOn.slice(0, 7))}에 기록했습니다.`, 'info');
+      load();
+    }
+  }, [month, load, show]);
+
+  // 삭제는 낙관적 업데이트 — 먼저 지우고, 실패하면 되돌린다.
+  const onDeleteEntry = useCallback(async (entry) => {
+    const snapshot = entries;
+    setEntries((prev) => prev.filter((e) => e.id !== entry.id));
+    try {
+      await api(`/entries/${entry.id}`, { method: 'DELETE' });
+      show('삭제했습니다.', 'success');
+      load();                       // 합계를 서버 기준으로 다시 맞춘다
+    } catch (err) {
+      setEntries(snapshot);         // 되돌리기
+      show(err.message, 'error');
+    }
+  }, [entries, load, show]);
+
+  // 합계 화면에서 카테고리를 누르면 그 카테고리만 걸러 목록으로 넘어간다.
+  const pickCategory = useCallback((c) => {
+    setFilterCategory(c);
+    window.location.hash = '/entries';
+  }, []);
+
+  const visibleEntries = useMemo(
+    () => (filterCategory ? entries.filter((e) => e.categoryId === filterCategory.id) : entries),
+    [entries, filterCategory],
+  );
+
+  return (
+    <div className="min-h-screen">
+      <header className="bg-white border-b border-slate-100 sticky top-0 z-20">
+        <div className="max-w-5xl mx-auto px-4 py-3.5 flex flex-wrap items-center gap-3">
+          <h1 className="text-lg font-bold tracking-tight">
+            <a href="#/" className="hover:opacity-70 transition">💸 가계부</a>
+          </h1>
+          <div className="ml-auto">
+            <MonthPicker month={month} onChange={setMonth} months={monthsWithData} />
+          </div>
+        </div>
+      </header>
+
+      <main className="max-w-5xl mx-auto px-4 py-5 space-y-5">
+        <Nav route={route} />
+
+        {error && <ErrorBox message={error} onRetry={load} />}
+
+        {loading && !summary && <Spinner />}
+
+        {summary && (
+          <>
+            {/* ───── 카테고리별 합계 ───── */}
+            {route === '/' && (
+              <div className="space-y-5">
+                <TotalCards summary={summary} />
+
+                <section className="bg-white rounded-2xl border border-slate-100 p-5">
+                  <div className="flex flex-wrap items-center justify-between gap-3 mb-5">
+                    <div>
+                      <h2 className="font-bold text-slate-900">카테고리별 합계</h2>
+                      <p className="text-xs text-slate-400 mt-0.5">
+                        {monthLabel(summary.month)} · 거래 {summary.entryCount}건 · 막대를 누르면 내역이 열립니다
+                      </p>
+                    </div>
+
+                    <div className="flex gap-1 p-1 bg-slate-100 rounded-lg">
+                      {['expense', 'income'].map((k) => (
+                        <button
+                          key={k}
+                          onClick={() => setKind(k)}
+                          className={`px-3 py-1.5 text-xs font-semibold rounded-md transition ${
+                            kind === k ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-400 hover:text-slate-600'
+                          }`}
+                        >
+                          {KIND_LABEL[k]}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  <CategoryBreakdown summary={summary} kind={kind} onPickCategory={pickCategory} />
+                </section>
+              </div>
+            )}
+
+            {/* ───── 월별 집계 ───── */}
+            {route === '/monthly' && (
+              <MonthlyView
+                data={monthly}
+                onPickMonth={(m) => { setMonth(m); window.location.hash = '/'; }}
+              />
+            )}
+
+            {/* ───── 거래 내역 + 추가 ───── */}
+            {route === '/entries' && (
+              <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-5 items-start">
+                <section className="order-2 lg:order-1">
+                  <EntryList
+                    entries={visibleEntries}
+                    filterCategory={filterCategory}
+                    onClearFilter={() => setFilterCategory(null)}
+                    onDelete={onDeleteEntry}
+                  />
+                </section>
+
+                <section className="order-1 lg:order-2 bg-white rounded-2xl border border-slate-100 p-4 lg:sticky lg:top-20">
+                  <h2 className="font-bold text-slate-900 mb-3">거래 추가</h2>
+                  <EntryForm categories={categories} onCreated={onEntryCreated} show={show} />
+                </section>
+              </div>
+            )}
+
+            {/* ───── 카테고리 관리 ───── */}
+            {route === '/categories' && (
+              <div className="max-w-md">
+                <CategoryManager
+                  categories={categories}
+                  summary={allTimeSummary}
+                  onChanged={load}
+                  show={show}
+                />
+              </div>
+            )}
+          </>
+        )}
+      </main>
+
+      <footer className="max-w-5xl mx-auto px-4 pb-10 pt-2">
+        <p className="text-xs text-slate-400 text-center">
+          합계는 서버에서 <code className="bg-slate-100 px-1 rounded">GROUP BY</code> 로 집계합니다 ·
+          Express 5 + Supabase PostgreSQL
+        </p>
+      </footer>
+
+      <Toast toast={toast} />
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>
