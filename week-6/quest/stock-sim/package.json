@@ -1,0 +1,15 @@
+{
+  "name": "stock-sim",
+  "version": "1.0.0",
+  "private": true,
+  "description": "모의투자 리서치 — 실시간 시세(Yahoo Finance) 모의 매매 + AI 종목 분석 (Express 5 + Supabase Postgres + OpenAI)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "pg": "^8.13.1"
+  }
+}

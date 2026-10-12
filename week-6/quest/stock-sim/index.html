@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>모의투자 리서치</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.26.4/babel.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Noto Sans KR', system-ui, sans-serif; background: #f6f7f9; }
+    .num { font-variant-numeric: tabular-nums; }
+    .up { color: #e5384f; }      /* 국내 관례: 상승 빨강 */
+    .down { color: #2f6fed; }    /* 하락 파랑 */
+    .flat { color: #6b7280; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .spinner { width: 18px; height: 18px; border: 2px solid #c7cdd6; border-top-color: #111827; border-radius: 50%; animation: spin .8s linear infinite; }
+    @keyframes fadein { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+    .fade { animation: fadein .2s ease-out; }
+  </style>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel" data-presets="react">
+const { useState, useEffect, useRef, useMemo, useCallback, createContext, useContext } = React;
+
+// ════════════════════════════════════════════════════════════
+// API · 포맷 도우미
+// ════════════════════════════════════════════════════════════
+async function api(path, options = {}) {
+  const res = await fetch('/api' + path, {
+    ...options,
+    headers: { 'Content-Type': 'application/json', ...(options.headers || {}) },
+    body: options.body ? JSON.stringify(options.body) : undefined,
+  });
+  let json;
+  try { json = await res.json(); } catch { throw new Error('서버 응답을 읽지 못했습니다.'); }
+  if (!json.success) throw new Error(json.message || '요청에 실패했습니다.');
+  return json.data;
+}
+
+const krw = (v) => (v == null ? '-' : Math.round(v).toLocaleString('ko-KR') + '원');
+const price = (v, cur) => {
+  if (v == null) return '-';
+  if (cur === 'USD') return '$' + v.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  if (cur === 'KRW') return Math.round(v).toLocaleString('ko-KR') + '원';
+  return v.toLocaleString() + ' ' + (cur || '');
+};
+const signed = (v, digits = 2) => (v == null ? '-' : (v > 0 ? '+' : v < 0 ? '−' : '') + Math.abs(v).toFixed(digits) + '%');
+const signedKrw = (v) => (v == null ? '-' : (v > 0 ? '+' : v < 0 ? '−' : '') + Math.abs(Math.round(v)).toLocaleString('ko-KR') + '원');
+const tone = (v) => (v > 0 ? 'up' : v < 0 ? 'down' : 'flat');
+const dateTime = (d) => new Date(d).toLocaleString('ko-KR', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+const isKr = (s) => /\.(KS|KQ)$/.test(s);
+
+const OUTLOOK = {
+  bullish: { label: '긍정적', icon: '▲', cls: 'bg-red-50 text-red-700 ring-red-200' },
+  neutral: { label: '중립', icon: '■', cls: 'bg-gray-100 text-gray-700 ring-gray-200' },
+  bearish: { label: '부정적', icon: '▼', cls: 'bg-blue-50 text-blue-700 ring-blue-200' },
+};
+
+// ════════════════════════════════════════════════════════════
+// 해시 라우터 (외부 라이브러리 없이)
+// ════════════════════════════════════════════════════════════
+function useHashRoute() {
+  const parse = () => (location.hash.replace(/^#/, '') || '/').split('?')[0];
+  const [route, setRoute] = useState(parse);
+  useEffect(() => {
+    const onHash = () => { setRoute(parse()); window.scrollTo(0, 0); };
+    window.addEventListener('hashchange', onHash);
+    return () => window.removeEventListener('hashchange', onHash);
+  }, []);
+  return route;
+}
+const go = (path) => { location.hash = path; };
+const stockPath = (symbol) => '/stock/' + encodeURIComponent(symbol);
+
+// ════════════════════════════════════════════════════════════
+// 토스트
+// ════════════════════════════════════════════════════════════
+const ToastCtx = createContext(() => {});
+function ToastProvider({ children }) {
+  const [toasts, setToasts] = useState([]);
+  const push = useCallback((message, type = 'info') => {
+    const id = Math.random();
+    setToasts((t) => [...t, { id, message, type }]);
+    setTimeout(() => setToasts((t) => t.filter((x) => x.id !== id)), 3500);
+  }, []);
+  return (
+    <ToastCtx.Provider value={push}>
+      {children}
+      {ReactDOM.createPortal(
+        <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 flex flex-col gap-2 w-[min(92vw,420px)]">
+          {toasts.map((t) => (
+            <div key={t.id} role="status" className={`fade rounded-xl px-4 py-3 text-sm shadow-lg text-white ${t.type === 'error' ? 'bg-red-600' : t.type === 'success' ? 'bg-gray-900' : 'bg-gray-700'}`}>
+              {t.message}
+            </div>
+          ))}
+        </div>,
+        document.body,
+      )}
+    </ToastCtx.Provider>
+  );
+}
+const useToast = () => useContext(ToastCtx);
+
+// ════════════════════════════════════════════════════════════
+// 공통 UI
+// ════════════════════════════════════════════════════════════
+const Card = ({ className = '', children }) => (
+  <section className={`bg-white rounded-2xl border border-gray-200/80 ${className}`}>{children}</section>
+);
+const Spinner = () => <div className="spinner" aria-label="불러오는 중" />;
+const Loading = ({ text = '불러오는 중…' }) => (
+  <div className="flex items-center justify-center gap-2 py-16 text-gray-500 text-sm"><Spinner />{text}</div>
+);
+const ErrorBox = ({ message, onRetry }) => (
+  <div className="py-12 text-center text-sm text-gray-600">
+    <p>{message}</p>
+    {onRetry && <button onClick={onRetry} className="mt-3 px-3 py-1.5 rounded-lg bg-gray-900 text-white">다시 시도</button>}
+  </div>
+);
+const Change = ({ pct, className = '' }) => <span className={`num ${tone(pct)} ${className}`}>{signed(pct)}</span>;
+
+function Modal({ open, onClose, children }) {
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e) => e.key === 'Escape' && onClose();
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [open, onClose]);
+  if (!open) return null;
+  // transform 이 걸린 부모 안에서 fixed 가 깨지지 않도록 body 에 직접 그린다.
+  return ReactDOM.createPortal(
+    <div className="fixed inset-0 z-40 bg-black/40 flex items-center justify-center p-4" onClick={onClose}>
+      <div className="fade bg-white rounded-2xl w-full max-w-sm p-5 shadow-xl" onClick={(e) => e.stopPropagation()}>{children}</div>
+    </div>,
+    document.body,
+  );
+}
+
+/** 데이터 불러오기 훅: [data, loading, error, reload, setData] */
+function useLoad(fn, deps) {
+  const [state, setState] = useState({ data: null, loading: true, error: null });
+  const seq = useRef(0);
+  const load = useCallback(async (silent = false) => {
+    const my = ++seq.current;
+    if (!silent) setState((s) => ({ ...s, loading: true, error: null }));
+    try {
+      const data = await fn();
+      if (my === seq.current) setState({ data, loading: false, error: null });
+    } catch (err) {
+      if (my === seq.current) setState((s) => ({ ...s, loading: false, error: err.message }));
+    }
+  }, deps);
+  useEffect(() => { load(); }, [load]);
+  const setData = (updater) => setState((s) => ({ ...s, data: typeof updater === 'function' ? updater(s.data) : updater }));
+  return [state.data, state.loading, state.error, load, setData];
+}
+
+// ════════════════════════════════════════════════════════════
+// 헤더 + 종목 검색
+// ════════════════════════════════════════════════════════════
+function SearchBox() {
+  const [q, setQ] = useState('');
+  const [results, setResults] = useState([]);
+  const [open, setOpen] = useState(false);
+  const [busy, setBusy] = useState(false);
+  const [active, setActive] = useState(0);
+  const boxRef = useRef(null);
+
+  useEffect(() => {
+    const term = q.trim();
+    if (!term) { setResults([]); return; }
+    setBusy(true);
+    // 입력이 멈춘 뒤 250ms 후에 검색 (타자마다 요청하지 않도록)
+    const timer = setTimeout(async () => {
+      try { setResults(await api('/search?q=' + encodeURIComponent(term))); setActive(0); }
+      catch { setResults([]); }
+      finally { setBusy(false); }
+    }, 250);
+    return () => clearTimeout(timer);
+  }, [q]);
+
+  useEffect(() => {
+    const onDown = (e) => { if (boxRef.current && !boxRef.current.contains(e.target)) setOpen(false); };
+    document.addEventListener('mousedown', onDown);
+    return () => document.removeEventListener('mousedown', onDown);
+  }, []);
+
+  const pick = (r) => { go(stockPath(r.symbol)); setQ(''); setOpen(false); };
+  const onKey = (e) => {
+    if (e.key === 'ArrowDown') { e.preventDefault(); setActive((a) => Math.min(a + 1, results.length - 1)); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); setActive((a) => Math.max(a - 1, 0)); }
+    else if (e.key === 'Enter') {
+      if (results[active]) pick(results[active]);
+      else if (/^[A-Za-z0-9.\-]{1,15}$/.test(q.trim())) pick({ symbol: q.trim().toUpperCase() });
+    } else if (e.key === 'Escape') setOpen(false);
+  };
+
+  return (
+    <div ref={boxRef} className="relative w-full sm:w-80">
+      <input
+        value={q}
+        onChange={(e) => { setQ(e.target.value); setOpen(true); }}
+        onFocus={() => setOpen(true)}
+        onKeyDown={onKey}
+        placeholder="종목 검색 — 삼성전자, AAPL, 035720"
+        aria-label="종목 검색"
+        className="w-full rounded-xl bg-gray-100 px-4 py-2.5 text-sm outline-none focus:bg-white focus:ring-2 focus:ring-gray-900"
+      />
+      {open && q.trim() && (
+        <div className="absolute z-30 mt-2 w-full bg-white rounded-xl border border-gray-200 shadow-lg overflow-hidden">
+          {busy && !results.length ? (
+            <div className="flex items-center gap-2 px-4 py-3 text-sm text-gray-500"><Spinner />검색 중…</div>
+          ) : results.length ? (
+            <ul className="max-h-80 overflow-auto">
+              {results.map((r, i) => (
+                <li key={r.symbol}>
+                  <button onMouseEnter={() => setActive(i)} onClick={() => pick(r)}
+                    className={`w-full text-left px-4 py-2.5 flex items-center justify-between gap-3 ${i === active ? 'bg-gray-100' : ''}`}>
+                    <span className="truncate text-sm font-medium">{r.name}</span>
+                    <span className="shrink-0 text-xs text-gray-500">{r.symbol} · {r.exchange}</span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="px-4 py-3 text-sm text-gray-500">결과가 없습니다. 영문 이름이나 티커로도 찾아보세요.</p>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function Header({ route }) {
+  const tabs = [['/', '홈'], ['/portfolio', '내 계좌'], ['/research', '리서치 노트']];
+  const isActive = (p) => (p === '/' ? route === '/' : route.startsWith(p));
+  return (
+    <header className="sticky top-0 z-20 bg-white/90 backdrop-blur border-b border-gray-200">
+      <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col sm:flex-row sm:items-center gap-3">
+        <div className="flex items-center justify-between gap-6">
+          <a href="#/" className="font-black text-lg tracking-tight whitespace-nowrap">📈 모의투자 리서치</a>
+          <nav className="flex gap-1 text-sm">
+            {tabs.map(([p, label]) => (
+              <a key={p} href={'#' + p} className={`px-3 py-1.5 rounded-lg whitespace-nowrap ${isActive(p) ? 'bg-gray-900 text-white' : 'text-gray-600 hover:bg-gray-100'}`}>{label}</a>
+            ))}
+          </nav>
+        </div>
+        <div className="sm:ml-auto"><SearchBox /></div>
+      </div>
+    </header>
+  );
+}
+
+// ════════════════════════════════════════════════════════════
+// 가격 차트 (SVG, 십자선 툴팁)
+// ════════════════════════════════════════════════════════════
+function PriceChart({ points, currency, range }) {
+  const wrapRef = useRef(null);
+  const [width, setWidth] = useState(600);
+  const [hover, setHover] = useState(null);
+  const height = 260;
+  const pad = { t: 16, r: 64, b: 28, l: 8 };
+
+  useEffect(() => {
+    const ro = new ResizeObserver(([e]) => setWidth(Math.max(280, e.contentRect.width)));
+    ro.observe(wrapRef.current);
+    return () => ro.disconnect();
+  }, []);
+
+  const geo = useMemo(() => {
+    if (points.length < 2) return null;
+    const cs = points.map((p) => p.c);
+    let min = Math.min(...cs), max = Math.max(...cs);
+    const span = max - min || max * 0.02 || 1;
+    min -= span * 0.08; max += span * 0.08;
+    const iw = width - pad.l - pad.r, ih = height - pad.t - pad.b;
+    const x = (i) => pad.l + (i / (points.length - 1)) * iw;
+    const y = (v) => pad.t + (1 - (v - min) / (max - min)) * ih;
+    const line = points.map((p, i) => `${i ? 'L' : 'M'}${x(i).toFixed(1)},${y(p.c).toFixed(1)}`).join('');
+    const area = `${line}L${x(points.length - 1)},${pad.t + ih}L${x(0)},${pad.t + ih}Z`;
+    // y축 눈금: 1·2·5 × 10ⁿ 간격으로 반올림된 값 (40,135원 대신 40,000원)
+    const raw = (max - min) / 4;
+    const mag = 10 ** Math.floor(Math.log10(raw));
+    const step = [1, 2, 5, 10].map((s) => s * mag).find((s) => s >= raw);
+    const ticks = [];
+    for (let v = Math.ceil(min / step) * step; v <= max; v += step) ticks.push(v);
+    // x축 라벨 4개
+    const xLabels = [0, 1, 2, 3].map((k) => Math.round((k / 3) * (points.length - 1)));
+    return { x, y, line, area, ticks, xLabels, iw, ih };
+  }, [points, width]);
+
+  if (!geo) return <div ref={wrapRef} className="h-[260px] flex items-center justify-center text-sm text-gray-500">차트 데이터가 없습니다.</div>;
+
+  const first = points[0].c, last = points[points.length - 1].c;
+  const color = last >= first ? '#e5384f' : '#2f6fed';
+  const fmtDate = (t) => {
+    const d = new Date(t);
+    return range === '5y' ? `${d.getFullYear()}.${d.getMonth() + 1}` : `${d.getMonth() + 1}/${d.getDate()}`;
+  };
+
+  const onMove = (e) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const px = ((e.clientX - rect.left) / rect.width) * width;
+    const i = Math.round(((px - pad.l) / geo.iw) * (points.length - 1));
+    setHover(Math.max(0, Math.min(points.length - 1, i)));
+  };
+
+  const hp = hover != null ? points[hover] : null;
+  const hx = hp ? geo.x(hover) : 0;
+
+  return (
+    <div ref={wrapRef} className="relative select-none">
+      <svg viewBox={`0 0 ${width} ${height}`} width="100%" height={height}
+        onPointerMove={onMove} onPointerLeave={() => setHover(null)} style={{ touchAction: 'pan-y' }}
+        role="img" aria-label={`가격 추이 차트, 시작 ${price(first, currency)}, 마지막 ${price(last, currency)}`}>
+        <defs>
+          <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor={color} stopOpacity="0.14" />
+            <stop offset="100%" stopColor={color} stopOpacity="0" />
+          </linearGradient>
+        </defs>
+        {geo.ticks.map((v) => (
+          <g key={v}>
+            <line x1={pad.l} x2={pad.l + geo.iw} y1={geo.y(v)} y2={geo.y(v)} stroke="#eef0f3" />
+            <text x={pad.l + geo.iw + 8} y={geo.y(v) + 4} fontSize="11" fill="#8b93a1" className="num">{price(v, currency)}</text>
+          </g>
+        ))}
+        {geo.xLabels.map((i, k) => (
+          <text key={k} x={geo.x(i)} y={height - 8} fontSize="11" fill="#8b93a1"
+            textAnchor={k === 0 ? 'start' : k === 3 ? 'end' : 'middle'}>{fmtDate(points[i].t)}</text>
+        ))}
+        <line x1={pad.l} x2={pad.l + geo.iw} y1={geo.y(first)} y2={geo.y(first)} stroke="#c7cdd6" strokeDasharray="3 4" />
+        <path d={geo.area} fill="url(#area)" />
+        <path d={geo.line} fill="none" stroke={color} strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" />
+        {hp && (
+          <g>
+            <line x1={hx} x2={hx} y1={pad.t} y2={pad.t + geo.ih} stroke="#9aa3af" />
+            <circle cx={hx} cy={geo.y(hp.c)} r="5" fill={color} stroke="#fff" strokeWidth="2" />
+          </g>
+        )}
+      </svg>
+      {hp && (
+        <div className="pointer-events-none absolute top-1 rounded-lg bg-gray-900 text-white text-xs px-2.5 py-1.5 shadow num"
+          style={{ left: `${(hx / width) * 100}%`, transform: `translateX(${hx > width / 2 ? 'calc(-100% - 10px)' : '10px'})` }}>
+          <div className="text-gray-300">{new Date(hp.t).toLocaleDateString('ko-KR')}</div>
+          <div className="font-bold">{price(hp.c, currency)}</div>
+          <div>시작 대비 {signed(((hp.c - first) / first) * 100)}</div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ════════════════════════════════════════════════════════════
+// 홈
+// ════════════════════════════════════════════════════════════
+function SummaryCard({ p }) {
+  return (
+    <Card className="p-5 sm:p-6">
+      <p className="text-sm text-gray-500">총 자산</p>
+      <div className="mt-1 flex flex-wrap items-baseline gap-x-3">
+        <span className="text-3xl font-black num">{krw(p.total)}</span>
+        <span className={`text-sm font-medium num ${tone(p.returnPct)}`}>{signedKrw(p.total - p.initialCash)} ({signed(p.returnPct)})</span>
+      </div>
+      <dl className="mt-5 grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm">
+        <div><dt className="text-gray-500">예수금</dt><dd className="font-bold num">{krw(p.cash)}</dd></div>
+        <div><dt className="text-gray-500">주식 평가액</dt><dd className="font-bold num">{krw(p.stockValue)}</dd></div>
+        <div><dt className="text-gray-500">평가 손익</dt><dd className={`font-bold num ${tone(p.unrealizedKrw)}`}>{signedKrw(p.unrealizedKrw)}</dd></div>
+        <div><dt className="text-gray-500">실현 손익</dt><dd className={`font-bold num ${tone(p.realizedKrw)}`}>{signedKrw(p.realizedKrw)}</dd></div>
+      </dl>
+      <p className="mt-4 text-xs text-gray-400">시작 자금 {krw(p.initialCash)}{p.usdKrw ? ` · 환율 1달러 = ${p.usdKrw.toFixed(2)}원` : ''}</p>
+    </Card>
+  );
+}
+
+function QuoteRow({ q, right }) {
+  return (
+    <li>
+      <a href={'#' + stockPath(q.symbol)} className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50">
+        <div className="min-w-0 flex-1">
+          <p className="font-medium truncate">{q.name}</p>
+          <p className="text-xs text-gray-500">{q.symbol}</p>
+        </div>
+        <div className="text-right">
+          <p className="font-bold num">{price(q.price, q.currency)}</p>
+          {q.changePct != null && <Change pct={q.changePct} className="text-xs" />}
+        </div>
+        {right}
+      </a>
+    </li>
+  );
+}
+
+function HomePage() {
+  const [portfolio, pLoading, pError, reloadP] = useLoad(() => api('/portfolio'), []);
+  const [watch, wLoading, , , setWatch] = useLoad(() => api('/watchlist'), []);
+  const [popular, popLoading, popError, reloadPop] = useLoad(() => api('/popular'), []);
+  const toast = useToast();
+
+  const removeWatch = async (e, symbol) => {
+    e.preventDefault();
+    const prev = watch;
+    setWatch((w) => w.filter((x) => x.symbol !== symbol));   // 낙관적 업데이트
+    try { await api('/watchlist/' + encodeURIComponent(symbol), { method: 'DELETE' }); }
+    catch (err) { setWatch(prev); toast(err.message, 'error'); }
+  };
+
+  return (
+    <div className="space-y-6">
+      {pLoading && !portfolio ? <Card><Loading /></Card>
+        : pError ? <Card><ErrorBox message={pError} onRetry={reloadP} /></Card>
+        : <SummaryCard p={portfolio} />}
+
+      <div className="grid md:grid-cols-2 gap-6 items-start">
+        <Card>
+          <h2 className="px-4 pt-4 pb-2 font-bold">⭐ 관심 종목</h2>
+          {wLoading && !watch ? <Loading /> : watch?.length ? (
+            <ul className="divide-y divide-gray-100">
+              {watch.map((q) => (
+                <QuoteRow key={q.symbol} q={q} right={
+                  <button onClick={(e) => removeWatch(e, q.symbol)} aria-label={`${q.name} 관심 해제`} className="ml-1 text-gray-300 hover:text-gray-600 px-1">✕</button>
+                } />
+              ))}
+            </ul>
+          ) : (
+            <p className="px-4 pb-6 pt-2 text-sm text-gray-500">종목 화면에서 ☆를 눌러 관심 종목을 추가하세요.</p>
+          )}
+        </Card>
+
+        <Card>
+          <h2 className="px-4 pt-4 pb-2 font-bold">🔥 인기 종목</h2>
+          {popLoading && !popular ? <Loading /> : popError ? <ErrorBox message={popError} onRetry={reloadPop} /> : (
+            <ul className="divide-y divide-gray-100">{popular.map((q) => <QuoteRow key={q.symbol} q={q} />)}</ul>
+          )}
+        </Card>
+      </div>
+
+      <p className="text-xs text-gray-400 leading-relaxed">
+        시세는 Yahoo Finance 비공식 데이터로 지연될 수 있습니다. 장이 닫혀 있어도 마지막 가격으로 체결되는 학습용 모의투자이며,
+        AI 분석은 투자 권유가 아닙니다.
+      </p>
+    </div>
+  );
+}
+
+// ════════════════════════════════════════════════════════════
+// 종목 상세
+// ════════════════════════════════════════════════════════════
+function OrderPanel({ stock, cash, onDone }) {
+  const [side, setSide] = useState('BUY');
+  const [qty, setQty] = useState('1');
+  const [busy, setBusy] = useState(false);
+  const [confirm, setConfirm] = useState(false);
+  const toast = useToast();
+  const { quote, fx, feeRate, holding, tradable } = stock;
+
+  const n = Math.max(0, Math.floor(Number(qty) || 0));
+  const unitKrw = quote.price * (fx || 0);
+  const amount = Math.round(unitKrw * n);
+  const fee = Math.round(amount * feeRate);
+  const total = side === 'BUY' ? amount + fee : amount - fee;
+  const maxQty = side === 'BUY'
+    ? (unitKrw ? Math.floor(cash / (unitKrw * (1 + feeRate))) : 0)
+    : (holding?.qty || 0);
+  const invalid = !tradable || n < 1 || n > maxQty;
+
+  const submit = async () => {
+    setBusy(true);
+    try {
+      const t = await api('/trades', { method: 'POST', body: { symbol: quote.symbol, side, qty: n } });
+      const msg = `${t.name} ${t.qty}주 ${side === 'BUY' ? '매수' : '매도'} 체결 (${price(t.price, t.currency)})`
+        + (t.realizedKrw != null ? ` · 실현 손익 ${signedKrw(t.realizedKrw)}` : '');
+      toast(msg, 'success');
+      setQty('1');
+      onDone();
+    } catch (err) {
+      toast(err.message, 'error');
+    } finally {
+      setBusy(false);
+      setConfirm(false);
+    }
+  };
+
+  const sideCls = side === 'BUY' ? 'bg-[#e5384f]' : 'bg-[#2f6fed]';
+
+  return (
+    <Card className="p-4">
+      <div className="grid grid-cols-2 gap-1 bg-gray-100 rounded-xl p-1 text-sm font-bold">
+        {[['BUY', '매수'], ['SELL', '매도']].map(([s, label]) => (
+          <button key={s} onClick={() => setSide(s)}
+            className={`py-2 rounded-lg ${side === s ? (s === 'BUY' ? 'bg-white text-[#e5384f] shadow-sm' : 'bg-white text-[#2f6fed] shadow-sm') : 'text-gray-500'}`}>{label}</button>
+        ))}
+      </div>
+
+      {!tradable ? (
+        <p className="mt-4 text-sm text-gray-500">원화·달러 이외 통화 종목은 거래할 수 없습니다.</p>
+      ) : (
+        <>
+          <label className="block mt-4 text-sm text-gray-500" htmlFor="qty">수량</label>
+          <div className="mt-1 flex gap-2">
+            <input id="qty" inputMode="numeric" value={qty}
+              onChange={(e) => setQty(e.target.value.replace(/[^\d]/g, '').slice(0, 6))}
+              className="flex-1 min-w-0 rounded-xl border border-gray-200 px-3 py-2 text-right num font-bold outline-none focus:ring-2 focus:ring-gray-900" />
+            <button onClick={() => setQty(String(maxQty))} className="px-3 rounded-xl bg-gray-100 text-sm whitespace-nowrap">최대 {maxQty.toLocaleString()}</button>
+          </div>
+          <dl className="mt-4 space-y-1.5 text-sm">
+            <div className="flex justify-between"><dt className="text-gray-500">현재가</dt><dd className="num">{price(quote.price, quote.currency)}</dd></div>
+            {quote.currency === 'USD' && <div className="flex justify-between"><dt className="text-gray-500">환율</dt><dd className="num">{fx.toFixed(2)}원</dd></div>}
+            <div className="flex justify-between"><dt className="text-gray-500">주문 금액</dt><dd className="num">{krw(amount)}</dd></div>
+            <div className="flex justify-between"><dt className="text-gray-500">수수료 ({(feeRate * 100).toFixed(3)}%)</dt><dd className="num">{krw(fee)}</dd></div>
+            <div className="flex justify-between font-bold pt-1.5 border-t border-gray-100"><dt>{side === 'BUY' ? '총 결제' : '받을 금액'}</dt><dd className="num">{krw(total)}</dd></div>
+            <div className="flex justify-between text-xs text-gray-400"><dt>{side === 'BUY' ? '주문 가능 예수금' : '보유 수량'}</dt><dd className="num">{side === 'BUY' ? krw(cash) : `${holding?.qty || 0}주`}</dd></div>
+          </dl>
+          <button disabled={invalid || busy} onClick={() => setConfirm(true)}
+            className={`mt-4 w-full py-3 rounded-xl text-white font-bold disabled:opacity-40 ${sideCls}`}>
+            {n > maxQty ? (side === 'BUY' ? '예수금 부족' : '보유 수량 부족') : `${side === 'BUY' ? '매수' : '매도'}하기`}
+          </button>
+        </>
+      )}
+
+      <Modal open={confirm} onClose={() => !busy && setConfirm(false)}>
+        <h3 className="font-bold text-lg">{side === 'BUY' ? '매수' : '매도'} 주문 확인</h3>
+        <p className="mt-2 text-sm text-gray-600">{quote.name} <b className="num">{n.toLocaleString()}주</b>를 약 <b className="num">{krw(total)}</b>에 {side === 'BUY' ? '삽니다' : '팝니다'}.</p>
+        <p className="mt-1 text-xs text-gray-400">체결 가격은 서버가 주문 시점 시세로 다시 확인합니다.</p>
+        <div className="mt-5 flex gap-2">
+          <button onClick={() => setConfirm(false)} disabled={busy} className="flex-1 py-2.5 rounded-xl bg-gray-100">취소</button>
+          <button onClick={submit} disabled={busy} className={`flex-1 py-2.5 rounded-xl text-white font-bold flex items-center justify-center gap-2 ${sideCls}`}>
+            {busy && <Spinner />}확인
+          </button>
+        </div>
+      </Modal>
+    </Card>
+  );
+}
+
+function ReportView({ r, compact = false }) {
+  const rep = r.report;
+  const o = OUTLOOK[r.outlook];
+  const since = r.currentPrice != null ? ((r.currentPrice - r.price) / r.price) * 100 : null;
+  return (
+    <div className="space-y-4 text-sm">
+      <div className="flex flex-wrap items-center gap-2">
+        <span className={`inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-bold ring-1 ${o.cls}`}>{o.icon} {o.label}</span>
+        <span className="text-xs text-gray-500">확신도 {'●'.repeat(rep.confidence)}{'○'.repeat(5 - rep.confidence)}</span>
+        <span className="text-xs text-gray-400 ml-auto">{dateTime(r.createdAt)} · 분석 시점 {price(r.price, r.currency)}
+          {since != null && <> → 현재 <Change pct={since} /></>}</span>
+      </div>
+      <p className="text-base font-medium leading-relaxed">{rep.summary}</p>
+      {!compact && (
+        <>
+          {rep.business && <p className="text-gray-600 leading-relaxed">{rep.business}</p>}
+          <div className="grid sm:grid-cols-2 gap-3">
+            <div className="rounded-xl bg-red-50/60 p-3">
+              <h4 className="font-bold text-red-700 mb-1.5">강점</h4>
+              <ul className="space-y-1 list-disc pl-4 text-gray-700">{rep.strengths.map((s, i) => <li key={i}>{s}</li>)}</ul>
+            </div>
+            <div className="rounded-xl bg-blue-50/60 p-3">
+              <h4 className="font-bold text-blue-700 mb-1.5">리스크</h4>
+              <ul className="space-y-1 list-disc pl-4 text-gray-700">{rep.risks.map((s, i) => <li key={i}>{s}</li>)}</ul>
+            </div>
+          </div>
+          {rep.technical && <div><h4 className="font-bold mb-1">가격 흐름</h4><p className="text-gray-600 leading-relaxed">{rep.technical}</p></div>}
+          {rep.newsTakeaways?.length > 0 && (
+            <div><h4 className="font-bold mb-1">뉴스에서 읽은 것</h4>
+              <ul className="space-y-1 list-disc pl-4 text-gray-600">{rep.newsTakeaways.map((s, i) => <li key={i}>{s}</li>)}</ul></div>
+          )}
+          {rep.checkpoints?.length > 0 && (
+            <div><h4 className="font-bold mb-1">앞으로 확인할 것</h4>
+              <ul className="space-y-1 text-gray-600">{rep.checkpoints.map((s, i) => <li key={i}>☐ {s}</li>)}</ul></div>
+          )}
+          {rep.metrics && (
+            <details className="text-xs text-gray-500">
+              <summary className="cursor-pointer">분석에 쓴 데이터 보기</summary>
+              <dl className="mt-2 grid grid-cols-2 gap-x-4 gap-y-1">
+                {Object.entries(rep.metrics).map(([k, v]) => <React.Fragment key={k}><dt>{k}</dt><dd className="num text-right">{String(v)}</dd></React.Fragment>)}
+              </dl>
+              {rep.news?.length > 0 && (
+                <ul className="mt-2 space-y-1">
+                  {rep.news.map((n, i) => <li key={i}><a href={n.link} target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-800">{n.title}</a> — {n.publisher}</li>)}
+                </ul>
+              )}
+            </details>
+          )}
+          <p className="text-[11px] text-gray-400">{r.model} 생성 · 공부용 참고 자료이며 투자 권유가 아닙니다.</p>
+        </>
+      )}
+    </div>
+  );
+}
+
+function ResearchPanel({ symbol, name }) {
+  const [list, loading, error, reload, setList] = useLoad(() => api('/research?symbol=' + encodeURIComponent(symbol)), [symbol]);
+  const [busy, setBusy] = useState(false);
+  const [openId, setOpenId] = useState(null);
+  const toast = useToast();
+
+  const generate = async () => {
+    setBusy(true);
+    try {
+      const r = await api('/research', { method: 'POST', body: { symbol } });
+      setList((l) => [r, ...(l || [])]);
+      toast('AI 분석이 저장되었습니다.', 'success');
+    } catch (err) {
+      toast(err.message, 'error');
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  const [latest, ...past] = list || [];
+  return (
+    <Card className="p-5">
+      <div className="flex items-center gap-3">
+        <h2 className="font-bold">🤖 AI 리서치</h2>
+        <button onClick={generate} disabled={busy}
+          className="ml-auto px-3.5 py-2 rounded-xl bg-gray-900 text-white text-sm font-medium flex items-center gap-2 disabled:opacity-60">
+          {busy && <Spinner />}{busy ? '분석 중… (10~20초)' : latest ? '새로 분석하기' : '분석 생성'}
+        </button>
+      </div>
+      <div className="mt-4">
+        {loading && !list ? <Loading /> : error ? <ErrorBox message={error} onRetry={reload} /> : !latest ? (
+          <p className="text-sm text-gray-500 py-4">
+            {name}의 최근 주가 흐름과 뉴스 헤드라인을 바탕으로 강점·리스크·확인할 점을 정리합니다.
+            분석은 기록으로 남아, 나중에 그때 판단과 실제 주가를 비교할 수 있습니다.
+          </p>
+        ) : (
+          <>
+            <ReportView r={latest} />
+            {past.length > 0 && (
+              <div className="mt-6 border-t border-gray-100 pt-4">
+                <h3 className="text-sm font-bold text-gray-500 mb-2">이전 분석 {past.length}건</h3>
+                <ul className="space-y-2">
+                  {past.map((r) => (
+                    <li key={r.id} className="rounded-xl border border-gray-100 p-3">
+                      <button onClick={() => setOpenId(openId === r.id ? null : r.id)} className="w-full text-left">
+                        <ReportView r={r} compact />
+                      </button>
+                      {openId === r.id && <div className="mt-3 pt-3 border-t border-gray-100"><ReportView r={r} /></div>}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </>
+        )}
+      </div>
+    </Card>
+  );
+}
+
+function TradeTable({ trades, showName = true }) {
+  if (!trades.length) return <p className="px-4 py-6 text-sm text-gray-500">거래 내역이 없습니다.</p>;
+  return (
+    <div className="overflow-x-auto">
+      <table className="w-full text-sm whitespace-nowrap">
+        <thead className="text-xs text-gray-500 text-left">
+          <tr className="border-b border-gray-100">
+            <th className="px-4 py-2 font-medium">일시</th>
+            {showName && <th className="px-4 py-2 font-medium">종목</th>}
+            <th className="px-4 py-2 font-medium">구분</th>
+            <th className="px-4 py-2 font-medium text-right">수량</th>
+            <th className="px-4 py-2 font-medium text-right">체결가</th>
+            <th className="px-4 py-2 font-medium text-right">금액</th>
+            <th className="px-4 py-2 font-medium text-right">실현 손익</th>
+          </tr>
+        </thead>
+        <tbody className="divide-y divide-gray-50">
+          {trades.map((t) => (
+            <tr key={t.id}>
+              <td className="px-4 py-2.5 text-gray-500">{dateTime(t.createdAt)}</td>
+              {showName && <td className="px-4 py-2.5"><a href={'#' + stockPath(t.symbol)} className="hover:underline">{t.name}</a></td>}
+              <td className={`px-4 py-2.5 font-bold ${t.side === 'BUY' ? 'up' : 'down'}`}>{t.side === 'BUY' ? '매수' : '매도'}</td>
+              <td className="px-4 py-2.5 text-right num">{t.qty.toLocaleString()}</td>
+              <td className="px-4 py-2.5 text-right num">{price(t.price, t.currency)}</td>
+              <td className="px-4 py-2.5 text-right num">{krw(t.amountKrw)}</td>
+              <td className={`px-4 py-2.5 text-right num ${t.realizedKrw != null ? tone(t.realizedKrw) : 'text-gray-300'}`}>{t.realizedKrw != null ? signedKrw(t.realizedKrw) : '-'}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function StockPage({ symbol }) {
+  const [range, setRange] = useState('3mo');
+  const [stock, loading, error, reload, setStock] = useLoad(() => api(`/stocks/${encodeURIComponent(symbol)}?range=${range}`), [symbol, range]);
+  const [portfolio, , , reloadP] = useLoad(() => api('/portfolio'), [symbol]);
+  const [trades, , , reloadT] = useLoad(() => api('/trades?symbol=' + encodeURIComponent(symbol)), [symbol]);
+  const toast = useToast();
+
+  if (loading && !stock) return <Card><Loading /></Card>;
+  if (error && !stock) return <Card><ErrorBox message={error} onRetry={reload} /></Card>;
+  const { quote, points, holding } = stock;
+  const rangePct = points.length > 1 ? ((points[points.length - 1].c - points[0].c) / points[0].c) * 100 : null;
+
+  const toggleWatch = async () => {
+    const next = !stock.watched;
+    setStock((s) => ({ ...s, watched: next }));
+    try {
+      if (next) await api('/watchlist', { method: 'POST', body: { symbol: quote.symbol } });
+      else await api('/watchlist/' + encodeURIComponent(quote.symbol), { method: 'DELETE' });
+      toast(next ? '관심 종목에 추가했습니다.' : '관심 종목에서 뺐습니다.');
+    } catch (err) {
+      setStock((s) => ({ ...s, watched: !next }));
+      toast(err.message, 'error');
+    }
+  };
+
+  const afterTrade = () => { reload(true); reloadP(true); reloadT(true); };
+  const holdValue = holding ? quote.price * holding.qty * (stock.fx || 1) : 0;
+  const holdPnl = holding ? holdValue - holding.costKrw : 0;
+
+  const stats = [
+    ['전일 종가', price(quote.prevClose, quote.currency)],
+    ['오늘 고가', price(quote.dayHigh, quote.currency)],
+    ['오늘 저가', price(quote.dayLow, quote.currency)],
+    ['52주 최고', price(quote.high52, quote.currency)],
+    ['52주 최저', price(quote.low52, quote.currency)],
+    ['거래량', quote.volume != null ? quote.volume.toLocaleString() : '-'],
+  ];
+
+  return (
+    <div className="space-y-6">
+      <div className="grid lg:grid-cols-[1fr_320px] gap-6 items-start">
+        <div className="space-y-6 min-w-0">
+          <Card className="p-5">
+            <div className="flex items-start gap-3">
+              <div className="min-w-0">
+                <p className="text-xs text-gray-500">{quote.symbol} · {quote.exchange}{quote.name !== quote.englishName ? ` · ${quote.englishName}` : ''}</p>
+                <h1 className="text-2xl font-black truncate">{quote.name}</h1>
+              </div>
+              <button onClick={toggleWatch} aria-pressed={stock.watched} aria-label="관심 종목"
+                className="ml-auto text-2xl leading-none px-1 hover:scale-110 transition">{stock.watched ? '⭐' : '☆'}</button>
+            </div>
+            <div className="mt-2 flex flex-wrap items-baseline gap-x-3">
+              <span className="text-3xl font-black num">{price(quote.price, quote.currency)}</span>
+              <span className={`num font-medium ${tone(quote.change)}`}>
+                {quote.change > 0 ? '▲' : quote.change < 0 ? '▼' : ''} {price(Math.abs(quote.change), quote.currency)} ({signed(quote.changePct)})
+              </span>
+              {quote.currency === 'USD' && stock.fx && <span className="text-sm text-gray-400 num">≈ {krw(quote.price * stock.fx)}</span>}
+            </div>
+            {quote.marketTime && <p className="text-xs text-gray-400 mt-1">기준 {new Date(quote.marketTime).toLocaleString('ko-KR')}</p>}
+
+            <div className="mt-4 flex items-center gap-1">
+              {[['1mo', '1개월'], ['3mo', '3개월'], ['6mo', '6개월'], ['1y', '1년'], ['5y', '5년']].map(([r, label]) => (
+                <button key={r} onClick={() => setRange(r)}
+                  className={`px-3 py-1.5 rounded-lg text-sm ${range === r ? 'bg-gray-900 text-white' : 'text-gray-600 hover:bg-gray-100'}`}>{label}</button>
+              ))}
+              {rangePct != null && <span className="ml-auto text-sm">기간 수익률 <Change pct={rangePct} className="font-bold" /></span>}
+              {loading && <span className="ml-2"><Spinner /></span>}
+            </div>
+            <div className="mt-2"><PriceChart points={points} currency={quote.currency} range={range} /></div>
+
+            <dl className="mt-4 grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-2 text-sm">
+              {stats.map(([k, v]) => <div key={k} className="flex justify-between"><dt className="text-gray-500">{k}</dt><dd className="num">{v}</dd></div>)}
+            </dl>
+          </Card>
+
+          <ResearchPanel symbol={quote.symbol} name={quote.name} />
+        </div>
+
+        <div className="space-y-6 lg:sticky lg:top-24">
+          {holding && (
+            <Card className="p-4 text-sm">
+              <h2 className="font-bold mb-2">내 보유</h2>
+              <dl className="space-y-1.5">
+                <div className="flex justify-between"><dt className="text-gray-500">수량</dt><dd className="num">{holding.qty.toLocaleString()}주</dd></div>
+                <div className="flex justify-between"><dt className="text-gray-500">평균 단가</dt><dd className="num">{price(holding.avgPrice, quote.currency)}</dd></div>
+                <div className="flex justify-between"><dt className="text-gray-500">평가액</dt><dd className="num">{krw(holdValue)}</dd></div>
+                <div className="flex justify-between font-bold"><dt>평가 손익</dt><dd className={`num ${tone(holdPnl)}`}>{signedKrw(holdPnl)} ({signed((holdPnl / holding.costKrw) * 100)})</dd></div>
+              </dl>
+            </Card>
+          )}
+          <OrderPanel stock={stock} cash={portfolio?.cash ?? 0} onDone={afterTrade} />
+        </div>
+      </div>
+
+      {trades?.length > 0 && (
+        <Card>
+          <h2 className="px-4 pt-4 pb-2 font-bold">이 종목 거래 내역</h2>
+          <TradeTable trades={trades} showName={false} />
+        </Card>
+      )}
+    </div>
+  );
+}
+
+// ════════════════════════════════════════════════════════════
+// 내 계좌
+// ════════════════════════════════════════════════════════════
+function AllocationBar({ p }) {
+  // 자산 구성: 종목별 + 예수금. 많은 순서로, 5개 넘으면 나머지는 '기타'로 묶는다.
+  const items = p.holdings.map((h) => ({ label: h.name, value: h.valueKrw }));
+  items.sort((a, b) => b.value - a.value);
+  const top = items.slice(0, 5);
+  const rest = items.slice(5).reduce((s, x) => s + x.value, 0);
+  if (rest > 0) top.push({ label: '기타', value: rest });
+  top.push({ label: '예수금', value: p.cash, cash: true });
+  const colors = ['#1f2937', '#4b5563', '#6b7280', '#9ca3af', '#b6bcc6', '#cfd4db'];
+  const [hover, setHover] = useState(null);
+
+  return (
+    <div>
+      <div className="flex h-4 rounded-full overflow-hidden gap-[2px] bg-white" role="img" aria-label="자산 구성 막대">
+        {top.map((it, i) => {
+          const pct = (it.value / p.total) * 100;
+          if (pct <= 0) return null;
+          return (
+            <div key={it.label} style={{ width: pct + '%', background: it.cash ? undefined : colors[i] }}
+              className={it.cash ? 'bg-[repeating-linear-gradient(45deg,#e5e7eb_0_4px,#f3f4f6_4px_8px)]' : ''}
+              onMouseEnter={() => setHover(i)} onMouseLeave={() => setHover(null)} title={`${it.label} ${pct.toFixed(1)}%`} />
+          );
+        })}
+      </div>
+      <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-gray-600">
+        {top.map((it, i) => (
+          <li key={it.label} className={`flex items-center gap-1.5 ${hover === i ? 'font-bold text-gray-900' : ''}`}>
+            <span className={`w-2.5 h-2.5 rounded-sm ${it.cash ? 'bg-[repeating-linear-gradient(45deg,#d1d5db_0_2px,#f3f4f6_2px_4px)] ring-1 ring-gray-300' : ''}`}
+              style={it.cash ? undefined : { background: colors[i] }} />
+            {it.label} <span className="num">{((it.value / p.total) * 100).toFixed(1)}%</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function PortfolioPage() {
+  const [p, loading, error, reload] = useLoad(() => api('/portfolio'), []);
+  const [trades, , , reloadT] = useLoad(() => api('/trades'), []);
+  const [confirm, setConfirm] = useState(false);
+  const [busy, setBusy] = useState(false);
+  const toast = useToast();
+
+  const reset = async () => {
+    setBusy(true);
+    try {
+      await api('/account/reset', { method: 'POST' });
+      toast('계좌를 초기화했습니다.', 'success');
+      reload(); reloadT();
+    } catch (err) { toast(err.message, 'error'); }
+    finally { setBusy(false); setConfirm(false); }
+  };
+
+  if (loading && !p) return <Card><Loading /></Card>;
+  if (error && !p) return <Card><ErrorBox message={error} onRetry={reload} /></Card>;
+
+  return (
+    <div className="space-y-6">
+      <SummaryCard p={p} />
+
+      <Card className="p-5">
+        <h2 className="font-bold mb-3">자산 구성</h2>
+        <AllocationBar p={p} />
+      </Card>
+
+      <Card>
+        <h2 className="px-4 pt-4 pb-2 font-bold">보유 종목 {p.holdings.length}개</h2>
+        {!p.holdings.length ? (
+          <p className="px-4 pb-6 text-sm text-gray-500">아직 보유한 종목이 없습니다. 위 검색창에서 종목을 찾아 매수해 보세요.</p>
+        ) : (
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm whitespace-nowrap">
+              <thead className="text-xs text-gray-500 text-left">
+                <tr className="border-b border-gray-100">
+                  <th className="px-4 py-2 font-medium">종목</th>
+                  <th className="px-4 py-2 font-medium text-right">수량</th>
+                  <th className="px-4 py-2 font-medium text-right">평균 단가</th>
+                  <th className="px-4 py-2 font-medium text-right">현재가</th>
+                  <th className="px-4 py-2 font-medium text-right">평가액</th>
+                  <th className="px-4 py-2 font-medium text-right">손익</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-50">
+                {p.holdings.map((h) => (
+                  <tr key={h.symbol} className="hover:bg-gray-50 cursor-pointer" onClick={() => go(stockPath(h.symbol))}>
+                    <td className="px-4 py-3"><p className="font-medium">{h.name}</p><p className="text-xs text-gray-500">{h.symbol}</p></td>
+                    <td className="px-4 py-3 text-right num">{h.qty.toLocaleString()}</td>
+                    <td className="px-4 py-3 text-right num">{price(h.avgPrice, h.currency)}</td>
+                    <td className="px-4 py-3 text-right num">{h.stale ? <span className="text-gray-400">시세 없음</span> : <>{price(h.price, h.currency)}<br /><Change pct={h.changePct} className="text-xs" /></>}</td>
+                    <td className="px-4 py-3 text-right num">{krw(h.valueKrw)}</td>
+                    <td className={`px-4 py-3 text-right num ${tone(h.pnlKrw)}`}>{signedKrw(h.pnlKrw)}<br /><span className="text-xs">{signed(h.pnlPct)}</span></td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </Card>
+
+      <Card>
+        <h2 className="px-4 pt-4 pb-2 font-bold">전체 거래 내역</h2>
+        {trades ? <TradeTable trades={trades} /> : <Loading />}
+      </Card>
+
+      <div className="text-right">
+        <button onClick={() => setConfirm(true)} className="text-sm text-gray-500 underline hover:text-red-600">계좌 초기화</button>
+      </div>
+      <Modal open={confirm} onClose={() => !busy && setConfirm(false)}>
+        <h3 className="font-bold text-lg">계좌를 초기화할까요?</h3>
+        <p className="mt-2 text-sm text-gray-600">보유 종목과 거래 내역이 모두 지워지고 예수금이 {krw(p.initialCash)}으로 돌아갑니다. AI 리서치 기록과 관심 종목은 남습니다.</p>
+        <div className="mt-5 flex gap-2">
+          <button onClick={() => setConfirm(false)} disabled={busy} className="flex-1 py-2.5 rounded-xl bg-gray-100">취소</button>
+          <button onClick={reset} disabled={busy} className="flex-1 py-2.5 rounded-xl bg-red-600 text-white font-bold flex items-center justify-center gap-2">{busy && <Spinner />}초기화</button>
+        </div>
+      </Modal>
+    </div>
+  );
+}
+
+// ════════════════════════════════════════════════════════════
+// 리서치 노트 (전체 분석 기록)
+// ════════════════════════════════════════════════════════════
+function ResearchPage() {
+  const [list, loading, error, reload] = useLoad(() => api('/research'), []);
+  const [filter, setFilter] = useState('all');
+  const [openId, setOpenId] = useState(null);
+
+  if (loading && !list) return <Card><Loading /></Card>;
+  if (error && !list) return <Card><ErrorBox message={error} onRetry={reload} /></Card>;
+
+  const shown = filter === 'all' ? list : list.filter((r) => r.outlook === filter);
+  // AI 판단이 맞았는지: 긍정 → 이후 상승, 부정 → 이후 하락이면 '적중'
+  const judged = list.filter((r) => r.currentPrice != null && r.outlook !== 'neutral');
+  const hits = judged.filter((r) => (r.outlook === 'bullish') === (r.currentPrice > r.price)).length;
+
+  return (
+    <div className="space-y-6">
+      <Card className="p-5">
+        <h1 className="text-xl font-black">리서치 노트</h1>
+        <p className="mt-1 text-sm text-gray-500">AI가 분석한 기록과, 그 뒤 실제 주가가 어떻게 움직였는지 비교합니다.</p>
+        <div className="mt-4 flex flex-wrap items-center gap-2">
+          {[['all', '전체'], ['bullish', '긍정적'], ['neutral', '중립'], ['bearish', '부정적']].map(([k, label]) => (
+            <button key={k} onClick={() => setFilter(k)}
+              className={`px-3 py-1.5 rounded-lg text-sm ${filter === k ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-600'}`}>
+              {label} {k === 'all' ? list.length : list.filter((r) => r.outlook === k).length}
+            </button>
+          ))}
+          {judged.length > 0 && (
+            <span className="ml-auto text-sm text-gray-600">방향 적중 <b className="num">{hits}/{judged.length}</b> (중립 제외)</span>
+          )}
+        </div>
+      </Card>
+
+      {!shown.length ? (
+        <Card><p className="p-6 text-sm text-gray-500">분석 기록이 없습니다. 종목 화면에서 'AI 리서치'의 분석 생성을 눌러 보세요.</p></Card>
+      ) : (
+        <ul className="space-y-3">
+          {shown.map((r) => (
+            <li key={r.id}>
+              <Card className="p-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <a href={'#' + stockPath(r.symbol)} className="font-bold hover:underline">{r.name}</a>
+                  <span className="text-xs text-gray-400">{r.symbol}</span>
+                  <button onClick={() => setOpenId(openId === r.id ? null : r.id)} className="ml-auto text-xs text-gray-500 underline">
+                    {openId === r.id ? '접기' : '전체 보기'}
+                  </button>
+                </div>
+                <ReportView r={r} compact={openId !== r.id} />
+              </Card>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+// ════════════════════════════════════════════════════════════
+// 앱
+// ════════════════════════════════════════════════════════════
+function App() {
+  const route = useHashRoute();
+  let page;
+  const m = route.match(/^\/stock\/([^/]+)$/);
+  if (m) page = <StockPage key={m[1]} symbol={decodeURIComponent(m[1])} />;
+  else if (route === '/portfolio') page = <PortfolioPage />;
+  else if (route === '/research') page = <ResearchPage />;
+  else page = <HomePage />;
+
+  return (
+    <ToastProvider>
+      <Header route={route} />
+      <main className="max-w-6xl mx-auto px-4 py-6">{page}</main>
+    </ToastProvider>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>
