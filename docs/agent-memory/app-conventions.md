@@ -29,6 +29,8 @@ week-4에서 앱을 여러 개 만들며 같은 문제를 반복해 만났습니
 
 - 빌드 도구 없이 단일 `index.html` — CDN React 18 + Babel Standalone + Tailwind.
 - 라우팅은 외부 라이브러리 없이 **해시 기반 라우터를 직접 구현**합니다 (`#/recipes/3`).
+- 페이지 전환 애니메이션에 `transform`을 쓰면 그 안의 `position: fixed`(모달·오버레이)가 화면이 아니라 부모 기준이 됩니다.
+  모달은 `ReactDOM.createPortal(..., document.body)`로 그립니다 (week-6/class/furniture-shop).
 - 삭제 등은 **낙관적 업데이트** — 화면을 먼저 갱신하고, 실패하면 되돌리고 토스트로 알립니다.
 
 ## 인증 (week-5/community)
@@ -45,3 +47,17 @@ week-4에서 앱을 여러 개 만들며 같은 문제를 반복해 만났습니
 - **키는 서버에만 둡니다.** 브라우저는 자기 서버의 `/api`만 호출하고, 외부 호출은 서버가 대행합니다.
 - 클라이언트가 보낸 데이터를 믿지 않고 **서버가 DB에서 직접 읽습니다.**
 - Structured Outputs를 써도 **값이 이상할 수 있으므로** 저장 전에 길이·범위를 검증·보정합니다.
+
+## AI 이미지 생성 (week-6/class/furniture-shop)
+
+- 바뀔 필요 없는 사진은 **스크립트로 미리 생성해 파일로 저장**합니다. 브라우저에서 생성 API를 부르면 키가 노출됩니다.
+- fal.ai는 동기 엔드포인트(`fal.run`)가 동시 요청 제한에 걸리면 바로 429로 실패합니다. 여러 장이면 **큐(`queue.fal.run`) 제출 → 폴링**을 씁니다.
+- 여러 장의 톤을 맞추려면 상품 설명 뒤에 배경·조명 묘사를 **공통 문구로 붙입니다.**
+
+## 주가 데이터 — Yahoo Finance (week-6/quest/stock-sim)
+
+- 비공식 API. `v7/finance/quote`는 crumb 없으면 **401** — 대신 키 없이 되는 `v8/finance/chart/<심볼>`의 `meta`를 시세로 씁니다.
+  브라우저 `User-Agent` 헤더를 붙이고, 같은 종목은 30초 정도 메모리 캐시합니다.
+- `v1/finance/search`는 **한글 검색어에 400**. 한글 이름 → 심볼 별칭 표를 서버에 두고, 6자리 코드는 `.KS` → `.KQ` 순으로 시도합니다.
+- 환율은 `KRW=X` 심볼의 차트 meta로 얻습니다. 원화 손익은 "현재가 × 현재 환율 − 원화 원금"으로 계산합니다.
+- `vercel link`가 앱 폴더에 만드는 `.gitignore`의 `.env*`는 `.env.example`까지 제외하므로 `!.env.example`을 추가합니다.

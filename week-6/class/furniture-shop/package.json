@@ -1,0 +1,18 @@
+{
+  "name": "furniture-shop",
+  "version": "1.0.0",
+  "private": true,
+  "description": "OAK & LINEN 가구 쇼핑몰 — 이메일·비밀번호 회원 인증 (Express 5 + Supabase Postgres + JWT)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "images": "node --env-file=.env generate-images.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.13.1"
+  }
+}

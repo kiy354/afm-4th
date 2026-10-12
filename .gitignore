@@ -33,3 +33,6 @@ week-4/class/**/*.mp3
 
 # Vercel
 .vercel/
+
+# 수업 중 받은 설치 파일·압축본 (용량이 커서 커밋 제외)
+week-6/class/다운로드/

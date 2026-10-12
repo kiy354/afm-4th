@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<title>{{TITLE}} — haru</title>
+<!--
+  하루 블로그 대표컷(01) 템플릿 · 1080×1440 · 글자는 위쪽 1080×1080 안
+  값은 design-system.md(→ 토큰 haru-tokens.md)만 쓴다.
+  색: 웹 브랜드 5색만 · 베이지/골드/팬톤 금지
+  폰트: 영문 Cormorant Garamond(Google Fonts · 폴백 Georgia) · 한글 Pretendard
+  금지: letter-spacing 변형 · italic · uppercase · 그림자 · 그라데이션 · 둥근 모서리
+  자리표시자: {{LABEL}} {{TITLE}} {{SUB}} {{DATE}}  /  배경: <body data-bg="white|grey">
+-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+  :root{
+    --w:#F7F5F0; --ink:#2F3A36; --sub:#8C918B; --line:#DED9CF; --g5:#E8ECE6;
+    --en:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+    --ko:"Pretendard","Apple SD Gothic Neo",system-ui,sans-serif;
+  }
+  html,body{margin:0;padding:0}
+  body{
+    width:1080px;height:1440px;overflow:hidden;
+    font-family:var(--ko);color:var(--ink);background:var(--w);
+    letter-spacing:normal;font-style:normal;text-transform:none;
+    -webkit-font-smoothing:antialiased;
+  }
+  body[data-bg="white"]{background:var(--w)}
+  body[data-bg="grey"]{background:var(--g5)}
+
+  /* 글자 영역 = 위쪽 1080×1080 (네이버 정사각 썸네일 안전 영역) */
+  .safe{
+    box-sizing:border-box;width:1080px;height:1080px;padding:100px 100px 80px;
+    display:flex;flex-direction:column;justify-content:space-between;
+  }
+  .label{font-family:var(--en);font-size:24px;font-weight:400;line-height:1.2;color:var(--ink)}
+  .title{
+    font-family:var(--ko);font-size:48px;font-weight:500;line-height:1.35;margin:0;
+    max-width:880px;word-break:keep-all;
+  }
+  .title.long{font-size:40px}
+  .sub{
+    font-family:var(--ko);font-size:24px;font-weight:400;line-height:1.6;color:var(--ink);
+    margin:30px 0 0;max-width:800px;word-break:keep-all;
+  }
+  .meta{
+    display:flex;justify-content:space-between;align-items:baseline;
+    padding-top:24px;border-top:1px solid var(--line);
+  }
+  .brand{font-family:var(--en);font-size:24px;color:var(--ink)}
+  .date{font-family:var(--ko);font-size:18px;color:var(--sub)}
+
+  /* 아래 1080~1440 = 사진 자리. 비워 둔다 (옅은 구분선 1개만) */
+  .below{box-sizing:border-box;width:1080px;height:360px;padding:0 100px}
+  .below .rule{height:1px;background:var(--g5);margin-top:80px}
+  body[data-bg="grey"] .below .rule{background:var(--line)}
+</style>
+</head>
+<body data-bg="white">
+  <section class="safe">
+    <div class="label">{{LABEL}}</div>
+    <div>
+      <h1 class="title">{{TITLE}}</h1>
+      <p class="sub">{{SUB}}</p>
+    </div>
+    <div class="meta">
+      <span class="brand">haru</span>
+      <span class="date">{{DATE}}</span>
+    </div>
+  </section>
+  <section class="below"><div class="rule"></div></section>
+</body>
+</html>

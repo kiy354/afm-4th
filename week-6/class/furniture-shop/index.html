@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OAK & LINEN — 미니멀 가구</title>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <!-- ⚠️ 모든 CDN은 버전을 명시적으로 고정한다. Babel 은 반드시 7.x (8.x 는 인라인 text/babel 이 깨짐) -->
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone@7.25.9/babel.min.js"></script>
+  <!-- 토스페이먼츠 결제위젯 SDK. npm 패키지가 아닌 토스 공식 배포 주소라 @버전 대신 경로(v2)로 메이저가 고정된다 -->
+  <script src="https://js.tosspayments.com/v2/standard"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Serif+KR:wght@400;500&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#F7F3EC',
+            sand: '#EAE2D6',
+            stone: { 450: '#A39A8C' },
+            ink: '#2B2722',
+            clay: '#9C6B4E',
+          },
+          fontFamily: {
+            sans: ['Pretendard', 'system-ui', 'sans-serif'],
+            // 영문은 Cormorant, 한글은 Cormorant 에 없으므로 Noto Serif KR 로 이어받는다
+            serif: ['"Cormorant Garamond"', '"Noto Serif KR"', 'serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    /* 페이지 전환·토스트 애니메이션 (Tailwind 로는 keyframes 정의 불가) */
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+    .fade-up { animation: fadeUp .6s cubic-bezier(.2,.7,.2,1) both; }
+    @keyframes slideIn { from { transform: translateX(100%); } to { transform: none; } }
+    .slide-in { animation: slideIn .35s cubic-bezier(.2,.7,.2,1) both; }
+    img.lazy { transition: opacity .6s ease; }
+  </style>
+</head>
+<body class="bg-cream text-ink font-sans antialiased">
+  <div id="root"></div>
+  <script type="text/babel">
+    // ========================================
+    // React Hooks
+    // ========================================
+    const { useState, useEffect, useMemo, useCallback, useContext, createContext, useRef } = React;
+
+    // ========================================
+    // 📦 상수 (상품 데이터는 DB → GET /api/products, 사진은 fal.ai Seedream 5.0 으로 생성 → images/)
+    // ========================================
+    const CATEGORY_ORDER = ['거실', '다이닝', '침실', '조명', '수납'];
+    const FREE_SHIPPING = 500000;
+    const SHIPPING_FEE = 50000;
+    const won = (n) => n.toLocaleString('ko-KR') + '원';
+
+    // ========================================
+    // 🎨 Design System Components
+    // ========================================
+    function Button({ variant = 'primary', size = 'md', disabled, onClick, className = '', children, type = 'button', ...rest }) {
+      const base = 'inline-flex items-center justify-center gap-2 tracking-wide transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-ink/40 focus-visible:ring-offset-2 focus-visible:ring-offset-cream disabled:opacity-40 disabled:cursor-not-allowed';
+      const variants = {
+        primary: 'bg-ink text-cream hover:bg-black',
+        secondary: 'border border-ink/80 text-ink hover:bg-ink hover:text-cream',
+        danger: 'bg-red-700 text-white hover:bg-red-800',
+        ghost: 'text-ink/70 hover:text-ink',
+      };
+      const sizes = { sm: 'h-9 px-4 text-xs', md: 'h-11 px-6 text-sm', lg: 'h-14 px-8 text-sm' };
+      return (
+        <button type={type} disabled={disabled} onClick={onClick}
+          className={`${base} ${variants[variant]} ${variant === 'ghost' ? 'px-0' : sizes[size]} ${className}`} {...rest}>
+          {children}
+        </button>
+      );
+    }
+
+    function Input({ type = 'text', label, value, onChange, placeholder, error, disabled, className = '', id, ...rest }) {
+      const inputId = id || label;
+      return (
+        <label htmlFor={inputId} className={`block ${className}`}>
+          {label && <span className="mb-2 block text-xs tracking-widest text-ink/60">{label}</span>}
+          <input id={inputId} type={type} value={value} onChange={onChange} placeholder={placeholder} disabled={disabled}
+            aria-invalid={!!error}
+            className={`h-12 w-full border-b bg-transparent px-0 text-sm outline-none transition-colors placeholder:text-ink/30 ${error ? 'border-red-600' : 'border-ink/20 focus:border-ink'}`} {...rest} />
+          {error && <span className="mt-1 block text-xs text-red-700">{error}</span>}
+        </label>
+      );
+    }
+
+    function Card({ className = '', children }) {
+      return <div className={`bg-white/60 p-6 ${className}`}>{children}</div>;
+    }
+
+    function Badge({ children, className = '' }) {
+      return <span className={`inline-block bg-cream/90 px-2 py-1 text-[10px] font-medium tracking-[0.2em] text-ink ${className}`}>{children}</span>;
+    }
+
+    function QuantityStepper({ value, onChange, min = 1, max = 9 }) {
+      return (
+        <div className="inline-flex h-11 items-center border border-ink/20" role="group" aria-label="수량">
+          <button className="h-full w-10 text-lg text-ink/60 hover:text-ink disabled:opacity-30" onClick={() => onChange(value - 1)} disabled={value <= min} aria-label="수량 줄이기">−</button>
+          <span className="w-8 text-center text-sm tabular-nums" aria-live="polite">{value}</span>
+          <button className="h-full w-10 text-lg text-ink/60 hover:text-ink disabled:opacity-30" onClick={() => onChange(value + 1)} disabled={value >= max} aria-label="수량 늘리기">+</button>
+        </div>
+      );
+    }
+
+    function Modal({ isOpen, onClose, title, children, size = 'md' }) {
+      useEffect(() => {
+        if (!isOpen) return;
+        const onKey = (e) => e.key === 'Escape' && onClose();
+        window.addEventListener('keydown', onKey);
+        return () => window.removeEventListener('keydown', onKey);
+      }, [isOpen, onClose]);
+      if (!isOpen) return null;
+      const widths = { sm: 'max-w-sm', md: 'max-w-md', lg: 'max-w-2xl' };
+      // body 로 포털: 페이지 전환 애니메이션(transform)이 걸린 부모 안에서는 fixed 가 화면이 아니라 부모 기준이 되어 배경이 잘린다
+      return ReactDOM.createPortal(
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-label={title}>
+          <div className="absolute inset-0 bg-ink/40 backdrop-blur-sm" onClick={onClose} />
+          <div className={`fade-up relative w-full ${widths[size]} bg-cream p-8 sm:p-10`}>
+            <button onClick={onClose} className="absolute right-4 top-4 p-2 text-ink/50 hover:text-ink" aria-label="닫기">✕</button>
+            {title && <h2 className="mb-4 font-serif text-3xl">{title}</h2>}
+            {children}
+          </div>
+        </div>,
+        document.body
+      );
+    }
+
+    // 사진이 천천히 나타나도록 로드 완료 후 투명도를 올린다
+    function FadeImage({ src, alt, className = '' }) {
+      const [loaded, setLoaded] = useState(false);
+      return (
+        <img src={src} alt={alt} loading="lazy" decoding="async" onLoad={() => setLoaded(true)}
+          className={`lazy ${loaded ? 'opacity-100' : 'opacity-0'} ${className}`} />
+      );
+    }
+
+    // ========================================
+    // 🔀 Router Components (해시 라우팅)
+    // ========================================
+    const RouterContext = createContext({ path: '/', params: {} });
+
+    const getPath = () => window.location.hash.replace(/^#/, '') || '/';
+
+    function matchRoute(pattern, path) {
+      const p = pattern.split('/').filter(Boolean);
+      const s = path.split('?')[0].split('/').filter(Boolean);
+      if (p.length !== s.length) return null;
+      const params = {};
+      for (let i = 0; i < p.length; i++) {
+        if (p[i].startsWith(':')) params[p[i].slice(1)] = decodeURIComponent(s[i]);
+        else if (p[i] !== s[i]) return null;
+      }
+      return params;
+    }
+
+    function Router({ children }) {
+      const [path, setPath] = useState(getPath());
+      useEffect(() => {
+        const onChange = () => { setPath(getPath()); window.scrollTo(0, 0); };
+        window.addEventListener('hashchange', onChange);
+        return () => window.removeEventListener('hashchange', onChange);
+      }, []);
+      return <RouterContext.Provider value={{ path, params: {} }}>{children}</RouterContext.Provider>;
+    }
+
+    function Route() { return null; }
+
+    function Routes({ children }) {
+      const { path } = useContext(RouterContext);
+      for (const child of React.Children.toArray(children)) {
+        const params = child.props.path === '*' ? {} : matchRoute(child.props.path, path);
+        if (params) {
+          return (
+            <RouterContext.Provider value={{ path, params }}>
+              <div key={path} className="fade-up">{child.props.element}</div>
+            </RouterContext.Provider>
+          );
+        }
+      }
+      return null;
+    }
+
+    function Link({ to, className = '', children, ...rest }) {
+      return <a href={`#${to}`} className={className} {...rest}>{children}</a>;
+    }
+
+    const useRouter = () => {
+      const { path } = useContext(RouterContext);
+      return { path, navigate: (to) => { window.location.hash = to; } };
+    };
+    const useParams = () => useContext(RouterContext).params;
+
+    // ========================================
+    // 📡 API
+    // ========================================
+    const API_BASE_URL = '/api';
+
+    // 서버 응답 형태 { success, data } / { success: false, message } 를 풀어서 data 만 돌려준다
+    async function api(endpoint, { method = 'GET', body, token } = {}) {
+      let res;
+      try {
+        res = await fetch(`${API_BASE_URL}${endpoint}`, {
+          method,
+          headers: {
+            ...(body ? { 'Content-Type': 'application/json' } : {}),
+            ...(token ? { Authorization: `Bearer ${token}` } : {}),
+          },
+          body: body ? JSON.stringify(body) : undefined,
+        });
+      } catch {
+        throw Object.assign(new Error('서버에 연결할 수 없어요. 잠시 후 다시 시도해 주세요.'), { status: 0 });
+      }
+      const json = await res.json().catch(() => null);
+      if (!res.ok || !json?.success) {
+        throw Object.assign(new Error(json?.message || '요청을 처리하지 못했어요.'), { status: res.status });
+      }
+      return json.data;
+    }
+
+    // ========================================
+    // 🪑 Products Context (앱이 켜질 때 한 번 불러와 모든 페이지가 같이 쓴다)
+    // ========================================
+    const ProductsContext = createContext(null);
+
+    function ProductsProvider({ children }) {
+      const [products, setProducts] = useState([]);
+      const [status, setStatus] = useState('loading'); // loading | ready | error
+      const [error, setError] = useState('');
+
+      const load = useCallback(() => {
+        setStatus('loading');
+        api('/products')
+          .then((list) => { setProducts(list); setStatus('ready'); })
+          .catch((err) => { setError(err.message); setStatus('error'); });
+      }, []);
+
+      useEffect(load, [load]);
+
+      const value = useMemo(() => {
+        const byId = new Map(products.map((p) => [p.id, p]));
+        // 카테고리 탭도 DB 에 있는 상품에서 뽑는다 → 새 카테고리를 추가해도 화면 코드를 고칠 필요가 없다
+        // 탭 순서는 공간 동선대로 고정하고, 목록에 없는 새 카테고리는 뒤에 붙인다
+        const rank = (c) => { const i = CATEGORY_ORDER.indexOf(c); return i === -1 ? 99 : i; };
+        const categories = ['전체', ...[...new Set(products.map((p) => p.category))].sort((a, b) => rank(a) - rank(b))];
+        return { products, categories, status, error, reload: load, find: (id) => byId.get(id) };
+      }, [products, status, error, load]);
+
+      return <ProductsContext.Provider value={value}>{children}</ProductsContext.Provider>;
+    }
+
+    const useProducts = () => useContext(ProductsContext);
+
+    // 상품을 다 불러오기 전에는 페이지 대신 로딩/에러를 보여 준다 (헤더·푸터는 그대로)
+    function ProductsGate({ children }) {
+      const { status, error, reload } = useProducts();
+      if (status === 'loading') return <PageLoading />;
+      if (status === 'error') {
+        return (
+          <main className="mx-auto max-w-md px-5 py-40 text-center">
+            <p className="font-serif text-3xl">상품을 불러오지 못했어요</p>
+            <p className="mt-3 text-sm text-ink/60">{error}</p>
+            <Button variant="secondary" className="mt-8" onClick={reload}>다시 시도</Button>
+          </main>
+        );
+      }
+      return children;
+    }
+
+    // ========================================
+    // 🛒 Cart Context (localStorage 에 보관)
+    // ========================================
+    const CartContext = createContext(null);
+    const CART_KEY = 'oak-linen-cart';
+
+    function loadCart() {
+      try { return JSON.parse(localStorage.getItem(CART_KEY)) || []; } catch { return []; }
+    }
+
+    function CartProvider({ children }) {
+      const { find } = useProducts();
+      const [items, setItems] = useState(loadCart);
+      const [toast, setToast] = useState(null);
+      const toastTimer = useRef();
+
+      useEffect(() => {
+        try { localStorage.setItem(CART_KEY, JSON.stringify(items)); } catch {}
+      }, [items]);
+
+      // 같은 상품이라도 색상이 다르면 다른 줄로 담는다
+      const add = useCallback((id, color, qty = 1) => {
+        setItems((prev) => {
+          const hit = prev.find((i) => i.id === id && i.color === color);
+          if (hit) return prev.map((i) => (i === hit ? { ...i, qty: Math.min(9, i.qty + qty) } : i));
+          return [...prev, { id, color, qty }];
+        });
+        clearTimeout(toastTimer.current);
+        setToast(find(id)?.name);
+        toastTimer.current = setTimeout(() => setToast(null), 2200);
+      }, [find]);
+
+      const update = useCallback((id, color, qty) =>
+        setItems((prev) => prev.map((i) => (i.id === id && i.color === color ? { ...i, qty } : i))), []);
+      const remove = useCallback((id, color) =>
+        setItems((prev) => prev.filter((i) => !(i.id === id && i.color === color))), []);
+      const clear = useCallback(() => setItems([]), []);
+
+      const count = items.reduce((s, i) => s + i.qty, 0);
+      // 가격은 장바구니에 저장하지 않고 DB 에서 받은 현재 가격으로 계산한다
+      const subtotal = items.reduce((s, i) => s + (find(i.id)?.price || 0) * i.qty, 0);
+
+      return (
+        <CartContext.Provider value={{ items, add, update, remove, clear, count, subtotal, toast }}>
+          {children}
+        </CartContext.Provider>
+      );
+    }
+
+    const useCart = () => useContext(CartContext);
+
+    // ========================================
+    // 🔐 Auth Context (JWT — 토큰은 localStorage, 요청마다 Authorization 헤더로 보냄)
+    // ========================================
+    const TOKEN_KEY = 'oak-linen-token';
+
+    const readToken = () => { try { return localStorage.getItem(TOKEN_KEY); } catch { return null; } };
+    const writeToken = (t) => { try { t ? localStorage.setItem(TOKEN_KEY, t) : localStorage.removeItem(TOKEN_KEY); } catch {} };
+
+    const AuthContext = createContext(null);
+
+    function AuthProvider({ children }) {
+      const [token, setToken] = useState(readToken);
+      const [user, setUser] = useState(null);
+      // 저장된 토큰을 서버에 확인하기 전까지는 ready=false — 그동안 가드가 로그인 페이지로 튕기지 않게 한다
+      const [ready, setReady] = useState(!readToken());
+
+      useEffect(() => {
+        if (!token) return;
+        let cancelled = false;
+        api('/auth/me', { token })
+          .then((d) => !cancelled && setUser(d.user))
+          .catch((err) => {
+            // 만료·위조된 토큰만 지운다. 서버가 잠깐 꺼진 것(status 0, 5xx)으로 로그아웃시키지 않는다
+            if (!cancelled && err.status === 401) { writeToken(null); setToken(null); }
+          })
+          .finally(() => !cancelled && setReady(true));
+        return () => { cancelled = true; };
+      }, [token]);
+
+      const saveSession = useCallback(({ token: t, user: u }) => {
+        writeToken(t); setToken(t); setUser(u); setReady(true);
+      }, []);
+
+      const login = useCallback((email, password) =>
+        api('/auth/login', { method: 'POST', body: { email, password } }).then(saveSession), [saveSession]);
+      const signup = useCallback((email, password) =>
+        api('/auth/signup', { method: 'POST', body: { email, password } }).then(saveSession), [saveSession]);
+      const logout = useCallback(() => { writeToken(null); setToken(null); setUser(null); }, []);
+
+      return (
+        <AuthContext.Provider value={{ user, token, ready, login, signup, logout }}>
+          {children}
+        </AuthContext.Provider>
+      );
+    }
+
+    const useAuth = () => useContext(AuthContext);
+
+    // 로그인 후 돌아갈 주소. 외부 주소(//evil.com 등)로 튕기지 않도록 '/'로 시작하는 내부 경로만 허용
+    const safeNext = (raw) => (raw && raw.startsWith('/') && !raw.startsWith('//') ? raw : '/account');
+
+    // 페이지 이동은 이 두 가드에서만 한다. 로그인 처리 쪽에서도 navigate 하면 나중 것이 덮어쓴다 (week-5 커뮤니티에서 겪은 문제)
+    function RequireAuth({ children }) {
+      const { user, ready } = useAuth();
+      const { path, navigate } = useRouter();
+      useEffect(() => {
+        if (ready && !user) navigate(`/login?next=${encodeURIComponent(path)}`);
+      }, [ready, user, path]);
+      if (!ready || !user) return <PageLoading />;
+      return children;
+    }
+
+    function GuestOnly({ children }) {
+      const { user } = useAuth();
+      const { path, navigate } = useRouter();
+      const next = safeNext(new URLSearchParams(path.split('?')[1] || '').get('next'));
+      useEffect(() => { if (user) navigate(next); }, [user, next]);
+      if (user) return <PageLoading />;
+      return children;
+    }
+
+    function PageLoading() {
+      return (
+        <div className="flex justify-center py-40" role="status" aria-label="불러오는 중">
+          <span className="h-6 w-6 animate-spin rounded-full border border-ink/20 border-t-ink" />
+        </div>
+      );
+    }
+
+    // ========================================
+    // 🧩 Layout Components
+    // ========================================
+    function Header() {
+      const { count } = useCart();
+      const { user } = useAuth();
+      const { path } = useRouter();
+      const [menuOpen, setMenuOpen] = useState(false);
+      const [scrolled, setScrolled] = useState(false);
+
+      useEffect(() => {
+        const onScroll = () => setScrolled(window.scrollY > 10);
+        window.addEventListener('scroll', onScroll, { passive: true });
+        return () => window.removeEventListener('scroll', onScroll);
+      }, []);
+      useEffect(() => setMenuOpen(false), [path]);
+
+      const nav = [
+        { to: '/shop', label: 'Shop' },
+        { to: '/shop?c=거실', label: 'Living' },
+        { to: '/shop?c=다이닝', label: 'Dining' },
+        { to: '/about', label: 'About' },
+      ];
+
+      return (
+        <header className={`sticky top-0 z-40 transition-colors duration-300 ${scrolled ? 'bg-cream/90 backdrop-blur border-b border-ink/10' : 'bg-cream'}`}>
+          <div className="relative mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:px-8">
+            <button className="-ml-2 p-2 md:hidden" onClick={() => setMenuOpen((v) => !v)} aria-label="메뉴" aria-expanded={menuOpen}>
+              <span className="block h-px w-5 bg-ink" /><span className="mt-1.5 block h-px w-5 bg-ink" />
+            </button>
+            <nav className="hidden gap-8 text-xs tracking-[0.2em] text-ink/70 md:flex" aria-label="주 메뉴">
+              {nav.map((n) => <Link key={n.to} to={n.to} className="uppercase hover:text-ink">{n.label}</Link>)}
+            </nav>
+            <Link to="/" className="absolute left-1/2 -translate-x-1/2 font-serif text-2xl tracking-wide">OAK &amp; LINEN</Link>
+            <div className="flex items-center gap-5 text-xs uppercase tracking-[0.2em] text-ink/70 sm:gap-7">
+              <Link to={user ? '/account' : '/login'} className="hidden hover:text-ink sm:inline">{user ? 'Account' : 'Login'}</Link>
+              <Link to="/cart" className="hover:text-ink" aria-label={`장바구니 ${count}개`}>
+                Cart <span className="tabular-nums">({count})</span>
+              </Link>
+            </div>
+          </div>
+          {menuOpen && (
+            <nav className="border-t border-ink/10 px-5 pb-6 md:hidden" aria-label="모바일 메뉴">
+              {nav.map((n) => <Link key={n.to} to={n.to} className="block py-3 text-sm uppercase tracking-[0.2em]">{n.label}</Link>)}
+              <Link to={user ? '/account' : '/login'} className="block py-3 text-sm uppercase tracking-[0.2em]">{user ? 'Account' : 'Login'}</Link>
+            </nav>
+          )}
+        </header>
+      );
+    }
+
+    function Footer() {
+      return (
+        <footer className="mt-32 border-t border-ink/10">
+          <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-8 md:grid-cols-4">
+            <div className="md:col-span-2">
+              <p className="font-serif text-3xl">OAK &amp; LINEN</p>
+              <p className="mt-4 max-w-sm text-sm leading-relaxed text-ink/60">오래 곁에 두고 싶은 가구. 자연 소재와 단순한 형태로, 매일의 시간을 조용히 받쳐 줍니다.</p>
+            </div>
+            <div className="text-sm text-ink/60">
+              <p className="mb-3 text-xs tracking-[0.2em] text-ink">고객센터</p>
+              <p>1600-0000 (데모)</p><p>평일 10:00 – 17:00</p>
+            </div>
+            <div className="text-sm text-ink/60">
+              <p className="mb-3 text-xs tracking-[0.2em] text-ink">안내</p>
+              <p>{won(FREE_SHIPPING)} 이상 무료 배송</p><p>설치 배송 · 30일 반품</p>
+            </div>
+          </div>
+          <p className="pb-10 text-center text-[11px] tracking-widest text-ink/40">© 2026 OAK &amp; LINEN · 데모 쇼핑몰 · 제품 사진은 AI(Seedream 5.0)로 생성</p>
+        </footer>
+      );
+    }
+
+    function Toast() {
+      const { toast } = useCart();
+      if (!toast) return null;
+      return (
+        <div className="slide-in fixed bottom-6 right-6 z-50 flex items-center gap-4 bg-ink px-5 py-4 text-sm text-cream shadow-xl" role="status">
+          <span>장바구니에 담았습니다 · {toast}</span>
+          <Link to="/cart" className="underline underline-offset-4">보기</Link>
+        </div>
+      );
+    }
+
+    function ProductCard({ product }) {
+      return (
+        <Link to={`/product/${product.id}`} className="group block">
+          <div className="relative aspect-[3/4] overflow-hidden bg-sand">
+            <FadeImage src={product.image} alt={product.name} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]" />
+            {product.tag && <Badge className="absolute left-3 top-3">{product.tag}</Badge>}
+          </div>
+          <div className="mt-4 flex items-start justify-between gap-4">
+            <div>
+              <p className="text-sm">{product.name}</p>
+              <p className="mt-1 font-serif text-sm italic text-ink/50">{product.en}</p>
+            </div>
+            <p className="whitespace-nowrap text-sm tabular-nums">{won(product.price)}</p>
+          </div>
+        </Link>
+      );
+    }
+
+    function SectionTitle({ eyebrow, title, action }) {
+      return (
+        <div className="mb-10 flex items-end justify-between gap-6">
+          <div>
+            <p className="text-[11px] tracking-[0.3em] text-clay">{eyebrow}</p>
+            <h2 className="mt-2 font-serif text-4xl sm:text-5xl">{title}</h2>
+          </div>
+          {action}
+        </div>
+      );
+    }
+
+    // ========================================
+    // 📄 Page Components
+    // ========================================
+    function HomePage() {
+      const { products } = useProducts();
+      const best = products.filter((p) => p.tag === 'BEST');
+      const fresh = products.filter((p) => p.tag === 'NEW');
+      const categoryCovers = [
+        { name: '거실', image: 'images/linen-sofa.jpg' },
+        { name: '다이닝', image: 'images/dining-table.jpg' },
+        { name: '침실', image: 'images/bed-frame.jpg' },
+        { name: '조명', image: 'images/floor-lamp.jpg' },
+      ];
+
+      return (
+        <main>
+          {/* Hero */}
+          <section className="relative">
+            <div className="relative h-[78vh] min-h-[480px] overflow-hidden">
+              <img src="images/hero.jpg" alt="밝은 거실에 놓인 리넨 소파와 트래버틴 테이블" className="h-full w-full object-cover" />
+              {/* 사진이 밝아서 흰 글씨 대신 진한 글씨 + 왼쪽 크림 그라데이션으로 가독성 확보 */}
+              <div className="absolute inset-0 bg-gradient-to-r from-cream/85 via-cream/30 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 mx-auto max-w-7xl px-5 pb-14 text-ink sm:px-8 sm:pb-20">
+                <p className="text-[11px] tracking-[0.35em] text-clay">AUTUMN COLLECTION 2026</p>
+                <h1 className="mt-4 max-w-2xl font-serif text-5xl leading-[1.05] sm:text-7xl">Quiet things,<br />made to stay.</h1>
+                <p className="mt-5 max-w-md text-sm leading-relaxed text-ink/70">오크와 리넨, 돌과 종이. 꾸미지 않은 소재로 만든 오래가는 가구.</p>
+                <Link to="/shop" className="mt-8 inline-flex h-12 items-center bg-ink px-8 text-xs tracking-[0.2em] text-cream hover:bg-black">컬렉션 보기 →</Link>
+              </div>
+            </div>
+          </section>
+
+          {/* Categories */}
+          <section className="mx-auto max-w-7xl px-5 pt-24 sm:px-8">
+            <SectionTitle eyebrow="SHOP BY ROOM" title="공간별로 둘러보기" />
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
+              {categoryCovers.map((c) => (
+                <Link key={c.name} to={`/shop?c=${c.name}`} className="group relative block aspect-[4/5] overflow-hidden bg-sand">
+                  <FadeImage src={c.image} alt={c.name} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <div className="absolute inset-0 bg-ink/0 transition-colors group-hover:bg-ink/10" />
+                  <span className="absolute bottom-4 left-4 bg-cream px-3 py-1.5 text-xs tracking-[0.2em]">{c.name}</span>
+                </Link>
+              ))}
+            </div>
+          </section>
+
+          {/* Best */}
+          <section className="mx-auto max-w-7xl px-5 pt-28 sm:px-8">
+            <SectionTitle eyebrow="BESTSELLERS" title="가장 사랑받는 가구"
+              action={<Link to="/shop" className="hidden whitespace-nowrap border-b border-ink pb-1 text-xs tracking-[0.2em] sm:block">전체 보기</Link>} />
+            <div className="grid grid-cols-2 gap-x-4 gap-y-12 md:grid-cols-3 md:gap-x-6">
+              {best.map((p) => <ProductCard key={p.id} product={p} />)}
+            </div>
+          </section>
+
+          {/* Story */}
+          <section className="mx-auto mt-28 grid max-w-7xl items-center gap-10 px-5 sm:px-8 md:grid-cols-2 md:gap-20">
+            <div className="aspect-[4/5] overflow-hidden bg-sand">
+              <FadeImage src="images/pendant-lamp.jpg" alt="종이 펜던트 조명과 오크 테이블" className="h-full w-full object-cover" />
+            </div>
+            <div>
+              <p className="text-[11px] tracking-[0.3em] text-clay">OUR MATERIALS</p>
+              <h2 className="mt-3 font-serif text-4xl leading-tight sm:text-5xl">자연이 만든 결,<br />손이 만든 형태.</h2>
+              <p className="mt-6 max-w-md text-sm leading-loose text-ink/65">
+                FSC 인증 오크와 월넛, 유럽산 리넨, 이탈리아 트래버틴. 우리는 시간이 지날수록 더 좋아지는 소재만 고릅니다.
+                화려한 장식 대신 비례와 마감에 집중해, 유행이 지나도 제자리에 남는 가구를 만듭니다.
+              </p>
+              <dl className="mt-10 grid grid-cols-3 gap-6 border-t border-ink/10 pt-8">
+                {[['10년', '프레임 보증'], ['30일', '무료 반품'], ['100%', '원목 프레임']].map(([n, l]) => (
+                  <div key={l}><dt className="font-serif text-3xl">{n}</dt><dd className="mt-1 text-xs text-ink/50">{l}</dd></div>
+                ))}
+              </dl>
+            </div>
+          </section>
+
+          {/* New */}
+          <section className="mx-auto max-w-7xl px-5 pt-28 sm:px-8">
+            <SectionTitle eyebrow="NEW ARRIVALS" title="새로 들어온 가구" />
+            <div className="grid grid-cols-2 gap-x-4 gap-y-12 md:grid-cols-3 md:gap-x-6">
+              {fresh.map((p) => <ProductCard key={p.id} product={p} />)}
+            </div>
+          </section>
+        </main>
+      );
+    }
+
+    function ShopPage() {
+      const { path, navigate } = useRouter();
+      const query = new URLSearchParams(path.split('?')[1] || '');
+      const { products, categories } = useProducts();
+      const category = categories.includes(query.get('c')) ? query.get('c') : '전체';
+      const [sort, setSort] = useState('recommend');
+      const [keyword, setKeyword] = useState('');
+
+      const list = useMemo(() => {
+        const kw = keyword.trim().toLowerCase();
+        let result = products.filter((p) =>
+          (category === '전체' || p.category === category) &&
+          (!kw || p.name.toLowerCase().includes(kw) || p.en.toLowerCase().includes(kw)));
+        if (sort === 'low') result = [...result].sort((a, b) => a.price - b.price);
+        if (sort === 'high') result = [...result].sort((a, b) => b.price - a.price);
+        if (sort === 'new') result = [...result].sort((a, b) => (b.tag === 'NEW') - (a.tag === 'NEW'));
+        return result;
+      }, [products, category, sort, keyword]);
+
+      return (
+        <main className="mx-auto max-w-7xl px-5 pt-14 sm:px-8">
+          <p className="text-[11px] tracking-[0.3em] text-clay">SHOP</p>
+          <h1 className="mt-2 font-serif text-5xl sm:text-6xl">{category === '전체' ? 'All Furniture' : category}</h1>
+
+          <div className="mt-10 flex flex-col gap-6 border-b border-ink/10 pb-6 lg:flex-row lg:items-center lg:justify-between">
+            <div className="-mx-1 flex flex-wrap gap-1" role="tablist" aria-label="카테고리">
+              {categories.map((c) => (
+                <button key={c} role="tab" aria-selected={c === category}
+                  onClick={() => navigate(c === '전체' ? '/shop' : `/shop?c=${c}`)}
+                  className={`px-4 py-2 text-xs tracking-[0.15em] transition-colors ${c === category ? 'bg-ink text-cream' : 'text-ink/60 hover:text-ink'}`}>
+                  {c}
+                </button>
+              ))}
+            </div>
+            <div className="flex items-center gap-6">
+              <input value={keyword} onChange={(e) => setKeyword(e.target.value)} placeholder="검색"
+                aria-label="상품 검색" className="h-9 w-36 border-b border-ink/20 bg-transparent text-sm outline-none focus:border-ink sm:w-48" />
+              <select value={sort} onChange={(e) => setSort(e.target.value)} aria-label="정렬"
+                className="h-9 bg-transparent text-xs tracking-wider text-ink/70 outline-none">
+                <option value="recommend">추천순</option>
+                <option value="new">신상품순</option>
+                <option value="low">낮은 가격순</option>
+                <option value="high">높은 가격순</option>
+              </select>
+            </div>
+          </div>
+
+          <p className="mt-6 text-xs text-ink/50">{list.length}개 상품</p>
+
+          {list.length === 0 ? (
+            <div className="py-32 text-center">
+              <p className="font-serif text-3xl">찾는 가구가 없어요</p>
+              <p className="mt-3 text-sm text-ink/50">다른 검색어나 카테고리를 선택해 보세요.</p>
+              <Button variant="secondary" className="mt-8" onClick={() => { setKeyword(''); navigate('/shop'); }}>필터 초기화</Button>
+            </div>
+          ) : (
+            <div className="mt-8 grid grid-cols-2 gap-x-4 gap-y-12 md:grid-cols-3 md:gap-x-6 lg:grid-cols-4">
+              {list.map((p) => <ProductCard key={p.id} product={p} />)}
+            </div>
+          )}
+        </main>
+      );
+    }
+
+    function ProductPage() {
+      const { id } = useParams();
+      const { products, find } = useProducts();
+      const product = find(id);
+      const { add } = useCart();
+      const [color, setColor] = useState(product?.colors[0]);
+      const [qty, setQty] = useState(1);
+      const [openInfo, setOpenInfo] = useState('detail');
+
+      if (!product) return <NotFoundPage />;
+
+      const related = products.filter((p) => p.category === product.category && p.id !== product.id).slice(0, 4);
+      const info = [
+        { key: 'detail', title: '상품 정보', body: <dl className="grid grid-cols-[80px_1fr] gap-y-2"><dt className="text-ink/50">소재</dt><dd>{product.material}</dd><dt className="text-ink/50">사이즈</dt><dd>{product.size}</dd></dl> },
+        { key: 'ship', title: '배송 · 설치', body: <p>주문 후 2~3주 내 전문 기사가 방문해 설치해 드립니다. {won(FREE_SHIPPING)} 이상 무료 배송.</p> },
+        { key: 'care', title: '관리 방법', body: <p>원목은 마른 천으로 닦고, 6개월마다 전용 오일로 관리하면 오래 좋은 결을 유지합니다.</p> },
+      ];
+
+      return (
+        <main className="mx-auto max-w-7xl px-5 pt-10 sm:px-8">
+          <nav className="mb-8 text-xs tracking-wider text-ink/50" aria-label="경로">
+            <Link to="/shop" className="hover:text-ink">Shop</Link> <span className="mx-2">/</span>
+            <Link to={`/shop?c=${product.category}`} className="hover:text-ink">{product.category}</Link>
+          </nav>
+
+          <div className="grid gap-10 md:grid-cols-2 md:gap-16">
+            <div className="aspect-[3/4] overflow-hidden bg-sand">
+              <img src={product.image} alt={product.name} className="h-full w-full object-cover" />
+            </div>
+
+            <div className="md:sticky md:top-24 md:self-start">
+              {product.tag && <Badge className="mb-4 !bg-sand">{product.tag}</Badge>}
+              <h1 className="font-serif text-4xl leading-tight sm:text-5xl">{product.en}</h1>
+              <p className="mt-2 text-base">{product.name}</p>
+              <p className="mt-6 text-xl tabular-nums">{won(product.price)}</p>
+              <p className="mt-6 max-w-md text-sm leading-loose text-ink/65">{product.desc}</p>
+
+              <div className="mt-8">
+                <p className="mb-3 text-xs tracking-widest text-ink/60">색상 · <span className="text-ink">{color}</span></p>
+                <div className="flex flex-wrap gap-2" role="radiogroup" aria-label="색상 선택">
+                  {product.colors.map((c) => (
+                    <button key={c} role="radio" aria-checked={c === color} onClick={() => setColor(c)}
+                      className={`border px-4 py-2 text-xs transition-colors ${c === color ? 'border-ink' : 'border-ink/15 text-ink/60 hover:border-ink/40'}`}>
+                      {c}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-8 flex gap-3">
+                <QuantityStepper value={qty} onChange={setQty} />
+                <Button size="md" className="flex-1" onClick={() => add(product.id, color, qty)}>장바구니 담기 · {won(product.price * qty)}</Button>
+              </div>
+
+              <div className="mt-10 border-t border-ink/10">
+                {info.map((s) => (
+                  <div key={s.key} className="border-b border-ink/10">
+                    <button className="flex w-full items-center justify-between py-4 text-sm" aria-expanded={openInfo === s.key}
+                      onClick={() => setOpenInfo(openInfo === s.key ? null : s.key)}>
+                      {s.title}<span className="text-ink/40">{openInfo === s.key ? '−' : '+'}</span>
+                    </button>
+                    {openInfo === s.key && <div className="pb-5 text-sm leading-relaxed text-ink/70">{s.body}</div>}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {related.length > 0 && (
+            <section className="pt-28">
+              <SectionTitle eyebrow="YOU MAY ALSO LIKE" title="함께 보면 좋은 가구" />
+              <div className="grid grid-cols-2 gap-x-4 gap-y-12 md:grid-cols-4 md:gap-x-6">
+                {related.map((p) => <ProductCard key={p.id} product={p} />)}
+              </div>
+            </section>
+          )}
+        </main>
+      );
+    }
+
+    function CartPage() {
+      const { items, update, remove, subtotal } = useCart();
+      const { find } = useProducts();
+      const { user, token } = useAuth();
+      const { navigate } = useRouter();
+      const [checkoutOpen, setCheckoutOpen] = useState(false);
+      const [form, setForm] = useState({ name: '', phone: '', address: '' });
+      const [errors, setErrors] = useState({});
+      const [serverError, setServerError] = useState('');
+      const [submitting, setSubmitting] = useState(false);
+
+      // 화면 표시용 계산. 실제 결제 금액은 서버가 DB 가격으로 다시 계산한다
+      const shipping = subtotal === 0 || subtotal >= FREE_SHIPPING ? 0 : SHIPPING_FEE;
+      const total = subtotal + shipping;
+
+      // 결제는 회원만 — 비회원이면 로그인 후 장바구니로 돌아오게 한다
+      const openCheckout = () => (user ? setCheckoutOpen(true) : navigate('/login?next=/cart'));
+
+      const submit = async (e) => {
+        e.preventDefault();
+        const next = {};
+        if (!form.name.trim()) next.name = '이름을 입력해 주세요';
+        if (!/^01\d-?\d{3,4}-?\d{4}$/.test(form.phone.trim())) next.phone = '휴대폰 번호 형식을 확인해 주세요';
+        if (form.address.trim().length < 5) next.address = '배송지 주소를 입력해 주세요';
+        setErrors(next);
+        setServerError('');
+        if (Object.keys(next).length) return;
+        setSubmitting(true);
+        try {
+          // 장바구니에서는 id·색상·수량만 보낸다. 이름·가격은 서버가 DB 에서 읽는다
+          const order = await api('/orders', {
+            method: 'POST', token,
+            body: { items: items.map(({ id, color, qty }) => ({ id, color, qty })), recipient: form },
+          });
+          setCheckoutOpen(false);
+          navigate(`/checkout/${order.orderId}`);
+        } catch (err) {
+          setServerError(err.message);
+          setSubmitting(false);
+        }
+      };
+
+      return (
+        <main className="mx-auto max-w-7xl px-5 pt-14 sm:px-8">
+          <h1 className="font-serif text-5xl sm:text-6xl">Cart</h1>
+
+          {items.length === 0 ? (
+            <div className="py-32 text-center">
+              <p className="font-serif text-3xl">장바구니가 비어 있어요</p>
+              <p className="mt-3 text-sm text-ink/50">마음에 드는 가구를 담아 보세요.</p>
+              <Link to="/shop" className="mt-8 inline-flex h-11 items-center border border-ink px-6 text-xs tracking-[0.2em] hover:bg-ink hover:text-cream">쇼핑하러 가기</Link>
+            </div>
+          ) : (
+            <div className="mt-10 grid gap-12 lg:grid-cols-[1fr_380px]">
+              <ul className="divide-y divide-ink/10 border-y border-ink/10">
+                {items.map((item) => {
+                  const p = find(item.id);
+                  if (!p) return null;
+                  return (
+                    <li key={item.id + item.color} className="flex gap-5 py-6">
+                      <Link to={`/product/${p.id}`} className="w-24 shrink-0 bg-sand sm:w-32">
+                        <img src={p.image} alt={p.name} className="aspect-[3/4] w-full object-cover" />
+                      </Link>
+                      <div className="flex flex-1 flex-col justify-between">
+                        <div className="flex justify-between gap-4">
+                          <div>
+                            <Link to={`/product/${p.id}`} className="text-sm hover:underline">{p.name}</Link>
+                            <p className="mt-1 text-xs text-ink/50">{item.color}</p>
+                          </div>
+                          <p className="whitespace-nowrap text-sm tabular-nums">{won(p.price * item.qty)}</p>
+                        </div>
+                        <div className="flex items-center justify-between">
+                          <QuantityStepper value={item.qty} onChange={(q) => update(item.id, item.color, q)} />
+                          <Button variant="ghost" size="sm" className="text-xs underline underline-offset-4" onClick={() => remove(item.id, item.color)}>삭제</Button>
+                        </div>
+                      </div>
+                    </li>
+                  );
+                })}
+              </ul>
+
+              <Card className="h-fit lg:sticky lg:top-24">
+                <h2 className="text-xs tracking-[0.2em] text-ink/60">주문 요약</h2>
+                <dl className="mt-6 space-y-3 text-sm">
+                  <div className="flex justify-between"><dt className="text-ink/60">상품 금액</dt><dd className="tabular-nums">{won(subtotal)}</dd></div>
+                  <div className="flex justify-between"><dt className="text-ink/60">배송비</dt><dd className="tabular-nums">{shipping ? won(shipping) : '무료'}</dd></div>
+                  {shipping > 0 && <p className="text-xs text-clay">{won(FREE_SHIPPING - subtotal)} 더 담으면 무료 배송</p>}
+                  <div className="flex justify-between border-t border-ink/10 pt-4 text-base"><dt>합계</dt><dd className="tabular-nums">{won(total)}</dd></div>
+                </dl>
+                <Button size="lg" className="mt-8 w-full" onClick={openCheckout}>{user ? '주문하기' : '로그인하고 주문하기'}</Button>
+              </Card>
+            </div>
+          )}
+
+          <Modal isOpen={checkoutOpen} onClose={() => setCheckoutOpen(false)} title="배송 정보">
+            <form onSubmit={submit} className="space-y-6" noValidate>
+              <Input label="받는 분" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} error={errors.name} placeholder="홍길동" />
+              <Input label="휴대폰" type="tel" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} error={errors.phone} placeholder="010-1234-5678" />
+              <Input label="주소" value={form.address} onChange={(e) => setForm({ ...form, address: e.target.value })} error={errors.address} placeholder="서울시 성동구 ..." />
+              <div className="flex items-center justify-between border-t border-ink/10 pt-6">
+                <span className="text-sm text-ink/60">결제 금액</span>
+                <span className="text-lg tabular-nums">{won(total)}</span>
+              </div>
+              {serverError && <p className="bg-red-50 px-4 py-3 text-sm text-red-800" role="alert">{serverError}</p>}
+              <Button type="submit" size="lg" className="w-full" disabled={submitting}>{submitting ? '주문 만드는 중…' : '결제 단계로'}</Button>
+            </form>
+          </Modal>
+        </main>
+      );
+    }
+
+    // 주문 상품 목록 + 금액 요약 (결제 화면 · 완료 화면 · 마이페이지가 같이 쓴다)
+    function OrderLines({ order, compact = false }) {
+      return (
+        <div>
+          <ul className="divide-y divide-ink/10">
+            {order.items.map((i) => (
+              <li key={i.id + i.color} className="flex items-center gap-4 py-3">
+                <img src={i.image} alt="" className={`${compact ? 'w-12' : 'w-16'} aspect-[3/4] shrink-0 bg-sand object-cover`} />
+                <div className="flex-1 text-sm">
+                  <p>{i.name}</p>
+                  <p className="mt-0.5 text-xs text-ink/50">{i.color} · {i.qty}개</p>
+                </div>
+                <p className="text-sm tabular-nums">{won(i.price * i.qty)}</p>
+              </li>
+            ))}
+          </ul>
+          {!compact && (
+            <dl className="mt-4 space-y-2 border-t border-ink/10 pt-4 text-sm">
+              <div className="flex justify-between"><dt className="text-ink/60">상품 금액</dt><dd className="tabular-nums">{won(order.subtotal)}</dd></div>
+              <div className="flex justify-between"><dt className="text-ink/60">배송비</dt><dd className="tabular-nums">{order.shippingFee ? won(order.shippingFee) : '무료'}</dd></div>
+              <div className="flex justify-between pt-2 text-base"><dt>결제 금액</dt><dd className="tabular-nums">{won(order.amount)}</dd></div>
+            </dl>
+          )}
+        </div>
+      );
+    }
+
+    const formatDateTime = (iso) => new Date(iso).toLocaleString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+
+    // 결제 화면 — 서버가 만든 PENDING 주문을 불러와 토스페이먼츠 결제위젯을 그린다
+    function CheckoutPage() {
+      const { orderId } = useParams();
+      const { token } = useAuth();
+      const [order, setOrder] = useState(null);
+      const [error, setError] = useState('');
+      const [widgetReady, setWidgetReady] = useState(false);
+      const [paying, setPaying] = useState(false);
+      const widgetsRef = useRef(null);
+
+      useEffect(() => {
+        let cancelled = false;
+        api(`/orders/${encodeURIComponent(orderId)}`, { token })
+          .then((o) => !cancelled && setOrder(o))
+          .catch((err) => !cancelled && setError(err.message));
+        return () => { cancelled = true; };
+      }, [orderId, token]);
+
+      // 위젯은 #payment-method · #agreement 영역이 화면에 생긴 뒤에 그려야 한다 → order 가 들어온 다음 effect 에서
+      useEffect(() => {
+        if (!order || order.status !== 'PENDING') return;
+        if (typeof window.TossPayments !== 'function') {
+          setError('결제 모듈을 불러오지 못했어요. 광고 차단 확장 프로그램을 끄고 새로고침해 주세요.');
+          return;
+        }
+        let cancelled = false;
+        const rendered = [];
+        (async () => {
+          try {
+            const widgets = window.TossPayments(order.payment.clientKey).widgets({ customerKey: order.payment.customerKey });
+            await widgets.setAmount({ currency: 'KRW', value: order.amount }); // 서버가 확정한 금액
+            rendered.push(...await Promise.all([
+              widgets.renderPaymentMethods({ selector: '#payment-method', variantKey: 'DEFAULT' }),
+              widgets.renderAgreement({ selector: '#agreement', variantKey: 'AGREEMENT' }),
+            ]));
+            if (!cancelled) { widgetsRef.current = widgets; setWidgetReady(true); }
+          } catch (err) {
+            if (!cancelled) setError(err.message || '결제 화면을 불러오지 못했어요.');
+          }
+        })();
+        // 한 페이지에 위젯은 하나만 — 페이지를 떠나면 지워 둬야 다시 들어왔을 때 다시 그릴 수 있다
+        return () => { cancelled = true; rendered.forEach((w) => w?.destroy?.()); };
+      }, [order]);
+
+      const pay = async () => {
+        setPaying(true);
+        setError('');
+        try {
+          // 성공·실패 주소는 해시(#)가 아닌 실제 경로 — 토스가 뒤에 ?paymentKey=… 를 붙이기 때문
+          await widgetsRef.current.requestPayment({
+            orderId: order.orderId,
+            orderName: order.orderName,
+            successUrl: `${window.location.origin}/payment/success`,
+            failUrl: `${window.location.origin}/payment/fail`,
+            customerEmail: order.payment.customerEmail,
+            customerName: order.recipient.name,
+            customerMobilePhone: order.recipient.phone,
+          });
+        } catch (err) {
+          // 결제창을 닫은 경우(USER_CANCEL)는 오류로 보지 않는다
+          if (err?.code !== 'USER_CANCEL') setError(err?.message || '결제를 요청하지 못했어요.');
+          setPaying(false);
+        }
+      };
+
+      if (!order && !error) return <PageLoading />;
+
+      if (order?.status === 'PAID') {
+        return (
+          <main className="mx-auto max-w-md px-5 py-32 text-center">
+            <p className="font-serif text-3xl">이미 결제가 끝난 주문이에요</p>
+            <Link to="/account" className="mt-8 inline-block border-b border-ink pb-1 text-xs tracking-[0.2em]">결제 내역 보기</Link>
+          </main>
+        );
+      }
+
+      return (
+        <main className="mx-auto max-w-6xl px-5 pt-14 sm:px-8">
+          <p className="text-[11px] tracking-[0.3em] text-clay">CHECKOUT</p>
+          <h1 className="mt-2 font-serif text-5xl">결제</h1>
+          {error && <p className="mt-6 bg-red-50 px-4 py-3 text-sm text-red-800" role="alert">{error}</p>}
+          {order && (
+            <div className="mt-10 grid gap-10 lg:grid-cols-[1fr_380px]">
+              <section aria-label="결제 수단">
+                <div className="relative min-h-[300px] bg-white">
+                  {!widgetReady && !error && <div className="absolute inset-0"><PageLoading /></div>}
+                  <div id="payment-method" />
+                  <div id="agreement" />
+                </div>
+              </section>
+              <aside className="lg:sticky lg:top-24 lg:self-start">
+                <Card>
+                  <h2 className="text-xs tracking-[0.2em] text-ink/60">주문 상품</h2>
+                  <div className="mt-2"><OrderLines order={order} /></div>
+                  <div className="mt-6 border-t border-ink/10 pt-4 text-xs leading-relaxed text-ink/60">
+                    <p>받는 분 · {order.recipient.name} ({order.recipient.phone})</p>
+                    <p>배송지 · {order.recipient.address}</p>
+                  </div>
+                  <Button size="lg" className="mt-6 w-full" disabled={!widgetReady || paying} onClick={pay}>
+                    {paying ? '결제 진행 중…' : `${won(order.amount)} 결제하기`}
+                  </Button>
+                  <p className="mt-3 text-center text-[11px] text-ink/40">테스트 결제 — 실제로 돈이 나가지 않습니다</p>
+                </Card>
+              </aside>
+            </div>
+          )}
+        </main>
+      );
+    }
+
+    // 토스가 successUrl 로 돌려보낸 뒤 — 서버에 승인을 요청해야 결제가 확정된다
+    function PaymentSuccessPage() {
+      const { path, navigate } = useRouter();
+      const { token } = useAuth();
+      const { clear } = useCart();
+      const [order, setOrder] = useState(null);
+      const [error, setError] = useState('');
+      const requested = useRef(false);
+      const q = new URLSearchParams(path.split('?')[1] || '');
+
+      useEffect(() => {
+        if (requested.current) return; // 승인 요청은 한 번만
+        requested.current = true;
+        api('/payments/confirm', {
+          method: 'POST', token,
+          body: { paymentKey: q.get('paymentKey'), orderId: q.get('orderId'), amount: Number(q.get('amount')) },
+        })
+          .then((o) => { setOrder(o); clear(); })
+          .catch((err) => setError(err.message));
+      }, []);
+
+      if (error) {
+        return (
+          <main className="mx-auto max-w-md px-5 py-32 text-center">
+            <p className="text-[11px] tracking-[0.3em] text-red-700">PAYMENT FAILED</p>
+            <h1 className="mt-3 font-serif text-4xl">결제를 완료하지 못했어요</h1>
+            <p className="mt-4 text-sm text-ink/60">{error}</p>
+            <Button variant="secondary" className="mt-8" onClick={() => navigate('/cart')}>장바구니로</Button>
+          </main>
+        );
+      }
+      if (!order) {
+        return (
+          <main className="py-32 text-center">
+            <PageLoading />
+            <p className="-mt-28 text-sm text-ink/60">결제를 승인하는 중이에요. 창을 닫지 마세요.</p>
+          </main>
+        );
+      }
+      return (
+        <main className="mx-auto max-w-lg px-5 pt-20">
+          <p className="text-center text-[11px] tracking-[0.3em] text-clay">PAYMENT COMPLETE</p>
+          <h1 className="mt-3 text-center font-serif text-5xl">결제가 완료됐어요</h1>
+          <p className="mt-4 text-center text-sm text-ink/60">주문번호 <span className="text-ink">{order.orderId}</span></p>
+          <Card className="mt-10">
+            <OrderLines order={order} />
+            <p className="mt-4 text-xs text-ink/50">{order.method} · {formatDateTime(order.approvedAt)}</p>
+          </Card>
+          <div className="mt-8 flex gap-3">
+            <Link to="/account" className="inline-flex h-11 flex-1 items-center justify-center bg-ink text-sm tracking-wide text-cream hover:bg-black">결제 내역 보기</Link>
+            <Link to="/shop" className="inline-flex h-11 flex-1 items-center justify-center border border-ink text-sm tracking-wide hover:bg-ink hover:text-cream">쇼핑 계속하기</Link>
+          </div>
+        </main>
+      );
+    }
+
+    // 결제창에서 취소·실패하면 failUrl 로 code·message·orderId 가 붙어 돌아온다
+    function PaymentFailPage() {
+      const { path } = useRouter();
+      const q = new URLSearchParams(path.split('?')[1] || '');
+      const orderId = q.get('orderId');
+      return (
+        <main className="mx-auto max-w-md px-5 py-32 text-center">
+          <p className="text-[11px] tracking-[0.3em] text-red-700">PAYMENT FAILED</p>
+          <h1 className="mt-3 font-serif text-4xl">결제가 진행되지 않았어요</h1>
+          <p className="mt-4 text-sm text-ink/60">{q.get('message') || '결제가 취소되었거나 실패했습니다.'}</p>
+          {q.get('code') && <p className="mt-1 text-xs text-ink/40">({q.get('code')})</p>}
+          <div className="mt-8 flex justify-center gap-3">
+            {orderId && <Link to={`/checkout/${orderId}`} className="inline-flex h-11 items-center bg-ink px-6 text-sm text-cream">다시 결제하기</Link>}
+            <Link to="/cart" className="inline-flex h-11 items-center border border-ink px-6 text-sm">장바구니로</Link>
+          </div>
+        </main>
+      );
+    }
+
+    function AboutPage() {
+      return (
+        <main className="mx-auto max-w-3xl px-5 pt-20 sm:px-8">
+          <p className="text-[11px] tracking-[0.3em] text-clay">ABOUT</p>
+          <h1 className="mt-3 font-serif text-5xl leading-tight sm:text-6xl">덜어낼수록<br />오래 남는 것.</h1>
+          <div className="mt-12 aspect-[16/9] overflow-hidden bg-sand">
+            <FadeImage src="images/hero.jpg" alt="OAK & LINEN 거실 연출" className="h-full w-full object-cover" />
+          </div>
+          <div className="mt-12 space-y-6 text-sm leading-loose text-ink/70">
+            <p>OAK &amp; LINEN은 단순한 형태와 정직한 소재로 가구를 만듭니다. 나무는 나무답게, 돌은 돌답게 — 소재가 가진 결을 가리지 않는 것이 우리의 원칙입니다.</p>
+            <p>트렌드를 좇기보다 10년 뒤에도 같은 자리에 있을 가구를 생각합니다. 그래서 프레임은 모두 원목으로, 패브릭은 세탁 가능한 리넨으로, 마감은 다시 칠할 수 있는 오일로 만듭니다.</p>
+          </div>
+          <Link to="/shop" className="mt-12 inline-block border-b border-ink pb-1 text-xs tracking-[0.2em]">컬렉션 보기 →</Link>
+        </main>
+      );
+    }
+
+    // 로그인·회원가입이 같은 모양이라 한 폼을 mode 로 나눠 쓴다
+    function AuthPage({ mode }) {
+      const isSignup = mode === 'signup';
+      const { login, signup } = useAuth();
+      const { path } = useRouter();
+      const query = path.split('?')[1] ? `?${path.split('?')[1]}` : '';
+      const [form, setForm] = useState({ email: '', password: '', confirm: '' });
+      const [errors, setErrors] = useState({});
+      const [serverError, setServerError] = useState('');
+      const [submitting, setSubmitting] = useState(false);
+
+      const set = (key) => (e) => setForm({ ...form, [key]: e.target.value });
+
+      // 서버도 같은 규칙으로 다시 검사한다. 여기 검사는 빠른 안내용
+      const validate = () => {
+        const next = {};
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) next.email = '이메일 형식을 확인해 주세요';
+        if (isSignup) {
+          if (form.password.length < 8) next.password = '8자 이상 입력해 주세요';
+          else if (!/[A-Za-z]/.test(form.password) || !/\d/.test(form.password)) next.password = '영문과 숫자를 모두 넣어 주세요';
+          if (form.confirm !== form.password) next.confirm = '비밀번호가 서로 달라요';
+        } else if (!form.password) next.password = '비밀번호를 입력해 주세요';
+        return next;
+      };
+
+      const submit = async (e) => {
+        e.preventDefault();
+        const next = validate();
+        setErrors(next);
+        setServerError('');
+        if (Object.keys(next).length) return;
+        setSubmitting(true);
+        try {
+          // 성공하면 user 가 채워지고 GuestOnly 가드가 원래 가려던 곳으로 보낸다 — 여기서는 이동하지 않는다
+          await (isSignup ? signup : login)(form.email.trim(), form.password);
+        } catch (err) {
+          setServerError(err.message);
+          setSubmitting(false);
+        }
+      };
+
+      return (
+        <main className="mx-auto max-w-sm px-5 pt-20">
+          <p className="text-[11px] tracking-[0.3em] text-clay">{isSignup ? 'CREATE ACCOUNT' : 'WELCOME BACK'}</p>
+          <h1 className="mt-3 font-serif text-5xl">{isSignup ? '회원가입' : '로그인'}</h1>
+          <p className="mt-4 text-sm text-ink/60">{isSignup ? '이메일과 비밀번호만으로 가입할 수 있어요.' : '이메일과 비밀번호를 입력해 주세요.'}</p>
+
+          <form onSubmit={submit} className="mt-10 space-y-6" noValidate>
+            <Input label="이메일" type="email" autoComplete="email" value={form.email} onChange={set('email')} error={errors.email} placeholder="you@example.com" />
+            <Input label="비밀번호" type="password" autoComplete={isSignup ? 'new-password' : 'current-password'} value={form.password} onChange={set('password')} error={errors.password}
+              placeholder={isSignup ? '영문·숫자 포함 8자 이상' : ''} />
+            {isSignup && (
+              <Input label="비밀번호 확인" type="password" autoComplete="new-password" value={form.confirm} onChange={set('confirm')} error={errors.confirm} />
+            )}
+            {serverError && <p className="bg-red-50 px-4 py-3 text-sm text-red-800" role="alert">{serverError}</p>}
+            <Button type="submit" size="lg" className="w-full" disabled={submitting}>
+              {submitting ? '처리 중…' : isSignup ? '가입하기' : '로그인'}
+            </Button>
+          </form>
+
+          <p className="mt-8 text-center text-sm text-ink/60">
+            {isSignup ? '이미 계정이 있나요? ' : '처음 오셨나요? '}
+            <Link to={`${isSignup ? '/login' : '/signup'}${query}`} className="border-b border-ink pb-0.5 text-ink">{isSignup ? '로그인' : '회원가입'}</Link>
+          </p>
+        </main>
+      );
+    }
+
+    function AccountPage() {
+      const { user, token, logout } = useAuth();
+      const [orders, setOrders] = useState(null);
+      const [error, setError] = useState('');
+      const joined = new Date(user.createdAt).toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric' });
+
+      useEffect(() => {
+        let cancelled = false;
+        api('/orders', { token })
+          .then((list) => !cancelled && setOrders(list))
+          .catch((err) => !cancelled && setError(err.message));
+        return () => { cancelled = true; };
+      }, [token]);
+
+      return (
+        <main className="mx-auto max-w-3xl px-5 pt-20">
+          <p className="text-[11px] tracking-[0.3em] text-clay">MY ACCOUNT</p>
+          <h1 className="mt-3 font-serif text-5xl">마이페이지</h1>
+          <Card className="mt-10">
+            <dl className="grid grid-cols-[90px_1fr] gap-y-4 text-sm">
+              <dt className="text-ink/50">이메일</dt><dd className="break-all">{user.email}</dd>
+              <dt className="text-ink/50">가입일</dt><dd>{joined}</dd>
+            </dl>
+          </Card>
+
+          <section className="mt-16" aria-labelledby="orders-title">
+            <h2 id="orders-title" className="font-serif text-3xl">결제 내역</h2>
+            {error && <p className="mt-6 bg-red-50 px-4 py-3 text-sm text-red-800" role="alert">{error}</p>}
+            {!orders && !error && <PageLoading />}
+            {orders?.length === 0 && (
+              <div className="mt-6 border border-dashed border-ink/15 py-16 text-center">
+                <p className="text-sm text-ink/60">아직 결제한 주문이 없어요.</p>
+                <Link to="/shop" className="mt-4 inline-block border-b border-ink pb-0.5 text-xs tracking-[0.2em]">가구 둘러보기</Link>
+              </div>
+            )}
+            {orders?.length > 0 && (
+              <ul className="mt-6 space-y-6">
+                {orders.map((o) => (
+                  <li key={o.orderId}>
+                    <Card>
+                      <div className="flex flex-wrap items-start justify-between gap-3 border-b border-ink/10 pb-4">
+                        <div>
+                          <p className="text-sm">{o.orderName}</p>
+                          <p className="mt-1 text-xs text-ink/50">{formatDateTime(o.approvedAt)} · 주문번호 {o.orderId}</p>
+                        </div>
+                        <div className="text-right">
+                          <Badge className="!bg-sand">결제 완료</Badge>
+                          <p className="mt-2 text-base tabular-nums">{won(o.amount)}</p>
+                          <p className="text-xs text-ink/50">{o.method}{o.shippingFee ? ` · 배송비 ${won(o.shippingFee)}` : ' · 무료 배송'}</p>
+                        </div>
+                      </div>
+                      <OrderLines order={o} compact />
+                    </Card>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </section>
+
+          <div className="mt-12 flex gap-3">
+            <Link to="/shop" className="inline-flex h-11 flex-1 items-center justify-center bg-ink text-sm tracking-wide text-cream hover:bg-black">쇼핑하러 가기</Link>
+            <Button variant="secondary" className="flex-1" onClick={logout}>로그아웃</Button>
+          </div>
+        </main>
+      );
+    }
+
+    function NotFoundPage() {
+      return (
+        <main className="mx-auto max-w-xl px-5 py-40 text-center">
+          <p className="font-serif text-7xl">404</p>
+          <p className="mt-4 text-sm text-ink/60">찾으시는 페이지가 없어요.</p>
+          <Link to="/" className="mt-8 inline-block border-b border-ink pb-1 text-xs tracking-[0.2em]">홈으로</Link>
+        </main>
+      );
+    }
+
+    // ========================================
+    // 🚀 App Component
+    // ========================================
+    function App() {
+      return (
+        <Router>
+          <AuthProvider>
+          <ProductsProvider>
+          <CartProvider>
+            <Header />
+            <ProductsGate>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/shop" element={<ShopPage />} />
+              <Route path="/product/:id" element={<ProductPage />} />
+              <Route path="/cart" element={<CartPage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/login" element={<GuestOnly><AuthPage mode="login" /></GuestOnly>} />
+              <Route path="/signup" element={<GuestOnly><AuthPage mode="signup" /></GuestOnly>} />
+              <Route path="/account" element={<RequireAuth><AccountPage /></RequireAuth>} />
+              <Route path="/checkout/:orderId" element={<RequireAuth><CheckoutPage /></RequireAuth>} />
+              <Route path="/payment/success" element={<RequireAuth><PaymentSuccessPage /></RequireAuth>} />
+              <Route path="/payment/fail" element={<PaymentFailPage />} />
+              <Route path="*" element={<NotFoundPage />} />
+            </Routes>
+            </ProductsGate>
+            <Footer />
+            <Toast />
+          </CartProvider>
+          </ProductsProvider>
+          </AuthProvider>
+        </Router>
+      );
+    }
+
+    // ========================================
+    // Rendering
+    // ========================================
+    // 토스는 /payment/success?paymentKey=… 같은 실제 경로로 돌려보낸다.
+    // 이 앱은 해시 라우팅이므로, 그리기 전에 /#/payment/success?paymentKey=… 로 바꿔 라우터가 처리하게 한다.
+    if (window.location.pathname.startsWith('/payment/')) {
+      window.history.replaceState(null, '', '/#' + window.location.pathname + window.location.search);
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>
