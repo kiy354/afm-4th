@@ -8,6 +8,7 @@
 | week-4 | Express 백엔드 + DB + 배포 | 포켓몬 도감, 할 일 앱, 메모 앱, 밸런스 게임, **냉장고 요리사(quest)** |
 | week-5 | 집계 쿼리 + 시각화 | **가계부(`quest/Budget/`)** — 카테고리별 합계·월별 집계를 `GROUP BY` 로 집계, 도넛·막대 차트·교차표(히트맵) / **커뮤니티(`community/`)** — 회원가입·로그인(bcrypt + JWT) + 게시판·댓글 / **과자 쇼핑몰(`snack-shop/`)** — 장바구니·주문·회원(마이페이지), 트랜잭션으로 재고 차감 |
 | week-6 | 에이전트 팀 구성 + AI 이미지 생성 | **가구 쇼핑몰(`class/furniture-shop/`)** — 단일 index.html(해시 라우팅·장바구니·데모 주문) + 상품·회원 DB(`furniture_products`·`furniture_users`), 이메일·비밀번호 로그인(bcrypt + JWT), 제품 사진은 fal.ai Seedream 5.0으로 미리 생성 / `class/agent-team-examples/` 에이전트 조직 예제 / **모의투자 리그(`quest/stock-sim/`)** — 닉네임 참가(bcrypt + JWT)로 참가자별 계좌, 수익률 순위 현황판 + Yahoo Finance 실시간 시세로 원화·달러 모의 매매(트랜잭션 + `FOR UPDATE`), OpenAI 종목 분석을 분석 시점 가격과 함께 기록해 적중률 비교 |
+| week-8 | 에이전트 지침 문서 + 자동화 | **저녁 식단(`Dinner/`)** — `agent.md`·`me.md`·`recipe.md`로 에이전트 레시피 작성 규칙을 정하고, 날짜별 식단 데이터(`meals.js`)를 브라우저·서버가 함께 사용 / 냉장고 재료 관리(`fridge.html`) + 오늘 식단과 비교한 장보기 목록 / 상태는 Vercel Blob 비공개 저장소(토큰 없으면 인메모리) / Vercel Cron이 매일 장보기 목록을 카카오톡 "나에게 보내기"로 전송(관리 키로 보호) |
 
 week-4의 `class/`에는 yt-dlp로 받은 영상 자막을 트랜스크립트·요약 마크다운으로
 정리한 결과물도 있습니다(`*-transcript.md` / `*-summary.md`). 원본 미디어는 용량 때문에
