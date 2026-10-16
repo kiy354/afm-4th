@@ -3,22 +3,32 @@
 // Express 5 + Supabase Postgres + Yahoo Finance(시세) + OpenAI(종목 분석)
 // 로컬: node server.js  /  Vercel: module.exports = app
 //
+//   POST   /api/auth/join            → 리그 참가 (닉네임 + 비밀번호, 1,000만 원 계좌 생성)
+//   POST   /api/auth/login           → 로그인
+//   GET    /api/me                   → 내 정보                      🔒
+//
+//   GET    /api/league               → 리그 현황판 (순위·최근 체결·인기 보유 종목)
+//   GET    /api/league/players/:id   → 참가자 상세 (보유 종목·거래 내역 공개)
+//
 //   GET    /api/search?q=            → 종목 검색 (한글 별칭 + Yahoo 검색)
 //   GET    /api/popular              → 인기 종목 시세
-//   GET    /api/stocks/:symbol       → 시세 + 차트 (?range=1mo|3mo|6mo|1y|5y)
-//   GET    /api/portfolio            → 계좌 요약 + 보유 종목 (현재가 반영)
-//   POST   /api/trades               → 매수/매도 { symbol, side: 'BUY'|'SELL', qty }
-//   GET    /api/trades               → 거래 내역 (?symbol=)
-//   POST   /api/account/reset        → 계좌 초기화
-//   GET    /api/watchlist            → 관심 종목 (시세 포함)
-//   POST   /api/watchlist            → 관심 종목 추가 { symbol }
-//   DELETE /api/watchlist/:symbol    → 관심 종목 삭제
-//   GET    /api/research             → AI 리서치 기록 (?symbol=)
-//   POST   /api/research             → AI 리서치 생성 { symbol }
+//   GET    /api/stocks/:symbol       → 시세 + 차트 (?range=) — 로그인 상태면 내 보유·관심 여부 포함
+//
+//   GET    /api/portfolio            → 내 계좌 요약 + 보유 종목      🔒
+//   POST   /api/trades               → 매수/매도 { symbol, side, qty } 🔒
+//   GET    /api/trades               → 내 거래 내역 (?symbol=)       🔒
+//   POST   /api/account/reset        → 내 계좌 초기화 (리셋 횟수 공개) 🔒
+//   GET    /api/watchlist            → 관심 종목                    🔒
+//   POST   /api/watchlist            → 관심 종목 추가 { symbol }     🔒
+//   DELETE /api/watchlist/:symbol    → 관심 종목 삭제               🔒
+//
+//   GET    /api/research             → AI 리서치 기록 (?symbol=) — 모두 공유
+//   POST   /api/research             → AI 리서치 생성 { symbol }     🔒
 //   GET    /api/health               → 헬스체크
 //
+//   🔒 = Authorization: Bearer <토큰> 필요
+//
 // 계좌는 원화(KRW) 하나. 미국 주식은 체결 시점의 USD/KRW 환율로 환산한다.
-// 로그인 없이 계좌 1개만 쓰는 학습용 앱이다.
 // ════════════════════════════════════════════════════════════
 
 require('dotenv').config();
@@ -26,12 +36,15 @@ require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const { Pool } = require('pg');
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 const OPENAI_API_KEY = (process.env.OPENAI_API_KEY || '').trim();
 const OPENAI_MODEL = (process.env.OPENAI_MODEL || 'gpt-4o-mini').trim();
+const JWT_SECRET = (process.env.JWT_SECRET || '').trim();
 
 // ── DB Pool ──────────────────────────────────────────────────
 // Supabase Transaction Pooler(6543). 환경변수에 개행이 섞이는 경우가 있어 .trim() 한다.
@@ -49,6 +62,11 @@ const INITIAL_CASH = 10_000_000;          // 시작 자금 1,000만 원
 const FEE_RATE = 0.00015;                 // 수수료 0.015% (매수·매도 모두)
 const MAX_QTY = 100_000;
 const SYMBOL_RE = /^[A-Z0-9.\-=^]{1,20}$/;
+const NICKNAME_RE = /^[0-9A-Za-z가-힣_]{2,12}$/;
+const PASSWORD_MIN = 4;
+const PASSWORD_MAX = 72;                  // bcrypt 는 72바이트 이후를 잘라내므로 그 이상은 막는다.
+const BCRYPT_ROUNDS = 10;
+const TOKEN_TTL = '30d';
 const RANGES = {                          // 화면의 기간 버튼 → Yahoo 파라미터
   '1mo': '1d', '3mo': '1d', '6mo': '1d', '1y': '1wk', '5y': '1mo',
 };
@@ -81,15 +99,15 @@ const KR_NAME_BY_SYMBOL = Object.fromEntries(KR_ALIASES.map(([n, s]) => [s, n]).
 
 const POPULAR = ['005930.KS', '000660.KS', '005380.KS', '035420.KS', 'AAPL', 'NVDA', 'TSLA', 'MSFT'];
 
+class HttpError extends Error {
+  constructor(status, message) { super(message); this.status = status; }
+}
+
 // ════════════════════════════════════════════════════════════
 // Yahoo Finance
 // ════════════════════════════════════════════════════════════
 // 공식 API가 아니다. v7 quote 는 crumb 이 필요해 401 이 나므로,
 // 키 없이 되는 v8 chart 응답의 meta 를 시세로 쓴다.
-
-class HttpError extends Error {
-  constructor(status, message) { super(message); this.status = status; }
-}
 
 async function yahooGet(url) {
   let res;
@@ -207,27 +225,36 @@ function normalizeSymbol(raw) {
 // ════════════════════════════════════════════════════════════
 // DB 초기화 (서버리스 콜드 스타트마다 한 번만)
 // ════════════════════════════════════════════════════════════
+// 리그 이전의 단일 계좌 테이블(stocksim_account·holdings·trades·watchlist)은
+// 데이터를 지우지 않으려고 그대로 두고, 참가자별 테이블을 새로 만든다.
 let initPromise = null;
 
 async function runInit() {
   await pool.query(`
-    CREATE TABLE IF NOT EXISTS stocksim_account (
-      id           INT PRIMARY KEY CHECK (id = 1),
-      cash         NUMERIC(16,2) NOT NULL CHECK (cash >= 0),
-      initial_cash NUMERIC(16,2) NOT NULL,
-      reset_at     TIMESTAMPTZ NOT NULL DEFAULT now()
+    CREATE TABLE IF NOT EXISTS stocksim_players (
+      id            SERIAL PRIMARY KEY,
+      nickname      TEXT NOT NULL UNIQUE,
+      password_hash TEXT NOT NULL,
+      cash          NUMERIC(16,2) NOT NULL CHECK (cash >= 0),
+      initial_cash  NUMERIC(16,2) NOT NULL,
+      reset_count   INT NOT NULL DEFAULT 0,
+      joined_at     TIMESTAMPTZ NOT NULL DEFAULT now(),
+      reset_at      TIMESTAMPTZ NOT NULL DEFAULT now()
     );
-    CREATE TABLE IF NOT EXISTS stocksim_holdings (
-      symbol       TEXT PRIMARY KEY,
+    CREATE TABLE IF NOT EXISTS stocksim_league_holdings (
+      player_id    INT NOT NULL REFERENCES stocksim_players(id) ON DELETE CASCADE,
+      symbol       TEXT NOT NULL,
       name         TEXT NOT NULL,
       currency     TEXT NOT NULL,
       qty          INT NOT NULL CHECK (qty > 0),
       avg_price    NUMERIC(18,4) NOT NULL,      -- 현지 통화 평균 단가
       cost_krw     NUMERIC(16,2) NOT NULL,      -- 원화 매입 원금 (수수료 포함)
-      updated_at   TIMESTAMPTZ NOT NULL DEFAULT now()
+      updated_at   TIMESTAMPTZ NOT NULL DEFAULT now(),
+      PRIMARY KEY (player_id, symbol)
     );
-    CREATE TABLE IF NOT EXISTS stocksim_trades (
+    CREATE TABLE IF NOT EXISTS stocksim_league_trades (
       id           SERIAL PRIMARY KEY,
+      player_id    INT NOT NULL REFERENCES stocksim_players(id) ON DELETE CASCADE,
       symbol       TEXT NOT NULL,
       name         TEXT NOT NULL,
       side         TEXT NOT NULL CHECK (side IN ('BUY','SELL')),
@@ -240,11 +267,13 @@ async function runInit() {
       realized_krw NUMERIC(16,2),               -- 매도 시 실현 손익
       created_at   TIMESTAMPTZ NOT NULL DEFAULT now()
     );
-    CREATE INDEX IF NOT EXISTS stocksim_trades_symbol_idx ON stocksim_trades(symbol);
-    CREATE TABLE IF NOT EXISTS stocksim_watchlist (
-      symbol       TEXT PRIMARY KEY,
+    CREATE INDEX IF NOT EXISTS stocksim_league_trades_player_idx ON stocksim_league_trades(player_id, id DESC);
+    CREATE TABLE IF NOT EXISTS stocksim_league_watchlist (
+      player_id    INT NOT NULL REFERENCES stocksim_players(id) ON DELETE CASCADE,
+      symbol       TEXT NOT NULL,
       name         TEXT NOT NULL,
-      added_at     TIMESTAMPTZ NOT NULL DEFAULT now()
+      added_at     TIMESTAMPTZ NOT NULL DEFAULT now(),
+      PRIMARY KEY (player_id, symbol)
     );
     CREATE TABLE IF NOT EXISTS stocksim_research (
       id           SERIAL PRIMARY KEY,
@@ -259,11 +288,9 @@ async function runInit() {
       created_at   TIMESTAMPTZ NOT NULL DEFAULT now()
     );
     CREATE INDEX IF NOT EXISTS stocksim_research_symbol_idx ON stocksim_research(symbol);
+    -- 리그 도입 후: 누가 분석을 요청했는지 기록 (이전 기록은 NULL)
+    ALTER TABLE stocksim_research ADD COLUMN IF NOT EXISTS player_id INT REFERENCES stocksim_players(id) ON DELETE SET NULL;
   `);
-  await pool.query(
-    `INSERT INTO stocksim_account (id, cash, initial_cash) VALUES (1, $1, $1) ON CONFLICT (id) DO NOTHING`,
-    [INITIAL_CASH],
-  );
 }
 
 async function initDB() {
@@ -274,12 +301,13 @@ async function initDB() {
 }
 
 // ════════════════════════════════════════════════════════════
-// 미들웨어
+// 미들웨어 · 인증
 // ════════════════════════════════════════════════════════════
 app.use(express.json({ limit: '20kb' }));
 
 // /api 요청 전에 DB 를 준비한다 (헬스체크도 DB 연결을 확인하므로 포함).
 app.use('/api', async (req, res, next) => {
+  if (!JWT_SECRET) return next(new Error('JWT_SECRET 이 설정되지 않았습니다.'));
   try {
     await initDB();
     next();
@@ -291,6 +319,244 @@ app.use('/api', async (req, res, next) => {
 
 const ok = (res, data) => res.json({ success: true, data });
 const num = (v) => (v === null || v === undefined ? null : Number(v));
+const issueToken = (player) => jwt.sign({ sub: player.id }, JWT_SECRET, { expiresIn: TOKEN_TTL });
+const publicPlayer = (p) => ({ id: p.id, nickname: p.nickname, joinedAt: p.joined_at });
+
+/** null = 토큰 없음, undefined = 만료·위조, 숫자 = 참가자 id */
+function readToken(req) {
+  const [scheme, token] = (req.get('authorization') || '').split(' ');
+  if (scheme !== 'Bearer' || !token) return null;
+  try {
+    return jwt.verify(token, JWT_SECRET).sub;
+  } catch {
+    return undefined;
+  }
+}
+
+function requireAuth(req, res, next) {
+  const id = readToken(req);
+  if (id === null) return next(new HttpError(401, '리그에 참가하거나 로그인해 주세요.'));
+  if (id === undefined) return next(new HttpError(401, '로그인이 만료되었습니다. 다시 로그인해 주세요.'));
+  req.playerId = id;
+  next();
+}
+
+// 시세 화면처럼 누구나 볼 수 있지만, 로그인했다면 내 정보를 덧붙이는 곳에 쓴다.
+// 만료된 토큰은 조용히 무시한다 (보기만 하는 화면이라 막을 이유가 없다).
+function optionalAuth(req, res, next) {
+  const id = readToken(req);
+  req.playerId = typeof id === 'number' ? id : null;
+  next();
+}
+
+// ════════════════════════════════════════════════════════════
+// 평가 (참가자 계좌 · 리그 공통)
+// ════════════════════════════════════════════════════════════
+/** 보유 행들에 현재가를 붙여 원화 평가액·손익을 계산한다. */
+async function valueHoldings(rows) {
+  const quotes = await fetchQuotes([...new Set(rows.map((r) => r.symbol))]);
+  // 환율을 못 가져와도 현황판 전체가 깨지지 않도록, 달러 종목만 원금으로 평가한다.
+  const usd = rows.some((r) => r.currency === 'USD') ? await fxToKrw('USD').catch(() => null) : null;
+
+  const holdings = rows.map((r) => {
+    const q = quotes[r.symbol];
+    const fx = r.currency === 'USD' ? usd : 1;
+    const costKrw = num(r.cost_krw);
+    const priced = q && fx;
+    const valueKrw = priced ? q.price * r.qty * fx : costKrw;   // 시세가 없으면 원금으로 (stale 표시)
+    return {
+      playerId: r.player_id,
+      symbol: r.symbol,
+      name: r.name,
+      currency: r.currency,
+      qty: r.qty,
+      avgPrice: num(r.avg_price),
+      price: q ? q.price : null,
+      changePct: q ? q.changePct : null,
+      costKrw,
+      valueKrw,
+      pnlKrw: valueKrw - costKrw,
+      pnlPct: costKrw ? ((valueKrw - costKrw) / costKrw) * 100 : 0,
+      stale: !priced,
+    };
+  });
+  return { holdings, usdKrw: usd };
+}
+
+/** 참가자 1명의 계좌 요약. */
+function summarize(player, holdings, realizedKrw) {
+  const cash = num(player.cash);
+  const initial = num(player.initial_cash);
+  const stockValue = holdings.reduce((s, h) => s + h.valueKrw, 0);
+  const stockCost = holdings.reduce((s, h) => s + h.costKrw, 0);
+  const total = cash + stockValue;
+  return {
+    cash,
+    initialCash: initial,
+    stockValue,
+    stockCost,
+    unrealizedKrw: stockValue - stockCost,
+    realizedKrw,
+    total,
+    returnPct: ((total - initial) / initial) * 100,
+  };
+}
+
+/** 리그 전체 순위를 계산한다. 현황판과 참가자 상세가 같이 쓴다. */
+async function buildLeague() {
+  const [players, holdRows] = await Promise.all([
+    pool.query(`
+      SELECT p.id, p.nickname, p.cash, p.initial_cash, p.reset_count, p.joined_at,
+             COUNT(t.id)::int AS trade_count,
+             COALESCE(SUM(t.realized_krw), 0) AS realized_krw,
+             MAX(t.created_at) AS last_trade_at
+        FROM stocksim_players p
+        LEFT JOIN stocksim_league_trades t ON t.player_id = p.id
+       GROUP BY p.id`),
+    pool.query('SELECT * FROM stocksim_league_holdings'),
+  ]);
+  const { holdings, usdKrw } = await valueHoldings(holdRows.rows);
+
+  const byPlayer = new Map();
+  for (const h of holdings) {
+    if (!byPlayer.has(h.playerId)) byPlayer.set(h.playerId, []);
+    byPlayer.get(h.playerId).push(h);
+  }
+
+  const standings = players.rows.map((p) => {
+    const mine = byPlayer.get(p.id) || [];
+    const best = mine.reduce((b, h) => (!b || h.pnlPct > b.pnlPct ? h : b), null);
+    return {
+      id: p.id,
+      nickname: p.nickname,
+      joinedAt: p.joined_at,
+      resetCount: p.reset_count,
+      tradeCount: p.trade_count,
+      lastTradeAt: p.last_trade_at,
+      ...summarize(p, mine, num(p.realized_krw)),
+      holdingCount: mine.length,
+      best: best ? { symbol: best.symbol, name: best.name, pnlPct: best.pnlPct } : null,
+      holdings: mine,
+    };
+  });
+
+  // 화면에 보이는 소수 둘째 자리 기준으로 순위를 매긴다. 같으면 공동 순위, 표시 순서는 먼저 참가한 사람.
+  // (toFixed 문자열로 비교하면 "-0.00" 과 "0.00" 이 달라 보여서 숫자로 반올림한다)
+  const r2 = (v) => Math.round(v * 100);
+  standings.sort((a, b) => r2(b.returnPct) - r2(a.returnPct) || new Date(a.joinedAt) - new Date(b.joinedAt));
+  standings.forEach((s, i) => {
+    const prev = standings[i - 1];
+    s.rank = prev && r2(prev.returnPct) === r2(s.returnPct) ? prev.rank : i + 1;
+  });
+  return { standings, usdKrw };
+}
+
+// ════════════════════════════════════════════════════════════
+// 참가 · 로그인
+// ════════════════════════════════════════════════════════════
+function readCredentials(body) {
+  const nickname = String(body?.nickname ?? '').trim();
+  const password = String(body?.password ?? '');
+  return { nickname, password };
+}
+
+app.post('/api/auth/join', async (req, res) => {
+  const { nickname, password } = readCredentials(req.body);
+  if (!NICKNAME_RE.test(nickname)) throw new HttpError(400, '닉네임은 한글·영문·숫자·_ 로 2~12자입니다.');
+  if (password.length < PASSWORD_MIN) throw new HttpError(400, `비밀번호는 ${PASSWORD_MIN}자 이상이어야 합니다.`);
+  if (Buffer.byteLength(password) > PASSWORD_MAX) throw new HttpError(400, '비밀번호가 너무 깁니다.');
+
+  const hash = await bcrypt.hash(password, BCRYPT_ROUNDS);
+  try {
+    const { rows: [player] } = await pool.query(
+      `INSERT INTO stocksim_players (nickname, password_hash, cash, initial_cash)
+       VALUES ($1, $2, $3, $3) RETURNING id, nickname, joined_at`,
+      [nickname, hash, INITIAL_CASH],
+    );
+    res.status(201).json({ success: true, data: { token: issueToken(player), player: publicPlayer(player) } });
+  } catch (err) {
+    // 미리 SELECT 로 확인하면 동시 요청이 둘 다 통과할 수 있어 UNIQUE 위반(23505)으로 판단한다.
+    if (err.code === '23505') throw new HttpError(409, '이미 쓰고 있는 닉네임입니다.');
+    throw err;
+  }
+});
+
+app.post('/api/auth/login', async (req, res) => {
+  const { nickname, password } = readCredentials(req.body);
+  if (!nickname || !password) throw new HttpError(400, '닉네임과 비밀번호를 입력해 주세요.');
+  const { rows: [player] } = await pool.query('SELECT * FROM stocksim_players WHERE nickname = $1', [nickname]);
+  // 닉네임은 현황판에 공개되므로 존재 여부는 숨길 필요가 없지만, 문구는 하나로 통일한다.
+  const valid = player && await bcrypt.compare(password, player.password_hash);
+  if (!valid) throw new HttpError(401, '닉네임 또는 비밀번호가 올바르지 않습니다.');
+  ok(res, { token: issueToken(player), player: publicPlayer(player) });
+});
+
+app.get('/api/me', requireAuth, async (req, res) => {
+  const { rows: [player] } = await pool.query('SELECT id, nickname, joined_at FROM stocksim_players WHERE id = $1', [req.playerId]);
+  if (!player) throw new HttpError(401, '참가자 정보를 찾을 수 없습니다. 다시 로그인해 주세요.');
+  ok(res, publicPlayer(player));
+});
+
+// ════════════════════════════════════════════════════════════
+// 리그 현황판
+// ════════════════════════════════════════════════════════════
+app.get('/api/league', async (req, res) => {
+  const [{ standings, usdKrw }, recent] = await Promise.all([
+    buildLeague(),
+    pool.query(`
+      SELECT t.id, t.player_id, p.nickname, t.symbol, t.name, t.side, t.qty, t.price, t.currency,
+             t.amount_krw, t.realized_krw, t.created_at
+        FROM stocksim_league_trades t JOIN stocksim_players p ON p.id = t.player_id
+       ORDER BY t.id DESC LIMIT 15`),
+  ]);
+
+  // 리그에서 많이 들고 있는 종목: 보유 인원 수 → 평가액 순
+  const bySymbol = new Map();
+  for (const s of standings) {
+    for (const h of s.holdings) {
+      const cur = bySymbol.get(h.symbol) || { symbol: h.symbol, name: h.name, holders: 0, valueKrw: 0, changePct: h.changePct };
+      cur.holders += 1;
+      cur.valueKrw += h.valueKrw;
+      bySymbol.set(h.symbol, cur);
+    }
+  }
+  const popularHoldings = [...bySymbol.values()]
+    .sort((a, b) => b.holders - a.holders || b.valueKrw - a.valueKrw)
+    .slice(0, 8);
+
+  const n = standings.length;
+  ok(res, {
+    stats: {
+      players: n,
+      avgReturnPct: n ? standings.reduce((s, x) => s + x.returnPct, 0) / n : 0,
+      winners: standings.filter((s) => s.returnPct > 0).length,
+      totalTrades: standings.reduce((s, x) => s + x.tradeCount, 0),
+    },
+    standings: standings.map(({ holdings, ...rest }) => rest),   // 목록에는 보유 상세를 빼서 가볍게
+    recentTrades: recent.rows.map((r) => ({
+      id: r.id, playerId: r.player_id, nickname: r.nickname, symbol: r.symbol, name: r.name,
+      side: r.side, qty: r.qty, price: num(r.price), currency: r.currency,
+      amountKrw: num(r.amount_krw), realizedKrw: num(r.realized_krw), createdAt: r.created_at,
+    })),
+    popularHoldings,
+    usdKrw,
+    updatedAt: Date.now(),
+  });
+});
+
+app.get('/api/league/players/:id', async (req, res) => {
+  const id = Number(req.params.id);
+  if (!Number.isInteger(id) || id < 1) throw new HttpError(400, '올바르지 않은 참가자입니다.');
+  const { standings } = await buildLeague();
+  const me = standings.find((s) => s.id === id);
+  if (!me) throw new HttpError(404, '참가자를 찾을 수 없습니다.');
+  const trades = await pool.query(
+    `SELECT id, symbol, name, side, qty, price, currency, amount_krw, fee_krw, realized_krw, created_at
+       FROM stocksim_league_trades WHERE player_id = $1 ORDER BY id DESC LIMIT 50`, [id],
+  );
+  me.holdings.sort((a, b) => b.valueKrw - a.valueKrw);
+  ok(res, { ...me, totalPlayers: standings.length, trades: trades.rows.map(tradeRow) });
+});
 
 // ════════════════════════════════════════════════════════════
 // 시세 · 검색
@@ -350,85 +616,58 @@ app.get('/api/popular', async (req, res) => {
   ok(res, POPULAR.map((s) => quotes[s]).filter(Boolean));
 });
 
-app.get('/api/stocks/:symbol', async (req, res) => {
+app.get('/api/stocks/:symbol', optionalAuth, async (req, res) => {
   const symbol = normalizeSymbol(req.params.symbol);
   const range = RANGES[req.query.range] ? req.query.range : '3mo';
   const { quote, points } = await fetchChart(symbol, range);
   const fx = quote.currency === 'USD' ? await fxToKrw('USD') : quote.currency === 'KRW' ? 1 : null;
 
-  const [holding, watch] = await Promise.all([
-    pool.query('SELECT qty, avg_price, cost_krw FROM stocksim_holdings WHERE symbol = $1', [quote.symbol]),
-    pool.query('SELECT 1 FROM stocksim_watchlist WHERE symbol = $1', [quote.symbol]),
-  ]);
-  const h = holding.rows[0];
-  ok(res, {
-    quote,
-    points,
-    range,
-    fx,
-    tradable: fx !== null,
-    feeRate: FEE_RATE,
-    holding: h ? { qty: h.qty, avgPrice: num(h.avg_price), costKrw: num(h.cost_krw) } : null,
-    watched: watch.rowCount > 0,
-  });
+  let holding = null, watched = false, cash = null;
+  if (req.playerId) {
+    const [h, w, p] = await Promise.all([
+      pool.query('SELECT qty, avg_price, cost_krw FROM stocksim_league_holdings WHERE player_id = $1 AND symbol = $2', [req.playerId, quote.symbol]),
+      pool.query('SELECT 1 FROM stocksim_league_watchlist WHERE player_id = $1 AND symbol = $2', [req.playerId, quote.symbol]),
+      pool.query('SELECT cash FROM stocksim_players WHERE id = $1', [req.playerId]),
+    ]);
+    const r = h.rows[0];
+    holding = r ? { qty: r.qty, avgPrice: num(r.avg_price), costKrw: num(r.cost_krw) } : null;
+    watched = w.rowCount > 0;
+    cash = p.rows[0] ? num(p.rows[0].cash) : null;
+  }
+
+  ok(res, { quote, points, range, fx, tradable: fx !== null, feeRate: FEE_RATE, holding, watched, cash });
 });
 
 // ════════════════════════════════════════════════════════════
-// 계좌 · 매매
+// 내 계좌 · 매매
 // ════════════════════════════════════════════════════════════
-app.get('/api/portfolio', async (req, res) => {
-  const [acc, hold] = await Promise.all([
-    pool.query('SELECT cash, initial_cash, reset_at FROM stocksim_account WHERE id = 1'),
-    pool.query('SELECT symbol, name, currency, qty, avg_price, cost_krw FROM stocksim_holdings ORDER BY cost_krw DESC'),
+const tradeRow = (r) => ({
+  id: r.id, symbol: r.symbol, name: r.name, side: r.side, qty: r.qty,
+  price: num(r.price), currency: r.currency, fx: num(r.fx_rate),
+  amountKrw: num(r.amount_krw), feeKrw: num(r.fee_krw), realizedKrw: num(r.realized_krw),
+  createdAt: r.created_at,
+});
+
+app.get('/api/portfolio', requireAuth, async (req, res) => {
+  const [acc, hold, realized] = await Promise.all([
+    pool.query('SELECT * FROM stocksim_players WHERE id = $1', [req.playerId]),
+    pool.query('SELECT * FROM stocksim_league_holdings WHERE player_id = $1 ORDER BY cost_krw DESC', [req.playerId]),
+    pool.query('SELECT COALESCE(SUM(realized_krw), 0) AS r FROM stocksim_league_trades WHERE player_id = $1', [req.playerId]),
   ]);
-  const quotes = await fetchQuotes(hold.rows.map((r) => r.symbol));
-  const usd = hold.rows.some((r) => r.currency === 'USD') ? await fxToKrw('USD') : null;
-
-  const holdings = hold.rows.map((r) => {
-    const q = quotes[r.symbol];
-    const fx = r.currency === 'USD' ? usd : 1;
-    const costKrw = num(r.cost_krw);
-    // 시세를 못 가져오면 평가액을 원금으로 둔다 (stale 표시).
-    const valueKrw = q ? q.price * r.qty * fx : costKrw;
-    return {
-      symbol: r.symbol,
-      name: r.name,
-      currency: r.currency,
-      qty: r.qty,
-      avgPrice: num(r.avg_price),
-      price: q ? q.price : null,
-      changePct: q ? q.changePct : null,
-      costKrw,
-      valueKrw,
-      pnlKrw: valueKrw - costKrw,
-      pnlPct: costKrw ? ((valueKrw - costKrw) / costKrw) * 100 : 0,
-      stale: !q,
-    };
-  });
-
-  const cash = num(acc.rows[0].cash);
-  const initial = num(acc.rows[0].initial_cash);
-  const stockValue = holdings.reduce((s, h) => s + h.valueKrw, 0);
-  const stockCost = holdings.reduce((s, h) => s + h.costKrw, 0);
-  const total = cash + stockValue;
-
-  const realized = await pool.query('SELECT COALESCE(SUM(realized_krw), 0) AS r FROM stocksim_trades');
+  const player = acc.rows[0];
+  if (!player) throw new HttpError(401, '참가자 정보를 찾을 수 없습니다. 다시 로그인해 주세요.');
+  const { holdings, usdKrw } = await valueHoldings(hold.rows);
   ok(res, {
-    cash,
-    initialCash: initial,
-    resetAt: acc.rows[0].reset_at,
-    stockValue,
-    stockCost,
-    unrealizedKrw: stockValue - stockCost,
-    realizedKrw: num(realized.rows[0].r),
-    total,
-    returnPct: ((total - initial) / initial) * 100,
-    usdKrw: usd,
+    nickname: player.nickname,
+    resetAt: player.reset_at,
+    resetCount: player.reset_count,
+    ...summarize(player, holdings, num(realized.rows[0].r)),
+    usdKrw,
     holdings,
   });
 });
 
-app.post('/api/trades', async (req, res) => {
+app.post('/api/trades', requireAuth, async (req, res) => {
   const symbol = normalizeSymbol(req.body?.symbol);
   const side = req.body?.side;
   const qty = Number(req.body?.qty);
@@ -440,32 +679,39 @@ app.post('/api/trades', async (req, res) => {
   const fx = await fxToKrw(quote.currency);
   const amountKrw = Math.round(quote.price * qty * fx);
   const feeKrw = Math.round(amountKrw * FEE_RATE);
+  const pid = req.playerId;
 
   const client = await pool.connect();
   try {
     await client.query('BEGIN');
-    // 계좌 행을 잠가 동시 주문이 같은 현금을 두 번 쓰지 못하게 한다.
-    const acc = await client.query('SELECT cash FROM stocksim_account WHERE id = 1 FOR UPDATE');
+    // 내 계좌 행을 잠가 동시 주문이 같은 현금을 두 번 쓰지 못하게 한다.
+    const acc = await client.query('SELECT cash FROM stocksim_players WHERE id = $1 FOR UPDATE', [pid]);
+    if (!acc.rows[0]) throw new HttpError(401, '참가자 정보를 찾을 수 없습니다. 다시 로그인해 주세요.');
     const cash = num(acc.rows[0].cash);
-    const held = await client.query('SELECT qty, avg_price, cost_krw FROM stocksim_holdings WHERE symbol = $1 FOR UPDATE', [quote.symbol]);
+    const held = await client.query(
+      'SELECT qty, avg_price, cost_krw FROM stocksim_league_holdings WHERE player_id = $1 AND symbol = $2 FOR UPDATE',
+      [pid, quote.symbol],
+    );
     const h = held.rows[0];
     let realizedKrw = null;
 
     if (side === 'BUY') {
       const need = amountKrw + feeKrw;
       if (need > cash) throw new HttpError(400, `예수금이 부족합니다. 필요 ${need.toLocaleString()}원 / 보유 ${Math.floor(cash).toLocaleString()}원`);
-      await client.query('UPDATE stocksim_account SET cash = cash - $1 WHERE id = 1', [need]);
+      await client.query('UPDATE stocksim_players SET cash = cash - $2 WHERE id = $1', [pid, need]);
       if (h) {
         const newQty = h.qty + qty;
         const newAvg = (num(h.avg_price) * h.qty + quote.price * qty) / newQty;
         await client.query(
-          'UPDATE stocksim_holdings SET qty = $2, avg_price = $3, cost_krw = cost_krw + $4, updated_at = now() WHERE symbol = $1',
-          [quote.symbol, newQty, newAvg, need],
+          `UPDATE stocksim_league_holdings SET qty = $3, avg_price = $4, cost_krw = cost_krw + $5, updated_at = now()
+            WHERE player_id = $1 AND symbol = $2`,
+          [pid, quote.symbol, newQty, newAvg, need],
         );
       } else {
         await client.query(
-          'INSERT INTO stocksim_holdings (symbol, name, currency, qty, avg_price, cost_krw) VALUES ($1,$2,$3,$4,$5,$6)',
-          [quote.symbol, quote.name, quote.currency, qty, quote.price, need],
+          `INSERT INTO stocksim_league_holdings (player_id, symbol, name, currency, qty, avg_price, cost_krw)
+           VALUES ($1,$2,$3,$4,$5,$6,$7)`,
+          [pid, quote.symbol, quote.name, quote.currency, qty, quote.price, need],
         );
       }
     } else {
@@ -474,21 +720,22 @@ app.post('/api/trades', async (req, res) => {
       const costPart = Math.round((num(h.cost_krw) * qty) / h.qty);
       const proceeds = amountKrw - feeKrw;
       realizedKrw = proceeds - costPart;
-      await client.query('UPDATE stocksim_account SET cash = cash + $1 WHERE id = 1', [proceeds]);
+      await client.query('UPDATE stocksim_players SET cash = cash + $2 WHERE id = $1', [pid, proceeds]);
       if (h.qty === qty) {
-        await client.query('DELETE FROM stocksim_holdings WHERE symbol = $1', [quote.symbol]);
+        await client.query('DELETE FROM stocksim_league_holdings WHERE player_id = $1 AND symbol = $2', [pid, quote.symbol]);
       } else {
         await client.query(
-          'UPDATE stocksim_holdings SET qty = qty - $2, cost_krw = cost_krw - $3, updated_at = now() WHERE symbol = $1',
-          [quote.symbol, qty, costPart],
+          `UPDATE stocksim_league_holdings SET qty = qty - $3, cost_krw = cost_krw - $4, updated_at = now()
+            WHERE player_id = $1 AND symbol = $2`,
+          [pid, quote.symbol, qty, costPart],
         );
       }
     }
 
     const t = await client.query(
-      `INSERT INTO stocksim_trades (symbol, name, side, qty, price, currency, fx_rate, amount_krw, fee_krw, realized_krw)
-       VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10) RETURNING id, created_at`,
-      [quote.symbol, quote.name, side, qty, quote.price, quote.currency, fx, amountKrw, feeKrw, realizedKrw],
+      `INSERT INTO stocksim_league_trades (player_id, symbol, name, side, qty, price, currency, fx_rate, amount_krw, fee_krw, realized_krw)
+       VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11) RETURNING id`,
+      [pid, quote.symbol, quote.name, side, qty, quote.price, quote.currency, fx, amountKrw, feeKrw, realizedKrw],
     );
     await client.query('COMMIT');
     ok(res, {
@@ -503,29 +750,28 @@ app.post('/api/trades', async (req, res) => {
   }
 });
 
-app.get('/api/trades', async (req, res) => {
-  const params = [];
-  let where = '';
-  if (req.query.symbol) { params.push(normalizeSymbol(req.query.symbol)); where = 'WHERE symbol = $1'; }
+app.get('/api/trades', requireAuth, async (req, res) => {
+  const params = [req.playerId];
+  let where = 'WHERE player_id = $1';
+  if (req.query.symbol) { params.push(normalizeSymbol(req.query.symbol)); where += ' AND symbol = $2'; }
   const { rows } = await pool.query(
-    `SELECT id, symbol, name, side, qty, price, currency, fx_rate, amount_krw, fee_krw, realized_krw, created_at
-       FROM stocksim_trades ${where} ORDER BY id DESC LIMIT 200`, params,
+    `SELECT * FROM stocksim_league_trades ${where} ORDER BY id DESC LIMIT 200`, params,
   );
-  ok(res, rows.map((r) => ({
-    id: r.id, symbol: r.symbol, name: r.name, side: r.side, qty: r.qty,
-    price: num(r.price), currency: r.currency, fx: num(r.fx_rate),
-    amountKrw: num(r.amount_krw), feeKrw: num(r.fee_krw), realizedKrw: num(r.realized_krw),
-    createdAt: r.created_at,
-  })));
+  ok(res, rows.map(tradeRow));
 });
 
-app.post('/api/account/reset', async (req, res) => {
+app.post('/api/account/reset', requireAuth, async (req, res) => {
   const client = await pool.connect();
   try {
     await client.query('BEGIN');
-    await client.query('DELETE FROM stocksim_holdings');
-    await client.query('DELETE FROM stocksim_trades');
-    await client.query('UPDATE stocksim_account SET cash = initial_cash, reset_at = now() WHERE id = 1');
+    await client.query('SELECT 1 FROM stocksim_players WHERE id = $1 FOR UPDATE', [req.playerId]);
+    await client.query('DELETE FROM stocksim_league_holdings WHERE player_id = $1', [req.playerId]);
+    await client.query('DELETE FROM stocksim_league_trades WHERE player_id = $1', [req.playerId]);
+    // 리셋하면 손실을 지울 수 있으므로, 현황판에 리셋 횟수를 공개한다.
+    await client.query(
+      'UPDATE stocksim_players SET cash = initial_cash, reset_count = reset_count + 1, reset_at = now() WHERE id = $1',
+      [req.playerId],
+    );
     await client.query('COMMIT');
   } catch (err) {
     await client.query('ROLLBACK').catch(() => {});
@@ -537,30 +783,36 @@ app.post('/api/account/reset', async (req, res) => {
 });
 
 // ════════════════════════════════════════════════════════════
-// 관심 종목
+// 관심 종목 (참가자별)
 // ════════════════════════════════════════════════════════════
-app.get('/api/watchlist', async (req, res) => {
-  const { rows } = await pool.query('SELECT symbol, name FROM stocksim_watchlist ORDER BY added_at');
+app.get('/api/watchlist', requireAuth, async (req, res) => {
+  const { rows } = await pool.query(
+    'SELECT symbol, name FROM stocksim_league_watchlist WHERE player_id = $1 ORDER BY added_at', [req.playerId],
+  );
   const quotes = await fetchQuotes(rows.map((r) => r.symbol));
   ok(res, rows.map((r) => quotes[r.symbol] || { symbol: r.symbol, name: r.name, price: null }));
 });
 
-app.post('/api/watchlist', async (req, res) => {
+app.post('/api/watchlist', requireAuth, async (req, res) => {
   const quote = await fetchQuote(normalizeSymbol(req.body?.symbol));   // 존재하는 종목인지 확인
   await pool.query(
-    'INSERT INTO stocksim_watchlist (symbol, name) VALUES ($1, $2) ON CONFLICT (symbol) DO NOTHING',
-    [quote.symbol, quote.name],
+    `INSERT INTO stocksim_league_watchlist (player_id, symbol, name) VALUES ($1, $2, $3)
+     ON CONFLICT (player_id, symbol) DO NOTHING`,
+    [req.playerId, quote.symbol, quote.name],
   );
   ok(res, quote);
 });
 
-app.delete('/api/watchlist/:symbol', async (req, res) => {
-  await pool.query('DELETE FROM stocksim_watchlist WHERE symbol = $1', [normalizeSymbol(req.params.symbol)]);
+app.delete('/api/watchlist/:symbol', requireAuth, async (req, res) => {
+  await pool.query(
+    'DELETE FROM stocksim_league_watchlist WHERE player_id = $1 AND symbol = $2',
+    [req.playerId, normalizeSymbol(req.params.symbol)],
+  );
   ok(res, null);
 });
 
 // ════════════════════════════════════════════════════════════
-// AI 리서치 (OpenAI)
+// AI 리서치 (OpenAI) — 기록은 리그 전체가 공유
 // ════════════════════════════════════════════════════════════
 const REPORT_SCHEMA = {
   type: 'object',
@@ -661,19 +913,24 @@ function sanitizeReport(r) {
 const researchRow = (r) => ({
   id: r.id, symbol: r.symbol, name: r.name, currency: r.currency, price: num(r.price),
   outlook: r.outlook, summary: r.summary, report: r.report, model: r.model, createdAt: r.created_at,
+  author: r.nickname || null,
 });
 
 app.get('/api/research', async (req, res) => {
   const params = [];
   let where = '';
-  if (req.query.symbol) { params.push(normalizeSymbol(req.query.symbol)); where = 'WHERE symbol = $1'; }
-  const { rows } = await pool.query(`SELECT * FROM stocksim_research ${where} ORDER BY id DESC LIMIT 100`, params);
+  if (req.query.symbol) { params.push(normalizeSymbol(req.query.symbol)); where = 'WHERE r.symbol = $1'; }
+  const { rows } = await pool.query(
+    `SELECT r.*, p.nickname FROM stocksim_research r LEFT JOIN stocksim_players p ON p.id = r.player_id
+     ${where} ORDER BY r.id DESC LIMIT 100`, params,
+  );
   // 분석 이후 가격이 얼마나 움직였는지 비교하려고 현재가를 붙인다.
   const quotes = await fetchQuotes([...new Set(rows.map((r) => r.symbol))]);
   ok(res, rows.map((r) => ({ ...researchRow(r), currentPrice: quotes[r.symbol]?.price ?? null })));
 });
 
-app.post('/api/research', async (req, res) => {
+// AI 호출에는 비용이 들기 때문에 참가자만 생성할 수 있다.
+app.post('/api/research', requireAuth, async (req, res) => {
   if (!OPENAI_API_KEY) throw new HttpError(503, 'OPENAI_API_KEY 가 설정되지 않았습니다.');
   const symbol = normalizeSymbol(req.body?.symbol);
   const ctx = await buildResearchContext(symbol);
@@ -682,9 +939,10 @@ app.post('/api/research', async (req, res) => {
   report.news = ctx.news.slice(0, 5);
 
   const { rows } = await pool.query(
-    `INSERT INTO stocksim_research (symbol, name, currency, price, outlook, summary, report, model)
-     VALUES ($1,$2,$3,$4,$5,$6,$7,$8) RETURNING *`,
-    [ctx.quote.symbol, ctx.quote.name, ctx.quote.currency, ctx.quote.price, report.outlook, report.summary, report, OPENAI_MODEL],
+    `INSERT INTO stocksim_research (symbol, name, currency, price, outlook, summary, report, model, player_id)
+     VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+     RETURNING *, (SELECT nickname FROM stocksim_players WHERE id = $9) AS nickname`,
+    [ctx.quote.symbol, ctx.quote.name, ctx.quote.currency, ctx.quote.price, report.outlook, report.summary, report, OPENAI_MODEL, req.playerId],
   );
   ok(res, { ...researchRow(rows[0]), currentPrice: ctx.quote.price });
 });

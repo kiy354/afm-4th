@@ -1,17 +1,20 @@
-# 📈 모의투자 리서치
+# 📈 모의투자 리그
 
-실제 주가(Yahoo Finance)로 가상 자금 1,000만 원을 굴려 보고, AI에게 종목 분석을 받아 기록해 두는 학습용 모의투자 앱입니다.
+실제 주가(Yahoo Finance)로 참가자마다 가상 자금 1,000만 원을 굴려 **수익률 순위를 겨루고**, AI에게 종목 분석을 받아 기록해 두는 학습용 모의투자 앱입니다.
 
 - 배포: https://afm-stock-sim.vercel.app
 - 구성: 단일 `index.html`(CDN React 18 + Babel + Tailwind) + 단일 `server.js`(Express 5) + Supabase Postgres + OpenAI
 
-![홈](screenshots/01-home.png)
+![리그 현황판](screenshots/06-league.png)
 
 ## 기능
 
 | 화면 | 내용 |
 |---|---|
-| 홈 `#/` | 총 자산·수익률·예수금·평가/실현 손익, 관심 종목, 인기 종목 시세 |
+| 홈 `#/` | 참가 전: 참가 안내 + 리그 상위 5명 / 참가 후: 내 총 자산·리그 순위, 관심 종목, 인기 종목 시세 |
+| 현황판 `#/league` | 참가자 수·평균 수익률, 1~3위 시상대, 전체 순위(수익률 막대·리셋 횟수·최고 종목), 최근 체결 피드, 리그 인기 보유 종목. 1분마다 자동 갱신 |
+| 참가자 `#/league/:id` | 다른 참가자의 총 자산·자산 구성·보유 종목·거래 내역 (공개) |
+| 참가 `#/join` | 닉네임 + 비밀번호로 참가(1,000만 원 지급) 또는 로그인 |
 | 종목 `#/stock/:symbol` | 현재가·등락, 기간별(1개월~5년) 가격 차트 + 십자선 툴팁, 매수/매도 주문, 내 보유 현황, AI 리서치, 이 종목 거래 내역 |
 | 내 계좌 `#/portfolio` | 자산 구성 막대, 보유 종목별 손익, 전체 거래 내역, 계좌 초기화 |
 | 리서치 노트 `#/research` | AI 분석 기록 전체 + **분석 시점 가격 대비 현재 수익률**, 긍정/부정 판단의 방향 적중률 |
@@ -20,6 +23,8 @@
 - 국내(원화)·미국(달러) 종목을 거래할 수 있고, 계좌는 원화 하나입니다. 달러 종목은 체결 시점 환율로 환산합니다.
 - 수수료 0.015%(매수·매도 모두). 매도 손익은 평균 단가 방식으로 계산합니다.
 - 장이 닫혀 있어도 마지막 가격으로 체결됩니다(학습용 단순화).
+- 시세·현황판·리서치 기록은 누구나 볼 수 있고, **거래·관심 종목·AI 분석 생성은 참가자만** 할 수 있습니다.
+- 계좌 초기화는 언제든 할 수 있지만, 손실을 지우고 다시 시작하는 것이므로 **현황판에 리셋 횟수가 공개**됩니다.
 
 ![종목 화면](screenshots/03-after-buy.png)
 
@@ -28,7 +33,7 @@
 ```powershell
 cd week-6\quest\stock-sim
 npm install
-Copy-Item .env.example .env   # DATABASE_URL, OPENAI_API_KEY 입력
+Copy-Item .env.example .env   # DATABASE_URL, OPENAI_API_KEY, JWT_SECRET 입력
 npm start                     # http://localhost:3000
 ```
 
@@ -38,25 +43,36 @@ npm start                     # http://localhost:3000
 
 | 테이블 | 내용 |
 |---|---|
-| `stocksim_account` | 계좌 1행 (`id = 1`) — 예수금, 시작 자금 |
-| `stocksim_holdings` | 보유 종목 — 수량, 현지 통화 평균 단가, 원화 매입 원금 |
-| `stocksim_trades` | 체결 내역 — 체결가, 환율, 금액, 수수료, 실현 손익 |
-| `stocksim_watchlist` | 관심 종목 |
-| `stocksim_research` | AI 분석 — 분석 시점 가격, 판단(긍정/중립/부정), 보고서 JSON |
+| `stocksim_players` | 참가자 = 계좌 — 닉네임(UNIQUE), 비밀번호 해시, 예수금, 시작 자금, 리셋 횟수 |
+| `stocksim_league_holdings` | 보유 종목 `(player_id, symbol)` — 수량, 현지 통화 평균 단가, 원화 매입 원금 |
+| `stocksim_league_trades` | 체결 내역 — 체결가, 환율, 금액, 수수료, 실현 손익 |
+| `stocksim_league_watchlist` | 관심 종목 `(player_id, symbol)` |
+| `stocksim_research` | AI 분석 — 분석 시점 가격, 판단, 보고서 JSON, 요청한 참가자(`player_id`) |
+
+리그 이전의 단일 계좌 테이블(`stocksim_account`·`stocksim_holdings`·`stocksim_trades`·`stocksim_watchlist`)은
+그때 쌓인 거래를 지우지 않으려고 그대로 두었고, 앱은 더 이상 쓰지 않습니다.
 
 ## API
 
+🔒 = `Authorization: Bearer <토큰>` 필요
+
 | 메서드 | 경로 | 설명 |
 |---|---|---|
+| POST | `/api/auth/join` | 리그 참가 `{ nickname, password }` |
+| POST | `/api/auth/login` | 로그인 |
+| GET | `/api/me` | 내 정보 🔒 |
+| GET | `/api/league` | 현황판 (순위·통계·최근 체결·인기 보유 종목) |
+| GET | `/api/league/players/:id` | 참가자 상세 (보유·거래 공개) |
 | GET | `/api/search?q=` | 종목 검색 |
 | GET | `/api/popular` | 인기 종목 시세 |
-| GET | `/api/stocks/:symbol?range=` | 시세 + 차트 + 내 보유·관심 여부 |
-| GET | `/api/portfolio` | 계좌 요약 + 보유 종목 평가 |
-| POST | `/api/trades` | 매수/매도 `{ symbol, side, qty }` |
-| GET | `/api/trades?symbol=` | 거래 내역 |
-| POST | `/api/account/reset` | 계좌 초기화 |
-| GET/POST/DELETE | `/api/watchlist` | 관심 종목 |
-| GET/POST | `/api/research` | AI 분석 기록 조회 / 새 분석 생성 |
+| GET | `/api/stocks/:symbol?range=` | 시세 + 차트 (로그인 시 내 보유·관심 여부·예수금 포함) |
+| GET | `/api/portfolio` | 내 계좌 요약 + 보유 종목 평가 🔒 |
+| POST | `/api/trades` | 매수/매도 `{ symbol, side, qty }` 🔒 |
+| GET | `/api/trades?symbol=` | 내 거래 내역 🔒 |
+| POST | `/api/account/reset` | 내 계좌 초기화 (리셋 횟수 +1) 🔒 |
+| GET/POST/DELETE | `/api/watchlist` | 관심 종목 🔒 |
+| GET | `/api/research` | AI 분석 기록 (모두 공유) |
+| POST | `/api/research` | 새 AI 분석 생성 🔒 |
 
 응답은 `{ success: true, data }` / `{ success: false, message }` 형태입니다.
 
@@ -101,8 +117,30 @@ OpenAI에 종목 이름만 주면 실적이나 목표주가를 그럴듯하게 �
 ### 8. Vercel이 만든 `.gitignore`가 `.env.example`까지 숨긴다
 `vercel link`가 추가한 `.env*` 규칙이 `.env.example`도 제외해서 `!.env.example` 예외를 넣었습니다.
 
+### 9. 단일 계좌 → 리그로 바꿀 때 기존 데이터
+처음엔 로그인 없는 계좌 하나였고, 운영 DB에 이미 거래가 쌓여 있었습니다. 기존 테이블의 기본키(`symbol`)를
+`(player_id, symbol)`로 바꾸는 `ALTER`는 실패하면 데이터가 꼬일 수 있어서, **리그용 테이블을 새로 만들고 기존 테이블은 손대지 않았습니다.**
+`stocksim_research`만 `ADD COLUMN IF NOT EXISTS player_id`로 열을 추가해 기존 분석 기록을 그대로 이어 씁니다.
+
+### 10. 동시 주문은 "계좌 행" 잠금으로
+참가자별로 `stocksim_players` 행을 `SELECT … FOR UPDATE`로 잠그고 주문을 처리합니다.
+테스트로 예수금의 60%씩 매수 2건을 동시에 보내면 **1건만 성공**하는 것을 확인했습니다.
+
+### 11. 공동 순위가 "−0.00%"와 "0.00%"로 갈린다
+처음엔 수익률을 `toFixed(2)` **문자열**로 비교했는데, −0.004%는 `"-0.00"`, 0%는 `"0.00"`이라 다른 순위가 됐습니다.
+`Math.round(x * 100)` **숫자**로 비교하도록 바꿨고, 화면의 부호·색도 반올림한 값 기준으로 정해 "−0.00%"가 파랗게 보이지 않게 했습니다.
+
+### 12. 시상대에서 1위가 가운데에 안 온다
+시상대 위치(2위·1위·3위)를 순위 번호로 정했더니, 공동 2위가 둘이면 1위가 오른쪽 끝으로 밀렸습니다. 순위 대신 **목록 순서**로 위치를 정합니다.
+휴대폰에서는 1·2·3위 순서로 쌓고, 넓은 화면에서만 가운데를 1위로 둡니다.
+
+### 13. 휴대폰에서 화면이 옆으로 밀린다
+순위 표는 `overflow-x-auto` 안에 있는데도 페이지가 490px로 넓어졌습니다. CSS 그리드 칸의 기본 최소 너비가 내용물(표) 너비라서
+칸 자체가 늘어난 것이라, 그리드 자식에 `min-w-0`을 줘서 해결했습니다.
+
 ## 한계
 
 - Yahoo Finance는 비공식 API라 예고 없이 막히거나 형식이 바뀔 수 있습니다. 국내 시세는 약 15~20분 지연될 수 있습니다.
-- 로그인이 없어서 배포 주소를 아는 사람은 모두 같은 계좌를 씁니다.
+- 닉네임·비밀번호만으로 참가하는 가벼운 방식이라 로그인 시도 횟수 제한이 없습니다. 비밀번호는 bcrypt로 해시하지만, 다른 사이트 비밀번호를 쓰지 않도록 안내합니다.
+- 참가자의 보유 종목과 거래 내역은 현황판에서 모두에게 공개됩니다.
 - AI 분석은 공부용 참고 자료이며 투자 권유가 아닙니다.
