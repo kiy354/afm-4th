@@ -9,6 +9,8 @@
   <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
   <script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+  <!-- 토스페이먼츠 결제위젯 SDK v2 -->
+  <script src="https://js.tosspayments.com/v2/standard"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet" />
   <style>
@@ -71,6 +73,33 @@
       returnTo = from || '/';
       go('/login');
     }
+
+    // ── 결제 대기 주문 ─────────────────────────────────────────
+    // 결제창(토스)으로 페이지를 떠났다 돌아오므로, 주문번호·전화번호를 sessionStorage 에 잠깐 둔다.
+    // 전화번호는 결제 취소 때 본인 확인과, 완료 화면에서 주문을 조회할 때 쓴다.
+    const PENDING_KEY = 'snack_pending_order';
+    const pendingStore = {
+      get: () => { try { return JSON.parse(sessionStorage.getItem(PENDING_KEY)); } catch { return null; } },
+      set: (v) => { try { sessionStorage.setItem(PENDING_KEY, JSON.stringify(v)); } catch {} },
+      clear: () => { try { sessionStorage.removeItem(PENDING_KEY); } catch {} },
+    };
+
+    // 토스가 successUrl/failUrl 로 돌려보낸 경우(?payment=success|fail&...)의 파라미터.
+    // 앱이 뜰 때 한 번만 읽고, 새로고침해도 다시 처리하지 않도록 주소에서 지운다.
+    const paymentReturn = (() => {
+      const params = new URLSearchParams(window.location.search);
+      const result = params.get('payment');
+      if (!result) return null;
+      window.history.replaceState(null, '', window.location.pathname + window.location.hash);
+      return {
+        result,
+        paymentKey: params.get('paymentKey'),
+        orderId: params.get('orderId'),
+        amount: params.get('amount'),
+        code: params.get('code'),
+        message: params.get('message'),
+      };
+    })();
 
     // ── 장바구니 (브라우저에 상품 id·수량만 저장) ──────────────
     // 가격·재고는 저장하지 않는다 — 바뀔 수 있으니 볼 때마다 서버에 물어본다.
@@ -520,7 +549,7 @@
         setError('');
         try {
           const result = await api('/api/orders', { method: 'POST', body: { items: cart, customer: form } });
-          onOrdered({ ...result, phone: form.phone });
+          onOrdered({ ...result, phone: form.phone, name: form.name.trim() });
         } catch (err) {
           // 로그인이 만료됐으면 다시 로그인시킨 뒤 주문서로 돌려보낸다 (장바구니는 그대로 남아 있다).
           if (err.status === 401) return onUnauthorized('/checkout');
@@ -583,7 +612,7 @@
                 className="mt-5 w-full rounded-2xl bg-orange-500 text-white font-bold py-3.5 hover:bg-orange-600 disabled:opacity-40">
                 {placing ? '주문 중…' : `${won(quote.total)} 결제하기`}
               </button>
-              <p className="text-[11px] text-stone-400 mt-2 text-center">실습용 쇼핑몰이라 실제 결제는 이뤄지지 않아요.</p>
+              <p className="text-[11px] text-stone-400 mt-2 text-center">다음 화면에서 토스페이먼츠로 결제해요. (테스트 결제라 실제로 돈이 나가지 않아요)</p>
             </OrderSummary>
           </form>
         </main>
@@ -602,6 +631,25 @@
             <span className="text-stone-500">주문일시</span>
             <span>{new Date(order.createdAt).toLocaleString('ko-KR')}</span>
           </div>
+          <div className="flex justify-between mt-1">
+            <span className="text-stone-500">결제</span>
+            <span className={order.status === 'paid' ? 'font-semibold text-emerald-600' : 'font-semibold text-rose-600'}>
+              {order.statusLabel}
+              {order.payment && <span className="text-stone-500 font-normal"> · {order.payment.method}</span>}
+            </span>
+          </div>
+          {order.payment?.approvedAt && (
+            <div className="flex justify-between mt-1">
+              <span className="text-stone-500">결제일시</span>
+              <span>{new Date(order.payment.approvedAt).toLocaleString('ko-KR')}</span>
+            </div>
+          )}
+          {order.payment?.approveNo && (
+            <div className="flex justify-between mt-1">
+              <span className="text-stone-500">승인번호</span>
+              <span className="font-mono font-bold">{order.payment.approveNo}</span>
+            </div>
+          )}
           <ul className="mt-4 border-t border-stone-100 pt-3 space-y-2">
             {order.items.map((i) => (
               <li key={i.productId} className="flex items-center gap-2">
@@ -620,7 +668,176 @@
             <dt className="text-stone-500">주소</dt><dd>{order.customer.address}</dd>
             {order.customer.memo && <><dt className="text-stone-500">메모</dt><dd>{order.customer.memo}</dd></>}
           </dl>
+          {order.payment?.receiptUrl && (
+            <a href={order.payment.receiptUrl} target="_blank" rel="noreferrer"
+              className="mt-4 block text-center rounded-xl border border-stone-300 py-2 font-semibold hover:bg-stone-50">
+              결제 영수증 보기 ↗
+            </a>
+          )}
         </div>
+      );
+    }
+
+    // ── 결제 (토스페이먼츠 결제위젯) ───────────────────────────
+    // 결제수단·약관 UI는 토스가 그려 주고, "결제하기"를 누르면 토스 결제창으로 이동한다.
+    // 결제가 끝나면 토스가 successUrl(?payment=success&paymentKey=…)로 돌려보내고, App 이 서버에 승인을 요청한다.
+    const TEST_METHODS = [
+      { id: '카드', label: '💳 테스트 카드' },
+      { id: '간편결제', label: '📱 테스트 간편결제' },
+      { id: '계좌이체', label: '🏦 테스트 계좌이체' },
+    ];
+
+    function PayPage({ orderNo, user, onCanceled, onPaid }) {
+      const pending = pendingStore.get();
+      const order = pending?.orderNo === orderNo ? pending : null;
+      const widgetsRef = React.useRef(null);
+      const [config, setConfig] = useState(null);   // { mode: 'toss' | 'test', clientKey }
+      const [ready, setReady] = useState(false);
+      const [paying, setPaying] = useState(false);
+      const [error, setError] = useState('');
+      const [testMethod, setTestMethod] = useState(TEST_METHODS[0].id);
+
+      useEffect(() => {
+        api('/api/payments/config').then(setConfig).catch((err) => setError(err.message));
+      }, []);
+
+      // 테스트 모드면 위젯 대신 테스트 결제창을 쓰므로 바로 준비 완료
+      useEffect(() => { if (config?.mode === 'test') setReady(true); }, [config]);
+
+      // 토스 모드: 결제위젯(결제수단 + 약관) 렌더링
+      useEffect(() => {
+        if (!order || config?.mode !== 'toss') return;
+        let cancelled = false;
+        (async () => {
+          if (!window.TossPayments) throw new Error('결제 모듈을 불러오지 못했습니다. 새로고침해 주세요.');
+          const toss = window.TossPayments(config.clientKey);
+          // 회원은 고유 customerKey, 비회원은 익명으로 결제한다.
+          const widgets = toss.widgets({ customerKey: user?.customerKey || window.TossPayments.ANONYMOUS });
+          await widgets.setAmount({ currency: 'KRW', value: order.total });
+          if (cancelled) return;
+          await Promise.all([
+            widgets.renderPaymentMethods({ selector: '#payment-methods', variantKey: 'DEFAULT' }),
+            widgets.renderAgreement({ selector: '#payment-agreement', variantKey: 'AGREEMENT' }),
+          ]);
+          if (cancelled) return;
+          widgetsRef.current = widgets;
+          setReady(true);
+        })().catch((err) => !cancelled && setError(err.message || '결제 화면을 불러오지 못했습니다.'));
+        return () => { cancelled = true; };
+      }, [orderNo, config]);
+
+      // 테스트 결제: 토스 승인 대신 서버의 테스트 결제 API 로 승인(또는 실패)한다.
+      async function testPay(outcome) {
+        setPaying(true);
+        setError('');
+        try {
+          await api('/api/payments/test', {
+            method: 'POST',
+            body: { orderId: order.orderNo, amount: order.total, phone: order.phone, method: testMethod, outcome },
+          });
+          onPaid(order.orderNo);
+        } catch (err) {
+          // 실패 시나리오(또는 금액 불일치 등)면 서버가 주문을 실패 처리하고 재고를 돌려줬다 → 장바구니로
+          if (err.status === 400 || err.status === 409) return onCanceled(err.message);
+          setError(err.message);
+          setPaying(false);
+        }
+      }
+
+      async function pay() {
+        setPaying(true);
+        setError('');
+        const back = `${window.location.origin}${window.location.pathname}`;
+        try {
+          await widgetsRef.current.requestPayment({
+            orderId: order.orderNo,
+            orderName: order.orderName,
+            customerName: order.name,
+            customerEmail: user?.email,
+            successUrl: `${back}?payment=success`,
+            failUrl: `${back}?payment=fail`,
+          });
+        } catch (err) {
+          // 결제창을 닫거나 결제수단을 고르지 않은 경우 — 주문은 그대로 두고 다시 결제할 수 있다.
+          setError(err.message || '결제를 진행하지 못했습니다.');
+          setPaying(false);
+        }
+      }
+
+      async function cancelOrder() {
+        setPaying(true);
+        await api(`/api/orders/${encodeURIComponent(order.orderNo)}/cancel`, {
+          method: 'POST', body: { phone: order.phone, message: '구매자가 결제 전에 주문을 취소함' },
+        }).catch(() => {});
+        onCanceled('주문을 취소했어요. 장바구니는 그대로 남아 있어요.');
+      }
+
+      if (!order) {
+        return (
+          <main className="max-w-xl mx-auto px-4 py-16 text-center">
+            <p className="text-stone-500">결제할 주문 정보를 찾을 수 없어요.</p>
+            <a href="#/cart" className="inline-block mt-4 rounded-xl bg-orange-500 text-white font-bold px-5 py-2.5">장바구니로</a>
+          </main>
+        );
+      }
+
+      return (
+        <main className="max-w-xl mx-auto px-4 py-8">
+          <h1 className="text-2xl font-black">결제하기</h1>
+          <section className="mt-5 rounded-2xl bg-white border border-stone-200 p-5 text-sm">
+            <div className="flex justify-between"><span className="text-stone-500">주문번호</span><span className="font-mono font-bold">{order.orderNo}</span></div>
+            <div className="flex justify-between mt-1"><span className="text-stone-500">주문 상품</span><span>{order.orderName}</span></div>
+            <div className="flex justify-between mt-3 pt-3 border-t border-stone-100 font-bold text-base">
+              <span>결제 금액</span><span className="text-orange-600">{won(order.total)}</span>
+            </div>
+          </section>
+
+          {config?.mode === 'test' ? (
+            <section className="mt-4 rounded-2xl bg-white border-2 border-dashed border-sky-300 p-5">
+              <div className="flex items-center gap-2">
+                <span className="rounded-full bg-sky-100 text-sky-700 text-xs font-bold px-2.5 py-1">TEST</span>
+                <h2 className="font-bold">테스트 결제창</h2>
+              </div>
+              <p className="text-xs text-stone-500 mt-2">
+                실제 인증·출금 없이 결제를 끝까지 시험해 볼 수 있어요. 서버는 토스 결제와 똑같이 금액을 확인하고 주문을 결제 완료로 바꿔요.
+              </p>
+              <div role="radiogroup" aria-label="테스트 결제수단" className="mt-4 grid grid-cols-3 gap-2">
+                {TEST_METHODS.map((m) => (
+                  <button key={m.id} type="button" role="radio" aria-checked={testMethod === m.id} onClick={() => setTestMethod(m.id)}
+                    className={`rounded-xl border px-2 py-3 text-sm font-semibold ${testMethod === m.id ? 'border-sky-500 bg-sky-50 text-sky-800' : 'border-stone-200 hover:border-sky-300'}`}>
+                    {m.label}
+                  </button>
+                ))}
+              </div>
+            </section>
+          ) : (
+            <section className="mt-4 rounded-2xl bg-white border border-stone-200 overflow-hidden">
+              <div id="payment-methods" />
+              <div id="payment-agreement" />
+              {!ready && !error && <p className="py-10 text-center text-sm text-stone-400">결제 수단을 불러오는 중…</p>}
+            </section>
+          )}
+
+          {error && <p role="alert" className="mt-4 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-sm px-3 py-2">{error}</p>}
+
+          <button onClick={() => (config?.mode === 'test' ? testPay('success') : pay())} disabled={!ready || paying}
+            className="mt-5 w-full rounded-2xl bg-orange-500 text-white font-bold py-3.5 hover:bg-orange-600 disabled:opacity-40">
+            {paying ? '결제 진행 중…' : `${won(order.total)} 결제하기`}
+          </button>
+          {config?.mode === 'test' && (
+            <button onClick={() => testPay('fail')} disabled={paying}
+              className="mt-2 w-full rounded-2xl border border-rose-200 text-rose-600 text-sm font-semibold py-2.5 hover:bg-rose-50 disabled:opacity-40">
+              결제 실패 시나리오 시험하기
+            </button>
+          )}
+          <button onClick={cancelOrder} disabled={paying}
+            className="mt-2 w-full text-sm text-stone-500 py-2 hover:text-stone-800 disabled:opacity-40">
+            결제하지 않고 주문 취소
+          </button>
+          <p className="text-[11px] text-stone-400 mt-2 text-center">
+            주문 후 30분 안에 결제하지 않으면 주문이 자동으로 취소돼요. {config?.mode === 'test' ? '테스트 모드라' : '테스트 키라'} 실제로 돈이 나가지 않아요.
+          </p>
+        </main>
       );
     }
 
@@ -636,7 +853,7 @@
         <main className="max-w-xl mx-auto px-4 py-12">
           <div className="text-center">
             <p className="text-6xl">🎉</p>
-            <h1 className="text-2xl font-black mt-4">주문이 완료되었어요!</h1>
+            <h1 className="text-2xl font-black mt-4">결제가 완료되었어요!</h1>
             <p className="text-stone-500 mt-2">주문번호 <b className="font-mono text-stone-800">{orderNo}</b></p>
           </div>
           <div className="mt-8">
@@ -914,6 +1131,7 @@
       const [user, setUser] = useState(null);
       const [checking, setChecking] = useState(() => Boolean(tokenStore.get()));   // 저장된 토큰 확인 중
       const [notice, setNotice] = useState('');
+      const [confirming, setConfirming] = useState(paymentReturn?.result === 'success');   // 결제 승인 중
 
       // 새로고침해도 로그인이 유지되도록, 저장된 토큰으로 내 정보를 다시 받아온다.
       useEffect(() => {
@@ -938,11 +1156,54 @@
         if (!silent) showToast(`${product.emoji} ${product.name} ${qty}개를 담았어요`, { href: '#/cart', label: '장바구니 보기' });
       }, [cartApi.add]);
 
+      // 주문(결제 대기)이 만들어지면 결제 화면으로. 장바구니는 결제가 끝난 뒤에 비운다.
       const onOrdered = useCallback((result) => {
-        setLastOrder(result);
+        pendingStore.set(result);
+        go(`/orders/${result.orderNo}/pay`);
+      }, []);
+
+      // 결제가 승인되면(토스든 테스트든) 장바구니를 비우고 완료 화면으로
+      const onPaid = useCallback((orderNo) => {
+        const pending = pendingStore.get();
+        setLastOrder({ orderNo, phone: pending?.orderNo === orderNo ? pending.phone : null });
+        pendingStore.clear();
         cartApi.clear();
-        go(`/orders/${result.orderNo}/complete`);
+        go(`/orders/${orderNo}/complete`);
       }, [cartApi.clear]);
+
+      const onPayCanceled = useCallback((message) => {
+        pendingStore.clear();
+        showToast(message);
+        go('/cart');
+      }, []);
+
+      // 토스 결제창에서 돌아온 경우: 성공이면 서버에 승인 요청, 실패면 주문을 취소해 재고를 돌려준다.
+      useEffect(() => {
+        if (!paymentReturn) return;
+        const { result, paymentKey, orderId, amount, code, message } = paymentReturn;
+        const pending = pendingStore.get();
+
+        if (result === 'fail') {
+          if (pending?.orderNo === orderId) {
+            api(`/api/orders/${encodeURIComponent(orderId)}/cancel`, {
+              method: 'POST', body: { phone: pending.phone, code, message },
+            }).catch(() => {});
+          }
+          pendingStore.clear();
+          showToast(message || '결제가 취소되었어요.');
+          go('/cart');
+          return;
+        }
+
+        api('/api/payments/confirm', { method: 'POST', body: { paymentKey, orderId, amount: Number(amount) } })
+          .then(() => onPaid(orderId))
+          .catch((err) => {
+            pendingStore.clear();
+            showToast(err.message);
+            go('/cart');
+          })
+          .finally(() => setConfirming(false));
+      }, []);
 
       const onAuth = useCallback(({ token, user }, isNew) => {
         tokenStore.set(token);
@@ -978,6 +1239,14 @@
       }, [checking, user, route]);
 
       if (checking) return <Loading />;
+      if (confirming) {
+        return (
+          <div className="min-h-screen grid place-items-center text-center px-4">
+            <div><p className="text-5xl">💳</p><p className="mt-4 font-bold">결제를 확인하고 있어요…</p>
+              <p className="text-sm text-stone-500 mt-1">창을 닫지 말고 잠시만 기다려 주세요.</p></div>
+          </div>
+        );
+      }
 
       let page;
       let m;
@@ -985,6 +1254,7 @@
       else if (route === '/cart') page = <CartPage cartApi={cartApi} />;
       // key 에 user 를 넣어, 주문서에서 로그인하고 돌아오면 이름·전화번호가 새로 채워지게 한다.
       else if (route === '/checkout') page = <CheckoutPage key={user?.id || 'guest'} cartApi={cartApi} onOrdered={onOrdered} user={user} onUnauthorized={onUnauthorized} />;
+      else if ((m = route.match(/^\/orders\/([\w-]+)\/pay$/))) page = <PayPage key={m[1]} orderNo={m[1]} user={user} onCanceled={onPayCanceled} onPaid={onPaid} />;
       else if ((m = route.match(/^\/orders\/([\w-]+)\/complete$/))) {
         page = <CompletePage orderNo={m[1]} phone={lastOrder?.orderNo === m[1] ? lastOrder.phone : null} user={user} />;
       }
@@ -999,7 +1269,7 @@
           <Header count={cartApi.count} user={user} onLogout={onLogout} />
           {page}
           <footer className="border-t border-orange-100 py-8 text-center text-xs text-stone-400">
-            과자상점 · AFM 4기 실습용 쇼핑몰 (실제 판매·결제 없음)
+            과자상점 · AFM 4기 실습용 쇼핑몰 (토스페이먼츠 테스트 결제 — 실제 판매·출금 없음)
           </footer>
           <Toast toast={toast} />
         </div>

@@ -9,6 +9,11 @@
 //   POST   /api/cart/quote          → 장바구니 금액 계산 (현재 가격·재고 기준)
 //   POST   /api/orders              → 주문 (재고 차감, 트랜잭션) — 로그인 상태면 내 계정에 연결
 //   GET    /api/orders/:orderNo     → 주문 조회 (?phone= 이 맞아야 보여준다)
+//   POST   /api/orders/:orderNo/cancel → 결제 전 주문 취소 (전화번호 확인, 재고 복구)
+//
+//   GET    /api/payments/config     → 결제 모드(toss|test) + 토스 클라이언트 키
+//   POST   /api/payments/confirm    → 토스페이먼츠 결제 승인 (pending → paid)
+//   POST   /api/payments/test       → 테스트 결제 승인/실패 (PAYMENT_MODE=test 일 때만)
 //
 //   POST   /api/auth/signup         → 회원가입 (가입 즉시 로그인 토큰 발급)
 //   POST   /api/auth/login          → 로그인
@@ -23,7 +28,7 @@ require('dotenv').config();
 
 const express = require('express');
 const path = require('path');
-const { randomInt } = require('crypto');
+const { randomInt, randomUUID } = require('crypto');
 const { Pool } = require('pg');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
@@ -31,6 +36,11 @@ const jwt = require('jsonwebtoken');
 const app = express();
 const PORT = process.env.PORT || 3000;
 const JWT_SECRET = (process.env.JWT_SECRET || '').trim();
+const TOSS_CLIENT_KEY = (process.env.TOSS_CLIENT_KEY || '').trim();
+const TOSS_SECRET_KEY = (process.env.TOSS_SECRET_KEY || '').trim();
+// 결제 모드. test 면 토스 결제창 대신 앱 안의 테스트 결제창으로 결제를 끝낼 수 있다(실제 인증·출금 없음).
+// 값이 없으면 toss — 배포 환경에서 실수로 "공짜 결제"가 열리지 않도록 테스트 모드는 명시해야만 켜진다.
+const PAYMENT_MODE = (process.env.PAYMENT_MODE || 'toss').trim() === 'test' ? 'test' : 'toss';
 
 // ── DB Pool ──────────────────────────────────────────────────
 // Supabase Transaction Pooler(6543) 사용. 환경변수에 개행이 섞이는
@@ -56,6 +66,15 @@ const BCRYPT_ROUNDS = 10;        // 해시 1회 ≈ 수십 ms. 무차별 대입�
 const TOKEN_TTL = '7d';
 const PASSWORD_MIN = 8;
 const PASSWORD_MAX = 72;         // bcrypt 는 72바이트 이후를 잘라내므로 그 이상은 막는다.
+const PAYMENT_TIMEOUT_MIN = 30;  // 주문 후 이 시간 안에 결제하지 않으면 주문을 만료시키고 재고를 되돌린다.
+
+// 주문 상태: pending(결제 대기) → paid(결제 완료) | failed(승인 거절) | canceled(결제창에서 취소) | expired(시간 초과)
+// 결제 기능 이전의 주문은 모두 'paid'(컬럼 기본값)로 남아 있다.
+const TEST_METHODS = ['카드', '간편결제', '계좌이체'];   // 테스트 결제창에서 고를 수 있는 결제수단
+
+const ORDER_STATUS_LABEL = {
+  pending: '결제 대기', paid: '결제 완료', failed: '결제 실패', canceled: '결제 취소', expired: '결제 시간 초과',
+};
 
 const CATEGORIES = [
   { id: 'chips',   name: '스낵',       emoji: '🥔' },
@@ -82,6 +101,7 @@ const SEED_PRODUCTS = [
   { name: '새콤 곰돌이 젤리',     category: 'candy',  price: 1500, stock: 160, sold: 330, emoji: '🧸', color: '#fda4af', weight: '100g', description: '과일맛 다섯 가지 곰돌이 젤리. 쫀득쫀득.' },
   { name: '레몬 사탕',            category: 'candy',  price: 2000, stock: 100, sold: 140, emoji: '🍋', color: '#fef9c3', weight: '120g', description: '입안이 상쾌해지는 새콤한 레몬 사탕.' },
   { name: '콜라맛 젤리',          category: 'candy',  price: 1300, stock: 5,   sold: 220, emoji: '🥤', color: '#fecaca', weight: '50g',  description: '톡 쏘는 콜라맛 젤리. 재고가 얼마 남지 않았어요!' },
+  { name: '한입 막대사탕',        category: 'candy',  price: 100,  stock: 100, sold: 0,   emoji: '🍭', color: '#fbcfe8', weight: '5g',   description: '동전 하나로 사는 작은 막대사탕. 딸기맛 한 입이면 충분해요.' },
   { name: '찹쌀 약과',            category: 'korean', price: 5500, stock: 30,  sold: 300, emoji: '🍯', color: '#f59e0b', weight: '10개입', description: '조청을 머금은 쫀득한 찹쌀 약과. 10개입.' },
   { name: '쌀 강정',              category: 'korean', price: 4200, stock: 45,  sold: 110, emoji: '🍘', color: '#fde68a', weight: '200g', description: '튀긴 쌀을 조청으로 뭉친 바삭한 쌀 강정.' },
   { name: '전통 유과',            category: 'korean', price: 7800, stock: 20,  sold: 70,  emoji: '🍡', color: '#fbcfe8', weight: '15개입', description: '입에서 사르르 녹는 찹쌀 유과. 명절 선물로 인기.' },
@@ -151,6 +171,22 @@ async function runInit() {
     -- 비회원 주문은 NULL. 회원이 탈퇴해도 주문 기록(매출)은 남도록 SET NULL.
     ALTER TABLE snack_orders ADD COLUMN IF NOT EXISTS user_id INTEGER REFERENCES snack_users(id) ON DELETE SET NULL;
     CREATE INDEX IF NOT EXISTS snack_orders_user_id_idx ON snack_orders (user_id, created_at DESC);
+
+    -- 토스페이먼츠 결제 정보. 결제 기능도 나중에 생겨서 ALTER 로 붙인다.
+    -- status 기본값('paid')은 바꾸지 않는다 — 같은 DB를 쓰는 배포 버전이 status 없이 INSERT 하기 때문.
+    -- 새 코드는 주문을 만들 때 status 를 'pending' 으로 명시한다.
+    ALTER TABLE snack_orders ADD COLUMN IF NOT EXISTS order_name  TEXT;
+    ALTER TABLE snack_orders ADD COLUMN IF NOT EXISTS payment_key TEXT UNIQUE;
+    ALTER TABLE snack_orders ADD COLUMN IF NOT EXISTS method      TEXT;
+    ALTER TABLE snack_orders ADD COLUMN IF NOT EXISTS approved_at TIMESTAMPTZ;
+    ALTER TABLE snack_orders ADD COLUMN IF NOT EXISTS receipt_url TEXT;
+    ALTER TABLE snack_orders ADD COLUMN IF NOT EXISTS fail_reason TEXT;
+    -- 결제사 승인번호 (토스 카드 결제: card.approveNo / 테스트 결제: T + 8자리)
+    ALTER TABLE snack_orders ADD COLUMN IF NOT EXISTS approve_no  TEXT;
+    CREATE INDEX IF NOT EXISTS snack_orders_pending_idx ON snack_orders (created_at) WHERE status = 'pending';
+
+    -- 토스 customerKey. 회원을 구분하는 값이라 추측할 수 없게 UUID 로 둔다(기존 회원도 기본값으로 채워진다).
+    ALTER TABLE snack_users ADD COLUMN IF NOT EXISTS customer_key UUID NOT NULL UNIQUE DEFAULT gen_random_uuid();
   `);
 
   // 비어 있을 때만 시드 — 재실행해도 중복 적재되지 않는다.
@@ -221,16 +257,100 @@ function newOrderNo() {
 const normalizePhone = (p) => String(p ?? '').replace(/\D/g, '');
 
 // 비밀번호 해시는 절대 응답에 싣지 않는다 — 화면에 필요한 필드만 골라 보낸다.
-const publicUser = (r) => ({ id: r.id, email: r.email, name: r.name, phone: r.phone, createdAt: r.created_at });
+const publicUser = (r) => ({
+  id: r.id, email: r.email, name: r.name, phone: r.phone, customerKey: r.customer_key, createdAt: r.created_at,
+});
 const issueToken = (user) => jwt.sign({ sub: user.id }, JWT_SECRET, { expiresIn: TOKEN_TTL });
 
 // 주문 1건 + 상품 목록을 화면용 모양으로. (주문조회와 내 주문내역이 같이 쓴다)
 const toOrder = (order, items) => ({
-  orderNo: order.order_no, status: order.status, createdAt: order.created_at,
+  orderNo: order.order_no, orderName: order.order_name, status: order.status,
+  statusLabel: ORDER_STATUS_LABEL[order.status] || order.status, createdAt: order.created_at,
+  payment: order.payment_key
+    ? { method: order.method, approvedAt: order.approved_at, approveNo: order.approve_no, receiptUrl: order.receipt_url }
+    : null,
   customer: { name: order.customer_name, phone: order.phone, address: order.address, memo: order.memo },
   items: items.map((i) => ({ productId: i.product_id, name: i.name, emoji: i.emoji, price: i.price, quantity: i.quantity })),
   itemsTotal: order.items_total, shippingFee: order.shipping_fee, total: order.total,
 });
+
+// ── 결제 전 주문 정리 (재고 되돌리기) ────────────────────────
+// 주문을 만들 때 재고를 먼저 잡아 두므로(차감), 결제가 안 된 주문은 재고를 돌려줘야 한다.
+// 주문 생성과 같은 규칙으로 상품 행을 id 순서로 잠근 뒤 되돌린다 (교착 방지).
+async function restoreStock(client, orderId) {
+  const { rows: items } = await client.query(
+    'SELECT product_id, quantity FROM snack_order_items WHERE order_id = $1 ORDER BY product_id',
+    [orderId],
+  );
+  if (!items.length) return;
+  await client.query(
+    'SELECT id FROM snack_products WHERE id = ANY($1::int[]) ORDER BY id FOR UPDATE',
+    [items.map((i) => i.product_id)],
+  );
+  for (const i of items) {
+    await client.query(
+      'UPDATE snack_products SET stock = stock + $1, sold = GREATEST(sold - $1, 0) WHERE id = $2',
+      [i.quantity, i.product_id],
+    );
+  }
+}
+
+// 결제 대기 주문을 끝난 상태(failed·canceled·expired)로 바꾸고 재고를 돌려준다. 트랜잭션 안에서 호출한다.
+async function closeUnpaidOrder(client, order, status, reason) {
+  await client.query(
+    'UPDATE snack_orders SET status = $2, fail_reason = $3 WHERE id = $1',
+    [order.id, status, reason ? String(reason).slice(0, 500) : null],
+  );
+  await restoreStock(client, order.id);
+}
+
+// 결제하지 않고 떠난 주문이 재고를 계속 붙잡지 않도록, 오래된 결제 대기 주문을 만료시킨다.
+// 크론 없이 주문이 들어올 때마다 정리한다. 승인 처리 중(행 잠금)인 주문은 SKIP LOCKED 로 건너뛴다.
+async function expireStaleOrders() {
+  const client = await pool.connect();
+  try {
+    await client.query('BEGIN');
+    const { rows } = await client.query(
+      `SELECT id FROM snack_orders
+        WHERE status = 'pending' AND created_at < now() - make_interval(mins => $1)
+        ORDER BY id LIMIT 50 FOR UPDATE SKIP LOCKED`,
+      [PAYMENT_TIMEOUT_MIN],
+    );
+    for (const o of rows) await closeUnpaidOrder(client, o, 'expired', '결제 시간 초과');
+    await client.query('COMMIT');
+  } catch (err) {
+    await client.query('ROLLBACK').catch(() => {});
+    console.error('[expire] 만료 처리 실패:', err.message);   // 주문 자체는 막지 않는다
+  } finally {
+    client.release();
+  }
+}
+
+// ── 토스페이먼츠 ─────────────────────────────────────────────
+// 시크릿 키는 서버에만 둔다. "시크릿키:" 를 base64 로 인코딩해 Basic 인증에 쓴다.
+const TOSS_API = 'https://api.tosspayments.com/v1';
+
+async function tossRequest(path, body, idempotencyKey) {
+  if (!TOSS_SECRET_KEY) throw httpError(500, 'TOSS_SECRET_KEY 가 설정되지 않았습니다.');
+  const res = await fetch(`${TOSS_API}${path}`, {
+    method: 'POST',
+    headers: {
+      Authorization: `Basic ${Buffer.from(`${TOSS_SECRET_KEY}:`).toString('base64')}`,
+      'Content-Type': 'application/json',
+      ...(idempotencyKey && { 'Idempotency-Key': idempotencyKey }),
+    },
+    body: JSON.stringify(body),
+    signal: AbortSignal.timeout(30_000),
+  });
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok) {
+    // 4xx 는 토스가 거절한 것(확정 실패), 5xx·네트워크 오류는 결과를 알 수 없는 것
+    throw Object.assign(new Error(data.message || '결제 승인에 실패했습니다.'), {
+      tossCode: data.code || 'UNKNOWN', tossStatus: res.status,
+    });
+  }
+  return data;
+}
 
 // ── 미들웨어 ─────────────────────────────────────────────────
 app.use(express.json({ limit: '20kb' }));
@@ -322,7 +442,9 @@ app.get('/api/me', requireAuth, async (req, res) => {
 
 app.get('/api/me/orders', requireAuth, async (req, res) => {
   const { rows: orders } = await pool.query(
-    'SELECT * FROM snack_orders WHERE user_id = $1 ORDER BY created_at DESC LIMIT 50',
+    // 결제 대기·실패·취소된 주문은 빼고 "결제 완료" 주문만 보여준다.
+    `SELECT * FROM snack_orders WHERE user_id = $1 AND status = 'paid'
+      ORDER BY COALESCE(approved_at, created_at) DESC LIMIT 50`,
     [req.userId],
   );
   // 주문마다 따로 조회하지 않고(N+1), 한 번에 가져와 주문별로 나눈다.
@@ -429,7 +551,10 @@ app.post('/api/orders', optionalAuth, async (req, res) => {
   if (!PHONE_RE.test(phone)) throw httpError(400, '휴대폰 번호를 확인해 주세요. (예: 010-1234-5678)');
   if (address.length < 5 || address.length > 200) throw httpError(400, '배송 주소를 정확히 입력해 주세요.');
 
+  await expireStaleOrders();
+
   // 재고 확인 → 차감 → 주문 저장을 한 트랜잭션으로 묶는다.
+  // 재고는 주문(결제 대기) 시점에 잡아 두고, 결제가 안 되면 closeUnpaidOrder 가 되돌린다.
   // 중간에 하나라도 실패하면 ROLLBACK 되어 "재고만 줄고 주문은 없는" 상태가 생기지 않는다.
   const client = await pool.connect();
   try {
@@ -455,6 +580,9 @@ app.post('/api/orders', optionalAuth, async (req, res) => {
 
     const itemsTotal = items.reduce((sum, it) => sum + byId.get(it.productId).price * it.quantity, 0);
     const shippingFee = shippingFor(itemsTotal);
+    // 결제창에 보일 주문명 (예: "바삭 감자칩 오리지널 외 2건")
+    const first = byId.get(items[0].productId).name;
+    const orderName = items.length > 1 ? `${first} 외 ${items.length - 1}건` : first;
 
     for (const it of items) {
       await client.query(
@@ -469,9 +597,10 @@ app.post('/api/orders', optionalAuth, async (req, res) => {
       await client.query('SAVEPOINT order_no');
       try {
         ({ rows: [order] } = await client.query(
-          `INSERT INTO snack_orders (order_no, customer_name, phone, address, memo, items_total, shipping_fee, total, user_id)
-           VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING id, order_no`,
-          [newOrderNo(), name, normalizePhone(phone), address, memo, itemsTotal, shippingFee, itemsTotal + shippingFee, req.userId],
+          `INSERT INTO snack_orders
+             (order_no, customer_name, phone, address, memo, items_total, shipping_fee, total, user_id, order_name, status)
+           VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, 'pending') RETURNING id, order_no`,
+          [newOrderNo(), name, normalizePhone(phone), address, memo, itemsTotal, shippingFee, itemsTotal + shippingFee, req.userId, orderName],
         ));
       } catch (err) {
         if (err.code !== '23505' || attempt >= 4) throw err;
@@ -489,7 +618,10 @@ app.post('/api/orders', optionalAuth, async (req, res) => {
     }
 
     await client.query('COMMIT');
-    res.status(201).json({ success: true, data: { orderNo: order.order_no, total: itemsTotal + shippingFee } });
+    res.status(201).json({
+      success: true,
+      data: { orderNo: order.order_no, orderName, total: itemsTotal + shippingFee, status: 'pending' },
+    });
   } catch (err) {
     await client.query('ROLLBACK').catch(() => {});
     // 토큰은 유효한데 그 사이 탈퇴(삭제)된 회원이면 user_id 외래 키 위반(23503)이 난다.
@@ -514,6 +646,179 @@ app.get('/api/orders/:orderNo', async (req, res) => {
     [order.id],
   );
   res.json({ success: true, data: toOrder(order, items) });
+});
+
+// 결제창에서 취소·실패하고 돌아온 경우. 비회원 주문도 있으니 주문 조회와 같은 방식(전화번호)으로 본인 확인한다.
+app.post('/api/orders/:orderNo/cancel', async (req, res) => {
+  const phone = normalizePhone(req.body?.phone);
+  const reason = [req.body?.code, req.body?.message].filter((v) => typeof v === 'string').join(': ');
+  const client = await pool.connect();
+  try {
+    await client.query('BEGIN');
+    const { rows: [order] } = await client.query(
+      'SELECT * FROM snack_orders WHERE order_no = $1 AND phone = $2 FOR UPDATE',
+      [String(req.params.orderNo).trim(), phone],
+    );
+    if (!order) throw httpError(404, '주문을 찾을 수 없습니다. 주문번호와 전화번호를 확인해 주세요.');
+    const wasPending = order.status === 'pending';
+    if (wasPending) await closeUnpaidOrder(client, order, 'canceled', reason || '결제 취소');
+    await client.query('COMMIT');
+    res.json({ success: true, data: { orderNo: order.order_no, status: wasPending ? 'canceled' : order.status } });
+  } catch (err) {
+    await client.query('ROLLBACK').catch(() => {});
+    throw err;
+  } finally {
+    client.release();
+  }
+});
+
+// ── 결제 ─────────────────────────────────────────────────────
+// 클라이언트 키는 브라우저에 공개되는 값이라 내려줘도 된다. 시크릿 키는 절대 내려주지 않는다.
+app.get('/api/payments/config', (_req, res) => {
+  if (PAYMENT_MODE === 'toss' && !TOSS_CLIENT_KEY) throw httpError(500, 'TOSS_CLIENT_KEY 가 설정되지 않았습니다.');
+  res.json({ success: true, data: { mode: PAYMENT_MODE, clientKey: PAYMENT_MODE === 'toss' ? TOSS_CLIENT_KEY : null } });
+});
+
+// 결제 대기 주문을 결제 완료로 바꾸는 공통 절차. 토스 결제와 테스트 결제가 같이 쓴다.
+//  1) 주문 행을 잠근다 — 같은 주문의 승인 요청이 동시에 들어와도(새로고침·더블클릭) 하나씩 처리.
+//     승인 중에는 만료 정리(SKIP LOCKED)도 이 주문을 건드리지 않는다.
+//  2) 상태·시간·금액을 확인한다.
+//  3) approve() 로 실제 승인을 받는다. 거절(declined)이면 주문을 실패 처리하고 재고를 돌려준다.
+async function settleOrder({ orderNo, amount, paymentKey, phone }, approve) {
+  const client = await pool.connect();
+  try {
+    await client.query('BEGIN');
+    const { rows: [order] } = await client.query('SELECT * FROM snack_orders WHERE order_no = $1 FOR UPDATE', [orderNo]);
+    // 전화번호를 받은 경우(테스트 결제)엔 주문 조회와 같은 방식으로 본인 확인을 한다.
+    if (!order || (phone !== undefined && order.phone !== phone)) throw httpError(404, '주문을 찾을 수 없습니다.');
+
+    // 이미 같은 결제로 승인된 주문이면 결과만 돌려준다 (승인 후 새로고침 등).
+    if (order.status === 'paid' && paymentKey && order.payment_key === paymentKey) {
+      await client.query('COMMIT');
+      return { orderNo: order.order_no, status: 'paid' };
+    }
+    if (order.status !== 'pending') {
+      throw httpError(409, `이미 처리된 주문입니다. (${ORDER_STATUS_LABEL[order.status] || order.status})`);
+    }
+
+    // 결제를 너무 늦게 마친 주문은 재고를 이미 돌려줬어야 하는 주문이라 승인하지 않는다(승인 안 하면 돈도 안 나간다).
+    if (Date.now() - new Date(order.created_at).getTime() > PAYMENT_TIMEOUT_MIN * 60_000) {
+      await closeUnpaidOrder(client, order, 'expired', '결제 시간 초과');
+      await client.query('COMMIT');
+      throw httpError(409, `주문 후 ${PAYMENT_TIMEOUT_MIN}분이 지나 주문이 취소되었습니다. 다시 주문해 주세요.`);
+    }
+
+    // 결제 금액을 DB에서 다시 계산한다. 주문을 만들 때 저장한 합계(order.total)만 믿지 않고,
+    // 주문 상품 내역(주문 당시 가격 × 수량)으로 상품 금액·배송비를 새로 구해 세 값이 모두 같은지 본다.
+    //   - 요청 금액 ≠ 재계산 금액 → 결제창(브라우저)에서 금액이 바뀐 것 (위변조)
+    //   - 저장된 합계 ≠ 재계산 금액 → 주문 데이터가 어긋난 것
+    const { rows: [{ items_total: itemsTotal }] } = await client.query(
+      'SELECT COALESCE(SUM(price * quantity), 0)::int AS items_total FROM snack_order_items WHERE order_id = $1',
+      [order.id],
+    );
+    const expected = itemsTotal + shippingFor(itemsTotal);
+    if (amount !== expected || order.total !== expected) {
+      const reason = `금액 불일치 (요청 ${amount}, 재계산 ${expected}, 주문 저장값 ${order.total})`;
+      await closeUnpaidOrder(client, order, 'failed', reason);
+      await client.query('COMMIT');
+      console.warn(`[payment] ${order.order_no} ${reason}`);
+      throw httpError(400, '결제 금액이 주문 금액과 일치하지 않습니다.');
+    }
+
+    let payment;
+    try {
+      payment = await approve(order);
+    } catch (err) {
+      if (err.declined) {
+        await closeUnpaidOrder(client, order, 'failed', err.reason || err.message);
+        await client.query('COMMIT');
+        throw httpError(400, err.message);
+      }
+      throw err;   // 결과를 알 수 없는 오류 → ROLLBACK, 주문은 결제 대기로 남는다
+    }
+
+    // 결제사가 실제로 승인한 금액도 재계산 금액과 대조한다. 다르면 결제를 되돌리고 주문을 실패 처리한다.
+    if (payment.amount !== expected) {
+      await payment.rollback?.().catch((e) => console.error('[payment] 금액 불일치 결제 취소 실패 — 수동 확인 필요:', payment.paymentKey, e.message));
+      await closeUnpaidOrder(client, order, 'failed', `승인 금액 불일치 (승인 ${payment.amount}, 재계산 ${expected})`);
+      await client.query('COMMIT');
+      throw httpError(400, '승인된 금액이 주문 금액과 달라 결제를 취소했습니다.');
+    }
+
+    await client.query(
+      `UPDATE snack_orders SET status = 'paid', payment_key = $2, method = $3, approved_at = COALESCE($4::timestamptz, now()),
+              receipt_url = $5, approve_no = $6
+        WHERE id = $1`,
+      [order.id, payment.paymentKey, payment.method, payment.approvedAt, payment.receiptUrl ?? null, payment.approveNo ?? null],
+    );
+    try {
+      await client.query('COMMIT');
+    } catch (err) {
+      // 승인은 됐는데 DB 저장이 실패하면 돈만 나가고 주문 기록이 없게 된다 → 결제를 되돌린다.
+      await payment.rollback?.().catch((e) => console.error('[payment] 결제 취소도 실패 — 수동 확인 필요:', payment.paymentKey, e.message));
+      console.error('[payment] 승인 후 저장 실패:', err.message);
+      throw httpError(500, '결제 처리 중 오류가 발생해 결제를 취소했습니다.');
+    }
+    return { orderNo: order.order_no, status: 'paid', approveNo: payment.approveNo ?? null };
+  } catch (err) {
+    await client.query('ROLLBACK').catch(() => {});
+    throw err;
+  } finally {
+    client.release();
+  }
+}
+
+const declined = (message, reason) => Object.assign(new Error(message), { declined: true, reason });
+
+// 토스 결제 승인. successUrl 로 돌아온 paymentKey·orderId·amount 로 토스 승인 API 를 호출한다.
+// 로그인은 필요 없다 — paymentKey 는 실제로 결제창을 통과해야만 생기고, 토스가 주문번호·금액과 함께 검증한다.
+app.post('/api/payments/confirm', async (req, res) => {
+  const paymentKey = String(req.body?.paymentKey ?? '').trim();
+  const orderNo = String(req.body?.orderId ?? '').trim();
+  const amount = Number(req.body?.amount);
+  if (!paymentKey || !orderNo || !Number.isInteger(amount)) throw httpError(400, '결제 정보가 올바르지 않습니다.');
+
+  const data = await settleOrder({ orderNo, amount, paymentKey }, async () => {
+    let p;
+    try {
+      p = await tossRequest('/payments/confirm', { paymentKey, orderId: orderNo, amount }, paymentKey);
+    } catch (err) {
+      // 4xx: 토스가 거절(한도 초과·인증 만료 등) → 확정 실패. 5xx·시간 초과: 결과 불명 → 다시 시도하게 둔다.
+      if (err.tossStatus && err.tossStatus < 500) throw declined(err.message, `${err.tossCode}: ${err.message}`);
+      console.error('[payment] 승인 요청 오류:', err.message);
+      throw httpError(502, '결제 승인 중 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.');
+    }
+    return {
+      paymentKey: p.paymentKey, method: p.method, approvedAt: p.approvedAt, receiptUrl: p.receipt?.url,
+      amount: p.totalAmount,
+      approveNo: p.card?.approveNo ?? null,   // 카드 승인번호. 간편결제·계좌이체는 토스가 주지 않는다
+      rollback: () => tossRequest(`/payments/${encodeURIComponent(paymentKey)}/cancel`, { cancelReason: '주문 저장 실패' }, `cancel-${paymentKey}`),
+    };
+  });
+  res.json({ success: true, data });
+});
+
+// 테스트 결제. PAYMENT_MODE=test 일 때만 열린다. 토스 승인 대신 바로 승인(또는 거절)하고,
+// 나머지(주문 잠금·금액 확인·상태 변경·재고 복구)는 토스 결제와 똑같이 settleOrder 가 처리한다.
+// 비회원 주문도 있으니 주문 조회처럼 전화번호로 본인 확인을 한다.
+app.post('/api/payments/test', async (req, res) => {
+  if (PAYMENT_MODE !== 'test') throw httpError(404, '존재하지 않는 API 입니다.');
+  const orderNo = String(req.body?.orderId ?? '').trim();
+  const amount = Number(req.body?.amount);
+  const phone = normalizePhone(req.body?.phone);
+  const outcome = req.body?.outcome === 'fail' ? 'fail' : 'success';
+  const method = TEST_METHODS.includes(req.body?.method) ? req.body.method : TEST_METHODS[0];
+  if (!orderNo || !Number.isInteger(amount) || !phone) throw httpError(400, '결제 정보가 올바르지 않습니다.');
+
+  const data = await settleOrder({ orderNo, amount, phone }, async () => {
+    if (outcome === 'fail') throw declined('테스트 결제를 거절했습니다. (실패 시나리오)', 'TEST_DECLINED: 테스트 결제 실패');
+    return {
+      paymentKey: `test_${randomUUID()}`, method: `${method} (테스트)`, approvedAt: null,
+      amount,                                                       // 테스트 결제사는 요청 금액 그대로 승인한다
+      approveNo: `T${String(randomInt(0, 100_000_000)).padStart(8, '0')}`,   // 테스트 승인번호 (실제 카드사 번호와 구분되게 T로 시작)
+    };   // 승인 시각은 DB 시계(now())로 — 주문 시각과 같은 시계를 써야 순서가 맞다
+  });
+  res.json({ success: true, data });
 });
 
 app.use('/api', (_req, _res, next) => next(httpError(404, '존재하지 않는 API 입니다.')));
