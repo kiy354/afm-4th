@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>우리집 냉장고</title>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone@7.25.9/babel.min.js"></script>
+  <!-- 저녁 식단 데이터 · 재료 계산 (저녁 레시피 앱과 공유) -->
+  <script src="meals.js"></script>
+  <style>
+    body { font-family: 'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', system-ui, sans-serif; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .spinner { animation: spin 0.8s linear infinite; }
+  </style>
+</head>
+<body class="bg-sky-50/50 text-slate-800">
+  <div id="root"></div>
+  <script type="text/babel">
+    // ========================================
+    // React Hooks Destructuring
+    // ========================================
+    const { useState, useEffect, useMemo, useContext, createContext, useCallback } = React;
+    const { MEALS, neededFor, findInFridge, guessPlace } = window.DINNER;
+
+    // ========================================
+    // 🛠 Utils & API
+    // ========================================
+    const API_BASE_URL = '/api';
+    const PLACES = ['냉장', '냉동', '실온'];
+    const PLACE_ICON = { 냉장: '🧊', 냉동: '❄️', 실온: '🧺' };
+    const DAY_NAMES = ['일', '월', '화', '수', '목', '금', '토'];
+    const ADMIN_KEY_STORAGE = 'fridge-admin-key';
+
+    const parseDate = (s) => { const [y, m, d] = s.split('-').map(Number); return new Date(y, m - 1, d); };
+    const toKey = (dt) => `${dt.getFullYear()}-${String(dt.getMonth() + 1).padStart(2, '0')}-${String(dt.getDate()).padStart(2, '0')}`;
+    const fmtShort = (s) => { const d = parseDate(s); return `${d.getMonth() + 1}/${d.getDate()} (${DAY_NAMES[d.getDay()]})`; };
+    const daysUntil = (s, today) => Math.round((parseDate(s) - parseDate(today)) / 86400000);
+
+    // 모든 레시피 재료 이름 (입력 자동완성용)
+    const ALL_INGREDIENTS = [...new Set(MEALS.flatMap((m) => neededFor(m).map((i) => i.name)))].sort();
+
+    async function api(method, endpoint, body, headers = {}) {
+      let res;
+      try {
+        res = await fetch(`${API_BASE_URL}${endpoint}`, {
+          method,
+          headers: { ...(body ? { 'Content-Type': 'application/json' } : {}), ...headers },
+          body: body ? JSON.stringify(body) : undefined,
+        });
+      } catch {
+        throw new Error('서버에 연결할 수 없어요. 인터넷 연결을 확인해 주세요.');
+      }
+      const json = await res.json().catch(() => null);
+      if (!res.ok || !json || !json.success) throw new Error(json?.message || `요청에 실패했어요 (${res.status})`);
+      return json.data;
+    }
+
+    function readStorage(key) { try { return localStorage.getItem(key) || ''; } catch { return ''; } }
+    function writeStorage(key, value) { try { value ? localStorage.setItem(key, value) : localStorage.removeItem(key); } catch { /* 저장 불가 환경 */ } }
+
+    // ========================================
+    // 🎨 Design System Components
+    // ========================================
+    function Button({ variant = 'primary', size = 'md', disabled = false, onClick, type = 'button', className = '', children, ...rest }) {
+      const variants = {
+        primary: 'bg-sky-600 text-white hover:bg-sky-700 focus-visible:ring-sky-300',
+        secondary: 'bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 focus-visible:ring-slate-300',
+        danger: 'bg-rose-500 text-white hover:bg-rose-600 focus-visible:ring-rose-300',
+        ghost: 'text-slate-600 hover:bg-sky-100 focus-visible:ring-sky-200',
+        kakao: 'bg-[#FEE500] text-[#191919] hover:brightness-95 focus-visible:ring-yellow-300',
+      };
+      const sizes = { sm: 'px-3 py-1.5 text-sm', md: 'px-4 py-2 text-sm', lg: 'px-5 py-3 text-base' };
+      return (
+        <button type={type} disabled={disabled} onClick={onClick}
+          className={`inline-flex items-center justify-center gap-1.5 rounded-xl font-medium transition focus:outline-none focus-visible:ring-2 disabled:cursor-not-allowed disabled:opacity-40 ${variants[variant]} ${sizes[size]} ${className}`}
+          {...rest}>
+          {children}
+        </button>
+      );
+    }
+
+    function Input({ type = 'text', label, value, onChange, placeholder, error, disabled = false, className = '', ...rest }) {
+      return (
+        <label className={`block ${className}`}>
+          {label && <span className="mb-1 block text-sm font-medium text-slate-600">{label}</span>}
+          <input type={type} value={value} onChange={onChange} placeholder={placeholder} disabled={disabled}
+            className={`w-full rounded-xl border bg-white px-3 py-2 text-sm outline-none transition focus:ring-2 ${error ? 'border-rose-400 focus:ring-rose-200' : 'border-slate-200 focus:border-sky-400 focus:ring-sky-100'}`}
+            {...rest} />
+          {error && <span className="mt-1 block text-xs text-rose-500">{error}</span>}
+        </label>
+      );
+    }
+
+    function Select({ label, value, onChange, options, className = '' }) {
+      return (
+        <label className={`block ${className}`}>
+          {label && <span className="mb-1 block text-sm font-medium text-slate-600">{label}</span>}
+          <select value={value} onChange={onChange}
+            className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:border-sky-400 focus:ring-2 focus:ring-sky-100">
+            {options.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
+          </select>
+        </label>
+      );
+    }
+
+    function Card({ className = '', children, ...rest }) {
+      return <div className={`rounded-2xl bg-white shadow-sm ring-1 ring-slate-100 ${className}`} {...rest}>{children}</div>;
+    }
+
+    function Badge({ color = 'sky', className = '', children }) {
+      const colors = {
+        sky: 'bg-sky-100 text-sky-700',
+        slate: 'bg-slate-100 text-slate-600',
+        green: 'bg-emerald-100 text-emerald-700',
+        amber: 'bg-amber-100 text-amber-700',
+        rose: 'bg-rose-100 text-rose-700',
+      };
+      return <span className={`inline-flex items-center whitespace-nowrap rounded-full px-2 py-0.5 text-xs font-medium ${colors[color]} ${className}`}>{children}</span>;
+    }
+
+    function Modal({ isOpen, onClose, title, children, size = 'md' }) {
+      useEffect(() => {
+        if (!isOpen) return;
+        const onKey = (e) => e.key === 'Escape' && onClose();
+        window.addEventListener('keydown', onKey);
+        return () => window.removeEventListener('keydown', onKey);
+      }, [isOpen, onClose]);
+      if (!isOpen) return null;
+      const sizes = { sm: 'max-w-sm', md: 'max-w-md', lg: 'max-w-2xl' };
+      return (
+        <div className="fixed inset-0 z-30 flex items-end justify-center bg-slate-900/40 p-4 sm:items-center" onClick={onClose}>
+          <div role="dialog" aria-modal="true" aria-label={title} onClick={(e) => e.stopPropagation()}
+            className={`w-full ${sizes[size]} rounded-2xl bg-white p-5 shadow-xl`}>
+            <div className="mb-4 flex items-center justify-between">
+              <h2 className="text-lg font-bold">{title}</h2>
+              <button onClick={onClose} aria-label="닫기" className="rounded-lg p-1 text-slate-400 hover:bg-slate-100">✕</button>
+            </div>
+            {children}
+          </div>
+        </div>
+      );
+    }
+
+    function Spinner({ label = '불러오는 중' }) {
+      return (
+        <div className="flex items-center justify-center gap-2 py-12 text-sm text-slate-500" role="status">
+          <span className="spinner h-4 w-4 rounded-full border-2 border-sky-200 border-t-sky-600" />{label}
+        </div>
+      );
+    }
+
+    function Alert({ tone = 'error', children, className = '' }) {
+      const tones = { error: 'bg-rose-50 text-rose-700 ring-rose-100', ok: 'bg-emerald-50 text-emerald-700 ring-emerald-100', info: 'bg-sky-50 text-sky-800 ring-sky-100' };
+      return <div role={tone === 'error' ? 'alert' : 'status'} className={`rounded-xl px-4 py-3 text-sm ring-1 ${tones[tone]} ${className}`}>{children}</div>;
+    }
+
+    function EmptyState({ icon, title, children }) {
+      return (
+        <div className="py-12 text-center">
+          <div className="text-4xl" aria-hidden="true">{icon}</div>
+          <p className="mt-3 font-semibold">{title}</p>
+          {children && <div className="mt-2 text-sm text-slate-500">{children}</div>}
+        </div>
+      );
+    }
+
+    // ========================================
+    // 🔀 Router Components
+    // ========================================
+    const RouterContext = createContext(null);
+
+    const readHash = () => {
+      const raw = window.location.hash.replace(/^#/, '') || '/';
+      const [path, query = ''] = raw.split('?');
+      return { path: path || '/', query: new URLSearchParams(query) };
+    };
+
+    function matchRoute(pattern, path) {
+      const p = pattern.split('/').filter(Boolean);
+      const s = path.split('/').filter(Boolean);
+      if (p.length !== s.length) return null;
+      const params = {};
+      for (let i = 0; i < p.length; i++) {
+        if (p[i].startsWith(':')) params[p[i].slice(1)] = decodeURIComponent(s[i]);
+        else if (p[i] !== s[i]) return null;
+      }
+      return params;
+    }
+
+    function Router({ children }) {
+      const [loc, setLoc] = useState(readHash);
+      useEffect(() => {
+        const onChange = () => setLoc(readHash());
+        window.addEventListener('hashchange', onChange);
+        return () => window.removeEventListener('hashchange', onChange);
+      }, []);
+      const navigate = useCallback((to) => { window.location.hash = to; }, []);
+      return <RouterContext.Provider value={{ ...loc, navigate, params: {} }}>{children}</RouterContext.Provider>;
+    }
+
+    const useRouter = () => useContext(RouterContext);
+
+    function Route() { return null; }
+
+    function Routes({ children, fallback = null }) {
+      const router = useRouter();
+      for (const child of React.Children.toArray(children)) {
+        const params = matchRoute(child.props.path, router.path);
+        if (params) return <RouterContext.Provider value={{ ...router, params }}>{child.props.element}</RouterContext.Provider>;
+      }
+      return fallback;
+    }
+
+    function Link({ to, className = '', children, ...rest }) {
+      return <a href={`#${to}`} className={className} {...rest}>{children}</a>;
+    }
+
+    // ========================================
+    // 🧊 Fridge State (Context)
+    // ========================================
+    const FridgeContext = createContext(null);
+
+    function FridgeProvider({ children }) {
+      const [items, setItems] = useState([]);
+      const [loading, setLoading] = useState(true);
+      const [error, setError] = useState('');
+
+      const reload = useCallback(async () => {
+        setError('');
+        try { setItems(await api('GET', '/fridge')); }
+        catch (e) { setError(e.message); }
+        finally { setLoading(false); }
+      }, []);
+
+      useEffect(() => { reload(); }, [reload]);
+
+      const add = async (fields) => { const it = await api('POST', '/fridge', fields); setItems((xs) => [...xs, it]); return it; };
+      const addMany = async (names) => { const added = await api('POST', '/fridge/bulk', { names }); setItems((xs) => [...xs, ...added]); return added; };
+      const update = async (id, fields) => { const it = await api('PATCH', `/fridge/${id}`, fields); setItems((xs) => xs.map((x) => (x.id === id ? it : x))); return it; };
+      const remove = async (id) => { await api('DELETE', `/fridge/${id}`); setItems((xs) => xs.filter((x) => x.id !== id)); };
+
+      return <FridgeContext.Provider value={{ items, loading, error, reload, add, addMany, update, remove }}>{children}</FridgeContext.Provider>;
+    }
+
+    const useFridge = () => useContext(FridgeContext);
+
+    // ========================================
+    // 🧩 Common/Layout Components
+    // ========================================
+    function Header() {
+      const { path } = useRouter();
+      const nav = [
+        { to: '/', label: '냉장고', active: path === '/' },
+        { to: '/shopping', label: '오늘 장보기', active: path === '/shopping' },
+        { to: '/settings', label: '카카오 알림', active: path === '/settings' },
+      ];
+      return (
+        <header className="sticky top-0 z-10 border-b border-sky-100 bg-white/90 backdrop-blur">
+          <div className="mx-auto flex max-w-4xl flex-wrap items-center gap-3 px-4 py-3">
+            <Link to="/" className="flex items-center gap-2 text-lg font-bold"><span aria-hidden="true">🧊</span> 우리집 냉장고</Link>
+            <a href="/" className="ml-auto text-sm text-orange-600 hover:underline sm:order-last">🍲 저녁 레시피 →</a>
+            <nav aria-label="주 메뉴" className="flex w-full gap-1 sm:w-auto">
+              {nav.map((n) => (
+                <Link key={n.to} to={n.to} aria-current={n.active ? 'page' : undefined}
+                  className={`flex-1 rounded-lg px-3 py-1.5 text-center text-sm font-medium sm:flex-none ${n.active ? 'bg-sky-100 text-sky-700' : 'text-slate-500 hover:bg-slate-100'}`}>
+                  {n.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+        </header>
+      );
+    }
+
+    function ExpiryBadge({ expires, today }) {
+      if (!expires) return null;
+      const d = daysUntil(expires, today);
+      if (d < 0) return <Badge color="rose">기한 {-d}일 지남</Badge>;
+      if (d === 0) return <Badge color="rose">오늘까지</Badge>;
+      if (d <= 3) return <Badge color="amber">D-{d}</Badge>;
+      return <Badge color="slate">~{fmtShort(expires)}</Badge>;
+    }
+
+    function ItemForm({ initial, onSubmit, submitLabel, onCancel }) {
+      const [name, setName] = useState(initial?.name || '');
+      const [qty, setQty] = useState(initial?.qty || '');
+      const [place, setPlace] = useState(initial?.place || '');
+      const [expires, setExpires] = useState(initial?.expires || '');
+      const [error, setError] = useState('');
+      const [saving, setSaving] = useState(false);
+
+      const effectivePlace = place || (name ? guessPlace(name) : '냉장');
+
+      const submit = async (e) => {
+        e.preventDefault();
+        if (!name.trim()) return setError('재료 이름을 입력해 주세요.');
+        setSaving(true); setError('');
+        try {
+          await onSubmit({ name: name.trim(), qty, place: effectivePlace, expires });
+          if (!initial) { setName(''); setQty(''); setPlace(''); setExpires(''); }
+        } catch (err) { setError(err.message); }
+        finally { setSaving(false); }
+      };
+
+      return (
+        <form onSubmit={submit} className="grid gap-3 sm:grid-cols-12 sm:items-end">
+          <Input className="sm:col-span-4" label="재료" value={name} onChange={(e) => setName(e.target.value)} placeholder="예: 대파" list="ingredient-names" error={error} autoComplete="off" />
+          <Input className="sm:col-span-2" label="양 (선택)" value={qty} onChange={(e) => setQty(e.target.value)} placeholder="예: 2대" />
+          <Select className="sm:col-span-2" label="보관" value={effectivePlace} onChange={(e) => setPlace(e.target.value)}
+            options={PLACES.map((p) => ({ value: p, label: `${PLACE_ICON[p]} ${p}` }))} />
+          <Input className="sm:col-span-2" type="date" label="유통기한 (선택)" value={expires} onChange={(e) => setExpires(e.target.value)} />
+          <div className="flex gap-2 sm:col-span-2">
+            {onCancel && <Button variant="secondary" onClick={onCancel} className="flex-1">취소</Button>}
+            <Button type="submit" disabled={saving} className="flex-1">{saving ? '저장 중…' : submitLabel}</Button>
+          </div>
+          <datalist id="ingredient-names">{ALL_INGREDIENTS.map((n) => <option key={n} value={n} />)}</datalist>
+        </form>
+      );
+    }
+
+    // ========================================
+    // 📄 Page Components
+    // ========================================
+    function FridgePage({ today }) {
+      const { items, loading, error, reload, add, update, remove } = useFridge();
+      const [filter, setFilter] = useState('전체');
+      const [q, setQ] = useState('');
+      const [editing, setEditing] = useState(null);
+      const [actionError, setActionError] = useState('');
+
+      const visible = useMemo(() => items
+        .filter((it) => filter === '전체' || it.place === filter)
+        .filter((it) => !q.trim() || it.name.includes(q.trim()))
+        // 유통기한 임박한 것부터, 기한 없는 것은 뒤로
+        .sort((a, b) => (a.expires || '9999').localeCompare(b.expires || '9999') || a.name.localeCompare(b.name)), [items, filter, q]);
+
+      const expiring = items.filter((it) => it.expires && daysUntil(it.expires, today) <= 3);
+      const counts = PLACES.reduce((acc, p) => ({ ...acc, [p]: items.filter((it) => it.place === p).length }), {});
+
+      const onRemove = async (it) => {
+        setActionError('');
+        try { await remove(it.id); } catch (e) { setActionError(e.message); }
+      };
+
+      return (
+        <div className="space-y-5">
+          <Card className="p-5">
+            <h1 className="mb-3 text-lg font-bold">재료 넣기</h1>
+            <ItemForm onSubmit={add} submitLabel="넣기" />
+          </Card>
+
+          {expiring.length > 0 && (
+            <Alert tone="info">⏰ 유통기한이 3일 안에 끝나는 재료: <b>{expiring.map((it) => it.name).join(', ')}</b></Alert>
+          )}
+          {actionError && <Alert>{actionError}</Alert>}
+
+          <section aria-labelledby="list-heading">
+            <div className="mb-3 flex flex-wrap items-center gap-2">
+              <h2 id="list-heading" className="text-lg font-bold">냉장고 속 재료 <span className="text-base font-normal text-slate-500">{items.length}개</span></h2>
+              <div className="w-full sm:ml-auto sm:w-48">
+                <Input type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="재료 찾기" aria-label="재료 찾기" />
+              </div>
+            </div>
+            <div role="tablist" className="mb-3 flex gap-1 overflow-x-auto rounded-xl bg-slate-100 p-1">
+              {['전체', ...PLACES].map((p) => (
+                <button key={p} role="tab" aria-selected={filter === p} onClick={() => setFilter(p)}
+                  className={`flex-1 whitespace-nowrap rounded-lg px-3 py-1.5 text-sm font-medium ${filter === p ? 'bg-white text-sky-700 shadow-sm' : 'text-slate-500'}`}>
+                  {p === '전체' ? `전체 ${items.length}` : `${PLACE_ICON[p]} ${p} ${counts[p]}`}
+                </button>
+              ))}
+            </div>
+
+            {loading ? <Spinner /> : error ? (
+              <Card className="p-5"><Alert>{error}</Alert><Button className="mt-3" variant="secondary" onClick={reload}>다시 시도</Button></Card>
+            ) : visible.length === 0 ? (
+              <Card><EmptyState icon="🫙" title={items.length === 0 ? '냉장고가 비어 있어요' : '조건에 맞는 재료가 없어요'}>
+                {items.length === 0 ? '위에서 재료를 넣거나, 오늘 장보기 화면에서 산 재료를 한 번에 넣을 수 있어요.' : '다른 보관 장소나 검색어를 확인해 보세요.'}
+              </EmptyState></Card>
+            ) : (
+              <Card>
+                <ul className="divide-y divide-slate-100">
+                  {visible.map((it) => (
+                    <li key={it.id} className="flex flex-wrap items-center gap-2 px-4 py-3">
+                      <span aria-hidden="true">{PLACE_ICON[it.place]}</span>
+                      <span className="font-medium">{it.name}</span>
+                      {it.qty && <span className="text-sm text-slate-500">{it.qty}</span>}
+                      <ExpiryBadge expires={it.expires} today={today} />
+                      <div className="ml-auto flex gap-1">
+                        <Button variant="ghost" size="sm" onClick={() => setEditing(it)} aria-label={`${it.name} 수정`}>수정</Button>
+                        <Button variant="ghost" size="sm" onClick={() => onRemove(it)} aria-label={`${it.name} 다 씀`}>다 씀</Button>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </Card>
+            )}
+          </section>
+
+          <Modal isOpen={!!editing} onClose={() => setEditing(null)} title="재료 수정" size="lg">
+            {editing && <ItemForm initial={editing} submitLabel="저장" onCancel={() => setEditing(null)}
+              onSubmit={async (fields) => { await update(editing.id, fields); setEditing(null); }} />}
+          </Modal>
+        </div>
+      );
+    }
+
+    function ShoppingPage({ today }) {
+      const { items, loading, error, reload, addMany, remove } = useFridge();
+      const first = MEALS[0].date;
+      const last = MEALS[MEALS.length - 1].date;
+      const [date, setDate] = useState(today < first ? first : today > last ? last : today);
+      const [bought, setBought] = useState({});
+      const [busy, setBusy] = useState(false);
+      const [message, setMessage] = useState(null);
+
+      const idx = MEALS.findIndex((m) => m.date === date);
+      const meal = MEALS[idx];
+      const { need, have } = useMemo(() => {
+        if (!meal) return { need: [], have: [] };
+        const result = { need: [], have: [] };
+        neededFor(meal).forEach((ing) => {
+          const item = findInFridge(ing.name, items);
+          if (item) result.have.push({ ...ing, item }); else result.need.push(ing);
+        });
+        return result;
+      }, [meal, items]);
+
+      useEffect(() => { setBought({}); setMessage(null); }, [date]);
+
+      const boughtNames = need.filter((n) => bought[n.name]).map((n) => n.name);
+
+      const putIn = async () => {
+        setBusy(true); setMessage(null);
+        try {
+          await addMany(boughtNames);
+          setMessage({ tone: 'ok', text: `${boughtNames.length}가지를 냉장고에 넣었어요.` });
+          setBought({});
+        } catch (e) { setMessage({ tone: 'error', text: e.message }); }
+        finally { setBusy(false); }
+      };
+
+      const markUsed = async (item) => {
+        try { await remove(item.id); } catch (e) { setMessage({ tone: 'error', text: e.message }); }
+      };
+
+      return (
+        <div className="space-y-5">
+          <div className="flex items-center justify-between gap-2">
+            <Button variant="ghost" size="sm" disabled={idx <= 0} onClick={() => setDate(MEALS[idx - 1].date)}>← 전날</Button>
+            <div className="text-center">
+              <p className="text-sm font-semibold text-slate-500">{fmtShort(date)} {date === today && <Badge>오늘</Badge>}</p>
+            </div>
+            <Button variant="ghost" size="sm" disabled={idx >= MEALS.length - 1} onClick={() => setDate(MEALS[idx + 1].date)}>다음날 →</Button>
+          </div>
+
+          {!meal ? <EmptyState icon="📅" title="이 날짜에는 식단이 없어요" /> : (
+            <>
+              <Card className="overflow-hidden">
+                <div className="bg-gradient-to-br from-sky-500 to-cyan-400 p-5 text-white">
+                  <p className="text-sm opacity-90">저녁 메뉴</p>
+                  <h1 className="mt-1 text-2xl font-bold">{meal.title}</h1>
+                  <a href={`/#/meal/${meal.date}`} className="mt-2 inline-block text-sm underline opacity-90 hover:opacity-100">레시피 보기 →</a>
+                </div>
+                {!loading && !error && (
+                  <div className="grid grid-cols-2 divide-x divide-slate-100 text-center">
+                    <div className="p-3"><p className="text-2xl font-bold text-rose-500">{need.length}</p><p className="text-xs text-slate-500">사야 할 것</p></div>
+                    <div className="p-3"><p className="text-2xl font-bold text-emerald-600">{have.length}</p><p className="text-xs text-slate-500">냉장고에 있음</p></div>
+                  </div>
+                )}
+              </Card>
+
+              {message && <Alert tone={message.tone}>{message.text}</Alert>}
+
+              {loading ? <Spinner /> : error ? (
+                <Card className="p-5"><Alert>{error}</Alert><Button className="mt-3" variant="secondary" onClick={reload}>다시 시도</Button></Card>
+              ) : (
+                <div className="grid gap-5 md:grid-cols-2">
+                  <Card className="p-5">
+                    <h2 className="font-bold">🛒 사야 할 것</h2>
+                    <p className="mb-3 text-xs text-slate-500">산 것을 체크한 뒤 냉장고에 넣으세요. 기본 양념(간장, 고춧가루 등)은 뺐어요.</p>
+                    {need.length === 0 ? (
+                      <EmptyState icon="🎉" title="재료가 다 있어요!">오늘은 장을 보지 않아도 돼요.</EmptyState>
+                    ) : (
+                      <>
+                        <ul className="space-y-1">
+                          {need.map((n) => (
+                            <li key={n.name}>
+                              <label className="flex cursor-pointer items-start gap-3 rounded-lg px-2 py-1.5 hover:bg-sky-50">
+                                <input type="checkbox" checked={!!bought[n.name]} onChange={() => setBought((b) => ({ ...b, [n.name]: !b[n.name] }))} className="mt-0.5 h-4 w-4 accent-sky-600" />
+                                <span className="text-sm">
+                                  <span className={bought[n.name] ? 'text-slate-400 line-through' : 'font-medium'}>{n.name}</span>
+                                  <span className="block text-xs text-slate-400">{n.raw} · {n.dish}</span>
+                                </span>
+                              </label>
+                            </li>
+                          ))}
+                        </ul>
+                        <Button className="mt-4 w-full" disabled={boughtNames.length === 0 || busy} onClick={putIn}>
+                          {busy ? '넣는 중…' : `산 것 냉장고에 넣기 (${boughtNames.length})`}
+                        </Button>
+                      </>
+                    )}
+                  </Card>
+
+                  <Card className="p-5">
+                    <h2 className="font-bold">✅ 냉장고에 있음</h2>
+                    <p className="mb-3 text-xs text-slate-500">요리하다 다 쓴 재료는 [다 씀]을 눌러 빼 주세요.</p>
+                    {have.length === 0 ? <EmptyState icon="🫙" title="아직 있는 재료가 없어요" /> : (
+                      <ul className="divide-y divide-slate-100">
+                        {have.map((h) => (
+                          <li key={h.name} className="flex items-center gap-2 py-2 text-sm">
+                            <span className="flex-1">
+                              <span className="font-medium">{h.name}</span>
+                              <span className="block text-xs text-slate-400">냉장고: {PLACE_ICON[h.item.place]} {h.item.name}{h.item.qty ? ` ${h.item.qty}` : ''}</span>
+                            </span>
+                            <ExpiryBadge expires={h.item.expires} today={today} />
+                            <Button variant="ghost" size="sm" onClick={() => markUsed(h.item)}>다 씀</Button>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </Card>
+                </div>
+              )}
+            </>
+          )}
+        </div>
+      );
+    }
+
+    function SettingsPage() {
+      const { query } = useRouter();
+      const [status, setStatus] = useState(null);
+      const [loading, setLoading] = useState(true);
+      const [error, setError] = useState('');
+      const [adminKey, setAdminKey] = useState(() => readStorage(ADMIN_KEY_STORAGE));
+      const [busy, setBusy] = useState(false);
+      const [message, setMessage] = useState(() => {
+        const k = query.get('kakao');
+        if (k === 'ok') return { tone: 'ok', text: '카카오톡이 연결됐어요. [테스트 보내기]로 확인해 보세요.' };
+        if (k === 'denied') return { tone: 'error', text: '카카오 연결이 취소됐어요.' };
+        return null;
+      });
+
+      const load = useCallback(async () => {
+        setError('');
+        try { setStatus(await api('GET', '/kakao/status')); }
+        catch (e) { setError(e.message); }
+        finally { setLoading(false); }
+      }, []);
+      useEffect(() => { load(); }, [load]);
+
+      const saveKey = (v) => { setAdminKey(v); writeStorage(ADMIN_KEY_STORAGE, v); };
+
+      const connect = () => { window.location.href = `${API_BASE_URL}/kakao/login?key=${encodeURIComponent(adminKey)}`; };
+
+      const run = async (fn, okText) => {
+        setBusy(true); setMessage(null);
+        try { const r = await fn(); setMessage({ tone: 'ok', text: typeof okText === 'function' ? okText(r) : okText }); await load(); }
+        catch (e) { setMessage({ tone: 'error', text: e.message }); }
+        finally { setBusy(false); }
+      };
+
+      const sendTest = () => run(() => api('POST', '/kakao/test', null, { 'x-admin-key': adminKey }),
+        (r) => (r.sent ? '카카오톡으로 오늘 장보기 목록을 보냈어요.' : `보내지 않았어요: ${r.reason}`));
+      const disconnect = () => run(() => api('DELETE', '/kakao', null, { 'x-admin-key': adminKey }), '카카오 연결을 해제했어요.');
+
+      return (
+        <div className="space-y-5">
+          <div>
+            <h1 className="text-2xl font-bold">카카오톡 알림</h1>
+            <p className="mt-1 text-sm text-slate-500">매일 오후 3시~3시 59분 사이에 그날 저녁 메뉴 재료 중 냉장고에 없는 것을 카카오톡 ‘나와의 채팅’으로 보내요.</p>
+          </div>
+
+          {message && <Alert tone={message.tone}>{message.text}</Alert>}
+
+          <Card className="p-5">
+            <h2 className="mb-3 font-bold">연결 상태</h2>
+            {loading ? <Spinner /> : error ? <Alert>{error}</Alert> : (
+              <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 text-sm">
+                <dt className="text-slate-500">서버 설정</dt>
+                <dd>{status.configured ? <Badge color="green">완료</Badge> : <Badge color="amber">환경변수 필요</Badge>}</dd>
+                <dt className="text-slate-500">카카오 계정</dt>
+                <dd>{status.connected ? <Badge color="green">연결됨</Badge> : <Badge color="slate">연결 안 됨</Badge>}
+                  {status.refreshExpiresAt && <span className="ml-2 text-xs text-slate-500">({new Date(status.refreshExpiresAt).toLocaleDateString('ko-KR')}까지 유효)</span>}</dd>
+                <dt className="text-slate-500">마지막 발송</dt>
+                <dd>{status.lastSent ? `${new Date(status.lastSent.at).toLocaleString('ko-KR')} · ${status.lastSent.count}가지` : '아직 없음'}</dd>
+                {status.lastError && (<>
+                  <dt className="text-slate-500">최근 실패</dt>
+                  <dd className="text-rose-600">{new Date(status.lastError.at).toLocaleString('ko-KR')} · {status.lastError.message}</dd>
+                </>)}
+                <dt className="text-slate-500">저장소</dt>
+                <dd>{status.storage === 'blob' ? 'Vercel Blob' : <span className="text-amber-700">메모리 (서버가 재시작되면 사라져요)</span>}</dd>
+              </dl>
+            )}
+          </Card>
+
+          <Card className="space-y-3 p-5">
+            <h2 className="font-bold">관리 키</h2>
+            <p className="text-sm text-slate-500">Vercel 환경변수 <code className="rounded bg-slate-100 px-1">ADMIN_KEY</code>에 넣은 값이에요. 다른 사람이 알림을 가로채지 못하게 연결·테스트할 때만 확인해요. 이 브라우저에만 저장됩니다.</p>
+            <Input type="password" value={adminKey} onChange={(e) => saveKey(e.target.value)} placeholder="관리 키" aria-label="관리 키" autoComplete="off" />
+            <div className="flex flex-wrap gap-2">
+              <Button variant="kakao" disabled={!adminKey || busy || !status?.configured} onClick={connect}>
+                {status?.connected ? '카카오 다시 연결' : '카카오 연결'}
+              </Button>
+              <Button variant="secondary" disabled={!adminKey || busy || !status?.connected} onClick={sendTest}>테스트 보내기</Button>
+              {status?.connected && <Button variant="ghost" disabled={!adminKey || busy} onClick={disconnect}>연결 해제</Button>}
+            </div>
+          </Card>
+
+          <Card className="p-5">
+            <h2 className="mb-2 font-bold">처음 한 번 설정하기</h2>
+            <ol className="list-decimal space-y-2 pl-5 text-sm text-slate-600">
+              <li><a className="text-sky-700 underline" href="https://developers.kakao.com" target="_blank" rel="noreferrer">Kakao Developers</a>에서 애플리케이션을 하나 만들고 <b>REST API 키</b>를 복사합니다.</li>
+              <li>앱 설정의 <b>Web 사이트 도메인</b>에 <code className="rounded bg-slate-100 px-1">{window.location.origin}</code>를 등록합니다.</li>
+              <li><b>카카오 로그인</b>을 켜고 Redirect URI에 <code className="break-all rounded bg-slate-100 px-1">{window.location.origin}/api/kakao/callback</code>을 등록합니다.</li>
+              <li>동의항목에서 <b>카카오톡 메시지 전송</b>(talk_message)을 사용으로 설정합니다.</li>
+              <li>Vercel 환경변수에 <code className="rounded bg-slate-100 px-1">KAKAO_REST_API_KEY</code>, <code className="rounded bg-slate-100 px-1">ADMIN_KEY</code>를 넣고 다시 배포합니다. Client Secret을 켰다면 <code className="rounded bg-slate-100 px-1">KAKAO_CLIENT_SECRET</code>도 넣습니다.</li>
+              <li>위에 관리 키를 입력하고 <b>카카오 연결</b> → <b>테스트 보내기</b>를 누릅니다.</li>
+            </ol>
+          </Card>
+        </div>
+      );
+    }
+
+    // ========================================
+    // 🚀 App Component
+    // ========================================
+    function App() {
+      const [today, setToday] = useState(() => toKey(new Date()));
+      useEffect(() => {
+        const id = setInterval(() => setToday(toKey(new Date())), 60000);
+        return () => clearInterval(id);
+      }, []);
+
+      return (
+        <Router>
+          <FridgeProvider>
+            <Header />
+            <main className="mx-auto max-w-4xl px-4 py-6">
+              <Routes fallback={<EmptyState icon="🧭" title="페이지를 찾을 수 없어요"><Link to="/" className="text-sky-700 underline">냉장고로 가기</Link></EmptyState>}>
+                <Route path="/" element={<FridgePage today={today} />} />
+                <Route path="/shopping" element={<ShoppingPage today={today} />} />
+                <Route path="/settings" element={<SettingsPage />} />
+              </Routes>
+            </main>
+          </FridgeProvider>
+        </Router>
+      );
+    }
+
+    // ========================================
+    // Rendering
+    // ========================================
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>

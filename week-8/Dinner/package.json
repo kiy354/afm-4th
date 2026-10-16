@@ -1,0 +1,22 @@
+{
+  "name": "dinner-recipe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --env-file-if-exists=.env.local server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@vercel/blob": "2.8.0",
+    "express": "5.2.1"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  }
+}

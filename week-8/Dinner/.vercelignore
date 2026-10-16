@@ -1,0 +1,4 @@
+.claude
+*.md
+node_modules
+.env*
